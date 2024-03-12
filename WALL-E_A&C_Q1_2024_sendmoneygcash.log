@@ -1,0 +1,51 @@
+  
+= ----- 19/02/2024 16:27:22 pm
+= MRDCL 32 version 23.1b Startup
+= C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_sendmoneygcash.STP
+= Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
+  CEP
+  CSV 2002 style + Rounded numbers
+  OLDNAMES
+  TERSE
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024.ASC
+= MRDCL 32 version 23.1b startup completed
+  
+= ----- 19/02/2024 16:27:22 pm
+= MRDCL 32 compilation phase startup
+  Starting compilation
+= Stage 1 (data)
+  Temporary words used 23123
+= Stage 2 (tables)
+>> Warnings 13
+= MRDCL 32 compilation phase completed
+  
+= ----- 19/02/2024 16:27:25 pm
+= MRDCL 32 execution phase startup
+= Stage 1 (data)
+  Now opening file (A) number 1
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024.ASC
+   835 lines read from JAN2024.ASC
+=  Data lines read 835
+=  Records 835
+  Number of times reached finish data 835
+  Write commands rejected 0
+  Write commands accepted 600
+  IDF records 600
+= Stage 2 (tables)
+  Records to be read 600
+  Passes needed 1
+= MRDCL 32 execution phase completed
+  
+= ----- 19/02/2024 16:28:06 pm
+= MRDCL 32 print phase startup
+>>Table #1 output as 1, decimal places discarded, 26 occurences
+>>Table #2 output as 2, decimal places discarded, 34 occurences
+>>Table #3 output as 3, decimal places discarded, 6 occurences
+>>Table #4 output as 4, decimal places discarded, 39 occurences
+= MRDCL 32 print phase completed
+= CL run completed
+  Data lines read 835
+  IDF data records 600
+  Table pages 4
+  
+= ----- 19/02/2024 16:28:06 pm

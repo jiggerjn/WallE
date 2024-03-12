@@ -1,0 +1,6561 @@
+
+
+
+DM $TQ1 = $T_Q1_1/
+13..20,
+21..30,
+31..35,
+36..45,
+46..65,
+R,F,
+VT = "Q1. AGE",
+V = "
+13-20 years old;
+21-30 years old;
+31-35 years old;
+36-45 years old;
+46-65 years old;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ2 = $Q2/
+1,
+2,
+R,F,
+VT = "Q2. GENDER",
+V = "
+Male;
+Female;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ3 = $Q3/
+1,
+1,
+2..5,
+2,
+3,
+4,
+5,
+6..8,
+6,
+7,
+8,
+9..11,
+9,
+10,
+11,
+12..17,
+12,
+13,
+14,
+15,
+16,
+17,
+R,F,
+VT = "Q3. AREA",
+V = "
+Metro Manila;
+`     NCR;
+North-Central Luzon;
+`     CAR;
+`     Region I;
+`     Region II;
+`     Region III;
+South Luzon;
+`     Region IV-A;
+`     Region IV-B;
+`     Region V;
+Visayas;
+`     Region VI;
+`     Region VII;
+`     Region VIII;
+Mindanao;
+`     Region IX;
+`     Region X;
+`     Region XI;
+`     Region XII;
+`     Region XIII;
+`     BARMM;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ4 = $Q4/
+1,
+2,
+R,F,
+VT = "Q4. LOCALE",
+V = "
+Urban;
+Rural;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFP1 = $A_QFP1/
+1,
+2,
+3,
+4,
+5,
+6,
+98,
+99,
+R,F,
+VT = "QFP1. FINANCIAL PRODUCTS CURRENTLY OWNED",
+V = "
+Checking/Current Account;
+Savings/ Debit Account;
+Credit Card;
+Investment Products (e.g. stocks, bonds, mutual funds);
+Insurance (e.g. health insurance, car insurance, life insurance);
+Loan (e.g personal loan, housing loan, auto loan);
+Others, specify;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ70 = $A_Q70/
+1,
+6,
+7,
+2,
+3,
+4,
+5,
+91,
+99,
+R,F,
+VT = "Q70. BANK PRODUCTS CURRENTLY HAVE OR SERVICES CURRENTLY AVAILED",
+V = "
+Checking/Current Account;
+Savings account in a digital bank (must have no physical branches, not prevalent physical branches);
+Savings/ debit account in a physical bank (has physical branches and ATMs);
+Credit Card;
+Investment Products (e.g. stocks, bonds, mutual funds);
+Insurance (e.g. health insurance, car insurance, life insurance);
+Loan (e.g personal loan, housing loan, auto loan);
+Others (Please specify:);
+None;
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ72 = $Q72/
+1,
+2,
+3,
+R,F,
+VT = "Q72. TAGGING",
+V = "
+Banked;
+Underbanked;
+Unbanked;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ16a = $Q16a/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16a. TOM AWARENESS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ16b = $A_Q16b/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16b. OTHER SPONT AWARENESS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+[*DATA C8B=
+1,
+2,
+4,
+9,
+10,
+8,
+11,
+9192]
+
+[*DATA L8B(;)=
+Bought load;
+Payments for purchases from any store or establishments in-store or online;
+Pay bills;
+Send money for any purposes;
+Receive money for any purposes;
+Pay for transportation;
+Pay for subscriptions;
+Others]
+
+[*DATA LQ8B2(;)=
+F;F;F;F;
+eWallet;
+Mobile/Online Banking;
+Cash;
+Check;
+Debit Card;
+Credit Card]
+
+
+[*DOA=1:[C8B.#]]
+DM $TQ8B2R[A] = $T_Q8b2_[C8B.A]/
+5,
+6,
+7,
+8,
+9,
+10,
+99,
+R,F,
+VT = "Q8B2. GENERAL FINANCIAL TRANSACTIONS METHODS (P2M) - [L8B.A]",
+V = "
+eWallet;
+Mobile/Online Banking;
+Cash;
+Check;
+Debit Card;
+Credit Card;
+Did not do this transaction;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+DM $TQ8a = $A_Q8a/
+1,
+2,
+4,
+9,
+10,
+8,
+11,
+91+92,
+R,F,
+VT = "Q8a. GENERAL FINANCIAL TRANSACTIONS DONE IN THE PAST 2 MONTHS",
+V = "
+Bought load;
+Payments for purchases from any store or establishments in-store or online;
+Pay bills;
+Send money for any purposes;
+Receive money for any purposes;
+Pay for transportation;
+Pay for subscriptions;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ8d = $Q8d/
+1,
+2,
+R,F,
+VT = "Q8d. P2M TRANSACTION INCIDENCE",
+V = "
+Did transaction in P2M;
+Did not do transaction in P2M;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+[*DOA=1:[C8B.#]]
+DM $TQ8B1R[A] = $T_Q8b1_[C8B.A]/
+5,
+6,
+7,
+8,
+9,
+10,
+99,
+R,F,
+VT = "Q8B1. GENERAL FINANCIAL TRANSACTIONS METHODS (P1M) - [L8B.A]",
+V = $TQ8B2R1,
+[*ENDA]
+
+
+
+
+
+
+
+DM $TQ8e = $A_Q8e/
+1,
+2,
+4,
+9,
+10,
+8,
+11,
+91+92,
+R,F,
+VT = "Q8e. GENERAL FINANCIAL TRANSACTIONS DONE IN THE PAST 1 MONTH",
+V = $TQ8a,
+
+
+
+
+
+
+
+DM $TQ8f = $Q8f/
+1,
+2,
+R,F,
+VT = "Q8f. P1M TRANSACTION INCIDENCE",
+V = "
+Did transaction in P1M;
+Did not do transaction in P1M;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+!---OE
+[*SK98]
+DM $TQ192 = $Q192/
+
+R,F,
+VT = "Q192. REASONS FOR NOT DOING TRANSACTION IN P1M",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+[*98]
+
+
+
+
+
+
+DM $TQ193 = $A_HQ193/
+1,
+2,
+4,
+9,
+10,
+8,
+11,
+91+92,
+R,F,
+VT = "Q193. TRANSACTIONS USING BOTH OFFLINE AND ONLINE CHANNELS",
+V = $TQ8a,
+
+
+
+
+
+[*DOA=1:[C8B.#]]
+DM $TQ193aR[A] = $I_[C8B.A]_A_Q193a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+98,
+R,F,
+VT = "Q193a. TRIGGERS IN USING BOTH ONLINE AND OFFLINE MODE OF TRANSACTION - ONLINE - [L8B.A]",
+V = "
+Has wide range of online and offline;
+Available/ not on downtime whenever I need it;
+More convenient than offline payment methods (ex. cash, bank, and physical payment;
+Faster transactions;
+I was not able to bring cash;
+I use my e-wallet/ fintech app to augment if I don't have enough cash with me;
+More comfortable to use online channel/ payment;
+For emergency purposes and I ran out of cash;
+I use my e-wallet/fintech app to earn points;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+[*DOA=1:[C8B.#]]
+DM $TQ193bR[A] = $I_[C8B.A]_A_Q193b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+98,
+R,F,
+VT = "Q193b. TRIGGERS IN USING BOTH ONLINE AND OFFLINE MODE OF TRANSACTION - OFFLINE - [L8B.A]",
+V = "
+It is more convenient to use when outside or in the physical;
+Faster transactions, no need to wait for confirmation;
+I use cash if my balance or fund in my e-wallet/ Fintech app is not enough;
+E-wallet/Fintech app is under maintenance/ experiencing app downtime;
+Sometimes I don't have access to internet or weak signal in the area so I can't use my e-wallet/ fintech app;
+More comfortable to use offline channel/ payment;
+When ewallet is not accepted;
+Amount to be paid is too small, so no need to use other means;
+I can ask other people to do the purchase / transaction;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+
+DM $TQ9b = $A_Q9b/
+1,
+2,
+3,
+91+92,
+99,
+R,F,
+VT = "Q9b. INCIDENCE OF OWNING AN ACCOUNT",
+V = "
+E-money/ mobile wallet;
+Mobile/ online/ digital banks;
+E-remittance;
+Other financial apps/ websites;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ101 = $Q101/
+1,
+2,
+3,
+R,F,
+VT = "Q101. CONTROL",
+V = "
+Regular users;
+Non-regular users but with account;
+Non-regular users and without account;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ10 = $Q10/
+1,
+2,
+R,F,
+VT = "Q10. NON-REJECTOR OF FINTECH",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+!---OE
+[*SK98]
+DM $TQ10_1 = $Q10_1/
+
+R,F,
+VT = "Q10.1. REASONS FOR BEING A REJECTOR",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+[*98]
+
+
+
+
+
+
+DM $TQFR1c = $A_QFR1c/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR1c. AIDED AWARENESS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR1d = $A_QFR1d/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR1d. TOTAL BRAND AWARENESS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2a = $A_QFR2a/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2a. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE EVER DOWNLOADED",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2b = $A_QFR2b/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2b. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE EVER REGISTERED",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQFR2c = $A_QFR2c/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2c. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE WITH EXISTING ACCOUNT",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+[*DATA CQ16=
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+9192]
+
+[*DATA LQ16(;)=
+GCash;
+PayMaya/Maya;
+Coins.ph;
+PayPal;
+TrueMoney;
+DragonPay;
+GrabPay;
+AliPay;
+WeChat Pay;
+Beep;
+CLIQQ;
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+ECPay;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+CIMB Bank;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+DiskarTech;
+BDO Pay;
+ShopeePay;
+LazWallet;
+ML Wallet;
+eCebuana;
+SquidPay;
+Bayad Center Online / App;
+Tonik;
+BancNet Online;
+Moneygment;
+Payoneer;
+RCBC mobile;
+StarPay;
+Maybank`'s Isave;
+HelloMoney;
+Eon;
+Komo;
+OFBank;
+PBCOMobile;
+PSBank Mobile;
+Touch Pay;
+SeaBank;
+Remitly;
+Xendpay;
+Go Tyme;
+Vybe by BPI;
+PalawanPay;
+UNO Digital Bank;
+Others]
+
+[*sk9]
+[*DOA=1:[CQ16.#]]
+DM $TQFR2dR[A] = $T_QFR2d_[CQ16.A]/1-10,
+R,F,
+VT = "QFR2d. # OF ACCOUNTS PER BRAND - [LQ16.A]",
+V = "
+[*DOB=1:10]
+[B]<V[B]>;
+[*ENDB]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+DM $TQFR2e = $A_QFR2e/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2e. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE EVER USED",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2f = $A_QFR2f/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2f. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 6 MONTHS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2g = $A_QFR2g/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2g. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 2 MONTHS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2h = $A_QFR2h/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2h. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 4 WEEKS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2i = $A_QFR2i/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2i. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 WEEK",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR2j = $QFR2j/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QFR2j. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED MOST OFTEN (BUMO)",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+[*DOA=1:[CQ16.#]]
+DM $TQFR2kR[A] = $T_QFR2k_[CQ16.A]/1,2,
+R,F,
+VT = "QFR2k. STATUS OF E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE ACCOUNT - [LQ16.A]",
+V = "
+Basic Account;
+Fully Verified/Upgraded/Complete/Premium Account;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+[*9]
+
+
+
+
+
+DM $TQFR3a = $QFR3a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3a. GCASH SERVICES: TOM AWARENESS",
+V = "
+Buy load;
+Send Money;
+Pay QR / STP;
+Webpay;
+GLife;
+A+ rewards;
+Pay bills;
+GInsure;
+GSave;
+Receive Money;
+Bank transfer;
+GCash Padala;
+GLoan;
+GCredit;
+GGives;
+GInvest/GFunds;
+GCrypto;
+Global GStocks;
+PH GStocks;
+Request Money;
+GForest;
+Earn Money;
+Jobs;
+Ship & Deliver;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQFR3b = $A_QFR3b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3b. GCASH SERVICES: OTHER SPONT AWARENESS",
+V = $TQFR3a,
+
+
+
+
+
+
+
+DM $TQFR3c = $A_QFR3c/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3c. GCASH SERVICES: AIDED AWARENESS",
+V = $TQFR3a,
+
+
+
+
+
+
+
+DM $TQFR3d = $A_QFR3d/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3d. TOTAL GCASH SERVICES AWARENESS",
+V = $TQFR3a,
+
+
+
+
+
+
+
+DM $TQFR3e = $A_QFR3e/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3e. GCASH SERVICES EVER USED",
+V = $TQFR3a,
+
+
+
+
+
+
+
+DM $TQFR3f = $A_QFR3f/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3f. GCASH SERVICES USED IN THE PAST 2 MONTHS",
+V = $TQFR3a,
+
+
+
+
+
+
+DM $TQFR3g = $A_QFR3g/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92,
+99,
+R,F,
+VT = "QFR3g. GCASH SERVICES USED IN THE PAST 4 WEEKS",
+V = $TQFR3a,
+
+
+
+
+
+
+DM $TQ16c = $A_Q16c/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16c. AIDED AWARENESS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ16d = $A_Q16d/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16d. TOTAL BRAND AWARENESS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQ16e = $Q16e/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16e. FIRST FAVORITE E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ16f = $Q16f/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16f. SECOND FAVORITE E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ16g = $Q16g/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q16g. RECOMMENDED E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+[*DATA C16H=
+13+22,
+12,
+11,
+3,
+1,
+7,
+2,
+4,
+23]
+
+[*DATA L16H(;)=
+BDO Mobile/Online;
+BPI Mobile/Online;
+CLIQQ;
+Coins.ph;
+GCash;
+GrabPay;
+PayMaya/Maya;
+PayPal;
+ShopeePay]
+
+
+[*DATA LQ63(;)=
+Creates new and continuously innovate its products and services;
+Brand for everyone (young or old, rich or poor);
+Brand that is safe and secure;
+Provides relevant digital products and services;
+Can be used whenever needed (any time and any day);
+Makes everyday life easier;
+Brand for me;
+Brand who genuinely cares about its customers;
+Has malasakit/concern for t;
+Has reliable customer service when needed;
+Gives me perks, rewards, and privileges that are relevant to me;
+Opens up opportunities for me to progress more in life;
+Can be used anywhere (widely accepted, online and in-store);
+Has low to no transaction fees;
+Has features that can help me assure my future by growing my finances;
+Complete and all-in one financial app/ solution/ website;
+Widely and highly recommended e-wallet brand;
+Has advertisements that I can relate to;
+Brand that is trustworthy;
+Products and services are easy to avail of and use;
+Does not take advantage of my personal and transaction data;
+Brand that helps customers to develop their financial skills and understanding;
+Brand I can depend on for emergency or additional funds;
+Helps me get ready for a better tomorrow;
+Gives me hope for the future]
+
+[*DATA CQ63=
+1,
+3,
+4,
+5,
+6,
+7,
+8,
+10,
+11,
+12,
+13,
+14,
+16,
+17,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30]
+
+
+
+[*DATA CQ197=
+901,
+1,
+2,
+990,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+9195]
+
+[*DATA LQ197(;)=
+Telco (NET);
+Mobile;
+Broadband;
+Non Telco (NET);
+Game Credits;
+KUMU Coins;
+PayTV;
+Prepaid Kit;
+Tinder;
+Prepaid Insurance;
+Kuryente Prepaid;
+Other]
+
+
+[*DATA LQBL(;)=
+Cash;
+Check;
+Debit Card;
+Credit Card;
+GCash;
+Maya;
+ShopeePay;
+Other E-wallets;
+Other digital/ online banks]
+
+
+[*DATA CQ30=
+901,
+1,
+2,
+3,
+4,
+902,
+5,
+6,
+7,
+8,
+903,
+9,
+10,
+12,
+11,
+91]
+
+[*DATA LQ30(;)=
+UTILITIES (NET);
+Association dues;
+Electric  Bills;
+Water Bills;
+House/ condominium/ apartment rental;
+GOVERNMENT AGENCIES (NET);
+SSS;
+Pag-ibig;
+BIR;
+Philhealth;
+Telecom (NET);
+Internet;
+Mobile phone postpaid;
+Landline (separate from internet subscription);
+Cable;
+Others]
+
+
+
+[*DOA=1:9]
+DM $TQ16hR[A] = $I_[A]_A_Q16h/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+91,
+R,F,
+VT = "Q16h. SOURCES OF BRAND AWARENESS - [L16H.A]",
+V = "
+Banners or tarps on waiting sheds, inside the malls, terminals/ stop-overs, etc.;
+Billboards;
+Blog (Blogger endorsements);
+Branded delivery trucks;
+Celebrity endorser;
+Cinemas;
+Company website;
+Email blasts;
+Events/Activations;
+Facebook;
+Heard from family/ relatives;
+Heard from friend/colleagues/workmates;
+Instagram;
+In-store materials (i.e. posters, price tags, streamers, stickers, brochures, etc.);
+Newspapers/Magazines;
+Product Displays in Stores;
+Radio;
+Samples/leaflets;
+Transit ads;
+TV;
+Twitter;
+Youtube;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+DM $TQ17L = $A_Q17L/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17L. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE EVER DOWNLOADED",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17M = $A_Q17M/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17M. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE EVER REGISTERED",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17d = $A_Q17d/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17d. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE WITH EXISTING ACCOUNT",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+[*sk1]
+[*DOA=1:[CQ16.#]]
+DM $TQ17hR[A] = $T_Q17h_[CQ16.A]/1-10,
+R,F,
+VT = "Q17h. # OF ACCOUNTS PER BRAND - [LQ16.A]",
+V = "
+[*DOB=1:10]
+[B]<V[B]>;
+[*ENDB]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+[*1]
+
+
+
+
+
+DM $TQ17f = $A_Q17f/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17f. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE EVER USED",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17e = $A_Q17e/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17e. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 6 MONTHS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+DM $TQ17a = $A_Q17a/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17a. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 2 MONTHS",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17c = $A_Q17c/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17c. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 MONTH",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17k = $A_Q17k/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17k. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 WEEK",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17b = $Q17b/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "Q17b. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED MOST OFTEN (BUMO)",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ17i = $Q17i/
+1,
+2,
+R,F,
+VT = "Q17i. FINAL CONTROL FOR USER AND NON-USER SEGMENT CLASSIFICATION",
+V = "
+Users;
+Non users;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ60 = $A_Q60/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+14,
+15,
+16,
+17,
+20,
+21,
+91+92+93,
+R,F,
+VT = "Q60. REASONS FOR NOT USING E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE",
+V = "
+Concerns with hacking and data breac;
+Dislikes managing multiple financial accounts;
+Fear of hidden charges;
+Fears of loss of money;
+Fears surrounding fraud;
+Hesitation to open another financial account;
+Lack of knowledge on features;
+Long delay in resolving issues;
+Negative experiences of friends;
+Negative feedback regarding customer service;
+No reliable internet connection;
+No reliable means to cash-in/ cash-out;
+No reliable means to request for refund;
+Not open to learning how to use financial apps;
+Registration process is tedious;
+Uncertainty of transactions;
+Doubts with capability of the financial app to provide strong security for my account;
+No available channels or sources to learn how to use the financial app;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+[*sk4]
+[*DOA=1:[CQ16.#]]
+DM $TQ17jR[A] = $T_Q17j_[CQ16.A]/1-2,
+R,F,
+VT = "Q17j. STATUS OF E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE ACCOUNT - [LQ16.A]",
+V = "
+Basic Account;
+Fully Verified/Upgraded/Complete/Premium Account;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+[*4]
+
+
+
+
+
+
+DM $TQSA1 = $A_QSA1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+98,
+R,F,
+VT = "QSA1. REASONS FOR HAVING BASIC ACCOUNT ONLY IN GCASH",
+V = "
+Not relevant in my daily financial transactions;
+No money / funds to use the app;
+I don't have an available valid I;
+I don't feel safe with GCash;
+I don't trust GCash and/or with other similar apps;
+I encountered a problem while verifying their GCash account;
+I don't know how to verify my account;
+I don't want to share personal information/ ID to GCash;
+I am contented with the current services offered for unverified account;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+!---OE
+[*SK98]
+DM $TQ40b = $A_HQ40B/
+
+R,F,
+VT = "Q40B. REASONS FOR USING BRAND OF E-WALLET IN THE PAST 1 MONTH",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+[*98]
+
+
+
+
+
+
+DM $TQFMU = $QFMU/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QFMU. FREQUENCY OF MONTHLY USAGE - GCASH",
+V = "
+I use it everyday (7x a week);
+I use it almost everyday (4-6x a week);
+1-3x a week;
+3x or less in a month;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQCI1 = $A_QCI1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+98,
+R,F,
+VT = "QCI1. GCASH - MODE OF CASHING-IN",
+V = "
+From my bank account;
+Nearby Sari-sari store;
+Cash-in in convenience store (ex. 7-Eleven, Mini Stop, Alfamart, Family Mart, Lawson, etc.);
+My employer sends my salary through GCash;
+From my family/ friends;
+Payment center (ex. Bayad Center, Globe store, ECPay);
+Supermarket (ex. SM, Puregold, Robinsons, Waltermart);
+Department store (ex. SM, Robinsons);
+Drugstore (ex. Mercury Drug, Watsons);
+Machine (ex. TouchPay, Pay & Go);
+Cash-in agents (does not include Sari-sari store);
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQCO2 = $A_QCO2/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+98,
+10,
+R,F,
+VT = "QCO2. GCASH - MODE OF CASHING-OUT",
+V = "
+Nearby Sari-sari store;
+Cash-out in convenience store (ex. 7-Eleven, Mini Stop, Alfamart, Family Mart, Lawson, etc.);
+Cash-out in Pawnshops (ex. PeraHub, Villarica, Tambunting, and Jaro);
+Cash out through family/ friends;
+Payment center or facilities (ex. ExpressPay, TrueMoney, Posible);
+Supermarket (ex. SM, Puregold, Robinsons, Waltermart);
+Department store (ex. SM, Robinsons);
+Cash out using bank transfer (i.e., transfer money to my bank from GCash and use my bank's ATM card to withdraw the money);
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+[*FORA=1:2:22]
+DM $TQ40R[A] = $I_[CQ16.A]_A_Q40/
+1,
+2,
+3,
+5,
+6,
+7,
+8,
+11,
+12,
+98,
+R,F,
+VT = "Q40. REASONS FOR NOT USING E-WALLET N THE PAST 1 MONTH - [LQ16.A]",
+V = "
+No transactions for me to use;
+My account is not fully verified;
+I don't know how to use;
+I forgot the password of my account;
+Problems with account (e.g. cannot open);
+Weak signal/ no internet connection in my area to access my account;
+I currently don't own a personal mobile phone;
+I am afraid of being sca;
+I have no money to put in;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+[*DOA=1:[CQ16.#]]
+DM $TQ45R[A] = $T_Q45_[CQ16.A]/
+1,
+2,
+3,
+R,F,
+VT = "Q45. BRAND CONSIDERATION - [LQ16.A]",
+V = "
+Used in the past/ currently using and will use again;
+Would consider using;
+Would not consider using in the future;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:[CQ16.#]]
+DM $TQ46R[A] = $T_Q46_[CQ16.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+R,F,
+VT = "Q46. WILLINGNESS TO PAY PRICE PREMIUM - [LQ16.A]",
+V = "
+I wouldn't use this brand at all;
+Only if its charges are the same as the most competitive bran;
+Even if its charges are slightly less competitive than the most competitive b;
+Even if its charges are much less competitive than the most competit;
+Even if its charges are less competitive than any other brands;
+Whatever l charges are;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+[*DOA=1:9]
+DM $TQ48R[A] = $T_Q48_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "Q48. BRAND DISPOSITION - [L16H.A]",
+V = "
+This is the e-wallet/mobile money/ /mobile bank/ e-remittance/ any financial apps or websites I prefer, none other;
+This is one of the e-wallet/mobile money/ /mobile bank/ e-remittance/ any financial apps or websites I prefer;
+This is not one of the e-wallet/mobile money/ /mobile bank/ e-remittance/ any financial apps or websites that I like but from what I have heard about it recently, I would like to use it;
+This is not one of the e-wallet/mobile money/ /mobile bank/ e-remittance/ any financial apps or websites that I like, but I might consider using it under certain circumst;
+I've heard of this e-wallet/ mobile money/ mobile bank/ e-remittance/ any financial apps or websites but I don't know much about it;
+I've never heard of this e-wallet/mobile money/ mobile bank/ e-remittance/ any financial apps or websites;
+I know enough about this e-wallet/mobile money/ /mobile bank/ e-remittance/ any financial apps or websites to say that I would never willingly subscribe to this;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+[*DOA=1:25]
+DM $TQ63R[A] = $T_Q63_[CQ63.A]/
+1,
+2,
+3,
+4,
+5,
+4+5,
+1+2,
+R,F,
+VT = "Q63. STATED IMPORTANCE - [LQ63.A]",
+V = "
+Not important at all;
+Somewhat not important;
+May or may not be important;
+Somewhat importan;
+Very important;
+Top-2-box<Q>;
+Bottom-2-box<Q>;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+[*DOA=1:9]
+DM $TQ64R[A] = 
+[*DOB=1:25]
+$T_Q64_[CQ63.B]/[A],
+[*ENDB]
+R,F,
+VT = "Q64. BRAND ASSOCIATION - [L16H.A]",
+V = "
+Creates new and continuously innovate its products and services;
+Brand for everyone (young or old, rich or poor);
+Brand that is safe and secure;
+Provides relevant digital products and services;
+Can be used whenever needed (any time and any day);
+Makes everyday life easier;
+Brand for me;
+Brand who genuinely cares about its customers;
+Has malasakit/concern for t;
+Has reliable customer service when needed;
+Gives me perks, rewards, and privileges that are relevant to me;
+Opens up opportunities for me to progress more in life;
+Can be used anywhere (widely accepted, online and in-store);
+Has low to no transaction fees;
+Has features that can help me assure my future by growing my finances;
+Complete and all-in one financial app/ solution/ website;
+Widely and highly recommended e-wallet brand;
+Has advertisements that I can relate to;
+Brand that is trustworthy;
+Products and services are easy to avail of and use;
+Does not take advantage of my personal and transaction data;
+Brand that helps customers to develop their financial skills and understanding;
+Brand I can depend on for emergency or additional funds;
+Helps me get ready for a better tomorrow;
+Gives me hope for the future;
+Not associated<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+DM $TQ197 = $A_Q197/
+1+2,
+1,
+2,
+3+4+5+6+7+8+9,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91+92+93+94+95,
+R,F,
+VT = "Q197. TYPE OF LOAD BOUGHT",
+V = "
+Telco (NET);
+`     Mobile;
+`     Broadband;
+Non Telco (NET);
+`     Game Credits;
+`     KUMU Coins;
+`     PayTV;
+`     Prepaid Kit;
+`     Tinder;
+`     Prepaid Insurance;
+`     Kuryente Prepaid;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+[*DOA=1:[CQ197.#]]
+DM $TQBLD1R[A] = $I_[CQ197.A]_A_QBLD1/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QBLD1. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - BUY LOAD - [LQ197.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+[*DOA=1:[CQ197.#]]
+DM $TQ28b1R[A] = $I_[CQ197.A]_A_Q28b1/
+1,
+7,
+2,
+3,
+4,
+5,
+6,
+R,F,
+VT = "Q28b1. BUYING LOAD - [LQ197.A]",
+V = "
+Myself;
+For other family members;
+Spouse;
+Child/Children;
+Parents;
+Siblings;
+For other people;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+[*DOB=7:10]
+DM $TQBL1R[B] = $I_[B]_A_QBL1/
+1+2,
+1,
+2,
+3+4+5+6+7+8+9,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91+92+93+94+95,
+R,F,
+VT = "QBL1. TYPE OF LOAD BOUGHT OFFLINE IN THE PAST 1 MONTH - [LQ8B2.B]",
+V = $TQ197,
+[*ENDB]
+
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQ197.#]]
+DM $TQBL2H[B]R[A] = $I_[B]_T_QBL2_[CQ197.A]/
+1,
+2,
+3,
+4,
+98,
+R,F,
+VT = "QBL2. PURCHASE CHANNEL FOR BUYING MOBILE LOAD - [LQ8B2.B] - [LQ197.A]",
+V = "
+Convenience Store;
+Individual Loader (not in sari-sari store);
+Loading Stations/Kiosks;
+Sari-sari Stores;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQ197.#]]
+DM $TQBL3H[B]R[A] = $I_[B]_I_[CQ197.A]_A_QBL3/
+1,
+2,
+3,
+4,
+5,
+6,
+98,
+R,F,
+VT = "QBL3. BUYING LOAD FOR WHOM - [LQ8B2.B] - [LQ197.A]",
+V = "
+Myself;
+For other family members;
+Spouse;
+Child/Children;
+Parents;
+Siblings;
+For other people;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+[*DATA AMOUNT=
+1,2,3,4,5,6,10]
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:[CQ197.#]]
+DM $TQBLAMTH[B]R[A] = $I_[CQ197.A]_QBLAMT[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QBLAMT. TOTAL MONTHLY BUDGET SPENT ON LOAD - [LQBL.B] - [LQ197.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+DM $TQ30a = $A_Q30a/
+1+2+3+4,
+1,
+2,
+3,
+4,
+5+6+7+8,
+5,
+6,
+7,
+8,
+9+10+12+11,
+9,
+10,
+12,
+11,
+91,
+R,F,
+VT = "Q30a. TYPE OF BILLS PAID IN THE PAST 1 MONTH",
+V = "
+UTILITIES (NET);
+`     Association dues;
+`     Electric  Bills;
+`     Water Bills;
+`     House/ condominium/ apartment rental;
+GOVERNMENT AGENCIES (NET);
+`     SSS;
+`     Pag-ibig;
+`     BIR;
+`     Philhealth;
+Telecom (NET);
+`     Internet;
+`     Mobile phone postpaid;
+`     Landline (separate from internet subscription);
+`     Cable;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+[*DATA QBP2(;)=
+E-wallet/ Mobile Banking;
+Cash;
+Check;
+Debit Card;
+Credit Card]
+
+
+[*DATA CQSM1=
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+9195]
+
+[*DATA LQSM1(;)=
+Sent money to my family/ friends in the Philippines;
+Sent money to my family/ friends abroad;
+Sent donations;
+Gift or token;
+For sports-betting by sending money to an agent;
+Lent money to family/ relatives/ friends;
+For e-sabong;
+Played in online casino by sending money to an agent;
+Sent money for Contribution;
+Others]
+
+
+
+[*DATA CQSMO3=
+30,
+901,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+902,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+903,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+904,
+98]
+
+[*DATA LQSMO3(;)=
+Sari-sari Store;
+REMITTANCE CENTER (NET);
+Cebuana Lhuillier;
+LBC;
+M Lhuillier;
+MoneyGram;
+Palawan Express Pera Padala;
+RD Pawnshop;
+TrueMoney;
+Western Union;
+Tambunting;
+Villarica Pawnshop;
+Smart Padala Centers;
+PHYSICAL BANKS (NET);
+BDO;
+BPI / BPI Savings;
+China bank;
+Eastwest;
+Landbank;
+Metrobank;
+PNB;
+RCBC;
+Security Bank;
+Unionbank;
+BAYAD CENTERS (NET);
+Sinag Pawnshop;
+Ministop;
+Super Service Center;
+CVM Pawnshop;
+Raquel Pawnshop;
+Pera Hub;
+Robinsons Department Store;
+Robinsons Supermarket;
+Other (NET);
+Others]
+
+
+[*DATA CQRM1=
+1,
+2,
+3,
+4,
+5,
+6,
+9195]
+
+[*DATA LQRM1(;)=
+Received money from my family/ friends (from Philippines);
+Received money from my family/ friends (from abroad);
+Received gift or token;
+Received money for others`' contribution (i.e. split bill/ expense);
+Received salary from work;
+Received money as payments from customers;
+Others]
+
+
+[*DATA CQPP1=
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+9195]
+
+[*DATA LQPP1(;)=
+General e-Commerce;
+Convenience store;
+Drugstore;
+Grocery/ Supermarket;
+Palengke/ Market stall;
+Sari-sari store;
+Fastfood/ Restaurants/ Bar/ Coffee shop;
+Karinderya;
+Movie tickets;
+Personal Services;
+Furniture store;
+Gadget store;
+Home Appliance store;
+Shopping or Retail stores/ Department stores in malls;
+Airlines;
+Hotel/ Accommodation;
+Tour/ Travel Package;
+Others]
+
+
+
+[*DATA CQTD1A=
+901,
+1,
+2,
+3,
+4,
+5,
+6,
+27,
+11,
+12,
+24,
+91]
+
+[*DATA LQTD1A(;)=
+COMMUTE (NET);
+Jeepney;
+Tricycle;
+UV Express;
+Bus;
+Carousel;
+Train;
+Taxi;
+TNVS Motorcycle;
+TNVS Car;
+Ferry;
+Others]
+
+[*DATA LQTD1B(;)=
+Personal vehicle - Motorcycle;
+Personal vehicle - Car]
+
+
+[*DATA CQTD7=
+1,
+2,
+3,
+9798]
+
+[*DATA LQTD7(;)=
+Gas/Fuel;
+Maintenance;
+RFID;
+Others]
+
+
+[*DATA LQTAMT(;)=
+Commute;
+Personal vehicle - Motorcycle;
+Personal vehicle - Car]
+
+
+
+[*DATA CQSS1=
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+91]
+
+[*DATA LQSS1(;)=
+Spotify;
+Apple Music;
+Youtube Premium;
+Netflix;
+Disney+;
+Amazon Prime;
+HBO Go;
+Apple TV+;
+Discovery+ Premium;
+Viu;
+WeTV;
+IWantTFC;
+Vivamax PH;
+Iqiyi;
+Others]
+
+
+
+
+[*DATA CQSAV5=
+901,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+902,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+903,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48]
+
+[*DATA LQSAV5(;)=
+BRICK-AND-MORTAR BANKS (NO ACCESS TO ONLINE BANKING);
+AUB (Asia United Bank);
+BDO;
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others from QSAV2_98;
+BRICK-AND-MORTAR BANKS (WITH ACCESS TO ONLINE BANKING);
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank`'s Isave;
+PBCOMobile;
+PSBank Mobile;
+Others from QSAV3_98;
+DIGITAL BANKS;
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others from QSAV8_98]
+
+[*DATA LQ170(;)=
+LOAN FROM BANKS;
+LOAN FROM DIGITAL BRANDS;
+LOAN FROM GOVERNMENT AGENCIES;
+LOAN FROM LENDING INSTITUTIONS/ FINANCING COMPANIES;
+LOAN FROM 5-6/BUMBAY/ TURKO;
+LOAN FROM RELATIVES/FAMILY/FRIENDS/ NEIGHBOR;
+LOAN FROM SARI-SARI STORE;
+LOAN FROM APPLICIANCE/FURNITURE ON INSTALLMENT PROVIDERS;
+LOAN FROM OTHER INFORMAL ROUTES]
+
+
+
+[*DATA CQ175=
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+91]
+
+[*DATA LQ175(;)=
+Interest-bearing deposit;
+Brokered investment accounts;
+Investment-backed insurance;
+Government Securities;
+Real Estate;
+Cryptocurrency;
+Stockbroker/ Investment Firm;
+Others]
+
+
+[*DATA CQINS1=
+901,
+1,
+2,
+3,
+902,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14]
+
+[*DATA LQINS1(;)=
+LIFE INSURANCE (NET);
+Traditional life insurance;
+Variable life insurance;
+Other LIFE Insurance Types;
+NON-LIFE INSURANCE (NET);
+Accident & Health Insurance without Life insurance;
+Hospital/ Medicine Insurance without Life insurance;
+Wealth Management without Life insurance;
+Trust fund without Life insurance;
+Education insurance without Life insurance;
+Pension Plan without Life insurance;
+Business insurance without Life insurance;
+Poverty Insurance;
+Vehicle Insurance;
+Travel Insurance;
+Other NON-LIFE Insurance Types]
+
+
+
+[*DATA LDO2(;)=
+5G-capable smartphone;
+4G-capable smartphone;
+Feature Phone;
+Basic/Keypad Phone;
+Tablet with or without SIM]
+
+
+
+
+
+
+
+[*DOA=1:[CQ30.#]]
+DM $TQBP2R[A] = $I_[CQ30.A]_A_QBP2/
+1,
+2,
+R,F,
+VT = "QBP2. PAYING BILLS FOR WHOM - [LQ30.A]",
+V = "
+For myself only or own family/ household;
+For other household;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+[*DOA=1:5]
+DM $TQBP1R[A] = $T_QBP1_[A]/
+1+2+3+4,
+1,
+2,
+3,
+4,
+5+6+7+8,
+5,
+6,
+7,
+8,
+9+10+12+11,
+9,
+10,
+12,
+11,
+91,
+R,F,
+VT = "QBP1. TYPE OF BILLS PAID OFFLINE IN THE PAST 1 MONTH - [QBP2.A]",
+V = $TQ30a,
+[*ENDA]
+
+
+
+
+
+
+
+
+[*DOA=1:[CQ30.#]]
+DM $TQBPD1R[A] = $I_[CQ30.A]_A_QBPD1/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QBPD1. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - [LQ30.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+[*DOA=1:[CQ30.#]]
+DM $TQ30gR[A] = $T_Q30g_[CQ30.A]/
+1,
+2,
+3,
+R,F,
+VT = "Q30g. GCASH - HOW BILLS WAS PAID - [LQ30.A]",
+V = "
+Pay Bills feature directly deducted from GCash wallet;
+Send Money feature to another person in-charge of paying bills;
+Pay Bills feature using GCredit;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+
+
+[*DOB=1:5]
+[*DOA=1:[CQ30.#]]
+DM $TQBP4H[B]R[A] = $I_[B]_T_QBP4_[CQ30.A]/
+1,
+2,
+3,
+4,
+5,
+98,
+R,F,
+VT = "QBP4. CHANNEL/S WHERE PAID BILLS - [QBP2.B] - [LQ30.A]",
+V = "
+Convenience Store;
+Sari-sari Stores;
+Bayad Center;
+Machine (ex. TouchPay, Pay & Go);
+Office of biller;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:[CQ30.#]]
+DM $TQPBAMTH[B]R[A] = $I_[CQ30.A]_QPBAMT2_[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QPBAMT. TOTAL MONTHLY BUDGET SPENT ON PAYING BILLS - [LQBL.B] - [LQ30.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+
+
+DM $TQSM1 = $A_QSM1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91+92+93+94+95,
+R,F,
+VT = "QSM1. PURPOSE OF SENDING MONEY IN THE P1M",
+V = "
+Sent money to my family/ friends in the Philippines;
+Sent money to my family/ friends abroad;
+Sent donations;
+Gift or token t;
+For sports-betting by sending money to an agent;
+Lent money to family/ relatives/ friends;
+For e-sabong;
+Played in online casino by sending money to an agent;
+Sent money for Contribution;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+[*DOA=1:[CQSM1.#]]
+DM $TQSM2R[A] = $I_[CQSM1.A]_A_QSM2/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QSM2. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - [LQSM1.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+DM $TQSM3 = $QSM3/
+1,
+2,
+R,F,
+VT = "QSM3. GCASH - AWARENESS ON DAILY OUTGOING LIMIT",
+V = "
+Yes, I am aware of GCash's daily outgoing limit;
+No, I am not aware of GCash's daily outgoing limit;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQSM4 = $QSM4/
+1,
+2,
+3,
+R,F,
+VT = "QSM4. GCASH - CURRENT DAILY OUTGOING LIMIT",
+V = "
+PHP100,000;
+PHP500,000;
+PHP1,000,000;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+DM $TQSM5 = $QSM5/
+1,
+2,
+R,F,
+VT = "QSM5. WHETHER GCASH CURRENT DAILY OUTGOING LIMIT IS ENOUGH",
+V = "
+Yes, I think it is enough;
+No, I don't think it is enough;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+!---OE
+[*SK98]
+DM $TQSM6 = $QSM6/
+
+R,F,
+VT = "QSM6. REASONS FOR CURRENT DAILY OUTGOING LIMIT NOT ENOUGH",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+[*98]
+
+
+
+
+
+
+
+[*DOB=7:10]
+DM $TQSMO1R[B] = $I_[B]_A_QSMO1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91+92+93+94+95,
+R,F,
+VT = "QSMO1. PURPOSE FOR SENDING MONEY - [LQ8B2.B]",
+V = $TQSM1,
+[*ENDB]
+
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQSM1.#]]
+DM $TQSMO3H[B]R[A] = $I_[B]_T_QSMO3_[CQSM1.A]/
+30,
+1+2+3+4+5+6+7+8+9+10+11,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12+13+14+15+16+17+18+19+20+21,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22+23+24+25+26+27+28+29,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+98,
+98,
+R,F,
+VT = "QSMO3. CHANNEL/S WHERE SENT MONEY - [LQ8B2.B] - [LQSM1.A]",
+V = "
+Sari-sari Store;
+REMITTANCE CENTER (NET);
+`     Cebuana Lhuillier;
+`     LBC;
+`     M Lhuillier;
+`     MoneyGram;
+`     Palawan Express Pera Padala;
+`     RD Pawnshop;
+`     TrueMoney;
+`     Western Union;
+`     Tambunting;
+`     Villarica Pawnshop;
+`     Smart Padala Centers;
+PHYSICAL BANKS (NET);
+`     BDO;
+`     BPI / BPI Savings;
+`     China bank;
+`     Eastwest;
+`     Landbank;
+`     Metrobank;
+`     PNB;
+`     RCBC;
+`     Security Bank;
+`     Unionbank;
+BAYAD CENTERS (NET);
+`     Sinag Pawnshop;
+`     Ministop;
+`     Super Service Center;
+`     CVM Pawnshop;
+`     Raquel Pawnshop;
+`     Pera Hub;
+`     Robinsons Department Store;
+`     Robinsons Supermarket;
+Other (NET);
+`     Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQSMO3.#]]
+DM $TQSMO4H[B]R[A] = $I_[B]_I_[CQSMO3.A]_A_QSMO4/
+1,
+2,
+3,
+4,
+98,
+99,
+R,F,
+VT = "QSMO4. REQUIREMENTS UPON SENDING OF MONEY - [LQ8B2.B] - [LQSMO3.A]",
+V = "
+My valid ID;
+Valid ID of recipient;
+Mobile number of recipient;
+Branch/ Partner where to pick-up the money;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQSMO3.#]]
+DM $TQSMO5H[B]R[A] = $I_[B]_T_QSMO5_[CQSMO3.A]/
+1,
+2,
+R,F,
+VT = "QSMO5. AWARENESS ON SERVICE/CONVENIENCE FEE PER CHANNEL - [LQ8B2.B] - [LQSMO3.A]",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQSMO3.#]]
+DM $TQSMO6H[B]R[A] = $I_[B]_T_QSMO6_[CQSMO3.A]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QSMO6. AVERAGE SERVICE/CONVENIENCE FEE PER CHANNEL - [LQ8B2.B] - [LQSMO3.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:[CQSM1.#]]
+DM $TQSMAMTH[B]R[A] = $I_[CQSM1.A]_QSMAMT[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - [LQBL.B] - [LQSM1.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+DM $TQRM1 = $A_QRM1/
+1,
+2,
+3,
+4,
+5,
+6,
+91+92+93+94+95,
+R,F,
+VT = "QRM1. PURPOSE OF RECEIVING MONEY IN THE P1M",
+V = "
+Received money from my family/ friends (from Philippines);
+Received money from my family/ friends (from abroad);
+Received gift or token;
+Received money for others' contribution (i.e. split bill/ expense);
+Received salary from work;
+Received money as payments from customers;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+[*DOA=1:[CQRM1.#]]
+DM $TQRM6R[A] = $I_[CQRM1.A]_A_QRM6/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QRM6. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - [LQRM1.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+DM $TQRM2 = $QRM2/
+1,
+2,
+R,F,
+VT = "QRM2. GCASH - AWARENESS ON MONTHLY INCOMING LIMIT",
+V = "
+Yes, I am aware of GCash's monthly incoming limit;
+No, I am not aware of GCash's monthly incoming limit;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQRM3 = $QRM3/
+1,
+2,
+3,
+R,F,
+VT = "QRM3. GCASH - CURRENT MONTHLY INCOMING LIMIT",
+V = "
+PHP100,000;
+PHP500,000;
+PHP1,000,000;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQRM4 = $QRM4/
+1,
+2,
+R,F,
+VT = "QRM4. WHETHER GCASH CURRENT MONTHLY INCOMING LIMIT IS ENOUGH",
+V = "
+Yes, I think it is enough;
+No, I don't think it is enough;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+!---OE
+[*SK98]
+DM $TQRM5 = $QRM5/
+
+R,F,
+VT = "QRM5. REASONS FOR CURRENT MONTHLY INCOMING TRANSACTION LIMIT NOT ENOUGH",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+[*98]
+
+
+
+
+
+
+
+[*DOB=7:10]
+DM $TQRMO1R[B] = $I_[B]_A_QRMO1/
+1,
+2,
+3,
+4,
+5,
+6,
+91+92+93+94+95,
+R,F,
+VT = "QRMO1. PURPOSE FOR RECEIVING MONEY - [LQ8B2.B]",
+V = $TQRM1,
+[*ENDB]
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQRM1.#]]
+DM $TQRMO3H[B]R[A] = $I_[B]_T_QRMO3_[CQRM1.A]/
+30,
+1+2+3+4+5+6+7+8+9+10+11,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12+13+14+15+16+17+18+19+20+21,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22+23+24+25+26+27+28+29,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+98,
+98,
+R,F,
+VT = "QRMO3. CHANNEL/S WHERE RECEIVE MONEY - [LQ8B2.B] - [LQRM1.A]",
+V = $TQSMO3H7R1,
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQSMO3.#]]
+DM $TQRMO4H[B]R[A] = $I_[B]_I_[CQSMO3.A]_A_QRMO4/
+1,
+2,
+3,
+4,
+98,
+R,F,
+VT = "QRMO4. REQUIREMENTS UPON CLAIMING OF MONEY - [LQ8B2.B] - [LQSMO3.A]",
+V = "
+My valid ID;
+Valid ID of recipient;
+Mobile number of recipient;
+Reference number;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:[CQRM1.#]]
+DM $TQRMAMTH[B]R[A] = $I_[CQRM1.A]_QRMAMT[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - [LQBL.B] - [LQRM1.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+
+
+DM $TQPP1 = $A_QPP1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91+92+93+94+95,
+R,F,
+VT = "QPP1. TYPE OF STORE/MECHANT  BOUGHT FROM",
+V = "
+General e-Commerce;
+Convenience store;
+Drugstore;
+Grocery/ Supermarket;
+Palengke/ Market stall;
+Sari-sari store;
+Fastfood/ Restaurants/ Bar/ Coffee shop;
+Karinderya;
+Movie tickets;
+Personal Services;
+Furniture store;
+Gadget store;
+Home Appliance store;
+Shopping or Retail stores/ Department stores in malls;
+Airlines;
+Hotel/ Accommodation;
+Tour/ Travel Package;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+[*DOA=1:[CQPP1.#]]
+DM $TQPP2R[A] = $I_[CQPP1.A]_A_QPP2/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QPP2. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - PAYMENT FOR PURCHASES IN-STORE OR ONLINE - [LQPP1.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+[*DOA=1:[CQPP1.#]]
+DM $TQPP3R[A] = $T_QPP3_[CQPP1.A]/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QPP3. GCASH - HOW PURCHASES WERE PAID - [LQPP1.A]",
+V = "
+Sent payment via Send Money feature, using Mobile number;
+Scanned QR code in physical store of merchant;
+Uploaded QR code to GCash using QR code sent to me by merchant;
+Linked payment/ Webpay;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+[*DOA=1:[CQPP1.#]]
+DM $TQPP4R[A] = $T_QPP4_[CQPP1.A]/
+1,
+2,
+3,
+R,F,
+VT = "QPP4. GCASH - HOW EXACTLY PAID (WALLET) - [LQPP1.A]",
+V = "
+Whole amount deducted from GCash wallet;
+GGives;
+GCredit;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+[*DOB=7:10]
+DM $TQPPO1R[B] = $I_[B]_A_QPPO1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91+92+93+94+95,
+R,F,
+VT = "QPPO1. TYPE OF STORE - [LQ8B2.B]",
+V = $TQPP1,
+[*ENDB]
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQPP1.#]]
+DM $TQPPO3H[B]R[A] = $I_[B]_T_QPPO3_[CQPP1.A]/
+1,
+2,
+R,F,
+VT = "QPPO3. TYPE OF PAYMENT (FOR CREDIT CARD) - [LQ8B2.B] - [LQPP1.A]",
+V = "
+Straight payment;
+Installment;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:[CQPP1.#]]
+DM $TQPPAMTH[B]R[A] = $I_[CQPP1.A]_QPPAMT[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QPPAMT. AMOUNT SPENT IN THE P1M IN THE FOLLOWING STORES - [LQBL.B] - [LQPP1.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+
+
+
+DM $TQTD1 = $A_QTD1/
+1+2+3+4+5+6+27+11+12+24,
+1,
+2,
+3,
+4,
+5,
+6,
+27,
+11,
+12,
+24,
+25+26,
+25,
+26,
+91,
+R,F,
+VT = "QTD1. MODE OF TRANSPORTATION USED IN THE PAST 1 MONTH",
+V = "
+COMMUTE (NET);
+`     Jeepney;
+`     Tricycle;
+`     UV Express;
+`     Bus;
+`     Carousel;
+`     Train;
+`     Taxi;
+`     TNVS Motorcycle;
+`     TNVS Car;
+`     Ferry;
+PERSONAL (NET);
+`     I have my own car;
+`     I have my own motorcycle;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+[*DOA=1:[CQTD1A.#]]
+DM $TQTD2R[A] = $I_[CQTD1A.A]_A_QTD2/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QTD2. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - PAY FOR TRANSPORTATION - [LQTD1A.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+[*DOA=1:[CQTD1A.#]]
+DM $TQTD6R[A] = $T_QTD6_[CQTD1A.A]/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QTD6. GCASH - HOW EXACTLY PAID - [LQTD1A.A]",
+V = "
+Sent payment via Send Money feature, using Mobile number;
+Scanned QR code in physical store of merchant;
+Cash-in/ Top-up using GCash to pay for fare;
+Linked payment/ Webpay;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:2]
+DM $TQTD7R[A] = $T_QTD7_[A]/
+1,
+2,
+3,
+97+98,
+R,F,
+VT = "QTD7. P1M EXPENSES ON OWN CAR/ MOTORCYCLE - [LQTD1B.A]",
+V = "
+Gas/Fuel;
+Maintenance;
+RFID;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+[*DOA=1:[CQTD7.#]]
+DM $TQTD8R[A] = $T_QTD8_[CQTD7.A]/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QTD8. TOTAL MONTHLY BUDGET SPENT ON TRANSPORTATION - [LQTD7.A]",
+V = "
+Less the PHP1,000;
+PHP1,001 to PHP3,000;
+PHP3,001 TO PHP5,000;
+PHP5,001 TO 10,000;
+PHPT10,001 and above;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:[CQTD7.#]]
+DM $TQTD9R[A] = $T_QTD9_[CQTD7.A]/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QTD9. E-WALLET BRANDS USED TO PAY FOR VEHICLE EXPENSES - [LQTD7.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+[*DOB=7:10]
+DM $TQTP1R[B] = $I_[B]_A_QTP1/
+1+2+3+4+5+6+27+11+12+24,
+1,
+2,
+3,
+4,
+5,
+6,
+27,
+11,
+12,
+24,
+25+26,
+25,
+26,
+91,
+R,F,
+VT = "QTP1. MODE OF TRANSPORTATION USED IN THE PAST 1 MONTH - [LQ8B2.B]",
+V = $TQTD1,
+[*ENDB]
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:2]
+DM $TQTP6H[B]R[A] = $I_[B]_T_QTP6_[A]/
+1,
+2,
+3,
+97+98,
+R,F,
+VT = "QTP6. P1M EXPENSES ON OWN CAR/ MOTORCYCLE - [LQ8B2.B] - [LQTD1B.A]",
+V = $TQTD7R1,
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+
+[*DOB=7:10]
+[*DOA=1:[CQTD7.#]]
+DM $TQTP7H[B]R[A] = $I_[B]_T_QTP7_[CQTD7.A]/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QTP7. TOTAL MONTHLY BUDGET SPENT ON TRANSPORTATION - [LQ8B2.B] - [LQTD7.A]",
+V = "
+Less the PHP1,000;
+PHP1,001 to PHP3,000;
+PHP3,001 TO PHP5,000;
+PHP5,001 TO 10,000;
+PHPT10,001 and above;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:3]
+DM $TQTAMTH[B]R[A] = $I_[A]_QTAMT[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QTAMT. TOTAL MONTHLY BUDGET SPENT ON TRANSPORTATION - [LQBL.B] - [LQTAMT.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+DM $TQSS1 = $A_QSS1/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+91,
+R,F,
+VT = "QSS1. SUBSCRIPTION PAID",
+V = "
+Spotify;
+Apple Music;
+Youtube Premium;
+Netflix;
+Disney+;
+Amazon Prime;
+HBO Go;
+Apple TV+;
+Discovery+ Premium;
+Viu;
+WeTV;
+IWantTFC;
+Vivamax PH;
+Iqiyi;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+[*DOA=1:[CQSS1.#]]
+DM $TQSSO2R[A] = $T_QSSO2_[CQSS1.A]/
+1,
+2,
+R,F,
+VT = "QSSO2. CHANNELS IN THE P1M - [LQSS1.A]",
+V = "
+Own subscription/ my own log in information;
+I use someone else's account / other's log in information WITH A FEE;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+[*DOA=1:5]
+DM $TQSSO1R[A] = $T_QSSO1_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+91,
+R,F,
+VT = "QSSO1. SUBSCRIPTION PAID - [QBP2.A]",
+V = $TQSS1,
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:[CQSS1.#]]
+DM $TQSS4R[A] = $I_[CQSS1.A]_A_QSS4/
+[*INSERT insert_Q16_code.TXT]
+R,F,
+VT = "QSS4. E-WALLET AND MOBILE/ ONLINE BANKING BRANDS USED IN P1M - [LQSS1.A]",
+V = "
+[*INSERT insert_Q16_label.TXT];
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+[*DOA=1:[CQSS1.#]]
+DM $TQSS3 = $T_QSS3_[CQSS1.A]/
+1,
+2,
+3,
+R,F,
+VT = "QSS3. GCASH - HOW EXACTLY PAID - [LQSS1.A]",
+V = "
+Sent payment via Send Money feature, using Mobile number;
+Linked as Payment Method;
+Alipay+ Rewards;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOB=1:9]
+[*DOA=1:[CQSS1.#]]
+DM $TQSSAMTH[B]R[A] = $I_[CQSS1.A]_QSSAMT[B]/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QSSAMT. AMOUNT PAID FOR SUBSCRIPTIONS IN THE P1M - [LQBL.B] - [CQSS1.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+[*ENDB]
+
+
+
+
+
+
+
+
+DM $TQSAV1 = $A_QSAV1/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QSAV1. HOW SAVINGS ARE KEPT",
+V = "
+I keep the cash at home/kept in a coin bank;
+Savings account in a physical bank (has physical branches and ATMs) -- no access to online banking;
+Savings account in a physical bank (has physical branches and ATMs) -- has access to online banking;
+Savings account in a digital bank (must have no physical bran;
+I don't have savings, I withdraw all my money every payday/ salary is just enough (`"sakto`") for expenses;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+DM $TQSAV2 = $A_QSAV2/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+98,
+R,F,
+VT = "QSAV2. BANKS WHERE SAVINGS ARE KEPT (PHYSICAL BANK WITHOUT ACCESS TO ONLINE BANKING)",
+V = "
+AUB (Asia United Bank);
+BDO;
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQSAV3 = $A_QSAV3/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+98,
+R,F,
+VT = "QSAV3. BANKS WHERE SAVINGS ARE KEPT (PHYSICAL BANK WITH ACCESS TO ONLINE BANKING)",
+V = "
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank's Isave;
+PBCOMobile;
+PSBank Mobile;
+SeaBank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+DM $TQSAV8 = $A_QSAV8/
+1,
+2,
+3,
+4,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+98,
+17,
+R,F,
+VT = "QSAV8. DIGITAL BANKS AWARE OF",
+V = "
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+DM $TQSAV4 = $A_QSAV4/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+98,
+R,F,
+VT = "QSAV4. DIGITAL BANKS WHERE SAVINGS ARE KEPT (SAVINGS ACCOUNT IN A DIGITAL BANK",
+V = "
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+[*DOA=1:[CQSAV5.#]]
+DM $TQSAV5R[A] = $T_QSAV5_[CQSAV5.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QSAV5. FREQUENCY OF SAVING MONEY - [LQSAV5.A]",
+V = "
+Everyday;
+At least once a week;
+At least once a month;
+Every other month;
+Once every quarter (every 3 moths);
+Once every year;
+I don't regularly add to my sav;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+[*DOA=1:[CQSAV5.#]]
+DM $TQSAV6R[A] = $I_[CQSAV5.A]_QSAV6/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QSAV6. AMOUNT SAVED IN P1M - [LQSAV5.A]",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+DM $TQSAV7 = $A_QSAV7/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QSAV7. SAVINGS BEHAVIOR",
+V = "
+I set aside money first for my savings then spend on what is left for my expenses;
+I set aside money first for all my expenses, then save from what is left;
+I only save when I receive a bonus (e.g., 13th month pay, Christmas bonus, etc) or extra income;
+I often use the money I save for emergencies`; It is not really meant for long term savings;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQL2 = $A_QL2/
+1+2+3+4+5+6+7+8,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9+10+11+12+13,
+9,
+10,
+11,
+12,
+13,
+14+15+16,
+14,
+15,
+16,
+17+18,
+17,
+18,
+19+20+21,
+19,
+20,
+21,
+98,
+99,
+R,F,
+VT = "QL2. TYPES OF LOANS CURENTLY HAVE",
+V = "
+FROM BANKS (NET);
+`     Housing Loan / Mortgage with bank;
+`     Auto Loan / Car Loan with bank;
+`     Business Loan with bank;
+`     MicroBusiness/SME Loan with bank;
+`     Loan with bank;
+`     Personal Loan with bank;
+`     Salary Loan with bank;
+`     Credit card;
+FROM NON-BANK SOURCES (NET);
+`     Loan with Cooperative;
+`     Loan with Non-Stock Savings and Loan Association;
+`     Loan with Microfinance NGO;
+`     Loan with Gov't agencies (i.e. GSIS, SSS, Pag-ibig);
+`     Loan from pawnshop/ pawning;
+Loan with lending institutions/Financing companies (e.g. Home Credit, etc) (SUBNET);
+`     Loan via Home Credit;
+`     Online Loans (e.g. Robocash, Monily, onlineloanspilipinas);
+`     Loans from Financial Technology/FinTech apps or websites (e.g., GLoan, CashniJuan Payday Loan by Paymaya, Cashalo, etc);
+Multi-Purpose Loans from private companies (SUBNET);
+`     Car Loan with Dealership's Financing Service;
+`     Housing Loan via Real Estate Developer In-house financing (not via bank);
+INFORMAL LOANS (SUBNET);
+`     5-6 lending /Bombay/Turko;
+`     Loan from relatives/family/friend/neighbor;
+`     Loan from Sari-sari-store;
+Others;
+NONE;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQ74a = $A_Q74a/
+1+2+3+4+5+6+7+8+9+10+11+12+30+13+14+15+16+40+41+42+43+17+18+19+20+31+21+22+23+24+34+25+35+26+36+37+32+27,
+1+2+3+4+5+6+7+8+9+10+11+12+30,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+30,
+13+14+15+16+40+41+42+43+17+18+19+20+31,
+13,
+14,
+15,
+16,
+40,
+41,
+42,
+43,
+17,
+18,
+19,
+20,
+31,
+21+22+23+24+34,
+21,
+22,
+23,
+24,
+34,
+25+35+26+36+37+32+27,
+25,
+35,
+26,
+36,
+37,
+32,
+27,
+28+29+38+39+44+33,
+28,
+29,
+38,
+39,
+44,
+33,
+R,F,
+VT = "Q74a. EXISTING LOAN LOAN/BORROWING CHANNELS",
+V = "
+FORMAL INSTITUTIONS (NET);
+`     Banks (SUBNET);
+`          BDO;
+`          BPI;
+`          Chinabank;
+`          CIMB Bank;
+`          CTBC Bank;
+`          EastWest Bank;
+`          Maybank;
+`          Metrobank;
+`          PSBank;
+`          RCBC;
+`          Security Bank;
+`          Unionbank;
+`          Other banks (specify);
+`     Digital Brand (SUBNET);
+`          Billease;
+`          Cashalo;
+`          Cashwagon;
+`          GCredit by Gcash;
+`          GGives by Gcash;
+`          GLoan by Gcash;
+`          Revi Credit;
+`          SPay Later;
+`          Juan Hand;
+`          Pesoloan;
+`          Robocash;
+`          Tala;
+`          Other digital (specify);
+`     Government Agencies (SUBNET);
+`          National Home Mortgage;
+`          GSIS;
+`          PAG-IBIG;
+`          SSS;
+`          Other government agency (specify );
+`     Lending Institutions/Financing Companies (SUBNET);
+`          Cooperatives;
+`          Non-Stock Savings and Loan Associations;
+`          Home Credit;
+`          Microfinance NGO;
+`          Pawnshop;
+`          Lending companies;
+`          Loans from other formal institution (specify );
+LOANS/DEBTS FROM INFORMAL ROUTES (NET);
+`     Loan from friends/relative/friends/neighbor;
+`     Loan from other peo;
+`     Loan from Sari-sari store / “Palista”;
+`     Appliance or furniture on installment (hulugan, hindi sa tindahan, mga naglalako);
+`     ATM Pawning;
+`     Other informal routes (specify);
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+DM $TQ159 = $A_Q159a/
+1+2+3+4+5,
+1,
+2,
+3,
+4,
+5,
+6+7,
+6,
+7,
+98,
+R,F,
+VT = "Q159. WHERE PAY EXISTING LOANS PAYMENT CHANNELS",
+V = "
+OFFLINE / NON-DIGITAL (NET);
+`     Remittance Center;
+`     Bayad Center;
+`     Physical bank;
+`     Convenience Store;
+`     Other physical store;
+ONLINE / DIGITAL (NET);
+`     Mobile / Online / Digital bank;
+`     E-money / Mobile wallet;
+`     Other financial app/websites;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQLO3 = $A_QLO3/
+1+2+3+4+5+6+7+8+9+10+11+12,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13+14+15+16+17+18+19+20,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21+22+23+24+25+26+27+28+29+30+31,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+68,
+69,
+70,
+71,
+72,
+73,
+74,
+75,
+76,
+77,
+78,
+R,F,
+VT = "QLO3. WHERE PAY EXISTING LOANS PAYMENT CHANNELS - BRANDS USED",
+V = "
+REMITTANCE CENTER (NET);
+`     Cebuana Lhuillier;
+`     LBC;
+`     M Lhuillier;
+`     MoneyGram;
+`     Palawan Express Pera Padala;
+`     RD Pawnshop;
+`     TrueMoney;
+`     Western Union;
+`     Tambunting;
+`     Villarica Pawnshop;
+`     Smart Padala Centers;
+`     Other remittance centers, please specify;
+BAYAD CENTERS (NET);
+`     Sinag Pawnshop;
+`     Ministop;
+`     Super Service Center;
+`     CVM Pawnshop;
+`     Raquel Pawnshop;
+`     Pera Hub;
+`     Robinsons Department Store;
+`     Robinsons Supermarket;
+PHYSICAL BANKS (NET);
+`     BDO;
+`     BPI / BPI Savings;
+`     China bank;
+`     Eastwest;
+`     Landbank;
+`     Metrobank;
+`     PNB;
+`     RCBC;
+`     Security Bank;
+`     Unionbank;
+`     Other banks (please, specify);
+MOBILE/ ONLINE/ DIGITAL BANK (NET);
+`     BPI Mobile/ Online;
+`     BDO Mobile/ Online;
+`     Landbank Mobile/ Online;
+`     Metrobank Mobile/ Online;
+`     CIMB Bank;
+`     UnionBank Mobile/ Online;
+`     Security Bank Mobile/ Online;
+`     DiskarTech;
+`     BDO Pay;
+`     Tonik;
+`     BancNet Online;
+`     Payoneer;
+`     Maybank's Isave;
+`     RCBC mobile;
+`     Eon;
+`     Komo;
+`     OFBank;
+`     PBCOMobile;
+`     PSBank Mobile;
+`     SeaBank;
+`     Vybe by BPI;
+`     GoTyme;
+E-WALLET (NET);
+`     GCash;
+`     PayMaya/ Maya;
+`     Coins.ph;
+`     PayPal;
+`     TrueMoney;
+`     DragonPay;
+`     GrabPay;
+`     AliPay;
+`     WeChat Pay;
+`     Beep;
+`     CLIQQ;
+`     ECPay;
+`     ShopeePay;
+`     LazWallet;
+`     ML Wallet;
+`     eCebuana;
+`     SquidPay;
+`     Bayad Center Online / App;
+`     Moneygment;
+`     StarPay;
+`     HelloMoney;
+`     Touch Pay;
+`     Remitly;
+`     Xendpay;
+`     PalawanPay;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+[*DOA=1:9]
+DM $TQ170R[A] = $T_Q170a_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+91,
+R,F,
+VT = "Q170. PAYMENT TERMS - [LQ170.A]",
+V = "
+Month - One month;
+Three months;
+Six months;
+Nine months;
+12 months;
+18 months;
+24 months;
+2 years;
+3-5 years;
+6-10 years;
+More than 10 years;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:9]
+DM $TQ170_1_R[A] = $T_Q170a_1_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "Q170.1. FREQUENCY OF PAYMENT - [LQ170.A]",
+V = "
+Weekly;
+Monthly;
+Bi-monthly;
+Quarterly;
+Semi-annual;
+Annually;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+DM $TQLO1 = $QLO1/
+1,
+2,
+R,F,
+VT = "QLO1. INCIDENCE OF ALLOTING MONTHLY BUDGET FOR LOANS - MORE THAN MONTHLY FREQUENCY",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+DM $TQLO2 = $QLO2/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QLO2. AMOUNT ALLOTED FOR LOAN ON MONTHLY BUDGET",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+!---NOT FOUND IN DATAMAP
+[*SK98]
+DM $TQINV2 = $QINV2/
+
+R,F,
+VT = "QINV2. TYPES OF INVESTMENTS CURENTLY HAVE",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+[*98]
+
+
+
+
+
+[*DOA=1:[CQ175.#]]
+DM $TQ175R[A] = $T_Q175_[CQ175.A]/
+1,
+2,
+3,
+4,
+R,F,
+VT = "Q175. HOW INVESTMENT PRODUCTS/SERVICES AVAILED - [LQ175.A]",
+V = "
+Directly from the financial institution/ company offering investment;
+Thru an agent or broker;
+Thru online platforms/services offering investments;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+DM $TQ178 = $A_Q178/
+1+2+3+4+5,
+1,
+2,
+3,
+4,
+5,
+6+7,
+6,
+7,
+98,
+R,F,
+VT = "Q178. INVESTMENT PAYMENT CHANNELS",
+V = $TQ159,
+
+
+
+
+
+
+
+DM $TQINV5 = $A_QINV5/
+1+2+3+4+5+6+7+8+9+10+11+12,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13+14+15+16+17+18+19+20,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21+22+23+24+25+26+27+28+29+30+31,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32+33+34+35+36+37+38+39+40+41+42+43+44+45+46+47+48+49+50+51+52+53,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54+55+56+57+58+59+60+61+62+63+64+65+66+67+68+69+70+71+72+73+74+75+76+77+78,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+68,
+69,
+70,
+71,
+72,
+73,
+74,
+75,
+76,
+77,
+78,
+R,F,
+VT = "QINV5. INVESTMENT PAYMENT CHANNELS - BRANDS USED",
+V = $TQLO3,
+
+
+
+
+
+
+[*DOA=1:[CQ175.#]]
+DM $TQ176R[A] = $T_Q176_[CQ175.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "Q176. FREQUENCY OF PAYMENT - [LQ175.A]",
+V = "
+Weekly;
+Monthly;
+Bi-monthly;
+Quarterly;
+Semi-annual;
+Annually;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+DM $TQINV3 = $QINV3/
+1,
+2,
+R,F,
+VT = "QINV3. INCIDENCE OF ALLOTING MONTHLY BUDGET FOR INVESTMENTS - MORE THAN MONTHLY FREQUENCY",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+DM $TQINV4 = $QINV4/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QINV4. AMOUNT ALLOTED FOR INVESTMENTS ON MONTHLY BUDGET",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQINS1 = $A_QINS1/
+1+2+3,
+1,
+2,
+3,
+4+5+6+7+8+9+10+11+12+13+14,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+R,F,
+VT = "QINS1. TYPES OF INSURANCE CURRENTLY HAVE",
+V = "
+LIFE INSURANCE (NET);
+`     Traditional life insurance;
+`     Variable life insurance;
+`     Other LIFE Insurance Types;
+NON-LIFE INSURANCE (NET);
+`     Accident & Health Insurance without Life insurance;
+`     Hospital/ Medicine Insurance without Life insurance;
+`     Wealth Management without Life insurance;
+`     Trust fund without Life insurance;
+`     Education insurance without Life insurance;
+`     Pension Plan without Life insurance;
+`     Business insurance without Life insurance;
+`     Poverty Insurance;
+`     Vehicle Insurance;
+`     Travel Insurance;
+`     Other NON-LIFE Insurance Types;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+[*DOA=1:[CQINS1.#]]
+DM $TQINS2R[A] = $T_QINS2_[CQINS1.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+98,
+R,F,
+VT = "QINS2. AVAILMENT CHANNEL FOR CURRENT INSURANCE - [LQINS1.A]",
+V = "
+Insurance Agent;
+Insurance Broker / Independent Financial Advisor;
+Banks/ Bancassurance;
+Insurance Agent;
+Online through insurance companies' website/ mobile app;
+Online via banks' website/ mobile app;
+Online through fintech companies/ mobile wallets website/ mobile app (e..g, GCash, Maya, etc);
+Through online insurance marketplace (e.g., Kwik.ins;
+Though online shopping sites (e.g., Shopee, Lazada, et;
+Other channels;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:[CQINS1.#]]
+DM $TQINS3R[A] = $T_QINS3_[CQINS1.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+98,
+14,
+R,F,
+VT = "QINS3. PAYMENT CHANNELS FOR CURRENT INSURANCE - [LQINS1.A]",
+V = "
+Over-the-counter at insurance companies;
+Over-the-counter at banks;
+Over-the-counter at bayad centers;
+Over-the-counter at pawnshops/remittance centers;
+Over-the-counter at courier shops (ex. LBC, JRS Express, DHL, etc.);
+Auto-debit to bank account;
+Through agent / broker / independent financial advisor or planner;
+Online payment via insurance company's app/website;
+Online payment via bank transfer;
+Online payment via online pawnshops/remittance centers;
+Online payment via mobile wallet (e.g. manual/automated deductions from Gcash/Maya/PayPal, etc.);
+Auto-charge to Credit card;
+Others;
+This insurance policy is already fully paid;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+[*DOA=1:[CQINS1.#]]
+DM $TQINS4R[A] = $T_QINS4_[CQINS1.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QINS4. FREQUENCY OF PAYMENT - [LQINS1.A]",
+V = "
+Weekly;
+Monthly;
+Bi-monthly;
+Quarterly;
+Semi-annual;
+Annually;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+
+
+DM $TQINS5 = $QINS5/
+1,
+2,
+R,F,
+VT = "QINS5. INCIDENCE OF ALLOTING MONTHLY BUDGET FOR INSURANCE - MORE THAN MONTHLY FREQUENCY",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+DM $TQINS6 = $QINS6/
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V],
+[*ENDV]
+R,F,
+VT = "QINS6. AMOUNT ALLOTED FOR INSURANCE ON MONTHLY BUDGET",
+V = "
+[*DOV=1:[AMOUNT.#]]
+[AMOUNT.V]<V[AMOUNT.V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+DM $TQ75 = $A_Q75/
+10+1005+1011+1018+1021+1022+1041,
+1+1002+1025,
+2+1001+1003+1033+1031,
+3+1004+1012+1036+1040+1045+1046+1047,
+4+1013,
+5+1035,
+6,
+7+1032,
+8,
+
+1006+1007+1008+1009+1010+1015+1016+1017+1019+1020+1023+1024+1026+1028+1029+1037,
+1030,
+1042+1043+1048,
+1042,
+1043,
+1048,
+
+1014+1027+1034,
+1014,
+1027,
+1034,
+
+99+9999,
+R,F,
+VT = "Q75. SOURCES OF INCOME",
+V = "
+Salary from employment;
+Salary from Part-time job;
+Own Business;
+Remittance from family member;
+Government allowance;
+Borrow money from o;
+Debt from formal Institutions;
+Pension;
+Personal savings;
+Income from self-employment;
+Allowance;
+SALARY OF MEMBER (NET)<q>;
+`     Salary from my husband/Wife;
+`     Salary of my children;
+`     Salary of my mother/Father;
+ONLINE GAMES (NET)<q>;
+`     ONLINE SABONG;
+`     Payments from games tournament;
+`     Online games;
+
+No source of income;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+DM $TQ187 = $Q187/
+1+2+3,
+1,
+2,
+3,
+4+5+6+7+8,
+4,
+5,
+6,
+7,
+8,
+10,
+99,
+R,F,
+VT = "Q187. EMPLOYMENT STATUS",
+V = "
+WORKING;
+`     Self-employed/Business-owner;
+`     Working Full-time;
+`     Working Part-time;
+NON-WORKING;
+`     Housewife / Stay at home husband;
+`     Student;
+`     Out-of-school;
+`     Retired;
+`     Unemployed;
+WORKING AND STUDYING;
+REFUSE TO ANSWER;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+DM $TQ187d = $A_Q187d/
+1,
+9,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+98,
+99,
+R,F,
+VT = "Q187d. BUSINESS DOCUMENTS/ REQUIREMENTS CURRENTLY HAVE",
+V = "
+Mayor's permit;
+Barangay Permit;
+Business permit;
+BIR Certificate;
+Tax Identification Number (TIN);
+Bank account;
+Registered business name in DTI;
+Registered business address;
+Sanitation permit;
+Others, please specify;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+DM $TQ188 = $Q188/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "Q188. EDUCATIONAL ATTAINMENT",
+V = "
+Some / graduated primary/elementary school;
+Some / graduated high school;
+Some / graduated college;
+Some / graduated post-grad studies;
+No schooling;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+
+DM $TQ187e = $Q187e/
+1-500,
+R,F,
+VT = "Q187e. NO. OF EMPLOYEES",
+V = "<F=BRS>*\
+[*DOV=1:500]
+[V]<V[V]>;
+[*ENDV]
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+DM $TQ187f = $Q187f/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "Q187f. BUSINESS SIZE",
+V = "
+Nano: no employees;
+Micro: 1-9 employees;
+Small: 10-99 employees;
+Medium: 100-199 employees;
+Large: 200 and above employees;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+DM $TQ187g = $A_Q187g/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+98,
+R,F,
+VT = "Q187g. TYPE/ NATURE OF BUSINESS",
+V = "
+Food stall/ Karinderya;
+Restaurant/ Bar;
+Beverage (ex. coffee shop, milk tea, etc.);
+Retail store with counter/ cashier (ex. Mini mart/ grocery);
+Apparel/ Clothing (ex. RTW, Footwear, Bags, etc.);
+General Merchandise (ex. household items, souvenirs, etc.);
+Online casino / E-sabong / Sports-betting;
+Gadgets and Computer/Phone Accessories;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+DM $TQ76 = $Q76/
+1,
+2,
+3,
+4,
+5,
+91,
+R,F,
+VT = "Q76. POSITION IN THE FAMILY",
+V = "
+Household head;
+Spouse of the household he;
+Son/Daughter of the house;
+Brother/Sister of the househ;
+Parent of the household head;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+DM $TQ77 = $Q77/
+1,
+2,
+3,
+4,
+R,F,
+VT = "Q77. PARTICIPATION IN DECISION MAKING",
+V = "
+I am the sole decision maker on finances and financial transactions for the family;
+I, together with other family member, decide on finances and financial transactions for the family;
+I have some influence in decision making on finances and financial transactions for the fami;
+I do not have any participation in decision making on finances and financial transactions for the family;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+DM $TQHHSR1 = $T_QHHS_1/
+1-20,
+0,
+R,F,
+VT = "QHHS. HOUSEHOLD SIZE - Total Number of adults",
+V = "<F=BRS>*\
+[*DOV=1:20]
+[V]<V[V]>;
+[*ENDV]
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+DM $TQHHSR2 = $T_QHHS_2/
+1-20,
+0,
+R,F,
+VT = "QHHS. HOUSEHOLD SIZE - Total Number of children",
+V = "<F=BRS>*\
+[*DOV=1:20]
+[V]<V[V]>;
+[*ENDV]
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+DM $TQ78 = $Q78/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+R,F,
+VT = "Q78. MONTHLY PERSONAL INCOME",
+V = "
+Less than Php 10,957;
+Php 10,957 - Php 21,914;
+Php 21,915 - Php 43,828;
+Php 43,829 - Php 76,699;
+Php 76,700 - Php 131,484;
+Php 131,485 - Php 219,140;
+Greater than Php 219,140;
+Refuse/ Don't know;
+No Personal Income;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQ79 = $Q79/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "Q79. MONTHLY HOUSEHOLD INCOME",
+V = "
+Less than Php 10,957;
+Php 10,957-Php 21,914;
+Php 21,915-Php 43,828;
+Php 43,829-Php 76,699;
+Php 76,700-Php 131,484;
+Php 131,485-Php 219,140;
+Greater than Php 219,140;
+Refuse/ Don't know;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQ194a = $Q194a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q194a. GCASH SERVICES: TOM AWARENESS",
+V = "
+Buy load;
+Send Money;
+Pay QR / STP;
+Webpay;
+GLife;
+A+ rewards;
+Pay bills;
+GInsure;
+GSave;
+Receive Money;
+Bank transfer;
+GCash Padala;
+GLoan;
+GCredit;
+GGives;
+GInvest/GFunds;
+GCrypto;
+Global GStocks;
+PH GStocks;
+Request Money;
+GForest;
+Earn Money;
+Jobs;
+Ship & Deliver;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+DM $TQ194b = $A_Q194b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q194b. GCASH SERVICES: OTHER SPONT AWARENESS",
+V = $TQ194a,
+
+
+
+
+
+
+
+DM $TQ194c = $A_Q194c/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q194c. GCASH SERVICES: AIDED AWARENESS",
+V = $TQ194a,
+
+
+
+
+
+
+
+DM $TQ194d = $A_Q194d/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q194d. TOTAL GCASH SERVICES AWARENESS",
+V = $TQ194a,
+
+
+
+
+DM $TQ195a = $A_Q195a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q195a. GCASH SERVICES EVER USED",
+V = $TQ194a,
+
+
+
+
+
+
+DM $TQ195b = $A_Q195b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q195b. GCASH SERVICES USED IN THE PAST 2 MONTHS",
+V = $TQ194a,
+
+
+
+
+
+DM $TQ195c = $A_Q195c/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q195c. GCASH SERVICES USED IN THE PAST 4 WEEKS",
+V = $TQ194a,
+
+
+
+
+
+DM $TQ196 = $A_Q196/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+21,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+22,
+23,
+24,
+25,
+91+92+93,
+99,
+R,F,
+VT = "Q196. CONSIDERATION IN USING GCASH SERVICES",
+V = $TQ194a,
+
+
+
+
+
+
+
+
+
+[*DOA=1:[CQ16.#]]
+DM $TQ47R[A] = $T_Q47_[CQ16.A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+1..7, 
+8..9, 
+10..11, 
+F, 
+R,F,
+VT = "Q47. NET PROMOTER SCORE - [LQ16.A]",
+V = "
+0 - Not at all likely<v0>;
+1<v1>;
+2<v2>;
+3<v3>;
+4<v4>;
+5<v5>;
+6<v6>;
+7<v7>;
+8<v8>;
+9<v9>;
+10 - Highly likely<v10>;
+DETRACTORS NET <Q>;
+PASSIVES NET <Q>;
+PROMOTERS NET <Q>;
+NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+
+
+
+DM $TDO1 = $A_DO1/
+1,
+2,
+3,
+4,
+99,
+R,F,
+VT = "DO1. MOBILE DEVICE OWNERSHIP",
+V = "
+5G-capable smartphone;
+4G-capable smartphone;
+Feature Phone;
+Basic/Keypad Phone;
+None, I do not have a personal mobile device;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+[*DOA=1:5]
+DM $TDO2R[A] = $T_DO2_[A]/
+1-20,
+0,
+R,F,
+VT = "DO2. NUMBER OF MOBILE DEVICES CURRENTLY OWNED - [LDO2.A]",
+V = "<F=BRS>*\
+[*DOV=1:20]
+[V]<V[V]>;
+[*ENDV]
+None;
+Missing answers<Z>;
+Total count<C>",
+[*ENDA]
+
+
+
+
+
+
+
+
+
+
+DM $TQ66a = $A_Q66a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+31,
+8,
+91,
+R,F,
+VT = "Q66a. INTERNET CONNECTION (ACCESS POINT)",
+V = "
+Internet Café/Pisonet (internet access using computer owned by shop);
+Office/School internet;
+Mobile Data;
+Free Public Wi-Fi (free internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc.);
+Paid Public Wi-Fi(internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc., paid access after exceeding free GB);
+Mobile Hotspot/Tether;
+Wi-Fi Tingi/WiFi Hotspot Voucher (bought from store/electronic machine or kiosk/other retailers, provided with username and password`; with time validity and limited data/GB allocation);
+Owned paid access to internet connection/Wi-Fi at home;
+Paid access to internet connection/Wi-Fi at home of neighbor/relative/friend (shared payment agreement);
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+DM $TQ66b = $A_Q66b/
+9,
+30,
+10,
+91,
+99,
+R,F,
+VT = "Q66b. INTERNET CONNECTION (DEVICE USED)",
+V = "
+5G-capable smart phone;
+4G -capable smart phone;
+Feature Phone (It has internet capabilities, supports 3G, it can have a touchpad/touchscreen but not an OS. Can't dow;
+Others;
+None, I did not access the internet in the past 4 week;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+DM $TQ65 = $Q65/
+1,
+2,
+3,
+4,
+5,
+6,
+R,F,
+VT = "Q65. DIGITAL ADOPTION BEHAVIOR",
+V = "
+I just follow and use the technology available and make the;
+I make small changes as new technologies come. I explore them but do not necessarily adopt it immediately.;
+I am very active in searching for information on new technologies. I use it to improve areas in my daily routine to make myself more efficient.;
+I am willing to spend and set aside money on the use of new technologies. It is a necessary change to make me more effective and efficient in my day to day l;
+I do my best to try new technologies every time I see on;
+I am always the first to try new technologies and discover ways of how it helps me be more efficient. I proactively seek new technologies and can easily move on from the ol;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+[*SK77]
+
+
+
+
+
+
+
+
+
+
+
+DM $TQ68 = $Q68/
+
+R,F,
+VT = "Q68. SIM CARD OWNERSHIP",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQ69 = $Q69/
+
+R,F,
+VT = "Q69a-e. SIM CARD LINKED TO E-WALLET/MOBILE MONEY/ANY FINANCIAL APPS OR WEBSITES",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQ171 = $Q171/
+
+R,F,
+VT = "Q171. IDENTIFICATION CARD (ID) OWNERSHIP",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQ191 = $Q191/
+
+R,F,
+VT = "Q191. INCIDENCE OF HAVING OFW FAMILY MEMBER",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM1 = $LM1/
+
+R,F,
+VT = "LM1. AD RECOGNITION",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM2 = $LM2/
+
+R,F,
+VT = "LM2. AD VIEWED FREQUENCY",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM3 = $LM3/
+
+R,F,
+VT = "LM3. BRAND LINK",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM4 = $LM4/
+
+R,F,
+VT = "LM4. SOURCES OF AD AWARENESS",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM5 = $LM5/
+
+R,F,
+VT = "LM5. DETAILED RECALL OF AD - MESSAGE DELIVERY",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM6 = $LM6/
+
+R,F,
+VT = "LM6. ACTION AFTER AD",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TLM7 = $LM7/
+
+R,F,
+VT = "LM7. AD EVALUATION METRICS",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI1 = $QFI1/
+
+R,F,
+VT = "QFI1. AD RECOGNITION",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI2 = $QFI2/
+
+R,F,
+VT = "QFI2. AD VIEWED FREQUENCY",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI3 = $QFI3/
+
+R,F,
+VT = "QFI3. BRAND LINK",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI4 = $QFI4/
+
+R,F,
+VT = "QFI4. SOURCES OF AD AWARENESS",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI5 = $QFI5/
+
+R,F,
+VT = "QFI5. DETAILED RECALL OF AD - MESSAGE DELIVERY",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI6 = $QFI6/
+
+R,F,
+VT = "QFI6. ACTION AFTER AD",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+DM $TQFI7 = $QFI7/
+
+R,F,
+VT = "QFI7. AD EVALUATION METRICS",
+V = "
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+[*77]
+
+
+
+
+
+
+DM $BRAND_LAD = 
+[*DOA=1:[CQ16.#]]
+$TQ16d/[A],
+($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
+($TQ16a/N[A]).($TQ16b/[A]),
+$TQ16a/[A],
+$TQ17L/[A],
+$TQ17M/[A],
+$TQ17f/[A],
+$TQ17k/[A],
+$TQ17e/[A],
+$TQ17d/[A],
+$TQ17a/[A],
+$TQ17c/[A],
+$TQ17b/[A],
+$TQ16f/[A],
+$TQ16e/[A],
+$TQ16g/[A],
+[*ENDA]
+VT = "Q16-Q17. BRAND FUNNEL",
+V = "
+[*DOA=1:[CQ16.#]]
+[LQ16.A]\
+`     Q16d. Total Awareness;
+`     Q16c. Aided;
+`     Q16b. Other spontaneous;
+`     Q16a. TOM;
+`     Q17l. Ever Downloaded;
+`     Q17m. Ever Registered;
+`     Q17f. Ever Tried;
+`     Q17k. P1W;
+`     Q17e. P6M;
+`     Q17d. With Existing Acc;
+`     Q17a. P2M;
+`     Q17c. P4W;
+`     Q17b. BUMO;
+`     Q16f. 2nd Favorite<s>;
+`     Q16e. Favorite;
+`     Q16g. Recommended[*sle];
+[*ENDA]",
+
+
+
+
+
+[*data NOM1 = 
+13+21,
+13,
+21,
+12,
+11,
+3,
+1,
+7,
+2,
+4,
+22]
+
+[*DATA NOM2 (;) =
+BDO Mobile/Online (NET);
+BDO Mobile/Online;
+BDO Pay;
+BPI Mobile/Online;
+CLIQQ;
+Coins.ph;
+GCash;
+GrabPay;
+PayMaya;
+PayPal;
+ShopeePay]
+
+
+
+[*DO A = 1:11]
+DM $NOM_LAD[a] =
+$TQ16d/([NOM1.a]),
+($TQ16a/N([NOM1.a]).$TQ16b/N([NOM1.a])).($TQ16c/([NOM1.a])),
+($TQ16a/N([NOM1.a])).($TQ16b/([NOM1.a])),
+$TQ16a/([NOM1.a]),
+$TQ17f/([NOM1.a]),
+$TQ17e/([NOM1.a]),
+$TQ17d/([NOM1.a]),
+$TQ17a/([NOM1.a]),
+$TQ17c/([NOM1.a]),
+$TQ17b/([NOM1.a]),
+$TQ16e/([NOM1.a]),
+$TQ16g/([NOM1.a]),
+XT = "Q16-Q17. BRAND FUNNEL",
+X = "
+Q16d. Total Awareness;
+Q16c. Aided;
+Q16b. Other spontaneous;
+Q16a. TOM;
+Q17f. Ever Tried;
+Q17e. P6M;
+Q17d. With Existing Acc;
+Q17a. P2M;
+Q17c. P4W;
+Q17b. BUMO;
+Q16e. Favorite;
+Q16g. Recommended",
+[*END A]
+
+
+!---------------------- PROFILE --------------------------
+DM $PROFILE =
+$Q3/NB,
+1,
+2+3+4+5,
+6+7+8,
+9+10+11,
+12+13+14+15+16+17,
+
+$Q4/NB,
+1,
+2,
+
+$SEC19/NB,
+1,
+2,
+1..2,
+3,
+4,
+
+$T_Q1_1/NB,
+13..20,
+21..30,
+31..35,
+36..45,
+46..65,
+
+$Q2/NB,1-2,
+
+$T_Q1_1/NB,
+$T_Q1_1/1..21,
+$T_Q1_1/22..29,
+$T_Q1_1/30..34,
+$T_Q1_1/35..44,
+$T_Q1_1/45..99,
+
+$Q187/NB,
+1+2+3,
+4+5+6+7+8,
+10,
+99,
+
+
+XT = "PROFILE",
+X = "
+Q3. REGION<Q>;
+`     Metro Manila;
+`     North-Central Luzon;
+`     South Luzon;
+`     Visayas;
+`     Mindanao;
+
+Q4. LOCALE<Q>;
+`     Urban;
+`     Rural;
+
+
+SEC19. SEC<Q>;
+`     AB;
+`     C1;
+`     ABC1;
+`     C2;
+`     D;
+
+Q1. AGE<Q>;
+`     13-20 years old;
+`     21-30 years old;
+`     31-35 years old;
+`     36-45 years old;
+`     46-65 years old;
+
+Q2. GENDER<Q>;
+`     Male;
+`     Female;
+
+Q1. LIFESTAGE<Q>;
+`     YOUTH (21yo and below);
+`     YUPPIES (22-29yo);
+`     TRANSITIONERS (30-34yo);
+`     BALANCERS (35-44yo);
+`     OLDER ADULTS (45yo and above);
+
+Q187. WORKING STATUS<Q>;
+`     Working;
+`     Non-working;
+`     Working and studying;
+`     Refuse to answer",
+
+
+
+

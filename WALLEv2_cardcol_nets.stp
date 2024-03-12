@@ -1,0 +1,296 @@
+
+
+!{====================================================}!
+!{======================= Q16 ========================}!
+!{====================================================}!
+
+
+[*DOA=1:2]
+!---'Others;'
+DJ $[ALLS16.A]_9192 = $[ALLS16.A]_91 + $[ALLS16.A]_92,
+[*ENDA]
+[*DOA=3:7]
+!---'Others;'
+DM $[ALLS16.A]_9192 = $[ALLS16.A]_91 .OR. $[ALLS16.A]_92,
+[*ENDA]
+
+
+
+
+
+!{====================================================}!
+!{======================= Q197 =======================}!
+!{====================================================}!
+
+
+[*DOA=1:2]
+!---'Telco (NET);'
+DM $I_901_A_QBLD1 = $I_1_A_QBLD1 .OR. $I_2_A_QBLD1,
+!---'Non Telco (NET);'
+DM $I_990_A_QBLD1 = $I_3_A_QBLD1 .OR. $I_4_A_QBLD1 .OR. $I_5_A_QBLD1 .OR. $I_6_A_QBLD1 .OR. $I_7_A_QBLD1 .OR. $I_8_A_QBLD1 .OR. $I_9_A_QBLD1,
+!---'Others;'
+DM $I_9195_A_QBLD1 = $I_91_A_QBLD1 .OR. $I_92_A_QBLD1 .OR. $I_93_A_QBLD1 .OR. $I_94_A_QBLD1 .OR. $I_95_A_QBLD1,
+[*ENDA]
+
+[*DOA=1:2]
+!---'Telco (NET);'
+DM $I_901_A_Q28b1 = $I_1_A_Q28b1 .OR. $I_2_A_Q28b1,
+!---'Non Telco (NET);'
+DM $I_990_A_Q28b1 = $I_3_A_Q28b1 .OR. $I_4_A_Q28b1 .OR. $I_5_A_Q28b1 .OR. $I_6_A_Q28b1 .OR. $I_7_A_Q28b1 .OR. $I_8_A_Q28b1 .OR. $I_9_A_Q28b1,
+!---'Others;'
+DM $I_9195_A_Q28b1 = $I_91_A_Q28b1 .OR. $I_92_A_Q28b1 .OR. $I_93_A_Q28b1 .OR. $I_94_A_Q28b1 .OR. $I_95_A_Q28b1,
+[*ENDA]
+
+[*DOB=7:10]
+!---'Telco (NET);'
+DM $I_[B]_T_QBL2_901 = $I_[B]_T_QBL2_1 .OR. $I_[B]_T_QBL2_2,
+!---'Non Telco (NET);'
+DM $I_[B]_T_QBL2_990 = $I_[B]_T_QBL2_3 .OR. $I_[B]_T_QBL2_4 .OR. $I_[B]_T_QBL2_5 .OR. $I_[B]_T_QBL2_6 .OR. $I_[B]_T_QBL2_7 .OR. $I_[B]_T_QBL2_8 .OR. $I_[B]_T_QBL2_9,
+!---'Others;'
+DM $I_[B]_T_QBL2_9195 = $I_[B]_T_QBL2_91 .OR. $I_[B]_T_QBL2_92 .OR. $I_[B]_T_QBL2_93 .OR. $I_[B]_T_QBL2_94 .OR. $I_[B]_T_QBL2_95,
+
+!---'Telco (NET);'
+DM $I_[B]_I_901_A_QBL3 = $I_[B]_I_1_A_QBL3 .OR. $I_[B]_I_2_A_QBL3,
+!---'Non Telco (NET);'
+DM $I_[B]_I_990_A_QBL3 = $I_[B]_I_3_A_QBL3 .OR. $I_[B]_I_4_A_QBL3 .OR. $I_[B]_I_5_A_QBL3 .OR. $I_[B]_I_6_A_QBL3 .OR. $I_[B]_I_7_A_QBL3 .OR. $I_[B]_I_8_A_QBL3 .OR. $I_[B]_I_9_A_QBL3,
+!---'Others;'
+DM $I_[B]_I_9195_A_QBL3 = $I_[B]_I_91_A_QBL3 .OR. $I_[B]_I_92_A_QBL3 .OR. $I_[B]_I_93_A_QBL3 .OR. $I_[B]_I_94_A_QBL3 .OR. $I_[B]_I_95_A_QBL3,
+[*ENDB]
+
+
+[*DOB=1:9]
+!---'Telco (NET);'
+DJ $I_901_QBLAMT[B] = $I_1_QBLAMT[B] + $I_2_QBLAMT[B],
+!---'Non Telco (NET);'
+DJ $I_990_QBLAMT[B] = $I_3_QBLAMT[B] + $I_4_QBLAMT[B] + $I_5_QBLAMT[B] + $I_6_QBLAMT[B] + $I_7_QBLAMT[B] + $I_8_QBLAMT[B] + $I_9_QBLAMT[B],
+!---'Others;'
+DJ $I_9195_QBLAMT[B] = $I_91_QBLAMT[B] + $I_92_QBLAMT[B] + $I_93_QBLAMT[B] + $I_94_QBLAMT[B] + $I_95_QBLAMT[B],
+[*ENDB]
+
+
+
+!{====================================================}!
+!{======================= Q30 ========================}!
+!{====================================================}!
+
+[*DOA=1:2]
+!---'UTILITIES (NET);'
+DM $I_901_A_QBP2 = $I_1_A_QBP2 .OR. $I_2_A_QBP2 .OR. $I_3_A_QBP2 .OR. $I_4_A_QBP2,
+!---'GOVERNMENT AGENCIES (NET);'
+DM $I_902_A_QBP2 = $I_5_A_QBP2 .OR. $I_6_A_QBP2 .OR. $I_7_A_QBP2 .OR. $I_8_A_QBP2,
+!---'Telecom (NET);'
+DM $I_903_A_QBP2 = $I_9_A_QBP2 .OR. $I_10_A_QBP2 .OR. $I_11_A_QBP2 .OR. $I_12_A_QBP2,
+[*ENDA]
+
+[*DOA=1:2]
+!---'UTILITIES (NET);'
+DM $I_901_A_QBPD1 = $I_1_A_QBPD1 .OR. $I_2_A_QBPD1 .OR. $I_3_A_QBPD1 .OR. $I_4_A_QBPD1,
+!---'GOVERNMENT AGENCIES (NET);'
+DM $I_902_A_QBPD1 = $I_5_A_QBPD1 .OR. $I_6_A_QBPD1 .OR. $I_7_A_QBPD1 .OR. $I_8_A_QBPD1,
+!---'Telecom (NET);'
+DM $I_903_A_QBPD1 = $I_9_A_QBPD1 .OR. $I_10_A_QBPD1 .OR. $I_11_A_QBPD1 .OR. $I_12_A_QBPD1,
+[*ENDA]
+
+!---'UTILITIES (NET);'
+DM $T_Q30g_901 = $T_Q30g_1 .OR. $T_Q30g_2 .OR. $T_Q30g_3 .OR. $T_Q30g_4,
+!---'GOVERNMENT AGENCIES (NET);'
+DM $T_Q30g_902 = $T_Q30g_5 .OR. $T_Q30g_6 .OR. $T_Q30g_7 .OR. $T_Q30g_8,
+!---'Telecom (NET);'
+DM $T_Q30g_903 = $T_Q30g_9 .OR. $T_Q30g_10 .OR. $T_Q30g_11 .OR. $T_Q30g_12,
+
+[*DOB=1:5]
+!---'UTILITIES (NET);'
+DM $I_[B]_T_QBP4_901 = $I_[B]_T_QBP4_1 .OR. $I_[B]_T_QBP4_2 .OR. $I_[B]_T_QBP4_3 .OR. $I_[B]_T_QBP4_4,
+!---'GOVERNMENT AGENCIES (NET);'
+DM $I_[B]_T_QBP4_902 = $I_[B]_T_QBP4_5 .OR. $I_[B]_T_QBP4_6 .OR. $I_[B]_T_QBP4_7 .OR. $I_[B]_T_QBP4_8,
+!---'Telecom (NET);'
+DM $I_[B]_T_QBP4_903 = $I_[B]_T_QBP4_9 .OR. $I_[B]_T_QBP4_10 .OR. $I_[B]_T_QBP4_11 .OR. $I_[B]_T_QBP4_12,
+[*ENDB]
+
+
+[*DOB=1:9]
+!---'UTILITIES (NET);'
+DJ $I_901_QPBAMT2_[B] = $I_1_QPBAMT2_[B] + $I_2_QPBAMT2_[B] + $I_3_QPBAMT2_[B] + $I_4_QPBAMT2_[B],
+!---'GOVERNMENT AGENCIES (NET);'
+DJ $I_902_QPBAMT2_[B] = $I_5_QPBAMT2_[B] + $I_6_QPBAMT2_[B] + $I_7_QPBAMT2_[B] + $I_8_QPBAMT2_[B],
+!---'Telecom (NET);'
+DJ $I_903_QPBAMT2_[B] = $I_9_QPBAMT2_[B] + $I_10_QPBAMT2_[B] + $I_11_QPBAMT2_[B] + $I_12_QPBAMT2_[B],
+[*ENDB]
+
+
+
+
+!{====================================================}!
+!{====================== QSM1 ========================}!
+!{====================================================}!
+
+
+!---'Others;'
+DM $I_9195_A_QSM2 = $I_91_A_QSM2 .OR. $I_92_A_QSM2 .OR. $I_93_A_QSM2 .OR. $I_94_A_QSM2 .OR. $I_95_A_QSM2,
+
+[*DOB=7:10]
+!---'Others;'
+DM $I_[B]_T_QSMO3_9195 = $I_[B]_T_QSMO3_91 .OR. $I_[B]_T_QSMO3_92 .OR. $I_[B]_T_QSMO3_93 .OR. $I_[B]_T_QSMO3_94 .OR. $I_[B]_T_QSMO3_95,
+[*ENDB]
+
+[*DOB=1:9]
+!---'Others;'
+DJ $I_9195_QSMAMT[B] = $I_91_QSMAMT[B] + $I_92_QSMAMT[B] + $I_93_QSMAMT[B] + $I_94_QSMAMT[B] + $I_95_QSMAMT[B],
+[*ENDB]
+
+
+!{====================================================}!
+!{====================== QSMO3 =======================}!
+!{====================================================}!
+
+
+[*DOB=7:10]
+DM $I_[B]_I_98_A_QSMO4 = [*FORA=33:34:35:36:37:38:39:40:46:41:42:43:44:45]$I_[B]_I_[A]_A_QSMO4 [*SLE].OR. [*ENDA],
+DM $I_[B]_I_901_A_QSMO4 = $I_[B]_I_1_A_QSMO4 .OR. $I_[B]_I_2_A_QSMO4 .OR. $I_[B]_I_3_A_QSMO4 .OR. $I_[B]_I_4_A_QSMO4 .OR. $I_[B]_I_5_A_QSMO4 .OR. $I_[B]_I_6_A_QSMO4 .OR. $I_[B]_I_7_A_QSMO4 .OR. $I_[B]_I_8_A_QSMO4 .OR. $I_[B]_I_9_A_QSMO4 .OR. $I_[B]_I_10_A_QSMO4 .OR. $I_[B]_I_11_A_QSMO4,
+DM $I_[B]_I_902_A_QSMO4 = $I_[B]_I_12_A_QSMO4 .OR. $I_[B]_I_13_A_QSMO4 .OR. $I_[B]_I_14_A_QSMO4 .OR. $I_[B]_I_15_A_QSMO4 .OR. $I_[B]_I_16_A_QSMO4 .OR. $I_[B]_I_17_A_QSMO4 .OR. $I_[B]_I_18_A_QSMO4 .OR. $I_[B]_I_19_A_QSMO4 .OR. $I_[B]_I_20_A_QSMO4 .OR. $I_[B]_I_21_A_QSMO4,
+DM $I_[B]_I_903_A_QSMO4 = $I_[B]_I_22_A_QSMO4 .OR. $I_[B]_I_23_A_QSMO4 .OR. $I_[B]_I_24_A_QSMO4 .OR. $I_[B]_I_25_A_QSMO4 .OR. $I_[B]_I_26_A_QSMO4 .OR. $I_[B]_I_27_A_QSMO4 .OR. $I_[B]_I_28_A_QSMO4 .OR. $I_[B]_I_29_A_QSMO4,
+DM $I_[B]_I_904_A_QSMO4 = $I_[B]_I_98_A_QSMO4,
+
+DM $I_[B]_T_QSMO5_98 = [*FORA=33:34:35:36:37:38:39:40:46:41:42:43:44:45]$I_[B]_T_QSMO5_[A] [*SLE].OR. [*ENDA],
+DM $I_[B]_T_QSMO5_901 = $I_[B]_T_QSMO5_1 .OR. $I_[B]_T_QSMO5_2 .OR. $I_[B]_T_QSMO5_3 .OR. $I_[B]_T_QSMO5_4 .OR. $I_[B]_T_QSMO5_5 .OR. $I_[B]_T_QSMO5_6 .OR. $I_[B]_T_QSMO5_7 .OR. $I_[B]_T_QSMO5_8 .OR. $I_[B]_T_QSMO5_9 .OR. $I_[B]_T_QSMO5_10 .OR. $I_[B]_T_QSMO5_11,
+DM $I_[B]_T_QSMO5_902 = $I_[B]_T_QSMO5_12 .OR. $I_[B]_T_QSMO5_13 .OR. $I_[B]_T_QSMO5_14 .OR. $I_[B]_T_QSMO5_15 .OR. $I_[B]_T_QSMO5_16 .OR. $I_[B]_T_QSMO5_17 .OR. $I_[B]_T_QSMO5_18 .OR. $I_[B]_T_QSMO5_19 .OR. $I_[B]_T_QSMO5_20 .OR. $I_[B]_T_QSMO5_21,
+DM $I_[B]_T_QSMO5_903 = $I_[B]_T_QSMO5_22 .OR. $I_[B]_T_QSMO5_23 .OR. $I_[B]_T_QSMO5_24 .OR. $I_[B]_T_QSMO5_25 .OR. $I_[B]_T_QSMO5_26 .OR. $I_[B]_T_QSMO5_27 .OR. $I_[B]_T_QSMO5_28 .OR. $I_[B]_T_QSMO5_29,
+DM $I_[B]_T_QSMO5_904 = $I_[B]_T_QSMO5_98,
+
+DJ $I_[B]_T_QSMO6_98 = [*FORA=33:34:35:36:37:38:39:40:46:41:42:43:44:45]$I_[B]_T_QSMO6_[A] [*SLE]+ [*ENDA],
+DJ $I_[B]_T_QSMO6_901 = $I_[B]_T_QSMO6_1 + $I_[B]_T_QSMO6_2 + $I_[B]_T_QSMO6_3 + $I_[B]_T_QSMO6_4 + $I_[B]_T_QSMO6_5 + $I_[B]_T_QSMO6_6 + $I_[B]_T_QSMO6_7 + $I_[B]_T_QSMO6_8 + $I_[B]_T_QSMO6_9 + $I_[B]_T_QSMO6_10 + $I_[B]_T_QSMO6_11,
+DJ $I_[B]_T_QSMO6_902 = $I_[B]_T_QSMO6_12 + $I_[B]_T_QSMO6_13 + $I_[B]_T_QSMO6_14 + $I_[B]_T_QSMO6_15 + $I_[B]_T_QSMO6_16 + $I_[B]_T_QSMO6_17 + $I_[B]_T_QSMO6_18 + $I_[B]_T_QSMO6_19 + $I_[B]_T_QSMO6_20 + $I_[B]_T_QSMO6_21,
+DJ $I_[B]_T_QSMO6_903 = $I_[B]_T_QSMO6_22 + $I_[B]_T_QSMO6_23 + $I_[B]_T_QSMO6_24 + $I_[B]_T_QSMO6_25 + $I_[B]_T_QSMO6_26 + $I_[B]_T_QSMO6_27 + $I_[B]_T_QSMO6_28 + $I_[B]_T_QSMO6_29,
+DJ $I_[B]_T_QSMO6_904 = $I_[B]_T_QSMO6_98,
+[*ENDB]
+
+
+
+!{====================================================}!
+!{====================== QRM1 ========================}!
+!{====================================================}!
+
+
+!---'Others;'
+DM $I_9195_A_QRM6 = $I_91_A_QRM6 .OR. $I_92_A_QRM6 .OR. $I_93_A_QRM6 .OR. $I_94_A_QRM6 .OR. $I_95_A_QRM6,
+
+[*DOB=7:10]
+!---'Others;'
+DM $I_[B]_T_QRMO3_9195 = $I_[B]_T_QRMO3_91 .OR. $I_[B]_T_QRMO3_92 .OR. $I_[B]_T_QRMO3_93 .OR. $I_[B]_T_QRMO3_94 .OR. $I_[B]_T_QRMO3_95,
+[*ENDB]
+
+[*DOB=1:9]
+!---'Others;'
+DJ $I_9195_QRMAMT[B] = $I_91_QRMAMT[B] + $I_92_QRMAMT[B] + $I_93_QRMAMT[B] + $I_94_QRMAMT[B] + $I_95_QRMAMT[B],
+[*ENDB]
+
+
+
+
+!{====================================================}!
+!{====================== QRMO3 =======================}!
+!{====================================================}!
+
+
+[*DOB=7:10]
+DM $I_[B]_I_98_A_QRMO4 = [*FORA=33:34:35:36:37:38:39:40:41:42:43]$I_[B]_I_[A]_A_QRMO4 [*SLE].OR. [*ENDA],
+DM $I_[B]_I_901_A_QRMO4 = $I_[B]_I_1_A_QRMO4 .OR. $I_[B]_I_2_A_QRMO4 .OR. $I_[B]_I_3_A_QRMO4 .OR. $I_[B]_I_4_A_QRMO4 .OR. $I_[B]_I_5_A_QRMO4 .OR. $I_[B]_I_6_A_QRMO4 .OR. $I_[B]_I_7_A_QRMO4 .OR. $I_[B]_I_8_A_QRMO4 .OR. $I_[B]_I_9_A_QRMO4 .OR. $I_[B]_I_10_A_QRMO4 .OR. $I_[B]_I_11_A_QRMO4,
+DM $I_[B]_I_902_A_QRMO4 = $I_[B]_I_12_A_QRMO4 .OR. $I_[B]_I_13_A_QRMO4 .OR. $I_[B]_I_14_A_QRMO4 .OR. $I_[B]_I_15_A_QRMO4 .OR. $I_[B]_I_16_A_QRMO4 .OR. $I_[B]_I_17_A_QRMO4 .OR. $I_[B]_I_18_A_QRMO4 .OR. $I_[B]_I_19_A_QRMO4 .OR. $I_[B]_I_20_A_QRMO4 .OR. $I_[B]_I_21_A_QRMO4,
+DM $I_[B]_I_903_A_QRMO4 = $I_[B]_I_22_A_QRMO4 .OR. $I_[B]_I_23_A_QRMO4 .OR. $I_[B]_I_24_A_QRMO4 .OR. $I_[B]_I_25_A_QRMO4 .OR. $I_[B]_I_26_A_QRMO4 .OR. $I_[B]_I_27_A_QRMO4 .OR. $I_[B]_I_28_A_QRMO4 .OR. $I_[B]_I_29_A_QRMO4,
+DM $I_[B]_I_904_A_QRMO4 = $I_[B]_I_98_A_QRMO4,
+[*ENDB]
+
+
+
+!{====================================================}!
+!{====================== QPP1 ========================}!
+!{====================================================}!
+
+
+!---'Others;'
+DM $I_9195_A_QPP2 = $I_91_A_QPP2 .OR. $I_92_A_QPP2 .OR. $I_93_A_QPP2 .OR. $I_94_A_QPP2 .OR. $I_95_A_QPP2,
+
+!---'Others;'
+DM $T_QPP3_9195 = $T_QPP3_91 .OR. $T_QPP3_92 .OR. $T_QPP3_93 .OR. $T_QPP3_94 .OR. $T_QPP3_95,
+
+!---'Others;'
+DM $T_QPP4_9195 = $T_QPP4_91 .OR. $T_QPP4_92 .OR. $T_QPP4_93 .OR. $T_QPP4_94 .OR. $T_QPP4_95,
+
+[*DOB=7:10]
+!---'Others;'
+DM $I_[B]_T_QPPO3_9195 = $I_[B]_T_QPPO3_91 .OR. $I_[B]_T_QPPO3_92 .OR. $I_[B]_T_QPPO3_93 .OR. $I_[B]_T_QPPO3_94 .OR. $I_[B]_T_QPPO3_95,
+[*ENDB]
+
+[*DOB=1:9]
+!---'Others;'
+DJ $I_9195_QPPAMT[B] = $I_91_QPPAMT[B] + $I_92_QPPAMT[B] + $I_93_QPPAMT[B] + $I_94_QPPAMT[B] + $I_95_QPPAMT[B],
+[*ENDB]
+
+
+
+!{====================================================}!
+!{====================== QTD1 ========================}!
+!{====================================================}!
+
+!---'COMMUTE (NET);'
+DM $I_901_A_QTD2 = $I_1_A_QTD2 .OR. $I_2_A_QTD2 .OR. $I_3_A_QTD2 .OR. $I_4_A_QTD2 .OR. $I_5_A_QTD2 .OR. $I_6_A_QTD2 .OR. $I_27_A_QTD2 .OR. $I_11_A_QTD2 .OR. $I_12_A_QTD2 .OR. $I_24_A_QTD2,
+
+!---'COMMUTE (NET);'
+DM $T_QTD6_901 = $T_QTD6_1 .OR. $T_QTD6_2 .OR. $T_QTD6_3 .OR. $T_QTD6_4 .OR. $T_QTD6_5 .OR. $T_QTD6_6 .OR. $T_QTD6_27 .OR. $T_QTD6_11 .OR. $T_QTD6_12 .OR. $T_QTD6_24,
+
+
+
+!{====================================================}!
+!{====================== QTD7 ========================}!
+!{====================================================}!
+
+!---'Others;'
+DM $T_QTD8_9798 = $T_QTD8_4 .OR. $T_QTD8_5,
+
+!---'Others;'
+DM $T_QTD9_9798 = $T_QTD9_4 .OR. $T_QTD9_5,
+
+[*DOB=7:10]
+!---'Others;'
+DM $I_[B]_T_QTP7_9798 = $I_[B]_T_QTP7_4 .OR. $I_[B]_T_QTP7_5,
+[*ENDB]
+
+
+!{====================================================}!
+!{====================== QSAV5 ========================}!
+!{====================================================}!
+
+!---'BRICK-AND-MORTAR BANKS (NO ACCESS TO ONLINE BANKING);'
+DM $T_QSAV5_901 = $T_QSAV5_1 .OR. $T_QSAV5_2 .OR. $T_QSAV5_3 .OR. $T_QSAV5_4 .OR. $T_QSAV5_5 .OR. $T_QSAV5_6 .OR. $T_QSAV5_7 .OR. $T_QSAV5_8 .OR. $T_QSAV5_9 .OR. $T_QSAV5_10 .OR. $T_QSAV5_11 .OR. $T_QSAV5_12 .OR. $T_QSAV5_13 .OR. $T_QSAV5_14 .OR. $T_QSAV5_15 .OR. $T_QSAV5_16 .OR. $T_QSAV5_17 .OR. $T_QSAV5_18 .OR. $T_QSAV5_19,
+!---'BRICK-AND-MORTAR BANKS (WITH ACCESS TO ONLINE BANKING);'
+DM $T_QSAV5_902 = $T_QSAV5_20 .OR. $T_QSAV5_21 .OR. $T_QSAV5_22 .OR. $T_QSAV5_23 .OR. $T_QSAV5_24 .OR. $T_QSAV5_25 .OR. $T_QSAV5_26 .OR. $T_QSAV5_27 .OR. $T_QSAV5_28 .OR. $T_QSAV5_29 .OR. $T_QSAV5_30 .OR. $T_QSAV5_31,
+!---'DIGITAL BANKS;'
+DM $T_QSAV5_903 = $T_QSAV5_32 .OR. $T_QSAV5_33 .OR. $T_QSAV5_34 .OR. $T_QSAV5_35 .OR. $T_QSAV5_36 .OR. $T_QSAV5_37 .OR. $T_QSAV5_38 .OR. $T_QSAV5_39 .OR. $T_QSAV5_40 .OR. $T_QSAV5_41 .OR. $T_QSAV5_42 .OR. $T_QSAV5_43 .OR. $T_QSAV5_44 .OR. $T_QSAV5_45 .OR. $T_QSAV5_46 .OR. $T_QSAV5_47 .OR. $T_QSAV5_48,
+
+!---'BRICK-AND-MORTAR BANKS (NO ACCESS TO ONLINE BANKING);'
+DJ $I_901_QSAV6 = $I_1_QSAV6 + $I_2_QSAV6 + $I_3_QSAV6 + $I_4_QSAV6 + $I_5_QSAV6 + $I_6_QSAV6 + $I_7_QSAV6 + $I_8_QSAV6 + $I_9_QSAV6 + $I_10_QSAV6 + $I_11_QSAV6 + $I_12_QSAV6 + $I_13_QSAV6 + $I_14_QSAV6 + $I_15_QSAV6 + $I_16_QSAV6 + $I_17_QSAV6 + $I_18_QSAV6 + $I_19_QSAV6,
+!---'BRICK-AND-MORTAR BANKS (WITH ACCESS TO ONLINE BANKING);'
+DJ $I_902_QSAV6 = $I_20_QSAV6 + $I_21_QSAV6 + $I_22_QSAV6 + $I_23_QSAV6 + $I_24_QSAV6 + $I_25_QSAV6 + $I_26_QSAV6 + $I_27_QSAV6 + $I_28_QSAV6 + $I_29_QSAV6 + $I_30_QSAV6 + $I_31_QSAV6,
+!---'DIGITAL BANKS;'
+DJ $I_903_QSAV6 = $I_32_QSAV6 + $I_33_QSAV6 + $I_34_QSAV6 + $I_35_QSAV6 + $I_36_QSAV6 + $I_37_QSAV6 + $I_38_QSAV6 + $I_39_QSAV6 + $I_40_QSAV6 + $I_41_QSAV6 + $I_42_QSAV6 + $I_43_QSAV6 + $I_44_QSAV6 + $I_45_QSAV6 + $I_46_QSAV6 + $I_47_QSAV6 + $I_48_QSAV6,
+
+
+
+!{====================================================}!
+!{====================== QINS1 =======================}!
+!{====================================================}!
+
+!---'LIFE INSURANCE (NET);'
+DM $T_QINS2_901 = $T_QINS2_1 .OR. $T_QINS2_2 .OR. $T_QINS2_3,
+!---'NON-LIFE INSURANCE (NET);'
+DM $T_QINS2_902 = $T_QINS2_4 .OR. $T_QINS2_5 .OR. $T_QINS2_6 .OR. $T_QINS2_7 .OR. $T_QINS2_8 .OR. $T_QINS2_9 .OR. $T_QINS2_10 .OR. $T_QINS2_11 .OR. $T_QINS2_12 .OR. $T_QINS2_13 .OR. $T_QINS2_14,
+
+!---'LIFE INSURANCE (NET);'
+DM $T_QINS3_901 = $T_QINS3_1 .OR. $T_QINS3_2 .OR. $T_QINS3_3,
+!---'NON-LIFE INSURANCE (NET);'
+DM $T_QINS3_902 = $T_QINS3_4 .OR. $T_QINS3_5 .OR. $T_QINS3_6 .OR. $T_QINS3_7 .OR. $T_QINS3_8 .OR. $T_QINS3_9 .OR. $T_QINS3_10 .OR. $T_QINS3_11 .OR. $T_QINS3_12 .OR. $T_QINS3_13 .OR. $T_QINS3_14,
+
+!---'LIFE INSURANCE (NET);'
+DM $T_QINS4_901 = $T_QINS4_1 .OR. $T_QINS4_2 .OR. $T_QINS4_3,
+!---'NON-LIFE INSURANCE (NET);'
+DM $T_QINS4_902 = $T_QINS4_4 .OR. $T_QINS4_5 .OR. $T_QINS4_6 .OR. $T_QINS4_7 .OR. $T_QINS4_8 .OR. $T_QINS4_9 .OR. $T_QINS4_10 .OR. $T_QINS4_11 .OR. $T_QINS4_12 .OR. $T_QINS4_13 .OR. $T_QINS4_14,
