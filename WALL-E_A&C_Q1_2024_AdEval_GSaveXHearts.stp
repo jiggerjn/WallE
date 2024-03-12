@@ -290,6 +290,8 @@ $T_QSH8_[A]/
 3,
 4,
 5,
+5,
+4+5,
 R,F,
 VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES",
 V = "
@@ -347,6 +349,8 @@ $T_QSH9_[A]/
 3,
 4,
 5,
+5,
+4+5,
 6,
 R,F,
 VT = "QSH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT",
@@ -436,7 +440,7 @@ $T_QSH11_[A]/
 R,F,
 VT = "QSH11. ACTION AFTER AD",
 V = "
-[topic0.[+s]]\
+[topic4.[+s]]\
 `    Agree Strongly;
 `    Agree Somewhat;
 `    Disagree;
@@ -453,7 +457,7 @@ $T_QSH11_[A]/1,
 VT = "QSH11. ACTION AFTER AD - TB",
 V = "
 [*FOR A = 1:2:3:4:5:6]
-[topic0.[+s]][*SLE];
+[topic4.[+s]][*SLE];
 [*END A]",
 
 
@@ -465,7 +469,7 @@ $T_QSH11_[A]/1+2,
 VT = "QSH11. ACTION AFTER AD - T2B",
 V = "
 [*FOR A = 1:2:3:4:5:6]
-[topic0.[+s]][*SLE];
+[topic4.[+s]][*SLE];
 [*END A]",
 
 
@@ -491,7 +495,7 @@ $T_QSH12_[A]/
 R,F,
 VT = "QSH12. AD EVALUATION METRICS",
 V = "
-[topic1.[+s]]\
+[topic5.[+s]]\
 `    Agree Strongly;
 `    Agree Somewhat;
 `    Disagree;
@@ -509,7 +513,7 @@ $T_QSH12_[A]/1,
 VT = "QSH12. AD EVALUATION METRICS - TB",
 V = "
 [*FOR A = 1:2:3:4:5:6:7:8]
-[topic1.[+s]][*SLE];
+[topic5.[+s]][*SLE];
 [*END A]",
 
 
@@ -522,7 +526,7 @@ $T_QSH12_[A]/1+2,
 VT = "QSH12. AD EVALUATION METRICS - T2B",
 V = "
 [*FOR A = 1:2:3:4:5:6:7:8]
-[topic1.[+s]][*SLE];
+[topic5.[+s]][*SLE];
 [*END A]",
 
 
