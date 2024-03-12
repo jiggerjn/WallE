@@ -25,6 +25,446 @@ DI $RESP = $1-10,
 [*INSERT W_WTS]
 
 
+!!!!!!!!!!!!!!!!
+
+DM $HAPxH3 =
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+
+
+[*DO A = 1:12]
+T,
+$HAv/[A].$Feb24toMar01/NB,
+$HAv/[A].$Mar02toMar08/NB,
+[*END A]
+HT = "HEADER A. GENERAL PROFILE - 2 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+GENDER****
+MALE***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+FEMALE***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+LIFESTAGE****
+Students (20 yo and below)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+Yuppies (21-30 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+Transitioners (31-35 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+Balancers (36-45 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+Older Adults/Retirees (46-65 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+SEC****
+AB***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c)
+",
+
+
+DM $HBPxH3 =
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+
+
+[*DO A = 1:15]
+T,
+$HBv/[A].$Feb24toMar01/NB,
+$HBv/[A].$Mar02toMar08/NB,
+[*END A]
+HT = "HEADER B. LOCALE AND MACROREGION - 2 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+LOCALE****
+URBAN (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+RURAL (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+
+NCR (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+
+NORTH CENTRAL LUZON****
+NCL (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+NCL Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+NCL Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+
+SOUTH LUZON****
+SL (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+SL Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+SL Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+
+VISAYAS****
+Visayas (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+Visayas Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+Visayas Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+
+MINDANAO****
+Mindanao (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+Mindanao Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+Mindanao Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c)
+",
+
+
+DM $HCPxH3 = 
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+
+
+
+[*DO A = 1:4]
+T,
+$HCv/[A].$Feb24toMar01/NB,
+$HCv/[A].$Mar02toMar08/NB,
+[*END A]
+
+HT = "HEADER C. USERSHIP - 2 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+USERSHIP****
+NON-USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+WHETHER GCASH USERS****
+GCASH NON-USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+GCASH USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c)
+",
+
+
+DM $HDPxH3 =
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+
+
+[*DO A = 1:15]
+T,
+$HDv/[A].$Feb24toMar01/NB,
+$HDv/[A].$Mar02toMar08/NB,
+[*END A]
+
+HT = "HEADER D. MACROREGION X SEC - 2 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+MMA****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+NCL****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+SL****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+VISAYAS****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+
+MINDANAO****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c)
+",
+
+
+
 !-----------Unique
 DM $QSH1 = $27404/1-9,'0',
 
@@ -537,7 +977,7 @@ DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
   
-IF $PaymentxHeartsResp2/NB, WRITE,
+IF $GsavexHeartsResp/NB, WRITE,
 
 FINISH DATA,
 START TABLES,
@@ -570,7 +1010,7 @@ F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HEADERWAVE3 = HA,HB,HC,HD,HAPxH2,HBPxH2,HCPxH2,HDPxH2]
+[*DATA HEADERWAVE3 = HA,HB,HC,HD,HAPxH3,HBPxH3,HCPxH3,HDPxH3]
 
 
 
