@@ -1,7 +1,7 @@
 START CONTROL,
 *PROJECT WALLE (DECEMBER 2, 2022)
 
-C = JAN2024v3.ASC;FEB2024v2.ASC,
+C = JAN2024v3.ASC;FEB2024v3.ASC,
 Y,
 OLDNAMES,
 CSV2R,
@@ -717,7 +717,7 @@ Total count<C>",
 [*SET s = 0]
 [*DATA topic2 (;) = 
 Simple na with GStocks;
-Register in 3 simple steps!]
+Register in 3 simple steps`!]
 
 [*FOR A = 1:2]
 DM $TQST8_[A] =
@@ -978,7 +978,7 @@ DM $HT = T,
 !IF $GsavexHeartsResp/NB, CK $T_QST11_[A]/NB,
 [*END A]
 !
-IF ($GsavexHeartsResp/NB).N($1-10/0035166748+0035166749+0035166750+0035166751+0035166752+0035173601+0035173602+0035173603+0035173604+0035220629+0035220631+0035243605+0035243606+0035243607+0035243608+0035243609+0035245169+0035245170+0035257027+0035257028), WRITE,
+IF ($GsavexHeartsResp/NB), WRITE,
 
 FINISH DATA,
 START TABLES,
@@ -1118,7 +1118,7 @@ IF $QST1/4+5, T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
 BT = "Among aware of ad",
 [*END A]
 [*DO A = 2:2]
-+T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+IF $QST1/4+5, +T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1130,7 +1130,7 @@ IF $QST1/1+2, T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
 BT = "Among not aware of ad",
 [*END A]
 [*DO A = 2:2]
-+T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+IF $QST1/1+2, +T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1185,7 +1185,7 @@ IF $QST1/4+5, T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
 BT = "Among aware of ad",
 [*END A]
 [*FOR A = 2:3:4:5:6]
-+T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+IF $QST1/4+5, +T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1197,7 +1197,7 @@ IF $QST1/1+2, T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
 BT = "Among not aware of ad",
 [*END A]
 [*FOR A = 2:3:4:5:6]
-+T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+IF $QST1/1+2, +T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1271,7 +1271,7 @@ IF $QST1/4+5, T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
 BT = "Among aware of ad",
 [*END A]
 [*FOR A = 2:3:4:5:6]
-+T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+IF $QST1/4+5, +T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1284,7 +1284,7 @@ IF $QST1/1+2, T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
 BT = "Among not aware of ad",
 [*END A]
 [*FOR A = 2:3:4:5:6]
-+T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+IF $QST1/1+2, +T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1344,7 +1344,7 @@ IF $QST1/4+5, T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
 BT = "Among aware of ad",
 [*END A]
 [*FOR A = 2:3:4:5:6:7:8]
-+T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+IF $QST1/4+5, +T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
@@ -1357,7 +1357,7 @@ IF $QST1/1+2, T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
 BT = "Among not aware of ad",
 [*END A]
 [*FOR A = 2:3:4:5:6:7:8]
-+T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+IF $QST1/1+2, +T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
