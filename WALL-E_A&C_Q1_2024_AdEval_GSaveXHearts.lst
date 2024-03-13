@@ -24066,39 +24066,45 @@ This ad is fit for the brand
 DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
-IF $GsavexHeartsResp/NB, WRITE,
+!IF $GsavexHeartsResp/NB, CK $T_QSH11_1/NB,
+!IF $GsavexHeartsResp/NB, CK $T_QSH11_2/NB,
+!IF $GsavexHeartsResp/NB, CK $T_QSH11_3/NB,
+!IF $GsavexHeartsResp/NB, CK $T_QSH11_4/NB,
+!IF $GsavexHeartsResp/NB, CK $T_QSH11_5/NB,
+!IF $GsavexHeartsResp/NB, CK $T_QSH11_6/NB,
+IF ($GsavexHeartsResp/NB).N($1-10/0035166748+0035166749+0035166750+0035166751+0035166752+0035173601+0035173602+0035173603+0035173604+0035220629+0035220631+0035243605+0035243606+0035243607+0035243608+0035243609+0035245169+0035245170+0035257027+0035257028), WRITE,
 FINISH DATA,
 START TABLES,
 %JH = 'PROJECT WALL E',
 global bt# = 'All respondents',
 !======FOR QPS WINDOWS (% + raw - for datachecking)
 F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
->>  Warning at line 991 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 994 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {LL E',globalbt#='All respondents',F=CTU'='/CAZ'-'/}
 >>W 360 Format already set to this value
->>  Warning at line 991 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 994 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {lobalbt#='All respondents',F=CTU'='/CAZ'-'/CZP'-'/}
 >>W 360 Format already set to this value
->>  Warning at line 991 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 994 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {nts',F=CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/}
 >>W 360 Format already set to this value
->>  Warning at line 991 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 994 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/}
 >>W 360 Format already set to this value
->>  Warning at line 991 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 994 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {AZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/}
 >>W 360 Format already set to this value
->>  Warning at line 991 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 994 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {DV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/}
 >>W 360 Format already set to this value
 PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
->>  Warning at line 992 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 995 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {PGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/PCS/}
 >>W 360 Format already set to this value
->>  Warning at line 992 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 995 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/PCS/PRC/}
 >>W 360 Format already set to this value
->>  Warning at line 992 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 995 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {LBB1/TOC/SPL250/CNZ'*'/URS/PCS/PRC/LPP55/SER/CLG1/}
 >>W 360 Format already set to this value
 !F=MCB29,        ! ------ Less than 30 base
@@ -24106,20 +24112,20 @@ F=BTS,          ! ------ Blank Tables Suppress - standard
 F=BCS,          ! ------ Blank Column Suppress - standard
 F=DPR4,          ! ------ Decimal % - standard
 F=DPT0,          ! ------ Decimal Raw Count
->>  Warning at line 998 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 1001 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {AL/RBL/CLW7/PBL/MOD/MED,F=BTS,F=BCS,F=DPR4,F=DPT0,}
 >>W 360 Format already set to this value
 F=DPA2,          ! ------ Decimal Mean Sum
 F=DPS2,          ! ------ Decimal Std
->>  Warning at line 1000 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 1003 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {L/MOD/MED,F=BTS,F=BCS,F=DPR4,F=DPT0,F=DPA2,F=DPS2,}
 >>W 360 Format already set to this value
 F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
 F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
->>  Warning at line 1004 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 1007 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {DPR4,F=DPT0,F=DPA2,F=DPS2,F=BRS,F=SHG-1/SIG/SLA95/}
 >>W 360 Format already set to this value
->>  Warning at line 1004 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
+>>  Warning at line 1007 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_GSaveXHearts.stp
 >>  Last few chars parsed were {0,F=DPA2,F=DPS2,F=BRS,F=SHG-1/SIG/SLA95/SLB95/BRS/}
 >>W 360 Format already set to this value
 !F= SHG-1/SIG/SLA95/SLB95/NFSL, ! ROUND ROBIN
