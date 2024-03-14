@@ -1,15 +1,15 @@
   
-= ----- 01/03/2024 9:09:18 am
+= ----- 14/03/2024 10:58:12 am
 = MRDCL 32 version 23.1b Startup
 = C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 = Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
   CEP
   CSV 2002 style + Rounded numbers
   OLDNAMES
-  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024.ASC
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
 = MRDCL 32 version 23.1b startup completed
   
-= ----- 01/03/2024 9:09:18 am
+= ----- 14/03/2024 10:58:12 am
 = MRDCL 32 compilation phase startup
   Starting compilation
 = Stage 1 (data)
@@ -17,35 +17,30 @@
 >> Warnings 24
 = MRDCL 32 compilation phase completed
   
-= ----- 01/03/2024 9:09:19 am
+= ----- 14/03/2024 10:58:13 am
 = MRDCL 32 execution phase startup
 = Stage 1 (data)
   Now opening file (A) number 1
-  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024.ASC
-   835 lines read from JAN2024.ASC
-=  Data lines read 835
-=  Records 835
-  Number of times reached finish data 835
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
+   867 lines read from FEB2024V3.ASC
+=  Data lines read 867
+=  Records 867
+  Number of times reached finish data 867
   Write commands rejected 0
-  Write commands accepted 459
-  IDF records 459
+  Write commands accepted 600
+  IDF records 600
   No list summary, no lists executed
 = Stage 2 (tables)
-  Records to be read 459
+  Records to be read 600
   Passes needed 1
 = MRDCL 32 execution phase completed
   
-= ----- 01/03/2024 9:09:41 am
+= ----- 14/03/2024 10:58:35 am
 = MRDCL 32 print phase startup
->>The process cannot access the file because it is being used by another process.
-
->>Unable to write to the following file for the reason given.  Please retry when ready.
->>C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.csv
->>MRDCL 23.1b File Error 0113
 = MRDCL 32 print phase completed
 = CL run completed
-  Data lines read 835
-  IDF data records 459
+  Data lines read 867
+  IDF data records 600
   Table pages 3
   
-= ----- 01/03/2024 9:09:46 am
+= ----- 14/03/2024 10:58:35 am
