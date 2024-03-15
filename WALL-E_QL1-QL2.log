@@ -1,5 +1,5 @@
   
-= ----- 01/03/2024 17:14:51 pm
+= ----- 15/03/2024 17:08:16 pm
 = MRDCL 32 version 23.1b Startup
 = C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_QL1-QL2.STP
 = Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
@@ -7,10 +7,10 @@
   CSV 2002 style + Rounded numbers
   OLDNAMES
   TERSE
-  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024.ASC
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
 = MRDCL 32 version 23.1b startup completed
   
-= ----- 01/03/2024 17:14:51 pm
+= ----- 15/03/2024 17:08:16 pm
 = MRDCL 32 compilation phase startup
   Starting compilation
 = Stage 1 (data)
@@ -19,24 +19,24 @@
 >> Warnings 13
 = MRDCL 32 compilation phase completed
   
-= ----- 01/03/2024 17:14:54 pm
+= ----- 15/03/2024 17:08:19 pm
 = MRDCL 32 execution phase startup
 = Stage 1 (data)
   Now opening file (A) number 1
-  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024.ASC
-   835 lines read from JAN2024.ASC
-=  Data lines read 835
-=  Records 835
-  Number of times reached finish data 835
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
+   867 lines read from FEB2024V3.ASC
+=  Data lines read 867
+=  Records 867
+  Number of times reached finish data 867
   Write commands rejected 0
-  Write commands accepted 640
-  IDF records 640
+  Write commands accepted 682
+  IDF records 682
 = Stage 2 (tables)
-  Records to be read 640
+  Records to be read 682
   Passes needed 1
 = MRDCL 32 execution phase completed
   
-= ----- 01/03/2024 17:15:35 pm
+= ----- 15/03/2024 17:08:59 pm
 = MRDCL 32 print phase startup
 >>Table #1 output as 1, decimal places discarded, 60 occurences
 >>Table #2 output as 2, decimal places discarded, 96 occurences
@@ -48,8 +48,8 @@
 >>Table #8 output as 8, decimal places discarded, 64 occurences
 = MRDCL 32 print phase completed
 = CL run completed
-  Data lines read 835
-  IDF data records 640
+  Data lines read 867
+  IDF data records 682
   Table pages 28
   
-= ----- 01/03/2024 17:15:36 pm
+= ----- 15/03/2024 17:09:00 pm

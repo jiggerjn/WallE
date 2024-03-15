@@ -1291,7 +1291,7 @@ DW $WTS = $WT(
 
 
 !IF ($JAN2024/NB).($T_Q1_1/21..65), WRITE,
-! IF $JAN2024/NB, LCSV(H) $resp.$wts,
+IF $FEB2024/NB, LCSV(H) $resp.$wts,
 !IF ($FEB2024/NB).($T_Q1_1/21..65), WRITE,
 !IF ($FEB2024/NB), WRITE,
 FINISH DATA,
