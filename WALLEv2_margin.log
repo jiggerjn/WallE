@@ -1,5 +1,5 @@
   
-= ----- 14/03/2024 10:58:12 am
+= ----- 15/03/2024 10:27:11 am
 = MRDCL 32 version 23.1b Startup
 = C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 = Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
@@ -9,7 +9,7 @@
   C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
 = MRDCL 32 version 23.1b startup completed
   
-= ----- 14/03/2024 10:58:12 am
+= ----- 15/03/2024 10:27:11 am
 = MRDCL 32 compilation phase startup
   Starting compilation
 = Stage 1 (data)
@@ -17,7 +17,7 @@
 >> Warnings 24
 = MRDCL 32 compilation phase completed
   
-= ----- 14/03/2024 10:58:13 am
+= ----- 15/03/2024 10:27:11 am
 = MRDCL 32 execution phase startup
 = Stage 1 (data)
   Now opening file (A) number 1
@@ -27,20 +27,20 @@
 =  Records 867
   Number of times reached finish data 867
   Write commands rejected 0
-  Write commands accepted 600
-  IDF records 600
+  Write commands accepted 867
+  IDF records 867
   No list summary, no lists executed
 = Stage 2 (tables)
-  Records to be read 600
+  Records to be read 867
   Passes needed 1
 = MRDCL 32 execution phase completed
   
-= ----- 14/03/2024 10:58:35 am
+= ----- 15/03/2024 10:27:34 am
 = MRDCL 32 print phase startup
 = MRDCL 32 print phase completed
 = CL run completed
   Data lines read 867
-  IDF data records 600
-  Table pages 3
+  IDF data records 867
+  Table pages 8
   
-= ----- 14/03/2024 10:58:35 am
+= ----- 15/03/2024 10:27:34 am

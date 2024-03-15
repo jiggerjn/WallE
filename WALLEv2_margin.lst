@@ -3908,7 +3908,76 @@ $JAN2024/NB.$Q17i/2.$Q4/1.($Q3/12+13+14+15+16+17).$SEC19/4,
 !===RURAL
 $JAN2024/NB.$Q17i/2.$Q4/2.($Q3/12+13+14+15+16+17).$SEC19/1..3,
 $JAN2024/NB.$Q17i/2.$Q4/2.($Q3/12+13+14+15+16+17).$SEC19/4,
-VT = "wtd - JAN-Q1 2024",
+!====FEB 2024
+!=== USER
+!=== GMA
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/1).$SEC19/1..2,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/1).$SEC19/3,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/1).$SEC19/4,
+!=== NCL
+!===URBAN
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/2+3+4+5).$SEC19/1..2,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/2+3+4+5).$SEC19/3,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/2+3+4+5).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/2+3+4+5).$SEC19/1..4,
+!=== SL
+!===URBAN
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/6+7+8).$SEC19/1..2,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/6+7+8).$SEC19/3,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/6+7+8).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/6+7+8).$SEC19/1..3,
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/6+7+8).$SEC19/4,
+!=== VIS
+!===URBAN
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/9+10+11).$SEC19/1..3,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/9+10+11).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/9+10+11).$SEC19/1..3,
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/9+10+11).$SEC19/4,
+!=== MIN
+!===URBAN
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/12+13+14+15+16+17).$SEC19/1..3,
+$FEB2024/NB.$Q17i/1.$Q4/1.($Q3/12+13+14+15+16+17).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/12+13+14+15+16+17).$SEC19/1..3,
+$FEB2024/NB.$Q17i/1.$Q4/2.($Q3/12+13+14+15+16+17).$SEC19/4,
+!=== NON - USER
+!=== GMA
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/1).$SEC19/1..2,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/1).$SEC19/3,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/1).$SEC19/4,
+!=== NCL
+!===URBAN
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/2+3+4+5).$SEC19/1..2,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/2+3+4+5).$SEC19/3,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/2+3+4+5).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/2+3+4+5).$SEC19/1..4,
+!=== SL
+!===URBAN
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/6+7+8).$SEC19/1..2,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/6+7+8).$SEC19/3,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/6+7+8).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/6+7+8).$SEC19/1..3,
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/6+7+8).$SEC19/4,
+!=== VIS
+!===URBAN
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/9+10+11).$SEC19/1..3,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/9+10+11).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/9+10+11).$SEC19/1..3,
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/9+10+11).$SEC19/4,
+!=== MIN
+!===URBAN
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/12+13+14+15+16+17).$SEC19/1..3,
+$FEB2024/NB.$Q17i/2.$Q4/1.($Q3/12+13+14+15+16+17).$SEC19/4,
+!===RURAL
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/12+13+14+15+16+17).$SEC19/1..3,
+$FEB2024/NB.$Q17i/2.$Q4/2.($Q3/12+13+14+15+16+17).$SEC19/4,
+VT = "wtd - FEB-Q1 2024",
  V =
  "USER\
 `     URBAN/MMA/ABC1;
@@ -4093,6 +4162,48 @@ JAN 2024 NON-USER\
 `     URBAN/MIN/C2;
 `     URBAN/MIN/D;
 `     RURAL/MIN/ABC1C2;
+`     RURAL/MIN/D;
+ FEB 2024 USER\
+`     URBAN/MMA/ABC1;
+`     URBAN/MMA/C2;
+`     URBAN/MMA/D;
+`     URBAN/NCL/ABC1;
+`     URBAN/NCL/C2;
+`     URBAN/NCL/D;
+`     RURAL/NCL/ABC1C2D;
+`     URBAN/SL/ABC1;
+`     URBAN/SL/C2;
+`     URBAN/SL/D;
+`     RURAL/SL/ABC1C2;
+`     RURAL/SL/D;
+`     URBAN/VIS/ABC1C2;
+`     URBAN/VIS/D;
+`     RURAL/VIS/ABC1C2;
+`     RURAL/VIS/D;
+`     URBAN/MIN/ABC1C2;
+`     URBAN/MIN/D;
+`     RURAL/MIN/ABC1C2;
+`     RURAL/MIN/D;
+FEB 2024 NON-USER\
+`     URBAN/MMA/ABC1;
+`     URBAN/MMA/C2;
+`     URBAN/MMA/D;
+`     URBAN/NCL/ABC1;
+`     URBAN/NCL/C2;
+`     URBAN/NCL/D;
+`     RURAL/NCL/ABC1C2D;
+`     URBAN/SL/ABC1;
+`     URBAN/SL/C2;
+`     URBAN/SL/D;
+`     RURAL/SL/ABC1C2;
+`     RURAL/SL/D;
+`     URBAN/VIS/ABC1C2;
+`     URBAN/VIS/D;
+`     RURAL/VIS/ABC1C2;
+`     RURAL/VIS/D;
+`     URBAN/MIN/ABC1C2;
+`     URBAN/MIN/D;
+`     RURAL/MIN/ABC1C2;
 `     RURAL/MIN/D",
 DW $WTS = $WT(
 0.9956,
@@ -4272,10 +4383,52 @@ DW $WTS = $WT(
 0.9145,
 1.4616,
 1.8306,
-2.1150),
+2.1150,
+!FEB 2024
+0.8788,
+1.9703,
+2.0672,
+0.1250,
+0.5273,
+0.4442,
+0.3440,
+0.4841,
+0.9507,
+1.0843,
+0.9039,
+1.2759,
+0.4060,
+0.7572,
+0.1695,
+0.2691,
+0.5199,
+5.0653,
+0.6115,
+1.2573,
+1.0545,
+1.1822,
+0.9554,
+0.1250,
+0.9794,
+1.1846,
+1.8240,
+0.5187,
+1.3944,
+2.1144,
+2.4105,
+1.4177,
+0.4301,
+0.4782,
+0.6055,
+1.2902,
+0.6666,
+0.8442,
+1.2739,
+1.4558),
 !IF ($JAN2024/NB).($T_Q1_1/21..65), WRITE,
 ! IF $JAN2024/NB, LCSV(H) $resp.$wts,
-IF $FEB2024/NB, WRITE,
+!IF ($FEB2024/NB).($T_Q1_1/21..65), WRITE,
+!IF ($FEB2024/NB), WRITE,
 FINISH DATA,
 START TABLES,
 !!!!!!!!!!!!!!!!
@@ -4284,80 +4437,80 @@ START TABLES,
 GLOBAL IT # = '<JL>Wall-E',
 !======FOR QPS WINDOWS (% + raw - for datachecking)
 F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW30/LBB1/TOC/SPL250/CNZ'*'/URS/
->>  Warning at line 1103 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1315 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {TARTTABLES,GLOBALIT#='<JL>Wall-E',F=CTU'='/CAZ'-'/}
 >>W 360 Format already set to this value
->>  Warning at line 1103 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1315 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {LES,GLOBALIT#='<JL>Wall-E',F=CTU'='/CAZ'-'/CZP'-'/}
 >>W 360 Format already set to this value
->>  Warning at line 1103 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1315 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {l-E',F=CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/}
 >>W 360 Format already set to this value
->>  Warning at line 1103 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1315 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW30/LBB1/}
 >>W 360 Format already set to this value
->>  Warning at line 1103 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1315 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {AZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW30/LBB1/TOC/}
 >>W 360 Format already set to this value
->>  Warning at line 1103 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1315 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {DV/UCH/NPGN/NPTC/TID/RLW30/LBB1/TOC/SPL250/CNZ'*'/}
 >>W 360 Format already set to this value
   DPR1/PCS/BRS/BCS/PRC/BTS/LPP55/NSER/CLG1/RNC1/NDAT/NPGN/BAL/RBL/BCS/BTS/CLW9/PBL/MOD,
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {PTC/TID/RLW30/LBB1/TOC/SPL250/CNZ'*'/URS/DPR1/PCS/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {0/LBB1/TOC/SPL250/CNZ'*'/URS/DPR1/PCS/BRS/BCS/PRC/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {50/CNZ'*'/URS/DPR1/PCS/BRS/BCS/PRC/BTS/LPP55/NSER/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {Z'*'/URS/DPR1/PCS/BRS/BCS/PRC/BTS/LPP55/NSER/CLG1/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {PR1/PCS/BRS/BCS/PRC/BTS/LPP55/NSER/CLG1/RNC1/NDAT/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {CS/BRS/BCS/PRC/BTS/LPP55/NSER/CLG1/RNC1/NDAT/NPGN/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {RC/BTS/LPP55/NSER/CLG1/RNC1/NDAT/NPGN/BAL/RBL/BCS/}
 >>W 360 Format already set to this value
->>  Warning at line 1104 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1316 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {TS/LPP55/NSER/CLG1/RNC1/NDAT/NPGN/BAL/RBL/BCS/BTS/}
 >>W 360 Format already set to this value
 F=SDV,  ! ------ PRINT STD DEVIATION
->>  Warning at line 1106 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1318 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {RNC1/NDAT/NPGN/BAL/RBL/BCS/BTS/CLW9/PBL/MOD,F=SDV,}
 >>W 360 Format already set to this value
 F=DPR4,  ! ------ DECIMAL %
 F=DPT0,  ! ------ DECIMAL RAW COUNT
->>  Warning at line 1108 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1320 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {/BAL/RBL/BCS/BTS/CLW9/PBL/MOD,F=SDV,F=DPR4,F=DPT0,}
 >>W 360 Format already set to this value
 F=DPA4,  ! ------ DECIMAL MEAN,SUM..
 F=DPS4,         ! ------ DECIMAL STD,
 F=MOD,  ! ------ DISPLAY MODE
->>  Warning at line 1111 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1323 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {9/PBL/MOD,F=SDV,F=DPR4,F=DPT0,F=DPA4,F=DPS4,F=MOD,}
 >>W 360 Format already set to this value
 F=MED,  ! ------ DISPLAY MEDIAN
 !F=MCB29,          ! ------ Less than 30 base
 F=BTS,                  ! ------ Blank Tables Suppress
->>  Warning at line 1114 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1326 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {SDV,F=DPR4,F=DPT0,F=DPA4,F=DPS4,F=MOD,F=MED,F=BTS,}
 >>W 360 Format already set to this value
 F=BCS,                  ! ------ Blank Column Suppress
->>  Warning at line 1115 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1327 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {DPR4,F=DPT0,F=DPA4,F=DPS4,F=MOD,F=MED,F=BTS,F=BCS,}
 >>W 360 Format already set to this value
 F=NBRS,                  ! ------ Blank Row Suppress
 F=PBL/MOD,
->>  Warning at line 1117 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1329 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {=DPA4,F=DPS4,F=MOD,F=MED,F=BTS,F=BCS,F=NBRS,F=PBL/}
 >>W 360 Format already set to this value
->>  Warning at line 1117 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1329 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {4,F=DPS4,F=MOD,F=MED,F=BTS,F=BCS,F=NBRS,F=PBL/MOD,}
 >>W 360 Format already set to this value
 %AVG = 'Mean score<D2>',
@@ -4373,25 +4526,25 @@ F=PBL/MOD,
 %MED = '<ML7>MEDIAN            ',
 %UNR = '<ML7>(UNWEIGHTED BASE)',
 F=SHG1/SIG/SLA95/SLB95/BRS/FSL,  !---------SIGTEST
->>  Warning at line 1134 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1346 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were { ',%UNR='<ML7>(UNWEIGHTED BASE)',F=SHG1/SIG/SLA95/}
 >>W 360 Format already set to this value
->>  Warning at line 1134 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1346 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {(UNWEIGHTED BASE)',F=SHG1/SIG/SLA95/SLB95/BRS/FSL,}
 >>W 360 Format already set to this value
 !F=NRTV, ! ------- ONLY COUNT
 !F=NPRC, ! -------- ONLY %
 ! SELECT WR $wts,
 F=BRS,
->>  Warning at line 1143 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
+>>  Warning at line 1355 in C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALLEv2_margin.stp
 >>  Last few chars parsed were {GHTED BASE)',F=SHG1/SIG/SLA95/SLB95/BRS/FSL,F=BRS,}
 >>W 360 Format already set to this value
 !
- T 1 = $TMARGQ4 * $hmarg,
- BT = "All respondents",
-!T 2 = $WT * $hmarg,
-!BT = "All respondents-UNWTD",
-!SELECT WR $wts,
-!T 3 = $WT * $hmarg,
-!BT = "All respondents-WTD",
+! T 1 = $TMARGQ4 * $hmarg,
+! BT = "All respondents",
+T 2 = $WT * $hmarg,
+BT = "All respondents-UNWTD",
+SELECT WR $wts,
+T 3 = $WT * $hmarg,
+BT = "All respondents-WTD",
 FINISH TABLES,
