@@ -1,0 +1,78 @@
+  
+= ----- 15/03/2024 14:35:53 pm
+= MRDCL 32 version 23.1b Startup
+= C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_CATEGORY_Q4_Q64-unwtd.stp
+= Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
+  CEP
+  CSV 2002 style + Rounded numbers
+  OLDNAMES
+  TERSE
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024V3.ASC
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
+= MRDCL 32 version 23.1b startup completed
+  
+= ----- 15/03/2024 14:35:53 pm
+= MRDCL 32 compilation phase startup
+  Starting compilation
+= Stage 1 (data)
+  Temporary words used 23123
+= Stage 2 (tables)
+>> Warnings 13
+= MRDCL 32 compilation phase completed
+  
+= ----- 15/03/2024 14:35:56 pm
+= MRDCL 32 execution phase startup
+= Stage 1 (data)
+  Now opening file (A) number 1
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024V3.ASC
+   825 lines read from JAN2024V3.ASC
+  Now opening file (A) number 2
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
+   867 lines read from FEB2024V3.ASC
+=  Data lines read 1692
+=  Records 1692
+  Number of times reached finish data 1692
+  Write commands rejected 0
+  Write commands accepted 1200
+  IDF records 1200
+= Stage 2 (tables)
+  Records to be read 1200
+  Passes needed 1
+= MRDCL 32 execution phase completed
+  
+= ----- 15/03/2024 14:37:09 pm
+= MRDCL 32 print phase startup
+>>Table #1 output as 1, decimal places discarded, 12 occurences
+>>Table #2 output as 2, decimal places discarded, 12 occurences
+>>Table #3 output as 3, decimal places discarded, 12 occurences
+>>Table #4 output as 4, decimal places discarded, 12 occurences
+>>Table #5 output as 5, decimal places discarded, 12 occurences
+>>Table #6 output as 6, decimal places discarded, 12 occurences
+>>Table #7 output as 7, decimal places discarded, 12 occurences
+>>Table #8 output as 8, decimal places discarded, 12 occurences
+>>Table #9 output as 9, decimal places discarded, 12 occurences
+>>Table #10 output as 10, decimal places discarded, 12 occurences
+>>Table #11 output as 11, decimal places discarded, 12 occurences
+>>Table #12 output as 12, decimal places discarded, 12 occurences
+>>Table #13 output as 13, decimal places discarded, 12 occurences
+>>Table #14 output as 14, decimal places discarded, 12 occurences
+>>Table #15 output as 15, decimal places discarded, 12 occurences
+>>Table #16 output as 16, decimal places discarded, 12 occurences
+>>Table #17 output as 17, decimal places discarded, 12 occurences
+>>Table #18 output as 18, decimal places discarded, 12 occurences
+>>Table #19 output as 19, decimal places discarded, 12 occurences
+>>Table #20 output as 20, decimal places discarded, 12 occurences
+>>Table #21 output as 21, decimal places discarded, 12 occurences
+>>Table #22 output as 22, decimal places discarded, 9 occurences
+>>Table #23 output as 23, decimal places discarded, 12 occurences
+>>Table #24 output as 24, decimal places discarded, 9 occurences
+>>Table #25 output as 25, decimal places discarded, 12 occurences
+>>Table #26 output as 26, decimal places discarded, 12 occurences
+>>Table #27 output as 27, decimal places discarded, 12 occurences
+= MRDCL 32 print phase completed
+= CL run completed
+  Data lines read 1692
+  IDF data records 1200
+  Table pages 79
+  
+= ----- 15/03/2024 14:37:10 pm
