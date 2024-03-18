@@ -1,0 +1,81 @@
+
+ MRDC   PROJECT WALL-E                                                                        Page 1
+
+ 825 lines read from JAN2024V3.ASC
+ 867 lines read from FEB2024V3.ASC
+ Data lines read 1692
+ Records 1692
+ End of data
+
+ MRDC   PROJECT WALL-E                                                                        Page 2
+
+ List summary
+ Occurrences 269 (16%). Tests 1693 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+
+ MRDC   PROJECT WALL-E                                                                        Page 3
+
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
+ Occurrences 268 (16%). Tests 1692 -
+                     $RespNo  $BRANDS  $Aware  $Consider  $Favrite  $Recmnd  $Premium  $P2M  $Attr1  $Attr3  $Attr4  $Attr5
+                     $Attr6  $Attr7  $Attr8  $Attr10  $Attr11  $Attr12  $Attr13  $Attr14  $Attr16  $Attr17  $Attr20  $Attr21
+                     $Attr22  $Attr23  $Attr24  $Attr25  $Attr26  $Attr27  $Attr28  $Attr29  $Attr30  $AREA  $LOCALE  $SEC
+                     $AGE_RANGE  $GENDER  $LIFESTAGE  $WORKING_STAT  $USERSHIP  $GCASH_USER  $BANK_CON  $REGION  $AREAXLOC
+                     $Month  $QProvince  $WTS
