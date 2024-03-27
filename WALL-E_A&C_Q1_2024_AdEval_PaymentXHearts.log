@@ -1,5 +1,5 @@
   
-= ----- 13/03/2024 17:33:41 pm
+= ----- 26/03/2024 17:28:38 pm
 = MRDCL 32 version 23.1b Startup
 = C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WALL-E_A&C_Q1_2024_AdEval_PaymentXHearts.STP
 = Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
@@ -8,10 +8,11 @@
   OLDNAMES
   TERSE
   C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024V3.ASC
-  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V2.ASC
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\MAR2024.ASC
 = MRDCL 32 version 23.1b startup completed
   
-= ----- 13/03/2024 17:33:41 pm
+= ----- 26/03/2024 17:28:38 pm
 = MRDCL 32 compilation phase startup
   Starting compilation
 = Stage 1 (data)
@@ -20,432 +21,435 @@
 >> Warnings 13
 = MRDCL 32 compilation phase completed
   
-= ----- 13/03/2024 17:33:44 pm
+= ----- 26/03/2024 17:28:41 pm
 = MRDCL 32 execution phase startup
 = Stage 1 (data)
   Now opening file (A) number 1
   C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024V3.ASC
    825 lines read from JAN2024V3.ASC
   Now opening file (A) number 2
-  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V2.ASC
-   867 lines read from FEB2024V2.ASC
-=  Data lines read 1692
-=  Records 1692
-  Number of times reached finish data 1692
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
+   867 lines read from FEB2024V3.ASC
+  Now opening file (A) number 3
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\MAR2024.ASC
+   575 lines read from MAR2024.ASC
+=  Data lines read 2267
+=  Records 2267
+  Number of times reached finish data 2267
   Write commands rejected 0
-  Write commands accepted 1006
-  IDF records 1006
+  Write commands accepted 1236
+  IDF records 1236
 = Stage 2 (tables)
-  Records to be read 1006
+  Records to be read 1236
   Passes needed 1
 = MRDCL 32 execution phase completed
   
-= ----- 13/03/2024 17:35:00 pm
+= ----- 26/03/2024 17:30:25 pm
 = MRDCL 32 print phase startup
 >>Table #1 output as 1, decimal places discarded, 26 occurences
 >>Table #2 output as 2, decimal places discarded, 32 occurences
 >>Table #3 output as 3, decimal places discarded, 10 occurences
 >>Table #4 output as 4, decimal places discarded, 32 occurences
->>Table #5 output as 5, decimal places discarded, 80 occurences
->>Table #6 output as 6, decimal places discarded, 98 occurences
->>Table #7 output as 7, decimal places discarded, 32 occurences
->>Table #8 output as 8, decimal places discarded, 97 occurences
+>>Table #5 output as 5, decimal places discarded, 132 occurences
+>>Table #6 output as 6, decimal places discarded, 164 occurences
+>>Table #7 output as 7, decimal places discarded, 52 occurences
+>>Table #8 output as 8, decimal places discarded, 163 occurences
 >>Table #9 output as 9, decimal places discarded, 26 occurences
 >>Table #10 output as 10, decimal places discarded, 32 occurences
 >>Table #11 output as 11, decimal places discarded, 10 occurences
 >>Table #12 output as 12, decimal places discarded, 32 occurences
->>Table #13 output as 13, decimal places discarded, 80 occurences
->>Table #14 output as 14, decimal places discarded, 98 occurences
->>Table #15 output as 15, decimal places discarded, 32 occurences
->>Table #16 output as 16, decimal places discarded, 96 occurences
+>>Table #13 output as 13, decimal places discarded, 136 occurences
+>>Table #14 output as 14, decimal places discarded, 163 occurences
+>>Table #15 output as 15, decimal places discarded, 52 occurences
+>>Table #16 output as 16, decimal places discarded, 162 occurences
 >>Table #17 output as 17, decimal places discarded, 26 occurences
 >>Table #18 output as 18, decimal places discarded, 32 occurences
 >>Table #19 output as 19, decimal places discarded, 10 occurences
 >>Table #20 output as 20, decimal places discarded, 34 occurences
->>Table #21 output as 21, decimal places discarded, 86 occurences
->>Table #22 output as 22, decimal places discarded, 108 occurences
->>Table #23 output as 23, decimal places discarded, 32 occurences
->>Table #24 output as 24, decimal places discarded, 116 occurences
+>>Table #21 output as 21, decimal places discarded, 145 occurences
+>>Table #22 output as 22, decimal places discarded, 178 occurences
+>>Table #23 output as 23, decimal places discarded, 52 occurences
+>>Table #24 output as 24, decimal places discarded, 188 occurences
 >>Table #25 output as 25, decimal places discarded, 39 occurences
->>Table #26 output as 26, decimal places discarded, 49 occurences
+>>Table #26 output as 26, decimal places discarded, 48 occurences
 >>Table #27 output as 27, decimal places discarded, 15 occurences
->>Table #28 output as 28, decimal places discarded, 52 occurences
->>Table #29 output as 29, decimal places discarded, 145 occurences
->>Table #30 output as 30, decimal places discarded, 155 occurences
->>Table #31 output as 31, decimal places discarded, 48 occurences
->>Table #32 output as 32, decimal places discarded, 173 occurences
->>Table #33 output as 33, decimal places discarded, 31 occurences
->>Table #34 output as 34, decimal places discarded, 38 occurences
+>>Table #28 output as 28, decimal places discarded, 51 occurences
+>>Table #29 output as 29, decimal places discarded, 225 occurences
+>>Table #30 output as 30, decimal places discarded, 290 occurences
+>>Table #31 output as 31, decimal places discarded, 78 occurences
+>>Table #32 output as 32, decimal places discarded, 295 occurences
+>>Table #33 output as 33, decimal places discarded, 29 occurences
+>>Table #34 output as 34, decimal places discarded, 34 occurences
 >>Table #35 output as 35, decimal places discarded, 10 occurences
->>Table #36 output as 36, decimal places discarded, 38 occurences
->>Table #37 output as 37, decimal places discarded, 33 occurences
->>Table #38 output as 38, decimal places discarded, 40 occurences
->>Table #39 output as 39, decimal places discarded, 12 occurences
->>Table #40 output as 40, decimal places discarded, 40 occurences
+>>Table #36 output as 36, decimal places discarded, 36 occurences
+>>Table #37 output as 37, decimal places discarded, 97 occurences
+>>Table #38 output as 38, decimal places discarded, 114 occurences
+>>Table #39 output as 39, decimal places discarded, 32 occurences
+>>Table #40 output as 40, decimal places discarded, 113 occurences
 >>Table #41 output as 41, decimal places discarded, 26 occurences
 >>Table #42 output as 42, decimal places discarded, 32 occurences
 >>Table #43 output as 43, decimal places discarded, 10 occurences
 >>Table #44 output as 44, decimal places discarded, 32 occurences
->>Table #45 output as 45, decimal places discarded, 80 occurences
->>Table #46 output as 46, decimal places discarded, 98 occurences
->>Table #47 output as 47, decimal places discarded, 32 occurences
->>Table #48 output as 48, decimal places discarded, 98 occurences
+>>Table #45 output as 45, decimal places discarded, 132 occurences
+>>Table #46 output as 46, decimal places discarded, 164 occurences
+>>Table #47 output as 47, decimal places discarded, 52 occurences
+>>Table #48 output as 48, decimal places discarded, 165 occurences
 >>Table #49 output as 49, decimal places discarded, 26 occurences
 >>Table #50 output as 50, decimal places discarded, 32 occurences
 >>Table #51 output as 51, decimal places discarded, 10 occurences
 >>Table #52 output as 52, decimal places discarded, 32 occurences
->>Table #53 output as 53, decimal places discarded, 80 occurences
->>Table #54 output as 54, decimal places discarded, 98 occurences
->>Table #55 output as 55, decimal places discarded, 32 occurences
->>Table #56 output as 56, decimal places discarded, 99 occurences
+>>Table #53 output as 53, decimal places discarded, 138 occurences
+>>Table #54 output as 54, decimal places discarded, 167 occurences
+>>Table #55 output as 55, decimal places discarded, 52 occurences
+>>Table #56 output as 56, decimal places discarded, 167 occurences
 >>Table #57 output as 57, decimal places discarded, 26 occurences
 >>Table #58 output as 58, decimal places discarded, 32 occurences
 >>Table #59 output as 59, decimal places discarded, 10 occurences
 >>Table #60 output as 60, decimal places discarded, 32 occurences
->>Table #61 output as 61, decimal places discarded, 80 occurences
->>Table #62 output as 62, decimal places discarded, 99 occurences
->>Table #63 output as 63, decimal places discarded, 32 occurences
->>Table #64 output as 64, decimal places discarded, 95 occurences
+>>Table #61 output as 61, decimal places discarded, 134 occurences
+>>Table #62 output as 62, decimal places discarded, 167 occurences
+>>Table #63 output as 63, decimal places discarded, 52 occurences
+>>Table #64 output as 64, decimal places discarded, 158 occurences
 >>Table #65 output as 65, decimal places discarded, 26 occurences
->>Table #66 output as 66, decimal places discarded, 32 occurences
+>>Table #66 output as 66, decimal places discarded, 48 occurences
 >>Table #67 output as 67, decimal places discarded, 10 occurences
 >>Table #68 output as 68, decimal places discarded, 32 occurences
->>Table #69 output as 69, decimal places discarded, 102 occurences
->>Table #70 output as 70, decimal places discarded, 144 occurences
->>Table #71 output as 71, decimal places discarded, 32 occurences
->>Table #72 output as 72, decimal places discarded, 97 occurences
+>>Table #69 output as 69, decimal places discarded, 174 occurences
+>>Table #70 output as 70, decimal places discarded, 224 occurences
+>>Table #71 output as 71, decimal places discarded, 73 occurences
+>>Table #72 output as 72, decimal places discarded, 187 occurences
 >>Table #73 output as 73, decimal places discarded, 26 occurences
 >>Table #74 output as 74, decimal places discarded, 32 occurences
 >>Table #75 output as 75, decimal places discarded, 10 occurences
 >>Table #76 output as 76, decimal places discarded, 32 occurences
->>Table #77 output as 77, decimal places discarded, 80 occurences
->>Table #78 output as 78, decimal places discarded, 98 occurences
->>Table #79 output as 79, decimal places discarded, 32 occurences
->>Table #80 output as 80, decimal places discarded, 99 occurences
+>>Table #77 output as 77, decimal places discarded, 136 occurences
+>>Table #78 output as 78, decimal places discarded, 163 occurences
+>>Table #79 output as 79, decimal places discarded, 52 occurences
+>>Table #80 output as 80, decimal places discarded, 165 occurences
 >>Table #81 output as 81, decimal places discarded, 26 occurences
 >>Table #82 output as 82, decimal places discarded, 48 occurences
 >>Table #83 output as 83, decimal places discarded, 10 occurences
 >>Table #84 output as 84, decimal places discarded, 32 occurences
->>Table #85 output as 85, decimal places discarded, 102 occurences
->>Table #86 output as 86, decimal places discarded, 122 occurences
->>Table #87 output as 87, decimal places discarded, 32 occurences
->>Table #88 output as 88, decimal places discarded, 98 occurences
->>Table #89 output as 89, decimal places discarded, 130 occurences
+>>Table #85 output as 85, decimal places discarded, 195 occurences
+>>Table #86 output as 86, decimal places discarded, 191 occurences
+>>Table #87 output as 87, decimal places discarded, 52 occurences
+>>Table #88 output as 88, decimal places discarded, 165 occurences
+>>Table #89 output as 89, decimal places discarded, 143 occurences
 >>Table #94 output as 94, decimal places discarded, 176 occurences
 >>Table #99 output as 99, decimal places discarded, 50 occurences
 >>Table #104 output as 104, decimal places discarded, 176 occurences
->>Table #109 output as 109, decimal places discarded, 466 occurences
->>Table #114 output as 114, decimal places discarded, 583 occurences
->>Table #119 output as 119, decimal places discarded, 176 occurences
->>Table #124 output as 124, decimal places discarded, 549 occurences
+>>Table #109 output as 109, decimal places discarded, 779 occurences
+>>Table #114 output as 114, decimal places discarded, 999 occurences
+>>Table #119 output as 119, decimal places discarded, 307 occurences
+>>Table #124 output as 124, decimal places discarded, 912 occurences
 >>Table #129 output as 129, decimal places discarded, 130 occurences
 >>Table #134 output as 134, decimal places discarded, 176 occurences
 >>Table #139 output as 139, decimal places discarded, 50 occurences
 >>Table #144 output as 144, decimal places discarded, 160 occurences
->>Table #149 output as 149, decimal places discarded, 428 occurences
->>Table #154 output as 154, decimal places discarded, 538 occurences
->>Table #159 output as 159, decimal places discarded, 176 occurences
->>Table #164 output as 164, decimal places discarded, 544 occurences
+>>Table #149 output as 149, decimal places discarded, 755 occurences
+>>Table #154 output as 154, decimal places discarded, 919 occurences
+>>Table #159 output as 159, decimal places discarded, 292 occurences
+>>Table #164 output as 164, decimal places discarded, 961 occurences
 >>Table #169 output as 169, decimal places discarded, 143 occurences
 >>Table #174 output as 174, decimal places discarded, 176 occurences
 >>Table #179 output as 179, decimal places discarded, 50 occurences
->>Table #184 output as 184, decimal places discarded, 162 occurences
->>Table #189 output as 189, decimal places discarded, 452 occurences
->>Table #194 output as 194, decimal places discarded, 546 occurences
->>Table #199 output as 199, decimal places discarded, 176 occurences
->>Table #204 output as 204, decimal places discarded, 557 occurences
+>>Table #184 output as 184, decimal places discarded, 176 occurences
+>>Table #189 output as 189, decimal places discarded, 756 occurences
+>>Table #194 output as 194, decimal places discarded, 951 occurences
+>>Table #199 output as 199, decimal places discarded, 286 occurences
+>>Table #204 output as 204, decimal places discarded, 911 occurences
 >>Table #209 output as 209, decimal places discarded, 13 occurences
 >>Table #210 output as 210, decimal places discarded, 16 occurences
 >>Table #211 output as 211, decimal places discarded, 5 occurences
 >>Table #212 output as 212, decimal places discarded, 16 occurences
->>Table #213 output as 213, decimal places discarded, 40 occurences
->>Table #214 output as 214, decimal places discarded, 49 occurences
->>Table #215 output as 215, decimal places discarded, 16 occurences
->>Table #216 output as 216, decimal places discarded, 50 occurences
+>>Table #213 output as 213, decimal places discarded, 66 occurences
+>>Table #214 output as 214, decimal places discarded, 86 occurences
+>>Table #215 output as 215, decimal places discarded, 26 occurences
+>>Table #216 output as 216, decimal places discarded, 89 occurences
 >>Table #217 output as 217, decimal places discarded, 13 occurences
 >>Table #218 output as 218, decimal places discarded, 16 occurences
 >>Table #219 output as 219, decimal places discarded, 5 occurences
 >>Table #220 output as 220, decimal places discarded, 16 occurences
->>Table #221 output as 221, decimal places discarded, 40 occurences
->>Table #222 output as 222, decimal places discarded, 49 occurences
->>Table #223 output as 223, decimal places discarded, 16 occurences
->>Table #224 output as 224, decimal places discarded, 58 occurences
+>>Table #221 output as 221, decimal places discarded, 76 occurences
+>>Table #222 output as 222, decimal places discarded, 95 occurences
+>>Table #223 output as 223, decimal places discarded, 26 occurences
+>>Table #224 output as 224, decimal places discarded, 108 occurences
 >>Table #225 output as 225, decimal places discarded, 13 occurences
 >>Table #226 output as 226, decimal places discarded, 16 occurences
 >>Table #227 output as 227, decimal places discarded, 5 occurences
 >>Table #228 output as 228, decimal places discarded, 16 occurences
->>Table #229 output as 229, decimal places discarded, 41 occurences
->>Table #230 output as 230, decimal places discarded, 49 occurences
->>Table #231 output as 231, decimal places discarded, 16 occurences
->>Table #232 output as 232, decimal places discarded, 58 occurences
+>>Table #229 output as 229, decimal places discarded, 67 occurences
+>>Table #230 output as 230, decimal places discarded, 86 occurences
+>>Table #231 output as 231, decimal places discarded, 26 occurences
+>>Table #232 output as 232, decimal places discarded, 96 occurences
 >>Table #233 output as 233, decimal places discarded, 13 occurences
 >>Table #234 output as 234, decimal places discarded, 16 occurences
 >>Table #235 output as 235, decimal places discarded, 5 occurences
 >>Table #236 output as 236, decimal places discarded, 16 occurences
->>Table #237 output as 237, decimal places discarded, 44 occurences
->>Table #238 output as 238, decimal places discarded, 50 occurences
->>Table #239 output as 239, decimal places discarded, 16 occurences
->>Table #240 output as 240, decimal places discarded, 65 occurences
+>>Table #237 output as 237, decimal places discarded, 77 occurences
+>>Table #238 output as 238, decimal places discarded, 95 occurences
+>>Table #239 output as 239, decimal places discarded, 26 occurences
+>>Table #240 output as 240, decimal places discarded, 138 occurences
 >>Table #241 output as 241, decimal places discarded, 13 occurences
 >>Table #242 output as 242, decimal places discarded, 16 occurences
 >>Table #243 output as 243, decimal places discarded, 5 occurences
 >>Table #244 output as 244, decimal places discarded, 16 occurences
->>Table #245 output as 245, decimal places discarded, 46 occurences
->>Table #246 output as 246, decimal places discarded, 75 occurences
->>Table #247 output as 247, decimal places discarded, 16 occurences
->>Table #248 output as 248, decimal places discarded, 95 occurences
+>>Table #245 output as 245, decimal places discarded, 107 occurences
+>>Table #246 output as 246, decimal places discarded, 143 occurences
+>>Table #247 output as 247, decimal places discarded, 32 occurences
+>>Table #248 output as 248, decimal places discarded, 187 occurences
 >>Table #249 output as 249, decimal places discarded, 13 occurences
 >>Table #250 output as 250, decimal places discarded, 16 occurences
 >>Table #251 output as 251, decimal places discarded, 5 occurences
->>Table #252 output as 252, decimal places discarded, 18 occurences
->>Table #253 output as 253, decimal places discarded, 50 occurences
->>Table #254 output as 254, decimal places discarded, 54 occurences
->>Table #255 output as 255, decimal places discarded, 16 occurences
->>Table #256 output as 256, decimal places discarded, 83 occurences
+>>Table #252 output as 252, decimal places discarded, 16 occurences
+>>Table #253 output as 253, decimal places discarded, 87 occurences
+>>Table #254 output as 254, decimal places discarded, 101 occurences
+>>Table #255 output as 255, decimal places discarded, 26 occurences
+>>Table #256 output as 256, decimal places discarded, 142 occurences
 >>Table #257 output as 257, decimal places discarded, 169 occurences
 >>Table #263 output as 263, decimal places discarded, 224 occurences
 >>Table #269 output as 269, decimal places discarded, 60 occurences
 >>Table #275 output as 275, decimal places discarded, 208 occurences
->>Table #281 output as 281, decimal places discarded, 545 occurences
->>Table #287 output as 287, decimal places discarded, 707 occurences
->>Table #293 output as 293, decimal places discarded, 224 occurences
->>Table #299 output as 299, decimal places discarded, 684 occurences
+>>Table #281 output as 281, decimal places discarded, 927 occurences
+>>Table #287 output as 287, decimal places discarded, 1219 occurences
+>>Table #293 output as 293, decimal places discarded, 385 occurences
+>>Table #299 output as 299, decimal places discarded, 1176 occurences
 >>Table #305 output as 305, decimal places discarded, 169 occurences
 >>Table #311 output as 311, decimal places discarded, 208 occurences
 >>Table #317 output as 317, decimal places discarded, 60 occurences
->>Table #323 output as 323, decimal places discarded, 193 occurences
->>Table #329 output as 329, decimal places discarded, 530 occurences
->>Table #335 output as 335, decimal places discarded, 679 occurences
->>Table #341 output as 341, decimal places discarded, 208 occurences
->>Table #347 output as 347, decimal places discarded, 697 occurences
+>>Table #323 output as 323, decimal places discarded, 192 occurences
+>>Table #329 output as 329, decimal places discarded, 938 occurences
+>>Table #335 output as 335, decimal places discarded, 1143 occurences
+>>Table #341 output as 341, decimal places discarded, 348 occurences
+>>Table #347 output as 347, decimal places discarded, 1199 occurences
 >>Table #353 output as 353, decimal places discarded, 169 occurences
 >>Table #359 output as 359, decimal places discarded, 224 occurences
 >>Table #365 output as 365, decimal places discarded, 60 occurences
->>Table #371 output as 371, decimal places discarded, 212 occurences
->>Table #377 output as 377, decimal places discarded, 533 occurences
->>Table #383 output as 383, decimal places discarded, 697 occurences
->>Table #389 output as 389, decimal places discarded, 224 occurences
->>Table #395 output as 395, decimal places discarded, 688 occurences
+>>Table #371 output as 371, decimal places discarded, 211 occurences
+>>Table #377 output as 377, decimal places discarded, 928 occurences
+>>Table #383 output as 383, decimal places discarded, 1189 occurences
+>>Table #389 output as 389, decimal places discarded, 359 occurences
+>>Table #395 output as 395, decimal places discarded, 1179 occurences
 >>Table #401 output as 401, decimal places discarded, 13 occurences
 >>Table #402 output as 402, decimal places discarded, 16 occurences
 >>Table #403 output as 403, decimal places discarded, 5 occurences
 >>Table #404 output as 404, decimal places discarded, 16 occurences
->>Table #405 output as 405, decimal places discarded, 40 occurences
->>Table #406 output as 406, decimal places discarded, 49 occurences
->>Table #407 output as 407, decimal places discarded, 16 occurences
->>Table #408 output as 408, decimal places discarded, 52 occurences
+>>Table #405 output as 405, decimal places discarded, 66 occurences
+>>Table #406 output as 406, decimal places discarded, 86 occurences
+>>Table #407 output as 407, decimal places discarded, 26 occurences
+>>Table #408 output as 408, decimal places discarded, 100 occurences
 >>Table #409 output as 409, decimal places discarded, 13 occurences
 >>Table #410 output as 410, decimal places discarded, 16 occurences
 >>Table #411 output as 411, decimal places discarded, 5 occurences
 >>Table #412 output as 412, decimal places discarded, 16 occurences
->>Table #413 output as 413, decimal places discarded, 40 occurences
->>Table #414 output as 414, decimal places discarded, 50 occurences
->>Table #415 output as 415, decimal places discarded, 16 occurences
->>Table #416 output as 416, decimal places discarded, 60 occurences
+>>Table #413 output as 413, decimal places discarded, 77 occurences
+>>Table #414 output as 414, decimal places discarded, 94 occurences
+>>Table #415 output as 415, decimal places discarded, 28 occurences
+>>Table #416 output as 416, decimal places discarded, 123 occurences
 >>Table #417 output as 417, decimal places discarded, 13 occurences
 >>Table #418 output as 418, decimal places discarded, 16 occurences
 >>Table #419 output as 419, decimal places discarded, 5 occurences
 >>Table #420 output as 420, decimal places discarded, 16 occurences
->>Table #421 output as 421, decimal places discarded, 40 occurences
->>Table #422 output as 422, decimal places discarded, 50 occurences
->>Table #423 output as 423, decimal places discarded, 16 occurences
->>Table #424 output as 424, decimal places discarded, 57 occurences
+>>Table #421 output as 421, decimal places discarded, 71 occurences
+>>Table #422 output as 422, decimal places discarded, 90 occurences
+>>Table #423 output as 423, decimal places discarded, 26 occurences
+>>Table #424 output as 424, decimal places discarded, 115 occurences
 >>Table #425 output as 425, decimal places discarded, 13 occurences
 >>Table #426 output as 426, decimal places discarded, 16 occurences
 >>Table #427 output as 427, decimal places discarded, 5 occurences
 >>Table #428 output as 428, decimal places discarded, 16 occurences
->>Table #429 output as 429, decimal places discarded, 43 occurences
->>Table #430 output as 430, decimal places discarded, 49 occurences
->>Table #431 output as 431, decimal places discarded, 16 occurences
->>Table #432 output as 432, decimal places discarded, 75 occurences
+>>Table #429 output as 429, decimal places discarded, 74 occurences
+>>Table #430 output as 430, decimal places discarded, 94 occurences
+>>Table #431 output as 431, decimal places discarded, 26 occurences
+>>Table #432 output as 432, decimal places discarded, 147 occurences
 >>Table #433 output as 433, decimal places discarded, 13 occurences
 >>Table #434 output as 434, decimal places discarded, 16 occurences
 >>Table #435 output as 435, decimal places discarded, 5 occurences
->>Table #436 output as 436, decimal places discarded, 17 occurences
->>Table #437 output as 437, decimal places discarded, 50 occurences
->>Table #438 output as 438, decimal places discarded, 70 occurences
->>Table #439 output as 439, decimal places discarded, 16 occurences
->>Table #440 output as 440, decimal places discarded, 99 occurences
+>>Table #436 output as 436, decimal places discarded, 16 occurences
+>>Table #437 output as 437, decimal places discarded, 109 occurences
+>>Table #438 output as 438, decimal places discarded, 141 occurences
+>>Table #439 output as 439, decimal places discarded, 32 occurences
+>>Table #440 output as 440, decimal places discarded, 197 occurences
 >>Table #441 output as 441, decimal places discarded, 13 occurences
 >>Table #442 output as 442, decimal places discarded, 16 occurences
 >>Table #443 output as 443, decimal places discarded, 5 occurences
->>Table #444 output as 444, decimal places discarded, 20 occurences
->>Table #445 output as 445, decimal places discarded, 53 occurences
->>Table #446 output as 446, decimal places discarded, 55 occurences
->>Table #447 output as 447, decimal places discarded, 16 occurences
->>Table #448 output as 448, decimal places discarded, 97 occurences
+>>Table #444 output as 444, decimal places discarded, 19 occurences
+>>Table #445 output as 445, decimal places discarded, 99 occurences
+>>Table #446 output as 446, decimal places discarded, 108 occurences
+>>Table #447 output as 447, decimal places discarded, 26 occurences
+>>Table #448 output as 448, decimal places discarded, 172 occurences
 >>Table #449 output as 449, decimal places discarded, 26 occurences
 >>Table #450 output as 450, decimal places discarded, 48 occurences
 >>Table #451 output as 451, decimal places discarded, 10 occurences
->>Table #452 output as 452, decimal places discarded, 32 occurences
->>Table #453 output as 453, decimal places discarded, 120 occurences
->>Table #454 output as 454, decimal places discarded, 144 occurences
->>Table #455 output as 455, decimal places discarded, 48 occurences
->>Table #456 output as 456, decimal places discarded, 120 occurences
+>>Table #452 output as 452, decimal places discarded, 48 occurences
+>>Table #453 output as 453, decimal places discarded, 172 occurences
+>>Table #454 output as 454, decimal places discarded, 247 occurences
+>>Table #455 output as 455, decimal places discarded, 78 occurences
+>>Table #456 output as 456, decimal places discarded, 202 occurences
 >>Table #457 output as 457, decimal places discarded, 26 occurences
 >>Table #458 output as 458, decimal places discarded, 32 occurences
 >>Table #459 output as 459, decimal places discarded, 10 occurences
 >>Table #460 output as 460, decimal places discarded, 32 occurences
->>Table #461 output as 461, decimal places discarded, 80 occurences
->>Table #462 output as 462, decimal places discarded, 98 occurences
->>Table #463 output as 463, decimal places discarded, 32 occurences
->>Table #464 output as 464, decimal places discarded, 97 occurences
+>>Table #461 output as 461, decimal places discarded, 142 occurences
+>>Table #462 output as 462, decimal places discarded, 163 occurences
+>>Table #463 output as 463, decimal places discarded, 52 occurences
+>>Table #464 output as 464, decimal places discarded, 171 occurences
 >>Table #465 output as 465, decimal places discarded, 26 occurences
 >>Table #466 output as 466, decimal places discarded, 48 occurences
 >>Table #467 output as 467, decimal places discarded, 10 occurences
 >>Table #468 output as 468, decimal places discarded, 32 occurences
->>Table #469 output as 469, decimal places discarded, 80 occurences
->>Table #470 output as 470, decimal places discarded, 121 occurences
->>Table #471 output as 471, decimal places discarded, 32 occurences
->>Table #472 output as 472, decimal places discarded, 121 occurences
+>>Table #469 output as 469, decimal places discarded, 133 occurences
+>>Table #470 output as 470, decimal places discarded, 188 occurences
+>>Table #471 output as 471, decimal places discarded, 73 occurences
+>>Table #472 output as 472, decimal places discarded, 160 occurences
 >>Table #473 output as 473, decimal places discarded, 195 occurences
 >>Table #483 output as 483, decimal places discarded, 256 occurences
 >>Table #493 output as 493, decimal places discarded, 75 occurences
 >>Table #503 output as 503, decimal places discarded, 240 occurences
->>Table #513 output as 513, decimal places discarded, 622 occurences
->>Table #523 output as 523, decimal places discarded, 781 occurences
->>Table #533 output as 533, decimal places discarded, 256 occurences
->>Table #543 output as 543, decimal places discarded, 763 occurences
+>>Table #513 output as 513, decimal places discarded, 1022 occurences
+>>Table #523 output as 523, decimal places discarded, 1325 occurences
+>>Table #533 output as 533, decimal places discarded, 411 occurences
+>>Table #543 output as 543, decimal places discarded, 1330 occurences
 >>Table #553 output as 553, decimal places discarded, 195 occurences
 >>Table #563 output as 563, decimal places discarded, 256 occurences
 >>Table #573 output as 573, decimal places discarded, 75 occurences
 >>Table #583 output as 583, decimal places discarded, 240 occurences
->>Table #593 output as 593, decimal places discarded, 600 occurences
->>Table #603 output as 603, decimal places discarded, 735 occurences
->>Table #613 output as 613, decimal places discarded, 240 occurences
->>Table #623 output as 623, decimal places discarded, 798 occurences
+>>Table #593 output as 593, decimal places discarded, 1074 occurences
+>>Table #603 output as 603, decimal places discarded, 1326 occurences
+>>Table #613 output as 613, decimal places discarded, 390 occurences
+>>Table #623 output as 623, decimal places discarded, 1425 occurences
 >>Table #633 output as 633, decimal places discarded, 195 occurences
 >>Table #643 output as 643, decimal places discarded, 256 occurences
 >>Table #653 output as 653, decimal places discarded, 75 occurences
 >>Table #663 output as 663, decimal places discarded, 240 occurences
->>Table #673 output as 673, decimal places discarded, 601 occurences
->>Table #683 output as 683, decimal places discarded, 791 occurences
->>Table #693 output as 693, decimal places discarded, 240 occurences
->>Table #703 output as 703, decimal places discarded, 758 occurences
+>>Table #673 output as 673, decimal places discarded, 1036 occurences
+>>Table #683 output as 683, decimal places discarded, 1293 occurences
+>>Table #693 output as 693, decimal places discarded, 411 occurences
+>>Table #703 output as 703, decimal places discarded, 1286 occurences
 >>Table #713 output as 713, decimal places discarded, 26 occurences
 >>Table #714 output as 714, decimal places discarded, 32 occurences
 >>Table #715 output as 715, decimal places discarded, 10 occurences
 >>Table #716 output as 716, decimal places discarded, 32 occurences
->>Table #717 output as 717, decimal places discarded, 80 occurences
->>Table #718 output as 718, decimal places discarded, 98 occurences
->>Table #719 output as 719, decimal places discarded, 32 occurences
->>Table #720 output as 720, decimal places discarded, 105 occurences
+>>Table #717 output as 717, decimal places discarded, 138 occurences
+>>Table #718 output as 718, decimal places discarded, 174 occurences
+>>Table #719 output as 719, decimal places discarded, 52 occurences
+>>Table #720 output as 720, decimal places discarded, 208 occurences
 >>Table #721 output as 721, decimal places discarded, 26 occurences
 >>Table #722 output as 722, decimal places discarded, 32 occurences
 >>Table #723 output as 723, decimal places discarded, 10 occurences
 >>Table #724 output as 724, decimal places discarded, 16 occurences
->>Table #725 output as 725, decimal places discarded, 80 occurences
->>Table #726 output as 726, decimal places discarded, 98 occurences
->>Table #727 output as 727, decimal places discarded, 32 occurences
->>Table #728 output as 728, decimal places discarded, 130 occurences
+>>Table #725 output as 725, decimal places discarded, 167 occurences
+>>Table #726 output as 726, decimal places discarded, 215 occurences
+>>Table #727 output as 727, decimal places discarded, 52 occurences
+>>Table #728 output as 728, decimal places discarded, 266 occurences
 >>Table #729 output as 729, decimal places discarded, 26 occurences
 >>Table #730 output as 730, decimal places discarded, 32 occurences
 >>Table #731 output as 731, decimal places discarded, 10 occurences
->>Table #732 output as 732, decimal places discarded, 16 occurences
->>Table #733 output as 733, decimal places discarded, 80 occurences
->>Table #734 output as 734, decimal places discarded, 98 occurences
->>Table #735 output as 735, decimal places discarded, 32 occurences
->>Table #736 output as 736, decimal places discarded, 112 occurences
+>>Table #732 output as 732, decimal places discarded, 32 occurences
+>>Table #733 output as 733, decimal places discarded, 146 occurences
+>>Table #734 output as 734, decimal places discarded, 174 occurences
+>>Table #735 output as 735, decimal places discarded, 52 occurences
+>>Table #736 output as 736, decimal places discarded, 192 occurences
 >>Table #737 output as 737, decimal places discarded, 30 occurences
->>Table #738 output as 738, decimal places discarded, 38 occurences
+>>Table #738 output as 738, decimal places discarded, 32 occurences
 >>Table #739 output as 739, decimal places discarded, 10 occurences
->>Table #740 output as 740, decimal places discarded, 60 occurences
->>Table #741 output as 741, decimal places discarded, 126 occurences
->>Table #742 output as 742, decimal places discarded, 203 occurences
->>Table #743 output as 743, decimal places discarded, 32 occurences
->>Table #744 output as 744, decimal places discarded, 296 occurences
+>>Table #740 output as 740, decimal places discarded, 56 occurences
+>>Table #741 output as 741, decimal places discarded, 271 occurences
+>>Table #742 output as 742, decimal places discarded, 390 occurences
+>>Table #743 output as 743, decimal places discarded, 61 occurences
+>>Table #744 output as 744, decimal places discarded, 554 occurences
 >>Table #745 output as 745, decimal places discarded, 32 occurences
->>Table #746 output as 746, decimal places discarded, 70 occurences
+>>Table #746 output as 746, decimal places discarded, 62 occurences
 >>Table #747 output as 747, decimal places discarded, 10 occurences
->>Table #748 output as 748, decimal places discarded, 82 occurences
->>Table #749 output as 749, decimal places discarded, 188 occurences
->>Table #750 output as 750, decimal places discarded, 315 occurences
->>Table #751 output as 751, decimal places discarded, 45 occurences
->>Table #752 output as 752, decimal places discarded, 387 occurences
+>>Table #748 output as 748, decimal places discarded, 74 occurences
+>>Table #749 output as 749, decimal places discarded, 419 occurences
+>>Table #750 output as 750, decimal places discarded, 600 occurences
+>>Table #751 output as 751, decimal places discarded, 129 occurences
+>>Table #752 output as 752, decimal places discarded, 668 occurences
 >>Table #753 output as 753, decimal places discarded, 34 occurences
->>Table #754 output as 754, decimal places discarded, 48 occurences
+>>Table #754 output as 754, decimal places discarded, 33 occurences
 >>Table #755 output as 755, decimal places discarded, 10 occurences
->>Table #756 output as 756, decimal places discarded, 79 occurences
->>Table #757 output as 757, decimal places discarded, 160 occurences
->>Table #758 output as 758, decimal places discarded, 251 occurences
->>Table #759 output as 759, decimal places discarded, 32 occurences
->>Table #760 output as 760, decimal places discarded, 332 occurences
+>>Table #756 output as 756, decimal places discarded, 71 occurences
+>>Table #757 output as 757, decimal places discarded, 307 occurences
+>>Table #758 output as 758, decimal places discarded, 447 occurences
+>>Table #759 output as 759, decimal places discarded, 63 occurences
+>>Table #760 output as 760, decimal places discarded, 566 occurences
 >>Table #761 output as 761, decimal places discarded, 156 occurences
 >>Table #769 output as 769, decimal places discarded, 208 occurences
 >>Table #777 output as 777, decimal places discarded, 60 occurences
 >>Table #785 output as 785, decimal places discarded, 192 occurences
->>Table #793 output as 793, decimal places discarded, 480 occurences
->>Table #801 output as 801, decimal places discarded, 634 occurences
->>Table #809 output as 809, decimal places discarded, 208 occurences
->>Table #817 output as 817, decimal places discarded, 588 occurences
+>>Table #793 output as 793, decimal places discarded, 794 occurences
+>>Table #801 output as 801, decimal places discarded, 1085 occurences
+>>Table #809 output as 809, decimal places discarded, 333 occurences
+>>Table #817 output as 817, decimal places discarded, 1039 occurences
 >>Table #825 output as 825, decimal places discarded, 156 occurences
 >>Table #833 output as 833, decimal places discarded, 192 occurences
 >>Table #841 output as 841, decimal places discarded, 60 occurences
->>Table #849 output as 849, decimal places discarded, 176 occurences
->>Table #857 output as 857, decimal places discarded, 480 occurences
->>Table #865 output as 865, decimal places discarded, 604 occurences
->>Table #873 output as 873, decimal places discarded, 192 occurences
->>Table #881 output as 881, decimal places discarded, 633 occurences
+>>Table #849 output as 849, decimal places discarded, 192 occurences
+>>Table #857 output as 857, decimal places discarded, 851 occurences
+>>Table #865 output as 865, decimal places discarded, 1077 occurences
+>>Table #873 output as 873, decimal places discarded, 312 occurences
+>>Table #881 output as 881, decimal places discarded, 1118 occurences
 >>Table #889 output as 889, decimal places discarded, 156 occurences
 >>Table #897 output as 897, decimal places discarded, 208 occurences
 >>Table #905 output as 905, decimal places discarded, 60 occurences
 >>Table #913 output as 913, decimal places discarded, 193 occurences
->>Table #921 output as 921, decimal places discarded, 483 occurences
->>Table #929 output as 929, decimal places discarded, 623 occurences
->>Table #937 output as 937, decimal places discarded, 192 occurences
->>Table #945 output as 945, decimal places discarded, 613 occurences
+>>Table #921 output as 921, decimal places discarded, 818 occurences
+>>Table #929 output as 929, decimal places discarded, 1054 occurences
+>>Table #937 output as 937, decimal places discarded, 312 occurences
+>>Table #945 output as 945, decimal places discarded, 1030 occurences
 >>Table #953 output as 953, decimal places discarded, 13 occurences
->>Table #954 output as 954, decimal places discarded, 32 occurences
+>>Table #954 output as 954, decimal places discarded, 16 occurences
 >>Table #955 output as 955, decimal places discarded, 5 occurences
 >>Table #956 output as 956, decimal places discarded, 16 occurences
->>Table #957 output as 957, decimal places discarded, 40 occurences
->>Table #958 output as 958, decimal places discarded, 95 occurences
->>Table #959 output as 959, decimal places discarded, 32 occurences
->>Table #960 output as 960, decimal places discarded, 52 occurences
+>>Table #957 output as 957, decimal places discarded, 67 occurences
+>>Table #958 output as 958, decimal places discarded, 154 occurences
+>>Table #959 output as 959, decimal places discarded, 52 occurences
+>>Table #960 output as 960, decimal places discarded, 112 occurences
 >>Table #961 output as 961, decimal places discarded, 13 occurences
 >>Table #962 output as 962, decimal places discarded, 16 occurences
 >>Table #963 output as 963, decimal places discarded, 5 occurences
 >>Table #964 output as 964, decimal places discarded, 16 occurences
->>Table #965 output as 965, decimal places discarded, 40 occurences
->>Table #966 output as 966, decimal places discarded, 57 occurences
->>Table #967 output as 967, decimal places discarded, 16 occurences
->>Table #968 output as 968, decimal places discarded, 78 occurences
+>>Table #965 output as 965, decimal places discarded, 83 occurences
+>>Table #966 output as 966, decimal places discarded, 125 occurences
+>>Table #967 output as 967, decimal places discarded, 26 occurences
+>>Table #968 output as 968, decimal places discarded, 156 occurences
 >>Table #969 output as 969, decimal places discarded, 13 occurences
->>Table #970 output as 970, decimal places discarded, 16 occurences
+>>Table #970 output as 970, decimal places discarded, 32 occurences
 >>Table #971 output as 971, decimal places discarded, 5 occurences
 >>Table #972 output as 972, decimal places discarded, 16 occurences
->>Table #973 output as 973, decimal places discarded, 41 occurences
->>Table #974 output as 974, decimal places discarded, 98 occurences
->>Table #975 output as 975, decimal places discarded, 16 occurences
->>Table #976 output as 976, decimal places discarded, 62 occurences
+>>Table #973 output as 973, decimal places discarded, 74 occurences
+>>Table #974 output as 974, decimal places discarded, 119 occurences
+>>Table #975 output as 975, decimal places discarded, 26 occurences
+>>Table #976 output as 976, decimal places discarded, 101 occurences
 >>Table #977 output as 977, decimal places discarded, 13 occurences
->>Table #978 output as 978, decimal places discarded, 18 occurences
+>>Table #978 output as 978, decimal places discarded, 32 occurences
 >>Table #979 output as 979, decimal places discarded, 5 occurences
 >>Table #980 output as 980, decimal places discarded, 26 occurences
->>Table #981 output as 981, decimal places discarded, 72 occurences
->>Table #982 output as 982, decimal places discarded, 156 occurences
->>Table #983 output as 983, decimal places discarded, 16 occurences
->>Table #984 output as 984, decimal places discarded, 184 occurences
->>Table #985 output as 985, decimal places discarded, 16 occurences
->>Table #986 output as 986, decimal places discarded, 31 occurences
+>>Table #981 output as 981, decimal places discarded, 213 occurences
+>>Table #982 output as 982, decimal places discarded, 328 occurences
+>>Table #983 output as 983, decimal places discarded, 64 occurences
+>>Table #984 output as 984, decimal places discarded, 372 occurences
+>>Table #985 output as 985, decimal places discarded, 14 occurences
+>>Table #986 output as 986, decimal places discarded, 28 occurences
 >>Table #987 output as 987, decimal places discarded, 5 occurences
->>Table #988 output as 988, decimal places discarded, 46 occurences
->>Table #989 output as 989, decimal places discarded, 114 occurences
->>Table #990 output as 990, decimal places discarded, 187 occurences
->>Table #991 output as 991, decimal places discarded, 21 occurences
->>Table #992 output as 992, decimal places discarded, 238 occurences
->>Table #993 output as 993, decimal places discarded, 17 occurences
->>Table #994 output as 994, decimal places discarded, 19 occurences
+>>Table #988 output as 988, decimal places discarded, 42 occurences
+>>Table #989 output as 989, decimal places discarded, 275 occurences
+>>Table #990 output as 990, decimal places discarded, 380 occurences
+>>Table #991 output as 991, decimal places discarded, 69 occurences
+>>Table #992 output as 992, decimal places discarded, 437 occurences
+>>Table #993 output as 993, decimal places discarded, 16 occurences
+>>Table #994 output as 994, decimal places discarded, 17 occurences
 >>Table #995 output as 995, decimal places discarded, 5 occurences
->>Table #996 output as 996, decimal places discarded, 46 occurences
->>Table #997 output as 997, decimal places discarded, 94 occurences
->>Table #998 output as 998, decimal places discarded, 170 occurences
->>Table #999 output as 999, decimal places discarded, 18 occurences
->>Table #1000 output as 1000, decimal places discarded, 219 occurences
+>>Table #996 output as 996, decimal places discarded, 44 occurences
+>>Table #997 output as 997, decimal places discarded, 201 occurences
+>>Table #998 output as 998, decimal places discarded, 318 occurences
+>>Table #999 output as 999, decimal places discarded, 40 occurences
+>>Table #1000 output as 1000, decimal places discarded, 391 occurences
 = MRDCL 32 print phase completed
 = CL run completed
-  Data lines read 1692
-  IDF data records 1006
-  Table pages 1361
+  Data lines read 2267
+  IDF data records 1236
+  Table pages 2059
   
-= ----- 13/03/2024 17:35:27 pm
+= ----- 26/03/2024 17:31:04 pm

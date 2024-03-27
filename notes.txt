@@ -3,13 +3,14 @@ headers:
 - a,b,c and brand assoc(quarter 1 only)
 
 
-changes:
+changes - with cuts:
 - ad eval - new questions val questions should be rebased to ph1 - important
 - tack on - last to process
-- wealth management
+- wealth management saving and loans
 
 category and brand: -important
 - yellow new questions
+- Q8b priority
 
 brand funnel:
 - no 2nd favorite

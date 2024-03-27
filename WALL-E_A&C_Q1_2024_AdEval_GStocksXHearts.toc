@@ -23,31 +23,31 @@ Table 5       Page 5        QST1. VISIBILITY OF ADS
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 6       Page 7        QST1. VISIBILITY OF ADS
+Table 6       Page 8        QST1. VISIBILITY OF ADS
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 7       Page 9        QST1. VISIBILITY OF ADS
+Table 7       Page 11       QST1. VISIBILITY OF ADS
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 8       Page 10       QST1. VISIBILITY OF ADS
+Table 8       Page 12       QST1. VISIBILITY OF ADS
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 9       Page 12       QST2. AD VIEWED FREQUENCY
+Table 9       Page 15       QST2. AD VIEWED FREQUENCY
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 10      Page 13       QST2. AD VIEWED FREQUENCY
+Table 10      Page 16       QST2. AD VIEWED FREQUENCY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 11      Page 14       QST2. AD VIEWED FREQUENCY
+Table 11      Page 17       QST2. AD VIEWED FREQUENCY
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 12      Page 15       QST2. AD VIEWED FREQUENCY
+Table 12      Page 18       QST2. AD VIEWED FREQUENCY
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
@@ -55,51 +55,51 @@ Table 12      Page 15       QST2. AD VIEWED FREQUENCY
 
 
 
-Table 13      Page 16       QST2. AD VIEWED FREQUENCY
+Table 13      Page 19       QST2. AD VIEWED FREQUENCY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 14      Page 18       QST2. AD VIEWED FREQUENCY
+Table 14      Page 22       QST2. AD VIEWED FREQUENCY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 15      Page 20       QST2. AD VIEWED FREQUENCY
+Table 15      Page 25       QST2. AD VIEWED FREQUENCY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 16      Page 21       QST2. AD VIEWED FREQUENCY
+Table 16      Page 26       QST2. AD VIEWED FREQUENCY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 17      Page 22       QST3. BRAND LINK
+Table 17      Page 28       QST3. BRAND LINK
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 18      Page 23       QST3. BRAND LINK
+Table 18      Page 29       QST3. BRAND LINK
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 19      Page 24       QST3. BRAND LINK
+Table 19      Page 30       QST3. BRAND LINK
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 20      Page 25       QST3. BRAND LINK
+Table 20      Page 31       QST3. BRAND LINK
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 21      Page 26       QST3. BRAND LINK
+Table 21      Page 32       QST3. BRAND LINK
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 22      Page 28       QST3. BRAND LINK
+Table 22      Page 35       QST3. BRAND LINK
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 23      Page 30       QST3. BRAND LINK
+Table 23      Page 38       QST3. BRAND LINK
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 24      Page 31       QST3. BRAND LINK
+Table 24      Page 39       QST3. BRAND LINK
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
@@ -107,51 +107,51 @@ Table 24      Page 31       QST3. BRAND LINK
 
 
 
-Table 25      Page 32       QVAL3. VALIDATION GSTOCKS X HEART
+Table 25      Page 41       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 26      Page 33       QVAL3. VALIDATION GSTOCKS X HEART
+Table 26      Page 42       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 27      Page 34       QVAL3. VALIDATION GSTOCKS X HEART
+Table 27      Page 43       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 28      Page 35       QVAL3. VALIDATION GSTOCKS X HEART
+Table 28      Page 44       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 29      Page 36       QVAL3. VALIDATION GSTOCKS X HEART
+Table 29      Page 45       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 30      Page 38       QVAL3. VALIDATION GSTOCKS X HEART
+Table 30      Page 48       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 31      Page 40       QVAL3. VALIDATION GSTOCKS X HEART
+Table 31      Page 51       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 32      Page 41       QVAL3. VALIDATION GSTOCKS X HEART
+Table 32      Page 52       QVAL3. VALIDATION GSTOCKS X HEART
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 33      Page 42       QST4. SOURCES OF AD AWARENESS
+Table 33      Page 54       QST4. SOURCES OF AD AWARENESS
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 34      Page 44       QST4. SOURCES OF AD AWARENESS
+Table 34      Page 56       QST4. SOURCES OF AD AWARENESS
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 35      Page 46       QST4. SOURCES OF AD AWARENESS
+Table 35      Page 58       QST4. SOURCES OF AD AWARENESS
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 36      Page 48       QST4. SOURCES OF AD AWARENESS
+Table 36      Page 60       QST4. SOURCES OF AD AWARENESS
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
@@ -159,51 +159,51 @@ Table 36      Page 48       QST4. SOURCES OF AD AWARENESS
 
 
 
-Table 37      Page 50       QST4. SOURCES OF AD AWARENESS
+Table 37      Page 62       QST4. SOURCES OF AD AWARENESS
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 38      Page 54       QST4. SOURCES OF AD AWARENESS
+Table 38      Page 68       QST4. SOURCES OF AD AWARENESS
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 39      Page 58       QST4. SOURCES OF AD AWARENESS
+Table 39      Page 74       QST4. SOURCES OF AD AWARENESS
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 40      Page 60       QST4. SOURCES OF AD AWARENESS
+Table 40      Page 76       QST4. SOURCES OF AD AWARENESS
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 41      Page 62       QST5. ABSOLUTE LIKEABILITY
+Table 41      Page 80       QST5. ABSOLUTE LIKEABILITY
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 42      Page 63       QST5. ABSOLUTE LIKEABILITY
+Table 42      Page 81       QST5. ABSOLUTE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 43      Page 64       QST5. ABSOLUTE LIKEABILITY
+Table 43      Page 82       QST5. ABSOLUTE LIKEABILITY
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 44      Page 65       QST5. ABSOLUTE LIKEABILITY
+Table 44      Page 83       QST5. ABSOLUTE LIKEABILITY
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 45      Page 66       QST5. ABSOLUTE LIKEABILITY
+Table 45      Page 84       QST5. ABSOLUTE LIKEABILITY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 46      Page 68       QST5. ABSOLUTE LIKEABILITY
+Table 46      Page 87       QST5. ABSOLUTE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 47      Page 70       QST5. ABSOLUTE LIKEABILITY
+Table 47      Page 90       QST5. ABSOLUTE LIKEABILITY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 48      Page 71       QST5. ABSOLUTE LIKEABILITY
+Table 48      Page 91       QST5. ABSOLUTE LIKEABILITY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -211,51 +211,51 @@ Table 48      Page 71       QST5. ABSOLUTE LIKEABILITY
 
 
 
-Table 49      Page 73       QST5. ABSOLUTE LIKEABILITY
+Table 49      Page 94       QST5. ABSOLUTE LIKEABILITY
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 50      Page 74       QST5. ABSOLUTE LIKEABILITY
+Table 50      Page 95       QST5. ABSOLUTE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 51      Page 75       QST5. ABSOLUTE LIKEABILITY
+Table 51      Page 96       QST5. ABSOLUTE LIKEABILITY
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 52      Page 76       QST5. ABSOLUTE LIKEABILITY
+Table 52      Page 97       QST5. ABSOLUTE LIKEABILITY
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 53      Page 77       QST5. ABSOLUTE LIKEABILITY
+Table 53      Page 98       QST5. ABSOLUTE LIKEABILITY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 54      Page 79       QST5. ABSOLUTE LIKEABILITY
+Table 54      Page 101      QST5. ABSOLUTE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 55      Page 81       QST5. ABSOLUTE LIKEABILITY
+Table 55      Page 104      QST5. ABSOLUTE LIKEABILITY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 56      Page 82       QST5. ABSOLUTE LIKEABILITY
+Table 56      Page 105      QST5. ABSOLUTE LIKEABILITY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 57      Page 83       QST5. ABSOLUTE LIKEABILITY
+Table 57      Page 107      QST5. ABSOLUTE LIKEABILITY
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 58      Page 84       QST5. ABSOLUTE LIKEABILITY
+Table 58      Page 108      QST5. ABSOLUTE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 59      Page 85       QST5. ABSOLUTE LIKEABILITY
+Table 59      Page 109      QST5. ABSOLUTE LIKEABILITY
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 60      Page 86       QST5. ABSOLUTE LIKEABILITY
+Table 60      Page 110      QST5. ABSOLUTE LIKEABILITY
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -263,51 +263,51 @@ Table 60      Page 86       QST5. ABSOLUTE LIKEABILITY
 
 
 
-Table 61      Page 87       QST5. ABSOLUTE LIKEABILITY
+Table 61      Page 111      QST5. ABSOLUTE LIKEABILITY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 62      Page 89       QST5. ABSOLUTE LIKEABILITY
+Table 62      Page 114      QST5. ABSOLUTE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 63      Page 91       QST5. ABSOLUTE LIKEABILITY
+Table 63      Page 117      QST5. ABSOLUTE LIKEABILITY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 64      Page 92       QST5. ABSOLUTE LIKEABILITY
+Table 64      Page 118      QST5. ABSOLUTE LIKEABILITY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 65      Page 94       QST6. RELATIVE LIKEABILITY
+Table 65      Page 121      QST6. RELATIVE LIKEABILITY
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 66      Page 95       QST6. RELATIVE LIKEABILITY
+Table 66      Page 122      QST6. RELATIVE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 67      Page 96       QST6. RELATIVE LIKEABILITY
+Table 67      Page 124      QST6. RELATIVE LIKEABILITY
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 68      Page 97       QST6. RELATIVE LIKEABILITY
+Table 68      Page 125      QST6. RELATIVE LIKEABILITY
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 69      Page 98       QST6. RELATIVE LIKEABILITY
+Table 69      Page 126      QST6. RELATIVE LIKEABILITY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 70      Page 100      QST6. RELATIVE LIKEABILITY
+Table 70      Page 129      QST6. RELATIVE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 71      Page 102      QST6. RELATIVE LIKEABILITY
+Table 71      Page 133      QST6. RELATIVE LIKEABILITY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 72      Page 103      QST6. RELATIVE LIKEABILITY
+Table 72      Page 134      QST6. RELATIVE LIKEABILITY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -315,51 +315,51 @@ Table 72      Page 103      QST6. RELATIVE LIKEABILITY
 
 
 
-Table 73      Page 105      QST6. RELATIVE LIKEABILITY
+Table 73      Page 137      QST6. RELATIVE LIKEABILITY
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 74      Page 106      QST6. RELATIVE LIKEABILITY
+Table 74      Page 138      QST6. RELATIVE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 75      Page 107      QST6. RELATIVE LIKEABILITY
+Table 75      Page 139      QST6. RELATIVE LIKEABILITY
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 76      Page 108      QST6. RELATIVE LIKEABILITY
+Table 76      Page 140      QST6. RELATIVE LIKEABILITY
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 77      Page 109      QST6. RELATIVE LIKEABILITY
+Table 77      Page 141      QST6. RELATIVE LIKEABILITY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 78      Page 111      QST6. RELATIVE LIKEABILITY
+Table 78      Page 144      QST6. RELATIVE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 79      Page 113      QST6. RELATIVE LIKEABILITY
+Table 79      Page 147      QST6. RELATIVE LIKEABILITY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 80      Page 114      QST6. RELATIVE LIKEABILITY
+Table 80      Page 148      QST6. RELATIVE LIKEABILITY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 81      Page 115      QST6. RELATIVE LIKEABILITY
+Table 81      Page 150      QST6. RELATIVE LIKEABILITY
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 82      Page 116      QST6. RELATIVE LIKEABILITY
+Table 82      Page 151      QST6. RELATIVE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 83      Page 117      QST6. RELATIVE LIKEABILITY
+Table 83      Page 153      QST6. RELATIVE LIKEABILITY
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 84      Page 118      QST6. RELATIVE LIKEABILITY
+Table 84      Page 154      QST6. RELATIVE LIKEABILITY
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -367,51 +367,51 @@ Table 84      Page 118      QST6. RELATIVE LIKEABILITY
 
 
 
-Table 85      Page 119      QST6. RELATIVE LIKEABILITY
+Table 85      Page 155      QST6. RELATIVE LIKEABILITY
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 86      Page 121      QST6. RELATIVE LIKEABILITY
+Table 86      Page 158      QST6. RELATIVE LIKEABILITY
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 87      Page 123      QST6. RELATIVE LIKEABILITY
+Table 87      Page 162      QST6. RELATIVE LIKEABILITY
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 88      Page 124      QST6. RELATIVE LIKEABILITY
+Table 88      Page 163      QST6. RELATIVE LIKEABILITY
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 89      Page 126      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 89      Page 166      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 91      Page 128      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 91      Page 168      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 93      Page 131      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 93      Page 171      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 95      Page 133      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 95      Page 173      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 97      Page 135      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 97      Page 176      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 99      Page 139      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 99      Page 183      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 101     Page 144      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 101     Page 191      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 103     Page 146      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 103     Page 194      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -419,51 +419,51 @@ Table 103     Page 146      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
 
 
 
-Table 105     Page 151      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 105     Page 201      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 107     Page 153      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 107     Page 203      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 109     Page 155      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 109     Page 205      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 111     Page 157      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 111     Page 207      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 113     Page 159      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 113     Page 209      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 115     Page 163      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 115     Page 215      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 117     Page 167      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 117     Page 221      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 119     Page 169      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 119     Page 223      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 121     Page 171      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 121     Page 227      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 123     Page 173      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 123     Page 229      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 125     Page 175      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 125     Page 232      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 127     Page 177      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 127     Page 234      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -471,51 +471,51 @@ Table 127     Page 177      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
 
 
 
-Table 129     Page 179      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 129     Page 236      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 131     Page 183      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 131     Page 243      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 133     Page 188      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 133     Page 251      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 135     Page 190      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
+Table 135     Page 253      QST8. PROMPTED COMMUNICATION - KEY MESSAGES
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 137     Page 194      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 137     Page 259      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 138     Page 195      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 138     Page 260      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 139     Page 196      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 139     Page 261      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 140     Page 197      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 140     Page 262      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 141     Page 198      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 141     Page 263      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 142     Page 200      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 142     Page 266      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 143     Page 202      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 143     Page 269      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 144     Page 203      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 144     Page 270      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -523,51 +523,51 @@ Table 144     Page 203      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
 
 
 
-Table 145     Page 205      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 145     Page 273      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 146     Page 206      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 146     Page 274      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 147     Page 207      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 147     Page 275      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 148     Page 208      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 148     Page 276      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 149     Page 209      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 149     Page 277      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 150     Page 211      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 150     Page 280      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 151     Page 213      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 151     Page 283      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 152     Page 214      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 152     Page 284      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 153     Page 215      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 153     Page 286      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 154     Page 216      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 154     Page 287      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 155     Page 217      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 155     Page 288      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 156     Page 218      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 156     Page 289      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -575,51 +575,51 @@ Table 156     Page 218      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
 
 
 
-Table 157     Page 219      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 157     Page 290      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 158     Page 221      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 158     Page 293      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 159     Page 223      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 159     Page 296      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 160     Page 224      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
+Table 160     Page 297      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 161     Page 226      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 161     Page 300      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 162     Page 227      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 162     Page 301      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 163     Page 228      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 163     Page 302      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 164     Page 229      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 164     Page 303      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 165     Page 230      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 165     Page 304      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 166     Page 232      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 166     Page 307      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 167     Page 234      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 167     Page 310      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 168     Page 235      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 168     Page 311      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -627,51 +627,51 @@ Table 168     Page 235      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
 
 
 
-Table 169     Page 237      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 169     Page 314      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 170     Page 238      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 170     Page 315      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 171     Page 239      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 171     Page 316      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 172     Page 240      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 172     Page 317      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 173     Page 241      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 173     Page 318      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 174     Page 243      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 174     Page 321      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 175     Page 245      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 175     Page 324      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 176     Page 246      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 176     Page 325      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 177     Page 247      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 177     Page 327      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 178     Page 248      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 178     Page 328      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 179     Page 249      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 179     Page 329      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 180     Page 250      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 180     Page 330      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -679,51 +679,51 @@ Table 180     Page 250      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
 
 
 
-Table 181     Page 251      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 181     Page 331      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 182     Page 253      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 182     Page 334      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 183     Page 255      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 183     Page 337      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 184     Page 256      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
+Table 184     Page 338      QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 185     Page 258      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 185     Page 341      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 191     Page 264      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 191     Page 348      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 197     Page 271      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 197     Page 356      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 203     Page 277      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 203     Page 362      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 209     Page 283      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 209     Page 369      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 215     Page 297      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 215     Page 391      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 221     Page 312      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 221     Page 414      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 227     Page 318      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 227     Page 422      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -731,51 +731,51 @@ Table 227     Page 318      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASI
 
 
 
-Table 233     Page 331      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 233     Page 443      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 239     Page 337      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 239     Page 449      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 245     Page 343      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 245     Page 455      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 251     Page 349      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 251     Page 461      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 257     Page 354      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 257     Page 467      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 263     Page 366      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 263     Page 485      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 269     Page 378      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 269     Page 503      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 275     Page 384      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 275     Page 509      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 281     Page 390      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 281     Page 521      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 287     Page 396      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 287     Page 528      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 293     Page 403      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 293     Page 536      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 299     Page 409      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 299     Page 542      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -783,51 +783,51 @@ Table 299     Page 409      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASI
 
 
 
-Table 305     Page 415      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 305     Page 548      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 311     Page 429      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 311     Page 568      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 317     Page 443      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 317     Page 589      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 323     Page 449      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
+Table 323     Page 596      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 329     Page 461      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 329     Page 615      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 330     Page 462      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 330     Page 616      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 331     Page 463      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 331     Page 617      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 332     Page 464      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 332     Page 618      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 333     Page 465      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 333     Page 619      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 334     Page 467      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 334     Page 622      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 335     Page 469      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 335     Page 625      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 336     Page 470      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 336     Page 626      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -835,51 +835,51 @@ Table 336     Page 470      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASI
 
 
 
-Table 337     Page 472      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 337     Page 629      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 338     Page 473      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 338     Page 630      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 339     Page 474      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 339     Page 631      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 340     Page 475      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 340     Page 632      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 341     Page 476      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 341     Page 633      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 342     Page 478      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 342     Page 636      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 343     Page 480      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 343     Page 639      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 344     Page 481      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 344     Page 640      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 345     Page 482      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 345     Page 642      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 346     Page 483      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 346     Page 643      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 347     Page 484      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 347     Page 644      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 348     Page 485      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 348     Page 645      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -887,51 +887,51 @@ Table 348     Page 485      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASI
 
 
 
-Table 349     Page 486      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 349     Page 646      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 350     Page 488      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 350     Page 649      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 351     Page 490      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 351     Page 652      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 352     Page 491      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
+Table 352     Page 653      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 353     Page 493      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 353     Page 656      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 354     Page 494      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 354     Page 657      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 355     Page 495      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 355     Page 658      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 356     Page 496      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 356     Page 659      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 357     Page 497      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 357     Page 660      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 358     Page 499      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 358     Page 663      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 359     Page 501      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 359     Page 666      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 360     Page 502      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 360     Page 667      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -939,51 +939,51 @@ Table 360     Page 502      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASI
 
 
 
-Table 361     Page 504      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 361     Page 670      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 362     Page 505      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 362     Page 671      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 363     Page 506      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 363     Page 672      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 364     Page 507      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 364     Page 673      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 365     Page 508      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 365     Page 674      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 366     Page 510      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 366     Page 677      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 367     Page 512      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 367     Page 680      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 368     Page 513      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 368     Page 681      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 369     Page 514      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 369     Page 683      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 370     Page 515      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 370     Page 684      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 371     Page 516      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 371     Page 685      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 372     Page 517      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 372     Page 686      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -991,51 +991,51 @@ Table 372     Page 517      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASI
 
 
 
-Table 373     Page 518      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 373     Page 687      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 374     Page 520      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 374     Page 690      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 375     Page 522      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 375     Page 693      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 376     Page 523      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
+Table 376     Page 694      QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 377     Page 525      QST10. PERSUASION SCALE
+Table 377     Page 697      QST10. PERSUASION SCALE
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 378     Page 526      QST10. PERSUASION SCALE
+Table 378     Page 698      QST10. PERSUASION SCALE
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 379     Page 528      QST10. PERSUASION SCALE
+Table 379     Page 700      QST10. PERSUASION SCALE
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 380     Page 529      QST10. PERSUASION SCALE
+Table 380     Page 701      QST10. PERSUASION SCALE
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 381     Page 530      QST10. PERSUASION SCALE
+Table 381     Page 702      QST10. PERSUASION SCALE
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 382     Page 532      QST10. PERSUASION SCALE
+Table 382     Page 707      QST10. PERSUASION SCALE
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 383     Page 534      QST10. PERSUASION SCALE
+Table 383     Page 711      QST10. PERSUASION SCALE
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 384     Page 535      QST10. PERSUASION SCALE
+Table 384     Page 712      QST10. PERSUASION SCALE
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1043,51 +1043,51 @@ Table 384     Page 535      QST10. PERSUASION SCALE
 
 
 
-Table 385     Page 537      QST10. PERSUASION SCALE
+Table 385     Page 715      QST10. PERSUASION SCALE
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 386     Page 538      QST10. PERSUASION SCALE
+Table 386     Page 716      QST10. PERSUASION SCALE
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 387     Page 539      QST10. PERSUASION SCALE
+Table 387     Page 717      QST10. PERSUASION SCALE
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 388     Page 540      QST10. PERSUASION SCALE
+Table 388     Page 718      QST10. PERSUASION SCALE
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 389     Page 541      QST10. PERSUASION SCALE
+Table 389     Page 719      QST10. PERSUASION SCALE
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 390     Page 543      QST10. PERSUASION SCALE
+Table 390     Page 722      QST10. PERSUASION SCALE
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 391     Page 545      QST10. PERSUASION SCALE
+Table 391     Page 725      QST10. PERSUASION SCALE
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 392     Page 546      QST10. PERSUASION SCALE
+Table 392     Page 726      QST10. PERSUASION SCALE
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 393     Page 547      QST10. PERSUASION SCALE
+Table 393     Page 728      QST10. PERSUASION SCALE
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 394     Page 548      QST10. PERSUASION SCALE
+Table 394     Page 729      QST10. PERSUASION SCALE
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 395     Page 549      QST10. PERSUASION SCALE
+Table 395     Page 731      QST10. PERSUASION SCALE
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 396     Page 550      QST10. PERSUASION SCALE
+Table 396     Page 732      QST10. PERSUASION SCALE
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1095,51 +1095,51 @@ Table 396     Page 550      QST10. PERSUASION SCALE
 
 
 
-Table 397     Page 551      QST10. PERSUASION SCALE
+Table 397     Page 733      QST10. PERSUASION SCALE
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 398     Page 553      QST10. PERSUASION SCALE
+Table 398     Page 736      QST10. PERSUASION SCALE
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 399     Page 555      QST10. PERSUASION SCALE
+Table 399     Page 740      QST10. PERSUASION SCALE
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 400     Page 556      QST10. PERSUASION SCALE
+Table 400     Page 741      QST10. PERSUASION SCALE
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 401     Page 558      QST11. ACTION AFTER AD
+Table 401     Page 744      QST11. ACTION AFTER AD
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 407     Page 561      QST11. ACTION AFTER AD
+Table 407     Page 747      QST11. ACTION AFTER AD
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 413     Page 565      QST11. ACTION AFTER AD
+Table 413     Page 751      QST11. ACTION AFTER AD
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 419     Page 568      QST11. ACTION AFTER AD
+Table 419     Page 754      QST11. ACTION AFTER AD
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 425     Page 571      QST11. ACTION AFTER AD
+Table 425     Page 757      QST11. ACTION AFTER AD
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 431     Page 577      QST11. ACTION AFTER AD
+Table 431     Page 768      QST11. ACTION AFTER AD
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 437     Page 584      QST11. ACTION AFTER AD
+Table 437     Page 778      QST11. ACTION AFTER AD
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 443     Page 587      QST11. ACTION AFTER AD
+Table 443     Page 782      QST11. ACTION AFTER AD
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1147,51 +1147,51 @@ Table 443     Page 587      QST11. ACTION AFTER AD
 
 
 
-Table 449     Page 594      QST11. ACTION AFTER AD
+Table 449     Page 792      QST11. ACTION AFTER AD
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 455     Page 597      QST11. ACTION AFTER AD
+Table 455     Page 795      QST11. ACTION AFTER AD
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 461     Page 600      QST11. ACTION AFTER AD
+Table 461     Page 798      QST11. ACTION AFTER AD
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 467     Page 603      QST11. ACTION AFTER AD
+Table 467     Page 801      QST11. ACTION AFTER AD
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 473     Page 606      QST11. ACTION AFTER AD
+Table 473     Page 804      QST11. ACTION AFTER AD
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 479     Page 612      QST11. ACTION AFTER AD
+Table 479     Page 813      QST11. ACTION AFTER AD
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 485     Page 618      QST11. ACTION AFTER AD
+Table 485     Page 822      QST11. ACTION AFTER AD
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 491     Page 621      QST11. ACTION AFTER AD
+Table 491     Page 825      QST11. ACTION AFTER AD
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 497     Page 624      QST11. ACTION AFTER AD
+Table 497     Page 831      QST11. ACTION AFTER AD
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 503     Page 627      QST11. ACTION AFTER AD
+Table 503     Page 834      QST11. ACTION AFTER AD
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 509     Page 631      QST11. ACTION AFTER AD
+Table 509     Page 838      QST11. ACTION AFTER AD
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 515     Page 634      QST11. ACTION AFTER AD
+Table 515     Page 841      QST11. ACTION AFTER AD
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1199,51 +1199,51 @@ Table 515     Page 634      QST11. ACTION AFTER AD
 
 
 
-Table 521     Page 637      QST11. ACTION AFTER AD
+Table 521     Page 844      QST11. ACTION AFTER AD
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 527     Page 643      QST11. ACTION AFTER AD
+Table 527     Page 854      QST11. ACTION AFTER AD
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 533     Page 650      QST11. ACTION AFTER AD
+Table 533     Page 864      QST11. ACTION AFTER AD
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 539     Page 653      QST11. ACTION AFTER AD
+Table 539     Page 868      QST11. ACTION AFTER AD
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 545     Page 659      QST11. ACTION AFTER AD - TB
+Table 545     Page 877      QST11. ACTION AFTER AD - TB
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 546     Page 660      QST11. ACTION AFTER AD - TB
+Table 546     Page 878      QST11. ACTION AFTER AD - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 547     Page 661      QST11. ACTION AFTER AD - TB
+Table 547     Page 879      QST11. ACTION AFTER AD - TB
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 548     Page 662      QST11. ACTION AFTER AD - TB
+Table 548     Page 880      QST11. ACTION AFTER AD - TB
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 549     Page 663      QST11. ACTION AFTER AD - TB
+Table 549     Page 881      QST11. ACTION AFTER AD - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 550     Page 665      QST11. ACTION AFTER AD - TB
+Table 550     Page 884      QST11. ACTION AFTER AD - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 551     Page 667      QST11. ACTION AFTER AD - TB
+Table 551     Page 887      QST11. ACTION AFTER AD - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 552     Page 668      QST11. ACTION AFTER AD - TB
+Table 552     Page 888      QST11. ACTION AFTER AD - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1251,51 +1251,51 @@ Table 552     Page 668      QST11. ACTION AFTER AD - TB
 
 
 
-Table 553     Page 670      QST11. ACTION AFTER AD - TB
+Table 553     Page 891      QST11. ACTION AFTER AD - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 554     Page 671      QST11. ACTION AFTER AD - TB
+Table 554     Page 892      QST11. ACTION AFTER AD - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 555     Page 672      QST11. ACTION AFTER AD - TB
+Table 555     Page 893      QST11. ACTION AFTER AD - TB
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 556     Page 673      QST11. ACTION AFTER AD - TB
+Table 556     Page 894      QST11. ACTION AFTER AD - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 557     Page 674      QST11. ACTION AFTER AD - TB
+Table 557     Page 895      QST11. ACTION AFTER AD - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 558     Page 676      QST11. ACTION AFTER AD - TB
+Table 558     Page 898      QST11. ACTION AFTER AD - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 559     Page 678      QST11. ACTION AFTER AD - TB
+Table 559     Page 901      QST11. ACTION AFTER AD - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 560     Page 679      QST11. ACTION AFTER AD - TB
+Table 560     Page 902      QST11. ACTION AFTER AD - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 561     Page 680      QST11. ACTION AFTER AD - TB
+Table 561     Page 904      QST11. ACTION AFTER AD - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 562     Page 681      QST11. ACTION AFTER AD - TB
+Table 562     Page 905      QST11. ACTION AFTER AD - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 563     Page 682      QST11. ACTION AFTER AD - TB
+Table 563     Page 906      QST11. ACTION AFTER AD - TB
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 564     Page 683      QST11. ACTION AFTER AD - TB
+Table 564     Page 907      QST11. ACTION AFTER AD - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1303,51 +1303,51 @@ Table 564     Page 683      QST11. ACTION AFTER AD - TB
 
 
 
-Table 565     Page 684      QST11. ACTION AFTER AD - TB
+Table 565     Page 908      QST11. ACTION AFTER AD - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 566     Page 686      QST11. ACTION AFTER AD - TB
+Table 566     Page 911      QST11. ACTION AFTER AD - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 567     Page 688      QST11. ACTION AFTER AD - TB
+Table 567     Page 914      QST11. ACTION AFTER AD - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 568     Page 689      QST11. ACTION AFTER AD - TB
+Table 568     Page 915      QST11. ACTION AFTER AD - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 569     Page 691      QST11. ACTION AFTER AD - T2B
+Table 569     Page 918      QST11. ACTION AFTER AD - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 570     Page 692      QST11. ACTION AFTER AD - T2B
+Table 570     Page 919      QST11. ACTION AFTER AD - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 571     Page 693      QST11. ACTION AFTER AD - T2B
+Table 571     Page 920      QST11. ACTION AFTER AD - T2B
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 572     Page 694      QST11. ACTION AFTER AD - T2B
+Table 572     Page 921      QST11. ACTION AFTER AD - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 573     Page 695      QST11. ACTION AFTER AD - T2B
+Table 573     Page 922      QST11. ACTION AFTER AD - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 574     Page 697      QST11. ACTION AFTER AD - T2B
+Table 574     Page 925      QST11. ACTION AFTER AD - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 575     Page 699      QST11. ACTION AFTER AD - T2B
+Table 575     Page 928      QST11. ACTION AFTER AD - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 576     Page 700      QST11. ACTION AFTER AD - T2B
+Table 576     Page 929      QST11. ACTION AFTER AD - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1355,51 +1355,51 @@ Table 576     Page 700      QST11. ACTION AFTER AD - T2B
 
 
 
-Table 577     Page 702      QST11. ACTION AFTER AD - T2B
+Table 577     Page 932      QST11. ACTION AFTER AD - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 578     Page 703      QST11. ACTION AFTER AD - T2B
+Table 578     Page 933      QST11. ACTION AFTER AD - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 579     Page 704      QST11. ACTION AFTER AD - T2B
+Table 579     Page 934      QST11. ACTION AFTER AD - T2B
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 580     Page 705      QST11. ACTION AFTER AD - T2B
+Table 580     Page 935      QST11. ACTION AFTER AD - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 581     Page 706      QST11. ACTION AFTER AD - T2B
+Table 581     Page 936      QST11. ACTION AFTER AD - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 582     Page 708      QST11. ACTION AFTER AD - T2B
+Table 582     Page 939      QST11. ACTION AFTER AD - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 583     Page 710      QST11. ACTION AFTER AD - T2B
+Table 583     Page 942      QST11. ACTION AFTER AD - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 584     Page 711      QST11. ACTION AFTER AD - T2B
+Table 584     Page 943      QST11. ACTION AFTER AD - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 585     Page 712      QST11. ACTION AFTER AD - T2B
+Table 585     Page 945      QST11. ACTION AFTER AD - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 586     Page 713      QST11. ACTION AFTER AD - T2B
+Table 586     Page 946      QST11. ACTION AFTER AD - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 587     Page 714      QST11. ACTION AFTER AD - T2B
+Table 587     Page 947      QST11. ACTION AFTER AD - T2B
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 588     Page 715      QST11. ACTION AFTER AD - T2B
+Table 588     Page 948      QST11. ACTION AFTER AD - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1407,51 +1407,51 @@ Table 588     Page 715      QST11. ACTION AFTER AD - T2B
 
 
 
-Table 589     Page 716      QST11. ACTION AFTER AD - T2B
+Table 589     Page 949      QST11. ACTION AFTER AD - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 590     Page 718      QST11. ACTION AFTER AD - T2B
+Table 590     Page 952      QST11. ACTION AFTER AD - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 591     Page 720      QST11. ACTION AFTER AD - T2B
+Table 591     Page 955      QST11. ACTION AFTER AD - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 592     Page 721      QST11. ACTION AFTER AD - T2B
+Table 592     Page 956      QST11. ACTION AFTER AD - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 593     Page 723      QST12. AD EVALUATION METRICS
+Table 593     Page 959      QST12. AD EVALUATION METRICS
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 601     Page 727      QST12. AD EVALUATION METRICS
+Table 601     Page 963      QST12. AD EVALUATION METRICS
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 609     Page 731      QST12. AD EVALUATION METRICS
+Table 609     Page 968      QST12. AD EVALUATION METRICS
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 617     Page 735      QST12. AD EVALUATION METRICS
+Table 617     Page 972      QST12. AD EVALUATION METRICS
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 625     Page 738      QST12. AD EVALUATION METRICS
+Table 625     Page 976      QST12. AD EVALUATION METRICS
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 633     Page 746      QST12. AD EVALUATION METRICS
+Table 633     Page 988      QST12. AD EVALUATION METRICS
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 641     Page 754      QST12. AD EVALUATION METRICS
+Table 641     Page 1000     QST12. AD EVALUATION METRICS
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 649     Page 758      QST12. AD EVALUATION METRICS
+Table 649     Page 1004     QST12. AD EVALUATION METRICS
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1459,51 +1459,51 @@ Table 649     Page 758      QST12. AD EVALUATION METRICS
 
 
 
-Table 657     Page 766      QST12. AD EVALUATION METRICS
+Table 657     Page 1016     QST12. AD EVALUATION METRICS
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 665     Page 770      QST12. AD EVALUATION METRICS
+Table 665     Page 1020     QST12. AD EVALUATION METRICS
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 673     Page 773      QST12. AD EVALUATION METRICS
+Table 673     Page 1023     QST12. AD EVALUATION METRICS
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 681     Page 777      QST12. AD EVALUATION METRICS
+Table 681     Page 1027     QST12. AD EVALUATION METRICS
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 689     Page 780      QST12. AD EVALUATION METRICS
+Table 689     Page 1030     QST12. AD EVALUATION METRICS
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 697     Page 788      QST12. AD EVALUATION METRICS
+Table 697     Page 1042     QST12. AD EVALUATION METRICS
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 705     Page 796      QST12. AD EVALUATION METRICS
+Table 705     Page 1054     QST12. AD EVALUATION METRICS
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 713     Page 800      QST12. AD EVALUATION METRICS
+Table 713     Page 1058     QST12. AD EVALUATION METRICS
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 721     Page 804      QST12. AD EVALUATION METRICS
+Table 721     Page 1066     QST12. AD EVALUATION METRICS
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 729     Page 808      QST12. AD EVALUATION METRICS
+Table 729     Page 1070     QST12. AD EVALUATION METRICS
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 737     Page 812      QST12. AD EVALUATION METRICS
+Table 737     Page 1075     QST12. AD EVALUATION METRICS
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 745     Page 816      QST12. AD EVALUATION METRICS
+Table 745     Page 1079     QST12. AD EVALUATION METRICS
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1511,51 +1511,51 @@ Table 745     Page 816      QST12. AD EVALUATION METRICS
 
 
 
-Table 753     Page 819      QST12. AD EVALUATION METRICS
+Table 753     Page 1083     QST12. AD EVALUATION METRICS
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 761     Page 827      QST12. AD EVALUATION METRICS
+Table 761     Page 1095     QST12. AD EVALUATION METRICS
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 769     Page 835      QST12. AD EVALUATION METRICS
+Table 769     Page 1107     QST12. AD EVALUATION METRICS
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 777     Page 839      QST12. AD EVALUATION METRICS
+Table 777     Page 1111     QST12. AD EVALUATION METRICS
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 785     Page 847      QST12. AD EVALUATION METRICS - TB
+Table 785     Page 1123     QST12. AD EVALUATION METRICS - TB
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 786     Page 848      QST12. AD EVALUATION METRICS - TB
+Table 786     Page 1124     QST12. AD EVALUATION METRICS - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 787     Page 849      QST12. AD EVALUATION METRICS - TB
+Table 787     Page 1126     QST12. AD EVALUATION METRICS - TB
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 788     Page 850      QST12. AD EVALUATION METRICS - TB
+Table 788     Page 1127     QST12. AD EVALUATION METRICS - TB
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 789     Page 851      QST12. AD EVALUATION METRICS - TB
+Table 789     Page 1128     QST12. AD EVALUATION METRICS - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 790     Page 853      QST12. AD EVALUATION METRICS - TB
+Table 790     Page 1131     QST12. AD EVALUATION METRICS - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 791     Page 856      QST12. AD EVALUATION METRICS - TB
+Table 791     Page 1135     QST12. AD EVALUATION METRICS - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 792     Page 857      QST12. AD EVALUATION METRICS - TB
+Table 792     Page 1136     QST12. AD EVALUATION METRICS - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1563,51 +1563,51 @@ Table 792     Page 857      QST12. AD EVALUATION METRICS - TB
 
 
 
-Table 793     Page 859      QST12. AD EVALUATION METRICS - TB
+Table 793     Page 1139     QST12. AD EVALUATION METRICS - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 794     Page 860      QST12. AD EVALUATION METRICS - TB
+Table 794     Page 1140     QST12. AD EVALUATION METRICS - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 795     Page 861      QST12. AD EVALUATION METRICS - TB
+Table 795     Page 1141     QST12. AD EVALUATION METRICS - TB
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 796     Page 862      QST12. AD EVALUATION METRICS - TB
+Table 796     Page 1142     QST12. AD EVALUATION METRICS - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 797     Page 863      QST12. AD EVALUATION METRICS - TB
+Table 797     Page 1143     QST12. AD EVALUATION METRICS - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 798     Page 865      QST12. AD EVALUATION METRICS - TB
+Table 798     Page 1146     QST12. AD EVALUATION METRICS - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 799     Page 867      QST12. AD EVALUATION METRICS - TB
+Table 799     Page 1149     QST12. AD EVALUATION METRICS - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 800     Page 868      QST12. AD EVALUATION METRICS - TB
+Table 800     Page 1150     QST12. AD EVALUATION METRICS - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 801     Page 869      QST12. AD EVALUATION METRICS - TB
+Table 801     Page 1152     QST12. AD EVALUATION METRICS - TB
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 802     Page 870      QST12. AD EVALUATION METRICS - TB
+Table 802     Page 1153     QST12. AD EVALUATION METRICS - TB
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 803     Page 872      QST12. AD EVALUATION METRICS - TB
+Table 803     Page 1155     QST12. AD EVALUATION METRICS - TB
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 804     Page 873      QST12. AD EVALUATION METRICS - TB
+Table 804     Page 1156     QST12. AD EVALUATION METRICS - TB
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1615,51 +1615,51 @@ Table 804     Page 873      QST12. AD EVALUATION METRICS - TB
 
 
 
-Table 805     Page 874      QST12. AD EVALUATION METRICS - TB
+Table 805     Page 1157     QST12. AD EVALUATION METRICS - TB
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 806     Page 876      QST12. AD EVALUATION METRICS - TB
+Table 806     Page 1160     QST12. AD EVALUATION METRICS - TB
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 807     Page 879      QST12. AD EVALUATION METRICS - TB
+Table 807     Page 1164     QST12. AD EVALUATION METRICS - TB
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 808     Page 880      QST12. AD EVALUATION METRICS - TB
+Table 808     Page 1165     QST12. AD EVALUATION METRICS - TB
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 809     Page 882      QST12. AD EVALUATION METRICS - T2B
+Table 809     Page 1168     QST12. AD EVALUATION METRICS - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: All respondents
 
-Table 810     Page 883      QST12. AD EVALUATION METRICS - T2B
+Table 810     Page 1169     QST12. AD EVALUATION METRICS - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: All respondents
 
-Table 811     Page 884      QST12. AD EVALUATION METRICS - T2B
+Table 811     Page 1171     QST12. AD EVALUATION METRICS - T2B
                             by HEADER C. USERSHIP
                             Base: All respondents
 
-Table 812     Page 885      QST12. AD EVALUATION METRICS - T2B
+Table 812     Page 1172     QST12. AD EVALUATION METRICS - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: All respondents
 
-Table 813     Page 886      QST12. AD EVALUATION METRICS - T2B
+Table 813     Page 1173     QST12. AD EVALUATION METRICS - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 814     Page 888      QST12. AD EVALUATION METRICS - T2B
+Table 814     Page 1176     QST12. AD EVALUATION METRICS - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 815     Page 890      QST12. AD EVALUATION METRICS - T2B
+Table 815     Page 1179     QST12. AD EVALUATION METRICS - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
-Table 816     Page 891      QST12. AD EVALUATION METRICS - T2B
+Table 816     Page 1180     QST12. AD EVALUATION METRICS - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: All respondents
 
@@ -1667,51 +1667,51 @@ Table 816     Page 891      QST12. AD EVALUATION METRICS - T2B
 
 
 
-Table 817     Page 893      QST12. AD EVALUATION METRICS - T2B
+Table 817     Page 1183     QST12. AD EVALUATION METRICS - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among aware of ad
 
-Table 818     Page 894      QST12. AD EVALUATION METRICS - T2B
+Table 818     Page 1184     QST12. AD EVALUATION METRICS - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among aware of ad
 
-Table 819     Page 895      QST12. AD EVALUATION METRICS - T2B
+Table 819     Page 1185     QST12. AD EVALUATION METRICS - T2B
                             by HEADER C. USERSHIP
                             Base: Among aware of ad
 
-Table 820     Page 896      QST12. AD EVALUATION METRICS - T2B
+Table 820     Page 1186     QST12. AD EVALUATION METRICS - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among aware of ad
 
-Table 821     Page 897      QST12. AD EVALUATION METRICS - T2B
+Table 821     Page 1187     QST12. AD EVALUATION METRICS - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 822     Page 899      QST12. AD EVALUATION METRICS - T2B
+Table 822     Page 1190     QST12. AD EVALUATION METRICS - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 823     Page 901      QST12. AD EVALUATION METRICS - T2B
+Table 823     Page 1193     QST12. AD EVALUATION METRICS - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 824     Page 902      QST12. AD EVALUATION METRICS - T2B
+Table 824     Page 1194     QST12. AD EVALUATION METRICS - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among aware of ad
 
-Table 825     Page 903      QST12. AD EVALUATION METRICS - T2B
+Table 825     Page 1196     QST12. AD EVALUATION METRICS - T2B
                             by HEADER A. GENERAL PROFILE
                             Base: Among not aware of ad
 
-Table 826     Page 904      QST12. AD EVALUATION METRICS - T2B
+Table 826     Page 1197     QST12. AD EVALUATION METRICS - T2B
                             by HEADER B. LOCALE AND MACROREGION
                             Base: Among not aware of ad
 
-Table 827     Page 905      QST12. AD EVALUATION METRICS - T2B
+Table 827     Page 1199     QST12. AD EVALUATION METRICS - T2B
                             by HEADER C. USERSHIP
                             Base: Among not aware of ad
 
-Table 828     Page 906      QST12. AD EVALUATION METRICS - T2B
+Table 828     Page 1200     QST12. AD EVALUATION METRICS - T2B
                             by HEADER D. MACROREGION X SEC
                             Base: Among not aware of ad
 
@@ -1719,18 +1719,18 @@ Table 828     Page 906      QST12. AD EVALUATION METRICS - T2B
 
 
 
-Table 829     Page 907      QST12. AD EVALUATION METRICS - T2B
+Table 829     Page 1201     QST12. AD EVALUATION METRICS - T2B
                             by HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 830     Page 909      QST12. AD EVALUATION METRICS - T2B
+Table 830     Page 1204     QST12. AD EVALUATION METRICS - T2B
                             by HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 831     Page 911      QST12. AD EVALUATION METRICS - T2B
+Table 831     Page 1207     QST12. AD EVALUATION METRICS - T2B
                             by HEADER C. USERSHIP - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad
 
-Table 832     Page 912      QST12. AD EVALUATION METRICS - T2B
+Table 832     Page 1208     QST12. AD EVALUATION METRICS - T2B
                             by HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS
                             Base: Among not aware of ad

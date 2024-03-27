@@ -1,7 +1,7 @@
 START CONTROL,
 *PROJECT WALLE (DECEMBER 2, 2022)
 
-C = JAN2024v3.ASC;FEB2024v3.ASC,
+C = JAN2024v3.ASC;FEB2024v3.ASC;MAR2024.ASC,
 Y,
 OLDNAMES,
 CSV2R,
@@ -22,7 +22,7 @@ DI $RESP = $1-10,
 [*INSERT ADDITIONAL_COLUMNS]
 [*INSERT WALL_E_STUBS_CATEGORY]
 [*INSERT W_HEADER]
-[*INSERT W_WTS]
+!INSERT W_WTS
 
 
 !!!!!!!!!!!!!!!!
@@ -31,18 +31,24 @@ DM $HAPxH3 =
 T,
 $Feb24toMar01/NB,
 $Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
 
 
 [*DO A = 1:12]
 T,
 $HAv/[A].$Feb24toMar01/NB,
 $HAv/[A].$Mar02toMar08/NB,
+$HAv/[A].$Mar09toMar15/NB,
+$HAv/[A].$Mar16toMar22/NB,
 [*END A]
 HT = "HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS",
 H  = "
 TOTAL*(a);
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -51,6 +57,8 @@ MALE***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -58,6 +66,8 @@ FEMALE***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -66,6 +76,8 @@ Students (20 yo and below)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -73,6 +85,8 @@ Yuppies (21-30 yo)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -80,6 +94,8 @@ Transitioners (31-35 yo)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -87,6 +103,8 @@ Balancers (36-45 yo)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -94,6 +112,8 @@ Older Adults/Retirees (46-65 yo)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -103,6 +123,8 @@ AB***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -110,6 +132,8 @@ C1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -117,6 +141,8 @@ ABC1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -124,13 +150,17 @@ C2***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
 D***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
-Mar02 to Mar08 *(c)
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
 ",
 
 
@@ -138,18 +168,24 @@ DM $HBPxH3 =
 T,
 $Feb24toMar01/NB,
 $Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
 
 
 [*DO A = 1:15]
 T,
 $HBv/[A].$Feb24toMar01/NB,
 $HBv/[A].$Mar02toMar08/NB,
+$HBv/[A].$Mar09toMar15/NB,
+$HBv/[A].$Mar16toMar22/NB,
 [*END A]
 HT = "HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS",
 H  = "
 TOTAL*(a);
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -158,6 +194,8 @@ URBAN (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -166,6 +204,8 @@ RURAL (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -175,6 +215,8 @@ NCR (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -185,6 +227,8 @@ NCL (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -193,6 +237,8 @@ NCL Urban***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -201,6 +247,8 @@ NCL Rural***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -211,6 +259,8 @@ SL (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -219,6 +269,8 @@ SL Urban***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -227,6 +279,8 @@ SL Rural***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -237,6 +291,8 @@ Visayas (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -245,6 +301,8 @@ Visayas Urban***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -253,6 +311,8 @@ Visayas Rural***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -263,6 +323,8 @@ Mindanao (NET)***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -271,6 +333,8 @@ Mindanao Urban***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -278,7 +342,9 @@ Mar02 to Mar08 *(c);
 Mindanao Rural***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
-Mar02 to Mar08 *(c)
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
 ",
 
 
@@ -286,6 +352,8 @@ DM $HCPxH3 =
 T,
 $Feb24toMar01/NB,
 $Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
 
 
 
@@ -293,6 +361,8 @@ $Mar02toMar08/NB,
 T,
 $HCv/[A].$Feb24toMar01/NB,
 $HCv/[A].$Mar02toMar08/NB,
+$HCv/[A].$Mar09toMar15/NB,
+$HCv/[A].$Mar16toMar22/NB,
 [*END A]
 
 HT = "HEADER C. USERSHIP - 1 WEEK PERIOD CUTS",
@@ -300,6 +370,8 @@ H  = "
 TOTAL*(a);
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 USERSHIP****
@@ -307,12 +379,16 @@ NON-USERS***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 USERS***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -321,12 +397,16 @@ GCASH NON-USERS***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 GCASH USERS***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
-Mar02 to Mar08 *(c)
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
 ",
 
 
@@ -334,12 +414,16 @@ DM $HDPxH3 =
 T,
 $Feb24toMar01/NB,
 $Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
 
 
 [*DO A = 1:15]
 T,
 $HDv/[A].$Feb24toMar01/NB,
 $HDv/[A].$Mar02toMar08/NB,
+$HDv/[A].$Mar09toMar15/NB,
+$HDv/[A].$Mar16toMar22/NB,
 [*END A]
 
 HT = "HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS",
@@ -347,6 +431,8 @@ H  = "
 TOTAL*(a);
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -355,6 +441,8 @@ ABC1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -362,6 +450,8 @@ C2***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -369,6 +459,8 @@ D***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -378,6 +470,8 @@ ABC1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -385,6 +479,8 @@ C2***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -392,6 +488,8 @@ D***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -401,6 +499,8 @@ ABC1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -408,6 +508,8 @@ C2***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -415,6 +517,8 @@ D***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -424,6 +528,8 @@ ABC1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -431,6 +537,8 @@ C2***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -438,6 +546,8 @@ D***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -447,6 +557,8 @@ ABC1***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
@@ -454,13 +566,17 @@ C2***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
 Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
 
 
 
 D***
 TOTAL*(a)<S>;
 Feb24 to Mar01 *(b);
-Mar02 to Mar08 *(c)
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
 ",
 
 
@@ -974,11 +1090,9 @@ DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
 
-[*DO A = 1:6]  
-!IF $GsavexHeartsResp/NB, CK $T_QST11_[A]/NB,
-[*END A]
-!
-IF ($GsavexHeartsResp/NB), WRITE,
+!IF $GsavexHeartsResp/NB, CK $QST1/NB,
+
+IF ($GsavexHeartsResp/NB).($QST1/NB), WRITE,
 
 FINISH DATA,
 START TABLES,

@@ -1,6 +1,6 @@
 START CONTROL,
 *PROJECT WALL-E
-C = FEB2024v3.asc,
+C = JAN2024v3.asc;FEB2024v3.asc,
 
 Y,
 CEP,
@@ -256,7 +256,7 @@ CliQQ;
 BDO Mobile;
 BPI Mobile]
 
-[*doA=1:25]
+[*doA=1:28]
 DM $RAWASSOC[A] = $T_Q64_[Q63CODES.A]/5,
 		$T_Q64_[Q63CODES.A]/7,
 		$T_Q64_[Q63CODES.A]/9,
@@ -318,12 +318,12 @@ MISSING<Z><S>",
 [*DO E = 1:[RAWREGION.#]:1]
 [*DO F = 1:[RAWUSERSHIP.#]:1]
 DM $TRAWASSOC[A][&C][&D][&E][&F] =
-[*doG=1:25]
+[*doG=1:28]
 $RAWASSOC[G]/[A],
 [*END G]
 R,
 X = "
-[*doG=1:25]
+[*doG=1:28]
 AWARE%[Q63.G]%[brandDashboard.A]%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWUSERSHIP.F];
 [*END G]
 MISSING<Z><S>",
@@ -339,12 +339,12 @@ MISSING<Z><S>",
 [*DO E = 1:[RAWREGION.#]:1]
 [*DO F = 1:[RAWUSERSHIP.#]:1]
 DM $TRAWASSOp[A][&C][&D][&E][&F] =
-[*doG=1:25]
+[*doG=1:28]
 $RAWASSOC[G]/[A],
 [*END G]
 R,
 X = "
-[*doG=1:25]
+[*doG=1:28]
 P2M%[Q63.G]%[brandDashboard.A]%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWUSERSHIP.F];
 [*END G]
 MISSING<Z><S>",
@@ -355,7 +355,7 @@ MISSING<Z><S>",
 [*END A]
 
 
-IF $FEB2024/NB, WRITE,
+IF $JAN2024/NB+$FEB2024/NB, WRITE,
 FINISH DATA,
 START TABLES,
 

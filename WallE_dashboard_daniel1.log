@@ -1,5 +1,5 @@
   
-= ----- 15/03/2024 10:33:09 am
+= ----- 20/03/2024 13:22:54 pm
 = MRDCL 32 version 23.1b Startup
 = C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\WallE_dashboard_daniel1.stp
 = Copyright 1990 - 2023 MRDC Software Ltd, Kent, England
@@ -8,10 +8,11 @@
   BIG
   OLDNAMES
   TIDY
+  C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024V3.ASC
   C(A)=C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
 = MRDCL 32 version 23.1b startup completed
   
-= ----- 15/03/2024 10:33:09 am
+= ----- 20/03/2024 13:22:54 pm
 = MRDCL 32 compilation phase startup
   Starting compilation
 = Stage 1 (data)
@@ -21,372 +22,144 @@
 = Stage 3 (manip)
 = MRDCL 32 compilation phase completed
   
-= ----- 15/03/2024 10:33:30 am
+= ----- 20/03/2024 13:23:29 pm
 = MRDCL 32 execution phase startup
 = Stage 1 (data)
   Now opening file (A) number 1
+  C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\JAN2024V3.ASC
+   825 lines read from JAN2024V3.ASC
+  Now opening file (A) number 2
   C:\Users\pada2001\Desktop\Projects\2024\Wall E\Q1 2024\WallE-Q1-2024\FEB2024V3.ASC
    867 lines read from FEB2024V3.ASC
-=  Data lines read 867
-=  Records 867
-  Number of times reached finish data 867
+=  Data lines read 1692
+=  Records 1692
+  Number of times reached finish data 1692
   Write commands rejected 0
-  Write commands accepted 600
-  IDF records 600
+  Write commands accepted 1200
+  IDF records 1200
   No list summary, no lists executed
 = Stage 2 (tables)
-  Records to be read 600
-  Passes needed 2
+  Records to be read 1200
+  Passes needed 4
 = Stage 3 (manip)
 = MRDCL 32 execution phase completed
   
-= ----- 15/03/2024 10:34:36 am
+= ----- 20/03/2024 13:26:04 pm
 = MRDCL 32 print phase startup
-  Table #59 suppressed under BTS
-  Table #126 suppressed under BTS
-  Table #139 suppressed under BTS
   Table #140 suppressed under BTS
-  Table #141 suppressed under BTS
-  Table #144 suppressed under BTS
   Table #153 suppressed under BTS
   Table #159 suppressed under BTS
-  Table #160 suppressed under BTS
-  Table #161 suppressed under BTS
-  Table #162 suppressed under BTS
   Table #166 suppressed under BTS
   Table #167 suppressed under BTS
   Table #168 suppressed under BTS
-  Table #169 suppressed under BTS
-  Table #170 suppressed under BTS
-  Table #171 suppressed under BTS
-  Table #173 suppressed under BTS
   Table #180 suppressed under BTS
   Table #192 suppressed under BTS
-  Table #198 suppressed under BTS
-  Table #216 suppressed under BTS
-  Table #258 suppressed under BTS
-  Table #275 suppressed under BTS
-  Table #294 suppressed under BTS
   Table #297 suppressed under BTS
-  Table #300 suppressed under BTS
-  Table #383 suppressed under BTS
-  Table #491 suppressed under BTS
-  Table #558 suppressed under BTS
-  Table #571 suppressed under BTS
   Table #572 suppressed under BTS
-  Table #573 suppressed under BTS
-  Table #576 suppressed under BTS
   Table #585 suppressed under BTS
   Table #591 suppressed under BTS
-  Table #592 suppressed under BTS
-  Table #593 suppressed under BTS
-  Table #594 suppressed under BTS
   Table #598 suppressed under BTS
   Table #599 suppressed under BTS
   Table #600 suppressed under BTS
-  Table #601 suppressed under BTS
-  Table #602 suppressed under BTS
-  Table #603 suppressed under BTS
-  Table #605 suppressed under BTS
   Table #612 suppressed under BTS
   Table #624 suppressed under BTS
-  Table #630 suppressed under BTS
-  Table #648 suppressed under BTS
-  Table #690 suppressed under BTS
-  Table #707 suppressed under BTS
-  Table #726 suppressed under BTS
   Table #729 suppressed under BTS
-  Table #732 suppressed under BTS
-  Table #815 suppressed under BTS
-  Table #923 suppressed under BTS
-  Table #990 suppressed under BTS
-  Table #1003 suppressed under BTS
   Table #1004 suppressed under BTS
-  Table #1005 suppressed under BTS
-  Table #1008 suppressed under BTS
   Table #1017 suppressed under BTS
   Table #1023 suppressed under BTS
-  Table #1024 suppressed under BTS
-  Table #1025 suppressed under BTS
-  Table #1026 suppressed under BTS
   Table #1030 suppressed under BTS
   Table #1031 suppressed under BTS
   Table #1032 suppressed under BTS
-  Table #1033 suppressed under BTS
-  Table #1034 suppressed under BTS
-  Table #1035 suppressed under BTS
-  Table #1037 suppressed under BTS
   Table #1044 suppressed under BTS
   Table #1056 suppressed under BTS
-  Table #1062 suppressed under BTS
-  Table #1080 suppressed under BTS
-  Table #1122 suppressed under BTS
-  Table #1139 suppressed under BTS
-  Table #1158 suppressed under BTS
   Table #1161 suppressed under BTS
-  Table #1164 suppressed under BTS
-  Table #1247 suppressed under BTS
-  Table #1355 suppressed under BTS
-  Table #1422 suppressed under BTS
-  Table #1435 suppressed under BTS
   Table #1436 suppressed under BTS
-  Table #1437 suppressed under BTS
-  Table #1440 suppressed under BTS
   Table #1449 suppressed under BTS
   Table #1455 suppressed under BTS
-  Table #1456 suppressed under BTS
-  Table #1457 suppressed under BTS
-  Table #1458 suppressed under BTS
   Table #1462 suppressed under BTS
   Table #1463 suppressed under BTS
   Table #1464 suppressed under BTS
-  Table #1465 suppressed under BTS
-  Table #1466 suppressed under BTS
-  Table #1467 suppressed under BTS
-  Table #1469 suppressed under BTS
   Table #1476 suppressed under BTS
   Table #1488 suppressed under BTS
-  Table #1494 suppressed under BTS
-  Table #1512 suppressed under BTS
-  Table #1554 suppressed under BTS
-  Table #1571 suppressed under BTS
-  Table #1590 suppressed under BTS
   Table #1593 suppressed under BTS
-  Table #1596 suppressed under BTS
-  Table #1679 suppressed under BTS
-  Table #1787 suppressed under BTS
-  Table #1854 suppressed under BTS
-  Table #1867 suppressed under BTS
   Table #1868 suppressed under BTS
-  Table #1869 suppressed under BTS
-  Table #1872 suppressed under BTS
   Table #1881 suppressed under BTS
   Table #1887 suppressed under BTS
-  Table #1888 suppressed under BTS
-  Table #1889 suppressed under BTS
-  Table #1890 suppressed under BTS
   Table #1894 suppressed under BTS
   Table #1895 suppressed under BTS
   Table #1896 suppressed under BTS
-  Table #1897 suppressed under BTS
-  Table #1898 suppressed under BTS
-  Table #1899 suppressed under BTS
-  Table #1901 suppressed under BTS
   Table #1908 suppressed under BTS
   Table #1920 suppressed under BTS
-  Table #1926 suppressed under BTS
-  Table #1944 suppressed under BTS
-  Table #1986 suppressed under BTS
-  Table #2003 suppressed under BTS
-  Table #2022 suppressed under BTS
   Table #2025 suppressed under BTS
-  Table #2028 suppressed under BTS
-  Table #2111 suppressed under BTS
-  Table #2219 suppressed under BTS
-  Table #2286 suppressed under BTS
-  Table #2299 suppressed under BTS
   Table #2300 suppressed under BTS
-  Table #2301 suppressed under BTS
-  Table #2304 suppressed under BTS
   Table #2313 suppressed under BTS
   Table #2319 suppressed under BTS
-  Table #2320 suppressed under BTS
-  Table #2321 suppressed under BTS
-  Table #2322 suppressed under BTS
   Table #2326 suppressed under BTS
   Table #2327 suppressed under BTS
   Table #2328 suppressed under BTS
-  Table #2329 suppressed under BTS
-  Table #2330 suppressed under BTS
-  Table #2331 suppressed under BTS
-  Table #2333 suppressed under BTS
   Table #2340 suppressed under BTS
   Table #2352 suppressed under BTS
-  Table #2358 suppressed under BTS
-  Table #2376 suppressed under BTS
-  Table #2418 suppressed under BTS
-  Table #2435 suppressed under BTS
-  Table #2454 suppressed under BTS
   Table #2457 suppressed under BTS
-  Table #2460 suppressed under BTS
-  Table #2543 suppressed under BTS
-  Table #2651 suppressed under BTS
-  Table #2718 suppressed under BTS
-  Table #2731 suppressed under BTS
   Table #2732 suppressed under BTS
-  Table #2733 suppressed under BTS
-  Table #2736 suppressed under BTS
   Table #2745 suppressed under BTS
   Table #2751 suppressed under BTS
-  Table #2752 suppressed under BTS
-  Table #2753 suppressed under BTS
-  Table #2754 suppressed under BTS
   Table #2758 suppressed under BTS
   Table #2759 suppressed under BTS
   Table #2760 suppressed under BTS
-  Table #2761 suppressed under BTS
-  Table #2762 suppressed under BTS
-  Table #2763 suppressed under BTS
-  Table #2765 suppressed under BTS
   Table #2772 suppressed under BTS
   Table #2784 suppressed under BTS
-  Table #2790 suppressed under BTS
-  Table #2808 suppressed under BTS
-  Table #2850 suppressed under BTS
-  Table #2867 suppressed under BTS
-  Table #2886 suppressed under BTS
   Table #2889 suppressed under BTS
-  Table #2892 suppressed under BTS
-  Table #2975 suppressed under BTS
-  Table #3083 suppressed under BTS
-  Table #3150 suppressed under BTS
-  Table #3163 suppressed under BTS
   Table #3164 suppressed under BTS
-  Table #3165 suppressed under BTS
-  Table #3168 suppressed under BTS
   Table #3177 suppressed under BTS
   Table #3183 suppressed under BTS
-  Table #3184 suppressed under BTS
-  Table #3185 suppressed under BTS
-  Table #3186 suppressed under BTS
   Table #3190 suppressed under BTS
   Table #3191 suppressed under BTS
   Table #3192 suppressed under BTS
-  Table #3193 suppressed under BTS
-  Table #3194 suppressed under BTS
-  Table #3195 suppressed under BTS
-  Table #3197 suppressed under BTS
   Table #3204 suppressed under BTS
   Table #3216 suppressed under BTS
-  Table #3222 suppressed under BTS
-  Table #3240 suppressed under BTS
-  Table #3282 suppressed under BTS
-  Table #3299 suppressed under BTS
-  Table #3318 suppressed under BTS
   Table #3321 suppressed under BTS
-  Table #3324 suppressed under BTS
-  Table #3407 suppressed under BTS
-  Table #3515 suppressed under BTS
-  Table #3582 suppressed under BTS
-  Table #3595 suppressed under BTS
   Table #3596 suppressed under BTS
-  Table #3597 suppressed under BTS
-  Table #3600 suppressed under BTS
   Table #3609 suppressed under BTS
   Table #3615 suppressed under BTS
-  Table #3616 suppressed under BTS
-  Table #3617 suppressed under BTS
-  Table #3618 suppressed under BTS
   Table #3622 suppressed under BTS
   Table #3623 suppressed under BTS
   Table #3624 suppressed under BTS
-  Table #3625 suppressed under BTS
-  Table #3626 suppressed under BTS
-  Table #3627 suppressed under BTS
-  Table #3629 suppressed under BTS
   Table #3636 suppressed under BTS
   Table #3648 suppressed under BTS
-  Table #3654 suppressed under BTS
-  Table #3672 suppressed under BTS
-  Table #3714 suppressed under BTS
-  Table #3731 suppressed under BTS
-  Table #3750 suppressed under BTS
   Table #3753 suppressed under BTS
-  Table #3756 suppressed under BTS
-  Table #3839 suppressed under BTS
-  Table #3947 suppressed under BTS
-  Table #4014 suppressed under BTS
-  Table #4027 suppressed under BTS
   Table #4028 suppressed under BTS
-  Table #4029 suppressed under BTS
-  Table #4032 suppressed under BTS
   Table #4041 suppressed under BTS
   Table #4047 suppressed under BTS
-  Table #4048 suppressed under BTS
-  Table #4049 suppressed under BTS
-  Table #4050 suppressed under BTS
   Table #4054 suppressed under BTS
   Table #4055 suppressed under BTS
   Table #4056 suppressed under BTS
-  Table #4057 suppressed under BTS
-  Table #4058 suppressed under BTS
-  Table #4059 suppressed under BTS
-  Table #4061 suppressed under BTS
   Table #4068 suppressed under BTS
   Table #4080 suppressed under BTS
-  Table #4086 suppressed under BTS
-  Table #4104 suppressed under BTS
-  Table #4146 suppressed under BTS
-  Table #4163 suppressed under BTS
-  Table #4182 suppressed under BTS
   Table #4185 suppressed under BTS
-  Table #4188 suppressed under BTS
-  Table #4271 suppressed under BTS
-  Table #4379 suppressed under BTS
-  Table #4446 suppressed under BTS
-  Table #4459 suppressed under BTS
   Table #4460 suppressed under BTS
-  Table #4461 suppressed under BTS
-  Table #4464 suppressed under BTS
   Table #4473 suppressed under BTS
   Table #4479 suppressed under BTS
-  Table #4480 suppressed under BTS
-  Table #4481 suppressed under BTS
-  Table #4482 suppressed under BTS
   Table #4486 suppressed under BTS
   Table #4487 suppressed under BTS
   Table #4488 suppressed under BTS
-  Table #4489 suppressed under BTS
-  Table #4490 suppressed under BTS
-  Table #4491 suppressed under BTS
-  Table #4493 suppressed under BTS
   Table #4500 suppressed under BTS
   Table #4512 suppressed under BTS
-  Table #4518 suppressed under BTS
-  Table #4536 suppressed under BTS
-  Table #4578 suppressed under BTS
-  Table #4595 suppressed under BTS
-  Table #4614 suppressed under BTS
   Table #4617 suppressed under BTS
-  Table #4620 suppressed under BTS
-  Table #4703 suppressed under BTS
-  Table #4811 suppressed under BTS
-  Table #4878 suppressed under BTS
-  Table #4891 suppressed under BTS
   Table #4892 suppressed under BTS
-  Table #4893 suppressed under BTS
-  Table #4896 suppressed under BTS
   Table #4905 suppressed under BTS
   Table #4911 suppressed under BTS
-  Table #4912 suppressed under BTS
-  Table #4913 suppressed under BTS
-  Table #4914 suppressed under BTS
   Table #4918 suppressed under BTS
   Table #4919 suppressed under BTS
   Table #4920 suppressed under BTS
-  Table #4921 suppressed under BTS
-  Table #4922 suppressed under BTS
-  Table #4923 suppressed under BTS
-  Table #4925 suppressed under BTS
   Table #4932 suppressed under BTS
   Table #4944 suppressed under BTS
-  Table #4950 suppressed under BTS
-  Table #4968 suppressed under BTS
-  Table #5010 suppressed under BTS
-  Table #5027 suppressed under BTS
-  Table #5046 suppressed under BTS
   Table #5049 suppressed under BTS
-  Table #5052 suppressed under BTS
-  Table #5135 suppressed under BTS
   Table #1ABBC suppressed under BTS
   Table #1ABCC suppressed under BTS
   Table #1ABDC suppressed under BTS
   Table #1ACEC suppressed under BTS
   Table #1ACFC suppressed under BTS
-  Table #1ADBA suppressed under BTS
-  Table #1ADBB suppressed under BTS
   Table #1ADBC suppressed under BTS
-  Table #1ADDC suppressed under BTS
   Table #1ADFC suppressed under BTS
   Table #1AEBC suppressed under BTS
   Table #1AFCC suppressed under BTS
@@ -405,18 +178,12 @@
   Table #1BCCC suppressed under BTS
   Table #1BCDC suppressed under BTS
   Table #1BCEC suppressed under BTS
-  Table #1BCFA suppressed under BTS
-  Table #1BCFB suppressed under BTS
   Table #1BCFC suppressed under BTS
   Table #1BDAC suppressed under BTS
   Table #1BDBA suppressed under BTS
   Table #1BDBB suppressed under BTS
   Table #1BDBC suppressed under BTS
-  Table #1BDCA suppressed under BTS
-  Table #1BDCB suppressed under BTS
   Table #1BDCC suppressed under BTS
-  Table #1BDDA suppressed under BTS
-  Table #1BDDB suppressed under BTS
   Table #1BDDC suppressed under BTS
   Table #1BDEC suppressed under BTS
   Table #1BDFC suppressed under BTS
@@ -441,19 +208,14 @@
   Table #1CCCC suppressed under BTS
   Table #1CCEC suppressed under BTS
   Table #1CCFC suppressed under BTS
-  Table #1CDAC suppressed under BTS
-  Table #1CDBA suppressed under BTS
-  Table #1CDBB suppressed under BTS
   Table #1CDBC suppressed under BTS
   Table #1CDCC suppressed under BTS
-  Table #1CDDC suppressed under BTS
   Table #1CDEC suppressed under BTS
   Table #1CDFC suppressed under BTS
   Table #1CEBC suppressed under BTS
   Table #1CECC suppressed under BTS
   Table #1CEDC suppressed under BTS
   Table #1CFCC suppressed under BTS
-  Table #1CFDB suppressed under BTS
   Table #1CFEC suppressed under BTS
   Table #1CFFC suppressed under BTS
   Table #1DABC suppressed under BTS
@@ -463,8 +225,6 @@
   Table #1DCBC suppressed under BTS
   Table #1DCEC suppressed under BTS
   Table #1DCFC suppressed under BTS
-  Table #1DDBA suppressed under BTS
-  Table #1DDBB suppressed under BTS
   Table #1DDBC suppressed under BTS
   Table #1DDDC suppressed under BTS
   Table #1DDFC suppressed under BTS
@@ -494,8 +254,6 @@
   Table #2ACAC suppressed under BTS
   Table #2ACBC suppressed under BTS
   Table #2ACCC suppressed under BTS
-  Table #2ACDA suppressed under BTS
-  Table #2ACDB suppressed under BTS
   Table #2ACDC suppressed under BTS
   Table #2ACEA suppressed under BTS
   Table #2ACEB suppressed under BTS
@@ -504,13 +262,9 @@
   Table #2ACFB suppressed under BTS
   Table #2ACFC suppressed under BTS
   Table #2ADAC suppressed under BTS
-  Table #2ADBA suppressed under BTS
-  Table #2ADBB suppressed under BTS
   Table #2ADBC suppressed under BTS
   Table #2ADCC suppressed under BTS
   Table #2ADDC suppressed under BTS
-  Table #2ADEA suppressed under BTS
-  Table #2ADEB suppressed under BTS
   Table #2ADEC suppressed under BTS
   Table #2ADFA suppressed under BTS
   Table #2ADFB suppressed under BTS
@@ -595,8 +349,6 @@
   Table #2BEBA suppressed under BTS
   Table #2BEBB suppressed under BTS
   Table #2BEBC suppressed under BTS
-  Table #2BECA suppressed under BTS
-  Table #2BECB suppressed under BTS
   Table #2BECC suppressed under BTS
   Table #2BEDC suppressed under BTS
   Table #2BEEA suppressed under BTS
@@ -626,11 +378,7 @@
   Table #2CAAC suppressed under BTS
   Table #2CABC suppressed under BTS
   Table #2CACC suppressed under BTS
-  Table #2CADA suppressed under BTS
-  Table #2CADB suppressed under BTS
   Table #2CADC suppressed under BTS
-  Table #2CAEA suppressed under BTS
-  Table #2CAEB suppressed under BTS
   Table #2CAEC suppressed under BTS
   Table #2CAFC suppressed under BTS
   Table #2CBAC suppressed under BTS
@@ -649,11 +397,7 @@
   Table #2CBFC suppressed under BTS
   Table #2CCAC suppressed under BTS
   Table #2CCBC suppressed under BTS
-  Table #2CCCA suppressed under BTS
-  Table #2CCCB suppressed under BTS
   Table #2CCCC suppressed under BTS
-  Table #2CCDA suppressed under BTS
-  Table #2CCDB suppressed under BTS
   Table #2CCDC suppressed under BTS
   Table #2CCEA suppressed under BTS
   Table #2CCEB suppressed under BTS
@@ -662,15 +406,11 @@
   Table #2CCFB suppressed under BTS
   Table #2CCFC suppressed under BTS
   Table #2CDAC suppressed under BTS
-  Table #2CDBA suppressed under BTS
-  Table #2CDBB suppressed under BTS
   Table #2CDBC suppressed under BTS
   Table #2CDCC suppressed under BTS
   Table #2CDDA suppressed under BTS
   Table #2CDDB suppressed under BTS
   Table #2CDDC suppressed under BTS
-  Table #2CDEA suppressed under BTS
-  Table #2CDEB suppressed under BTS
   Table #2CDEC suppressed under BTS
   Table #2CDFA suppressed under BTS
   Table #2CDFB suppressed under BTS
@@ -808,17 +548,11 @@
   Table #3ACFA suppressed under BTS
   Table #3ACFB suppressed under BTS
   Table #3ACFC suppressed under BTS
-  Table #3ADAA suppressed under BTS
-  Table #3ADAB suppressed under BTS
   Table #3ADAC suppressed under BTS
   Table #3ADBA suppressed under BTS
   Table #3ADBB suppressed under BTS
   Table #3ADBC suppressed under BTS
-  Table #3ADCA suppressed under BTS
-  Table #3ADCB suppressed under BTS
   Table #3ADCC suppressed under BTS
-  Table #3ADDA suppressed under BTS
-  Table #3ADDB suppressed under BTS
   Table #3ADDC suppressed under BTS
   Table #3ADEA suppressed under BTS
   Table #3ADEB suppressed under BTS
@@ -833,13 +567,9 @@
   Table #3AEEA suppressed under BTS
   Table #3AEEB suppressed under BTS
   Table #3AEEC suppressed under BTS
-  Table #3AEFA suppressed under BTS
-  Table #3AEFB suppressed under BTS
   Table #3AEFC suppressed under BTS
   Table #3AFAC suppressed under BTS
   Table #3AFBC suppressed under BTS
-  Table #3AFCA suppressed under BTS
-  Table #3AFCB suppressed under BTS
   Table #3AFCC suppressed under BTS
   Table #3AFDA suppressed under BTS
   Table #3AFDB suppressed under BTS
@@ -855,8 +585,6 @@
   Table #3BAEA suppressed under BTS
   Table #3BAEB suppressed under BTS
   Table #3BAEC suppressed under BTS
-  Table #3BAFA suppressed under BTS
-  Table #3BAFB suppressed under BTS
   Table #3BAFC suppressed under BTS
   Table #3BBAB suppressed under BTS
   Table #3BBBB suppressed under BTS
@@ -915,8 +643,6 @@
   Table #3BEEA suppressed under BTS
   Table #3BEEB suppressed under BTS
   Table #3BEEC suppressed under BTS
-  Table #3BEFA suppressed under BTS
-  Table #3BEFB suppressed under BTS
   Table #3BEFC suppressed under BTS
   Table #3BFAC suppressed under BTS
   Table #3BFBC suppressed under BTS
@@ -962,14 +688,10 @@
   Table #3CCFA suppressed under BTS
   Table #3CCFB suppressed under BTS
   Table #3CCFC suppressed under BTS
-  Table #3CDAA suppressed under BTS
-  Table #3CDAB suppressed under BTS
   Table #3CDAC suppressed under BTS
   Table #3CDBA suppressed under BTS
   Table #3CDBB suppressed under BTS
   Table #3CDBC suppressed under BTS
-  Table #3CDCA suppressed under BTS
-  Table #3CDCB suppressed under BTS
   Table #3CDCC suppressed under BTS
   Table #3CDDA suppressed under BTS
   Table #3CDDB suppressed under BTS
@@ -1044,8 +766,6 @@
   Table #3DCFA suppressed under BTS
   Table #3DCFB suppressed under BTS
   Table #3DCFC suppressed under BTS
-  Table #3DDAA suppressed under BTS
-  Table #3DDAB suppressed under BTS
   Table #3DDAC suppressed under BTS
   Table #3DDBA suppressed under BTS
   Table #3DDBB suppressed under BTS
@@ -1053,8 +773,6 @@
   Table #3DDCA suppressed under BTS
   Table #3DDCB suppressed under BTS
   Table #3DDCC suppressed under BTS
-  Table #3DDDA suppressed under BTS
-  Table #3DDDB suppressed under BTS
   Table #3DDDC suppressed under BTS
   Table #3DDEA suppressed under BTS
   Table #3DDEB suppressed under BTS
@@ -1076,14 +794,10 @@
   Table #3DEFA suppressed under BTS
   Table #3DEFB suppressed under BTS
   Table #3DEFC suppressed under BTS
-  Table #3DFAA suppressed under BTS
-  Table #3DFAB suppressed under BTS
   Table #3DFAC suppressed under BTS
   Table #3DFBA suppressed under BTS
   Table #3DFBB suppressed under BTS
   Table #3DFBC suppressed under BTS
-  Table #3DFCA suppressed under BTS
-  Table #3DFCB suppressed under BTS
   Table #3DFCC suppressed under BTS
   Table #3DFDA suppressed under BTS
   Table #3DFDB suppressed under BTS
@@ -1943,8 +1657,6 @@
   Table #5DFFB suppressed under BTS
   Table #5DFFC suppressed under BTS
   Table #6AAAC suppressed under BTS
-  Table #6AABA suppressed under BTS
-  Table #6AABB suppressed under BTS
   Table #6AABC suppressed under BTS
   Table #6AACA suppressed under BTS
   Table #6AACB suppressed under BTS
@@ -1975,8 +1687,6 @@
   Table #6ABFB suppressed under BTS
   Table #6ABFC suppressed under BTS
   Table #6ACAC suppressed under BTS
-  Table #6ACBA suppressed under BTS
-  Table #6ACBB suppressed under BTS
   Table #6ACBC suppressed under BTS
   Table #6ACCA suppressed under BTS
   Table #6ACCB suppressed under BTS
@@ -2150,11 +1860,7 @@
   Table #6BFFA suppressed under BTS
   Table #6BFFB suppressed under BTS
   Table #6BFFC suppressed under BTS
-  Table #6CAAA suppressed under BTS
-  Table #6CAAB suppressed under BTS
   Table #6CAAC suppressed under BTS
-  Table #6CABA suppressed under BTS
-  Table #6CABB suppressed under BTS
   Table #6CABC suppressed under BTS
   Table #6CACA suppressed under BTS
   Table #6CACB suppressed under BTS
@@ -2186,11 +1892,7 @@
   Table #6CBFA suppressed under BTS
   Table #6CBFB suppressed under BTS
   Table #6CBFC suppressed under BTS
-  Table #6CCAA suppressed under BTS
-  Table #6CCAB suppressed under BTS
   Table #6CCAC suppressed under BTS
-  Table #6CCBA suppressed under BTS
-  Table #6CCBB suppressed under BTS
   Table #6CCBC suppressed under BTS
   Table #6CCCA suppressed under BTS
   Table #6CCCB suppressed under BTS
@@ -2360,8 +2062,6 @@
   Table #6DFFC suppressed under BTS
   Table #7AAAC suppressed under BTS
   Table #7AABC suppressed under BTS
-  Table #7AACA suppressed under BTS
-  Table #7AACB suppressed under BTS
   Table #7AACC suppressed under BTS
   Table #7AADA suppressed under BTS
   Table #7AADB suppressed under BTS
@@ -2386,14 +2086,10 @@
   Table #7ABFA suppressed under BTS
   Table #7ABFB suppressed under BTS
   Table #7ABFC suppressed under BTS
-  Table #7ACAA suppressed under BTS
-  Table #7ACAB suppressed under BTS
   Table #7ACAC suppressed under BTS
   Table #7ACBA suppressed under BTS
   Table #7ACBB suppressed under BTS
   Table #7ACBC suppressed under BTS
-  Table #7ACCA suppressed under BTS
-  Table #7ACCB suppressed under BTS
   Table #7ACCC suppressed under BTS
   Table #7ACDA suppressed under BTS
   Table #7ACDB suppressed under BTS
@@ -2454,14 +2150,10 @@
   Table #7AFFA suppressed under BTS
   Table #7AFFB suppressed under BTS
   Table #7AFFC suppressed under BTS
-  Table #7BAAA suppressed under BTS
-  Table #7BAAB suppressed under BTS
   Table #7BAAC suppressed under BTS
   Table #7BABA suppressed under BTS
   Table #7BABB suppressed under BTS
   Table #7BABC suppressed under BTS
-  Table #7BACA suppressed under BTS
-  Table #7BACB suppressed under BTS
   Table #7BACC suppressed under BTS
   Table #7BADA suppressed under BTS
   Table #7BADB suppressed under BTS
@@ -2490,14 +2182,10 @@
   Table #7BBFA suppressed under BTS
   Table #7BBFB suppressed under BTS
   Table #7BBFC suppressed under BTS
-  Table #7BCAA suppressed under BTS
-  Table #7BCAB suppressed under BTS
   Table #7BCAC suppressed under BTS
   Table #7BCBA suppressed under BTS
   Table #7BCBB suppressed under BTS
   Table #7BCBC suppressed under BTS
-  Table #7BCCA suppressed under BTS
-  Table #7BCCB suppressed under BTS
   Table #7BCCC suppressed under BTS
   Table #7BCDA suppressed under BTS
   Table #7BCDB suppressed under BTS
@@ -2788,8 +2476,6 @@
   Table #8ABFC suppressed under BTS
   Table #8ACAC suppressed under BTS
   Table #8ACBC suppressed under BTS
-  Table #8ACCA suppressed under BTS
-  Table #8ACCB suppressed under BTS
   Table #8ACCC suppressed under BTS
   Table #8ACDA suppressed under BTS
   Table #8ACDB suppressed under BTS
@@ -2806,8 +2492,6 @@
   Table #8ADDA suppressed under BTS
   Table #8ADDB suppressed under BTS
   Table #8ADDC suppressed under BTS
-  Table #8ADEA suppressed under BTS
-  Table #8ADEB suppressed under BTS
   Table #8ADEC suppressed under BTS
   Table #8ADFA suppressed under BTS
   Table #8ADFB suppressed under BTS
@@ -2838,8 +2522,6 @@
   Table #8BABC suppressed under BTS
   Table #8BACC suppressed under BTS
   Table #8BADC suppressed under BTS
-  Table #8BAEA suppressed under BTS
-  Table #8BAEB suppressed under BTS
   Table #8BAEC suppressed under BTS
   Table #8BAFC suppressed under BTS
   Table #8BBAC suppressed under BTS
@@ -2856,14 +2538,10 @@
   Table #8BBFA suppressed under BTS
   Table #8BBFB suppressed under BTS
   Table #8BBFC suppressed under BTS
-  Table #8BCAA suppressed under BTS
-  Table #8BCAB suppressed under BTS
   Table #8BCAC suppressed under BTS
   Table #8BCBA suppressed under BTS
   Table #8BCBB suppressed under BTS
   Table #8BCBC suppressed under BTS
-  Table #8BCCA suppressed under BTS
-  Table #8BCCB suppressed under BTS
   Table #8BCCC suppressed under BTS
   Table #8BCDA suppressed under BTS
   Table #8BCDB suppressed under BTS
@@ -2874,8 +2552,6 @@
   Table #8BCFA suppressed under BTS
   Table #8BCFB suppressed under BTS
   Table #8BCFC suppressed under BTS
-  Table #8BDAA suppressed under BTS
-  Table #8BDAB suppressed under BTS
   Table #8BDAC suppressed under BTS
   Table #8BDBA suppressed under BTS
   Table #8BDBB suppressed under BTS
@@ -2886,8 +2562,6 @@
   Table #8BDDA suppressed under BTS
   Table #8BDDB suppressed under BTS
   Table #8BDDC suppressed under BTS
-  Table #8BDEA suppressed under BTS
-  Table #8BDEB suppressed under BTS
   Table #8BDEC suppressed under BTS
   Table #8BDFA suppressed under BTS
   Table #8BDFB suppressed under BTS
@@ -2942,8 +2616,6 @@
   Table #8CBFC suppressed under BTS
   Table #8CCAC suppressed under BTS
   Table #8CCBC suppressed under BTS
-  Table #8CCCA suppressed under BTS
-  Table #8CCCB suppressed under BTS
   Table #8CCCC suppressed under BTS
   Table #8CCDA suppressed under BTS
   Table #8CCDB suppressed under BTS
@@ -3111,8 +2783,6 @@
   Table #9AACC suppressed under BTS
   Table #9AADC suppressed under BTS
   Table #9AAEC suppressed under BTS
-  Table #9AAFA suppressed under BTS
-  Table #9AAFB suppressed under BTS
   Table #9AAFC suppressed under BTS
   Table #9ABAC suppressed under BTS
   Table #9ABBA suppressed under BTS
@@ -3132,8 +2802,6 @@
   Table #9ACBA suppressed under BTS
   Table #9ACBB suppressed under BTS
   Table #9ACBC suppressed under BTS
-  Table #9ACCA suppressed under BTS
-  Table #9ACCB suppressed under BTS
   Table #9ACCC suppressed under BTS
   Table #9ACDA suppressed under BTS
   Table #9ACDB suppressed under BTS
@@ -3165,11 +2833,7 @@
   Table #9AEEA suppressed under BTS
   Table #9AEEB suppressed under BTS
   Table #9AEEC suppressed under BTS
-  Table #9AEFA suppressed under BTS
-  Table #9AEFB suppressed under BTS
   Table #9AEFC suppressed under BTS
-  Table #9AFAA suppressed under BTS
-  Table #9AFAB suppressed under BTS
   Table #9AFAC suppressed under BTS
   Table #9AFBA suppressed under BTS
   Table #9AFBB suppressed under BTS
@@ -3180,8 +2844,6 @@
   Table #9AFDA suppressed under BTS
   Table #9AFDB suppressed under BTS
   Table #9AFDC suppressed under BTS
-  Table #9AFEA suppressed under BTS
-  Table #9AFEB suppressed under BTS
   Table #9AFEC suppressed under BTS
   Table #9AFFA suppressed under BTS
   Table #9AFFB suppressed under BTS
@@ -3190,11 +2852,7 @@
   Table #9BABC suppressed under BTS
   Table #9BACC suppressed under BTS
   Table #9BADC suppressed under BTS
-  Table #9BAEA suppressed under BTS
-  Table #9BAEB suppressed under BTS
   Table #9BAEC suppressed under BTS
-  Table #9BAFA suppressed under BTS
-  Table #9BAFB suppressed under BTS
   Table #9BAFC suppressed under BTS
   Table #9BBAC suppressed under BTS
   Table #9BBBA suppressed under BTS
@@ -3210,14 +2868,10 @@
   Table #9BBFA suppressed under BTS
   Table #9BBFB suppressed under BTS
   Table #9BBFC suppressed under BTS
-  Table #9BCAA suppressed under BTS
-  Table #9BCAB suppressed under BTS
   Table #9BCAC suppressed under BTS
   Table #9BCBA suppressed under BTS
   Table #9BCBB suppressed under BTS
   Table #9BCBC suppressed under BTS
-  Table #9BCCA suppressed under BTS
-  Table #9BCCB suppressed under BTS
   Table #9BCCC suppressed under BTS
   Table #9BCDA suppressed under BTS
   Table #9BCDB suppressed under BTS
@@ -3255,11 +2909,7 @@
   Table #9BEEA suppressed under BTS
   Table #9BEEB suppressed under BTS
   Table #9BEEC suppressed under BTS
-  Table #9BEFA suppressed under BTS
-  Table #9BEFB suppressed under BTS
   Table #9BEFC suppressed under BTS
-  Table #9BFAA suppressed under BTS
-  Table #9BFAB suppressed under BTS
   Table #9BFAC suppressed under BTS
   Table #9BFBA suppressed under BTS
   Table #9BFBB suppressed under BTS
@@ -3270,8 +2920,6 @@
   Table #9BFDA suppressed under BTS
   Table #9BFDB suppressed under BTS
   Table #9BFDC suppressed under BTS
-  Table #9BFEA suppressed under BTS
-  Table #9BFEB suppressed under BTS
   Table #9BFEC suppressed under BTS
   Table #9BFFA suppressed under BTS
   Table #9BFFB suppressed under BTS
@@ -3284,8 +2932,6 @@
   Table #9CADA suppressed under BTS
   Table #9CADB suppressed under BTS
   Table #9CADC suppressed under BTS
-  Table #9CAEA suppressed under BTS
-  Table #9CAEB suppressed under BTS
   Table #9CAEC suppressed under BTS
   Table #9CAFA suppressed under BTS
   Table #9CAFB suppressed under BTS
@@ -3308,14 +2954,10 @@
   Table #9CBFA suppressed under BTS
   Table #9CBFB suppressed under BTS
   Table #9CBFC suppressed under BTS
-  Table #9CCAA suppressed under BTS
-  Table #9CCAB suppressed under BTS
   Table #9CCAC suppressed under BTS
   Table #9CCBA suppressed under BTS
   Table #9CCBB suppressed under BTS
   Table #9CCBC suppressed under BTS
-  Table #9CCCA suppressed under BTS
-  Table #9CCCB suppressed under BTS
   Table #9CCCC suppressed under BTS
   Table #9CCDA suppressed under BTS
   Table #9CCDB suppressed under BTS
@@ -3358,8 +3000,6 @@
   Table #9CEFA suppressed under BTS
   Table #9CEFB suppressed under BTS
   Table #9CEFC suppressed under BTS
-  Table #9CFAA suppressed under BTS
-  Table #9CFAB suppressed under BTS
   Table #9CFAC suppressed under BTS
   Table #9CFBA suppressed under BTS
   Table #9CFBB suppressed under BTS
@@ -3370,8 +3010,6 @@
   Table #9CFDA suppressed under BTS
   Table #9CFDB suppressed under BTS
   Table #9CFDC suppressed under BTS
-  Table #9CFEA suppressed under BTS
-  Table #9CFEB suppressed under BTS
   Table #9CFEC suppressed under BTS
   Table #9CFFA suppressed under BTS
   Table #9CFFB suppressed under BTS
@@ -3476,103 +3114,35 @@
   Table #9DFFA suppressed under BTS
   Table #9DFFB suppressed under BTS
   Table #9DFFC suppressed under BTS
-  Table #5243 suppressed under BTS
-  Table #5310 suppressed under BTS
-  Table #5323 suppressed under BTS
   Table #5324 suppressed under BTS
-  Table #5325 suppressed under BTS
-  Table #5328 suppressed under BTS
   Table #5337 suppressed under BTS
   Table #5343 suppressed under BTS
-  Table #5344 suppressed under BTS
-  Table #5345 suppressed under BTS
-  Table #5346 suppressed under BTS
   Table #5350 suppressed under BTS
   Table #5351 suppressed under BTS
   Table #5352 suppressed under BTS
-  Table #5353 suppressed under BTS
-  Table #5354 suppressed under BTS
-  Table #5355 suppressed under BTS
-  Table #5357 suppressed under BTS
   Table #5364 suppressed under BTS
   Table #5376 suppressed under BTS
-  Table #5382 suppressed under BTS
-  Table #5388 suppressed under BTS
-  Table #5400 suppressed under BTS
-  Table #5442 suppressed under BTS
-  Table #5459 suppressed under BTS
-  Table #5478 suppressed under BTS
   Table #5481 suppressed under BTS
-  Table #5484 suppressed under BTS
-  Table #5567 suppressed under BTS
-  Table #5675 suppressed under BTS
-  Table #5742 suppressed under BTS
-  Table #5755 suppressed under BTS
   Table #5756 suppressed under BTS
-  Table #5757 suppressed under BTS
-  Table #5760 suppressed under BTS
   Table #5769 suppressed under BTS
   Table #5773 suppressed under BTS
   Table #5774 suppressed under BTS
   Table #5775 suppressed under BTS
-  Table #5776 suppressed under BTS
-  Table #5777 suppressed under BTS
-  Table #5778 suppressed under BTS
   Table #5782 suppressed under BTS
   Table #5783 suppressed under BTS
   Table #5784 suppressed under BTS
-  Table #5785 suppressed under BTS
-  Table #5786 suppressed under BTS
-  Table #5787 suppressed under BTS
-  Table #5788 suppressed under BTS
   Table #5789 suppressed under BTS
-  Table #5790 suppressed under BTS
   Table #5796 suppressed under BTS
-  Table #5800 suppressed under BTS
-  Table #5801 suppressed under BTS
-  Table #5802 suppressed under BTS
-  Table #5804 suppressed under BTS
   Table #5808 suppressed under BTS
-  Table #5811 suppressed under BTS
-  Table #5814 suppressed under BTS
-  Table #5820 suppressed under BTS
-  Table #5823 suppressed under BTS
   Table #5829 suppressed under BTS
-  Table #5832 suppressed under BTS
-  Table #5874 suppressed under BTS
-  Table #5891 suppressed under BTS
   Table #5901 suppressed under BTS
-  Table #5904 suppressed under BTS
-  Table #5910 suppressed under BTS
   Table #5913 suppressed under BTS
-  Table #5916 suppressed under BTS
-  Table #5932 suppressed under BTS
-  Table #5933 suppressed under BTS
-  Table #5934 suppressed under BTS
-  Table #5999 suppressed under BTS
-  Table #6017 suppressed under BTS
-  Table #6090 suppressed under BTS
-  Table #6107 suppressed under BTS
-  Table #6111 suppressed under BTS
-  Table #6126 suppressed under BTS
-  Table #6144 suppressed under BTS
-  Table #6149 suppressed under BTS
-  Table #6174 suppressed under BTS
   Table #6182 suppressed under BTS
   Table #6185 suppressed under BTS
-  Table #6187 suppressed under BTS
   Table #6188 suppressed under BTS
-  Table #6189 suppressed under BTS
-  Table #6192 suppressed under BTS
-  Table #6196 suppressed under BTS
-  Table #6197 suppressed under BTS
   Table #6198 suppressed under BTS
-  Table #6199 suppressed under BTS
-  Table #6200 suppressed under BTS
   Table #6201 suppressed under BTS
   Table #6207 suppressed under BTS
-  Table #6208 suppressed under BTS
-  Table #6209 suppressed under BTS
   Table #6210 suppressed under BTS
   Table #6214 suppressed under BTS
   Table #6215 suppressed under BTS
@@ -3584,81 +3154,32 @@
   Table #6221 suppressed under BTS
   Table #6222 suppressed under BTS
   Table #6228 suppressed under BTS
-  Table #6231 suppressed under BTS
-  Table #6232 suppressed under BTS
-  Table #6233 suppressed under BTS
-  Table #6234 suppressed under BTS
-  Table #6235 suppressed under BTS
-  Table #6236 suppressed under BTS
   Table #6237 suppressed under BTS
   Table #6240 suppressed under BTS
-  Table #6243 suppressed under BTS
-  Table #6244 suppressed under BTS
-  Table #6245 suppressed under BTS
   Table #6246 suppressed under BTS
-  Table #6252 suppressed under BTS
   Table #6255 suppressed under BTS
   Table #6257 suppressed under BTS
   Table #6261 suppressed under BTS
-  Table #6262 suppressed under BTS
   Table #6263 suppressed under BTS
-  Table #6264 suppressed under BTS
-  Table #6293 suppressed under BTS
-  Table #6300 suppressed under BTS
-  Table #6306 suppressed under BTS
-  Table #6309 suppressed under BTS
-  Table #6323 suppressed under BTS
-  Table #6325 suppressed under BTS
-  Table #6326 suppressed under BTS
   Table #6327 suppressed under BTS
-  Table #6333 suppressed under BTS
-  Table #6336 suppressed under BTS
-  Table #6342 suppressed under BTS
-  Table #6343 suppressed under BTS
-  Table #6344 suppressed under BTS
   Table #6345 suppressed under BTS
-  Table #6348 suppressed under BTS
-  Table #6360 suppressed under BTS
   Table #6363 suppressed under BTS
-  Table #6365 suppressed under BTS
   Table #6372 suppressed under BTS
   Table #6395 suppressed under BTS
-  Table #6412 suppressed under BTS
-  Table #6413 suppressed under BTS
-  Table #6414 suppressed under BTS
-  Table #6430 suppressed under BTS
-  Table #6431 suppressed under BTS
-  Table #6432 suppressed under BTS
-  Table #6435 suppressed under BTS
-  Table #6448 suppressed under BTS
-  Table #6449 suppressed under BTS
   Table #6450 suppressed under BTS
-  Table #6461 suppressed under BTS
-  Table #6468 suppressed under BTS
-  Table #6472 suppressed under BTS
-  Table #6473 suppressed under BTS
   Table #6474 suppressed under BTS
   Table #6489 suppressed under BTS
   Table #6492 suppressed under BTS
-  Table #6505 suppressed under BTS
-  Table #6506 suppressed under BTS
   Table #6507 suppressed under BTS
-  Table #6508 suppressed under BTS
-  Table #6509 suppressed under BTS
   Table #6510 suppressed under BTS
-  Table #6521 suppressed under BTS
   Table #6525 suppressed under BTS
-  Table #6526 suppressed under BTS
-  Table #6527 suppressed under BTS
   Table #6528 suppressed under BTS
-  Table #6537 suppressed under BTS
   Table #6538 suppressed under BTS
   Table #6539 suppressed under BTS
   Table #6540 suppressed under BTS
   Table #6543 suppressed under BTS
   Table #6546 suppressed under BTS
   Table #6549 suppressed under BTS
-  Table #6552 suppressed under BTS
   Table #6559 suppressed under BTS
   Table #6560 suppressed under BTS
   Table #6561 suppressed under BTS
@@ -3672,22 +3193,15 @@
   Table #6577 suppressed under BTS
   Table #6578 suppressed under BTS
   Table #6579 suppressed under BTS
-  Table #6580 suppressed under BTS
-  Table #6581 suppressed under BTS
   Table #6582 suppressed under BTS
   Table #6583 suppressed under BTS
   Table #6584 suppressed under BTS
   Table #6585 suppressed under BTS
-  Table #6595 suppressed under BTS
-  Table #6596 suppressed under BTS
   Table #6597 suppressed under BTS
-  Table #6598 suppressed under BTS
-  Table #6599 suppressed under BTS
   Table #6600 suppressed under BTS
   Table #6601 suppressed under BTS
   Table #6602 suppressed under BTS
   Table #6603 suppressed under BTS
-  Table #6606 suppressed under BTS
   Table #6613 suppressed under BTS
   Table #6614 suppressed under BTS
   Table #6615 suppressed under BTS
@@ -3697,7 +3211,6 @@
   Table #6619 suppressed under BTS
   Table #6620 suppressed under BTS
   Table #6621 suppressed under BTS
-  Table #6624 suppressed under BTS
   Table #6626 suppressed under BTS
   Table #6629 suppressed under BTS
   Table #6631 suppressed under BTS
@@ -3712,14 +3225,10 @@
   Table #6640 suppressed under BTS
   Table #6641 suppressed under BTS
   Table #6642 suppressed under BTS
-  Table #6643 suppressed under BTS
-  Table #6644 suppressed under BTS
   Table #6645 suppressed under BTS
   Table #6646 suppressed under BTS
   Table #6647 suppressed under BTS
   Table #6648 suppressed under BTS
-  Table #6649 suppressed under BTS
-  Table #6650 suppressed under BTS
   Table #6651 suppressed under BTS
   Table #6652 suppressed under BTS
   Table #6653 suppressed under BTS
@@ -3730,7 +3239,6 @@
   Table #6658 suppressed under BTS
   Table #6659 suppressed under BTS
   Table #6660 suppressed under BTS
-  Table #6662 suppressed under BTS
   Table #6665 suppressed under BTS
   Table #6667 suppressed under BTS
   Table #6668 suppressed under BTS
@@ -3741,11 +3249,7 @@
   Table #6673 suppressed under BTS
   Table #6674 suppressed under BTS
   Table #6675 suppressed under BTS
-  Table #6676 suppressed under BTS
-  Table #6677 suppressed under BTS
   Table #6678 suppressed under BTS
-  Table #6679 suppressed under BTS
-  Table #6680 suppressed under BTS
   Table #6681 suppressed under BTS
   Table #6682 suppressed under BTS
   Table #6683 suppressed under BTS
@@ -3753,51 +3257,33 @@
   Table #6685 suppressed under BTS
   Table #6686 suppressed under BTS
   Table #6687 suppressed under BTS
-  Table #6688 suppressed under BTS
-  Table #6689 suppressed under BTS
   Table #6690 suppressed under BTS
   Table #6691 suppressed under BTS
   Table #6692 suppressed under BTS
   Table #6693 suppressed under BTS
-  Table #6694 suppressed under BTS
-  Table #6695 suppressed under BTS
   Table #6696 suppressed under BTS
   Table #6702 suppressed under BTS
-  Table #6703 suppressed under BTS
-  Table #6704 suppressed under BTS
   Table #6705 suppressed under BTS
   Table #6708 suppressed under BTS
-  Table #6718 suppressed under BTS
-  Table #6719 suppressed under BTS
   Table #6720 suppressed under BTS
-  Table #6721 suppressed under BTS
-  Table #6722 suppressed under BTS
   Table #6723 suppressed under BTS
   Table #6724 suppressed under BTS
   Table #6725 suppressed under BTS
   Table #6726 suppressed under BTS
   Table #6732 suppressed under BTS
-  Table #6736 suppressed under BTS
-  Table #6737 suppressed under BTS
   Table #6738 suppressed under BTS
   Table #6739 suppressed under BTS
   Table #6740 suppressed under BTS
   Table #6741 suppressed under BTS
-  Table #6742 suppressed under BTS
-  Table #6743 suppressed under BTS
   Table #6744 suppressed under BTS
   Table #6746 suppressed under BTS
   Table #6750 suppressed under BTS
-  Table #6753 suppressed under BTS
   Table #6754 suppressed under BTS
   Table #6755 suppressed under BTS
   Table #6756 suppressed under BTS
-  Table #6757 suppressed under BTS
-  Table #6758 suppressed under BTS
   Table #6759 suppressed under BTS
   Table #6762 suppressed under BTS
   Table #6765 suppressed under BTS
-  Table #6768 suppressed under BTS
   Table #6774 suppressed under BTS
   Table #6775 suppressed under BTS
   Table #6776 suppressed under BTS
@@ -3818,27 +3304,17 @@
   Table #6799 suppressed under BTS
   Table #6800 suppressed under BTS
   Table #6801 suppressed under BTS
-  Table #6808 suppressed under BTS
-  Table #6809 suppressed under BTS
   Table #6810 suppressed under BTS
   Table #6813 suppressed under BTS
-  Table #6814 suppressed under BTS
-  Table #6815 suppressed under BTS
   Table #6816 suppressed under BTS
-  Table #6819 suppressed under BTS
   Table #6826 suppressed under BTS
   Table #6827 suppressed under BTS
   Table #6828 suppressed under BTS
   Table #6829 suppressed under BTS
   Table #6830 suppressed under BTS
   Table #6831 suppressed under BTS
-  Table #6832 suppressed under BTS
-  Table #6833 suppressed under BTS
   Table #6834 suppressed under BTS
-  Table #6837 suppressed under BTS
   Table #6839 suppressed under BTS
-  Table #6844 suppressed under BTS
-  Table #6845 suppressed under BTS
   Table #6846 suppressed under BTS
   Table #6849 suppressed under BTS
   Table #6850 suppressed under BTS
@@ -3855,7 +3331,6 @@
   Table #6870 suppressed under BTS
   Table #6873 suppressed under BTS
   Table #6876 suppressed under BTS
-  Table #6878 suppressed under BTS
   Table #6880 suppressed under BTS
   Table #6881 suppressed under BTS
   Table #6882 suppressed under BTS
@@ -3868,8 +3343,6 @@
   Table #6889 suppressed under BTS
   Table #6890 suppressed under BTS
   Table #6891 suppressed under BTS
-  Table #6893 suppressed under BTS
-  Table #6896 suppressed under BTS
   Table #6898 suppressed under BTS
   Table #6899 suppressed under BTS
   Table #6900 suppressed under BTS
@@ -3882,32 +3355,14 @@
   Table #6907 suppressed under BTS
   Table #6908 suppressed under BTS
   Table #6909 suppressed under BTS
-  Table #6911 suppressed under BTS
-  Table #6941 suppressed under BTS
-  Table #6970 suppressed under BTS
-  Table #6971 suppressed under BTS
-  Table #6972 suppressed under BTS
-  Table #6975 suppressed under BTS
-  Table #6978 suppressed under BTS
-  Table #6984 suppressed under BTS
   Table #6990 suppressed under BTS
   Table #6993 suppressed under BTS
-  Table #6996 suppressed under BTS
-  Table #7008 suppressed under BTS
   Table #7011 suppressed under BTS
-  Table #7027 suppressed under BTS
-  Table #7028 suppressed under BTS
-  Table #7029 suppressed under BTS
   Table #7038 suppressed under BTS
-  Table #7045 suppressed under BTS
   Table #7046 suppressed under BTS
-  Table #7047 suppressed under BTS
   Table #7049 suppressed under BTS
-  Table #7051 suppressed under BTS
   Table #7052 suppressed under BTS
-  Table #7053 suppressed under BTS
   Table #7056 suppressed under BTS
-  Table #7058 suppressed under BTS
   Table #7060 suppressed under BTS
   Table #7061 suppressed under BTS
   Table #7062 suppressed under BTS
@@ -3918,8 +3373,6 @@
   Table #7069 suppressed under BTS
   Table #7070 suppressed under BTS
   Table #7071 suppressed under BTS
-  Table #7072 suppressed under BTS
-  Table #7073 suppressed under BTS
   Table #7074 suppressed under BTS
   Table #7078 suppressed under BTS
   Table #7079 suppressed under BTS
@@ -3927,48 +3380,28 @@
   Table #7081 suppressed under BTS
   Table #7082 suppressed under BTS
   Table #7083 suppressed under BTS
-  Table #7084 suppressed under BTS
-  Table #7085 suppressed under BTS
   Table #7086 suppressed under BTS
   Table #7092 suppressed under BTS
-  Table #7095 suppressed under BTS
-  Table #7096 suppressed under BTS
-  Table #7097 suppressed under BTS
   Table #7098 suppressed under BTS
-  Table #7099 suppressed under BTS
-  Table #7100 suppressed under BTS
   Table #7101 suppressed under BTS
   Table #7104 suppressed under BTS
-  Table #7107 suppressed under BTS
   Table #7110 suppressed under BTS
-  Table #7114 suppressed under BTS
   Table #7115 suppressed under BTS
-  Table #7116 suppressed under BTS
   Table #7117 suppressed under BTS
   Table #7118 suppressed under BTS
   Table #7119 suppressed under BTS
   Table #7125 suppressed under BTS
-  Table #7126 suppressed under BTS
-  Table #7127 suppressed under BTS
   Table #7128 suppressed under BTS
   Table #7157 suppressed under BTS
-  Table #7170 suppressed under BTS
   Table #7173 suppressed under BTS
-  Table #7185 suppressed under BTS
-  Table #7186 suppressed under BTS
-  Table #7187 suppressed under BTS
   Table #7188 suppressed under BTS
   Table #7191 suppressed under BTS
   Table #7194 suppressed under BTS
   Table #7197 suppressed under BTS
-  Table #7200 suppressed under BTS
   Table #7206 suppressed under BTS
   Table #7207 suppressed under BTS
   Table #7208 suppressed under BTS
   Table #7209 suppressed under BTS
-  Table #7212 suppressed under BTS
-  Table #7221 suppressed under BTS
-  Table #7224 suppressed under BTS
   Table #7225 suppressed under BTS
   Table #7226 suppressed under BTS
   Table #7227 suppressed under BTS
@@ -3976,87 +3409,48 @@
   Table #7229 suppressed under BTS
   Table #7230 suppressed under BTS
   Table #7233 suppressed under BTS
-  Table #7234 suppressed under BTS
-  Table #7235 suppressed under BTS
   Table #7236 suppressed under BTS
-  Table #7265 suppressed under BTS
-  Table #7277 suppressed under BTS
-  Table #7286 suppressed under BTS
-  Table #7294 suppressed under BTS
   Table #7295 suppressed under BTS
-  Table #7296 suppressed under BTS
-  Table #7297 suppressed under BTS
-  Table #7298 suppressed under BTS
-  Table #7299 suppressed under BTS
-  Table #7300 suppressed under BTS
-  Table #7301 suppressed under BTS
-  Table #7302 suppressed under BTS
-  Table #7308 suppressed under BTS
   Table #7314 suppressed under BTS
   Table #7317 suppressed under BTS
   Table #7320 suppressed under BTS
-  Table #7323 suppressed under BTS
-  Table #7330 suppressed under BTS
-  Table #7331 suppressed under BTS
   Table #7332 suppressed under BTS
   Table #7335 suppressed under BTS
   Table #7336 suppressed under BTS
   Table #7337 suppressed under BTS
   Table #7338 suppressed under BTS
   Table #7340 suppressed under BTS
-  Table #7367 suppressed under BTS
-  Table #7370 suppressed under BTS
   Table #7374 suppressed under BTS
-  Table #7383 suppressed under BTS
-  Table #7386 suppressed under BTS
   Table #7389 suppressed under BTS
   Table #7392 suppressed under BTS
-  Table #7393 suppressed under BTS
-  Table #7394 suppressed under BTS
   Table #7395 suppressed under BTS
   Table #7398 suppressed under BTS
-  Table #7402 suppressed under BTS
-  Table #7403 suppressed under BTS
   Table #7404 suppressed under BTS
   Table #7407 suppressed under BTS
-  Table #7409 suppressed under BTS
   Table #7413 suppressed under BTS
   Table #7416 suppressed under BTS
-  Table #7422 suppressed under BTS
   Table #7425 suppressed under BTS
   Table #7428 suppressed under BTS
-  Table #7430 suppressed under BTS
-  Table #7432 suppressed under BTS
-  Table #7433 suppressed under BTS
   Table #7434 suppressed under BTS
-  Table #7440 suppressed under BTS
   Table #7441 suppressed under BTS
   Table #7442 suppressed under BTS
   Table #7443 suppressed under BTS
   Table #7444 suppressed under BTS
   Table #7445 suppressed under BTS
   Table #7446 suppressed under BTS
-  Table #7448 suppressed under BTS
   Table #7450 suppressed under BTS
   Table #7451 suppressed under BTS
   Table #7452 suppressed under BTS
   Table #7457 suppressed under BTS
-  Table #7459 suppressed under BTS
-  Table #7460 suppressed under BTS
   Table #7461 suppressed under BTS
   Table #7464 suppressed under BTS
-  Table #7465 suppressed under BTS
-  Table #7466 suppressed under BTS
-  Table #7467 suppressed under BTS
   Table #7470 suppressed under BTS
   Table #7475 suppressed under BTS
   Table #7477 suppressed under BTS
   Table #7478 suppressed under BTS
   Table #7479 suppressed under BTS
   Table #7482 suppressed under BTS
-  Table #7483 suppressed under BTS
   Table #7484 suppressed under BTS
-  Table #7485 suppressed under BTS
   Table #7488 suppressed under BTS
   Table #7489 suppressed under BTS
   Table #7490 suppressed under BTS
@@ -4094,22 +3488,13 @@
   Table #7522 suppressed under BTS
   Table #7523 suppressed under BTS
   Table #7524 suppressed under BTS
-  Table #7527 suppressed under BTS
-  Table #7528 suppressed under BTS
   Table #7529 suppressed under BTS
-  Table #7530 suppressed under BTS
-  Table #7531 suppressed under BTS
-  Table #7532 suppressed under BTS
   Table #7533 suppressed under BTS
   Table #7536 suppressed under BTS
-  Table #7537 suppressed under BTS
-  Table #7538 suppressed under BTS
   Table #7539 suppressed under BTS
   Table #7540 suppressed under BTS
   Table #7541 suppressed under BTS
   Table #7542 suppressed under BTS
-  Table #7543 suppressed under BTS
-  Table #7544 suppressed under BTS
   Table #7545 suppressed under BTS
   Table #7546 suppressed under BTS
   Table #7547 suppressed under BTS
@@ -4120,45 +3505,31 @@
   Table #7552 suppressed under BTS
   Table #7553 suppressed under BTS
   Table #7554 suppressed under BTS
-  Table #7555 suppressed under BTS
-  Table #7556 suppressed under BTS
   Table #7557 suppressed under BTS
   Table #7558 suppressed under BTS
   Table #7559 suppressed under BTS
   Table #7560 suppressed under BTS
-  Table #7566 suppressed under BTS
   Table #7568 suppressed under BTS
   Table #7572 suppressed under BTS
   Table #7578 suppressed under BTS
-  Table #7582 suppressed under BTS
-  Table #7583 suppressed under BTS
-  Table #7584 suppressed under BTS
   Table #7586 suppressed under BTS
   Table #7588 suppressed under BTS
   Table #7589 suppressed under BTS
   Table #7590 suppressed under BTS
   Table #7596 suppressed under BTS
-  Table #7599 suppressed under BTS
-  Table #7602 suppressed under BTS
   Table #7603 suppressed under BTS
   Table #7604 suppressed under BTS
   Table #7605 suppressed under BTS
-  Table #7606 suppressed under BTS
-  Table #7607 suppressed under BTS
   Table #7608 suppressed under BTS
   Table #7609 suppressed under BTS
   Table #7610 suppressed under BTS
   Table #7611 suppressed under BTS
   Table #7614 suppressed under BTS
   Table #7617 suppressed under BTS
-  Table #7618 suppressed under BTS
-  Table #7619 suppressed under BTS
   Table #7620 suppressed under BTS
   Table #7621 suppressed under BTS
   Table #7622 suppressed under BTS
   Table #7623 suppressed under BTS
-  Table #7624 suppressed under BTS
-  Table #7625 suppressed under BTS
   Table #7626 suppressed under BTS
   Table #7629 suppressed under BTS
   Table #7630 suppressed under BTS
@@ -4169,16 +3540,9 @@
   Table #7640 suppressed under BTS
   Table #7641 suppressed under BTS
   Table #7644 suppressed under BTS
-  Table #7646 suppressed under BTS
-  Table #7648 suppressed under BTS
-  Table #7649 suppressed under BTS
   Table #7650 suppressed under BTS
-  Table #7651 suppressed under BTS
   Table #7652 suppressed under BTS
-  Table #7653 suppressed under BTS
-  Table #7654 suppressed under BTS
   Table #7655 suppressed under BTS
-  Table #7656 suppressed under BTS
   Table #7657 suppressed under BTS
   Table #7658 suppressed under BTS
   Table #7659 suppressed under BTS
@@ -4193,21 +3557,15 @@
   Table #7668 suppressed under BTS
   Table #7677 suppressed under BTS
   Table #7691 suppressed under BTS
-  Table #7693 suppressed under BTS
-  Table #7694 suppressed under BTS
   Table #7695 suppressed under BTS
   Table #7696 suppressed under BTS
   Table #7697 suppressed under BTS
   Table #7698 suppressed under BTS
   Table #7703 suppressed under BTS
   Table #7707 suppressed under BTS
-  Table #7708 suppressed under BTS
-  Table #7709 suppressed under BTS
   Table #7710 suppressed under BTS
   Table #7713 suppressed under BTS
   Table #7716 suppressed under BTS
-  Table #7717 suppressed under BTS
-  Table #7718 suppressed under BTS
   Table #7719 suppressed under BTS
   Table #7720 suppressed under BTS
   Table #7721 suppressed under BTS
@@ -4226,9 +3584,6 @@
   Table #7750 suppressed under BTS
   Table #7751 suppressed under BTS
   Table #7752 suppressed under BTS
-  Table #7754 suppressed under BTS
-  Table #7756 suppressed under BTS
-  Table #7757 suppressed under BTS
   Table #7758 suppressed under BTS
   Table #7764 suppressed under BTS
   Table #7765 suppressed under BTS
@@ -4241,9 +3596,7 @@
   Table #7774 suppressed under BTS
   Table #7775 suppressed under BTS
   Table #7776 suppressed under BTS
-  Table #7788 suppressed under BTS
   Table #7806 suppressed under BTS
-  Table #7818 suppressed under BTS
   Table #7821 suppressed under BTS
   Table #7824 suppressed under BTS
   Table #7830 suppressed under BTS
@@ -4256,26 +3609,18 @@
   Table #7842 suppressed under BTS
   Table #7848 suppressed under BTS
   Table #7854 suppressed under BTS
-  Table #7856 suppressed under BTS
   Table #7860 suppressed under BTS
   Table #7863 suppressed under BTS
   Table #7866 suppressed under BTS
-  Table #7869 suppressed under BTS
   Table #7872 suppressed under BTS
   Table #7873 suppressed under BTS
   Table #7874 suppressed under BTS
   Table #7875 suppressed under BTS
-  Table #7878 suppressed under BTS
   Table #7881 suppressed under BTS
   Table #7884 suppressed under BTS
-  Table #7890 suppressed under BTS
-  Table #7896 suppressed under BTS
   Table #7899 suppressed under BTS
   Table #7902 suppressed under BTS
-  Table #7905 suppressed under BTS
-  Table #7906 suppressed under BTS
   Table #7907 suppressed under BTS
-  Table #7908 suppressed under BTS
   Table #7911 suppressed under BTS
   Table #7912 suppressed under BTS
   Table #7913 suppressed under BTS
@@ -4284,14 +3629,10 @@
   Table #7916 suppressed under BTS
   Table #7917 suppressed under BTS
   Table #7920 suppressed under BTS
-  Table #7921 suppressed under BTS
-  Table #7922 suppressed under BTS
   Table #7923 suppressed under BTS
   Table #7924 suppressed under BTS
   Table #7925 suppressed under BTS
   Table #7926 suppressed under BTS
-  Table #7927 suppressed under BTS
-  Table #7928 suppressed under BTS
   Table #7929 suppressed under BTS
   Table #7930 suppressed under BTS
   Table #7931 suppressed under BTS
@@ -4321,39 +3662,22 @@
   Table #7955 suppressed under BTS
   Table #7956 suppressed under BTS
   Table #7962 suppressed under BTS
-  Table #7964 suppressed under BTS
   Table #7968 suppressed under BTS
   Table #7971 suppressed under BTS
-  Table #7972 suppressed under BTS
-  Table #7973 suppressed under BTS
   Table #7974 suppressed under BTS
-  Table #7977 suppressed under BTS
   Table #7980 suppressed under BTS
   Table #7981 suppressed under BTS
   Table #7982 suppressed under BTS
   Table #7983 suppressed under BTS
-  Table #7986 suppressed under BTS
   Table #7987 suppressed under BTS
   Table #7988 suppressed under BTS
   Table #7989 suppressed under BTS
   Table #7992 suppressed under BTS
-  Table #7998 suppressed under BTS
-  Table #8002 suppressed under BTS
-  Table #8003 suppressed under BTS
   Table #8004 suppressed under BTS
-  Table #8010 suppressed under BTS
-  Table #8016 suppressed under BTS
   Table #8020 suppressed under BTS
   Table #8021 suppressed under BTS
   Table #8022 suppressed under BTS
-  Table #8023 suppressed under BTS
-  Table #8024 suppressed under BTS
-  Table #8025 suppressed under BTS
-  Table #8028 suppressed under BTS
-  Table #8034 suppressed under BTS
   Table #8037 suppressed under BTS
-  Table #8038 suppressed under BTS
-  Table #8039 suppressed under BTS
   Table #8040 suppressed under BTS
   Table #8046 suppressed under BTS
   Table #8049 suppressed under BTS
@@ -4370,14 +3694,10 @@
   Table #8064 suppressed under BTS
   Table #8067 suppressed under BTS
   Table #8070 suppressed under BTS
-  Table #8071 suppressed under BTS
-  Table #8072 suppressed under BTS
   Table #8073 suppressed under BTS
   Table #8074 suppressed under BTS
   Table #8075 suppressed under BTS
   Table #8076 suppressed under BTS
-  Table #8077 suppressed under BTS
-  Table #8078 suppressed under BTS
   Table #8079 suppressed under BTS
   Table #8082 suppressed under BTS
   Table #8085 suppressed under BTS
@@ -4394,17 +3714,11 @@
   Table #8098 suppressed under BTS
   Table #8099 suppressed under BTS
   Table #8100 suppressed under BTS
-  Table #8107 suppressed under BTS
-  Table #8108 suppressed under BTS
   Table #8109 suppressed under BTS
   Table #8112 suppressed under BTS
-  Table #8117 suppressed under BTS
   Table #8123 suppressed under BTS
-  Table #8125 suppressed under BTS
-  Table #8126 suppressed under BTS
   Table #8127 suppressed under BTS
   Table #8130 suppressed under BTS
-  Table #8135 suppressed under BTS
   Table #8142 suppressed under BTS
   Table #8143 suppressed under BTS
   Table #8144 suppressed under BTS
@@ -4421,8 +3735,6 @@
   Table #8163 suppressed under BTS
   Table #8166 suppressed under BTS
   Table #8168 suppressed under BTS
-  Table #8170 suppressed under BTS
-  Table #8171 suppressed under BTS
   Table #8172 suppressed under BTS
   Table #8175 suppressed under BTS
   Table #8176 suppressed under BTS
@@ -4435,8 +3747,6 @@
   Table #8183 suppressed under BTS
   Table #8184 suppressed under BTS
   Table #8187 suppressed under BTS
-  Table #8188 suppressed under BTS
-  Table #8189 suppressed under BTS
   Table #8190 suppressed under BTS
   Table #8191 suppressed under BTS
   Table #8192 suppressed under BTS
@@ -4456,43 +3766,24 @@
   Table #8206 suppressed under BTS
   Table #8207 suppressed under BTS
   Table #8208 suppressed under BTS
-  Table #8231 suppressed under BTS
-  Table #8237 suppressed under BTS
-  Table #8250 suppressed under BTS
   Table #8253 suppressed under BTS
-  Table #8267 suppressed under BTS
   Table #8271 suppressed under BTS
   Table #8277 suppressed under BTS
   Table #8280 suppressed under BTS
-  Table #8286 suppressed under BTS
   Table #8289 suppressed under BTS
-  Table #8292 suppressed under BTS
-  Table #8298 suppressed under BTS
-  Table #8304 suppressed under BTS
-  Table #8307 suppressed under BTS
   Table #8316 suppressed under BTS
   Table #8325 suppressed under BTS
-  Table #8331 suppressed under BTS
   Table #8334 suppressed under BTS
   Table #8339 suppressed under BTS
   Table #8343 suppressed under BTS
   Table #8345 suppressed under BTS
-  Table #8347 suppressed under BTS
   Table #8348 suppressed under BTS
-  Table #8349 suppressed under BTS
   Table #8352 suppressed under BTS
-  Table #8353 suppressed under BTS
-  Table #8354 suppressed under BTS
-  Table #8355 suppressed under BTS
   Table #8356 suppressed under BTS
   Table #8357 suppressed under BTS
   Table #8358 suppressed under BTS
-  Table #8359 suppressed under BTS
-  Table #8360 suppressed under BTS
   Table #8361 suppressed under BTS
-  Table #8362 suppressed under BTS
   Table #8363 suppressed under BTS
-  Table #8364 suppressed under BTS
   Table #8365 suppressed under BTS
   Table #8366 suppressed under BTS
   Table #8367 suppressed under BTS
@@ -4503,38 +3794,27 @@
   Table #8374 suppressed under BTS
   Table #8375 suppressed under BTS
   Table #8376 suppressed under BTS
-  Table #8377 suppressed under BTS
-  Table #8378 suppressed under BTS
   Table #8379 suppressed under BTS
   Table #8380 suppressed under BTS
   Table #8381 suppressed under BTS
   Table #8382 suppressed under BTS
   Table #8385 suppressed under BTS
   Table #8388 suppressed under BTS
-  Table #8391 suppressed under BTS
-  Table #8394 suppressed under BTS
   Table #8395 suppressed under BTS
   Table #8396 suppressed under BTS
   Table #8397 suppressed under BTS
   Table #8400 suppressed under BTS
   Table #8403 suppressed under BTS
   Table #8406 suppressed under BTS
-  Table #8409 suppressed under BTS
   Table #8412 suppressed under BTS
   Table #8415 suppressed under BTS
-  Table #8418 suppressed under BTS
   Table #8421 suppressed under BTS
   Table #8424 suppressed under BTS
-  Table #8442 suppressed under BTS
-  Table #8447 suppressed under BTS
   Table #8452 suppressed under BTS
   Table #8453 suppressed under BTS
   Table #8454 suppressed under BTS
-  Table #8460 suppressed under BTS
-  Table #8466 suppressed under BTS
   Table #8469 suppressed under BTS
   Table #8478 suppressed under BTS
-  Table #8483 suppressed under BTS
   Table #8487 suppressed under BTS
   Table #8488 suppressed under BTS
   Table #8489 suppressed under BTS
@@ -4547,33 +3827,17 @@
   Table #8503 suppressed under BTS
   Table #8504 suppressed under BTS
   Table #8505 suppressed under BTS
-  Table #8506 suppressed under BTS
-  Table #8507 suppressed under BTS
-  Table #8508 suppressed under BTS
   Table #8514 suppressed under BTS
-  Table #8518 suppressed under BTS
   Table #8519 suppressed under BTS
-  Table #8520 suppressed under BTS
-  Table #8523 suppressed under BTS
-  Table #8525 suppressed under BTS
   Table #8527 suppressed under BTS
   Table #8528 suppressed under BTS
   Table #8529 suppressed under BTS
   Table #8530 suppressed under BTS
   Table #8531 suppressed under BTS
   Table #8532 suppressed under BTS
-  Table #8537 suppressed under BTS
   Table #8541 suppressed under BTS
   Table #8555 suppressed under BTS
   Table #8559 suppressed under BTS
-  Table #8561 suppressed under BTS
-  Table #8565 suppressed under BTS
-  Table #8567 suppressed under BTS
-  Table #8572 suppressed under BTS
-  Table #8573 suppressed under BTS
-  Table #8574 suppressed under BTS
-  Table #8575 suppressed under BTS
-  Table #8576 suppressed under BTS
   Table #8577 suppressed under BTS
   Table #8578 suppressed under BTS
   Table #8579 suppressed under BTS
@@ -4588,18 +3852,9 @@
   Table #8602 suppressed under BTS
   Table #8603 suppressed under BTS
   Table #8604 suppressed under BTS
-  Table #8608 suppressed under BTS
-  Table #8609 suppressed under BTS
   Table #8610 suppressed under BTS
   Table #8613 suppressed under BTS
-  Table #8616 suppressed under BTS
-  Table #8618 suppressed under BTS
-  Table #8620 suppressed under BTS
   Table #8621 suppressed under BTS
-  Table #8622 suppressed under BTS
-  Table #8626 suppressed under BTS
-  Table #8627 suppressed under BTS
-  Table #8628 suppressed under BTS
   Table #8631 suppressed under BTS
   Table #8632 suppressed under BTS
   Table #8633 suppressed under BTS
@@ -4608,51 +3863,23 @@
   Table #8638 suppressed under BTS
   Table #8639 suppressed under BTS
   Table #8640 suppressed under BTS
-  Table #8649 suppressed under BTS
-  Table #8667 suppressed under BTS
   Table #8685 suppressed under BTS
-  Table #8687 suppressed under BTS
-  Table #8691 suppressed under BTS
-  Table #8693 suppressed under BTS
-  Table #8699 suppressed under BTS
   Table #8703 suppressed under BTS
   Table #8709 suppressed under BTS
-  Table #8710 suppressed under BTS
   Table #8711 suppressed under BTS
-  Table #8712 suppressed under BTS
-  Table #8718 suppressed under BTS
-  Table #8719 suppressed under BTS
-  Table #8720 suppressed under BTS
   Table #8721 suppressed under BTS
   Table #8724 suppressed under BTS
-  Table #8728 suppressed under BTS
-  Table #8729 suppressed under BTS
-  Table #8730 suppressed under BTS
-  Table #8736 suppressed under BTS
-  Table #8739 suppressed under BTS
-  Table #8740 suppressed under BTS
-  Table #8741 suppressed under BTS
   Table #8742 suppressed under BTS
-  Table #8744 suppressed under BTS
-  Table #8754 suppressed under BTS
   Table #8757 suppressed under BTS
-  Table #8763 suppressed under BTS
-  Table #8766 suppressed under BTS
   Table #8772 suppressed under BTS
   Table #8775 suppressed under BTS
   Table #8777 suppressed under BTS
-  Table #8779 suppressed under BTS
   Table #8780 suppressed under BTS
-  Table #8781 suppressed under BTS
   Table #8784 suppressed under BTS
-  Table #8785 suppressed under BTS
-  Table #8786 suppressed under BTS
   Table #8787 suppressed under BTS
   Table #8788 suppressed under BTS
   Table #8789 suppressed under BTS
   Table #8790 suppressed under BTS
-  Table #8791 suppressed under BTS
-  Table #8792 suppressed under BTS
   Table #8793 suppressed under BTS
   Table #8794 suppressed under BTS
   Table #8795 suppressed under BTS
@@ -4660,8 +3887,6 @@
   Table #8797 suppressed under BTS
   Table #8798 suppressed under BTS
   Table #8799 suppressed under BTS
-  Table #8800 suppressed under BTS
-  Table #8801 suppressed under BTS
   Table #8802 suppressed under BTS
   Table #8805 suppressed under BTS
   Table #8806 suppressed under BTS
@@ -4677,106 +3902,54 @@
   Table #8818 suppressed under BTS
   Table #8819 suppressed under BTS
   Table #8820 suppressed under BTS
-  Table #8823 suppressed under BTS
-  Table #8826 suppressed under BTS
   Table #8827 suppressed under BTS
   Table #8828 suppressed under BTS
   Table #8829 suppressed under BTS
   Table #8832 suppressed under BTS
-  Table #8835 suppressed under BTS
-  Table #8836 suppressed under BTS
-  Table #8837 suppressed under BTS
-  Table #8838 suppressed under BTS
   Table #8841 suppressed under BTS
   Table #8844 suppressed under BTS
-  Table #8845 suppressed under BTS
-  Table #8846 suppressed under BTS
   Table #8847 suppressed under BTS
   Table #8848 suppressed under BTS
   Table #8849 suppressed under BTS
   Table #8850 suppressed under BTS
-  Table #8851 suppressed under BTS
-  Table #8852 suppressed under BTS
   Table #8853 suppressed under BTS
   Table #8856 suppressed under BTS
-  Table #8865 suppressed under BTS
   Table #8868 suppressed under BTS
-  Table #8874 suppressed under BTS
   Table #8879 suppressed under BTS
-  Table #8881 suppressed under BTS
   Table #8882 suppressed under BTS
-  Table #8883 suppressed under BTS
   Table #8886 suppressed under BTS
-  Table #8889 suppressed under BTS
-  Table #8892 suppressed under BTS
-  Table #8895 suppressed under BTS
-  Table #8896 suppressed under BTS
   Table #8897 suppressed under BTS
-  Table #8898 suppressed under BTS
-  Table #8899 suppressed under BTS
-  Table #8900 suppressed under BTS
   Table #8901 suppressed under BTS
-  Table #8902 suppressed under BTS
-  Table #8903 suppressed under BTS
   Table #8904 suppressed under BTS
   Table #8907 suppressed under BTS
   Table #8908 suppressed under BTS
   Table #8909 suppressed under BTS
   Table #8910 suppressed under BTS
-  Table #8915 suppressed under BTS
   Table #8919 suppressed under BTS
   Table #8922 suppressed under BTS
   Table #8923 suppressed under BTS
   Table #8924 suppressed under BTS
   Table #8925 suppressed under BTS
-  Table #8926 suppressed under BTS
   Table #8927 suppressed under BTS
-  Table #8928 suppressed under BTS
   Table #8934 suppressed under BTS
-  Table #8935 suppressed under BTS
-  Table #8936 suppressed under BTS
   Table #8937 suppressed under BTS
-  Table #8938 suppressed under BTS
-  Table #8939 suppressed under BTS
   Table #8940 suppressed under BTS
-  Table #8944 suppressed under BTS
-  Table #8945 suppressed under BTS
   Table #8946 suppressed under BTS
-  Table #8947 suppressed under BTS
-  Table #8948 suppressed under BTS
-  Table #8949 suppressed under BTS
-  Table #8950 suppressed under BTS
   Table #8951 suppressed under BTS
-  Table #8952 suppressed under BTS
-  Table #8953 suppressed under BTS
   Table #8954 suppressed under BTS
-  Table #8955 suppressed under BTS
-  Table #8956 suppressed under BTS
-  Table #8957 suppressed under BTS
   Table #8958 suppressed under BTS
-  Table #8959 suppressed under BTS
-  Table #8960 suppressed under BTS
   Table #8961 suppressed under BTS
   Table #8962 suppressed under BTS
   Table #8963 suppressed under BTS
   Table #8964 suppressed under BTS
-  Table #8973 suppressed under BTS
   Table #8975 suppressed under BTS
-  Table #8981 suppressed under BTS
   Table #8987 suppressed under BTS
-  Table #8989 suppressed under BTS
-  Table #8990 suppressed under BTS
-  Table #8991 suppressed under BTS
   Table #8993 suppressed under BTS
   Table #8999 suppressed under BTS
   Table #9009 suppressed under BTS
   Table #9011 suppressed under BTS
-  Table #9015 suppressed under BTS
-  Table #9017 suppressed under BTS
   Table #9020 suppressed under BTS
-  Table #9022 suppressed under BTS
   Table #9023 suppressed under BTS
-  Table #9024 suppressed under BTS
   Table #9025 suppressed under BTS
   Table #9026 suppressed under BTS
   Table #9027 suppressed under BTS
@@ -4787,7 +3960,6 @@
   Table #9034 suppressed under BTS
   Table #9035 suppressed under BTS
   Table #9036 suppressed under BTS
-  Table #9038 suppressed under BTS
   Table #9040 suppressed under BTS
   Table #9041 suppressed under BTS
   Table #9042 suppressed under BTS
@@ -4797,13 +3969,7 @@
   Table #9046 suppressed under BTS
   Table #9047 suppressed under BTS
   Table #9048 suppressed under BTS
-  Table #9050 suppressed under BTS
-  Table #9052 suppressed under BTS
   Table #9053 suppressed under BTS
-  Table #9054 suppressed under BTS
-  Table #9058 suppressed under BTS
-  Table #9059 suppressed under BTS
-  Table #9060 suppressed under BTS
   Table #9063 suppressed under BTS
   Table #9064 suppressed under BTS
   Table #9065 suppressed under BTS
@@ -4812,8 +3978,8 @@
   Table #9071 suppressed under BTS
 = MRDCL 32 print phase completed
 = CL run completed
-  Data lines read 867
-  IDF data records 600
-  Table pages 12362
+  Data lines read 1692
+  IDF data records 1200
+  Table pages 15534
   
-= ----- 15/03/2024 10:35:23 am
+= ----- 20/03/2024 13:26:38 pm
