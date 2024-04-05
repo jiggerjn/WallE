@@ -461,7 +461,7 @@ Available/not on downtime whenever I need it;
 More convenient than offline payment methods (ex. cash, bank, and physical payment centers);
 Faster transactions;
 I was not able to bring cash;
-I use my e-wallet/fintech app to augment if I don’t have enough cash with me;
+I use my e-wallet/fintech app to augment if I donï¿½t have enough cash with me;
 More comfortable to use online channel/payment;
 For emergency purposes and I ran out of cash;
 I use my e-wallet/fintech app to earn points;
@@ -507,7 +507,7 @@ Available/not on downtime whenever I need it;
 More convenient than offline payment methods (ex. cash, bank, and physical payment centers);
 Faster transactions;
 I was not able to bring cash;
-I use my e-wallet/fintech app to augment if I don’t have enough cash with me;
+I use my e-wallet/fintech app to augment if I donï¿½t have enough cash with me;
 More comfortable to use online channel/payment;
 For emergency purposes and I ran out of cash;
 I use my e-wallet/fintech app to earn points;
@@ -572,7 +572,7 @@ It is more convenient to use when outside or in the physical store;
 Faster transactions, no need to wait for confirmation;
 I use cash if my balance or fund in my e-wallet/Fintech app is not enough;
 E-wallet/Fintech app is under maintenance/experiencing app downtime;
-Sometimes I don’t have access to internet or weak signal in the area so I can’t use my e-wallet/fintech app;
+Sometimes I donï¿½t have access to internet or weak signal in the area so I canï¿½t use my e-wallet/fintech app;
 More comfortable to use offline channel/payment;
 When ewallet is not accepted;
 Amount to be paid is too small, so no need to use other means;
@@ -580,7 +580,7 @@ I can ask other people to do the purchase/transaction for me;
 
 Have more cash;
 Not all transaction is online;
-Don’t know how to use online payment;
+Donï¿½t know how to use online payment;
 Depend on place;
 Afraid of scam;
 No account in gcash;
@@ -624,7 +624,7 @@ It is more convenient to use when outside or in the physical store;
 Faster transactions, no need to wait for confirmation;
 I use cash if my balance or fund in my e-wallet/Fintech app is not enough;
 E-wallet/Fintech app is under maintenance/experiencing app downtime;
-Sometimes I don’t have access to internet or weak signal in the area so I can’t use my e-wallet/fintech app;
+Sometimes I donï¿½t have access to internet or weak signal in the area so I canï¿½t use my e-wallet/fintech app;
 More comfortable to use offline channel/ payment;
 When ewallet is not accepted;
 Amount to be paid is too small, so no need to use other means;
@@ -632,7 +632,7 @@ I can ask other people to do the purchase/transaction for me;
 
 Have more cash;
 Not all transaction is online;
-Don’t know how to use online payment;
+Donï¿½t know how to use online payment;
 Depend on place;
 Afraid of scam;
 No account in gcash;
@@ -718,18 +718,18 @@ V = "
 It is more convenient to use when outside or in the physical store;
 Faster transactions, no need to wait for confirmation;
 E-wallet/Fintech app is under maintenance/experiencing app downtime;
-Sometimes I don’t have access to internet or weak signal in the area so I can’t use my e-wallet/ fintech app;
+Sometimes I donï¿½t have access to internet or weak signal in the area so I canï¿½t use my e-wallet/ fintech app;
 More comfortable to use cash payment;
 E-wallet is not accepted;
 Amount to be paid is too small, so no need to use other means;
 I can ask other people to do the purchase/transaction for me;
-I don’t use other modes of payment for my financial transactions;
-I don’t trust online or e-wallet for my financial transactions;
+I donï¿½t use other modes of payment for my financial transactions;
+I donï¿½t trust online or e-wallet for my financial transactions;
 I rarely fund my online or e-wallet account;
 
 Have more cash;
 Not all transaction is online;
-Don’t know how to use online payment;
+Donï¿½t know how to use online payment;
 Depend on place;
 Afraid of scam;
 No account in gcash;
@@ -1140,7 +1140,7 @@ $A_Q17a/36+([*do a = 91:92]$Q17a_[a]_other/1013[*sle]+[*End a]),
 $A_Q17a/37,
 
 $A_Q17a/50+51+12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$Q17a_[a]_other/1113+1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
-$A_Q17a/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$Q17a_[a]_other/1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
+$A_Q17a/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$Q17a_[a]_other/1113+1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
 $A_Q17a/12+([*do a = 91:92]$Q17a_[a]_other/1010[*sle]+[*End a]),
 $A_Q17a/13+([*do a = 91:92]$Q17a_[a]_other/1002[*sle]+[*End a]),
 $A_Q17a/16+([*do a = 91:92]$Q17a_[a]_other/1008+1051[*sle]+[*End a]),
@@ -1268,11 +1268,11 @@ E-WALLETS (NET)<Q>;
 
 MOBILE BANKS/DIGITAL BANK (NET)<Q>;
 `     MOBILE BANKS (SUBNET)<Q>;
-`          BPI Mobile/ Online;
-`          BDO Mobile/ Online;
-`          Landbank Mobile/ Online;
-`          Metrobank Mobile/ Online;
-`          Unionbank Mobile/ Online;
+`          BPIï¿½Mobile/ Online;
+`          BDOï¿½Mobile/ Online;
+`          Landbankï¿½Mobile/ Online;
+`          Metrobankï¿½Mobile/ Online;
+`          Unionbankï¿½Mobile/ Online;
 `          Security Bank Mobile/ Online;
 `          BDO Pay;
 `          BancNet Online;
@@ -1646,7 +1646,7 @@ $A_Q17c/36+([*do a = 91:92]$Q17c_[a]_other/1013[*sle]+[*End a]),
 $A_Q17c/37,
 
 $A_Q17c/50+51+12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$Q17c_[a]_other/1113+1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
-$A_Q17c/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$Q17c_[a]_other/1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
+$A_Q17c/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$Q17c_[a]_other/1113+1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
 $A_Q17c/12+([*do a = 91:92]$Q17c_[a]_other/1010[*sle]+[*End a]),
 $A_Q17c/13+([*do a = 91:92]$Q17c_[a]_other/1002[*sle]+[*End a]),
 $A_Q17c/16+([*do a = 91:92]$Q17c_[a]_other/1008+1051[*sle]+[*End a]),
@@ -3078,7 +3078,7 @@ VT = "QSA1. REASONS FOR HAVING BASIC ACCOUNT ONLY IN GCASH",
 V = "
 Not relevant in my daily financial transactions;
 No money/funds to use the app;
-I don’t have an available valid ID;
+I donï¿½t have an available valid ID;
 I don't feel safe with GCash;
 I don't trust GCash and/or with other similar apps;
 I encountered a problem while verifying their GCash account;
@@ -3493,17 +3493,17 @@ V = "
 I do not know how to use GCash;
 I do not know what are the different features of Gcash;
 I have no valid ID to create an account;
-I don’t know how to download the app;
+I donï¿½t know how to download the app;
 Weak or no signal/internet connection in my area;
-I don’t have a smartphone;
-I don’t have a personal mobile phone;
-I don’t need GCash/I do not have the need for it;
-I don’t send/receive money;
+I donï¿½t have a smartphone;
+I donï¿½t have a personal mobile phone;
+I donï¿½t need GCash/I do not have the need for it;
+I donï¿½t send/receive money;
 I have other family members who already have a GCash account; 
 I prefer to do cash or offline/physical transactions;
-I don’t do any transactions that require online payment;
+I donï¿½t do any transactions that require online payment;
 Registration process to make a GCash account is too complicated;
-I don’t know how to register or create a GCash account;
+I donï¿½t know how to register or create a GCash account;
 My account is not fully verified yet;
 I have no money cash-in/to put to GCash;
 I am afraid of losing money/being scammed;
@@ -3644,7 +3644,7 @@ OTHERS (NET)<Q>;
 `     My children are the ones knowledgeable about online transactions;
 `     Haven't tried yet;
 `     Not here in the Philippines, working abroad;
-`     My children don’t want it, might spend a lot;
+`     My children donï¿½t want it, might spend a lot;
 `     Not yet familiar;
 `     Have no plan yet;
 `     Still thinking about using it;
@@ -3658,7 +3658,7 @@ OTHERS (NET)<Q>;
 `     No one suggest Gcash;
 `     No time to install gcash;
 `     Still lazy to use;
-`     Don’t want to use;
+`     Donï¿½t want to use;
 `     De activated number already;
 `     Always out of the country not applicable on Ship;
 `     Hassle transaction;
@@ -3702,7 +3702,7 @@ $QCI1_98_other/1033+1034,
 $QCI1_98_other/1035+1036+1038,
 $QCI1_98_other/9999,
 R,F,
-VT = "QCI1. GCASH – MODE OF CASHING-IN",
+VT = "QCI1. GCASH ï¿½ MODE OF CASHING-IN",
 V = "
 From my bank account;
 Nearby Sari-sari store;
@@ -3750,7 +3750,7 @@ $QCO2_98_other/1013,
 $QCO2_98_other/1010+1014+1015+1016,
 $A_QCO2/10,
 R,F,
-VT = "QCO2. GCASH – MODE OF CASHING-OUT",
+VT = "QCO2. GCASH ï¿½ MODE OF CASHING-OUT",
 V = "
 Nearby Sari-sari store;
 Cash-out in convenience store (ex. 7-Eleven, Mini Stop, Alfamart, Family Mart, Lawson, etc.);
@@ -3759,7 +3759,7 @@ Cash out through family/friends;
 Payment center or facilities (ex. ExpressPay, TrueMoney, Posible);
 Supermarket (ex. SM, Puregold, Robinsons, Waltermart);
 Department store (ex. SM, Robinsons);
-Cash out using bank transfer (i.e., transfer money to my bank from GCash and use my bank’s ATM card to withdraw the money);
+Cash out using bank transfer (i.e., transfer money to my bank from GCash and use my bankï¿½s ATM card to withdraw the money);
 Cash out through GCash Pera Outlet;
 Remittance center;
 Not using cash out;
@@ -3848,13 +3848,13 @@ $I_[Q40CODES.A]_A_Q40/12+($I_[Q40CODES.A]_Q40_98_other/1012),
 R,F,
 VT = "Q40. REASONS FOR NOT USING E-WALLET N THE PAST 1 MONTH - [Q40.A]",
 V = "
-No transactions for me to use (e.g., no need to send/receive money, don’t play online games anymore, etc); 
+No transactions for me to use (e.g., no need to send/receive money, donï¿½t play online games anymore, etc); 
 My account is not fully verified; 
-I don’t know how to use;
+I donï¿½t know how to use;
 I forgot the password of my account;
 Problems with account (e.g. cannot open);
 Weak signal/no internet connection in my area to access my account;
-I currently don’t own a personal mobile phone;
+I currently donï¿½t own a personal mobile phone;
 I am afraid of being scammed;
 I have no money to put in;
 
@@ -3892,7 +3892,7 @@ Busy at work;
 Busy making module;
 
 OTHERS (NET)<Q>;
-I don’t have a valid ID;
+I donï¿½t have a valid ID;
 Just heard it;
 Just newly registered;
 Deleted already my Gcash account;
@@ -5960,7 +5960,7 @@ $Q66a_91_other/9999,
 R,F,
 VT = "Q66a. INTERNET CONNECTION (ACCESS POINT)",
 V = "
-Internet Café/Pisonet (internet access using computer owned by shop);
+Internet Cafï¿½/Pisonet (internet access using computer owned by shop);
 Office/School internet;
 Mobile Data from Prepaid or Postpaid SIM subscription;
 Free Public Wi-Fi (free internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc.); 
@@ -6862,7 +6862,7 @@ ACCESSIBILITY NET<Q>;
 `     <G1P>Can use Anywhere;
 `     <G1P>Most of the stablishment accepting;
 `     <G1P>Gcash is more available than other;
-`     <G1P>It is easier to pay because you don’t need to line up and bring a jeep;
+`     <G1P>It is easier to pay because you donï¿½t need to line up and bring a jeep;
 `     <G1P>No need to go to store;
 `     <G1P>No need to go to outside at home;
 `     <G1P>Stable internet;
