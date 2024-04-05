@@ -437,7 +437,7 @@ Total Count<C>",
 DM $TQ193a[A] = 
 $I_[Q8B2.A]_A_Q193a/1,
 $I_[Q8B2.A]_A_Q193a/2,
-$I_[Q8B2.A]_A_Q193a/3+($I_[Q8B2.A]_Q193a_98_other/1025),
+$I_[Q8B2.A]_A_Q193a/3+($I_[Q8B2.A]_Q193a_98_other/1025+1029+1034),
 $I_[Q8B2.A]_A_Q193a/4,
 $I_[Q8B2.A]_A_Q193a/5,
 $I_[Q8B2.A]_A_Q193a/6,
@@ -448,8 +448,11 @@ $I_[Q8B2.A]_Q193a_98_other/1024,
 $I_[Q8B2.A]_Q193a_98_other/1026,
 $I_[Q8B2.A]_Q193a_98_other/1027,
 $I_[Q8B2.A]_Q193a_98_other/1028,
+$I_[Q8B2.A]_Q193a_98_other/1030,
+$I_[Q8B2.A]_Q193a_98_other/1033,
+$I_[Q8B2.A]_Q193a_98_other/1035,
 
-$I_[Q8B2.A]_Q193a_98_other/1020+1021,
+$I_[Q8B2.A]_Q193a_98_other/1020+1021+1031+1032,
 R,F,
 VT = "Q193a. TRIGGERS IN USING BOTH ONLINE AND OFFLINE MODE OF TRANSACTION - ONLINE - [Q8B2STUBS.A]",
 V = "
@@ -458,7 +461,7 @@ Available/not on downtime whenever I need it;
 More convenient than offline payment methods (ex. cash, bank, and physical payment centers);
 Faster transactions;
 I was not able to bring cash;
-I use my e-wallet/fintech app to augment if I donï¿½t have enough cash with me;
+I use my e-wallet/fintech app to augment if I don’t have enough cash with me;
 More comfortable to use online channel/payment;
 For emergency purposes and I ran out of cash;
 I use my e-wallet/fintech app to earn points;
@@ -467,6 +470,10 @@ To have receipt;
 No cash in online games;
 No need go outside at home;
 Buy online game;
+Close payment center every Sunday;
+No additional fees for load;
+Even though there are outlets nearby where you can cash out;
+
 VAGUE (NET);
 
 Missing Answer<z>;
@@ -489,6 +496,10 @@ DM $TQ193a =
 [*DO A = 1:7]$TQ193a[A]/12[*SLE]+[*END A],
 [*DO A = 1:7]$TQ193a[A]/13[*SLE]+[*END A],
 [*DO A = 1:7]$TQ193a[A]/14[*SLE]+[*END A],
+[*DO A = 1:7]$TQ193a[A]/15[*SLE]+[*END A],
+[*DO A = 1:7]$TQ193a[A]/16[*SLE]+[*END A],
+[*DO A = 1:7]$TQ193a[A]/17[*SLE]+[*END A],
+
 VT = "Q193a. TRIGGERS IN USING BOTH ONLINE AND OFFLINE MODE OF TRANSACTION - ONLINE - REGARDLESS",
 V = "
 Has wide range of online and offline partners;
@@ -496,7 +507,7 @@ Available/not on downtime whenever I need it;
 More convenient than offline payment methods (ex. cash, bank, and physical payment centers);
 Faster transactions;
 I was not able to bring cash;
-I use my e-wallet/fintech app to augment if I donï¿½t have enough cash with me;
+I use my e-wallet/fintech app to augment if I don’t have enough cash with me;
 More comfortable to use online channel/payment;
 For emergency purposes and I ran out of cash;
 I use my e-wallet/fintech app to earn points;
@@ -505,6 +516,10 @@ To have receipt;
 No cash in online games;
 No need go outside at home;
 Buy online game;
+
+Close payment center every Sunday;
+No additional fees for load;
+Even though there are outlets nearby where you can cash out;
 VAGUE (NET)",
 
 
@@ -512,7 +527,7 @@ VAGUE (NET)",
 !=========
 [*DO A = 1:7]
 DM $TQ193b[A] = 
-$I_[Q8B2.A]_A_Q193b/1+($I_[Q8B2.A]_Q193b_98_other/1031+1032),
+$I_[Q8B2.A]_A_Q193b/1+($I_[Q8B2.A]_Q193b_98_other/1031+1032+1055+1060),
 $I_[Q8B2.A]_A_Q193b/2+($I_[Q8B2.A]_Q193b_98_other/1038),
 $I_[Q8B2.A]_A_Q193b/3+($I_[Q8B2.A]_Q193b_98_other/1003),
 $I_[Q8B2.A]_A_Q193b/4+($I_[Q8B2.A]_Q193b_98_other/1020+1025+1024),
@@ -531,8 +546,24 @@ $I_[Q8B2.A]_Q193b_98_other/1034,
 $I_[Q8B2.A]_Q193b_98_other/1035,
 $I_[Q8B2.A]_Q193b_98_other/1036,
 $I_[Q8B2.A]_Q193b_98_other/1037,
+$I_[Q8B2.A]_Q193b_98_other/1039+1041,
+$I_[Q8B2.A]_Q193b_98_other/1040,
+$I_[Q8B2.A]_Q193b_98_other/1042,
+$I_[Q8B2.A]_Q193b_98_other/1043,
+$I_[Q8B2.A]_Q193b_98_other/1044,
+$I_[Q8B2.A]_Q193b_98_other/1045,
+$I_[Q8B2.A]_Q193b_98_other/1046,
+$I_[Q8B2.A]_Q193b_98_other/1047,
+$I_[Q8B2.A]_Q193b_98_other/1048,
+$I_[Q8B2.A]_Q193b_98_other/1050,
+$I_[Q8B2.A]_Q193b_98_other/1051+1054,
+$I_[Q8B2.A]_Q193b_98_other/1052,
+$I_[Q8B2.A]_Q193b_98_other/1056,
+$I_[Q8B2.A]_Q193b_98_other/1057,
+$I_[Q8B2.A]_Q193b_98_other/1058,
+$I_[Q8B2.A]_Q193b_98_other/1059,
 
-$I_[Q8B2.A]_Q193b_98_other/1026+1027,
+$I_[Q8B2.A]_Q193b_98_other/1026+1027+1049+1053,
 
 R,F,
 VT = "Q193b. TRIGGERS IN USING BOTH ONLINE AND OFFLINE MODE OF TRANSACTION - OFFLINE - [Q8B2STUBS.A]",
@@ -541,15 +572,15 @@ It is more convenient to use when outside or in the physical store;
 Faster transactions, no need to wait for confirmation;
 I use cash if my balance or fund in my e-wallet/Fintech app is not enough;
 E-wallet/Fintech app is under maintenance/experiencing app downtime;
-Sometimes I donï¿½t have access to internet or weak signal in the area so I canï¿½t use my e-wallet/fintech app;
-More comfortable to use offline channel/ payment;
+Sometimes I don’t have access to internet or weak signal in the area so I can’t use my e-wallet/fintech app;
+More comfortable to use offline channel/payment;
 When ewallet is not accepted;
 Amount to be paid is too small, so no need to use other means;
 I can ask other people to do the purchase/transaction for me;
 
 Have more cash;
 Not all transaction is online;
-Donï¿½t know how to use online payment;
+Don’t know how to use online payment;
 Depend on place;
 Afraid of scam;
 No account in gcash;
@@ -557,6 +588,24 @@ Used  to it;
 Don't have phone;
 Not allowed of my parents;
 We use Gcash of my husband;
+
+Cannot access e-wallet if no data;
+cannot open my GCash;
+I prefer cash payment more;
+My Cellphone always hang;
+My e-wallet is not fully verified;
+Hard to register for load;
+Can't open my GCash lost of simcard;
+To have change;
+I have no valid ID;
+Cash is safer;
+To avoid service fee/No charges;
+No need internet connection;
+Don't know how to use GCash;
+I am already near the store;
+E-wallet has many hidden charges;
+There are stores that can be pay wallet and then cash;
+
 VAGUE (NET);
 
 Missing Answer<z>;
@@ -566,7 +615,7 @@ Total Count<C>",
 
 !========= REGARDLESS
 DM $TQ193b = 
-[*do c = 1:20]
+[*do c = 1:36]
 [*DO A = 1:7]$TQ193b[A]/[c][*SLE]+[*END A],
 [*end c]
 VT = "Q193b. TRIGGERS IN USING BOTH ONLINE AND OFFLINE MODE OF TRANSACTION - OFFLINE - REGARDLESS",
@@ -575,7 +624,7 @@ It is more convenient to use when outside or in the physical store;
 Faster transactions, no need to wait for confirmation;
 I use cash if my balance or fund in my e-wallet/Fintech app is not enough;
 E-wallet/Fintech app is under maintenance/experiencing app downtime;
-Sometimes I donï¿½t have access to internet or weak signal in the area so I canï¿½t use my e-wallet/fintech app;
+Sometimes I don’t have access to internet or weak signal in the area so I can’t use my e-wallet/fintech app;
 More comfortable to use offline channel/ payment;
 When ewallet is not accepted;
 Amount to be paid is too small, so no need to use other means;
@@ -583,7 +632,7 @@ I can ask other people to do the purchase/transaction for me;
 
 Have more cash;
 Not all transaction is online;
-Donï¿½t know how to use online payment;
+Don’t know how to use online payment;
 Depend on place;
 Afraid of scam;
 No account in gcash;
@@ -591,6 +640,24 @@ Used  to it;
 Don't have phone;
 Not allowed of my parents;
 We use Gcash of my husband;
+
+Cannot access e-wallet if no data;
+cannot open my GCash;
+I prefer cash payment more;
+My Cellphone always hang;
+My e-wallet is not fully verified;
+Hard to register for load;
+Can't open my GCash lost of simcard;
+To have change;
+I have no valid ID;
+Cash is safer;
+To avoid service fee/No charges;
+No need internet connection;
+Don't know how to use GCash;
+I am already near the store;
+E-wallet has many hidden charges;
+There are stores that can be pay wallet and then cash;
+
 VAGUE (NET)",
 
 
@@ -599,16 +666,16 @@ VAGUE (NET)",
 
 !=========
 DM $TQ193c = 
-$A_Q193c/1+($Q193c_91_other/1031+1032),
+$A_Q193c/1+($Q193c_91_other/1031+1032+1055+1060),
 $A_Q193c/2+($Q193c_91_other/1038),
-$A_Q193c/3+($Q193c_91_other/1003),
-$A_Q193c/4+($Q193c_91_other/1020+1025+1024),
-$A_Q193c/5+($Q193c_91_other/1021),
+$A_Q193c/3+($Q193c_91_other/1020+1025+1024),
+$A_Q193c/4+($Q193c_91_other/1021),
+$A_Q193c/5,
 $A_Q193c/6,
 $A_Q193c/7,
 $A_Q193c/8,
 $A_Q193c/9,
-$A_Q193c/10,
+$A_Q193c/10+($Q193c_91_other/1030),
 $A_Q193c/11,
 $Q193c_91_other/1022,
 $Q193c_91_other/1023,
@@ -621,7 +688,29 @@ $Q193c_91_other/1035,
 $Q193c_91_other/1036,
 $Q193c_91_other/1037,
 
-$Q193c_91_other/1026+1027,
+$Q193c_91_other/1039+1041,
+$Q193c_91_other/1040,
+$Q193c_91_other/1042,
+$Q193c_91_other/1043,
+$Q193c_91_other/1044,
+$Q193c_91_other/1045,
+$Q193c_91_other/1046,
+$Q193c_91_other/1047,
+$Q193c_91_other/1048,
+$Q193c_91_other/1050,
+$Q193c_91_other/1051+1054,
+$Q193c_91_other/1052,
+$Q193c_91_other/1056,
+$Q193c_91_other/1057,
+$Q193c_91_other/1058,
+$Q193c_91_other/1059,
+$Q193c_91_other/1061,
+$Q193c_91_other/1062,
+$Q193c_91_other/1063,
+$Q193c_91_other/1064,
+$Q193c_91_other/1065,
+
+$Q193c_91_other/1026+1027+1049+1053,
 
 R,F,
 VT = "Q193c. REASONS FOR USING CASH ONLY IN  FINANCIAL TRANSACTIONS",
@@ -629,18 +718,18 @@ V = "
 It is more convenient to use when outside or in the physical store;
 Faster transactions, no need to wait for confirmation;
 E-wallet/Fintech app is under maintenance/experiencing app downtime;
-Sometimes I donï¿½t have access to internet or weak signal in the area so I canï¿½t use my e-wallet/ fintech app;
+Sometimes I don’t have access to internet or weak signal in the area so I can’t use my e-wallet/ fintech app;
 More comfortable to use cash payment;
 E-wallet is not accepted;
 Amount to be paid is too small, so no need to use other means;
 I can ask other people to do the purchase/transaction for me;
-I donï¿½t use other modes of payment for my financial transactions;
-I donï¿½t trust online or e-wallet for my financial transactions;
+I don’t use other modes of payment for my financial transactions;
+I don’t trust online or e-wallet for my financial transactions;
 I rarely fund my online or e-wallet account;
 
 Have more cash;
 Not all transaction is online;
-Donï¿½t know how to use online payment;
+Don’t know how to use online payment;
 Depend on place;
 Afraid of scam;
 No account in gcash;
@@ -648,6 +737,29 @@ Used  to it;
 Don't have phone;
 Not allowed of my parents;
 We use Gcash of my husband;
+
+Cannot access e-wallet if no data;
+Cannot open my GCash;
+I prefer cash payment more;
+My Cellphone always hang;
+My e-wallet is not fully verified;
+Hard to register for load;
+Can't open my GCash lost of simcard;
+To have change;
+I have no valid ID;
+Cash is safer;
+To avoid service fee/ No charges;
+No need internet connection;
+Don't know how to use GCash;
+I am already near the store;
+E-wallet has many hidden charges;
+There are stores that can be pay wallet and then cash;
+Ease of transaction when using cash;
+Gcash is empty;
+Limited use of Gcash;
+It is necessary to pay in advance when you pay online, you will spend a few days before the due date;
+Always available;
+
 VAGUE (NET);
 
 Missing Answer<z>;
@@ -655,10 +767,11 @@ Total Count<C>",
 
 
 !=========
-DM $TQ9b = $A_Q9b/1,
-$A_Q9b/2+($Q9b_92_other/1010),
+DM $TQ9b = 
+$A_Q9b/1+($Q9b_92_other/1021)+($Q9b_91_other/1021),
+$A_Q9b/2+($Q9b_92_other/1010)+($Q9b_91_other/1010),
 $A_Q9b/3,
-$A_Q9b/99,
+$A_Q9b/99+($Q9b_92_other/1020)+($Q9b_91_other/1020),
 R,F,
 VT = "Q9b. INCIDENCE OF OWNING AN ACCOUNT",
 V = "
@@ -671,15 +784,18 @@ Total Count<C>",
 
 
 !=========
-DM $TQFP1 = $A_QFP1/1,
-$A_QFP1/2,
+DM $TQFP1 = 
+$A_QFP1/1,
+$A_QFP1/2+($QFP1_98_other/1027+1029),
 $A_QFP1/3,
 $A_QFP1/4,
-$A_QFP1/5,
-$A_QFP1/6+($QFP1_98_other/1022),
-$QFP1_98_other/1020+1021,
+$A_QFP1/5+($QFP1_98_other/1031),
+$A_QFP1/6+($QFP1_98_other/1022+1028),
+$QFP1_98_other/1020+1021+1026,
 $QFP1_98_other/1023,
-$QFP1_98_other/1024,
+$QFP1_98_other/1030,
+
+$QFP1_98_other/1024+1025,
 $A_QFP1/98.$QFP1_98_other/B,
 $A_QFP1/99,
 R,F,
@@ -693,6 +809,7 @@ Insurance (e.g. health insurance, car insurance, life insurance);
 Loan (e.g personal loan, housing loan, auto loan);
 E-Wallet;
 microfinance( card in);
+One Puhunan;
 VAGUE (NET);
 Others;
 None;
@@ -700,9 +817,10 @@ Missing Answer<z>;
 Total Count<C>",
 
 !=========
-DM $TQ70 = $A_Q70/1+($Q70_91_other/1003+1005+1006+1007+1008+1009+1010+1012+1015+1016),
+DM $TQ70 = 
+$A_Q70/1+($Q70_91_other/1003+1005+1006+1007+1008+1009+1010+1012+1015+1016),
 $A_Q70/6,
-$A_Q70/7,
+$A_Q70/7+($Q70_91_other/1030),
 $A_Q70/2,
 $A_Q70/3,
 $A_Q70/4,
@@ -782,7 +900,7 @@ $A_Q17a/16+([*do a = 91:92]$Q17a_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17a/17,
 $A_Q17a/18+([*do a = 91:92]$Q17a_[a]_other/1047[*sle]+[*end a]),
 $A_Q17a/19+([*do a = 91:92]$Q17a_[a]_other/1054[*sle]+[*end a]),
-$A_Q17a/20,
+$A_Q17a/20+([*do a = 91:92]$Q17a_[a]_other/1113[*sle]+[*end a]),
 $A_Q17a/21,
 $A_Q17a/22+([*do a = 91:92]$Q17a_[a]_other/1022[*sle]+[*end a]),
 $A_Q17a/23+([*do a = 91:92]$Q17a_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -812,6 +930,10 @@ $A_Q17a/46,
 $A_Q17a/47,
 $A_Q17a/48,
 $A_Q17a/49,
+
+$A_Q17a/50,
+$A_Q17a/51,
+$A_Q17a/52,
 
 ([*do a = 91:92]$Q17a_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17a_[a]_other/1003[*sle]+[*end a]),
@@ -865,8 +987,12 @@ $A_Q17a/49,
 ([*do a = 91:92]$Q17a_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17a_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17a_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17a_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17a_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17a_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17a_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17a_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17a_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17a_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17a/99+([*do a = 91:92]$Q17a_[a]_other/9999[*sle]+[*end a]),
@@ -922,6 +1048,10 @@ Vybe by BPI;
 PalawanPay;
 UNO Digital Bank;
 
+Own Bank;
+Netbank Mobile;
+BPI Direct BanKo;
+
 Western Union;
 Smart Padala;
 Palawan Express Remittance;
@@ -974,6 +1104,10 @@ Google Wallet;
 Bitcoin;
 Veteran bank;
 ECPay;
+Iloilo supermarket Ewallet;
+Fancy Wallet;
+Apple Pay;
+1st Valley Bank;
 
 VAGUE (NET);
 don't know;
@@ -1005,14 +1139,14 @@ $A_Q17a/34,
 $A_Q17a/36+([*do a = 91:92]$Q17a_[a]_other/1013[*sle]+[*End a]),
 $A_Q17a/37,
 
-$A_Q17a/12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$Q17a_[a]_other/1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
+$A_Q17a/50+51+12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$Q17a_[a]_other/1113+1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
 $A_Q17a/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$Q17a_[a]_other/1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
 $A_Q17a/12+([*do a = 91:92]$Q17a_[a]_other/1010[*sle]+[*End a]),
 $A_Q17a/13+([*do a = 91:92]$Q17a_[a]_other/1002[*sle]+[*End a]),
 $A_Q17a/16+([*do a = 91:92]$Q17a_[a]_other/1008+1051[*sle]+[*End a]),
 $A_Q17a/17,
 $A_Q17a/19+([*do a = 91:92]$Q17a_[a]_other/1054[*sle]+[*End a]),
-$A_Q17a/20,
+$A_Q17a/20+([*do a = 91:92]$Q17a_[a]_other/1113[*sle]+[*End a]),
 $A_Q17a/22+([*do a = 91:92]$Q17a_[a]_other/1022[*sle]+[*End a]),
 $A_Q17a/30,
 $A_Q17a/33,
@@ -1020,13 +1154,15 @@ $A_Q17a/35,
 $A_Q17a/40,
 $A_Q17a/41,
 
-$A_Q17a/18+21+29+38+39+49+([*do a = 91:92]$Q17a_[a]_other/1047+1082[*sle]+[*End a]),
+$A_Q17a/50+51+18+21+29+38+39+49+([*do a = 91:92]$Q17a_[a]_other/1047+1082[*sle]+[*End a]),
 $A_Q17a/18+([*do a = 91:92]$Q17a_[a]_other/1047[*sle]+[*End a]),
 $A_Q17a/21,
 $A_Q17a/29+([*do a = 91:92]$Q17a_[a]_other/1082[*sle]+[*End a]),
 $A_Q17a/38,
 $A_Q17a/39,
 $A_Q17a/49,
+$A_Q17a/50,
+$A_Q17a/51,
 
 $A_Q17a/5+25+26+48+([*do a = 91:92]$Q17a_[a]_other/1020+1016+1033+1060+1045[*sle]+[*End a]),
 $A_Q17a/5+([*do a = 91:92]$Q17a_[a]_other/1020[*sle]+[*End a]),
@@ -1094,8 +1230,12 @@ $A_Q17a/47,
 ([*do a = 91:92]$Q17a_[a]_other/1102[*sle]+[*End a]),
 ([*do a = 91:92]$Q17a_[a]_other/1104[*sle]+[*End a]),
 ([*do a = 91:92]$Q17a_[a]_other/1106[*sle]+[*End a]),
+([*do a = 91:92]$Q17a_[a]_other/1109[*sle]+[*End a]),
+([*do a = 91:92]$Q17a_[a]_other/1110[*sle]+[*End a]),
+([*do a = 91:92]$Q17a_[a]_other/1111[*sle]+[*End a]),
+([*do a = 91:92]$Q17a_[a]_other/1114[*sle]+[*End a]),
 
-([*do a = 91:92]$Q17a_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*End a]),
+([*do a = 91:92]$Q17a_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*End a]),
 ([*do a = 91:92]$Q17a_[a]_other/9998[*sle]+[*End a]),
 
 
@@ -1128,11 +1268,11 @@ E-WALLETS (NET)<Q>;
 
 MOBILE BANKS/DIGITAL BANK (NET)<Q>;
 `     MOBILE BANKS (SUBNET)<Q>;
-`          BPIï¿½Mobile/ Online;
-`          BDOï¿½Mobile/ Online;
-`          Landbankï¿½Mobile/ Online;
-`          Metrobankï¿½Mobile/ Online;
-`          Unionbankï¿½Mobile/ Online;
+`          BPI Mobile/ Online;
+`          BDO Mobile/ Online;
+`          Landbank Mobile/ Online;
+`          Metrobank Mobile/ Online;
+`          Unionbank Mobile/ Online;
 `          Security Bank Mobile/ Online;
 `          BDO Pay;
 `          BancNet Online;
@@ -1148,6 +1288,9 @@ MOBILE BANKS/DIGITAL BANK (NET)<Q>;
 `          Komo;
 `          OFBank;
 `          Uno digital Bank;
+`          OwnBank;
+`          NetBank Mobile;
+
 
 E-REMITTANCES (NET)<Q>;
 `     TrueMoney;
@@ -1215,6 +1358,11 @@ OTHERS (NET)<Q>;
 `     Bitcoin;
 `     Veteran bank;
 `     ECPay;
+`     Iloilo supermarket Ewallet;
+`     Fancy Wallet;
+`     Apple Pay;
+`     1st Valley Bank;
+
 
 VAGUE (NET);
 don't know;
@@ -1247,7 +1395,7 @@ $A_Q17b/16+([*do a = 91:92]$Q17b_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17b/17,
 $A_Q17b/18+([*do a = 91:92]$Q17b_[a]_other/1047[*sle]+[*end a]),
 $A_Q17b/19+([*do a = 91:92]$Q17b_[a]_other/1054[*sle]+[*end a]),
-$A_Q17b/20,
+$A_Q17b/20+([*do a = 91:92]$Q17b_[a]_other/1113[*sle]+[*end a]),
 $A_Q17b/21,
 $A_Q17b/22+([*do a = 91:92]$Q17b_[a]_other/1022[*sle]+[*end a]),
 $A_Q17b/23+([*do a = 91:92]$Q17b_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -1277,6 +1425,10 @@ $A_Q17b/46,
 $A_Q17b/47,
 $A_Q17b/48,
 $A_Q17b/49,
+
+$A_Q17b/50,
+$A_Q17b/51,
+$A_Q17b/52,
 
 ([*do a = 91:92]$Q17b_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17b_[a]_other/1003[*sle]+[*end a]),
@@ -1330,8 +1482,12 @@ $A_Q17b/49,
 ([*do a = 91:92]$Q17b_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17b_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17b_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17b_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17b_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17b_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17b_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17b_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17b_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17b_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17b/99+([*do a = 91:92]$Q17b_[a]_other/9999[*sle]+[*end a]),
@@ -1363,7 +1519,7 @@ $A_Q17c/16+([*do a = 91:92]$Q17c_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17c/17,
 $A_Q17c/18+([*do a = 91:92]$Q17c_[a]_other/1047[*sle]+[*end a]),
 $A_Q17c/19+([*do a = 91:92]$Q17c_[a]_other/1054[*sle]+[*end a]),
-$A_Q17c/20,
+$A_Q17c/20+([*do a = 91:92]$Q17c_[a]_other/1113[*sle]+[*end a]),
 $A_Q17c/21,
 $A_Q17c/22+([*do a = 91:92]$Q17c_[a]_other/1022[*sle]+[*end a]),
 $A_Q17c/23+([*do a = 91:92]$Q17c_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -1393,6 +1549,10 @@ $A_Q17c/46,
 $A_Q17c/47,
 $A_Q17c/48,
 $A_Q17c/49,
+
+$A_Q17c/50,
+$A_Q17c/51,
+$A_Q17c/52,
 
 ([*do a = 91:92]$Q17c_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17c_[a]_other/1003[*sle]+[*end a]),
@@ -1446,8 +1606,12 @@ $A_Q17c/49,
 ([*do a = 91:92]$Q17c_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17c_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17c_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17c_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17c_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17c_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17c_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17c_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17c_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17c_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17c/99+([*do a = 91:92]$Q17c_[a]_other/9999[*sle]+[*end a]),
@@ -1481,14 +1645,14 @@ $A_Q17c/34,
 $A_Q17c/36+([*do a = 91:92]$Q17c_[a]_other/1013[*sle]+[*End a]),
 $A_Q17c/37,
 
-$A_Q17c/12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$Q17c_[a]_other/1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
+$A_Q17c/50+51+12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$Q17c_[a]_other/1113+1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
 $A_Q17c/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$Q17c_[a]_other/1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
 $A_Q17c/12+([*do a = 91:92]$Q17c_[a]_other/1010[*sle]+[*End a]),
 $A_Q17c/13+([*do a = 91:92]$Q17c_[a]_other/1002[*sle]+[*End a]),
 $A_Q17c/16+([*do a = 91:92]$Q17c_[a]_other/1008+1051[*sle]+[*End a]),
 $A_Q17c/17,
 $A_Q17c/19+([*do a = 91:92]$Q17c_[a]_other/1054[*sle]+[*End a]),
-$A_Q17c/20,
+$A_Q17c/20+([*do a = 91:92]$Q17c_[a]_other/1113[*sle]+[*End a]),
 $A_Q17c/22+([*do a = 91:92]$Q17c_[a]_other/1022[*sle]+[*End a]),
 $A_Q17c/30,
 $A_Q17c/33,
@@ -1496,13 +1660,15 @@ $A_Q17c/35,
 $A_Q17c/40,
 $A_Q17c/41,
 
-$A_Q17c/18+21+29+38+39+49+([*do a = 91:92]$Q17c_[a]_other/1047+1082[*sle]+[*End a]),
+$A_Q17c/50+51+18+21+29+38+39+49+([*do a = 91:92]$Q17c_[a]_other/1047+1082[*sle]+[*End a]),
 $A_Q17c/18+([*do a = 91:92]$Q17c_[a]_other/1047[*sle]+[*End a]),
 $A_Q17c/21,
 $A_Q17c/29+([*do a = 91:92]$Q17c_[a]_other/1082[*sle]+[*End a]),
 $A_Q17c/38,
 $A_Q17c/39,
 $A_Q17c/49,
+$A_Q17c/50,
+$A_Q17c/51,
 
 $A_Q17c/5+25+26+48+([*do a = 91:92]$Q17c_[a]_other/1020+1016+1033+1060+1045[*sle]+[*End a]),
 $A_Q17c/5+([*do a = 91:92]$Q17c_[a]_other/1020[*sle]+[*End a]),
@@ -1570,8 +1736,12 @@ $A_Q17c/47,
 ([*do a = 91:92]$Q17c_[a]_other/1102[*sle]+[*End a]),
 ([*do a = 91:92]$Q17c_[a]_other/1104[*sle]+[*End a]),
 ([*do a = 91:92]$Q17c_[a]_other/1106[*sle]+[*End a]),
+([*do a = 91:92]$Q17c_[a]_other/1109[*sle]+[*End a]),
+([*do a = 91:92]$Q17c_[a]_other/1110[*sle]+[*End a]),
+([*do a = 91:92]$Q17c_[a]_other/1111[*sle]+[*End a]),
+([*do a = 91:92]$Q17c_[a]_other/1114[*sle]+[*End a]),
 
-([*do a = 91:92]$Q17c_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*End a]),
+([*do a = 91:92]$Q17c_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*End a]),
 ([*do a = 91:92]$Q17c_[a]_other/9998[*sle]+[*End a]),
 
 
@@ -1605,7 +1775,7 @@ $A_Q17d/16+([*do a = 91:92]$Q17d_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17d/17,
 $A_Q17d/18+([*do a = 91:92]$Q17d_[a]_other/1047[*sle]+[*end a]),
 $A_Q17d/19+([*do a = 91:92]$Q17d_[a]_other/1054[*sle]+[*end a]),
-$A_Q17d/20,
+$A_Q17d/20+([*do a = 91:92]$Q17d_[a]_other/1113[*sle]+[*end a]),
 $A_Q17d/21,
 $A_Q17d/22+([*do a = 91:92]$Q17d_[a]_other/1022[*sle]+[*end a]),
 $A_Q17d/23+([*do a = 91:92]$Q17d_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -1635,6 +1805,10 @@ $A_Q17d/46,
 $A_Q17d/47,
 $A_Q17d/48,
 $A_Q17d/49,
+
+$A_Q17d/50,
+$A_Q17d/51,
+$A_Q17d/52,
 
 ([*do a = 91:92]$Q17d_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17d_[a]_other/1003[*sle]+[*end a]),
@@ -1688,8 +1862,12 @@ $A_Q17d/49,
 ([*do a = 91:92]$Q17d_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17d_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17d_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17d_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17d_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17d_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17d_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17d_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17d_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17d_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17d/99+([*do a = 91:92]$Q17d_[a]_other/9999[*sle]+[*end a]),
@@ -1721,7 +1899,7 @@ $A_Q17e/16+([*do a = 91:92]$Q17e_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17e/17,
 $A_Q17e/18+([*do a = 91:92]$Q17e_[a]_other/1047[*sle]+[*end a]),
 $A_Q17e/19+([*do a = 91:92]$Q17e_[a]_other/1054[*sle]+[*end a]),
-$A_Q17e/20,
+$A_Q17e/20+([*do a = 91:92]$Q17e_[a]_other/1113[*sle]+[*end a]),
 $A_Q17e/21,
 $A_Q17e/22+([*do a = 91:92]$Q17e_[a]_other/1022[*sle]+[*end a]),
 $A_Q17e/23+([*do a = 91:92]$Q17e_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -1751,6 +1929,10 @@ $A_Q17e/46,
 $A_Q17e/47,
 $A_Q17e/48,
 $A_Q17e/49,
+
+$A_Q17e/50,
+$A_Q17e/51,
+$A_Q17e/52,
 
 ([*do a = 91:92]$Q17e_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17e_[a]_other/1003[*sle]+[*end a]),
@@ -1804,8 +1986,12 @@ $A_Q17e/49,
 ([*do a = 91:92]$Q17e_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17e_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17e_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17e_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17e_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17e_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17e_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17e_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17e_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17e_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17e/99+([*do a = 91:92]$Q17e_[a]_other/9999[*sle]+[*end a]),
@@ -1836,7 +2022,7 @@ $A_Q17f/16+([*do a = 91:92]$Q17f_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17f/17,
 $A_Q17f/18+([*do a = 91:92]$Q17f_[a]_other/1047[*sle]+[*end a]),
 $A_Q17f/19+([*do a = 91:92]$Q17f_[a]_other/1054[*sle]+[*end a]),
-$A_Q17f/20,
+$A_Q17f/20+([*do a = 91:92]$Q17f_[a]_other/1113[*sle]+[*end a]),
 $A_Q17f/21,
 $A_Q17f/22+([*do a = 91:92]$Q17f_[a]_other/1022[*sle]+[*end a]),
 $A_Q17f/23+([*do a = 91:92]$Q17f_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -1866,6 +2052,10 @@ $A_Q17f/46,
 $A_Q17f/47,
 $A_Q17f/48,
 $A_Q17f/49,
+
+$A_Q17f/50,
+$A_Q17f/51,
+$A_Q17f/52,
 
 ([*do a = 91:92]$Q17f_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17f_[a]_other/1003[*sle]+[*end a]),
@@ -1919,8 +2109,12 @@ $A_Q17f/49,
 ([*do a = 91:92]$Q17f_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17f_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17f_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17f_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17f_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17f_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17f_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17f_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17f_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17f_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17f/99+([*do a = 91:92]$Q17f_[a]_other/9999[*sle]+[*end a]),
@@ -1952,7 +2146,7 @@ $A_Q17l/16+([*do a = 91:92]$Q17l_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17l/17,
 $A_Q17l/18+([*do a = 91:92]$Q17l_[a]_other/1047[*sle]+[*end a]),
 $A_Q17l/19+([*do a = 91:92]$Q17l_[a]_other/1054[*sle]+[*end a]),
-$A_Q17l/20,
+$A_Q17l/20+([*do a = 91:92]$Q17l_[a]_other/1113[*sle]+[*end a]),
 $A_Q17l/21,
 $A_Q17l/22+([*do a = 91:92]$Q17l_[a]_other/1022[*sle]+[*end a]),
 $A_Q17l/23+([*do a = 91:92]$Q17l_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -1982,6 +2176,10 @@ $A_Q17l/46,
 $A_Q17l/47,
 $A_Q17l/48,
 $A_Q17l/49,
+
+$A_Q17l/50,
+$A_Q17l/51,
+$A_Q17l/52,
 
 ([*do a = 91:92]$Q17l_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17l_[a]_other/1003[*sle]+[*end a]),
@@ -2035,8 +2233,12 @@ $A_Q17l/49,
 ([*do a = 91:92]$Q17l_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17l_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17l_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17l_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17l_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17l_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17l_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17l_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17l_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17l_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17l/99+([*do a = 91:92]$Q17l_[a]_other/9999[*sle]+[*end a]),
@@ -2068,7 +2270,7 @@ $A_Q17k/16+([*do a = 91:92]$Q17k_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q17k/17,
 $A_Q17k/18+([*do a = 91:92]$Q17k_[a]_other/1047[*sle]+[*end a]),
 $A_Q17k/19+([*do a = 91:92]$Q17k_[a]_other/1054[*sle]+[*end a]),
-$A_Q17k/20,
+$A_Q17k/20+([*do a = 91:92]$Q17k_[a]_other/1113[*sle]+[*end a]),
 $A_Q17k/21,
 $A_Q17k/22+([*do a = 91:92]$Q17k_[a]_other/1022[*sle]+[*end a]),
 $A_Q17k/23+([*do a = 91:92]$Q17k_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -2098,6 +2300,10 @@ $A_Q17k/46,
 $A_Q17k/47,
 $A_Q17k/48,
 $A_Q17k/49,
+
+$A_Q17k/50,
+$A_Q17k/51,
+$A_Q17k/52,
 
 ([*do a = 91:92]$Q17k_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q17k_[a]_other/1003[*sle]+[*end a]),
@@ -2151,14 +2357,144 @@ $A_Q17k/49,
 ([*do a = 91:92]$Q17k_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q17k_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q17k_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17k_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17k_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17k_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17k_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q17k_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q17k_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q17k_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q17k/99+([*do a = 91:92]$Q17k_[a]_other/9999[*sle]+[*end a]),
 R,F,
 VT = "Q17k. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 WEEK",
 V = $TQ17a,
+
+!=========
+
+IF $A_Q17o/91, OM $Q17o_91_other = $Q16a_91_other,
+IF $A_Q17o/92, OM $Q17o_92_other = $Q16b_92_other,
+
+DM $TQ17o = 
+$A_Q17o/1+([*do a = 91:92]$Q17o_[a]_other/1056[*sle]+[*end a]),
+$A_Q17o/2+([*do a = 91:92]$Q17o_[a]_other/1050+1043[*sle]+[*end a]),
+$A_Q17o/3+([*do a = 91:92]$Q17o_[a]_other/1062[*sle]+[*end a]),
+$A_Q17o/4+([*do a = 91:92]$Q17o_[a]_other/1058+1061[*sle]+[*end a]),
+$A_Q17o/5+([*do a = 91:92]$Q17o_[a]_other/1020[*sle]+[*end a]),
+$A_Q17o/6+([*do a = 91:92]$Q17o_[a]_other/1080[*sle]+[*end a]),
+$A_Q17o/7+([*do a = 91:92]$Q17o_[a]_other/1029[*sle]+[*end a]),
+$A_Q17o/8+([*do a = 91:92]$Q17o_[a]_other/1078[*sle]+[*end a]),
+$A_Q17o/9,
+$A_Q17o/10+([*do a = 91:92]$Q17o_[a]_other/1079[*sle]+[*end a]),
+$A_Q17o/11+([*do a = 91:92]$Q17o_[a]_other/1072[*sle]+[*end a]),
+$A_Q17o/12+([*do a = 91:92]$Q17o_[a]_other/1010[*sle]+[*end a]),
+$A_Q17o/13+([*do a = 91:92]$Q17o_[a]_other/1002[*sle]+[*end a]),
+$A_Q17o/14+([*do a = 91:92]$Q17o_[a]_other/1089[*sle]+[*end a]),
+$A_Q17o/16+([*do a = 91:92]$Q17o_[a]_other/1008+1051[*sle]+[*end a]),
+$A_Q17o/17,
+$A_Q17o/18+([*do a = 91:92]$Q17o_[a]_other/1047[*sle]+[*end a]),
+$A_Q17o/19+([*do a = 91:92]$Q17o_[a]_other/1054[*sle]+[*end a]),
+$A_Q17o/20+([*do a = 91:92]$Q17o_[a]_other/1113[*sle]+[*end a]),
+$A_Q17o/21,
+$A_Q17o/22+([*do a = 91:92]$Q17o_[a]_other/1022[*sle]+[*end a]),
+$A_Q17o/23+([*do a = 91:92]$Q17o_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
+$A_Q17o/24+([*do a = 91:92]$Q17o_[a]_other/1015[*sle]+[*end a]),
+$A_Q17o/25+([*do a = 91:92]$Q17o_[a]_other/1016+1033+1060[*sle]+[*end a]),
+$A_Q17o/26+([*do a = 91:92]$Q17o_[a]_other/1045[*sle]+[*end a]),
+$A_Q17o/27,
+$A_Q17o/28+([*do a = 91:92]$Q17o_[a]_other/1042+1087[*sle]+[*end a]),
+$A_Q17o/29+([*do a = 91:92]$Q17o_[a]_other/1082[*sle]+[*end a]),
+$A_Q17o/30,
+$A_Q17o/31,
+$A_Q17o/32+([*do a = 91:92]$Q17o_[a]_other/1071[*sle]+[*end a]),
+$A_Q17o/33,
+$A_Q17o/34,
+$A_Q17o/35,
+$A_Q17o/36+([*do a = 91:92]$Q17o_[a]_other/1013[*sle]+[*end a]),
+$A_Q17o/37,
+$A_Q17o/38,
+$A_Q17o/39,
+$A_Q17o/40,
+$A_Q17o/41,
+$A_Q17o/42+([*do a = 91:92]$Q17o_[a]_other/1083[*sle]+[*end a]),
+$A_Q17o/43,
+$A_Q17o/44,
+$A_Q17o/45,
+$A_Q17o/46,
+$A_Q17o/47,
+$A_Q17o/48,
+$A_Q17o/49,
+
+$A_Q17o/50,
+$A_Q17o/51,
+$A_Q17o/52,
+
+([*do a = 91:92]$Q17o_[a]_other/1001[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1003[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1004+1005+1006+1017[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1007[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1011[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1012[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1014[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1018[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1019+1041[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1021[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1028[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1030[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1031[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1032[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1034[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1035[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1036[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1040[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1044[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1048[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1049[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1052[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1055[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1057[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1063[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1064[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1065[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1066[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1067[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1068[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1070[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1073[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1074[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1076[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1077[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1081[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1084[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1085[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1086[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1088[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1090+1092[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1093[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1094[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1096[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1097[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1098[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1099[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1100[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1102[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1104[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/1114[*sle]+[*end a]),
+
+([*do a = 91:92]$Q17o_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
+([*do a = 91:92]$Q17o_[a]_other/9998[*sle]+[*end a]),
+
+$A_Q17o/99+([*do a = 91:92]$Q17o_[a]_other/9999[*sle]+[*end a]),
+R,F,
+VT = "Q17o. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 MONTH",
+V = $TQ17a,
+
+
 
 [*DATA Q16Title = 
 Q16a. TOM,
@@ -2170,8 +2506,6 @@ Q16f. 2nd Favorite,
 Q16g. Recommended]
 
 
-IF $A_Q16a/91, OM $Q16a_91_other = $Q16a_91_other,
-IF $A_Q16a/92, OM $Q16a_92_other = $Q16a_92_other,
 
 IF $A_Q16b/91, OM $Q16b_91_other = $Q16a_91_other,
 IF $A_Q16b/92, OM $Q16b_92_other = $Q16b_92_other,
@@ -2214,7 +2548,7 @@ $A_Q16[~b]/16+([*do a = 91:92]$Q16[~b]_[a]_other/1008+1051[*sle]+[*end a]),
 $A_Q16[~b]/17,
 $A_Q16[~b]/18+([*do a = 91:92]$Q16[~b]_[a]_other/1047[*sle]+[*end a]),
 $A_Q16[~b]/19+([*do a = 91:92]$Q16[~b]_[a]_other/1054[*sle]+[*end a]),
-$A_Q16[~b]/20,
+$A_Q16[~b]/20+([*do a = 91:92]$Q16[~b]_[a]_other/1113[*sle]+[*end a]),
 $A_Q16[~b]/21,
 $A_Q16[~b]/22+([*do a = 91:92]$Q16[~b]_[a]_other/1022[*sle]+[*end a]),
 $A_Q16[~b]/23+([*do a = 91:92]$Q16[~b]_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -2244,6 +2578,10 @@ $A_Q16[~b]/46,
 $A_Q16[~b]/47,
 $A_Q16[~b]/48,
 $A_Q16[~b]/49,
+
+$A_Q16[~b]/50,
+$A_Q16[~b]/51,
+$A_Q16[~b]/52,
 
 ([*do a = 91:92]$Q16[~b]_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$Q16[~b]_[a]_other/1003[*sle]+[*end a]),
@@ -2297,8 +2635,12 @@ $A_Q16[~b]/49,
 ([*do a = 91:92]$Q16[~b]_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$Q16[~b]_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$Q16[~b]_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$Q16[~b]_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$Q16[~b]_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$Q16[~b]_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$Q16[~b]_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$Q16[~b]_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$Q16[~b]_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$Q16[~b]_[a]_other/9998[*sle]+[*end a]),
 
 $A_Q16[~b]/99+([*do a = 91:92]$Q16[~b]_[a]_other/9999[*sle]+[*end a]),
@@ -2358,10 +2700,14 @@ Xendpay;
 Go Tyme;
 Vybe by BPI;
 PalawanPay;
-UNO Digital Bank]
+UNO Digital Bank;
 
-[*DATA Q17CODES = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,91+92,99]
-[*DO B = 1:48]
+Own Bank;
+Netbank Mobile;
+BPI Direct BanKo]
+
+[*DATA Q17CODES = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,91+92,99]
+[*DO B = 1:51]
 DM $TQ17h[b] = $T_Q17h_[Q17CODES.B]/1-99,R,F,
 VT = "Q17h. # OF ACCOUNTS PER BRAND - [Q17ACCT.B]",
 V = "
@@ -2374,7 +2720,7 @@ Total Count<C>",
 
 
 DM $BRAND_LAD = 
-[*DO A = 1:48]
+[*DO A = 1:51]
 $TQ16d/[A],
 ($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
 ($TQ16a/N[A]).($TQ16b/[A]),
@@ -2387,12 +2733,13 @@ $TQ17a/[A],
 $TQ17c/[A],
 $TQ17k/[A],
 $TQ17b/[A],
+$TQ17o/[A],
 $TQ16f/[A]+$TQ16e/[A],
 $TQ16g/[A],
 [*enda]
 VT = "Q16-Q17. BRAND FUNNEL",
 V = "
-[*DOA=1:48]
+[*DOA=1:51]
 [Q17ACCT.A]\
 `     Q16d. Total Awareness;
 `     Q16c. Aided;
@@ -2406,6 +2753,7 @@ V = "
 `     Q17c. P4W;
 `     Q17k. P1W;
 `     Q17b. BUMO;
+`     Q17O. P1M;
 `     Q16e/Q16f. Favorite;
 `     Q16g. Recommended[*sle];
 [*ENDA]",
@@ -2452,6 +2800,7 @@ $TQ17d/([NOM1.a]),
 $TQ17a/([NOM1.a]),
 $TQ17c/([NOM1.a]),
 $TQ17b/([NOM1.a]),
+$TQ17O/([NOM1.a]),
 $TQ16e/([NOM1.a]),
 $TQ16g/([NOM1.a]),
 XT = "Q16-Q17. BRAND FUNNEL",
@@ -2466,6 +2815,7 @@ Q17d. With Existing Acc;
 Q17a. P2M;
 Q17c. P4W;
 Q17b. BUMO;
+Q17O. P1M;
 Q16e. Favorite;
 Q16g. Recommended",
 [*END A]
@@ -2513,7 +2863,7 @@ $I_[A]_A_Q16h/4,
 $I_[A]_A_Q16h/5,
 $I_[A]_A_Q16h/6,
 $I_[A]_A_Q16h/7,
-$I_[A]_A_Q16h/8,
+$I_[A]_A_Q16h/8+($I_[A]_Q16h_91_other/1119),
 $I_[A]_A_Q16h/9,
 $I_[A]_A_Q16h/10+($I_[A]_Q16h_91_other/1010+1089),
 $I_[A]_A_Q16h/11+($I_[A]_Q16h_91_other/1036),
@@ -2521,7 +2871,7 @@ $I_[A]_A_Q16h/12+($I_[A]_Q16h_91_other/1035+1037+1039+1040+1046+1050+1055+1064+1
 $I_[A]_A_Q16h/13,
 $I_[A]_A_Q16h/14+($I_[A]_Q16h_91_other/1032+1033+1041+1044),
 $I_[A]_A_Q16h/15+($I_[A]_Q16h_91_other/1091),
-$I_[A]_A_Q16h/16+($I_[A]_Q16h_91_other/1061),
+$I_[A]_A_Q16h/16+($I_[A]_Q16h_91_other/1061+1120),
 $I_[A]_A_Q16h/17,
 $I_[A]_A_Q16h/18+($I_[A]_Q16h_91_other/1031),
 $I_[A]_A_Q16h/19+($I_[A]_Q16h_91_other/1080+1083),
@@ -2573,6 +2923,13 @@ $I_[A]_Q16h_91_other/1108,
 $I_[A]_Q16h_91_other/1109,
 $I_[A]_Q16h_91_other/1110,
 $I_[A]_Q16h_91_other/1111,
+$I_[A]_Q16h_91_other/1112,
+$I_[A]_Q16h_91_other/1113,
+$I_[A]_Q16h_91_other/1114,
+$I_[A]_Q16h_91_other/1115,
+$I_[A]_Q16h_91_other/1116,
+$I_[A]_Q16h_91_other/1117,
+$I_[A]_Q16h_91_other/1118,
 
 $I_[A]_Q16h_91_other/1054+1056,
 $I_[A]_Q16h_91_other/1054,
@@ -2592,17 +2949,17 @@ Celebrity endorser;
 Cinemas;
 Company website;
 Email blasts;
-Events/Activations;
+Events/Mall booths, promotion activities, kiosks,or  and community;
 Facebook;
-Heard from family/ relatives;
+Heard from family/relatives;
 Heard from friend/colleagues/workmates;
 Instagram;
 In-store materials (i.e. posters, price tags, streamers, stickers, brochures, etc.);
 Newspapers/Magazines;
-Product Displays in Stores;
+Product Displays in Stores like QR code, tent card or brand signage;
 Radio;
-Samples/leaflets;
-Transit ads;
+Tiktok;
+Transit ads such as branded delivery trucks, Jeeps, buses, taxis, LRT/MRT;
 TV;
 Twitter;
 Youtube;
@@ -2652,6 +3009,14 @@ Apps on site (unspecified);
 Blog;
 Down load celphone;
 Lazada app;
+Online jobs website;
+Payment of bills;
+Shopee app;
+PLDT;
+Social Security System (SSS);
+Government of Manila;
+Online flat form;
+
 
 UNSPECIFIED (NET)<Q>;
 `     Online Ennovation;
@@ -2665,7 +3030,7 @@ Total Count<C>",
 
 
 !=========
-[*DO B = 1:48]
+[*DO B = 1:51]
 DM $TQ17j[b] = $T_Q17j_[Q17CODES.B]/1-2,R,F,
 VT = "Q17j. STATUS OF E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE ACCOUNT - [Q17ACCT.B]",
 V = "
@@ -2702,13 +3067,18 @@ $A_QSA1/9+($SA1_98_other/1038),
 $SA1_98_other/1030,
 $SA1_98_other/1031,
 $SA1_98_other/1037,
+$SA1_98_other/1039,
+$SA1_98_other/1040,
+$SA1_98_other/1041,
+$SA1_98_other/1042,
+
 
 R,F,
 VT = "QSA1. REASONS FOR HAVING BASIC ACCOUNT ONLY IN GCASH",
 V = "
 Not relevant in my daily financial transactions;
 No money/funds to use the app;
-I donï¿½t have an available valid ID;
+I don’t have an available valid ID;
 I don't feel safe with GCash;
 I don't trust GCash and/or with other similar apps;
 I encountered a problem while verifying their GCash account;
@@ -2719,6 +3089,11 @@ I am contented with the current services offered for unverified account;
 Did not reflects on the cellphone fade when it captured;
 Not yet legal age;
 Not updated;
+
+Uninstalled my account;
+Not often used;
+Don't have my own phone;
+No funds in Gcash yet;
 
 Missing Answer<z>;
 Total Count<C>",   
@@ -2796,6 +3171,10 @@ $A_Q60/19,
 ([*do a = 91:93]$Q60_[a]_other/1080[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1101[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1103[*sle]+[*End a]),
+([*do a = 91:93]$Q60_[a]_other/1104[*sle]+[*End a]),
+([*do a = 91:93]$Q60_[a]_other/1082[*sle]+[*End a]),
+([*do a = 91:93]$Q60_[a]_other/1083[*sle]+[*End a]),
+
 
 ([*do a = 91:93]$Q60_[a]_other/1067+1070+1072[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1067[*sle]+[*End a]),
@@ -2841,7 +3220,7 @@ TRUST RELATED CONCERNS NET <Q>;
 
 VOLUNTARY EXCLUSION NET	<Q>;
 `     Dislikes managing multiple financial accounts;
-`     Not open to learning how to use financial apps;
+`     Lack of willingness to learn how to use financial apps;
 
 KNOWLEDGE NET <Q>;
 `     Lack of knowledge on features;
@@ -2902,6 +3281,10 @@ Not well known;
 Change number;
 Simcard are broken;
 No simcard;
+Not often used;
+Not to disturb;
+Phone has a verification problem;
+
 DOCUMENTS (NET)<Q>;
 `     Lacks of documents;
 `     Under age;
@@ -3110,17 +3493,17 @@ V = "
 I do not know how to use GCash;
 I do not know what are the different features of Gcash;
 I have no valid ID to create an account;
-I donï¿½t know how to download the app;
+I don’t know how to download the app;
 Weak or no signal/internet connection in my area;
-I donï¿½t have a smartphone;
-I donï¿½t have a personal mobile phone;
-I donï¿½t need GCash/I do not have the need for it;
-I donï¿½t send/receive money;
+I don’t have a smartphone;
+I don’t have a personal mobile phone;
+I don’t need GCash/I do not have the need for it;
+I don’t send/receive money;
 I have other family members who already have a GCash account; 
 I prefer to do cash or offline/physical transactions;
-I donï¿½t do any transactions that require online payment;
+I don’t do any transactions that require online payment;
 Registration process to make a GCash account is too complicated;
-I donï¿½t know how to register or create a GCash account;
+I don’t know how to register or create a GCash account;
 My account is not fully verified yet;
 I have no money cash-in/to put to GCash;
 I am afraid of losing money/being scammed;
@@ -3261,7 +3644,7 @@ OTHERS (NET)<Q>;
 `     My children are the ones knowledgeable about online transactions;
 `     Haven't tried yet;
 `     Not here in the Philippines, working abroad;
-`     My children donï¿½t want it, might spend a lot;
+`     My children don’t want it, might spend a lot;
 `     Not yet familiar;
 `     Have no plan yet;
 `     Still thinking about using it;
@@ -3275,7 +3658,7 @@ OTHERS (NET)<Q>;
 `     No one suggest Gcash;
 `     No time to install gcash;
 `     Still lazy to use;
-`     Donï¿½t want to use;
+`     Don’t want to use;
 `     De activated number already;
 `     Always out of the country not applicable on Ship;
 `     Hassle transaction;
@@ -3293,10 +3676,11 @@ Missing Answer<z>;
 Total Count<C>",   
 
 !=========
-DM $TQCI1 = $A_QCI1/1+($QCI1_98_other/1030),
+DM $TQCI1 = 
+$A_QCI1/1+($QCI1_98_other/1030+1037),
 $A_QCI1/2,
 $A_QCI1/3+($QCI1_98_other/1013),
-$A_QCI1/4,
+$A_QCI1/4+($QCI1_98_other/1032),
 $A_QCI1/5+($QCI1_98_other/1026),
 $A_QCI1/6,
 $A_QCI1/7,
@@ -3304,22 +3688,46 @@ $A_QCI1/8,
 $A_QCI1/9,
 $A_QCI1/10,
 $A_QCI1/11,
-$QCI1_98_other/1020+1021+1022+1023+1024+1025+1027+1028+1029,
+$A_QCI1/12,
+$QCI1_98_other/1020,
+$QCI1_98_other/1021,
+$QCI1_98_other/1022,
+$QCI1_98_other/1023,
+$QCI1_98_other/1024+1025,
+$QCI1_98_other/1027,
+$QCI1_98_other/1028,
+$QCI1_98_other/1029,
+$QCI1_98_other/1033+1034,
+
+$QCI1_98_other/1035+1036+1038,
 $QCI1_98_other/9999,
 R,F,
-VT = "QCI1. GCASH ï¿½ MODE OF CASHING-IN",
+VT = "QCI1. GCASH – MODE OF CASHING-IN",
 V = "
 From my bank account;
 Nearby Sari-sari store;
 Cash-in in convenience store (ex. 7-Eleven, Mini Stop, Alfamart, Family Mart, Lawson, etc.);
 My employer sends my salary through GCash;
-From my family/ friends;
+From my family/friends;
 Payment center (ex. Bayad Center, Globe store, ECPay);
 Supermarket (ex. SM, Puregold, Robinsons, Waltermart);
 Department store (ex. SM, Robinsons);
 Drugstore (ex. Mercury Drug, Watsons);
 Machine (ex. TouchPay, Pay & Go);
 Cash-in agents (does not include Sari-sari store);
+Cash-in in GCash Pera Outlet;
+
+Payment; 
+Cash out only;
+For Costomer;
+Cash in only;
+Remittance Center;
+Game rewards;
+Load;
+Payment for school;
+No money to fund to cash-in;
+
+
 VAGUE (NET);
 None;
 Missing Answer<z>;
@@ -3327,20 +3735,22 @@ Total Count<C>",
 
 
 !=========
-DM $TQCO2 = $A_QCO2/1+($QCO2_98_other/1011),
+DM $TQCO2 = 
+$A_QCO2/1+($QCO2_98_other/1011),
 $A_QCO2/2,
 $A_QCO2/3,
 $A_QCO2/4,
 $A_QCO2/5,
 $A_QCO2/6,
 $A_QCO2/7,
-$A_QCO2/8,
+$A_QCO2/8+($QCO2_98_other/1017),
+$A_QCO2/9,
 $QCO2_98_other/1012,
 $QCO2_98_other/1013,
-$QCO2_98_other/1010+1014+1015,
+$QCO2_98_other/1010+1014+1015+1016,
 $A_QCO2/10,
 R,F,
-VT = "QCO2. GCASH ï¿½ MODE OF CASHING-OUT",
+VT = "QCO2. GCASH – MODE OF CASHING-OUT",
 V = "
 Nearby Sari-sari store;
 Cash-out in convenience store (ex. 7-Eleven, Mini Stop, Alfamart, Family Mart, Lawson, etc.);
@@ -3349,7 +3759,8 @@ Cash out through family/friends;
 Payment center or facilities (ex. ExpressPay, TrueMoney, Posible);
 Supermarket (ex. SM, Puregold, Robinsons, Waltermart);
 Department store (ex. SM, Robinsons);
-Cash out using bank transfer (i.e., transfer money to my bank from GCash and use my bankï¿½s ATM card to withdraw the money);
+Cash out using bank transfer (i.e., transfer money to my bank from GCash and use my bank’s ATM card to withdraw the money);
+Cash out through GCash Pera Outlet;
 Remittance center;
 Not using cash out;
 VAGUE (NET);
@@ -3381,9 +3792,11 @@ $I_[Q40CODES.A]_A_Q40/8+($I_[Q40CODES.A]_Q40_98_other/1008),
 $I_[Q40CODES.A]_A_Q40/11+($I_[Q40CODES.A]_Q40_98_other/1011),
 $I_[Q40CODES.A]_A_Q40/12+($I_[Q40CODES.A]_Q40_98_other/1012),
 
-($I_[Q40CODES.A]_Q40_98_other/1020+1021),
+($I_[Q40CODES.A]_Q40_98_other/1020+1021+1119),
 ($I_[Q40CODES.A]_Q40_98_other/1020),
 ($I_[Q40CODES.A]_Q40_98_other/1021),
+($I_[Q40CODES.A]_Q40_98_other/1119),
+
 ($I_[Q40CODES.A]_Q40_98_other/1030+1031),
 ($I_[Q40CODES.A]_Q40_98_other/1030),
 ($I_[Q40CODES.A]_Q40_98_other/1031),
@@ -3406,7 +3819,7 @@ $I_[Q40CODES.A]_A_Q40/12+($I_[Q40CODES.A]_Q40_98_other/1012),
 ($I_[Q40CODES.A]_Q40_98_other/1090+1091),
 ($I_[Q40CODES.A]_Q40_98_other/1090),
 ($I_[Q40CODES.A]_Q40_98_other/1091),
-($I_[Q40CODES.A]_Q40_98_other/1009+1101+1102+1103+1104+1105+1106+1107+1108+1109+1110+1111+1112+1113),
+($I_[Q40CODES.A]_Q40_98_other/1009+1101+1102+1103+1104+1105+1106+1107+1108+1109+1110+1111+1112+1113+1115+1116+1117+1120+1022+1023+1024),
 ($I_[Q40CODES.A]_Q40_98_other/1009),
 ($I_[Q40CODES.A]_Q40_98_other/1101),
 ($I_[Q40CODES.A]_Q40_98_other/1102),
@@ -3422,24 +3835,33 @@ $I_[Q40CODES.A]_A_Q40/12+($I_[Q40CODES.A]_Q40_98_other/1012),
 ($I_[Q40CODES.A]_Q40_98_other/1112),
 ($I_[Q40CODES.A]_Q40_98_other/1113),
 ($I_[Q40CODES.A]_Q40_98_other/1115),
+($I_[Q40CODES.A]_Q40_98_other/1116),
+($I_[Q40CODES.A]_Q40_98_other/1117),
+($I_[Q40CODES.A]_Q40_98_other/1120),
+($I_[Q40CODES.A]_Q40_98_other/1022),
+($I_[Q40CODES.A]_Q40_98_other/1023),
+($I_[Q40CODES.A]_Q40_98_other/1024),
+
+($I_[Q40CODES.A]_Q40_98_other/1118),
 
 ($I_[Q40CODES.A]_Q40_98_other/9999),
 R,F,
 VT = "Q40. REASONS FOR NOT USING E-WALLET N THE PAST 1 MONTH - [Q40.A]",
 V = "
-No transactions for me to use (e.g., no need to send/receive money, donï¿½t play online games anymore, etc); 
+No transactions for me to use (e.g., no need to send/receive money, don’t play online games anymore, etc); 
 My account is not fully verified; 
-I donï¿½t know how to use;
+I don’t know how to use;
 I forgot the password of my account;
 Problems with account (e.g. cannot open);
 Weak signal/no internet connection in my area to access my account;
-I currently donï¿½t own a personal mobile phone;
+I currently don’t own a personal mobile phone;
 I am afraid of being scammed;
 I have no money to put in;
 
 TECHNICAL CONCERN (NET)<Q>;
 Account was hacked;
 Gcash system is always down;
+Not always available;
 
 FEE/ CHARGES (NET)<Q>;
 High transaction charges;
@@ -3470,7 +3892,7 @@ Busy at work;
 Busy making module;
 
 OTHERS (NET)<Q>;
-I donï¿½t have a valid ID;
+I don’t have a valid ID;
 Just heard it;
 Just newly registered;
 Deleted already my Gcash account;
@@ -3485,6 +3907,16 @@ Don't have a job;
 Lost my cellphone;
 Pay maya is rarely to use here;
 Underage;
+
+Difficult to use;
+Does not have a voucher;
+Not willing to use;
+No Well-known;
+I don't want to use an E Wallet too many;
+Need a scanner;
+
+
+VAGUE(NET);
 None;
 Missing Answer<z>;
 Total Count<C>", 
@@ -3494,7 +3926,7 @@ Total Count<C>",
 
 !========= REGARDLESS
 DM $TQ40 = 
-[*do c = 1:51]
+[*do c = 1:59]
 [*DO A  = 1:3]$TQ40R[A]/[c][*SLE]+[*END A],
 [*end c]
 R,F,
@@ -3504,7 +3936,7 @@ V = $TQ40R1,
 
 
 !=========
-[*DO B = 1:48]
+[*DO B = 1:51]
 DM $TQ45R[b] = $T_Q45_[Q17CODES.B]/1-3,R,F,
 VT = "Q45. BRAND CONSIDERATION - [Q17ACCT.B]",
 V = "
@@ -3518,7 +3950,7 @@ Total Count<C>",
 
 
 !=========
-[*DO B = 1:48]
+[*DO B = 1:51]
 DM $TQ46R[b] = $T_Q46_[Q17CODES.B]/1-6,R,F,
 VT = "Q46. WILLINGNESS TO PAY PRICE PREMIUM - [Q17ACCT.B]",
 V = "
@@ -3579,6 +4011,7 @@ Brand that helps customers to develop their financial skills and understanding;
 Brand I can depend on for emergency or additional funds;
 Helps me get ready for a better tomorrow;
 Gives me hope for the future;
+
 Brand that I can use for my personal or business travel abroad for payments and/or withdrawals;
 Brand that has the best foreign exchange rate for my personal or business travel abroad for purchases and/or withdrawal;
 Brand where I can receive remittances from abroad]
@@ -3635,6 +4068,7 @@ Brand that helps customers to develop their financial skills and understanding;
 Brand I can depend on for emergency or additional funds;
 Helps me get ready for a better tomorrow;
 Gives me hope for the future;
+
 Brand that I can use for my personal or business travel abroad for payments and/or withdrawals;
 Brand that has the best foreign exchange rate for my personal or business travel abroad for purchases and/or withdrawal;
 Brand where I can receive remittances from abroad",   
@@ -3710,9 +4144,11 @@ Brand that helps customers to develop their financial skills and understanding;
 Brand I can depend on for emergency or additional funds;
 Helps me get ready for a better tomorrow;
 Gives me hope for the future;
+
 Brand that I can use for my personal or business travel abroad for payments and/or withdrawals;
 Brand that has the best foreign exchange rate for my personal or business travel abroad for purchases and/or withdrawal;
 Brand where I can receive remittances from abroad;
+
 Not Associated<z>;
 Total Count<C>",   
 [*END A]
@@ -3731,11 +4167,1751 @@ Total Count<C>",
 
 
 !=========
-DM $TDO1 = $A_DO1/1-4,99,R,F,
+DM $TDO1 = 
+$A_DO1/1,
+$DO1_1_other/001+1002+1003+1004+1005+1006+1007+1008+1009+1010+1061+1062+1204+1316+1317+1370+1371+1420+1421+1422+1528+1548+1549,
+$DO1_1_other/1001,
+$DO1_1_other/1002,
+$DO1_1_other/1003,
+$DO1_1_other/1004,
+$DO1_1_other/1005,
+$DO1_1_other/1006,
+$DO1_1_other/1007,
+$DO1_1_other/1008,
+$DO1_1_other/1009,
+$DO1_1_other/1010,
+$DO1_1_other/1061,
+$DO1_1_other/1062,
+$DO1_1_other/1204,
+$DO1_1_other/1316,
+$DO1_1_other/1317,
+$DO1_1_other/1370,
+$DO1_1_other/1371,
+$DO1_1_other/1420,
+$DO1_1_other/1421,
+$DO1_1_other/1422,
+$DO1_1_other/1528,
+$DO1_1_other/1548,
+$DO1_1_other/1549,
+
+$DO1_1_other/1011+1012+1053+1054+1055+1056+1057+1309+1311+1312+1313+1361+1362+1363+1364+1365+1455+1456+1457+1458+1529+1534+1537+1539,
+$DO1_1_other/1011,
+$DO1_1_other/1012,
+$DO1_1_other/1053,
+$DO1_1_other/1054,
+$DO1_1_other/1055,
+$DO1_1_other/1056,
+$DO1_1_other/1057,
+$DO1_1_other/1309,
+$DO1_1_other/1311,
+$DO1_1_other/1312,
+$DO1_1_other/1313,
+$DO1_1_other/1361,
+$DO1_1_other/1362,
+$DO1_1_other/1363,
+$DO1_1_other/1364,
+$DO1_1_other/1365,
+$DO1_1_other/1455,
+$DO1_1_other/1456,
+$DO1_1_other/1457,
+$DO1_1_other/1458,
+$DO1_1_other/1529,
+$DO1_1_other/1534,
+$DO1_1_other/1537,
+$DO1_1_other/1539,
+
+$DO1_1_other/1013+1014+1015+1016+1058+1059+1060+1314+1315+1366+1367+1368+1369+1459+1460+1461+1462+1497+1498+1520+1536+1540+1547,
+$DO1_1_other/1013,
+$DO1_1_other/1014,
+$DO1_1_other/1015,
+$DO1_1_other/1016,
+$DO1_1_other/1058,
+$DO1_1_other/1059,
+$DO1_1_other/1060,
+$DO1_1_other/1314,
+$DO1_1_other/1315,
+$DO1_1_other/1366,
+$DO1_1_other/1367,
+$DO1_1_other/1368,
+$DO1_1_other/1369,
+$DO1_1_other/1459,
+$DO1_1_other/1460,
+$DO1_1_other/1461,
+$DO1_1_other/1462,
+$DO1_1_other/1497,
+$DO1_1_other/1498,
+$DO1_1_other/1520,
+$DO1_1_other/1536,
+$DO1_1_other/1540,
+$DO1_1_other/1547,
+
+$DO1_1_other/1017+1018+1019+1020+1021+1022+1091+1092+1093+1094+1119+1319+1335+1355+1356+1388+1389+1390+1391+1392+1410+1435+1473+1474+1475+1476+1477+1478+1479+1515,
+$DO1_1_other/1017,
+$DO1_1_other/1018,
+$DO1_1_other/1019,
+$DO1_1_other/1020,
+$DO1_1_other/1021,
+$DO1_1_other/1022,
+$DO1_1_other/1091,
+$DO1_1_other/1092,
+$DO1_1_other/1093,
+$DO1_1_other/1094,
+$DO1_1_other/1119,
+$DO1_1_other/1319,
+$DO1_1_other/1335,
+$DO1_1_other/1355,
+$DO1_1_other/1356,
+$DO1_1_other/1388,
+$DO1_1_other/1389,
+$DO1_1_other/1390,
+$DO1_1_other/1391,
+$DO1_1_other/1392,
+$DO1_1_other/1410,
+$DO1_1_other/1435,
+$DO1_1_other/1473,
+$DO1_1_other/1474,
+$DO1_1_other/1475,
+$DO1_1_other/1476,
+$DO1_1_other/1477,
+$DO1_1_other/1478,
+$DO1_1_other/1479,
+$DO1_1_other/1515,
+
+$DO1_1_other/1023+1024+1050+1067+1080+1081+1082+1083+1084+1085+1086+1087+1088+1089+1090+1201+1207+1208+1386+1330+1331+1332+1333+1334+1387+1429+1430+1431+1432+1433+1434+1453+1468+1469+1470+1471+1472+1514+1524+1530+1543+1555+1556,
+$DO1_1_other/1023,
+$DO1_1_other/1024,
+$DO1_1_other/1050,
+$DO1_1_other/1067,
+$DO1_1_other/1080,
+$DO1_1_other/1081,
+$DO1_1_other/1082,
+$DO1_1_other/1083,
+$DO1_1_other/1084,
+$DO1_1_other/1085,
+$DO1_1_other/1086,
+$DO1_1_other/1087,
+$DO1_1_other/1088,
+$DO1_1_other/1089,
+$DO1_1_other/1090,
+$DO1_1_other/1201,
+$DO1_1_other/1207,
+$DO1_1_other/1208+1386,
+$DO1_1_other/1330,
+$DO1_1_other/1331,
+$DO1_1_other/1332,
+$DO1_1_other/1333,
+$DO1_1_other/1334,
+$DO1_1_other/1387,
+$DO1_1_other/1429,
+$DO1_1_other/1430,
+$DO1_1_other/1431,
+$DO1_1_other/1432,
+$DO1_1_other/1433,
+$DO1_1_other/1434,
+$DO1_1_other/1453,
+$DO1_1_other/1468,
+$DO1_1_other/1469,
+$DO1_1_other/1470,
+$DO1_1_other/1471,
+$DO1_1_other/1472,
+$DO1_1_other/1514,
+$DO1_1_other/1524,
+$DO1_1_other/1530,
+$DO1_1_other/1543,
+$DO1_1_other/1555,
+$DO1_1_other/1556,
+
+$DO1_1_other/1025+1026+1027+1028+1029+1030+1031+1032+1346+1033+1095+1096+1097+1098+1099+1100+1101+1102+1103+1104+1105+1209+1308+1336+1337+1338+1339+1340+1341+1397+1342+1343+1344+1345+1347+1360+1393+1394+1395+1396+1398+1399+1400+1436+1437+1438+1439+1440+1441+1454+1480+1481+1482+1495+1508+1516+1525+1531+1545+1546+1557+1558,
+$DO1_1_other/1025,
+$DO1_1_other/1026,
+$DO1_1_other/1027,
+$DO1_1_other/1028,
+$DO1_1_other/1029,
+$DO1_1_other/1030,
+$DO1_1_other/1031,
+$DO1_1_other/1032+1346,
+$DO1_1_other/1033,
+$DO1_1_other/1095,
+$DO1_1_other/1096,
+$DO1_1_other/1097,
+$DO1_1_other/1098,
+$DO1_1_other/1099,
+$DO1_1_other/1100,
+$DO1_1_other/1101,
+$DO1_1_other/1102,
+$DO1_1_other/1103,
+$DO1_1_other/1104,
+$DO1_1_other/1105,
+$DO1_1_other/1209,
+$DO1_1_other/1308,
+$DO1_1_other/1336,
+$DO1_1_other/1337,
+$DO1_1_other/1338,
+$DO1_1_other/1339,
+$DO1_1_other/1340,
+$DO1_1_other/1341+1397,
+$DO1_1_other/1342,
+$DO1_1_other/1343,
+$DO1_1_other/1344,
+$DO1_1_other/1345,
+$DO1_1_other/1347,
+$DO1_1_other/1360,
+$DO1_1_other/1393,
+$DO1_1_other/1394,
+$DO1_1_other/1395,
+$DO1_1_other/1396,
+$DO1_1_other/1398,
+$DO1_1_other/1399,
+$DO1_1_other/1400,
+$DO1_1_other/1436,
+$DO1_1_other/1437,
+$DO1_1_other/1438,
+$DO1_1_other/1439,
+$DO1_1_other/1440,
+$DO1_1_other/1441,
+$DO1_1_other/1454,
+$DO1_1_other/1480,
+$DO1_1_other/1481,
+$DO1_1_other/1482,
+$DO1_1_other/1495,
+$DO1_1_other/1508,
+$DO1_1_other/1516,
+$DO1_1_other/1525,
+$DO1_1_other/1531,
+$DO1_1_other/1545,
+$DO1_1_other/1546,
+$DO1_1_other/1557,
+$DO1_1_other/1558,
+
+$DO1_1_other/1034+1035+1036+1302+1037+1038+1039+1040+1108+1109+1110+1111+1112+1113+1114+1115+1116+1117+1118+1303+1304+1305+1306+1350+1351+1352+1353+1354+1357+1404+1405+1406+1407+1408+1409+1445+1446+1447+1448+1449+1450+1451+1485+1486+1487+1488+1489+1490+1491+1492+1493+1494+1510+1511+1512+1542+1559,
+$DO1_1_other/1034,
+$DO1_1_other/1035,
+$DO1_1_other/1036+1302, 
+$DO1_1_other/1037,
+$DO1_1_other/1038,
+$DO1_1_other/1039,
+$DO1_1_other/1040,
+$DO1_1_other/1108,
+$DO1_1_other/1109,
+$DO1_1_other/1110,
+$DO1_1_other/1111,
+$DO1_1_other/1112,
+$DO1_1_other/1113,
+$DO1_1_other/1114,
+$DO1_1_other/1115,
+$DO1_1_other/1116,
+$DO1_1_other/1117,
+$DO1_1_other/1118,
+$DO1_1_other/1303,
+$DO1_1_other/1304,
+$DO1_1_other/1305,
+$DO1_1_other/1306,
+$DO1_1_other/1350,
+$DO1_1_other/1351,
+$DO1_1_other/1352,
+$DO1_1_other/1353,
+$DO1_1_other/1354,
+$DO1_1_other/1357,
+$DO1_1_other/1404,
+$DO1_1_other/1405,
+$DO1_1_other/1406,
+$DO1_1_other/1407,
+$DO1_1_other/1408,
+$DO1_1_other/1409,
+$DO1_1_other/1445,
+$DO1_1_other/1446,
+$DO1_1_other/1447,
+$DO1_1_other/1448,
+$DO1_1_other/1449,
+$DO1_1_other/1450,
+$DO1_1_other/1451,
+$DO1_1_other/1485,
+$DO1_1_other/1486,
+$DO1_1_other/1487,
+$DO1_1_other/1488,
+$DO1_1_other/1489,
+$DO1_1_other/1490,
+$DO1_1_other/1491,
+$DO1_1_other/1492,
+$DO1_1_other/1493,
+$DO1_1_other/1494,
+$DO1_1_other/1510,
+$DO1_1_other/1511,
+$DO1_1_other/1512,
+$DO1_1_other/1542,
+$DO1_1_other/1559,
+
+$DO1_1_other/1041+1042+1043+1044+1045+1046+1049+1069+1070+1071+1072+1073+1074+1075+1076+1077+1078+1200+1205+1206+1307+1321+1322+1323+1324+1325+1326+1327+1374+1375+1376+1377+1378+1379+1380+1381+1382+1383+1423+1424+1425+1426+1427+1428+1452+1464+1465+1466+1467+1500+1501+1502+1503+1504+1505+1541+1544+1551+1552+1553+1554,
+$DO1_1_other/1041,
+$DO1_1_other/1042,
+$DO1_1_other/1043,
+$DO1_1_other/1044,
+$DO1_1_other/1045,
+$DO1_1_other/1046,
+$DO1_1_other/1049,
+$DO1_1_other/1069,
+$DO1_1_other/1070,
+$DO1_1_other/1071,
+$DO1_1_other/1072,
+$DO1_1_other/1073,
+$DO1_1_other/1074,
+$DO1_1_other/1075,
+$DO1_1_other/1076,
+$DO1_1_other/1077,
+$DO1_1_other/1078,
+$DO1_1_other/1200,
+$DO1_1_other/1205,
+$DO1_1_other/1206,
+$DO1_1_other/1307,
+$DO1_1_other/1321,
+$DO1_1_other/1322,
+$DO1_1_other/1323,
+$DO1_1_other/1324,
+$DO1_1_other/1325,
+$DO1_1_other/1326,
+$DO1_1_other/1327,
+$DO1_1_other/1374,
+$DO1_1_other/1375,
+$DO1_1_other/1376,
+$DO1_1_other/1377,
+$DO1_1_other/1378,
+$DO1_1_other/1379,
+$DO1_1_other/1380,
+$DO1_1_other/1381,
+$DO1_1_other/1382,
+$DO1_1_other/1383,
+$DO1_1_other/1423,
+$DO1_1_other/1424,
+$DO1_1_other/1425,
+$DO1_1_other/1426,
+$DO1_1_other/1427,
+$DO1_1_other/1428,
+$DO1_1_other/1452,
+$DO1_1_other/1464,
+$DO1_1_other/1465,
+$DO1_1_other/1466,
+$DO1_1_other/1467,
+$DO1_1_other/1500,
+$DO1_1_other/1501,
+$DO1_1_other/1502,
+$DO1_1_other/1503,
+$DO1_1_other/1504,
+$DO1_1_other/1505,
+$DO1_1_other/1541,
+$DO1_1_other/1544,
+$DO1_1_other/1551,
+$DO1_1_other/1552,
+$DO1_1_other/1553,
+$DO1_1_other/1554,
+
+$DO1_1_other/1079+1328+1329+1384+1506+1507+1522+1523+1538,
+$DO1_1_other/1079,
+$DO1_1_other/1328,
+$DO1_1_other/1329,
+$DO1_1_other/1384,
+$DO1_1_other/1506,
+$DO1_1_other/1507,
+$DO1_1_other/1522,
+$DO1_1_other/1523,
+$DO1_1_other/1538,
+
+$DO1_1_other/1047+1048+1106+1202+1300+1348+1349+1401+1402+1442+1443+1444+1483+1484+1509,
+$DO1_1_other/1047,
+$DO1_1_other/1048,
+$DO1_1_other/1106,
+$DO1_1_other/1202,
+$DO1_1_other/1300,
+$DO1_1_other/1348,
+$DO1_1_other/1349,
+$DO1_1_other/1401,
+$DO1_1_other/1402,
+$DO1_1_other/1442,
+$DO1_1_other/1443,
+$DO1_1_other/1444,
+$DO1_1_other/1483,
+$DO1_1_other/1484,
+$DO1_1_other/1509,
+
+$DO1_1_other/1107,
+$DO1_1_other/1107,
+
+$DO1_1_other/1051,
+$DO1_1_other/1051,
+
+$DO1_1_other/1052+1359+1560,
+$DO1_1_other/1052,
+$DO1_1_other/1359,
+$DO1_1_other/1560,
+
+$DO1_1_other/1063+1064+1065+1066+1310+1499+1521+1550,
+$DO1_1_other/1063,
+$DO1_1_other/1064,
+$DO1_1_other/1065,
+$DO1_1_other/1066,
+$DO1_1_other/1310,
+$DO1_1_other/1499,
+$DO1_1_other/1521,
+$DO1_1_other/1550,
+
+$DO1_1_other/1068,
+$DO1_1_other/1068,
+
+$DO1_1_other/1203,
+$DO1_1_other/1203,
+
+$DO1_1_other/1301,
+$DO1_1_other/1301,
+
+$DO1_1_other/1318,
+$DO1_1_other/1318,
+
+$DO1_1_other/1320+1373,
+$DO1_1_other/1320,
+$DO1_1_other/1373,
+
+$DO1_1_other/1358,
+$DO1_1_other/1358,
+
+$DO1_1_other/1496,
+$DO1_1_other/1496,
+
+$DO1_1_other/1372,
+$DO1_1_other/1372,
+
+$DO1_1_other/1385,
+$DO1_1_other/1385,
+
+$DO1_1_other/1403,
+$DO1_1_other/1403,
+
+$DO1_1_other/1463,
+$DO1_1_other/1463,
+
+$DO1_1_other/1518,
+$DO1_1_other/1518,
+
+$DO1_1_other/1519, 
+$DO1_1_other/1519,
+
+$DO1_1_other/1532,
+$DO1_1_other/1532,
+
+$DO1_1_other/1535,
+$DO1_1_other/1535,
+
+$DO1_1_other/1513+1517+1526+1527+1533,
+
+$DO1_1_other/9998,
+
+$A_DO1/2,
+$DO1_2_other/001+1002+1003+1004+1005+1006+1007+1008+1009+1010+1061+1062+1204+1316+1317+1370+1371+1420+1421+1422+1528+1548+1549,
+$DO1_2_other/1001,
+$DO1_2_other/1002,
+$DO1_2_other/1003,
+$DO1_2_other/1004,
+$DO1_2_other/1005,
+$DO1_2_other/1006,
+$DO1_2_other/1007,
+$DO1_2_other/1008,
+$DO1_2_other/1009,
+$DO1_2_other/1010,
+$DO1_2_other/1061,
+$DO1_2_other/1062,
+$DO1_2_other/1204,
+$DO1_2_other/1316,
+$DO1_2_other/1317,
+$DO1_2_other/1370,
+$DO1_2_other/1371,
+$DO1_2_other/1420,
+$DO1_2_other/1421,
+$DO1_2_other/1422,
+$DO1_2_other/1528,
+$DO1_2_other/1548,
+$DO1_2_other/1549,
+
+$DO1_2_other/1011+1012+1053+1054+1055+1056+1057+1309+1311+1312+1313+1361+1362+1363+1364+1365+1455+1456+1457+1458+1529+1534+1537+1539,
+$DO1_2_other/1011,
+$DO1_2_other/1012,
+$DO1_2_other/1053,
+$DO1_2_other/1054,
+$DO1_2_other/1055,
+$DO1_2_other/1056,
+$DO1_2_other/1057,
+$DO1_2_other/1309,
+$DO1_2_other/1311,
+$DO1_2_other/1312,
+$DO1_2_other/1313,
+$DO1_2_other/1361,
+$DO1_2_other/1362,
+$DO1_2_other/1363,
+$DO1_2_other/1364,
+$DO1_2_other/1365,
+$DO1_2_other/1455,
+$DO1_2_other/1456,
+$DO1_2_other/1457,
+$DO1_2_other/1458,
+$DO1_2_other/1529,
+$DO1_2_other/1534,
+$DO1_2_other/1537,
+$DO1_2_other/1539,
+
+$DO1_2_other/1013+1014+1015+1016+1058+1059+1060+1314+1315+1366+1367+1368+1369+1459+1460+1461+1462+1497+1498+1520+1536+1540+1547,
+$DO1_2_other/1013,
+$DO1_2_other/1014,
+$DO1_2_other/1015,
+$DO1_2_other/1016,
+$DO1_2_other/1058,
+$DO1_2_other/1059,
+$DO1_2_other/1060,
+$DO1_2_other/1314,
+$DO1_2_other/1315,
+$DO1_2_other/1366,
+$DO1_2_other/1367,
+$DO1_2_other/1368,
+$DO1_2_other/1369,
+$DO1_2_other/1459,
+$DO1_2_other/1460,
+$DO1_2_other/1461,
+$DO1_2_other/1462,
+$DO1_2_other/1497,
+$DO1_2_other/1498,
+$DO1_2_other/1520,
+$DO1_2_other/1536,
+$DO1_2_other/1540,
+$DO1_2_other/1547,
+
+$DO1_2_other/1017+1018+1019+1020+1021+1022+1091+1092+1093+1094+1119+1319+1335+1355+1356+1388+1389+1390+1391+1392+1410+1435+1473+1474+1475+1476+1477+1478+1479+1515,
+$DO1_2_other/1017,
+$DO1_2_other/1018,
+$DO1_2_other/1019,
+$DO1_2_other/1020,
+$DO1_2_other/1021,
+$DO1_2_other/1022,
+$DO1_2_other/1091,
+$DO1_2_other/1092,
+$DO1_2_other/1093,
+$DO1_2_other/1094,
+$DO1_2_other/1119,
+$DO1_2_other/1319,
+$DO1_2_other/1335,
+$DO1_2_other/1355,
+$DO1_2_other/1356,
+$DO1_2_other/1388,
+$DO1_2_other/1389,
+$DO1_2_other/1390,
+$DO1_2_other/1391,
+$DO1_2_other/1392,
+$DO1_2_other/1410,
+$DO1_2_other/1435,
+$DO1_2_other/1473,
+$DO1_2_other/1474,
+$DO1_2_other/1475,
+$DO1_2_other/1476,
+$DO1_2_other/1477,
+$DO1_2_other/1478,
+$DO1_2_other/1479,
+$DO1_2_other/1515,
+
+$DO1_2_other/1023+1024+1050+1067+1080+1081+1082+1083+1084+1085+1086+1087+1088+1089+1090+1201+1207+1208+1386+1330+1331+1332+1333+1334+1387+1429+1430+1431+1432+1433+1434+1453+1468+1469+1470+1471+1472+1514+1524+1530+1543+1555+1556,
+$DO1_2_other/1023,
+$DO1_2_other/1024,
+$DO1_2_other/1050,
+$DO1_2_other/1067,
+$DO1_2_other/1080,
+$DO1_2_other/1081,
+$DO1_2_other/1082,
+$DO1_2_other/1083,
+$DO1_2_other/1084,
+$DO1_2_other/1085,
+$DO1_2_other/1086,
+$DO1_2_other/1087,
+$DO1_2_other/1088,
+$DO1_2_other/1089,
+$DO1_2_other/1090,
+$DO1_2_other/1201,
+$DO1_2_other/1207,
+$DO1_2_other/1208+1386,
+$DO1_2_other/1330,
+$DO1_2_other/1331,
+$DO1_2_other/1332,
+$DO1_2_other/1333,
+$DO1_2_other/1334,
+$DO1_2_other/1387,
+$DO1_2_other/1429,
+$DO1_2_other/1430,
+$DO1_2_other/1431,
+$DO1_2_other/1432,
+$DO1_2_other/1433,
+$DO1_2_other/1434,
+$DO1_2_other/1453,
+$DO1_2_other/1468,
+$DO1_2_other/1469,
+$DO1_2_other/1470,
+$DO1_2_other/1471,
+$DO1_2_other/1472,
+$DO1_2_other/1514,
+$DO1_2_other/1524,
+$DO1_2_other/1530,
+$DO1_2_other/1543,
+$DO1_2_other/1555,
+$DO1_2_other/1556,
+
+$DO1_2_other/1025+1026+1027+1028+1029+1030+1031+1032+1346+1033+1095+1096+1097+1098+1099+1100+1101+1102+1103+1104+1105+1209+1308+1336+1337+1338+1339+1340+1341+1397+1342+1343+1344+1345+1347+1360+1393+1394+1395+1396+1398+1399+1400+1436+1437+1438+1439+1440+1441+1454+1480+1481+1482+1495+1508+1516+1525+1531+1545+1546+1557+1558,
+$DO1_2_other/1025,
+$DO1_2_other/1026,
+$DO1_2_other/1027,
+$DO1_2_other/1028,
+$DO1_2_other/1029,
+$DO1_2_other/1030,
+$DO1_2_other/1031,
+$DO1_2_other/1032+1346,
+$DO1_2_other/1033,
+$DO1_2_other/1095,
+$DO1_2_other/1096,
+$DO1_2_other/1097,
+$DO1_2_other/1098,
+$DO1_2_other/1099,
+$DO1_2_other/1100,
+$DO1_2_other/1101,
+$DO1_2_other/1102,
+$DO1_2_other/1103,
+$DO1_2_other/1104,
+$DO1_2_other/1105,
+$DO1_2_other/1209,
+$DO1_2_other/1308,
+$DO1_2_other/1336,
+$DO1_2_other/1337,
+$DO1_2_other/1338,
+$DO1_2_other/1339,
+$DO1_2_other/1340,
+$DO1_2_other/1341+1397,
+$DO1_2_other/1342,
+$DO1_2_other/1343,
+$DO1_2_other/1344,
+$DO1_2_other/1345,
+$DO1_2_other/1347,
+$DO1_2_other/1360,
+$DO1_2_other/1393,
+$DO1_2_other/1394,
+$DO1_2_other/1395,
+$DO1_2_other/1396,
+$DO1_2_other/1398,
+$DO1_2_other/1399,
+$DO1_2_other/1400,
+$DO1_2_other/1436,
+$DO1_2_other/1437,
+$DO1_2_other/1438,
+$DO1_2_other/1439,
+$DO1_2_other/1440,
+$DO1_2_other/1441,
+$DO1_2_other/1454,
+$DO1_2_other/1480,
+$DO1_2_other/1481,
+$DO1_2_other/1482,
+$DO1_2_other/1495,
+$DO1_2_other/1508,
+$DO1_2_other/1516,
+$DO1_2_other/1525,
+$DO1_2_other/1531,
+$DO1_2_other/1545,
+$DO1_2_other/1546,
+$DO1_2_other/1557,
+$DO1_2_other/1558,
+
+$DO1_2_other/1034+1035+1036+1302+1037+1038+1039+1040+1108+1109+1110+1111+1112+1113+1114+1115+1116+1117+1118+1303+1304+1305+1306+1350+1351+1352+1353+1354+1357+1404+1405+1406+1407+1408+1409+1445+1446+1447+1448+1449+1450+1451+1485+1486+1487+1488+1489+1490+1491+1492+1493+1494+1510+1511+1512+1542+1559,
+$DO1_2_other/1034,
+$DO1_2_other/1035,
+$DO1_2_other/1036+1302, 
+$DO1_2_other/1037,
+$DO1_2_other/1038,
+$DO1_2_other/1039,
+$DO1_2_other/1040,
+$DO1_2_other/1108,
+$DO1_2_other/1109,
+$DO1_2_other/1110,
+$DO1_2_other/1111,
+$DO1_2_other/1112,
+$DO1_2_other/1113,
+$DO1_2_other/1114,
+$DO1_2_other/1115,
+$DO1_2_other/1116,
+$DO1_2_other/1117,
+$DO1_2_other/1118,
+$DO1_2_other/1303,
+$DO1_2_other/1304,
+$DO1_2_other/1305,
+$DO1_2_other/1306,
+$DO1_2_other/1350,
+$DO1_2_other/1351,
+$DO1_2_other/1352,
+$DO1_2_other/1353,
+$DO1_2_other/1354,
+$DO1_2_other/1357,
+$DO1_2_other/1404,
+$DO1_2_other/1405,
+$DO1_2_other/1406,
+$DO1_2_other/1407,
+$DO1_2_other/1408,
+$DO1_2_other/1409,
+$DO1_2_other/1445,
+$DO1_2_other/1446,
+$DO1_2_other/1447,
+$DO1_2_other/1448,
+$DO1_2_other/1449,
+$DO1_2_other/1450,
+$DO1_2_other/1451,
+$DO1_2_other/1485,
+$DO1_2_other/1486,
+$DO1_2_other/1487,
+$DO1_2_other/1488,
+$DO1_2_other/1489,
+$DO1_2_other/1490,
+$DO1_2_other/1491,
+$DO1_2_other/1492,
+$DO1_2_other/1493,
+$DO1_2_other/1494,
+$DO1_2_other/1510,
+$DO1_2_other/1511,
+$DO1_2_other/1512,
+$DO1_2_other/1542,
+$DO1_2_other/1559,
+
+$DO1_2_other/1041+1042+1043+1044+1045+1046+1049+1069+1070+1071+1072+1073+1074+1075+1076+1077+1078+1200+1205+1206+1307+1321+1322+1323+1324+1325+1326+1327+1374+1375+1376+1377+1378+1379+1380+1381+1382+1383+1423+1424+1425+1426+1427+1428+1452+1464+1465+1466+1467+1500+1501+1502+1503+1504+1505+1541+1544+1551+1552+1553+1554,
+$DO1_2_other/1041,
+$DO1_2_other/1042,
+$DO1_2_other/1043,
+$DO1_2_other/1044,
+$DO1_2_other/1045,
+$DO1_2_other/1046,
+$DO1_2_other/1049,
+$DO1_2_other/1069,
+$DO1_2_other/1070,
+$DO1_2_other/1071,
+$DO1_2_other/1072,
+$DO1_2_other/1073,
+$DO1_2_other/1074,
+$DO1_2_other/1075,
+$DO1_2_other/1076,
+$DO1_2_other/1077,
+$DO1_2_other/1078,
+$DO1_2_other/1200,
+$DO1_2_other/1205,
+$DO1_2_other/1206,
+$DO1_2_other/1307,
+$DO1_2_other/1321,
+$DO1_2_other/1322,
+$DO1_2_other/1323,
+$DO1_2_other/1324,
+$DO1_2_other/1325,
+$DO1_2_other/1326,
+$DO1_2_other/1327,
+$DO1_2_other/1374,
+$DO1_2_other/1375,
+$DO1_2_other/1376,
+$DO1_2_other/1377,
+$DO1_2_other/1378,
+$DO1_2_other/1379,
+$DO1_2_other/1380,
+$DO1_2_other/1381,
+$DO1_2_other/1382,
+$DO1_2_other/1383,
+$DO1_2_other/1423,
+$DO1_2_other/1424,
+$DO1_2_other/1425,
+$DO1_2_other/1426,
+$DO1_2_other/1427,
+$DO1_2_other/1428,
+$DO1_2_other/1452,
+$DO1_2_other/1464,
+$DO1_2_other/1465,
+$DO1_2_other/1466,
+$DO1_2_other/1467,
+$DO1_2_other/1500,
+$DO1_2_other/1501,
+$DO1_2_other/1502,
+$DO1_2_other/1503,
+$DO1_2_other/1504,
+$DO1_2_other/1505,
+$DO1_2_other/1541,
+$DO1_2_other/1544,
+$DO1_2_other/1551,
+$DO1_2_other/1552,
+$DO1_2_other/1553,
+$DO1_2_other/1554,
+
+$DO1_2_other/1079+1328+1329+1384+1506+1507+1522+1523+1538,
+$DO1_2_other/1079,
+$DO1_2_other/1328,
+$DO1_2_other/1329,
+$DO1_2_other/1384,
+$DO1_2_other/1506,
+$DO1_2_other/1507,
+$DO1_2_other/1522,
+$DO1_2_other/1523,
+$DO1_2_other/1538,
+
+$DO1_2_other/1047+1048+1106+1202+1300+1348+1349+1401+1402+1442+1443+1444+1483+1484+1509,
+$DO1_2_other/1047,
+$DO1_2_other/1048,
+$DO1_2_other/1106,
+$DO1_2_other/1202,
+$DO1_2_other/1300,
+$DO1_2_other/1348,
+$DO1_2_other/1349,
+$DO1_2_other/1401,
+$DO1_2_other/1402,
+$DO1_2_other/1442,
+$DO1_2_other/1443,
+$DO1_2_other/1444,
+$DO1_2_other/1483,
+$DO1_2_other/1484,
+$DO1_2_other/1509,
+
+$DO1_2_other/1107,
+$DO1_2_other/1107,
+
+$DO1_2_other/1051,
+$DO1_2_other/1051,
+
+$DO1_2_other/1052+1359+1560,
+$DO1_2_other/1052,
+$DO1_2_other/1359,
+$DO1_2_other/1560,
+
+$DO1_2_other/1063+1064+1065+1066+1310+1499+1521+1550,
+$DO1_2_other/1063,
+$DO1_2_other/1064,
+$DO1_2_other/1065,
+$DO1_2_other/1066,
+$DO1_2_other/1310,
+$DO1_2_other/1499,
+$DO1_2_other/1521,
+$DO1_2_other/1550,
+
+$DO1_2_other/1068,
+$DO1_2_other/1068,
+
+$DO1_2_other/1203,
+$DO1_2_other/1203,
+
+$DO1_2_other/1301,
+$DO1_2_other/1301,
+
+$DO1_2_other/1318,
+$DO1_2_other/1318,
+
+$DO1_2_other/1320+1373,
+$DO1_2_other/1320,
+$DO1_2_other/1373,
+
+$DO1_2_other/1358,
+$DO1_2_other/1358,
+
+$DO1_2_other/1496,
+$DO1_2_other/1496,
+
+$DO1_2_other/1372,
+$DO1_2_other/1372,
+
+$DO1_2_other/1385,
+$DO1_2_other/1385,
+
+$DO1_2_other/1403,
+$DO1_2_other/1403,
+
+$DO1_2_other/1463,
+$DO1_2_other/1463,
+
+$DO1_2_other/1518,
+$DO1_2_other/1518,
+
+$DO1_2_other/1519, 
+$DO1_2_other/1519,
+
+$DO1_2_other/1532,
+$DO1_2_other/1532,
+
+$DO1_2_other/1535,
+$DO1_2_other/1535,
+
+$DO1_2_other/1513+1517+1526+1527+1533,
+
+$DO1_2_other/9998,
+
+$A_DO1/3,
+$A_DO1/4,
+$A_DO1/99,
+R,F,
 VT = "DO1. MOBILE DEVICE OWNERSHIP",
 V = "
-5G-capable smartphone;
-4G-capable smart phone;
+5G-capable smartphone<q>;
+`     IPHONE/APPLE (NET)<Q>;
+`          I PHONE;
+`          5s iphone;
+`          IPhone14 promax;
+`          IPHONE 11;
+`          Iphone 12;
+`          IPHONE 13;
+`          iPhone 14 pro;
+`          IPHONE 6S+;
+`          iPhone xr;
+`          iPhone8+;
+`          IPHONE 6;
+`          IPhone 7;
+`          iPhone 13 pro;
+`          IPhone 10;
+`          IPhone 7+;
+`          iPhone 14;
+`          iPhone 6+;
+`          Iphone 8;
+`          Iphone pro max;
+`          Iphonexx;
+`          IPhone XS Max;
+`          Iphone 15 pro;
+`          Iphone 19;
+
+`     HUAWEI (NET)<Q>;
+`          Huawei;
+`          Huawei Y Pro 9;
+`          Huawei Nova 3i;
+`          Huawei Nova 95E;
+`          Huawei Y5 Lite;
+`          Huawei Y6;
+`          Huawei Y72019;
+`          Honorx6;
+`          Huawei Nova 7i;
+`          Huawei Y6 Pro;
+`          Huawie Nova8i;
+`          Honor; 
+`          Huawei 360;
+`          Huawei C4;
+`          Huawei Nova;
+`          Huawei Y52;
+`          Huawei  A7;
+`          Huawei Prime 9;
+`          HUAWEI Y6P;
+`          HUWEI I3I;
+`          Huawei VP Nova A2 Lite;
+`          Honor x7a;
+`          Huawei  p10;
+`          Honor x8;
+
+`     INFINIX (NET)<Q>;
+`          Iinfinix;
+`          Iinfinix 30i;
+`          Iinfinix hot30i;
+`          INIFINIX NOTE 12;
+`          Infinix hot 10;
+`          INFINIX HOT 11;
+`          Infinix smart7;
+`          Infinix 4;
+`          Infinix smart 5;
+`          Infinix zero 5g;
+`          Infinix hot 9;
+`          Infinix 11;
+`          Infinix Note 5G;
+`          IFINIX 20i;
+`          INFINIX HOT 11PLAY;
+`          Infinix hot 9 play;
+`          Infinix smart 6;
+`          Infinix note 30 5 g;
+`          Infinix note 30;
+`          Infinix smart 4;
+`          Infinex hot 40i;
+`          Infinix Smat8;
+`          Infinix hot 30 play;
+
+
+`     XIAOMI (NET)<Q>;
+`          Xiaomi;
+`          Xiaomi 11 5gNe;
+`          Xiaomi 11T;
+`          Redmi 9c;
+`          Redme;
+`          Redmi Note 12 pro;
+`          Redme 9;
+`          Redmi 5 pro;
+`          Redmi note9;
+`          Redmi 10;
+`          Xiaomi Redmi;
+`          MIUI;
+`          Redmi Note11 pro;
+`          Xiaomi c6;
+`          Xiaomi 10T pro;
+`          Redmi M10 plus;
+`          Xiaomi Redmi 6a;
+`          Redmi 7a;
+`          Redmi 8 Pro;
+`          REDMI 9A;
+`          Xiaomi Redmi note 10;
+`          REDME C15;
+`          REDMI 11;
+`          REDMI 12C;
+`          Redmi 90;
+`          Redmi note;
+`          Redmi note10 pro;
+`          Redmi note11S;
+`          Redmi note12;
+`          Redmi 9t;
+
+`     REAL ME (NET)<Q>;
+`          real me;
+`          REALME C35;
+`          Real Me c25;
+`          Realme Narzo 20;
+`          Real me 6;
+`          Real me C11;
+`          Realme C30;
+`          Realme Dizo;
+`          Realme 5i;
+`          Realme 6i;
+`          Realme C22;
+`          Realme C12;
+`          Realme C21y;
+`          Realme 7;
+`          Realme C55;
+`          Realme C53;
+`          Realme 8;
+`          Realme C3;
+`          Realme 10 pro;
+`          Realme c15;
+`          Realme c2;
+`          Realme c32;
+`          Realme c33;
+`          Realme X2 Pro;
+`          REAL ME UI;
+`          REALME  NARZO;
+`          Realme 21y;
+`          Realme 8 5G;
+`          Realmi 11;
+`          Realmi pro;
+`          REALME 7i;
+`          Real Me 4G;
+`          Realme 5;
+`          REALME 5PRO;
+`          Realme a37;
+`          Realme c30s;
+`          Realme 9 pro;
+`          Realme C51;
+`          Realme C13;
+`          Realme non 5g;
+`          Realme 8i pro;
+`          Realme note 8;
+
+`     SAMSUNG (NET)<Q>;
+`          Samsung;
+`          SAMSUNG A10S;
+`          SAMSUNG A30;
+`          SAMSUNG A73;
+`          Samsung galary pro7;
+`          Samsung galaxy s6;
+`          Samsung galaxya80;
+`          Samsung j12;
+`          SamsungA1;
+`          Samsung Galaxy;
+`          Samsung a32;
+`          Samsung a4;
+`          Samsung a50;
+`          Samsung a51;
+`          Samsung a21;
+`          Samsung J2 Prime;
+`          Samsung J4;
+`          Samsung M11;
+`          Samsung s7 edge;
+`          Samsung a20;
+`          Samsung a5;
+`          Samsung Galaxy a02s;
+`          Samsung Galazy a12;
+`          Samsung a17;
+`          Samsung a3;
+`          Samsung Galazy a42;
+`          Samsung Galaxy dous;
+`          Samsung Galaxy a23;
+`          Samsung Galaxy a04e;
+`          Samsung Galaxy A13;
+`          Samsung Galaxy J6;
+`          Samsung Galaxy s9+;
+`          Samsung Note 8;
+`          Samsung galaxy M02;
+`          Samsung galaxy J7;
+`          Samsung a31;
+`          Samsung galaxy a11;
+`          Samsung a14;
+`          Samsung Galaxy j5;
+`          Samsung  j1;
+`          Samsung note;
+`          Samsung a 10;
+`          SAMSUNG A03;
+`          SAMSUNG A30S;
+`          Samsung edge;
+`          Samsung galaxy j7pro;
+`          SAMSUNG TAB;
+`          Galaxy S8;
+`          Samsung 0A2;
+`          Samsung a04;
+`          Samsung g1;
+`          Samsung G6 plus;
+`          Samsung galaxy s23 ultra;
+`          Samsung galaxy A9;
+`          Samsung a53;
+`          samsung s26;
+`          Samsung a15;
+`          Samsung a34;
+`          Samsung A52;
+`          Samsung s23 ultra;
+
+`     VIVO (NET)<Q>;
+`          Vivo;
+`          Vivoy20i;
+`          Vivo Y02;
+`          Vivo Y11;
+`          Vivo Y12;
+`          Vivo Y16;
+`          Vivo 11;
+`          Vivo a16;
+`          Vivo 1806;
+`          Vivo 27e;
+`          Vivo Y1;
+`          Vivo Y14;
+`          Vivo Y15;
+`          Vivo Y19;
+`          Vivo Y20;
+`          Vivo Y21;
+`          Vivo Y35;
+`          Vivo Y6;
+`          Vivo ;
+`          Vivo  Y83;
+`          Vivo  1808;
+`          Vivo 32;
+`          Vivo Y33s;
+`          Vivo y76;
+`          Vivo Y91;
+`          Vivo1906;
+`          Vivo91c;
+`          Vivo s1 pro;
+`          Vivo S1;
+`          Vivo v25;
+`          Vivo y22;
+`          Vivo y27;
+`          Vivo Y30;
+`          Vivo T10;
+`          Vivo2027;
+`          VIVO 06;
+`          Vivo v9;
+`          Vivo y15s;
+`          Vivo y21 I;
+`          Vivo ys2;
+`          VIVOYJ;
+`          VIVO 15PRO;
+`          Vivo 1820;
+`          Vivo t1x;
+`          Vivo y19i;
+`          VIVO Y20A;
+`          Vivo y20g;
+`          VIVO Y26;
+`          VIVO Y31;
+`          Vivoa5s;
+`          Vivoy91;
+`          VIVO y17 S;
+`          vivo y55;
+`          vivo yA3;
+`          Vivo non 5g;
+`          Vivo y36;
+
+`     OPPO (NET)<Q>;
+`          Oppo;
+`          OPPO 5G;
+`          OPPO A15S;
+`          oppo a5s;
+`          OPPO A94;
+`          OPPO S28;
+`          Reno S7;
+`          Oppo 12a;
+`          Oppo a16;
+`          Oppo a16k;
+`          Oppo A31;
+`          OPPO A37;
+`          Oppo A3s;
+`          Oppo a53;
+`          Oppo a54;
+`          Oppo a57;
+`          Oppo 17k;
+`          Oppo a46;
+`          Oppo a71;
+`          Oppo a96;
+`          Oppo A33;
+`          Oppo A23;
+`          Oppo a83;
+`          Oppo a95;
+`          Oppo CPH2083;
+`          Oppo Reno;
+`          Oppoa55;
+`          Oppo F9 pro;
+`          Oppo A2;
+`          Oppo a32;
+`          Oppo a35;
+`          Oppo a92;
+`          Oppo F11;
+`          Oppo F5;
+`          Oppo Reno 8;
+`          Oppo a7;
+`          Oppo F3;
+`          Oppo reno 10;
+`          Oppo A12;
+`          Oppo a15;
+`          Oppo A5 2;
+`          Oppo A77S;
+`          Oppo reno 4;
+`          Oppo reno 6;
+`          OPPO CPH 2185;
+`          Oppo a12s;
+`          Oppo a17;
+`          Oppo F1s;
+`          OPPO Y11;
+`          Oppo reno 7;
+`          Oppo Y81;
+`          Oppo 137;
+`          Oppo 1801;
+`          Oppo 4G;
+`          Oppo a20;
+`          Oppo non 5g;
+`          Oppo a14;
+`          Oppo a18;
+`          Oppo a38;
+`          Oppo a52;
+`          Oppo 76;
+
+`     POCO (NET)<Q>;
+`          Poco c40;
+`          Poco Fone f2;
+`          Poco M4;
+`          Pocco;
+`          poco x4 pro;
+`          pocoo phone;
+`          Poco F3;
+`          Poco M3;
+`          Poco F5 Pro;
+
+`     TECHNO (NET)<Q>;
+`          Techno;
+`          Tecno 804A;
+`          Techno  Spark;
+`          Techno  Air6;
+`          Techno  k5;
+`          Techno Camon 16;
+`          Techno pova ;
+`          Techno Camon 20;
+`          Techno Pop Lite 5;
+`          Techno pova 4;
+`          Tecno Spark 10 Pro;
+`          tecno spark7 pro;
+`          Tecno Spark6 go;
+`          Tecno5;
+`          Techno pova neo;
+
+`     ULEFONE (NET)<Q>;
+`          Ulefone;
+
+`     AZUS (NET)<Q>;
+`          Azus ;
+
+`     CHERRY MOBILE (NET)<Q>;
+`          Cherry Mobile;
+`          cherry mobile flare;
+`          Cherry aqua s9;
+
+`     ITEL (NET)<Q>;
+`          Itel;
+`          Itel A57;
+`          itel P37;
+`          itel Vision;
+`          Itel4g;
+`          Itel 20;
+`          Itel a56;
+`          Itel Vision 2;
+
+`     NOKIA (NET)<Q>;
+`          Nokia;
+
+`     TCL (NET)<Q>;
+`          TCL   ;
+
+`     VFONE (NET)<Q>;
+`          Vfone  ;
+
+`     LG (NET)<Q>;
+`          LG   ;
+
+`     MY PHONE (NET)<Q>;
+`          Myphone my96;
+`          My Phone  ;
+
+`     ASUS (NET)<Q>;
+`          Asus;
+
+`     INTEL (NET)<Q>;
+`          Intel  ;
+
+`     LENOVO (NET)<Q>;
+`          Lenovo note 6;
+
+`     QNET (NET)<Q>;
+`          Qnet;
+
+`     UMIDIGI (NET)<Q>;
+`          Umidig a75;
+
+`     KFONE (NET)<Q>;
+`          Kfone;
+
+`     BLACKVEW (NET)<Q>;
+`          Blackview A95;
+
+`     INFINITY  (NET)<Q>;
+`          Infinity Hot 20;
+
+`     ONEPLUS  (NET)<Q>;
+`          ONEPLUS ;
+
+`     ZTE  (NET)<Q>;
+`          ZTE ;
+
+`     VAGUE (NET);
+`     Don't know;
+
+4G-capable smart phone<q>;
+`     IPHONE/APPLE (NET)<Q>;
+`          I PHONE;
+`          5s iphone;
+`          IPhone14 promax;
+`          IPHONE 11;
+`          Iphone 12;
+`          IPHONE 13;
+`          iPhone 14 pro;
+`          IPHONE 6S+;
+`          iPhone xr;
+`          iPhone8+;
+`          IPHONE 6;
+`          IPhone 7;
+`          iPhone 13 pro;
+`          IPhone 10;
+`          IPhone 7+;
+`          iPhone 14;
+`          iPhone 6+;
+`          Iphone 8;
+`          Iphone pro max;
+`          Iphonexx;
+`          IPhone XS Max;
+`          Iphone 15 pro;
+`          Iphone 19;
+
+`     HUAWEI (NET)<Q>;
+`          Huawei;
+`          Huawei Y Pro 9;
+`          Huawei Nova 3i;
+`          Huawei Nova 95E;
+`          Huawei Y5 Lite;
+`          Huawei Y6;
+`          Huawei Y72019;
+`          Honorx6;
+`          Huawei Nova 7i;
+`          Huawei Y6 Pro;
+`          Huawie Nova8i;
+`          Honor; 
+`          Huawei 360;
+`          Huawei C4;
+`          Huawei Nova;
+`          Huawei Y52;
+`          Huawei  A7;
+`          Huawei Prime 9;
+`          HUAWEI Y6P;
+`          HUWEI I3I;
+`          Huawei VP Nova A2 Lite;
+`          Honor x7a;
+`          Huawei  p10;
+`          Honor x8;
+
+`     INFINIX (NET)<Q>;
+`          Iinfinix;
+`          Iinfinix 30i;
+`          Iinfinix hot30i;
+`          INIFINIX NOTE 12;
+`          Infinix hot 10;
+`          INFINIX HOT 11;
+`          Infinix smart7;
+`          Infinix 4;
+`          Infinix smart 5;
+`          Infinix zero 5g;
+`          Infinix hot 9;
+`          Infinix 11;
+`          Infinix Note 5G;
+`          IFINIX 20i;
+`          INFINIX HOT 11PLAY;
+`          Infinix hot 9 play;
+`          Infinix smart 6;
+`          Infinix note 30 5 g;
+`          Infinix note 30;
+`          Infinix smart 4;
+`          Infinex hot 40i;
+`          Infinix Smat8;
+`          Infinix hot 30 play;
+
+`     XIAOMI (NET)<Q>;
+`          Xiaomi;
+`          Xiaomi 11 5gNe;
+`          Xiaomi 11T;
+`          Redmi 9c;
+`          Redme;
+`          Redmi Note 12 pro;
+`          Redme 9;
+`          Redmi 5 pro;
+`          Redmi note9;
+`          Redmi 10;
+`          Xiaomi Redmi;
+`          MIUI;
+`          Redmi Note11 pro;
+`          Xiaomi c6;
+`          Xiaomi 10T pro;
+`          Redmi M10 plus;
+`          Xiaomi Redmi 6a;
+`          Redmi 7a;
+`          Redmi 8 Pro;
+`          REDMI 9A;
+`          Xiaomi Redmi note 10;
+`          REDME C15;
+`          REDMI 11;
+`          REDMI 12C;
+`          Redmi 90;
+`          Redmi note;
+`          Redmi note10 pro;
+`          Redmi note11S;
+`          Redmi note12;
+`          Redmi 9t;
+
+`     REAL ME (NET)<Q>;
+`          real me;
+`          REALME C35;
+`          Real Me c25;
+`          Realme Narzo 20;
+`          Real me 6;
+`          Real me C11;
+`          Realme C30;
+`          Realme Dizo;
+`          Realme 5i;
+`          Realme 6i;
+`          Realme C22;
+`          Realme C12;
+`          Realme C21y;
+`          Realme 7;
+`          Realme C55;
+`          Realme C53;
+`          Realme 8;
+`          Realme C3;
+`          Realme 10 pro;
+`          Realme c15;
+`          Realme c2;
+`          Realme c32;
+`          Realme c33;
+`          Realme X2 Pro;
+`          REAL ME UI;
+`          REALME  NARZO;
+`          Realme 21y;
+`          Realme 8 5G;
+`          Realmi 11;
+`          Realmi pro;
+`          REALME 7i;
+`          Real Me 4G;
+`          Realme 5;
+`          REALME 5PRO;
+`          Realme a37;
+`          Realme c30s;
+`          Realme 9 pro;
+`          Realme C51;
+`          Realme C13;
+`          Realme non 5g;
+`          Realme 8i pro;
+`          Realme note 8;
+
+`     SAMSUNG (NET)<Q>;
+`          Samsung;
+`          SAMSUNG A10S;
+`          SAMSUNG A30;
+`          SAMSUNG A73;
+`          Samsung galary pro7;
+`          Samsung galaxy s6;
+`          Samsung galaxya80;
+`          Samsung j12;
+`          SamsungA1;
+`          Samsung Galaxy;
+`          Samsung a32;
+`          Samsung a4;
+`          Samsung a50;
+`          Samsung a51;
+`          Samsung a21;
+`          Samsung J2 Prime;
+`          Samsung J4;
+`          Samsung M11;
+`          Samsung s7 edge;
+`          Samsung a20;
+`          Samsung a5;
+`          Samsung Galaxy a02s;
+`          Samsung Galazy a12;
+`          Samsung a17;
+`          Samsung a3;
+`          Samsung Galazy a42;
+`          Samsung Galaxy dous;
+`          Samsung Galaxy a23;
+`          Samsung Galaxy a04e;
+`          Samsung Galaxy A13;
+`          Samsung Galaxy J6;
+`          Samsung Galaxy s9+;
+`          Samsung Note 8;
+`          Samsung galaxy M02;
+`          Samsung galaxy J7;
+`          Samsung a31;
+`          Samsung galaxy a11;
+`          Samsung a14;
+`          Samsung Galaxy j5;
+`          Samsung  j1;
+`          Samsung note;
+`          Samsung a 10;
+`          SAMSUNG A03;
+`          SAMSUNG A30S;
+`          Samsung edge;
+`          Samsung galaxy j7pro;
+`          SAMSUNG TAB;
+`          Galaxy S8;
+`          Samsung 0A2;
+`          Samsung a04;
+`          Samsung g1;
+`          Samsung G6 plus;
+`          Samsung galaxy s23 ultra;
+`          Samsung galaxy A9;
+`          Samsung a53;
+`          samsung s26;
+`          Samsung a15;
+`          Samsung a34;
+`          Samsung A52;
+`          Samsung s23 ultra;
+
+`     VIVO (NET)<Q>;
+`          Vivo;
+`          Vivoy20i;
+`          Vivo Y02;
+`          Vivo Y11;
+`          Vivo Y12;
+`          Vivo Y16;
+`          Vivo 11;
+`          Vivo a16;
+`          Vivo 1806;
+`          Vivo 27e;
+`          Vivo Y1;
+`          Vivo Y14;
+`          Vivo Y15;
+`          Vivo Y19;
+`          Vivo Y20;
+`          Vivo Y21;
+`          Vivo Y35;
+`          Vivo Y6;
+`          Vivo ;
+`          Vivo  Y83;
+`          Vivo  1808;
+`          Vivo 32;
+`          Vivo Y33s;
+`          Vivo y76;
+`          Vivo Y91;
+`          Vivo1906;
+`          Vivo91c;
+`          Vivo s1 pro;
+`          Vivo S1;
+`          Vivo v25;
+`          Vivo y22;
+`          Vivo y27;
+`          Vivo Y30;
+`          Vivo T10;
+`          Vivo2027;
+`          VIVO 06;
+`          Vivo v9;
+`          Vivo y15s;
+`          Vivo y21 I;
+`          Vivo ys2;
+`          VIVOYJ;
+`          VIVO 15PRO;
+`          Vivo 1820;
+`          Vivo t1x;
+`          Vivo y19i;
+`          VIVO Y20A;
+`          Vivo y20g;
+`          VIVO Y26;
+`          VIVO Y31;
+`          Vivoa5s;
+`          Vivoy91;
+`          VIVO y17 S;
+`          vivo y55;
+`          vivo yA3;
+`          Vivo non 5g;
+`          Vivo y36;
+
+`     OPPO (NET)<Q>;
+`          Oppo;
+`          OPPO 5G;
+`          OPPO A15S;
+`          oppo a5s;
+`          OPPO A94;
+`          OPPO S28;
+`          Reno S7;
+`          Oppo 12a;
+`          Oppo a16;
+`          Oppo a16k;
+`          Oppo A31;
+`          OPPO A37;
+`          Oppo A3s;
+`          Oppo a53;
+`          Oppo a54;
+`          Oppo a57;
+`          Oppo 17k;
+`          Oppo a46;
+`          Oppo a71;
+`          Oppo a96;
+`          Oppo A33;
+`          Oppo A23;
+`          Oppo a83;
+`          Oppo a95;
+`          Oppo CPH2083;
+`          Oppo Reno;
+`          Oppoa55;
+`          Oppo F9 pro;
+`          Oppo A2;
+`          Oppo a32;
+`          Oppo a35;
+`          Oppo a92;
+`          Oppo F11;
+`          Oppo F5;
+`          Oppo Reno 8;
+`          Oppo a7;
+`          Oppo F3;
+`          Oppo reno 10;
+`          Oppo A12;
+`          Oppo a15;
+`          Oppo A5 2;
+`          Oppo A77S;
+`          Oppo reno 4;
+`          Oppo reno 6;
+`          OPPO CPH 2185;
+`          Oppo a12s;
+`          Oppo a17;
+`          Oppo F1s;
+`          OPPO Y11;
+`          Oppo reno 7;
+`          Oppo Y81;
+`          Oppo 137;
+`          Oppo 1801;
+`          Oppo 4G;
+`          Oppo a20;
+`          Oppo non 5g;
+`          Oppo a14;
+`          Oppo a18;
+`          Oppo a38;
+`          Oppo a52;
+`          Oppo 76;
+
+`     POCO (NET)<Q>;
+`          Poco c40;
+`          Poco Fone f2;
+`          Poco M4;
+`          Pocco;
+`          poco x4 pro;
+`          pocoo phone;
+`          Poco F3;
+`          Poco M3;
+`          Poco F5 Pro;
+
+`     TECHNO (NET)<Q>;
+`          Techno;
+`          Tecno 804A;
+`          Techno  Spark;
+`          Techno  Air6;
+`          Techno  k5;
+`          Techno Camon 16;
+`          Techno pova ;
+`          Techno Camon 20;
+`          Techno Pop Lite 5;
+`          Techno pova 4;
+`          Tecno Spark 10 Pro;
+`          tecno spark7 pro;
+`          Tecno Spark6 go;
+`          Tecno5;
+`          Techno pova neo;
+
+`     ULEFONE (NET)<Q>;
+`          Ulefone;
+
+`     AZUS (NET)<Q>;
+`          Azus ;
+
+`     CHERRY MOBILE (NET)<Q>;
+`          Cherry Mobile;
+`          cherry mobile flare;
+`          Cherry aqua s9;
+
+`     ITEL (NET)<Q>;
+`          Itel;
+`          Itel A57;
+`          itel P37;
+`          itel Vision;
+`          Itel4g;
+`          Itel 20;
+`          Itel a56;
+`          Itel Vision 2;
+
+`     NOKIA (NET)<Q>;
+`          Nokia;
+
+`     TCL (NET)<Q>;
+`          TCL   ;
+
+`     VFONE (NET)<Q>;
+`          Vfone  ;
+
+`     LG (NET)<Q>;
+`          LG   ;
+
+`     MY PHONE (NET)<Q>;
+`          Myphone my96;
+`          My Phone  ;
+
+`     ASUS (NET)<Q>;
+`          Asus;
+
+`     INTEL (NET)<Q>;
+`          Intel  ;
+
+`     LENOVO (NET)<Q>;
+`          Lenovo note 6;
+
+`     QNET (NET)<Q>;
+`          Qnet;
+
+`     UMIDIGI (NET)<Q>;
+`          Umidig a75;
+
+`     KFONE (NET)<Q>;
+`          Kfone;
+
+`     BLACKVEW (NET)<Q>;
+`          Blackview A95;
+
+`     INFINITY  (NET)<Q>;
+`          Infinity Hot 20;
+
+`     ONEPLUS  (NET)<Q>;
+`          ONEPLUS ;
+
+`     ZTE  (NET)<Q>;
+`          ZTE ;
+
+`     VAGUE (NET);
+`     Don't know;
 Feature Phone (It has internet capabilities, supports 3G, it can have a touchpad/touchscreen but not an OS. Can't download apps.);
 Basic/Keypad Phone (It has no internet capabilities.);
 None;
@@ -3765,32 +5941,67 @@ Total Count<C>",
 
 
 !=========
-DM $TQ66a = $A_Q66a/1,2,3,4,5,6,7,31,8,91,R,F,
+DM $TQ66a = 
+$A_Q66a/1+($Q66a_91_other/1022),
+$A_Q66a/2+($Q66a_91_other/1037),
+$A_Q66a/3+($Q66a_91_other/1020+1023+1031+1033+1040+1041+1042+1044+1032+1045+1046+1049),
+$A_Q66a/4+($Q66a_91_other/5135),
+$A_Q66a/5,
+$A_Q66a/6+($Q66a_91_other/1024+1035),
+$A_Q66a/7,
+$A_Q66a/31,
+$A_Q66a/8+($Q66a_91_other/1026+1027+1028+1029+1025+1030+1034+1036+1038+1039+1043+1047+1048+1050),
+$Q66a_91_other/1016,
+
+$Q66a_91_other/1051+1052,
+$Q66a_91_other/9997,
+$Q66a_91_other/9999,
+!$A_Q66a/91,
+R,F,
 VT = "Q66a. INTERNET CONNECTION (ACCESS POINT)",
 V = "
-Internet Cafï¿½/Pisonet (internet access using computer owned by shop);
+Internet Café/Pisonet (internet access using computer owned by shop);
 Office/School internet;
-Mobile Data;
+Mobile Data from Prepaid or Postpaid SIM subscription;
 Free Public Wi-Fi (free internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc.); 
 Paid Public Wi-Fi(internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc., paid access after exceeding free GB); 
-Mobile Hotspot/Tether;
+Mobile Hotspot/Tether from a family/ relative/ friend;
 Wi-Fi Tingi/WiFi Hotspot Voucher (bought from store/electronic machine or kiosk/other retailers, provided with username and password, with time validity and limited data/GB allocation); 
-Owned paid access to internet connection/Wi-Fi at home; 
+Owned paid access to internet connection/Wi-Fi at home (i.e. PLDT, Converge, etc.);
 Paid access to internet connection/Wi-Fi at home of neighbor/relative/friend (shared payment agreement); 
-Others;
+
+Free access to internet connection/Wi-Fi at home of neighbor/relative/friend;
+VAGUE (NET);
+Refused;
+NONE;
+
 Missing Answer<z>;
 Total Count<C>", 
 
-
-
 !=========
-DM $TQ66b = $A_Q66b/9,30,10,91,99,R,F,
+DM $TQ66b = 
+$A_Q66b/9,
+$A_Q66b/30+($Q66b_91_other/1001),
+$A_Q66b/10,
+!$A_Q66b/91,
+$Q66b_91_other/1020,
+$Q66b_91_other/1029,
+$Q66b_91_other/1034,
+
+$Q66b_91_other/1030+1031+1032+1033+1035+1036+1037+1038+1039,
+$A_Q66b/99+($Q66b_91_other/9999),
+R,F,
 VT = "Q66b. INTERNET CONNECTION (DEVICE USED)",
 V = "
 5G-capable smart phone; 
 4G -capable smart phone;
 Feature Phone (It has internet capabilities, supports 3G, it can have a touchpad/touchscreen but not an OS. Can't download apps.);  
-Others;
+
+prepaid wifi;
+laptop;
+PLDT Postpaid;
+VAGUE (NET);
+
 None;
 Missing Answer<z>;
 Total Count<C>", 
@@ -3813,8 +6024,9 @@ Total Count<C>",
 !!GCASH USED CASES
 
 !=========
-DM $TQ194a = $Q194a/1+($Q194a_91_other/1001),
-$Q194a/2+($Q194a_91_other/1002+1062),
+DM $TQ194a = 
+$Q194a/1+($Q194a_91_other/1001),
+$Q194a/2+($Q194a_91_other/1002+1062+1076),
 $Q194a/3,
 $Q194a/4,
 $Q194a/5,
@@ -3856,8 +6068,9 @@ $Q194a_91_other/1066,
 $Q194a_91_other/1067,
 $Q194a_91_other/1068,
 $Q194a_91_other/1069,
+$Q194a_91_other/1075,
 
-$Q194a_91_other/1070+1072+1073,
+$Q194a_91_other/1070+1072+1073+1074+1077,
 $Q194a/99+($Q194a_91_other/9999),
 R,F,
 VT = "Q194a. GCASH SERVICES: TOM AWARENESS",
@@ -3905,6 +6118,9 @@ Purchasing Online;
 Balance;
 To order in shoppe and shoppe;
 Raffle points for Cigarettes;
+
+Money lending;
+
 VAGUE (NET);
 None;
 Missing Answer<z>;
@@ -3914,7 +6130,7 @@ Total Count<C>",
 !=========
 DM $TQ194b = 
 $A_Q194b/1+($Q194b_92_other/1001)+($Q194b_93_other/1001),
-$A_Q194b/2+($Q194b_92_other/1002+1062)+($Q194b_93_other/1002+1062),
+$A_Q194b/2+($Q194b_92_other/1002+1062)+($Q194b_93_other/1002+1062+1076),
 $A_Q194b/3,
 $A_Q194b/4,
 $A_Q194b/5,
@@ -3956,8 +6172,9 @@ $Q194b_92_other/1066+($Q194b_93_other/1066),
 $Q194b_92_other/1067+($Q194b_93_other/1067),
 $Q194b_92_other/1068+($Q194b_93_other/1068),
 $Q194b_92_other/1069+($Q194b_93_other/1069),
+$Q194b_92_other/1075+($Q194b_93_other/1075),
 
-$Q194b_92_other/1070+1072+1073+($Q194b_93_other/1070+1072+1073),
+$Q194b_92_other/1070+1072+1073+1074+1077+($Q194b_93_other/1070+1072+1073+1074+1077),
 $A_Q194b/99+($Q194b_92_other/9999)+($Q194b_93_other/9999),
 R,F,
 VT = "Q194b. GCASH SERVICES: OTHER SPONT AWARENESS",
@@ -3972,7 +6189,7 @@ IF $A_Q194c/93, OM $Q194c_93_other = $Q194b_93_other,
 
 DM $TQ194c = 
 $A_Q194c/1+([*do a = 91:93]$Q194c_[a]_other/1001[*sle]+[*end a]),
-$A_Q194c/2+([*do a = 91:93]$Q194c_[a]_other/1002+1062[*sle]+[*end a]),
+$A_Q194c/2+([*do a = 91:93]$Q194c_[a]_other/1002+1062+1076[*sle]+[*end a]),
 $A_Q194c/3,
 $A_Q194c/4,
 $A_Q194c/5,
@@ -4014,8 +6231,9 @@ $A_Q194c/25,
 ([*do a = 91:93]$Q194c_[a]_other/1067[*sle]+[*end a]),
 ([*do a = 91:93]$Q194c_[a]_other/1068[*sle]+[*end a]),
 ([*do a = 91:93]$Q194c_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q194c_[a]_other/1075[*sle]+[*end a]),
 
-([*do a = 91:93]$Q194c_[a]_other/1070+1072+1073[*sle]+[*end a]),
+([*do a = 91:93]$Q194c_[a]_other/1070+1072+1073+1074+1077[*sle]+[*end a]),
 $A_Q194c/99+([*do a = 91:93]$Q194c_[a]_other/9999[*sle]+[*end a]),
 R,F,
 VT = "Q194c. GCASH SERVICES: AIDED AWARENESS",
@@ -4029,7 +6247,7 @@ IF $A_Q194d/93, OM $Q194d_93_other = $Q194b_93_other,
 
 DM $TQ194d = 
 $A_Q194d/1+([*do a = 91:93]$Q194d_[a]_other/1001[*sle]+[*end a]),
-$A_Q194d/2+([*do a = 91:93]$Q194d_[a]_other/1002+1062[*sle]+[*end a]),
+$A_Q194d/2+([*do a = 91:93]$Q194d_[a]_other/1002+1062+1076[*sle]+[*end a]),
 $A_Q194d/3,
 $A_Q194d/4,
 $A_Q194d/5,
@@ -4071,8 +6289,9 @@ $A_Q194d/25,
 ([*do a = 91:93]$Q194d_[a]_other/1067[*sle]+[*end a]),
 ([*do a = 91:93]$Q194d_[a]_other/1068[*sle]+[*end a]),
 ([*do a = 91:93]$Q194d_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q194d_[a]_other/1075[*sle]+[*end a]),
 
-([*do a = 91:93]$Q194d_[a]_other/1070+1072+1073[*sle]+[*end a]),
+([*do a = 91:93]$Q194d_[a]_other/1070+1072+1073+1074+1077[*sle]+[*end a]),
 $A_Q194d/99+([*do a = 91:93]$Q194d_[a]_other/9999[*sle]+[*end a]),
 R,F,
 VT = "Q194d. TOTAL GCASH SERVICES AWARENESS",
@@ -4080,13 +6299,13 @@ V = $TQ194a,
 
 !=========
 
-IF $A_Q195a/91, OM $Q195a_91_other = $Q194a_91_other,
-IF $A_Q195a/92, OM $Q195a_92_other = $Q194b_92_other,
-IF $A_Q195a/93, OM $Q195a_93_other = $Q194b_93_other,
+IF $A_Q195a/91, OM $Q195a_91_other = $Q194A_91_other,
+IF $A_Q195a/92, OM $Q195a_92_other = $Q194B_92_other,
+IF $A_Q195a/93, OM $Q195a_93_other = $Q194B_93_other,
 
 DM $TQ195a = 
 $A_Q195a/1+([*do a = 91:93]$Q195a_[a]_other/1001[*sle]+[*end a]),
-$A_Q195a/2+([*do a = 91:93]$Q195a_[a]_other/1002+1062[*sle]+[*end a]),
+$A_Q195a/2+([*do a = 91:93]$Q195a_[a]_other/1002+1062+1076[*sle]+[*end a]),
 $A_Q195a/3,
 $A_Q195a/4,
 $A_Q195a/5,
@@ -4128,8 +6347,9 @@ $A_Q195a/25,
 ([*do a = 91:93]$Q195a_[a]_other/1067[*sle]+[*end a]),
 ([*do a = 91:93]$Q195a_[a]_other/1068[*sle]+[*end a]),
 ([*do a = 91:93]$Q195a_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q195a_[a]_other/1075[*sle]+[*end a]),
 
-([*do a = 91:93]$Q195a_[a]_other/1070+1072+1073[*sle]+[*end a]),
+([*do a = 91:93]$Q195a_[a]_other/1070+1072+1073+1074+1077[*sle]+[*end a]),
 $A_Q195a/99+([*do a = 91:93]$Q195a_[a]_other/9999[*sle]+[*end a]),
 R,F,
 VT = "Q195a. GCASH SERVICES EVER USED",
@@ -4143,7 +6363,7 @@ IF $A_Q195b/93, OM $Q195b_93_other = $Q194b_93_other,
 
 DM $TQ195b = 
 $A_Q195b/1+([*do a = 91:93]$Q195b_[a]_other/1001[*sle]+[*end a]),
-$A_Q195b/2+([*do a = 91:93]$Q195b_[a]_other/1002+1062[*sle]+[*end a]),
+$A_Q195b/2+([*do a = 91:93]$Q195b_[a]_other/1002+1062+1076[*sle]+[*end a]),
 $A_Q195b/3,
 $A_Q195b/4,
 $A_Q195b/5,
@@ -4185,8 +6405,9 @@ $A_Q195b/25,
 ([*do a = 91:93]$Q195b_[a]_other/1067[*sle]+[*end a]),
 ([*do a = 91:93]$Q195b_[a]_other/1068[*sle]+[*end a]),
 ([*do a = 91:93]$Q195b_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q195b_[a]_other/1075[*sle]+[*end a]),
 
-([*do a = 91:93]$Q195b_[a]_other/1070+1072+1073[*sle]+[*end a]),
+([*do a = 91:93]$Q195b_[a]_other/1070+1072+1073+1074+1077[*sle]+[*end a]),
 $A_Q195b/99+([*do a = 91:93]$Q195b_[a]_other/9999[*sle]+[*end a]),
 R,F,
 VT = "Q195b. GCASH SERVICES USED IN THE PAST 2 MONTHS",
@@ -4201,7 +6422,7 @@ IF $A_Q195c/93, OM $Q195c_93_other = $Q194b_93_other,
 
 DM $TQ195c = 
 $A_Q195c/1+([*do a = 91:93]$Q195c_[a]_other/1001[*sle]+[*end a]),
-$A_Q195c/2+([*do a = 91:93]$Q195c_[a]_other/1002+1062[*sle]+[*end a]),
+$A_Q195c/2+([*do a = 91:93]$Q195c_[a]_other/1002+1062+1076[*sle]+[*end a]),
 $A_Q195c/3,
 $A_Q195c/4,
 $A_Q195c/5,
@@ -4243,8 +6464,9 @@ $A_Q195c/25,
 ([*do a = 91:93]$Q195c_[a]_other/1067[*sle]+[*end a]),
 ([*do a = 91:93]$Q195c_[a]_other/1068[*sle]+[*end a]),
 ([*do a = 91:93]$Q195c_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q195c_[a]_other/1075[*sle]+[*end a]),
 
-([*do a = 91:93]$Q195c_[a]_other/1070+1072+1073[*sle]+[*end a]),
+([*do a = 91:93]$Q195c_[a]_other/1070+1072+1073+1074+1077[*sle]+[*end a]),
 $A_Q195c/99+([*do a = 91:93]$Q195c_[a]_other/9999[*sle]+[*end a]),
 R,F,
 
@@ -4254,22 +6476,22 @@ V = $TQ194a,
 !=========
 
 DM $TQ196 = 
-$A_Q196/1+([*do a = 91:92]$Q196_[a]_other/1001[*sle]+[*end a]),
-$A_Q196/2+([*do a = 91:92]$Q196_[a]_other/1002+1062[*sle]+[*end a]),
+$A_Q196/1+([*do a = 91:93]$Q196_[a]_other/1001[*sle]+[*end a]),
+$A_Q196/2+([*do a = 91:93]$Q196_[a]_other/1002+1062+1076[*sle]+[*end a]),
 $A_Q196/3,
 $A_Q196/4,
 $A_Q196/5,
 $A_Q196/6,
-$A_Q196/7+([*do a = 91:92]$Q196_[a]_other/1007+1071[*sle]+[*end a]),
+$A_Q196/7+([*do a = 91:93]$Q196_[a]_other/1007+1071[*sle]+[*end a]),
 $A_Q196/8,
-$A_Q196/9+([*do a = 91:92]$Q196_[a]_other/1009[*sle]+[*end a]),
-$A_Q196/21+([*do a = 91:92]$Q196_[a]_other/2100[*sle]+[*end a]),
+$A_Q196/9+([*do a = 91:93]$Q196_[a]_other/1009[*sle]+[*end a]),
+$A_Q196/21+([*do a = 91:93]$Q196_[a]_other/2100[*sle]+[*end a]),
 $A_Q196/11,
 $A_Q196/12,
-$A_Q196/13+([*do a = 91:92]$Q196_[a]_other/1013[*sle]+[*end a]),
+$A_Q196/13+([*do a = 91:93]$Q196_[a]_other/1013[*sle]+[*end a]),
 $A_Q196/14,
 $A_Q196/15,
-$A_Q196/16+([*do a = 91:92]$Q196_[a]_other/1016[*sle]+[*end a]),
+$A_Q196/16+([*do a = 91:93]$Q196_[a]_other/1016[*sle]+[*end a]),
 $A_Q196/17,
 $A_Q196/18,
 $A_Q196/19,
@@ -4278,28 +6500,29 @@ $A_Q196/22,
 $A_Q196/23,
 $A_Q196/24,
 $A_Q196/25,
-([*do a = 91:92]$Q196_[a]_other/1010[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1050+1051+1021[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1052[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1053[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1054[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1055[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1056[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1057[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1058[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1059[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1060[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1061[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1063[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1064[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1065[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1066[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1067[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1068[*sle]+[*end a]),
-([*do a = 91:92]$Q196_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1010[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1050+1051+1021[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1052[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1053[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1054[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1055[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1056[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1057[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1058[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1059[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1060[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1061[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1063[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1064[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1065[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1066[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1067[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1068[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1075[*sle]+[*end a]),
 
-([*do a = 91:92]$Q196_[a]_other/1070+1072+1073[*sle]+[*end a]),
-$A_Q196/99+([*do a = 91:92]$Q196_[a]_other/9999[*sle]+[*end a]),
+([*do a = 91:93]$Q196_[a]_other/1070+1072+1073+1074+1077[*sle]+[*end a]),
+$A_Q196/99+([*do a = 91:93]$Q196_[a]_other/9999[*sle]+[*end a]),
 R,F,
 VT = "Q196. CONSIDERATION IN USING GCASH SERVICES",
 V = $TQ194a, 
@@ -4365,7 +6588,7 @@ V = "[GBRAND.A]\
 
 
 !=========
-[*DO B = 1:48]
+[*DO B = 1:51]
 DM $TQ47R[b] = $T_Q47_[Q17CODES.B]/1-11,
 1..7,
 8..9,
@@ -4443,7 +6666,7 @@ $I_[Q40CODES.A]_Q40b/1+48+68,
 38,
 38,
 
-2+4+7+9+17+19+47+21+24+25+31+45+57+61+62+72,
+2+4+7+9+17+19+47+21+24+25+31+45+57+61+62+72+101,
 2,
 4,
 7,
@@ -4459,14 +6682,16 @@ $I_[Q40CODES.A]_Q40b/1+48+68,
 61,
 62,
 72,
+101,
 
 43,
 43,
 
-50+56+86,
+50+56+86+102,
 50,
 56,
 86,
+102,
 
 71,
 71,
@@ -4505,7 +6730,7 @@ $I_[Q40CODES.A]_Q40b/1+48+68,
 40,
 40,
 
-34+39+49+52+66+67+69+75+77+79+82+84+85+87+88+91,
+34+39+49+52+66+67+69+75+77+79+82+84+85+87+88+91+97+98+99+100+103+104+105,
 34,
 39,
 49,
@@ -4522,144 +6747,511 @@ $I_[Q40CODES.A]_Q40b/1+48+68,
 87,
 88,
 91,
-
+97,
+98,
+99,
+100,
+103,
+104,
+105,
 
 29+89+90+92+94+95+96,
+9997,
 9999,
 
 R,F,
 VT = "Q40B. REASONS FOR USING BRAND OF E-WALLET IN THE PAST 1 MONTH - [Q40.A]",
 V = "
 <G1B>TO SEND MONEY NET<Q>;
-<G2B><G1P>Allowance;
-<G1P>Sending money;
-<G2E><G1P>Need to send money in Gcash for budgets;
+`     <G2B><G1P>Allowance;
+`     <G1P>Sending money;
+`     <G2E><G1P>Need to send money in Gcash for budgets;
 
 LOW SERVICE CHARGE FEE/ SERVICE CHARGE IS CHEAP NET<Q>;
-<G2B><G1P>The charge is cheaper;
-<G1P>No charge for loading;
-<G2E><G1P>No need to pay charges;
+`     <G2B><G1P>The charge is cheaper;
+`     <G1P>No charge for loading;
+`     <G2E><G1P>No need to pay charges;
 
 TO SAVE MONEY NET<Q>;
-<G2B><G1P>To save money;
-<G2E><G1P>You can save your cash if you are using online transaction;
+`     <G2B><G1P>To save money;
+`     <G2E><G1P>You can save your cash if you are using online transaction;
 
 CAN USE IF NO CASH NET<Q>;
-<G1P>If no cash;
+`     <G1P>If no cash;
 
 TO PAY BILLS NET<Q>;
-<G2B><G1P>Payment of bills;
-<G1P>Debt payment;
-<G1P>For Medical purposes and Tobacco;
-<G2E><G1P>Payment for cheque;
+`     <G2B><G1P>Payment of bills;
+`     <G1P>Debt payment;
+`     <G1P>For Medical purposes and Tobacco;
+`     <G2E><G1P>Payment for cheque;
 
 SECURITY NET<Q>;
-<G2B><G1P>Money is secured in Gcash;
-<G2E><G1P>Safe to send money;
+`     <G2B><G1P>Money is secured in Gcash;
+`     <G2E><G1P>Safe to send money;
 
 FOR SCHOOL NET<Q>;
-<G1P>For the school to facilitate the transaction;
+`     <G1P>For the school to facilitate the transaction;
 
 TO RECEIVE PAYMENT FROM CUSTOMERS NET<Q>;
-<G1P>Payment from customer;
+`     <G1P>Payment from customer;
 
 TO PAY FOR ONLINE GAMES NET<Q>;
-<G2B><G1P>Pay for online games;
-<G2E><G1P>For Casino;
+`     <G2B><G1P>Pay for online games;
+`     <G2E><G1P>For Casino;
 
 CASHLESS NET<Q>;
-<G1P>Cashless;
+`     <G1P>Cashless;
 
 FOR PAYROLL/ SALARY NET<Q>;
-<G1P>Send my salary in Gcash;
+`     <G1P>Send my salary in Gcash;
 
 HAS VARIETY OF SERVICES NET<Q>;
-<G1P>Many services;
+`     <G1P>Many services;
 
 CONVENIENCE NET<Q>;
-<G2B><G1P>Convenient;
-<G1P>Efficient;
-<G1P>Easy to receive money / Claim;
-<G1P>Easy way to buy load;
-<G1P>Gcash is esier to use compared with remitance centers;
-<G1P>Hassle free;
-<G1P>Easy transaction;
-<G1P>Easy to use;
-<G1P>Less time consumed;
-<G1P>Easy to cash in/ Cash out;
-<G1P>No need to pay fares and stand in line to pay bills;
-<G1P>Effortless;
-<G1P>Much better because in one click your transaction well done;
-<G1P>Just receive no need going outside for cash out;
-<G2E><G1P>Makes life easier using Gcash;
+`     <G2B><G1P>Convenient;
+`     <G1P>Efficient;
+`     <G1P>Easy to receive money / Claim;
+`     <G1P>Easy way to buy load;
+`     <G1P>Gcash is esier to use compared with remitance centers;
+`     <G1P>Hassle free;
+`     <G1P>Easy transaction;
+`     <G1P>Easy to use;
+`     <G1P>Less time consumed;
+`     <G1P>Easy to cash in/ Cash out;
+`     <G1P>No need to pay fares and stand in line to pay bills;
+`     <G1P>Effortless;
+`     <G1P>Much better because in one click your transaction well done;
+`     <G1P>Just receive no need going outside for cash out;
+`     <G1P>Makes life easier using Gcash;
+`     <G2E><G1P>Easy process no need to travel;
 
 SAFETY NETQ<q>;
-<G1P>Money is safe because you don't have to carry in you hand;
+`     <G1P>Money is safe because you don't have to carry in you hand;
 
 TO AVAIL PROMOS NET<Q>;
-<G2B><G1P>For registered in 7 days promo;
-<G1P>More promos;
-<G2E><G1P>Discount for payment in shoppe;
+`     <G2B><G1P>For registered in 7 days promo;
+`     <G1P>More promos;
+`     <G1P>Discount for payment in shoppe;
+`     <G2E><G1P>Free voucher;
 
 FOR PAYMENT NET<Q>;
-<G1P>Grab payment;
+`     <G1P>Grab payment;
 
 FOR EMERGENCY NET<Q>;
-<G1P>For emergency purposes;
+`     <G1P>For emergency purposes;
 
 FOR LOANING/ BORROWING MONEY NET<Q>;
-<G1P>Easy loan without deduction charges;
+`     <G1P>Easy loan without deduction charges;
 
 FAST TRANSACTION NET<Q>;
-<G2B><G1P>Fast transaction;
-<G1P>Quick payment of purchase;
-<G1P>Fast to transfer/send money;
-<G1P>Fast Receiving of money;
-<G1P>Quick Payment using Gcash;
-<G1P>Easy to pay online;
-<G2E><G1P>The order is fast;
+`     <G2B><G1P>Fast transaction;
+`     <G1P>Quick payment of purchase;
+`     <G1P>Fast to transfer/send money;
+`     <G1P>Fast Receiving of money;
+`     <G1P>Quick Payment using Gcash;
+`     <G1P>Easy to pay online;
+`     <G2E><G1P>The order is fast;
 
 ACCESSIBILITY NET<Q>;
-<G2B><G1P>Accessible even I use my cellphone;
-<G1P>Can cash out anywhere;
-<G1P>No need go to town becasuse there are many Gcash centers here;
-<G1P>You won't go to the store to load more when you have GCASH;
-<G1P>Can use Anytime;
-<G1P>Can use Anywhere;
-<G1P>Most of the stablishment accepting;
-<G1P>Gcash is more available than other;
-<G1P>It is easier to pay because you donï¿½t need to line up and bring a jeep;
-<G1P>No need to go to store;
-<G1P>No need to go to outside at home;
-<G1P>Stable internet;
-<G1P>Comfortable;
-<G2E><G1P>Reliable;
+`     <G2B><G1P>Accessible even I use my cellphone;
+`     <G1P>Can cash out anywhere;
+`     <G1P>No need go to town becasuse there are many Gcash centers here;
+`     <G1P>You won't go to the store to load more when you have GCASH;
+`     <G1P>Can use Anytime;
+`     <G1P>Can use Anywhere;
+`     <G1P>Most of the stablishment accepting;
+`     <G1P>Gcash is more available than other;
+`     <G1P>It is easier to pay because you don’t need to line up and bring a jeep;
+`     <G1P>No need to go to store;
+`     <G1P>No need to go to outside at home;
+`     <G1P>Stable internet;
+`     <G1P>Comfortable;
+`     <G2E><G1P>Reliable;
 
 <G1E>ACCURACY NET<Q>;
-<G1P>Accurate;
+`     <G1P>Accurate;
 
 OTHERS NET<Q>;
-Have lots scammer;
-Save on shipping fee;
-To save costs;
-Personal use;
-I use to it to contact my friends;
-Very important;
-My account is only Gcash;
-No need reference number ;
-Complete apps;
-Because of Toda obligatory;
-No need Valid ID;
-Benefits;
-I use pay maya if no cash my Gcash;
-All in one;
-trending new technology;
-Used more often compared to cash;
+`     Have lots scammer;
+`     Save on shipping fee;
+`     To save costs;
+`     Personal use;
+`     I use to it to contact my friends;
+`     Very important;
+`     My account is only Gcash;
+`     No need reference number ;
+`     Complete apps;
+`     Because of Toda obligatory;
+`     No need Valid ID;
+`     Benefits;
+`     I use pay maya if no cash my Gcash;
+`     All in one;
+`     trending new technology;
+`     Used more often compared to cash;
+`     Need in my travel;
+`     Used to it ever since;
+`     Encourage of my sister;
+`     Give rewards;
+`     Use to it;
+`     For business;
+`     Recommended by family;
+
 
 VAGUE NET;
+No comment;
 None;
 Missing Answer<z>;
 Total Count<C>", 
+[*END A]
+
+
+!! ADDITIONAL QUESTIONS Q1
+
+
+
+
+
+
+
+
+!=========
+[*DATA Q117GCash (;) =
+Usefulness of GCash for its users;
+Ease of using GCash;
+Security of GCash;
+Customer service of GCash]
+
+[*DO A = 1:4]
+DM $TQ117_1_[A] = $I_1_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - GCash",
+V = "[Q117GCash.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+
+!=========
+[*DATA Q117PayMaya (;) =
+Usefulness of PayMaya/Maya for its users;
+Ease of using PayMaya/Maya;
+Security of PayMaya/Maya;
+Customer service of PayMaya/Maya]
+
+[*DO A = 1:4]
+DM $TQ117_2_[A] = $I_2_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - PayMaya/Maya",
+V = "[Q117PayMaya.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+!=========
+[*DATA Q117Coins (;) =
+Usefulness of Coins.ph for its users;
+Ease of using Coins.ph;
+Security of Coins.ph;
+Customer service of Coins.ph]
+
+[*DO A = 1:4]
+DM $TQ117_3_[A] = $I_3_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - Coins.ph",
+V = "[Q117Coins.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+!=========
+[*DATA Q117PayPal (;) =
+Usefulness of PayPal for its users;
+Ease of using PayPal;
+Security of PayPal;
+Customer service of PayPal]
+
+[*DO A = 1:4]
+DM $TQ117_4_[A] = $I_4_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - PayPal",
+V = "[Q117PayPal.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+
+!=========
+[*DATA Q117GrabPay (;) =
+Usefulness of GrabPay for its users;
+Ease of using GrabPay;
+Security of GrabPay;
+Customer service of GrabPay]
+
+[*DO A = 1:4]
+DM $TQ117_7_[A] = $I_7_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - GrabPay",
+V = "[Q117GrabPay.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+
+!=========
+[*DATA Q117CLIQQ (;) =
+Usefulness of CLIQQ for its users;
+Ease of using CLIQQ;
+Security of CLIQQ;
+Customer service of CLIQQ]
+
+[*DO A = 1:4]
+DM $TQ117_11_[A] = $I_11_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - CLIQQ",
+V = "[Q117CLIQQ.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+!=========
+[*DATA Q117BPI (;) =
+Usefulness of BPI Mobile/Online for its users;
+Ease of using BPI Mobile/Online;
+Security of BPI Mobile/Online;
+Customer service of BPI Mobile/Online]
+
+[*DO A = 1:4]
+DM $TQ117_12_[A] = $I_12_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - BPI Mobile/Online",
+V = "[Q117BPI.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+
+!=========
+[*DATA Q117BDO (;) =
+Usefulness of BDO Mobile/Online for its users;
+Ease of using BDO Mobile/Online;
+Security of BDO Mobile/Online;
+Customer service of BDO Mobile/Online]
+
+[*DO A = 1:4]
+DM $TQ117_13_[A] = $I_13_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - BDO Mobile/Online",
+V = "[Q117BDO.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+
+!=========
+[*DATA Q117ShopeePay (;) =
+Usefulness of ShopeePay for its users;
+Ease of using ShopeePay;
+Security of ShopeePay;
+Customer service of ShopeePay]
+
+[*DO A = 1:4]
+DM $TQ117_23_[A] = $I_23_T_Q117_[A]/1-11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+VT = "Q117. NET PROMOTER SCORE - ShopeePay",
+V = "[Q117ShopeePay.A]\
+`     0 - Not at all likely<v0>;
+`     1<v1>;
+`     2<v2>;
+`     3<v3>;
+`     4<v4>;
+`     5<v5>;
+`     6<v6>;
+`     7<v7>;
+`     8<v8>;
+`     9<v9>;
+`     10 - Highly likely<v10>;
+`     DETRACTORS NET <Q>;
+`     PASSIVES NET <Q>;
+`     PROMOTERS NET <Q>;
+`     NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+Missing Answer<z>;
+Total Count<C>",   
+[*END A]
+
+
+
+!=========
+[*DATA Q197ABRAND = GInsure,GSave,GInvest/GFunds,GCrypto,Global GStocks,PH GStocks]
+[*DATA Q197ACODES = 8,9,16,17,18,19]
+[*DO A = 1:6]
+DM $TQ197a_[Q197ACODES.A] = $I_[Q197ACODES.A]_A_Q197a/1-6,R,F,
+VT = "Q197a. WHETHER CHECKED BALANCE ONLY OR TRANSACTED - [Q197ABRAND.A]",
+V = "
+I just check my account balance;
+I put savings in my account;
+I just browsed and checked different insurance products; 
+I purchased or paid my premium for my insurance product;
+I just checked the market or different stocks;
+I bought or sold a stock/ crypto;
+Missing Answer<z>;
+Total Count<C>",
 [*END A]
 
 
@@ -4667,14 +7259,329 @@ Total Count<C>",
 
 
 
+!=========
+DM $TQ187new = $A_Q187new/1..3+11,
+1,
+2,
+3,
+11,
+4+5+6+7+8+10,
+4,
+5,
+6,
+7,
+8,
+10,
+99,
+R,F,
+VT = "Q187new. EMPLOYMENT STATUS",
+V = "
+WORKING<Q>;
+`     Self-employed/Business-owner;
+`     Full-time employee;
+`     Part-time employee;
+`     Freelancer;
+NON-WORKING<Q>;
+`     Housewife/Stay at home husband;
+`     Student;
+`     Out-of-school;
+`     Retired;
+`     Unemployed;
+`     WORKING AND STUDYING;
+REFUSE TO ANSWER;
+Missing Answer<z>;
+Total Count<C>",
 
 
 
+!=========
+DM $TQF1 = $A_QF1/1-11,91,R,F,
+VT = "QF1. TYPE OF FREELANCE WORK",
+V = "
+Virtual Assistant;
+Data entry/Transcription;
+Customer Service;
+Social Media Marketing/Management;
+Content Creator/Content Writing;
+Software Engineer/Programmer;
+Graphic Designer;
+ESL Tutor;
+Video Editor;
+SEO Specialist;
+Copywriter;
+Others;
+Missing Answer<z>;
+Total Count<C>",
+
+
+!=========
+DM $TQF2 = $A_QF2/1-12,91,R,F,
+VT = "QF2. WHERE FREELANCE INCOME IS SPENT",
+V = "
+Savings;
+Insurance;
+House Rental/Condominium/Apartment;
+Household bills such as electricity and water;
+Internet;
+Subscription services;
+Mortgage;
+Car amortization;
+Pay off a loan;
+Food expenses;
+School expenses such as tuition and school supplies;
+Investment;
+Others;
+Missing Answer<z>;
+Total Count<C>",
+
+
+!=========
+DM $TQF3 = $A_QF3/1,2,3,4,5,10,6,7,8,9,91,R,F,
+VT = "QF3. CHANNELS USED TO RECEIVE INCOME",
+V = "
+Via online/mobile bank with physical branches/ ATMs (e.g., BDO, BPI, etc);
+Via digital banks those without physical branches/ATMs (e.g., CIMB, UNOBank, Tonik, etc);
+Payoneer;
+Wise;
+GCash;
+Paypal;
+Maya;
+Other e-wallets;
+Via e-remittance centers;
+Via remittance centers (i.e., Western Union, Cebuana Lhuillier, Palawan, etc);
+Others;
+Missing Answer<z>;
+Total Count<C>",
 
 
 
+!=========
+
+IF $A_Q195d/91, OM $Q195d_91_other = $Q194a_91_other,
+IF $A_Q195d/92, OM $Q195d_92_other = $Q194b_92_other,
+IF $A_Q195d/93, OM $Q195d_93_other = $Q194b_93_other,
+
+DM $TQ195D = 
+$A_Q195d/1+([*do a = 91:93]$Q195d_[a]_other/1001[*sle]+[*end a]),
+$A_Q195d/2+([*do a = 91:93]$Q195d_[a]_other/1002+1062+1076[*sle]+[*end a]),
+$A_Q195d/3,
+$A_Q195d/4,
+$A_Q195d/5,
+$A_Q195d/6,
+$A_Q195d/7+([*do a = 91:93]$Q195d_[a]_other/1007+1071[*sle]+[*end a]),
+$A_Q195d/8,
+$A_Q195d/9+([*do a = 91:93]$Q195d_[a]_other/1009[*sle]+[*end a]),
+$A_Q195d/21+([*do a = 91:93]$Q195d_[a]_other/2100[*sle]+[*end a]),
+$A_Q195d/11,
+$A_Q195d/12,
+$A_Q195d/13+([*do a = 91:93]$Q195d_[a]_other/1013[*sle]+[*end a]),
+$A_Q195d/14,
+$A_Q195d/15,
+$A_Q195d/16+([*do a = 91:93]$Q195d_[a]_other/1016[*sle]+[*end a]),
+$A_Q195d/17,
+$A_Q195d/18,
+$A_Q195d/19,
+$A_Q195d/20,
+$A_Q195d/22,
+$A_Q195d/23,
+$A_Q195d/24,
+$A_Q195d/25,
+([*do a = 91:93]$Q195d_[a]_other/1010[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1050+1051+1021[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1052[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1053[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1054[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1055[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1056[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1057[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1058[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1059[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1060[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1061[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1063[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1064[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1065[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1066[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1067[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1068[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1075[*sle]+[*end a]),
+
+([*do a = 91:93]$Q195d_[a]_other/1070+1072+1073+1074[*sle]+[*end a]),
+$A_Q195d/99+([*do a = 91:93]$Q195d_[a]_other/9999[*sle]+[*end a]),
+R,F,
+
+VT = "Q195d. GCASH SERVICES USED IN THE PAST 1 WEEK",
+V = $TQ194a, 
 
 
+!=========
+DM $TQ193d = $Q193d/1005+1006+1009+1032+1048+1036+1019+1027+1033+1056,
+1005,
+1006,
+1009+1032+1048+1036,
+1019,
+1027,
+1033,
+1056,
+1021+1023+1040+1016+1030,
+1021,
+1023+1040+1016,
+1030,
+1004+1007+1014+1047,
+1004,
+1007,
+1014,
+1047,
 
+1013+1055+1026,
+1013+1055,
+1026,
 
+1008+1017+1025+1054,
+1008,
+1017,
+1025+1054,
 
+1018+1020+1031+1049+1050+1035+1037,
+1018+1020+1031+1049+1050+1035,
+1037,
+
+1022,
+1022,
+
+1044,
+1044,
+
+1034,
+1034,
+
+1038+1039,
+1038+1039,
+
+1041,
+1041,
+
+1002,
+1002,
+
+1011+1010+1012+1024,
+1011,
+1010,
+1012+1024,
+
+1058,
+1058,
+
+1051+1052,
+1051,
+1052,
+
+1001,
+1001,
+
+1057+1042,
+1057,
+1042,
+
+1015,
+1015,
+
+1046,
+1046,
+
+1028+1003+1053,
+1028,
+1003,
+1053,
+
+1043+1029+1045,
+9999,
+R,F,
+VT = "Q193d. MEANING OF MORE COMFORTABLE TO USE CASH",
+V = "
+<G1B>CASH IS EASY TO USE (NET)<Q>;
+`     <G2B><G1P>Easy can give directly to pay;
+`     <G1P>Don't need to open my phone to pay;
+`     <G1P>Easy to use for payment;
+`     <G1P>In cash, I can just put it and get it in my pocket when I need to pay;
+`     <G1P>No process required for cash payment;
+`     <G1P>Easier to budget in cash;
+`     <G2E><G1P>Easy to use anytime;
+
+CASH  MAKES ME FEEL SAFE AND SECURED (NET)<Q>;
+`     <G2B><G1P>I use cash to avoid scam;
+`     <G1P>More safe and secured to use cash;
+`     <G2E><G1P>Confident that when I use cash the change is exact;
+
+CASH IS UBIQUITOUS (NET)<Q>;
+`     <G2B><G1P>Always have cash in my wallet;
+`     <G1P>Cash is accessible;
+`     <G1P>No need for confirmation or code when using cash;
+`     <G2E><G1P>Always available;
+
+CASH IS CONVENIENT (NET)<Q>;
+`     <G2B><G1P>Less Hassle;
+`     <G2E><G1P>Convenient;
+
+CASH IS THE ONLY MOP ACCEPTED (NET)<Q>;
+`     <G2B><G1P>Only coins needed to pay in the busy;
+`     <G1P>Going to physical stores requires cash payment;
+`     <G2E><G1P>Cash is only accepted in transportation;
+
+SPEED OF TRANSACTION USING CASH (NET)<Q>;
+`     <G2B><G1P>Cash is a faster MOP (Multi Option Payment);
+`     <G2E><G1P>Ensured money is received immediately;
+
+CAN PAY EXACT AMOUNT USING CASH (NET)<Q>;
+`     <G1P>I can pay the exact amount using cash;
+
+NO SERVICE CHARGE FOR CASH (NET)<Q>;
+`     <G1P>No charge;
+
+NO NEED FOR INTERNET TO USE CASH (NET)<Q>;
+`     <G1P>No need for internet;
+
+ENSURED THAT TRANSACTION IS SUCCESSFUL USING CASH (NET)<Q>;
+`     <G1P>Ensured that transaction is paid/settled;
+
+MORE USED TO USING CASH (NET)<Q>;
+`     <G1P>More used to using cash;
+
+E-WALLET ONLY USED FOR ONLINE TRANSACTIONS (NET)<Q>;
+`     <G1P>E-wallet is only used for online transactions;
+
+LACK OF KNOWLEDGE ON HOW TO USE E-WALLET TO PAY (NET)<Q>;
+`     <G2B><G1P>Don't know how to use online payment;
+`     <G1P>Cannot use a cellphone to pay;
+`     <G2E><G1P>Don't know about E Wallet;
+
+E-WALLET HAS SERVICE CHARGE (NET)<Q>;
+`     <G1P>GCash has service charge;
+
+SERVICE ISSUES OR CONCERNS (NET)<Q>;
+`     <G2B><G1P>Confirmation is slow in e-wallet;
+`     <G2E><G1P>Take a long time to open;
+
+UNCOMFORTABLE WITH E-WALLET (NET)<Q>;
+`     <G1P>Uncomfortable with e-wallet;
+
+DO NOT PUT MUCH MONEY IN E-WALLET (NET)<Q>;
+`     <G2B><G1P>Do not put much money in GCash;
+`     <G2E><G1P>Rarely fun my e-wallet;
+
+NEED INTERNET/DATA TO ACCESS E-WALLET (NET)<Q>;
+`     <G1P>When there is no internet access, cannot use e-wallet to pay;
+
+`     <G1E>SOME STORES DO NOT ACCEPT GCASH PAYMENT (NET)<Q>;
+`     <G1P>Some physical stores do not accept GCash payment;
+
+OTHERS (NET)<Q>;
+`     <G2B><G1P>Except that the fees are small;
+`     <G1P>If I don't have cash, I'll just use it;
+`     <G2E><G1P>Signal is weak;
+
+VAGUE (NET);
+NONE;
+Missing Answer<z>;
+Total Count<C>",
