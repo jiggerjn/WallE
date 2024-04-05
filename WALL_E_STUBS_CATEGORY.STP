@@ -228,6 +228,27 @@ V = $TQ8b2R1,
 [*END A]
 
 
+!=========
+[*DO A = 1:7]
+DM $TQ8b1R[A]rb = $T_Q8b1_[Q8B2.A]/
+7..10,7-10,
+5..6,5-6,
+99+R,F,
+VT = "Q8b1. GENERAL FINANCIAL TRANSACTIONS METHODS (P1M) - [Q8B2STUBS.A] - REBASED",
+V = "
+NON-DIGITAL/ OFFLINE<Q>;
+`     Cash;
+`     Check;
+`     Debit Card;
+`     Credit Card;
+DIGITAL<Q>;
+`     eWallet;
+`     Mobile/Online Banking;
+DID NOT DO THIS TRANSACTION;
+Total Count<C>",
+[*END A]
+
+
 
 [*SET Q8blen = Q8B2STUBS.#]
 [*DATA averageQ8btitle (;) = 
@@ -263,6 +284,26 @@ DIGITAL;
 `    HYBRID (BOTH DIGITAL AND OFFLINE);
 DID NOT DO THIS TRANSACTION;
 Missing Answer<z>; 
+Total Count<c>",
+
+DM $TQ8b[u]_inci[A]rb = 
+$Q8b[u]_total[Q8B2.A]/NB,
+$Q8b[u]_offlineonly[Q8B2.A]/NB,
+$Q8b[u]_offlineonly[Q8B2.A]/NB+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_digitalonly[Q8B2.A]/NB+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_digitalonly[Q8B2.A]/NB,
+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_total[Q8B2.A]/B+R,
+F,
+XT = "Q8b[u]. GENERAL FINANCIAL TRANSACTIONS METHODS (P[u]M) - INCIDENCE - [Q8B2STUBS.A] - REBASED",
+X = "
+TOTAL INCIDENCE;
+NON-DIGITAL/ OFFLINE ONLY;
+TOTAL NON-DIGITAL/ OFFLINE;
+DIGITAL;
+`    DIGITAL ONLY;
+`    HYBRID (BOTH DIGITAL AND OFFLINE);
+DID NOT DO THIS TRANSACTION;
 Total Count<c>",
 [*END A]
 
@@ -2734,7 +2775,7 @@ $TQ17c/[A],
 $TQ17k/[A],
 $TQ17b/[A],
 $TQ17o/[A],
-$TQ16f/[A]+$TQ16e/[A],
+$TQ16e/[A],
 $TQ16g/[A],
 [*enda]
 VT = "Q16-Q17. BRAND FUNNEL",
@@ -2754,7 +2795,7 @@ V = "
 `     Q17k. P1W;
 `     Q17b. BUMO;
 `     Q17O. P1M;
-`     Q16e/Q16f. Favorite;
+`     Q16e. Favorite;
 `     Q16g. Recommended[*sle];
 [*ENDA]",
 
