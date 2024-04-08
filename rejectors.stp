@@ -518,53 +518,167 @@ None;
 Missing Answer<z>;
 Total Count<C>",
 
-DM $TA_Q10_1new =
-$A_Q10_1new/
-1+1036,
-2,
-3,
-4,
-5+1031,
-6,
-7,
-8,
-9,
-10+1039+1040,
-11,
-12+1033,
-13+1041,
-14,
-15,
-16,
-17,
-18,
 
-1030,
-1032,
-1034,
-1035,
-1037,
-1038,
-1042,
+DM $TA_Q10_1newNoTrust=
+$A_Q10_1new/9+10+1039+1040+11+16+
+$A_Q10_1new/9+
+$A_Q10_1new/10+1039+1040+
+$A_Q10_1new/11+
+$A_Q10_1new/16+
+
+$A_Q10_1new/5+1031+6+
+$A_Q10_1new/5+1031+
+$A_Q10_1new/6+
+
+$A_Q10_1new/7+8+15+
+$A_Q10_1new/7+
+$A_Q10_1new/8+
+$A_Q10_1new/15+
+
+$A_Q10_1new/12+1033+13+1041+14+8+
+$A_Q10_1new/12+1033+
+$A_Q10_1new/13+1041+
+$A_Q10_1new/14+
+$A_Q10_1new/8+
+
+$A_Q10_1new/17+
+$A_Q10_1new/18+
+
+$A_Q10_1new/1030+
+$A_Q10_1new/1032+
+$A_Q10_1new/1034+
+$A_Q10_1new/1035+
+$A_Q10_1new/1037+
+$A_Q10_1new/1038+
+$A_Q10_1new/1042,
+
+
+DM $TA_Q10_1newNoRelevance=
+$A_Q10_1new/1+1036+2+3+4+
+$A_Q10_1new/1+1036+
+$A_Q10_1new/2+
+$A_Q10_1new/3+
+$A_Q10_1new/4+
+
+$A_Q10_1new/5+1031+6+
+$A_Q10_1new/5+1031+
+$A_Q10_1new/6+
+
+$A_Q10_1new/7+8+15+
+$A_Q10_1new/7+
+$A_Q10_1new/8+
+$A_Q10_1new/15+
+
+$A_Q10_1new/12+1033+13+1041+14+8+
+$A_Q10_1new/12+1033+
+$A_Q10_1new/13+1041+
+$A_Q10_1new/14+
+$A_Q10_1new/8+
+
+$A_Q10_1new/17+
+$A_Q10_1new/18+
+
+$A_Q10_1new/1030+
+$A_Q10_1new/1032+
+$A_Q10_1new/1034+
+$A_Q10_1new/1035+
+$A_Q10_1new/1037+
+$A_Q10_1new/1038+
+$A_Q10_1new/1042,
+
+DM $TA_Q10_1new =
+$A_Q10_1new/1+1036+2+3+4,
+$A_Q10_1new/1+1036,
+$A_Q10_1new/2,
+$A_Q10_1new/3,
+$A_Q10_1new/4,
+
+$A_Q10_1new/9+10+1039+1040+11+16,
+$A_Q10_1new/9,
+$A_Q10_1new/10+1039+1040,
+$A_Q10_1new/11,
+$A_Q10_1new/16,
+
+$A_Q10_1new/5+1031+6,
+$A_Q10_1new/5+1031,
+$A_Q10_1new/6,
+
+$A_Q10_1new/7+8+15,
+$A_Q10_1new/7,
+$A_Q10_1new/8,
+$A_Q10_1new/15,
+
+$A_Q10_1new/12+1033+13+1041+14+8,
+$A_Q10_1new/12+1033,
+$A_Q10_1new/13+1041,
+$A_Q10_1new/14,
+$A_Q10_1new/8,
+
+($A_Q10_1new/1+1036+2+3+4).($TA_Q10_1newNoTrust/B),
+($A_Q10_1new/1+1036).($TA_Q10_1newNoTrust/B),
+($A_Q10_1new/2).($TA_Q10_1newNoTrust/B),
+($A_Q10_1new/3).($TA_Q10_1newNoTrust/B),
+($A_Q10_1new/4).($TA_Q10_1newNoTrust/B),
+
+($A_Q10_1new/9+10+1039+1040+11+16).($TA_Q10_1newNoRelevance/B),
+($A_Q10_1new/9).($TA_Q10_1newNoRelevance/B),
+($A_Q10_1new/10+1039+1040).($TA_Q10_1newNoRelevance/B),
+($A_Q10_1new/11).($TA_Q10_1newNoRelevance/B),
+($A_Q10_1new/16).($TA_Q10_1newNoRelevance/B),
+
+$A_Q10_1new/17,
+$A_Q10_1new/18,
+
+$A_Q10_1new/1030,
+$A_Q10_1new/1032,
+$A_Q10_1new/1034,
+$A_Q10_1new/1035,
+$A_Q10_1new/1037,
+$A_Q10_1new/1038,
+$A_Q10_1new/1042,
 R,F,
 VT = "Q10.1. REASONS FOR BEING A REJECTOR",
 V = "
-I am afraid to be scammed;
-I am afraid to lose my money;
-I think it is not safe and secured;
-I don't trust e-wallet//fintech and online apps;
-I do not know how to use e-wallet/ fintech app;
-I do not know how to register or create an account in e-wallet/ fintech;
-It is tedious and complicated to download and register;
-It is tedious and complicated to use;
-I do not have any use for e-wallet/ fintech;
-I do not have money to fund it;
-I don't receive money from anyone;
-I do not have my own mobile phone;
-I do not have a smartphone;
-I do not have stable/ reliable internet;
-I do not have valid ID;
-It is better to use cash;
+TRUST-RELATED CONCERNS NET <Q>;
+`     I am afraid to be scammed;
+`     I am afraid to lose my money;
+`     I think it is not safe and secured;
+`     I don't trust e-wallet//fintech and online apps;
+
+RELEVANCE NET <Q>;
+`     I do not have any use for e-wallet/ fintech;
+`     I do not have money to fund it;
+`     I don't receive money from anyone;
+`     It is better to use cash;
+
+LACK OF KNOWLEDGE NET <Q>;
+`     I do not know how to use e-wallet/ fintech app;
+`     I do not know how to register or create an account in e-wallet/ fintech;
+
+REGISTRATION AND DOCUMENTARY REQUIREMENTS NET <Q>;
+`     It is tedious and complicated to download and register;
+`     It is tedious and complicated to use;
+`     I do not have valid ID;
+
+INVOLUNTARY EXCLUSION NET <Q>;
+`     I do not have my own mobile phone;
+`     I do not have a smartphone;
+`     I do not have stable/ reliable internet;
+`     It is tedious and complicated to use;
+
+
+TRUST-RELATED CONCERNS NET (EXCLUSIVE) <Q>;
+`     I am afraid to be scammed;
+`     I am afraid to lose my money;
+`     I think it is not safe and secured;
+`     I don't trust e-wallet//fintech and online apps;
+
+RELEVANCE NET (EXCLUSIVE) <Q>;
+`     I do not have any use for e-wallet/ fintech;
+`     I do not have money to fund it;
+`     I don't receive money from anyone;
+`     It is better to use cash;
+
 I already have a family member who use GCash e-wallet/ fintech;
 Inaccessible outlets  to cash in/ cash out;
 
@@ -624,12 +738,12 @@ F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
 
 
 [*SK 1]
-[*1]
 !======
 [*DO Z = 1:2]
 IF $TQ10/2, T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
 BT = "Among rejectors of fintech",
 [*END Z]
+[*1]
 
 [*DO Z = 1:2]
 IF ($TQ10/2), T #[+T] = $TA_Q10_1new * $[HEADERWAVE3.Z],
