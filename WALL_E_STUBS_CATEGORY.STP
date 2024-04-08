@@ -3141,16 +3141,114 @@ No funds in Gcash yet;
 Missing Answer<z>;
 Total Count<C>",   
 
+
+
+DM $Q60otheranswer = $A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
+$A_Q60/2+
+$A_Q60/15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
+
+$A_Q60/7+21+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043+1064[*sle]+[*End a])+
+$A_Q60/7+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043[*sle]+[*End a])+
+$A_Q60/21+([*do a = 91:93]$Q60_[a]_other/1064[*sle]+[*End a])+
+
+$A_Q60/11+12+13+14+([*do a = 91:93]$Q60_[a]_other/1035+1037+1001+1009+1048+1078[*sle]+[*End a])+
+$A_Q60/11+([*do a = 91:93]$Q60_[a]_other/1035+1037[*sle]+[*End a])+
+$A_Q60/12+13+
+$A_Q60/14+
+([*do a = 91:93]$Q60_[a]_other/1001+1009+1048+1078[*sle]+[*End a])+
+
+$A_Q60/8+10+
+$A_Q60/8+
+$A_Q60/10+
+
+$A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1003+1016+1066[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1003+1016[*sle]+[*End a])+
+$A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1066[*sle]+[*End a])+
+
+$A_Q60/6+
+$A_Q60/19+
+([*do a = 91:93]$Q60_[a]_other/1002+1040[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1004+1027[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1006+1010[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1007[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1012[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1013[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1015[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1018+1029[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1019+1030+1039[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1021[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1022[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1023+1025[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1024[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1026[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1028[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1031[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1032+1056[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1033[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1036[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1038[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1042[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1045+1063[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1046+1055[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1049[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1050[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1051[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1052[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1053[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1054[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1057[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1058[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1065[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1069[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1073[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1075[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1080[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1101[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1103[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1104[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1082[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1083[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1067+1070+1072[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1067[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1070[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1072[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1060[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1060[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1061+1071[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1061[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1071[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1062+1076+1081[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1062[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1076[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1081[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1005+1011+1017[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1005[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1011[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1017[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1079[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1079[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/1074+1077+1082[*sle]+[*End a])+
+
+([*do a = 91:93]$Q60_[a]_other/9999[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/9998[*sle]+[*End a]),
+
 !=========
 DM $TQ60 = 
-$A_Q60/1+4+5+9+20+3+17+([*do a = 91:93]$Q60_[a]_other/1044+1102+1059+1068[*sle]+[*End a]),
+$A_Q60/1+4+5+9+20+3+17+18+([*do a = 91:93]$Q60_[a]_other/1044+1102+1059+1068[*sle]+[*End a]),
 $A_Q60/1+([*do a = 91:93]$Q60_[a]_other/1044[*sle]+[*End a]),
 $A_Q60/4+([*do a = 91:93]$Q60_[a]_other/1102[*sle]+[*End a]),
 $A_Q60/5,
 $A_Q60/9,
 $A_Q60/20+([*do a = 91:93]$Q60_[a]_other/1059+1068[*sle]+[*End a]),
 $A_Q60/3,
-$A_Q60/17,
+$A_Q60/17+18,
 
 $A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a]),
 $A_Q60/2,
@@ -3160,9 +3258,9 @@ $A_Q60/7+21+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043+1064[*sle]+[*End 
 $A_Q60/7+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043[*sle]+[*End a]),
 $A_Q60/21+([*do a = 91:93]$Q60_[a]_other/1064[*sle]+[*End a]),
 
-$A_Q60/11+12+14+([*do a = 91:93]$Q60_[a]_other/1035+1037+1001+1009+1048+1078[*sle]+[*End a]),
+$A_Q60/11+12+13+14+([*do a = 91:93]$Q60_[a]_other/1035+1037+1001+1009+1048+1078[*sle]+[*End a]),
 $A_Q60/11+([*do a = 91:93]$Q60_[a]_other/1035+1037[*sle]+[*End a]),
-$A_Q60/12,
+$A_Q60/12+13,
 $A_Q60/14,
 ([*do a = 91:93]$Q60_[a]_other/1001+1009+1048+1078[*sle]+[*End a]),
 
@@ -3173,6 +3271,15 @@ $A_Q60/10,
 $A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1003+1016+1066[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1003+1016[*sle]+[*End a]),
 $A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1066[*sle]+[*End a]),
+
+($A_Q60/1+4+5+9+20+3+17+18+([*do a = 91:93]$Q60_[a]_other/1044+1102+1059+1068[*sle]+[*End a])).($Q60otheranswer/B),
+($A_Q60/1+([*do a = 91:93]$Q60_[a]_other/1044[*sle]+[*End a])).($Q60otheranswer/B),
+($A_Q60/4+([*do a = 91:93]$Q60_[a]_other/1102[*sle]+[*End a])).($Q60otheranswer/B),
+($A_Q60/5).($Q60otheranswer/B),
+($A_Q60/9).($Q60otheranswer/B),
+($A_Q60/20+([*do a = 91:93]$Q60_[a]_other/1059+1068[*sle]+[*End a])).($Q60otheranswer/B),
+($A_Q60/3).($Q60otheranswer/B),
+($A_Q60/17+18).($Q60otheranswer/B),
 
 $A_Q60/6,
 $A_Q60/19,
@@ -3282,6 +3389,15 @@ NEGATIVE PERCEPTION ON CUSTOMER SERVICE NET	<Q>;
 REQUIREMENTS AND REGISTRATION PROCESS NET <Q>;
 `     No valid ID;
 `     Registration process is tedious;
+
+TRUST RELATED CONCERNS NET (EXCLUSIVE) <Q>;
+`     Concerns with hacking and data breaches;
+`     Fears of loss of money;
+`     Fears surrounding fraud;
+`     Negative experiences of friends;
+`     Doubts with capability of the financial app to provide strong security for my account;
+`     Fear of hidden charges;
+`     Uncertainty of transactions;
 
 Hesitation to open another financial account;
 Has cash-in fee every time I fund my account;
