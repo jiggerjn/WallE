@@ -1263,3 +1263,373 @@ Feb22 to Mar08 *(d)
 ",
 
 
+
+
+DM $HAT =
+T,
+$Q42023/NB,
+$Q12024/NB,
+[*DO A = 1:12]
+T,
+$HAv/[A].$Q42023/NB,
+$HAv/[A].$Q12024/NB,
+[*END A]
+HT = "HEADER A. GENERAL PROFILE",
+H  = "
+TOTAL*(a);
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+GENDER****
+MALE***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+FEMALE***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+LIFESTAGE****
+Students (20 yo and below)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Yuppies (21-30 yo)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Transitioners (31-35 yo)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Balancers (36-45 yo)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Older Adults/Retirees (46-65 yo)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+
+SEC****
+AB***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+C1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+ABC1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+C2***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+D***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g)
+",
+
+
+DM $HBT =
+T,
+$Q42023/NB,
+$Q12024/NB,
+[*DO A = 1:15]
+T,
+$HBv/[A].$Q42023/NB,
+$HBv/[A].$Q12024/NB,
+[*END A]
+HT = "HEADER B. LOCALE AND MACROREGION",
+H  = "
+TOTAL*(a);
+Q4 2023 *(f);
+Q1 2024 *(g);
+LOCALE****
+URBAN (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+RURAL (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+
+NCR (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+
+NORTH CENTRAL LUZON****
+NCL (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+NCL Urban***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+NCL Rural***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+
+SOUTH LUZON****
+SL (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+SL Urban***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+SL Rural***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+
+VISAYAS****
+Visayas (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Visayas Urban***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Visayas Rural***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+
+MINDANAO****
+Mindanao (NET)***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Mindanao Urban***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+Mindanao Rural***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g)
+",
+
+DM $HCT = 
+T,
+$Q42023/NB,
+$Q12024/NB,
+[*DO A = 1:4]
+T,
+$HCv/[A].$Q42023/NB,
+$HCv/[A].$Q12024/NB,
+[*END A]
+
+HT = "HEADER C. USERSHIP",
+H  = "
+TOTAL*(a);
+Q4 2023 *(f);
+Q1 2024 *(g);
+USERSHIP****
+NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+WHETHER GCASH USERS****
+GCASH NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+GCASH USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g)",
+
+DM $HDT =
+T,
+$Q42023/NB,
+$Q12024/NB,
+[*DO A = 1:15]
+T,
+$HDv/[A].$Q42023/NB,
+$HDv/[A].$Q12024/NB,
+[*END A]
+
+HT = "HEADER D. MACROREGION X SEC",
+H  = "
+TOTAL*(a);
+Q4 2023 *(f);
+Q1 2024 *(g);
+MMA****
+ABC1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+C2***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+D***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+NCL****
+ABC1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+C2***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+D***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+SL****
+ABC1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+C2***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+D***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+VISAYAS****
+ABC1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+C2***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+D***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+MINDANAO****
+ABC1***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+C2***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+D***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g)
+",
+
+
+DM $HFT =
+T,
+$Q42023/NB,
+$Q12024/NB,
+[*DO A = 1:10]
+T,
+$HFv/[A].$Q42023/NB,
+$HFv/[A].$Q12024/NB,
+[*END A]
+
+HT = "HEADER F. MACROREGION X USERSHIP",
+H  = "
+TOTAL*(a);
+Q4 2023 *(f);
+Q1 2024 *(g);
+MMA****
+USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+NCL****
+USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+SL****
+USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+VISAYAS****
+USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+
+MINDANAO****
+USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g);
+NON-USERS***
+TOTAL*(a)<S>;
+Q4 2023 *(f);
+Q1 2024 *(g)
+",

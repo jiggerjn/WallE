@@ -6618,7 +6618,7 @@ DM $BRDLADDER[A] =
 VT = "GCASH USED CASES LADDER",
 V = "[GBRAND.A]\
 `    TOTAL AWARENESS;
-`    Aides Awareness;
+`    Aided Awareness;
 `    Other Spontaneous;
 `    TOM;
 `    EVER USED;
