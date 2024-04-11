@@ -17,13 +17,17 @@ $A_QSM1/3,
 $A_QSM1/4,
 $A_QSM1/5,
 $A_QSM1/6+($QSM1_91_other/1026),
-$A_QSM1/7+($QSM1_91_other/1020+1021),
-$A_QSM1/8+($QSM1_91_other/1022+1023),
-$A_QSM1/9,
+$A_QSM1/7,
+$A_QSM1/8,
+$A_QSM1/9+($QSM1_91_other/1020+1021),
+$QSM1_91_other/1022+1023,
 $QSM1_91_other/1024,
 $QSM1_91_other/1025,
 $QSM1_91_other/1027,
-$QSM1_91_other/1028,
+$QSM1_91_other/1029,
+$QSM1_91_other/1031,
+
+$QSM1_91_other/1028+1030,
 $QSM1_91_other/9999,
 
 !$A_QSM1/91+92+93+94+95,
@@ -33,15 +37,19 @@ V = "
 Sent money to my family/friends in the Philippines;
 Sent money to my family/friends abroad;
 Sent donations;
-Gift or token to someone;
+Sent money as a gift or token to someone;
 For sports-betting by sending money to an agent; 
 Lent money to family/relatives/friends;
 For e-sabong;
 Played in online casino by sending money to an agent; 
-Sent money for Contribution;
+Sent money for contribution/share of expenses (i.e., split bill);
+Sent money to suppliers for my business;
 Payment for order;
 Gaming pin;
 Tuition fee;
+Mortuary;
+Emergency;
+
 VAGUE (NET);
 none;
 
@@ -55,12 +63,12 @@ Total Count<C>",
 Sent money to my family/friends in the Philippines;
 Sent money to my family/friends abroad;
 Sent donations;
-Gift or token to someone;
+Sent money as a gift or token to someone;
 For sports-betting by sending money to an agent; 
 Lent money to family/relatives/friends;
 For e-sabong;
 Played in online casino by sending money to an agent; 
-Sent money for Contribution]
+Sent money for contribution/share of expenses (i.e., split bill)]
 
 
 
@@ -90,7 +98,7 @@ $I_[b]_A_QSM2/16+([*do a = 91:92]$QSM2_[a]_other/1008+1051[*sle]+[*end a]),
 $I_[b]_A_QSM2/17,
 $I_[b]_A_QSM2/18+([*do a = 91:92]$QSM2_[a]_other/1047[*sle]+[*end a]),
 $I_[b]_A_QSM2/19+([*do a = 91:92]$QSM2_[a]_other/1054[*sle]+[*end a]),
-$I_[b]_A_QSM2/20,
+$I_[b]_A_QSM2/20+([*do a = 91:92]$QSM2_[a]_other/1113[*sle]+[*end a]),
 $I_[b]_A_QSM2/21,
 $I_[b]_A_QSM2/22+([*do a = 91:92]$QSM2_[a]_other/1022[*sle]+[*end a]),
 $I_[b]_A_QSM2/23+([*do a = 91:92]$QSM2_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -120,6 +128,10 @@ $I_[b]_A_QSM2/46,
 $I_[b]_A_QSM2/47,
 $I_[b]_A_QSM2/48,
 $I_[b]_A_QSM2/49,
+
+$I_[b]_A_QSM2/50,
+$I_[b]_A_QSM2/51,
+$I_[b]_A_QSM2/52,
 
 ([*do a = 91:92]$QSM2_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1003[*sle]+[*end a]),
@@ -173,13 +185,17 @@ $I_[b]_A_QSM2/49,
 ([*do a = 91:92]$QSM2_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$QSM2_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/9998[*sle]+[*end a]),
 
 $I_[b]_A_QSM2/99+([*do a = 91:92]$QSM2_[a]_other/9999[*sle]+[*end a]),
 R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M – SEND MONEY - [QSM1.b]",
+VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M ' SEND MONEY - [QSM1.b]",
 V = "
 GCash;
 PayMaya/Maya;
@@ -229,6 +245,10 @@ Go Tyme;
 Vybe by BPI;
 PalawanPay;
 UNO Digital Bank;
+
+Own Bank;
+Netbank Mobile;
+BPI Direct BanKo;
 
 Western Union;
 Smart Padala;
@@ -282,6 +302,10 @@ Google Wallet;
 Bitcoin;
 Veteran bank;
 ECPay;
+Iloilo supermarket Ewallet;
+Fancy Wallet;
+Apple Pay;
+1st Valley Bank;
 
 VAGUE (NET);
 don't know;
@@ -304,9 +328,12 @@ IF $A_QSM1/[A].($QSM1_91_other/1020+1021), ORDM $QSM2_7 = $I_[A]_A_QSM2,
 IF $A_QSM1/[A].($QSM1_91_other/1022+1023), ORDM $QSM2_8 = $I_[A]_A_QSM2,
 [*END A]
 
+[*DO A = 91:95]
+IF $A_QSM1/[A].($QSM1_91_other/1020+1021), ORDM $QSM2_9 = $I_[A]_A_QSM2,
+[*END A]
 
 
-[*DO b = 6:8]
+[*DO b = 6:9]
 if $I_[b]_A_QSM2/91, OM $QSM2_91_other = $Q17c_91_other,
 if $I_[b]_A_QSM2/92, OM $QSM2_92_other = $Q17c_92_other,
 
@@ -329,7 +356,7 @@ DM $TQSM2R[b] =
 ($I_[b]_A_QSM2/17)+($QSM2_[b]/17),
 ($I_[b]_A_QSM2/18)+($QSM2_[b]/18)+([*do a = 91:92]$QSM2_[a]_other/1047[*sle]+[*end a]),
 ($I_[b]_A_QSM2/19)+($QSM2_[b]/19)+([*do a = 91:92]$QSM2_[a]_other/1054[*sle]+[*end a]),
-($I_[b]_A_QSM2/20)+($QSM2_[b]/20),
+($I_[b]_A_QSM2/20)+($QSM2_[b]/20)+([*do a = 91:92]$QSM2_[a]_other/1113[*sle]+[*end a]),
 ($I_[b]_A_QSM2/21)+($QSM2_[b]/21),
 ($I_[b]_A_QSM2/22)+($QSM2_[b]/22)+([*do a = 91:92]$QSM2_[a]_other/1022[*sle]+[*end a]),
 ($I_[b]_A_QSM2/23)+($QSM2_[b]/23)+([*do a = 91:92]$QSM2_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
@@ -360,6 +387,10 @@ DM $TQSM2R[b] =
 ($I_[b]_A_QSM2/48)+($QSM2_[b]/48),
 ($I_[b]_A_QSM2/49)+($QSM2_[b]/49),
 
+($I_[b]_A_QSM2/47)+($QSM2_[b]/50),
+($I_[b]_A_QSM2/48)+($QSM2_[b]/51),
+($I_[b]_A_QSM2/49)+($QSM2_[b]/52),
+
 ([*do a = 91:92]$QSM2_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1003[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1004+1005+1006+1017[*sle]+[*end a]),
@@ -412,133 +443,20 @@ DM $TQSM2R[b] =
 ([*do a = 91:92]$QSM2_[a]_other/1102[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1104[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1106[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1109[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1110[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1111[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1114[*sle]+[*end a]),
 
-([*do a = 91:92]$QSM2_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
+([*do a = 91:92]$QSM2_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/9998[*sle]+[*end a]),
 
 ($I_[b]_A_QSM2/99)+($QSM2_[b]/99)+([*do a = 91:92]$QSM2_[a]_other/9999[*sle]+[*end a]),
 R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M – SEND MONEY - [QSM1.b]",
+VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M ' SEND MONEY - [QSM1.b]",
 V = $TQSM2R1,
 [*END b]
 
-
-!9
-[*DO b = 9:9]
-if $I_[b]_A_QSM2/91, OM $QSM2_91_other = $Q16a_91_other,
-if $I_[b]_A_QSM2/92, OM $QSM2_92_other = $Q16b_92_other,
-
-DM $TQSM2R[b] = 
-$I_[b]_A_QSM2/1+([*do a = 91:92]$QSM2_[a]_other/1056[*sle]+[*end a]),
-$I_[b]_A_QSM2/2+([*do a = 91:92]$QSM2_[a]_other/1050+1043[*sle]+[*end a]),
-$I_[b]_A_QSM2/3+([*do a = 91:92]$QSM2_[a]_other/1062[*sle]+[*end a]),
-$I_[b]_A_QSM2/4+([*do a = 91:92]$QSM2_[a]_other/1058+1061[*sle]+[*end a]),
-$I_[b]_A_QSM2/5+([*do a = 91:92]$QSM2_[a]_other/1020[*sle]+[*end a]),
-$I_[b]_A_QSM2/6+([*do a = 91:92]$QSM2_[a]_other/1080[*sle]+[*end a]),
-$I_[b]_A_QSM2/7+([*do a = 91:92]$QSM2_[a]_other/1029[*sle]+[*end a]),
-$I_[b]_A_QSM2/8+([*do a = 91:92]$QSM2_[a]_other/1078[*sle]+[*end a]),
-$I_[b]_A_QSM2/9,
-$I_[b]_A_QSM2/10+([*do a = 91:92]$QSM2_[a]_other/1079[*sle]+[*end a]),
-$I_[b]_A_QSM2/11+([*do a = 91:92]$QSM2_[a]_other/1072[*sle]+[*end a]),
-$I_[b]_A_QSM2/12+([*do a = 91:92]$QSM2_[a]_other/1010[*sle]+[*end a]),
-$I_[b]_A_QSM2/13+([*do a = 91:92]$QSM2_[a]_other/1002[*sle]+[*end a]),
-$I_[b]_A_QSM2/14+([*do a = 91:92]$QSM2_[a]_other/1089[*sle]+[*end a]),
-$I_[b]_A_QSM2/16+([*do a = 91:92]$QSM2_[a]_other/1008+1051[*sle]+[*end a]),
-$I_[b]_A_QSM2/17,
-$I_[b]_A_QSM2/18+([*do a = 91:92]$QSM2_[a]_other/1047[*sle]+[*end a]),
-$I_[b]_A_QSM2/19+([*do a = 91:92]$QSM2_[a]_other/1054[*sle]+[*end a]),
-$I_[b]_A_QSM2/20,
-$I_[b]_A_QSM2/21,
-$I_[b]_A_QSM2/22+([*do a = 91:92]$QSM2_[a]_other/1022[*sle]+[*end a]),
-$I_[b]_A_QSM2/23+([*do a = 91:92]$QSM2_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
-$I_[b]_A_QSM2/24+([*do a = 91:92]$QSM2_[a]_other/1015[*sle]+[*end a]),
-$I_[b]_A_QSM2/25+([*do a = 91:92]$QSM2_[a]_other/1016+1033+1060[*sle]+[*end a]),
-$I_[b]_A_QSM2/26+([*do a = 91:92]$QSM2_[a]_other/1045[*sle]+[*end a]),
-$I_[b]_A_QSM2/27,
-$I_[b]_A_QSM2/28+([*do a = 91:92]$QSM2_[a]_other/1042+1087[*sle]+[*end a]),
-$I_[b]_A_QSM2/29+([*do a = 91:92]$QSM2_[a]_other/1082[*sle]+[*end a]),
-$I_[b]_A_QSM2/30,
-$I_[b]_A_QSM2/31,
-$I_[b]_A_QSM2/32+([*do a = 91:92]$QSM2_[a]_other/1071[*sle]+[*end a]),
-$I_[b]_A_QSM2/33,
-$I_[b]_A_QSM2/34,
-$I_[b]_A_QSM2/35,
-$I_[b]_A_QSM2/36+([*do a = 91:92]$QSM2_[a]_other/1013[*sle]+[*end a]),
-$I_[b]_A_QSM2/37,
-$I_[b]_A_QSM2/38,
-$I_[b]_A_QSM2/39,
-$I_[b]_A_QSM2/40,
-$I_[b]_A_QSM2/41,
-$I_[b]_A_QSM2/42+([*do a = 91:92]$QSM2_[a]_other/1083[*sle]+[*end a]),
-$I_[b]_A_QSM2/43,
-$I_[b]_A_QSM2/44,
-$I_[b]_A_QSM2/45,
-$I_[b]_A_QSM2/46,
-$I_[b]_A_QSM2/47,
-$I_[b]_A_QSM2/48,
-$I_[b]_A_QSM2/49,
-
-([*do a = 91:92]$QSM2_[a]_other/1001[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1003[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1004+1005+1006+1017[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1007[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1011[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1012[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1014[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1018[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1019+1041[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1021[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1028[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1030[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1031[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1032[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1034[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1035[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1036[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1040[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1044[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1048[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1049[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1052[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1055[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1057[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1063[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1064[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1065[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1066[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1067[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1068[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1069[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1070[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1073[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1074[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1076[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1077[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1081[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1084[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1085[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1086[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1088[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1090+1092[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1093[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1094[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1096[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1097[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1098[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1099[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1100[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1102[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1104[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/1106[*sle]+[*end a]),
-
-([*do a = 91:92]$QSM2_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105[*sle]+[*end a]),
-([*do a = 91:92]$QSM2_[a]_other/9998[*sle]+[*end a]),
-
-$I_[b]_A_QSM2/99+([*do a = 91:92]$QSM2_[a]_other/9999[*sle]+[*end a]),
-R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M – SEND MONEY - [QSM1.b]",
-V = $TQSM2R1,
-[*END b]
 
 
 
@@ -602,6 +520,10 @@ DM $TQSM2R10 =
 [*DO A = 91:95]$I_[A]_A_QSM2/47[*SLE]+[*END A],
 [*DO A = 91:95]$I_[A]_A_QSM2/48[*SLE]+[*END A],
 [*DO A = 91:95]$I_[A]_A_QSM2/49[*SLE]+[*END A],
+
+[*DO A = 91:95]$I_[A]_A_QSM2/50[*SLE]+[*END A],
+[*DO A = 91:95]$I_[A]_A_QSM2/51[*SLE]+[*END A],
+[*DO A = 91:95]$I_[A]_A_QSM2/52[*SLE]+[*END A],
 F,
 F,
 F,
@@ -653,24 +575,25 @@ F,
 F,
 F,
 F,
-F,
-F,
-F,
+f,
+f,
+f,
+f,
 [*DO A = 91:95]$I_[A]_A_QSM2/99[*SLE]+[*END A],
 
 R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M – SEND MONEY - OTHERS",
+VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M ' SEND MONEY - OTHERS",
 V = $TQSM2R1,     
 
 
 !REGARDLESS
 [*DATA QSM2REGARD = 1,2,3,4,5,6,7,8,9,91,92,93,94,95]
 DM $TQSM2REGARDLESS = 
-[*DO C = 1:103]
+[*DO C = 1:110]
 [*DO A = 1:10]$TQSM2R[A]/[C][*SLE]+[*END A],
 [*END C]
 R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M – SEND MONEY - REGARDLESS OF PURPOSE OF SENDING MONEY",
+VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M ' SEND MONEY - REGARDLESS OF PURPOSE OF SENDING MONEY",
 V = $TQSM2R1,   
 
 
@@ -678,19 +601,20 @@ V = $TQSM2R1,
 DM $TQSM3 = $QSM3/1-2,R,F,
 VT = "QSM3. GCASH - AWARENESS ON DAILY OUTGOING LIMIT",
 V = "
-Yes, I am aware of GCash’s daily outgoing limit;
-No, I am not aware of GCash’s daily outgoing limit;
+Yes, I am aware of GCash's daily outgoing limit;
+No, I am not aware of GCash's daily outgoing limit;
 Missing Answer<z>;
 Total Count<C>",   
 
 
 !=========
-DM $TQSM4 = $QSM4/1-3,R,F,
+DM $TQSM4 = $QSM4/1-4,R,F,
 VT = "QSM4. GCASH - CURRENT DAILY OUTGOING LIMIT",
 V = "
 PHP100,000;
 PHP500,000;
 PHP1,000,000;
+I don't know/I'm not sure of my current daily outgoing limit;
 Missing Answer<z>;
 Total Count<C>",   
 
@@ -700,7 +624,7 @@ DM $TQSM5 = $QSM5/1-2,R,F,
 VT = "QSM5. WHETHER GCASH CURRENT DAILY OUTGOING LIMIT IS ENOUGH",
 V = "
 Yes, I think it is enough;
-No, I don’t think it is enough;
+No, I don't think it is enough;
 Missing Answer<z>;
 Total Count<C>",   
 
@@ -732,7 +656,8 @@ $I_[QSMO1MOPCODES.A]_A_QSMO1/7,
 $I_[QSMO1MOPCODES.A]_A_QSMO1/8,
 $I_[QSMO1MOPCODES.A]_A_QSMO1/9+($I_[QSMO1MOPCODES.A]_QSMO1_92_other/1020),
 $I_[QSMO1MOPCODES.A]_QSMO1_92_other/1023,
-$I_[QSMO1MOPCODES.A]_QSMO1_92_other/1021+1022+1024+1025+1026+1027+1028+1029,
+$I_[QSMO1MOPCODES.A]_QSMO1_92_other/1021+1022+1024+1025+1026+1027+1028+1029+1030,
+$I_[QSMO1MOPCODES.A]_QSMO1_92_other/9995,
 $I_[QSMO1MOPCODES.A]_QSMO1_92_other/9999,
 
 !$I_[QSMO1MOPCODES.A]_A_QSMO1/91..95,
@@ -742,14 +667,15 @@ V = "
 Sent money to my family/friends in the Philippines;
 Sent money to my family/friends abroad;
 Sent donations;
-Gift or token to someone;
+Sent money as a gift or token to someone;
 For sports-betting by sending money to an agent;
 Lent money to family/relatives/friends;
 For e-sabong;
 Played in online casino by sending money to an agent;
-Sent money for Contribution;
+Sent money for contribution/share of expenses (i.e., split bill);
 For Loading;
 VAGUE (NET);
+Refuse;
 None;
 
 !Others;
@@ -759,7 +685,7 @@ Total Count<C>",
 
 
 DM $TQSM1xQSMO1 = 
-[*DO A = 1:6]
+[*DO A = 1:9]
 $QSM1xQSMO1/[A],
 ($QSM1xQSMO1/[A]).($T_Q8b1_9/5+6).N($T_Q8b1_9/7+8+9+10),
 ($QSM1xQSMO1/[A]).N($T_Q8b1_9/5+6).($T_Q8b1_9/7+8+9+10),
@@ -779,7 +705,7 @@ Sent donations;
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment;
-Gift or token to someone;
+Sent money as a gift or token to someone;
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment;
@@ -788,6 +714,18 @@ For sports-betting by sending money to an agent;
 `     Non-Digital only;
 `     Hybrid Payment;
 Lent money to family/relatives/friends;
+`     Digital only;
+`     Non-Digital only;
+`     Hybrid Payment;
+For e-sabong;
+`     Digital only;
+`     Non-Digital only;
+`     Hybrid Payment;
+Played in online casino by sending money to an agent;
+`     Digital only;
+`     Non-Digital only;
+`     Hybrid Payment;
+Sent money for contribution/share of expenses (i.e., split bill);
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment",   
@@ -808,6 +746,7 @@ DM $TQSMO1R =
 [*DO A = 1:4]$TQSMO1R[A]/10[*SLE]+[*END A],
 [*DO A = 1:4]$TQSMO1R[A]/11[*SLE]+[*END A],
 [*DO A = 1:4]$TQSMO1R[A]/12[*SLE]+[*END A],
+[*DO A = 1:4]$TQSMO1R[A]/13[*SLE]+[*END A],
 R,F,
 VT = "QSMO1. PURPOSE FOR SENDING MONEY - REGARDLESS OF MODE OF PAYMENT",
 V = $TQSMO1R1,   
@@ -818,12 +757,12 @@ V = $TQSMO1R1,
 [*DO A = 1:9]
 DM $TQSMO3_[C]R[A] = 
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/30+($xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1030),
-$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/1..11,
+$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/1..11+($xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1023),
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/1,
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/2,
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/3,
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/4,
-$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/5,
+$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/5+($xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1023),
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/6,
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/7,
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/8,
@@ -854,7 +793,10 @@ $xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1022,
 $I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/31,
 $xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1020,
 $xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1021,
+$xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1025,
+$xI_[QSMO1MOPCODES.C]_T_QSMO3_[A]_QSMO3_98_other/1024,
 !$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/98,
+
 R,F,
 VT = "QSMO3. CHANNEL/S WHERE SENT MONEY [QSMO1MOP.C] - [QSM1.A]",
 V = "
@@ -895,8 +837,10 @@ BAYAD CENTERS<Q>;
 GCash Padala;
 Gcash;
 Give to my child;
-
+`'7`/11;
+VAGUE (NET);
 !OTHERS;
+
 Missing Answer<z>;
 Total Count<C>",   
 [*END A]
@@ -907,12 +851,12 @@ Total Count<C>",
 [*DO C =  1:4]
 DM $TQSMO3_[C]R91 = 
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/30[*sle]+[*end a]+$xI_7_T_QSMO3_92_QSMO3_98_other/1030,
-[*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/1..11[*sle]+[*end a],
+[*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/1..11[*sle]+[*end a]+$xI_7_T_QSMO3_92_QSMO3_98_other/1023,
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/1[*sle]+[*end a],
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/2[*sle]+[*end a],
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/3[*sle]+[*end a],
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/4[*sle]+[*end a],
-[*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/5[*sle]+[*end a],
+[*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/5[*sle]+[*end a]+$xI_7_T_QSMO3_92_QSMO3_98_other/1023,
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/6[*sle]+[*end a],
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/7[*sle]+[*end a],
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/8[*sle]+[*end a],
@@ -943,6 +887,9 @@ $xI_7_T_QSMO3_92_QSMO3_98_other/1022,
 [*DO A = 91:95]$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/31[*sle]+[*end a],
 $xI_7_T_QSMO3_92_QSMO3_98_other/1020,
 $xI_7_T_QSMO3_92_QSMO3_98_other/1021,
+$xI_7_T_QSMO3_92_QSMO3_98_other/1025,
+$xI_7_T_QSMO3_92_QSMO3_98_other/1024,
+
 !$I_[QSMO1MOPCODES.C]_T_QSMO3_[A]/98,
 R,F,
 VT = "QSMO3. CHANNEL/S WHERE SENT MONEY [QSMO1MOP.C] - OTHERS",
@@ -984,6 +931,9 @@ BAYAD CENTERS<Q>;
 GCash Padala;
 Gcash;
 Give to my child;
+`'7`/11;
+
+VAGUE (NET);
 
 !OTHERS;
 Missing Answer<z>;
@@ -997,7 +947,7 @@ Total Count<C>",
 !REGARDLESS
 [*DO C = 1:4]
 DM $TQSMO3_[C]REGARD = 
-[*DO D = 1:37]
+[*DO D = 1:39]
 [*DO A = 1:9]$TQSMO3_[C]R[A]/[D][*SLE]+[*END A],
 [*END D]
 R,F,
@@ -1040,6 +990,9 @@ BAYAD CENTERS<Q>;
 GCash Padala;
 Gcash;
 Give to my child;
+`'7`/11;
+
+VAGUE (NET);
 
 !OTHERS;
 Missing Answer<s>;
@@ -1051,7 +1004,7 @@ Total Count<C>",
 
 !REGARDLESS
 DM $TQSMO3_REGARD = 
-[*DO D = 1:37]
+[*DO D = 1:39]
 [*DO A = 1:4]$TQSMO3_[A]REGARD/[D][*SLE]+[*END A],
 [*END D]
 r,f,
@@ -1094,6 +1047,9 @@ BAYAD CENTERS<Q>;
 GCash Padala;
 Gcash;
 Give to my child;
+`'7`/11;
+
+VAGUE (NET);
 
 !OTHERS;
 Missing Answer<s>;
@@ -1145,13 +1101,13 @@ GCash Padala]
 
 [*DO A = 1:31]
 DM $TQSMO4CASHR[A] = 
-$I_7_I_[QSMO3CODES.A]_A_QSMO4/1,
+$I_7_I_[QSMO3CODES.A]_A_QSMO4/1+($xI_7_I_[QSMO3CODES.A]_QSMO4_98_other/1025),
 $I_7_I_[QSMO3CODES.A]_A_QSMO4/2,
 $I_7_I_[QSMO3CODES.A]_A_QSMO4/3,
-$I_7_I_[QSMO3CODES.A]_A_QSMO4/4,
-$I_7_I_[QSMO3CODES.A]_QSMO4_98_other/1020+1021+1022,
-$I_7_I_[QSMO3CODES.A]_QSMO4_98_other/1023+1024,
-$I_7_I_[QSMO3CODES.A]_A_QSMO4/99,
+$I_7_I_[QSMO3CODES.A]_A_QSMO4/4+($xI_7_I_[QSMO3CODES.A]_QSMO4_98_other/1003),
+$xI_7_I_[QSMO3CODES.A]_QSMO4_98_other/1020+1021+1022,
+$xI_7_I_[QSMO3CODES.A]_QSMO4_98_other/1023+1024+1026+1027+1028+1029,
+$I_7_I_[QSMO3CODES.A]_A_QSMO4/99+B,
 R,F,
 VT = "QSMO4. REQUIREMENTS UPON SENDING OF MONEY - CASH - [QSMO3.A]",
 V = "
@@ -1197,8 +1153,8 @@ DM $TQSMO4CASH_REMITTANCE =
 [*DO A = 1:11]$I_7_I_[A]_A_QSMO4/2[*SLE]+[*END A],
 [*DO A = 1:11]$I_7_I_[A]_A_QSMO4/3[*SLE]+[*END A],
 [*DO A = 1:11]$I_7_I_[A]_A_QSMO4/4[*SLE]+[*END A],
-$I_7_I_[A]_QSMO4_98_other/1020+1021+1022,
-$I_7_I_[A]_QSMO4_98_other/1023+1024,
+$xI_7_I_[A]_QSMO4_98_other/1020+1021+1022,
+$xI_7_I_[A]_QSMO4_98_other/1023+1024,
 [*DO A = 1:11]$I_7_I_[A]_A_QSMO4/99[*SLE]+[*END A],
 R,F,
 VT = "QSMO4. REQUIREMENTS UPON SENDING OF MONEY - CASH - REMITTANCE CENTER (NET)",
@@ -1432,11 +1388,11 @@ V = $TQSMO4CASHR1,
 
 !=========
 [*DO A = 1:31]
-DM $TQSM5CASHR[A] = $I_7_T_QSMO5_[QSMO3CODES.A]/1,2,R,F,
+DM $TQSM5CASHR[A] = $I_7_T_QSMO5_[QSMO3CODES.A]/1,2+b,R,F,
 VT = "QSMO5. AWARENESS ON SERVICE/CONVENIENCE FEE PER CHANNEL - CASH - [QSMO3.A]",
 V = "
 Yes, I think it is enough;
-No, I don’t think it is enough;
+No, I don't think it is enough;
 Missing Answer<z>;
 Total Count<C>",   
 [*END A]
@@ -1698,19 +1654,19 @@ V = $TQSM6CASH_1,
 SENT MONEY TO MY FAMILY/FRIENDS IN THE PHILIPPINES;
 SENT MONEY TO MY FAMILY/FRIENDS ABROAD;
 SENT DONATIONS;
-GIFT OR TOKEN TO SOMEONE;
+SENT MONEY AS A GIFT OR TOKEN TO SOMEONE;
 FOR SPORTS-BETTING BY SENDING MONEY TO AN AGENT;
 LENT MONEY TO FAMILY/RELATIVES/FRIENDS;
 FOR E-SABONG;
 PLAYED IN ONLINE CASINO BY SENDING MONEY TO AN AGENT;
-SENT MONEY FOR CONTRIBUTION]
+SENT MONEY FOR CONTRIBUTION/SHARE OF EXPENSES (I.E., SPLIT BILL)]
 
-[*DATA NUMSS = 3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000]
+[*DATA NUMSS = 3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000]
 [*DO C = 1:9]
-DM $TQSMAMT1_[C] = $I_[C]_QSMAMT1/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - CASH - [QSMAMT.C]",
+DM $TQSMAMT1_[C] = $I_[C]_QSMAMT1/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - CASH - [QSMAMT.C]",
 V = "
-[*DO A = 1:58]
+[*DO A = 1:74]
 [NUMSS.A]<V[NUMSS.A]>;
 [*END A]
 Missing Answer<z>;
@@ -1719,57 +1675,57 @@ Total Count<C>",
 
 !2
 [*DO C = 1:9]
-DM $TQSMAMT2_[C] = $I_[C]_QSMAMT2/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - CHECK - [QSMAMT.C]",
+DM $TQSMAMT2_[C] = $I_[C]_QSMAMT2/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - CHECK - [QSMAMT.C]",
 V = $TQSMAMT1_1,   
 [*END C]
 
 !3
 [*DO C = 1:9]
-DM $TQSMAMT3_[C] = $I_[C]_QSMAMT3/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - Debit Card - [QSMAMT.C]",
+DM $TQSMAMT3_[C] = $I_[C]_QSMAMT3/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - Debit Card - [QSMAMT.C]",
 V = $TQSMAMT1_1,   
 [*END C]
 
 !4
 [*DO C = 1:9]
-DM $TQSMAMT4_[C] = $I_[C]_QSMAMT4/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - credit Card - [QSMAMT.C]",
+DM $TQSMAMT4_[C] = $I_[C]_QSMAMT4/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - credit Card - [QSMAMT.C]",
 V = $TQSMAMT1_1,   
 [*END C]
 
 !5
 [*DO C = 1:9]
-DM $TQSMAMT5_[C] = $I_[C]_QSMAMT5/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - GCash - [QSMAMT.C]",
+DM $TQSMAMT5_[C] = $I_[C]_QSMAMT5/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - GCash - [QSMAMT.C]",
 V = $TQSMAMT1_1,
 [*END C]
 
 !6
 [*DO C = 1:9]
-DM $TQSMAMT6_[C] = $I_[C]_QSMAMT6/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - Maya - [QSMAMT.C]",
+DM $TQSMAMT6_[C] = $I_[C]_QSMAMT6/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - Maya - [QSMAMT.C]",
 V = $TQSMAMT1_1,   
 [*END C]
 
 !7
 [*DO C = 1:9]
-DM $TQSMAMT7_[C] = $I_[C]_QSMAMT7/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - ShopeePay - [QSMAMT.C]",
+DM $TQSMAMT7_[C] = $I_[C]_QSMAMT7/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - ShopeePay - [QSMAMT.C]",
 V = $TQSMAMT1_1,   
 [*END C]
 
 !8
 [*DO C = 1:9]
-DM $TQSMAMT8_[C] = $I_[C]_QSMAMT8/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - Other E-wallets - [QSMAMT.C]",
+DM $TQSMAMT8_[C] = $I_[C]_QSMAMT8/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - Other E-wallets - [QSMAMT.C]",
 V = $TQSMAMT1_1,
 [*END C]
 
 !9
 [*DO C = 1:9]
-DM $TQSMAMT9_[C] = $I_[C]_QSMAMT9/3,10,15,20,30,50,70,100,110,150,200,250,300,340,350,400,500,600,700,750,800,825,850,900,1000,1050,1200,1300,1370,1500,1600,1700,2000,2500,2545,3000,3400,3500,3800,4000,4500,5000,5400,6000,7000,7500,8000,10000,12000,15000,17000,18000,20000,25000,30000,40000,50000,70000,R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - Other digital/ online banks - [QSMAMT.C]",
+DM $TQSMAMT9_[C] = $I_[C]_QSMAMT9/3,10,15,20,30,50,70,100,110,150,200,210,250,300,340,350,360,400,500,600,700,750,800,825,850,900,1000,1010,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2030,2300,2500,2545,2800,3000,3400,3500,3700,3800,4000,4500,4800,5000,5300,5400,5500,5700,6000,7000,7500,8000,9000,10000,12000,15000,17000,18000,20000,25000,30000,33000,40000,50000,70000,R,F,
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - Other digital/ online banks - [QSMAMT.C]",
 V = $TQSMAMT1_1,  
 [*END C]
 
@@ -1781,7 +1737,7 @@ DM $TQSMAMT[C]_nondigital = $I_[C]_QSMAMTnondigital/
 [nondigital[C].B],
 [*END B]
 R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT - NON-DIGITAL - [QSMAMT.C]",
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - NON-DIGITAL - [QSMAMT.C]",
 V = "
 [*DO B = 1:[nondigital[C].#]:1]
 [nondigital[C].B] <v[nondigital[C].B]>;
@@ -1795,7 +1751,7 @@ DM $TQSMAMT[C]_digital = $I_[C]_QSMAMTdigital/
 [digital[C].B],
 [*END B]
 R,F,
-VT = "QSMAMT. AMOUNT S/ENT IN THE P1M – ONLINE AND OFFLINE PAYMENT  - DIGITAL - [QSMAMT.C]",
+VT = "QSMAMT. AMOUNT S/ENT IN THE P1M - ONLINE AND OFFLINE PAYMENT  - DIGITAL - [QSMAMT.C]",
 V = "
 [*DO B = 1:[digital[C].#]:1]
 [digital[C].B] <v[digital[C].B]>;
@@ -1809,7 +1765,7 @@ DM $TQSMAMT[C]_reg = $I_[C]_QSMAMTreg/
 [reg[C].B],
 [*END B]
 R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT  - REGARDLESS OF MODE OF PAYMENT - [QSMAMT.C]",
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT  - REGARDLESS OF MODE OF PAYMENT - [QSMAMT.C]",
 V = "
 [*DO B = 1:[reg[C].#]:1]
 [reg[C].B] <v[reg[C].B]>;
@@ -1826,7 +1782,7 @@ DM $TQSMAMT_regofreg = $I_QSMAMTregofreg/
 [regofreg.B],
 [*END B]
 R,F,
-VT = "QSMAMT. AMOUNT SENT IN THE P1M – ONLINE AND OFFLINE PAYMENT  - REGARDLESS OF MODE OF PAYMENT AND PURPOSE OF SENDING MONEY",
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT  - REGARDLESS OF MODE OF PAYMENT AND PURPOSE OF SENDING MONEY",
 V = "
 [*DO B = 1:[regofreg.#]:1]
 [regofreg.B] <v[regofreg.B]>;
@@ -1840,16 +1796,23 @@ Total Count<C>",
 DM $TQSM6 = $QSM6/1,
 4,
 5,
-2+3,
+6,
+8,
+2+3+7,
 9998,
+9999,
 
 R,F,
 VT = "QSM6. REASONS FOR CURRENT DAILY OUTGOING LIMIT NOT ENOUGH",
 V = "
 <g1B>Not enough (Kinakapos sa pagpapadala);
 Cannot withdraw big amount of money;
-<g1E>Need to upgdare upto 500,000;
+Need to upgdare upto 500,000;
+High charge;
+<g1E>That amount seems small;
+
 VAGUE (NET);
 Don't know;
+None;
 Missing Answer<z>;
 Total Count<C>",   

@@ -225,57 +225,57 @@ OM $I_7_QSMO1_92_other = $[B]-[B+3]/1-9999,
 [*END A]
 
 [*SET B = 101810][*DO A= 1:10]
-OM $I_7_T_QSMO3_1_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_1_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 101850][*DO A= 1:10]
-OM $I_7_T_QSMO3_2_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_2_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 101890][*DO A= 1:10]
-OM $I_7_T_QSMO3_4_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_4_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 101930][*DO A= 1:10]
-OM $I_7_T_QSMO3_5_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_5_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 101970][*DO A= 1:10]
-OM $I_7_T_QSMO3_6_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_6_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 102010][*DO A= 1:10]
-OM $I_7_T_QSMO3_9_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_9_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 102050][*DO A= 1:10]
-OM $I_7_T_QSMO3_92_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_92_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 102090][*DO A= 1:10]
-OM $I_7_I_1_QSMO4_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_I_1_QSMO4_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 102130][*DO A= 1:10]
-OM $I_7_I_5_QSMO4_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_I_5_QSMO4_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 102170][*DO A= 1:10]
-OM $I_7_I_46_QSMO4_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_I_46_QSMO4_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 102210][*DO A= 1:10]
-OM $I_7_I_42_QSMO4_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_I_42_QSMO4_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
@@ -622,7 +622,7 @@ OM $Q60_93_other = $[B]-[B+3]/1-9999,
 [*END A]
 
 [*SET B = 104970][*DO A= 1:10]
-OM $I_7_T_QSMO3_3_QSMO3_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_T_QSMO3_3_QSMO3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
@@ -727,18 +727,155 @@ OM $Q74a_31_other = $[B]-[B+3]/1-9999,
 [*END A]
 
 [*SET B = 105650][*DO A= 1:10]
-OM $I_7_I_30_QSMO4_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_I_30_QSMO4_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 105690][*DO A= 1:10]
-OM $I_7_I_31_QSMO4_98_other = $[B]-[B+3]/1-9999,
+OM $xI_7_I_31_QSMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+! additional columns
+
+[*SET B = 107490][*DO A= 1:10]
+OM $I_9_Q193a_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+[*SET B = 107410][*DO A= 1:10]
+OM $I_10_Q193a_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107570][*DO A= 1:10]
+OM $xI_7_I_10_QSMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105730][*DO A= 1:10]
+OM $I_7_QRMO1_92_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107650][*DO A= 1:10]
+OM $I_9_QRMO1_94_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108530][*DO A= 1:10]
+OM $I_10_QRMO1_95_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 
 
 !DUMMY
+
+OM $I_8_QRMO1_93_other = $blank/1-9999,
+
 OM $I_8_Q193a_98_other = $blank/1-9999,
 OM $I_8_Q193b_98_other = $blank/1-9999,
 OM $Q16a_92_other = $blank/1-9999,
+
+OM $I_8_QSMO1_92_other = $blank/1-9999,
+OM $I_9_QSMO1_92_other = $blank/1-9999,
+OM $I_10_QSMO1_92_other = $blank/1-9999,
+
+
+OM $xI_7_T_QSMO3_7_QSMO3_98_other = $blank/1-9999,
+OM $xI_7_T_QSMO3_8_QSMO3_98_other = $blank/1-9999,
+
+OM $xI_8_T_QSMO3_1_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_2_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_3_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_4_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_5_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_6_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_7_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_8_QSMO3_98_other = $blank/1-9999,
+OM $xI_8_T_QSMO3_9_QSMO3_98_other = $blank/1-9999,
+
+OM $xI_9_T_QSMO3_1_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_2_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_3_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_4_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_5_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_6_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_7_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_8_QSMO3_98_other = $blank/1-9999,
+OM $xI_9_T_QSMO3_9_QSMO3_98_other = $blank/1-9999,
+
+OM $xI_10_T_QSMO3_1_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_2_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_3_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_4_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_5_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_6_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_7_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_8_QSMO3_98_other = $blank/1-9999,
+OM $xI_10_T_QSMO3_9_QSMO3_98_other = $blank/1-9999,
+
+
+!OM $xI_7_T_QSMO3_91_QSMO3_98_other = $blank/1-9999,
+!OM $xI_7_T_QSMO3_93_QSMO3_98_other = $blank/1-9999,
+!OM $xI_7_T_QSMO3_94_QSMO3_98_other = $blank/1-9999,
+!OM $xI_7_T_QSMO3_95_QSMO3_98_other = $blank/1-9999,
+
+!OM $xI_8_T_QSMO3_91_QSMO3_98_other = $blank/1-9999,
+!OM $xI_8_T_QSMO3_92_QSMO3_98_other = $blank/1-9999,
+!OM $xI_8_T_QSMO3_93_QSMO3_98_other = $blank/1-9999,
+!OM $xI_8_T_QSMO3_94_QSMO3_98_other = $blank/1-9999,
+!OM $xI_8_T_QSMO3_95_QSMO3_98_other = $blank/1-9999,
+
+!OM $xI_9_T_QSMO3_91_QSMO3_98_other = $blank/1-9999,
+!OM $xI_9_T_QSMO3_92_QSMO3_98_other = $blank/1-9999,
+!OM $xI_9_T_QSMO3_93_QSMO3_98_other = $blank/1-9999,
+!OM $xI_9_T_QSMO3_94_QSMO3_98_other = $blank/1-9999,
+!OM $xI_9_T_QSMO3_95_QSMO3_98_other = $blank/1-9999,
+
+!OM $xI_10_T_QSMO3_91_QSMO3_98_other = $blank/1-9999,
+!OM $xI_10_T_QSMO3_92_QSMO3_98_other = $blank/1-9999,
+!OM $xI_10_T_QSMO3_93_QSMO3_98_other = $blank/1-9999,
+!OM $xI_10_T_QSMO3_94_QSMO3_98_other = $blank/1-9999,
+!OM $xI_10_T_QSMO3_95_QSMO3_98_other = $blank/1-9999,
+
+
+
+
+OM $xI_7_I_2_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_3_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_4_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_6_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_7_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_8_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_9_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_11_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_12_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_13_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_14_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_15_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_16_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_17_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_18_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_19_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_20_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_21_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_22_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_23_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_24_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_25_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_26_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_27_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_28_QSMO4_98_other = $blank/1-9999,
+OM $xI_7_I_29_QSMO4_98_other = $blank/1-9999,
+
+
+
+
+
+IF $A_Q17c/91, OM $Q17c_91_other = $Q16a_91_other,
+IF $A_Q17c/92, OM $Q17c_92_other = $Q16b_92_other,
+
