@@ -32,8 +32,8 @@ VT = "QRM1. PURPOSE OF RECEIVING MONEY IN THE P1M",
 V = "
 Received money from my family/friends (from Philippines);
 Received money from my family/friends (from abroad);
-Received gift or token;
-Received money for others' contribution (i.e. split bill/ expense);
+Received money as a gift or token from others;
+Received money from others as contribution or share to an expense (i.e. split bill);
 Received salary from work;
 Received money as payments from customers;
 Received money as payment for debt;
@@ -48,7 +48,6 @@ VAGUE;
 Refuse;
 Missing Answer<z>;
 Total Count<C>",   
-
 
 
 
@@ -123,8 +122,8 @@ VT = "QRMO1. PURPOSE FOR RECEIVING MONEY - [QRMO1.A]",
 V = "
 Received money from my family/friends (from Philippines);
 Received money from my family/friends (from abroad);
-Received gift or token;
-Received money for others contribution (i.e. split bill/ expense);
+Received money as a gift or token from others;
+Received money from others as contribution or share to an expense (i.e. split bill);
 Received salary from work;
 Received money as payments from customers;
 Received money as payment for debt;
@@ -159,11 +158,11 @@ Received money from my family/friends (from abroad);
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment;
-Received gift or token;
+Received money as a gift or token from others;
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment;
-Received money for others contribution (i.e. split bill/ expense);
+Received money from others as contribution or share to an expense (i.e. split bill);
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment;
@@ -175,7 +174,6 @@ Received money as payments from customers;
 `     Digital only;
 `     Non-Digital only;
 `     Hybrid Payment",
-
 
 !REGARDLESS
 DM $TQRMO1REGARDLESS = 
@@ -203,8 +201,8 @@ V = $TQRMO1R1,
 [*DATA QRMO3 (;) =
 Received money from my family/friends (from Philippines);
 Received money from my family/friends (from abroad);
-Received gift or token;
-Received money for others contribution (i.e. split bill/ expense);
+Received money as a gift or token from others;
+Received money from others as contribution or share to an expense (i.e. split bill);
 Received salary from work;
 Received money as payments from customers]
 
@@ -513,8 +511,8 @@ V = $TQRMO3CASH_1,
 [*DATA QRM6 (;) =
 Received money from my family/friends (from Philippines);
 Received money from my family/friends (from abroad);
-Received gift or token;
-Received money for others' contribution (i.e. split bill/expense);
+Received money as a gift or token from others;
+Received money from others as contribution or share to an expense (i.e. split bill);
 Received salary from work;
 Received money as payments from customers]
 
@@ -743,6 +741,39 @@ None;
 Missing Answer<z>;
 Total Count<C>",
 [*END A]
+
+
+
+[*DO A = 1:[QRM6.#]:1]
+DM $TQRM6xQRMO1_MOP_PENE_[A] = 
+[*DO B = 1:4]$TQRMO1R[B]/[A][*SLE]+[*END B],
+$TQRMO1R1/[A],
+$TQRMO1R2/[A],
+$TQRMO1R3/[A],
+$TQRMO1R4/[A],
+
+$TQRM6R[A]/1..48,
+$TQRM6R[A]/1,
+$TQRM6R[A]/2,
+$TQRM6R[A]/23,
+$TQRM6R[A]/3..11+14+24..28+31+32+34+36+42+44+45+48,
+$TQRM6R[A]/12+13+15..22+29+30+33+35+37..40+43+46+47,
+VT = "QRM6xQRMO1. MOP PENETRATION FOR RECEIVE MONEY - [QRM6.A]",
+V = "
+NON-DIGITAL <Q>;
+`   CASH;
+`   CHECK;
+`   DEBIT CARD;
+`   CREDIT CARD;
+
+DIGITAL <Q>;
+`   GCASH;
+`   MAYA;
+`   SHOPEEPAY;
+`   OTHER E-WALLETS;
+`   OTHER DIGITAL/ ONLINE BANKS",
+[*END A]
+
 
 !REGARDLESS
 DM $TQRM6REGARDLESS = 
@@ -1164,7 +1195,7 @@ Total Count<C>",
 !
 [*DO C = 1:9]
 DM $T3_QRMAMT[C] = $I_3_QRMAMT[C]/3,10,15,20,30,40,50,70,100,110,150,200,250,275,300,340,350,400,420,450,500,535,600,700,750,800,825,850,900,1000,1020,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2200,2400,2500,2545,2650,2700,2800,3000,3200,3400,3500,3600,3800,4000,4500,4680,5000,5200,5400,5500,6000,6500,7000,7200,7500,7800,8000,8500,9000,9500,10000,10300,11000,12000,12500,13000,14000,15000,16000,17000,18000,20000,21000,22000,23000,24000,25000,26000,27000,30000,35000,36000,40000,50000,70000,75000,R,F,
-VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - Received gift or token - [HAHAHA.C]",
+VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - Received money as a gift or token from others - [HAHAHA.C]",
 V = "
 [*DO A = 1:98]
 [QRMAMT.A]<V[QRMAMT.A]>;
@@ -1177,7 +1208,7 @@ Total Count<C>",
 !
 [*DO C = 1:9]
 DM $T4_QRMAMT[C] = $I_4_QRMAMT[C]/3,10,15,20,30,40,50,70,100,110,150,200,250,275,300,340,350,400,420,450,500,535,600,700,750,800,825,850,900,1000,1020,1050,1100,1200,1300,1370,1400,1500,1600,1700,1800,2000,2200,2400,2500,2545,2650,2700,2800,3000,3200,3400,3500,3600,3800,4000,4500,4680,5000,5200,5400,5500,6000,6500,7000,7200,7500,7800,8000,8500,9000,9500,10000,10300,11000,12000,12500,13000,14000,15000,16000,17000,18000,20000,21000,22000,23000,24000,25000,26000,27000,30000,35000,36000,40000,50000,70000,75000,R,F,
-VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - Received money for others' contribution (i.e. split bill/ expense) - [HAHAHA.C]",
+VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - Received money from others as contribution or share to an expense (i.e. split bill) - [HAHAHA.C]",
 V = "
 [*DO A = 1:98]
 [QRMAMT.A]<V[QRMAMT.A]>;
@@ -1315,7 +1346,7 @@ DM $T3_QRMAMTREGARD =
 [*DO C = 1:9]$T3_QRMAMT[C]/[B][*SLE]+[*END C],
 [*END B]
 R,F,
-VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - REGARDLESS OF MODE OF PAYMENT - Received gift or token",
+VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - REGARDLESS OF MODE OF PAYMENT - Received money as a gift or token from others",
 V = "
 [*DO A = 1:76]
 [QRMAMT.A]<V[QRMAMT.A]>;
@@ -1331,7 +1362,7 @@ DM $T4_QRMAMTREGARD =
 [*DO C = 1:9]$T4_QRMAMT[C]/[B][*SLE]+[*END C],
 [*END B]
 R,F,
-VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - REGARDLESS OF MODE OF PAYMENT - Received money for others' contribution (i.e. split bill/ expense)",
+VT = "QRMAMT. AMOUNT RECEIVED IN THE P1M - ONLINE AND OFFLINE PAYMENT - REGARDLESS OF MODE OF PAYMENT - Received money from others as contribution or share to an expense (i.e. split bill)",
 V = "
 [*DO A = 1:76]
 [QRMAMT.A]<V[QRMAMT.A]>;
