@@ -42,7 +42,7 @@ DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
   
-!IF $Q12024/NB, WRITE,
+IF $Q12024/NB, WRITE,
 
 [*SK 11]
  IF $Q12024/NB, lcsv (h) $1-10.
@@ -131,35 +131,35 @@ RURAL]
 [*SET T = 0]
 
 !======
-[*DO Z = 1:4]
+[*DO Z = 1:3]
 T #[+T] = $TQSAV1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QSAV1/2, T #[+T] = $TQSAV2 * $[HEADERWAVE3.Z],
 BT = "AMONG SAVINGS ACCOUNT IN A PHYSICAL BANK",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QSAV1/3, T #[+T] = $TQSAV3 * $[HEADERWAVE3.Z],
 BT = "AMONG SAVINGS ACCOUNT IN A PHYSICAL BANK",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQSAV8 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_QSAV1/4).($A_QSAV8/n17), T #[+T] = $TQSAV4 * $[HEADERWAVE3.Z],
 BT = "AMONG SAVINGS ACCOUNT IN A DIGITAL BANK",
 [*END Z]
@@ -167,7 +167,7 @@ BT = "AMONG SAVINGS ACCOUNT IN A DIGITAL BANK",
 !======
 [*DATA QSAV2 = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,98]
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:18]
 IF ($A_QSAV1/2+3+4).($A_QSAV2/[QSAV2.A]), T #[+T] = $TQSAV5_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG AWARE OF - [QSAV5.A]",
@@ -241,7 +241,7 @@ NB;
 1..4227]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:18]
 IF ($I_[A]_QSAV6/NB).($A_QSAV1/2+3+4).($A_QSAV2/[QSAV2.A]), T #[+T] = $TQSAV6_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG AWARE OF - [QSAV5.A]",
@@ -277,33 +277,33 @@ BT = "AMONG AWARE REGARDLESS OF BANK",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QSAV1/N5, T #[+T] = $TQSAV7 * $[HEADERWAVE3.Z],
 BT = "AMONG DON'T HAVE SAVINGS",
 [*END Z]
 
 
 !====== DELETED NA
-![*DO Z = 1:1]
+![*DO Z = 1:3]
 !IF $A_QFP1/6, T #[+T] = $TQL2 * $[HEADERWAVE3.Z],
 !BT = "AMONG THOSE WHO HAVE LOANS",
 ![*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_QL2/n99.nb, T #[+T] = $TQ74a * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE LOANS",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_QL2/n99.nb, T #[+T] = $TQ159a * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE LOANS",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_QL2/n99.nb, T #[+T] = $TQLO3 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE LOANS",
 [*END Z]
@@ -323,7 +323,7 @@ BT = "AMONG THOSE WHO HAVE LOANS",
 44+33]
 
 if $A_QL2/n99, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF ($A_QL2/n99.nb).($A_Q74a/[Q74A.A]), T #[+T] = $TQ170a[A] * $[HEADERWAVE3.Z],
 BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170a.A]",
@@ -332,7 +332,7 @@ BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170a.A]",
 endif,
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF ($A_QL2/n99.nb).($A_Q74a/[Q74A.A]),  T #[+T] = $TQ170a_1_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170a.A]",
@@ -351,13 +351,13 @@ om $Q170A_1 = $T_Q170a_1_[L.A],
 [*enda]
 
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q170A_1/4+5+6, T #[+T] = $TQLO1 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHOSE FREQUENCY OF PAYMENT IS MORE THAN MONTHLY",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($Q170A_1/4+5+6).($TQLO1/1), T #[+T] = $TQLO2 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THEIR LOAN",
 [*END Z]
@@ -367,27 +367,27 @@ BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THEIR LOAN",
 ! ADDITIONAL
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL2 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL3 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL4_1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*DO A = 2:10]
@@ -398,20 +398,20 @@ BT = "ALL RESPONDENT",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL4_TOPBOX * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL4_TOP2BOX * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQL4_BOTTOM2BOX * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
@@ -422,14 +422,14 @@ BT = "ALL RESPONDENT",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_QL2/N99.NB), T #[+T] = $TQL5 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO CURRENTLY HAVE A LOAN",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:44]
 IF ($A_QL2/N99.NB).($A_Q74a/[ql6stubscode.A]), T #[+T] = $TQL6_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO CURRENTLY HAVE A LOAN - [ql6stubs.A]",
@@ -440,7 +440,7 @@ BT = "AMONG THOSE WHO CURRENTLY HAVE A LOAN - [ql6stubs.A]",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/4, T #[+T] = $TQINV2 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE INVESTMENTS",
 [*END Z]
@@ -456,7 +456,7 @@ BT = "AMONG THOSE WHO HAVE INVESTMENTS",
 15]
 [*DATA D175=1,2,3,4,5,6,7]
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 if ($A_QFP1/4).($A_QINV2/[DINV2.a]), T #[+T] = $TQ175_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE INVESTMENTS - [Q175.A]",
@@ -465,13 +465,13 @@ BT = "AMONG THOSE WHO HAVE INVESTMENTS - [Q175.A]",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/4, T #[+T] = $TQ178 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE INVESTMENTS",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/4, T #[+T] = $TQINV5 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE INVESTMENTS",
 [*END Z]
@@ -481,7 +481,7 @@ BT = "AMONG THOSE WHO HAVE INVESTMENTS",
 
 !======
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 if ($A_QFP1/4).($A_QINV2/[DINV2.a]), T #[+T] = $TQ176_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE INVESTMENTS",
@@ -497,28 +497,28 @@ om $Q176_1 = $T_Q176_[L.A],
 [*enda]
 
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q176_1/4+5+6, T #[+T] = $TQINV3 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE INVESTMENTS",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $QINV3/1, T #[+T] = $TQINV4 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THEIR INVESTMENT",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/5, T #[+T] = $TQINS1 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE AN INSURANCE",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:14]
 IF ($A_QFP1/5).($A_QINS1/[A]), T #[+T] = $TQINS2_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG TYPES OF INSURANCE CURRENTLY HAVE - [QINS2.A]",
@@ -527,7 +527,7 @@ BT = "AMONG TYPES OF INSURANCE CURRENTLY HAVE - [QINS2.A]",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:14]
 IF ($A_QFP1/5).($A_QINS1/[A]), T #[+T] = $TQINS3_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG TYPES OF INSURANCE CURRENTLY HAVE - [QINS2.A]",
@@ -536,7 +536,7 @@ BT = "AMONG TYPES OF INSURANCE CURRENTLY HAVE - [QINS2.A]",
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:14]
 IF $A_QINS1/[A], T #[+T] = $TQINS4_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG TYPES OF INSURANCE CURRENTLY HAVE - [QINS2.A]",
@@ -551,13 +551,13 @@ BT = "AMONG TYPES OF INSURANCE CURRENTLY HAVE - [QINS2.A]",
 om $QINS4_1 = $T_QINS4_[L.A],
 [*enda]
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $QINS4_1/4+5+6, T #[+T] = $TQINS5 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHOSE FREQUENCY OF PAYMENT IS MORE THAN MONTHLY",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $QINS5/1, T #[+T] = $TQINS6 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THE PREMIUM OF THEIR INSURANCE",
 [*END Z]
