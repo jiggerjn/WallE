@@ -435,7 +435,7 @@ Total Count<C>",
 [*DATA QSAV5 (;) =
 AUB (Asia United Bank);
 BDO;
-BPI / BPI Savings;
+BPIï¿½/ BPI Savings;
 China Bank;
 Citibank;
 CIMB Bank;
@@ -452,11 +452,11 @@ Unionbank;
 UCPB;
 SeaBank;
 Others;
-BPI Mobile/ Online;
-BDO Mobile/ Online;
-Landbank Mobile/ Online;
-Metrobank Mobile/ Online;
-Unionbank Mobile/ Online;
+BPIï¿½Mobile/ Online;
+BDOï¿½Mobile/ Online;
+Landbankï¿½Mobile/ Online;
+Metrobankï¿½Mobile/ Online;
+Unionbankï¿½Mobile/ Online;
 Security Bank Mobile/ Online;
 BancNet Online;
 RCBC mobile;
@@ -497,7 +497,6 @@ Missing Answer<z>;
 Total Count<C>",
 [*END A]
 
-[*INSERT WALL-E_W_Managementresp]
 !========= 
 [*DO A = 1:48]
 DM $TQSAV6_[A] = $I_[A]_QSAV6/10,50,80,99,100,150,175,200,240,250,300,400,500,508,600,700,1000,1200,1300,1500,2000,2500,3000,3500,4000,4200,5000,6000,6500,6600,7000,8000,10000,14000,15000,16000,17000,18000,20000,25000,30000,35000,50000, R,F,
@@ -553,56 +552,56 @@ TOTAL COUNT<C>",
 
 
 DM $TQSAV6a = $QSAV6a/
-[*DO B = 1:[qsav6val1.#]:1]
-[qsav6val1.B],
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B],
 [*END B]
 R,F,
 XT = "QSAV6. AMOUNT SAVED IN P1M - BRICK-AND-MORTAR BANKS (NO ACCESS TO ONLINE BANKING)",
 X = "
-[*DO B = 1:[qsav6val1.#]:1]
-[qsav6val1.B]<v[qsav6val1.B]>;
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B]<v[qsav6val.B]>;
 [*END B]
 
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
 DM $TQSAV6b = $QSAV6b/
-[*DO B = 1:[qsav6val2.#]:1]
-[qsav6val2.B],
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B],
 [*END B]
 R,F,
 XT = "QSAV6. AMOUNT SAVED IN P1M - BRICK-AND-MORTAR BANKS (WITH ACCESS TO ONLINE BANKING)",
 X = "
-[*DO B = 1:[qsav6val2.#]:1]
-[qsav6val2.B]<v[qsav6val2.B]>;
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B]<v[qsav6val.B]>;
 [*END B]
 
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
 DM $TQSAV6c = $QSAV6c/
-[*DO B = 1:[qsav6val3.#]:1]
-[qsav6val3.B],
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B],
 [*END B]
 R,F,
 XT = "QSAV6. AMOUNT SAVED IN P1M - DIGITAL BANKS",
 X = "
-[*DO B = 1:[qsav6val3.#]:1]
-[qsav6val3.B]<v[qsav6val3.B]>;
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B]<v[qsav6val.B]>;
 [*END B]
 
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
 DM $TQSAV6reg = $QSAV6reg/
-[*DO B = 1:[qsav6valreg.#]:1]
-[qsav6valreg.B],
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B],
 [*END B]
 R,F,
 XT = "QSAV6. AMOUNT SAVED IN P1M - REGARDLESS OF BANK",
 X = "
-[*DO B = 1:[qsav6valreg.#]:1]
-[qsav6valreg.B]<v[qsav6valreg.B]>;
+[*DO B = 1:[qsav6val.#]:1]
+[qsav6val.B]<v[qsav6val.B]>;
 [*END B]
 
 MISSING ANSWER<Z>;
@@ -992,7 +991,7 @@ $QLO3_OTHERS/1093,
 
 
 R,F,
-VT = "QLO3. WHERE PAY EXISTING LOANS PAYMENT CHANNELS – BRANDS USED",
+VT = "QLO3. WHERE PAY EXISTING LOANS PAYMENT CHANNELS ï¿½ BRANDS USED",
 V = "
 REMITTANCE CENTER<Q>;
 `     Cebuana Lhuillier;
@@ -1029,12 +1028,12 @@ PHYSICAL BANKS<Q>;
 `     Collector;
 `     Cardbank;
 MOBILE/ ONLINE/ DIGITAL BANK<Q>;
-`     BPI Mobile/ Online;
-`     BDO Mobile/ Online;
-`     Landbank Mobile/ Online;
-`     Metrobank Mobile/ Online;
+`     BPIï¿½Mobile/ Online;
+`     BDOï¿½Mobile/ Online;
+`     Landbankï¿½Mobile/ Online;
+`     Metrobankï¿½Mobile/ Online;
 `     CIMB Bank;
-`     UnionBank Mobile/ Online;
+`     UnionBankï¿½Mobile/ Online;
 `     Security Bank Mobile/ Online;
 `     DiskarTech;
 `     BDO Pay;
@@ -1241,7 +1240,7 @@ GOVERNMENT SECURITIES (NET)<Q>;
 `     Treasury bills(short-term secure investments issued by the Philippine government through the Bureau of Treasury (BTr));
 `     Treasury bonds (medium to long-term investments issued by the Philippine government to make securities available to small investors);
 `     Real Estate (e.g., house, land, condominium, etc.);
-`     Cryptocurrency (e.g. Bitcoin, Ethereum, etc)(virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+`     Cryptocurrency (e.g. Bitcoin, Ethereum, etc)(virtual or digital money that takes the form of tokens or ï¿½coins.ï¿½ While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
 `     Stockbroker/ Investment Firm (e.g. COL Financial, etc.);
 oTHERS;
 
@@ -1412,7 +1411,7 @@ DM $TQINV5 = $A_QINV5/1..12,
 77,
 78,
 R,F,
-VT = "QINV5. INVESTMENT PAYMENT CHANNELS – BRANDS USED",
+VT = "QINV5. INVESTMENT PAYMENT CHANNELS ï¿½ BRANDS USED",
 V = "
 REMITTANCE CENTER<Q>;
 `     Cebuana Lhuillier;
@@ -1449,12 +1448,12 @@ PHYSICAL BANKS<Q>;
 `     Unionbank;
 `     Other banks;
 MOBILE/ ONLINE/ DIGITAL BANK<Q>;
-`     BPI Mobile/ Online;
-`     BDO Mobile/ Online;
-`     Landbank Mobile/ Online;
-`     Metrobank Mobile/ Online;
+`     BPIï¿½Mobile/ Online;
+`     BDOï¿½Mobile/ Online;
+`     Landbankï¿½Mobile/ Online;
+`     Metrobankï¿½Mobile/ Online;
 `     CIMB Bank;
-`     UnionBank Mobile/ Online;
+`     UnionBankï¿½Mobile/ Online;
 `     Security Bank Mobile/ Online;
 `     DiskarTech;
 `     BDO Pay;
@@ -1649,8 +1648,8 @@ Insurance Agent;
 Insurance Broker / Independent;
 Banks/ Bancassurance;
 Insurance Agent;
-Online through insurance companies’ website/ mobile app;
-Online via banks’ website/ mobile app;
+Online through insurance companiesï¿½ website/ mobile app;
+Online via banksï¿½ website/ mobile app;
 Online through fintech companies/ mobile wallets website/ mobile app (e..g, GCash, Maya, etc);
 Through online insurance marketplace (e.g., Kwik.insure);
 Though online shopping sites (e.g., Shopee, Lazada, etc);
@@ -1804,7 +1803,7 @@ $QL1_98_other/1038,
 $QL1_98_other/1022+1026,
 $A_QL1/99,
 R,F,
-XT = "QL1. AWARENESS – LOANS",
+XT = "QL1. AWARENESS ï¿½ LOANS",
 X = "
 FROM BANKS (NET)<Q>;
 `     Housing Loan/Mortgage with bank;
@@ -1946,7 +1945,7 @@ XT = "QL4. ATTITUDE TOWARDS BORROWING MONEY",
 X = "[QL4.A]\
 `     Strongly Disagree(1)<v1>;
 `     Disagree(2)<v2>;
-`     Can’t say if I agree or disagree(3)<v3>;
+`     Canï¿½t say if I agree or disagree(3)<v3>;
 `     Agree(4)<v4>;
 `     Strongly agree(5)<v5>;
 `          TOP 2 BOX<Q>;
@@ -2018,7 +2017,7 @@ X = "
 Not enough budget for essential needs;
 There were emergency expenses;
 There were large expenses that needed funding;
-There was something not essential but I wanted to buy it already but I didn’t have enough budget;
+There was something not essential but I wanted to buy it already but I didnï¿½t have enough budget;
 For tuition in college;
 Motor;
 Bills payment;
@@ -2147,7 +2146,7 @@ VT = "QSAV5. SOURCE",
 V = "
 AUB (Asia United Bank);
 BDO;
-BPI / BPI Savings;
+BPIï¿½/ BPI Savings;
 China Bank;
 Citibank;
 CIMB Bank;
@@ -2163,11 +2162,11 @@ Security Bank;
 Unionbank;
 UCPB;
 SeaBank;
-BPI Mobile/ Online;
-BDO Mobile/ Online;
-Landbank Mobile/ Online;
-Metrobank Mobile/ Online;
-Unionbank Mobile/ Online;
+BPIï¿½Mobile/ Online;
+BDOï¿½Mobile/ Online;
+Landbankï¿½Mobile/ Online;
+Metrobankï¿½Mobile/ Online;
+Unionbankï¿½Mobile/ Online;
 Security Bank Mobile/ Online;
 BancNet Online;
 RCBC mobile;
@@ -2246,7 +2245,7 @@ VT = "QSAV6. SOURCE",
 V = "
 AUB (Asia United Bank);
 BDO;
-BPI / BPI Savings;
+BPIï¿½/ BPI Savings;
 China Bank;
 Citibank;
 CIMB Bank;
@@ -2262,11 +2261,11 @@ Security Bank;
 Unionbank;
 UCPB;
 SeaBank;
-BPI Mobile/ Online;
-BDO Mobile/ Online;
-Landbank Mobile/ Online;
-Metrobank Mobile/ Online;
-Unionbank Mobile/ Online;
+BPIï¿½Mobile/ Online;
+BDOï¿½Mobile/ Online;
+Landbankï¿½Mobile/ Online;
+Metrobankï¿½Mobile/ Online;
+Unionbankï¿½Mobile/ Online;
 Security Bank Mobile/ Online;
 BancNet Online;
 RCBC mobile;
