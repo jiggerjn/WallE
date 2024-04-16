@@ -285,11 +285,11 @@ BT = "AMONG DON'T HAVE SAVINGS",
 [*END Z]
 
 
-!======
-[*DO Z = 1:1]
-IF $A_QFP1/6, T #[+T] = $TQL2 * $[HEADERWAVE3.Z],
-BT = "AMONG THOSE WHO HAVE LOANS",
-[*END Z]
+!====== DELETED NA
+![*DO Z = 1:1]
+!IF $A_QFP1/6, T #[+T] = $TQL2 * $[HEADERWAVE3.Z],
+!BT = "AMONG THOSE WHO HAVE LOANS",
+![*END Z]
 
 
 !======
@@ -327,7 +327,7 @@ BT = "AMONG THOSE WHO HAVE LOANS",
 if $A_QL2/n99, then,
 [*DO Z = 1:1]
 [*DO A = 1:9]
-IF ($A_Q74a/[Q74A.A]), T #[+T] = $TQ170a[A] * $[HEADERWAVE3.Z],
+IF ($A_QL2/n99.nb).($A_Q74a/[Q74A.A]), T #[+T] = $TQ170a[A] * $[HEADERWAVE3.Z],
 BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170a.A]",
 [*END A]
 [*END Z]
@@ -336,7 +336,7 @@ endif,
 !======
 [*DO Z = 1:1]
 [*DO A = 1:9]
-IF $A_Q74a/[Q74A.A],  T #[+T] = $TQ170a_1_[A] * $[HEADERWAVE3.Z],
+IF ($A_QL2/n99.nb).($A_Q74a/[Q74A.A]),  T #[+T] = $TQ170a_1_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170a.A]",
 [*END A]
 [*END Z]
@@ -360,7 +360,7 @@ BT = "AMONG THOSE WHOSE FREQUENCY OF PAYMENT IS MORE THAN MONTHLY",
 
 !======
 [*DO Z = 1:1]
-IF $QLO1/1, T #[+T] = $TQLO2 * $[HEADERWAVE3.Z],
+IF ($Q170A_1/4+5+6).($TQLO1/1), T #[+T] = $TQLO2 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THEIR LOAN",
 [*END Z]
 
@@ -496,6 +496,12 @@ T #[+T] = $TQL1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQL2 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENT",
+[*END Z]
+
 
 !======
 [*DO Z = 1:1]
@@ -514,6 +520,31 @@ BT = "ALL RESPONDENT",
 [*END A]
 [*END Z]
 
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQL4_TOPBOX * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENT",
+[*END Z]
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQL4_TOP2BOX * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENT",
+[*END Z]
+
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQL4_BOTTOM2BOX * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENT",
+[*END Z]
+
+
+
+
+
+
 !======
 [*DO Z = 1:1]
 IF ($A_QL2/N99.NB), T #[+T] = $TQL5 * $[HEADERWAVE3.Z],
@@ -530,7 +561,7 @@ BT = "AMONG THOSE WHO CURRENTLY HAVE A LOAN - [ql6stubs.A]",
 [*END Z]
 
 
-
+!source
 
 
 

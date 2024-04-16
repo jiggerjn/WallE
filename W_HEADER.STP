@@ -26,8 +26,6 @@ DM $Mar02toMar08 = $1-10/35299314+35301583+35301584+35301774+35301775+35307278+3
 DM $GsavexHeartsResp = $Feb24toMar01/NB+$Mar02toMar08/NB,
 
 
-IF $JAN2024/NB+$FEB2024/NB+$MAR2024/NB, THEN,
-
 DM $HA = T,
          T,$Q2/1,2,
          T,$T_Q1_1/1..20,21..30,31..35,36..45,46..65,
@@ -55,8 +53,6 @@ C1 *(j);
 ABC1*(k);
 C2*(l);
 D*(m)",
-
-END IF,
 
 DM $HB = T,
          T,$Q4/1,2,
