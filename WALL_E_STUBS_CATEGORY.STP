@@ -2843,7 +2843,6 @@ $TQ17d/([NOM1.a]),
 $TQ17a/([NOM1.a]),
 $TQ17c/([NOM1.a]),
 $TQ17b/([NOM1.a]),
-$TQ17O/([NOM1.a]),
 $TQ16e/([NOM1.a]),
 $TQ16g/([NOM1.a]),
 XT = "Q16-Q17. BRAND FUNNEL",
@@ -2858,7 +2857,6 @@ Q17d. With Existing Acc;
 Q17a. P2M;
 Q17c. P4W;
 Q17b. BUMO;
-Q17O. P1M;
 Q16e. Favorite;
 Q16g. Recommended",
 [*END A]
