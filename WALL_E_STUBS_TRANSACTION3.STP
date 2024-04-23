@@ -195,7 +195,7 @@ $I_[b]_A_QSM2/52,
 
 $I_[b]_A_QSM2/99+([*do a = 91:92]$QSM2_[a]_other/9999[*sle]+[*end a]),
 R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M ' SEND MONEY - [QSM1.b]",
+VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M - SEND MONEY - [QSM1.b]",
 V = "
 GCash;
 PayMaya/Maya;
@@ -387,9 +387,9 @@ DM $TQSM2R[b] =
 ($I_[b]_A_QSM2/48)+($QSM2_[b]/48),
 ($I_[b]_A_QSM2/49)+($QSM2_[b]/49),
 
-($I_[b]_A_QSM2/47)+($QSM2_[b]/50),
-($I_[b]_A_QSM2/48)+($QSM2_[b]/51),
-($I_[b]_A_QSM2/49)+($QSM2_[b]/52),
+($I_[b]_A_QSM2/50)+($QSM2_[b]/50),
+($I_[b]_A_QSM2/51)+($QSM2_[b]/51),
+($I_[b]_A_QSM2/52)+($QSM2_[b]/52),
 
 ([*do a = 91:92]$QSM2_[a]_other/1001[*sle]+[*end a]),
 ([*do a = 91:92]$QSM2_[a]_other/1003[*sle]+[*end a]),
@@ -453,7 +453,7 @@ DM $TQSM2R[b] =
 
 ($I_[b]_A_QSM2/99)+($QSM2_[b]/99)+([*do a = 91:92]$QSM2_[a]_other/9999[*sle]+[*end a]),
 R,F,
-VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M ' SEND MONEY - [QSM1.b]",
+VT = "QSM2. E-WALLET AND MOBILE/ONLINE BANKING BRANDS USED IN P1M - SEND MONEY - [QSM1.b]",
 V = $TQSM2R1,
 [*END b]
 
