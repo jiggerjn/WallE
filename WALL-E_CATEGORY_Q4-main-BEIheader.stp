@@ -84,7 +84,7 @@ V = "
 `     Q16g. Recommended[*sle];
 [*ENDA]",
 
-[*DATA gcashCaseLadderTitle (;)= 
+[*DATA gcashCaseLadderTitle (;) = 
 TOTAL AWARENESS;
 Aided Awareness;
 Other Spontaneous;
@@ -93,6 +93,26 @@ EVER USED;
 USED IN THE P2M;
 USED IN THE P4W;
 CONSIDERATION]
+
+[*DATA gcashCaseLadderFilters(;) =
+$A_Q16d/1;
+$A_Q16d/1;
+$A_Q16d/1;
+$A_Q16d/1;
+($A_Q16d/1).($A_Q17f/1);
+($A_Q16d/1).($A_Q17a/1);
+($A_Q16d/1).($A_Q17o/1);
+$A_Q16d/1]
+
+[*DATA gcashCaseLadderBasetitle(;) =
+AMONG GCASH AWARE;
+AMONG GCASH AWARE;
+AMONG GCASH AWARE;
+AMONG GCASH AWARE;
+AMONG GCASH AWARE AND EVER USED;
+AMONG GCASH AWARE AND USED IN P2M;
+AMONG GCASH AWARE AND USED IN P1M;
+AMONG GCASH AWARE]
 
 [*DO B = 1:[gcashCaseLadderTitle.#]:1]
 DM $brdladderByCase[B] =
@@ -113,6 +133,7 @@ $brdladderByCaseCount[B]/4,
 $brdladderByCaseCount[B]/5,
 $brdladderByCaseCount[B]/6,
 $brdladderByCaseCount[B]/7..25,
+R,
 VT = "Average number of GCash Used Cases - [gcashCaseLadderTitle.B]",
 V = "
 1 TRANSACTION/ FEATURE ONLY (1)<v1>;
@@ -121,7 +142,8 @@ V = "
 4 TRANSACTIONS/ FEATURES (4)<v4>;
 5 TRANSACTIONS/ FEATURES (5)<v5>;
 6 TRANSACTIONS/ FEATURES (6)<v6>;
-7 TRANSACTIONS/ FEATURES AND MORE (7.5)<v7.5>",
+7 TRANSACTIONS/ FEATURES AND MORE (7.5)<v7.5>;
+None",
 [*END B]
 
 DM $BEItotal = 
@@ -403,8 +425,8 @@ END IF,
 !======
 [*DO Z = 1:3]
 [*DO A = 1:8]
-IF $A_Q16d/1, T #[+T] = $brdladderByCaseAve[A] * $[HEADERWAVE3.Z],
-BT = "AMONG GCASH AWARE", 
+IF [gcashCaseLadderFilters.A], T #[+T] = $brdladderByCaseAve[A] * $[HEADERWAVE3.Z],
+BT = "[gcashCaseLadderBasetitle.A]", 
 [*END A]
 [*END Z]
 
@@ -412,8 +434,8 @@ BT = "AMONG GCASH AWARE",
 if $Q17i/1, then,
 [*DO Z = 1:3]
 [*DO A = 1:8]
-IF $A_Q16d/1, T #[+T] = $brdladderByCaseAve[A] * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE", 
+IF [gcashCaseLadderFilters.A], T #[+T] = $brdladderByCaseAve[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - [gcashCaseLadderBasetitle.A]", 
 [*END A]
 [*END Z]
 END IF,
@@ -423,8 +445,8 @@ END IF,
 if $Q17i/2, then,
 [*DO Z = 1:3]
 [*DO A = 1:8]
-IF $A_Q16d/1, T #[+T] = $brdladderByCaseAve[A] * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE", 
+IF [gcashCaseLadderFilters.A], T #[+T] = $brdladderByCaseAve[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - [gcashCaseLadderBasetitle.A]", 
 [*END A]
 [*END Z]
 END IF,
