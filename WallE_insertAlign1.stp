@@ -1,0 +1,132 @@
+
+!{=============== BRANDS ===============}!
+[*DOD=1:XBRX]
+IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_91,
+IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_91,
+IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q47_[ROWBRANDALL.D] = $T_Q47_91,
+
+
+
+IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_92,
+IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_92,
+IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q47_[ROWBRANDALL.D] = $T_Q47_92,
+
+
+
+! --- Update Q1 2022
+IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_91,
+IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_92,
+
+IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_91,
+IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_92,
+!
+[*ENDD]
+
+
+
+
+
+
+
+
+
+
+!=========
+IF $A_Q17a/91, OM $Q17a_91_other = $Q16a_91_other,
+IF $A_Q17a/92, OM $Q17a_92_other = $Q16b_91_other,
+
+!=========
+
+IF $A_Q17b/91, OM $Q17b_91_other = $Q16a_91_other,
+IF $A_Q17b/92, OM $Q17b_92_other = $Q16b_91_other,
+
+!=========
+
+IF $A_Q17c/91, OM $Q17c_91_other = $Q16a_91_other,
+IF $A_Q17c/92, OM $Q17c_92_other = $Q16b_91_other,
+
+!=========
+IF $A_Q17d/91, OM $Q17d_91_other = $Q16a_91_other,
+IF $A_Q17d/92, OM $Q17d_92_other = $Q16b_91_other,
+
+!=========
+
+IF $A_Q17e/91, OM $Q17e_91_other = $Q16a_91_other,
+IF $A_Q17e/92, OM $Q17e_92_other = $Q16b_91_other,
+
+!=========
+IF $A_Q17f/91, OM $Q17f_91_other = $Q16a_91_other,
+IF $A_Q17f/92, OM $Q17f_92_other = $Q16b_91_other,
+
+!=========
+
+IF $A_Q17l/91, OM $Q17l_91_other = $Q16a_91_other,
+IF $A_Q17l/92, OM $Q17l_92_other = $Q16b_91_other,
+
+!=========
+
+IF $A_Q17k/91, OM $Q17k_91_other = $Q16a_91_other,
+IF $A_Q17k/92, OM $Q17k_92_other = $Q16b_91_other,
+
+
+IF $A_Q16d/91, OM $Q16d_91_other = $Q16a_91_other,
+IF $A_Q16d/92, OM $Q16d_92_other = $Q16b_91_other,
+
+IF $A_Q16e/91, OM $Q16e_91_other = $Q16a_91_other,
+IF $A_Q16e/92, OM $Q16e_92_other = $Q16b_91_other,
+
+IF $A_Q16f/91, OM $Q16f_91_other = $Q16a_91_other,
+IF $A_Q16f/92, OM $Q16f_92_other = $Q16b_91_other,
+
+IF $A_Q16g/91, OM $Q16g_91_other = $Q16a_91_other,
+IF $A_Q16g/92, OM $Q16g_92_other = $Q16b_91_other,
+
+
+!=========
+
+IF $A_Q194d/91, OM $Q194d_91_other = $Q194a_91_other,
+IF $A_Q194d/92, OM $Q194d_92_other = $Q194b_92_other,
+
+
+
+
+
+
+! ===== Q2 2023 ====== !
+DM $Q8B1_1 = $T_Q8b1_5o,
+DM $Q8B1_2 = $T_Q8b1_6o,
+DM $Q8B1_3 = $T_Q8b1_7o,
+DM $Q8B1_4 = $T_Q8b1_8o,
+DM $Q8B1_5 = $T_Q8b1_9o,
+DM $Q8B1_6 = $T_Q8b1_10o,
+DM $Q8B1_7 = $T_Q8b1_4o,
+DM $Q8B1_8 = $T_Q8b1_3o,
+
+
+[*data D8B1 (;)= 
+Bought load (mobile load, prepaid broadband load, game credits, KUMU coins, PayTV, prepaid kit, Tinder, prepaid insurance, kuryente prepaid, etc.);
+Buy and pay from any store, bank, establishments, within the same website or app of the store via online;
+Pay bills;
+Send/ receive remittance or `"padala`" OR money transfer for any purposes;
+Send/ receive remittance or `"padala`" OR money transfer for any purposes;
+Payment for transportation]
+
+[*DATA CODE8B1 = 
+1+1024,
+2+1006+1012+1013+1021+1031+1042+3+1008+1101+1108,
+4+1001+1022+1102,
+6+1003+1002+1005+1010+1011+1023+1027+1020+1025+1026,
+6+1003+1002+1005+1010+1011+1023+1027+1020+1025+1026,
+8,
+999]!999 is dummy/placeholder code only
+
+IF $Q22023/NB+$Q32023/NB, THEN,
+DM $Q8B1_NONE = 
+$Q8B1_1/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8).
+$Q8B1_2/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8).
+$Q8B1_3/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8).
+$Q8B1_4/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8).
+$Q8B1_5/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8).
+$Q8B1_6/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8).
+$Q8B1_7/(N1.N1024.N2.N1006.N1012.N1013.N1021.N1031.N1042.N3.N1008.N1101.N1108.N4.N1001.N1022.N5.N1009.N6.N1003.N1002.N1005.N1010.N1011.N1023.N1027.N1020.N1025.N1026.N7.N1007.N10.N11.N12.N13.N8),
+END IF,
