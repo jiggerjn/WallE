@@ -75,9 +75,9 @@ F=DPS2,          ! ------ Decimal Std
 F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
 
 
-F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+F= SHG-1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 
-!F= SHG-1/SIG/SLA95/SLB95/NFSL, ! ROUND ROBIN
+!F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 
 
 %UNR = '(UNWEIGHTED BASE)',

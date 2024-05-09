@@ -39,9 +39,9 @@ DM $HT = T,
   
 
 UL $NewQuarter/NB, goto @Q32023,
-[*INSERT WALLEv2_CARDCOL_CATERGORY]
 [*INSERT ADDITIONAL_COLUMNS]
 [*INSERT ADDITIONAL_COLUMNS_JAN_FEB]
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
 IF $NewQuarter/NB, goto @end,
 @Q32023,
 [*INSERT WallE_insertGlobal]
@@ -142,34 +142,40 @@ Devices (NET)<q>;
 
 dm $item24_Q32022 =
 ($Q66ab/n99.($NewQuarter/B))+($A_Q66b/n99.($NewQuarter/NB)),
+$A_Q66a/3+1020+1023+1031+1033+1040+1041+1042+1044+1032+1045+1046+1049,
 (($ITEM60_Q32022/6+7+$Q66ab/30).($Q32023/B.$NewQuarter/B))+$A_DO1/1..3,
-(($ITEM60_Q32022/6).($Q32023/B.$NewQuarter/B))+$A_DO1/1,
-(($Q66ab/30).($Q32023/B.$NewQuarter/B))+$A_DO1/2,
-(($ITEM60_Q32022/7).($Q32023/B.$NewQuarter/B))+$A_DO1/3,
 
 XT = "Internet and Smartphone Penetration",
 X = "
 Internet users;
-Smartphone User (NET) <Q>;
-`    Use 5g;
-`    Use 4g;
-`    Use Feature Phones",
+Mobile Data penetration;
+Smartphone User (NET) <Q>",
+
+!(($ITEM60_Q32022/6).($Q32023/B.$NewQuarter/B))+$A_DO1/1,
+!(($Q66ab/30).($Q32023/B.$NewQuarter/B))+$A_DO1/2,
+!(($ITEM60_Q32022/7).($Q32023/B.$NewQuarter/B))+$A_DO1/3,
+!;
+!`    Use 5g;
+!`    Use 4g;
+!`    Use Feature Phones
 
 dm $item24 =
 $Q66ab/n99,
+$A_Q66a/3+1020+1023+1031+1033+1040+1041+1042+1044+1032+1045+1046+1049,
 $ITEM60/6+7,
-$ITEM60/6,
-$Q66ab/30,
-$ITEM60/7,
 
 XT = "Internet and Smartphone Penetration",
 X = "
 Internet users;
-Smartphone User (NET) <Q>;
-`    Use 5g;
-`    Use 4g;
-`    Use Feature Phones",
-
+Mobile Data penetration;
+Smartphone User (NET) <Q>",
+!$ITEM60/6,
+!$Q66ab/30,
+!$ITEM60/7,
+!;
+!`    Use 5g;
+!`    Use 4g;
+!`    Use Feature Phones
 
 DM $HATL =
 T,

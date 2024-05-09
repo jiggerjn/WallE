@@ -207,86 +207,86 @@ DM $HAM =
 
 DM $HAMoM = 
 T,
-$OCT2023/NB,
-$NOV2023/NB,
-$DEC2023/NB,
+$JAN2024/NB,
+$FEB2024/NB,
+$MAR2024/NB,
 [*DO A = 1:12]
 T,
-$OCT2023/NB.$HAM/[A],
-$NOV2023/NB.$HAM/[A],
-$DEC2023/NB.$HAM/[A],
+$JAN2024/NB.$HAM/[A],
+$FEB2024/NB.$HAM/[A],
+$MAR2024/NB.$HAM/[A],
 [*END A]
 HT = "HEADER A. GENERAL PROFILE - Month-on-Month",
 H  = "
 TOTAL*(a);
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 GENDER****
 MALE***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 FEMALE***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 
 LIFESTAGE****
 Students (20 yo and below)***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 Yuppies (21-30 yo)***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 Transitioners (31-35 yo)***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 Balancers (36-45 yo)***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 Older Adults/Retirees (46-65 yo)***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 
 SEC****
 AB***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 C1***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 ABC1***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 C2***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(d);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
 D***
 TOTAL*(a)<S>;
-OCT 2023 *(b);
-NOV 2023 *(c);
-DEC 2023 *(c)",
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(c)",
 
 
 DM $HAv = 
@@ -359,6 +359,124 @@ DM $HFv =
 
         ($Q3/12+13+14+15+16+17).($Q17i/1),
         ($Q3/12+13+14+15+16+17).($Q17i/2),
+
+DM $HBMoM = 
+T,
+$JAN2024/NB,
+$FEB2024/NB,
+$MAR2024/NB,
+[*DO A = 1:15]
+T,
+$HBv/[A].$JAN2024/NB,
+$HBv/[A].$FEB2024/NB,
+$HBv/[A].$MAR2024/NB,
+[*END A]
+
+HT = "HEADER B. LOCALE AND MACROREGION - Month-on-Month",
+H  = "
+TOTAL*(a);
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+LOCALE****
+URBAN (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+RURAL (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+
+NCR (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+
+NORTH CENTRAL LUZON****
+NCL (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+NCL Urban***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+NCL Rural***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+
+SOUTH LUZON****
+SL (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+SL Urban***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+SL Rural***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+
+VISAYAS****
+Visayas (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+Visayas Urban***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+Visayas Rural***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+
+MINDANAO****
+Mindanao (NET)***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+Mindanao Urban***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d);
+
+Mindanao Rural***
+TOTAL*(a)<S>;
+JAN 2024 *(b);
+FEB 2024 *(c);
+MAR 2024 *(d)",
 
 DM $HAPxH =
 T,
