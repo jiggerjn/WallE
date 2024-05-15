@@ -1,8 +1,8 @@
 START CONTROL,
 *PROJECT HELIOS-W3 (DECEMBER 2, 2022)
 
-C = WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
-!C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
+!C = WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
+C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
 Y,
 OLDNAMES,
 CSV2R,
@@ -44,7 +44,6 @@ DM $HT = T,
   H = "TOTAL*(A)",
   
 IF $Q42023/NB+$Q12024/NB, WRITE,
-
 [*SK 11]
  IF $Q12024/NB, lcsv (h) $1-10.
  [*DO A = 1:48]
@@ -76,7 +75,7 @@ F=DPS2,          ! ------ Decimal Std
 F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
 
 
-F= SHG-1/SIG/SLA95/SLB95/NFSL, ! standard by segment
+F= SHG1/SIG/SLA95/SLB95/NFSL, ! standard by segment
 
 !F= SHG-1/SIG/SLA95/SLB95/NFSL, ! ROUND ROBIN
 
@@ -366,7 +365,7 @@ BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THEIR LOAN",
 
 
 ! ADDITIONAL
-
+IF $Q12024/NB, then,
 !======
 [*DO Z = 1:3]
 T #[+T] = $TQL1 * $[HEADERWAVE3.Z],
@@ -436,7 +435,7 @@ IF ($A_QL2/N99.NB).($A_Q74a/[ql6stubscode.A]), T #[+T] = $TQL6_[A] * $[HEADERWAV
 BT = "AMONG THOSE WHO CURRENTLY HAVE A LOAN - [ql6stubs.A]",
 [*END A]
 [*END Z]
-
+END IF,
 
 
 

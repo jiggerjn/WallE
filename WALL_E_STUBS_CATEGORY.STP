@@ -15,11 +15,8 @@ $SEC19/1+2,
 $SEC19/3,
 $SEC19/4,
 
-$T_Q1_1/13..20,
-$T_Q1_1/21..28,
-$T_Q1_1/29..37,
-$T_Q1_1/38..51,
-$T_Q1_1/52..65,
+
+$T_Q1_1/1..20,21..30,31..35,36..45,46..65,
 
 $Q2/1,
 $Q2/2,
@@ -57,11 +54,11 @@ SEC\
 `     D;
 
 LIFESTAGE\
-`     13-20 years old (YOUTH);
-`     21-28 years old (YUPPIES);
-`     29-37 years old (TRANSITONERS);
-`     38-51 years old (BALANCERS);
-`     52-65 years old (OLDER ADULTS);
+`     Students (20 yo and below);
+`     Yuppies (21-30 yo);
+`     Transitioners (31-35 yo);
+`     Balancers (36-45 yo);
+`     Older Adults/Retirees (46-65 yo);
 
 GENDER\
 `     Male;

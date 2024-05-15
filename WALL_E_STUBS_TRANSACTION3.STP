@@ -1765,42 +1765,42 @@ V = $TQSMAMT1_1,
 
 [*DO C = 1:9]
 DM $TQSMAMT[C]_nondigital = $I_[C]_QSMAMTnondigital/
-[*DO B = 1:[nondigital[C].#]:1]
-[nondigital[C].B],
+[*DO B = 1:[regofreg.#]:1]
+[regofreg.B],
 [*END B]
 R,F,
 VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT - NON-DIGITAL - [QSMAMT.C]",
 V = "
-[*DO B = 1:[nondigital[C].#]:1]
-[nondigital[C].B] <v[nondigital[C].B]>;
+[*DO B = 1:[regofreg.#]:1]
+[regofreg.B] <v[regofreg.B]>;
 [*END B]
 Missing Answer<z>;
 Total Count<C>",  
 
 
 DM $TQSMAMT[C]_digital = $I_[C]_QSMAMTdigital/
-[*DO B = 1:[digital[C].#]:1]
-[digital[C].B],
+[*DO B = 1:[regofreg.#]:1]
+[regofreg.B],
 [*END B]
 R,F,
-VT = "QSMAMT. AMOUNT S/ENT IN THE P1M - ONLINE AND OFFLINE PAYMENT  - DIGITAL - [QSMAMT.C]",
+VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT  - DIGITAL - [QSMAMT.C]",
 V = "
-[*DO B = 1:[digital[C].#]:1]
-[digital[C].B] <v[digital[C].B]>;
+[*DO B = 1:[regofreg.#]:1]
+[regofreg.B] <v[regofreg.B]>;
 [*END B]
 Missing Answer<z>;
 Total Count<C>", 
 
 
 DM $TQSMAMT[C]_reg = $I_[C]_QSMAMTreg/
-[*DO B = 1:[reg[C].#]:1]
-[reg[C].B],
+[*DO B = 1:[regofreg.#]:1]
+[regofreg.B],
 [*END B]
 R,F,
 VT = "QSMAMT. AMOUNT SENT IN THE P1M - ONLINE AND OFFLINE PAYMENT  - REGARDLESS OF MODE OF PAYMENT - [QSMAMT.C]",
 V = "
-[*DO B = 1:[reg[C].#]:1]
-[reg[C].B] <v[reg[C].B]>;
+[*DO B = 1:[regofreg.#]:1]
+[regofreg.B] <v[regofreg.B]>;
 [*END B]
 Missing Answer<z>;
 Total Count<C>", 

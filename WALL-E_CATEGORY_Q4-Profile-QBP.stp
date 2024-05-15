@@ -210,8 +210,8 @@ BT = "Among those who pay bills via E-Wallet/Fintech App (QBP1 = H1 E-WALLET) an
 !======
 [*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5]
-T #[+T] = $TQBP1_[A] * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF $T_Q8b1_4/5..10, T #[+T] = $TQBP1_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO PAY BILLS",
 [*END A]
 [*END Z]
 
@@ -220,8 +220,8 @@ if $Q17i/1, then,
 !======
 [*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5]
-T #[+T] = $TQBP1_[A] * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
+IF $T_Q8b1_4/5..10,T #[+T] = $TQBP1_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO PAY BILLS AND USERS OF FINTECH APPS",
 [*END A]
 [*END Z]
 end if,
@@ -230,8 +230,8 @@ if $Q17i/2, then,
 !======
 [*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5]
-T #[+T] = $TQBP1_[A] * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
+IF $T_Q8b1_4/5..10,T #[+T] = $TQBP1_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO PAY BILLS AND NON-USERS OF FINTECH APPS",
 [*END A]
 [*END Z]
 end if,
