@@ -6113,18 +6113,18 @@ $A_Q66a/4+($Q66a_91_other/5135),
 $A_Q66a/5,
 $A_Q66a/6+($Q66a_91_other/1024+1035),
 $A_Q66a/7,
-$A_Q66a/31,
+$A_Q66a/30+31,
 $A_Q66a/8+($Q66a_91_other/1026+1027+1028+1029+1025+1030+1034+1036+1038+1039+1043+1047+1048+1050),
 $Q66a_91_other/1016,
 
 $Q66a_91_other/1051+1052,
 $Q66a_91_other/9997,
-$Q66a_91_other/9999,
+$A_Q66a/99+$Q66a_91_other/9999,
 !$A_Q66a/91,
 R,F,
 VT = "Q66a. INTERNET CONNECTION (ACCESS POINT)",
 V = "
-Internet Caf'/Pisonet (internet access using computer owned by shop);
+Internet Cafe/Pisonet (internet access using computer owned by shop);
 Office/School internet;
 Mobile Data from Prepaid or Postpaid SIM subscription;
 Free Public Wi-Fi (free internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc.); 
