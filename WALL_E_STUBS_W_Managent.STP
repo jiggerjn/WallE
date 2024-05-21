@@ -1777,7 +1777,7 @@ $A_QL1/5+($QL1_98_other/1021+1027+1032+1034),
 $A_QL1/6,
 $A_QL1/7,
 $A_QL1/8,
-$A_QL1/9+10+11+12+13+14+15+16+17+18+19+20+21+($QL1_98_other/1030+1035+1023+1025+1029+1033+1036),
+$A_QL1/9+10+11+12+13+14+15+16+17+18+($QL1_98_other/1030+1035+1023+1025+1029+1033+1036),
 $A_QL1/9+($QL1_98_other/1030),
 $A_QL1/10+($QL1_98_other/1035),
 $A_QL1/11+($QL1_98_other/1023+1025+1029),
@@ -1790,10 +1790,12 @@ $A_QL1/16+($QL1_98_other/1028),
 $A_QL1/17+18,
 $A_QL1/17,
 $A_QL1/18,
+
 $A_QL1/19+20+21,
 $A_QL1/19,
 $A_QL1/20,
 $A_QL1/21,
+
 $QL1_98_other/1020,
 $QL1_98_other/1030,
 $QL1_98_other/1031,
@@ -1827,10 +1829,10 @@ FROM NON-BANK SOURCES (NET)<Q>;
 `     MULTI-PURPOSE LOANS FROM PRIVATE COMPANIES (SUBNET)<Q>;
 `          Car Loan with Dealership's Financing Service;
 `          Housing Loan via Real Estate Developer In-house financing (not via bank);
-`     INFORMAL LOANS (SUBNET)<Q>;
-`          5-6 lending /Bombay/Turko;
-`          Loan from relatives/family/friend/neighbor;
-`          Loan from Sari-sari-store;
+INFORMAL LOANS (NET)<Q>;
+`     5-6 lending /Bombay/Turko;
+`     Loan from relatives/family/friend/neighbor;
+`     Loan from Sari-sari-store;
 motor loan;
 Social action;
 Loan from colleagues;
@@ -1854,7 +1856,7 @@ $A_QL3/5+($QL3_98_other/1021+1027+1032+1034),
 $A_QL3/6,
 $A_QL3/7,
 $A_QL3/8,
-$A_QL3/9+10+11+12+13+14+15+16+17+18+19+20+21+($QL3_98_other/1030+1035+1023+1025+1029+1033+1036),
+$A_QL3/9+10+11+12+13+14+15+16+17+18+($QL3_98_other/1030+1035+1023+1025+1029+1033+1036),
 $A_QL3/9+($QL3_98_other/1030),
 $A_QL3/10+($QL3_98_other/1035),
 $A_QL3/11+($QL3_98_other/1023+1025+1029),
@@ -1867,10 +1869,12 @@ $A_QL3/16+($QL3_98_other/1028),
 $A_QL3/17+18,
 $A_QL3/17,
 $A_QL3/18,
+
 $A_QL3/19+20+21,
 $A_QL3/19,
 $A_QL3/20,
 $A_QL3/21,
+
 $QL3_98_other/1020,
 $QL3_98_other/1030,
 $QL3_98_other/1031,
@@ -1894,7 +1898,7 @@ $A_QL2/5+($QL2_98_other/1021+1027+1032+1034),
 $A_QL2/6,
 $A_QL2/7,
 $A_QL2/8,
-$A_QL2/9+10+11+12+13+14+15+16+17+18+19+20+21+($QL2_98_other/1030+1035+1023+1025+1029+1033+1036),
+$A_QL2/9+10+11+12+13+14+15+16+17+18+($QL2_98_other/1030+1035+1023+1025+1029+1033+1036),
 $A_QL2/9+($QL2_98_other/1030),
 $A_QL2/10+($QL2_98_other/1035),
 $A_QL2/11+($QL2_98_other/1023+1025+1029),
@@ -1907,10 +1911,12 @@ $A_QL2/16+($QL2_98_other/1028),
 $A_QL2/17+18,
 $A_QL2/17,
 $A_QL2/18,
+
 $A_QL2/19+20+21,
 $A_QL2/19,
 $A_QL2/20,
 $A_QL2/21,
+
 $QL2_98_other/1020,
 $QL2_98_other/1030,
 $QL2_98_other/1031,
