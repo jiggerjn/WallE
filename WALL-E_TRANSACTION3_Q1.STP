@@ -88,7 +88,7 @@ F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
 
 !F= SHG1/SIG/SLA95/SLB95/NFSL, ! standard by segment
 
-F= SHG1/SIG/SLA95/SLB95/NFSL, ! ROUND ROBIN
+F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 
 
 %UNR = '(UNWEIGHTED BASE)',

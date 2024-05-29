@@ -1,0 +1,534 @@
+
+[*SET B = 105410][*DO A= 1:10]
+OM $Q102B_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105450][*DO A= 1:10]
+OM $Q10_1new_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105490][*DO A= 1:10]
+OM $QFR5 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105530][*DO A= 1:10]
+OM $QL1_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105570][*DO A= 1:10]
+OM $QL3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105610][*DO A= 1:10]
+OM $Q109 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+[*SET B = 105730][*DO A= 1:10]
+OM $I_7_QRMO1_92_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105770][*DO A= 1:10]
+OM $I_7_T_QRMO3_1_QRMO3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105810][*DO A= 1:10]
+OM $I_7_T_QRMO3_2_QRMO3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 105850][*DO A= 1:10]
+OM $I_7_T_QRMO3_3_QRMO3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+
+[*SET B = 106010][*DO A= 1:10]
+OM $Q159a_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106050][*DO A= 1:10]
+OM $T_Q170a_9_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106090][*DO A= 1:10]
+OM $T_QINS2_9_QINS2_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106130][*DO A= 1:10]
+OM $T_QINS3_9_QINS3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106170][*DO A= 1:10]
+OM $Q196_93_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106210][*DO A= 1:10]
+OM $I_1_Q115_91_others = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106250][*DO A= 1:10]
+OM $I_7_I_17_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106330][*DO A= 1:10]
+OM $I_4_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106370][*DO A= 1:10]
+OM $T_Q170a_1_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106410][*DO A= 1:10]
+OM $T_Q170a_4_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106450][*DO A= 1:10]
+OM $T_Q170a_1_1_Q170a_1_7_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106490][*DO A= 1:10]
+OM $T_Q170a_1_4_Q170a_1_7_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106530][*DO A= 1:10]
+OM $I_2_Q115_91_others = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106570][*DO A= 1:10]
+OM $I_7_T_QRMO3_6_QRMO3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+
+[*SET B = 106690][*DO A= 1:10]
+OM $QLO3_12_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106730][*DO A= 1:10]
+OM $Q123a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106770][*DO A= 1:10]
+OM $Q123a_92_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106810][*DO A= 1:10]
+OM $Q111_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+[*SET B = 106890][*DO A= 1:10]
+OM $QL5_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106970][*DO A= 1:10]
+OM $QFI3_92_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+[*SET B = 107130][*DO A= 1:10]
+OM $T_Q175_2_Q175_4_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107170][*DO A= 1:10]
+OM $Q178_5_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107210][*DO A= 1:10]
+OM $T_QINS2_4_QINS2_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107250][*DO A= 1:10]
+OM $T_QINS2_5_QINS2_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107290][*DO A= 1:10]
+OM $T_QINS3_4_QINS3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107330][*DO A= 1:10]
+OM $T_QINS3_5_QINS3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107410][*DO A= 1:10]
+OM $I_10_Q193a_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107450][*DO A= 1:10]
+OM $I_33_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107370][*DO A= 1:10]
+OM $QPH7 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+! FEB ADDITIONAL COLUMNS
+
+
+[*SET B = 107490][*DO A= 1:10]
+OM $I_9_Q193a_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107530][*DO A= 1:10]
+OM $Q9b_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107570][*DO A= 1:10]
+OM $I_7_I_10_QSMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107610][*DO A= 1:10]
+OM $I_7_I_31_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107650][*DO A= 1:10]
+OM $I_9_QRMO1_94_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107690][*DO A= 1:10]
+OM $I_9_I_18_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107730][*DO A= 1:10]
+OM $I_16_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107770][*DO A= 1:10]
+OM $I_41_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107810][*DO A= 1:10]
+OM $I_25_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107850][*DO A= 1:10]
+OM $I_26_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107890][*DO A= 1:10]
+OM $I_29_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107930][*DO A= 1:10]
+OM $I_38_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 107970][*DO A= 1:10]
+OM $T_Q170a_7_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108010][*DO A= 1:10]
+OM $I_1_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108050][*DO A= 1:10]
+OM $I_2_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108090][*DO A= 1:10]
+OM $I_4_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108130][*DO A= 1:10]
+OM $I_11_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108170][*DO A= 1:10]
+OM $I_12_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108210][*DO A= 1:10]
+OM $I_13_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108250][*DO A= 1:10]
+OM $I_23_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108290][*DO A= 1:10]
+OM $Q119 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+[*SET B = 108370][*DO A= 1:10]
+OM $I_39_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108410][*DO A= 1:10]
+OM $T_Q170a_6_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108450][*DO A= 1:10]
+OM $Q193d = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108490][*DO A= 1:10]
+OM $I_7_T_QBL2_92_QBL2_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108530][*DO A= 1:10]
+OM $I_10_QRMO1_95_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108570][*DO A= 1:10]
+OM $I_23_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108610][*DO A= 1:10]
+OM $I_32_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108650][*DO A= 1:10]
+OM $T_Q170a_2_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108690][*DO A= 1:10]
+OM $T_Q170a_5_Q170a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108730][*DO A= 1:10]
+OM $QINS1_14_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108770][*DO A= 1:10]
+OM $T_QINS2_14_QINS2_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108810][*DO A= 1:10]
+OM $T_QINS3_14_QINS3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108850][*DO A= 1:10]
+OM $T_QINS4_14_QINS4_7_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108890][*DO A= 1:10]
+OM $QOB1a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108930][*DO A= 1:10]
+OM $QOB3_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 108970][*DO A= 1:10]
+OM $QOB4_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109010][*DO A= 1:10]
+OM $QOB5_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109050][*DO A= 1:10]
+OM $QOV1 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109090][*DO A= 1:10]
+OM $QOV3 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109130][*DO A= 1:10]
+OM $QOV4 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109170][*DO A= 1:10]
+OM $QOV6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109210][*DO A= 1:10]
+OM $QFI4_1_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109250][*DO A= 1:10]
+OM $QSH7 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109290][*DO A= 1:10]
+OM $QSH3_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109330][*DO A= 1:10]
+OM $QSH4_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109370][*DO A= 1:10]
+OM $QST7 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109410][*DO A= 1:10]
+OM $QST4_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109450][*DO A= 1:10]
+OM $I_7_I_12_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109490][*DO A= 1:10]
+OM $I_8_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109530][*DO A= 1:10]
+OM $I_28_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109570][*DO A= 1:10]
+OM $I_7_Q118 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109610][*DO A= 1:10]
+OM $QSH3_93_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109650][*DO A= 1:10]
+OM $QSH4_1_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109690][*DO A= 1:10]
+OM $QST3_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109730][*DO A= 1:10]
+OM $QST3_93_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109770][*DO A= 1:10]
+OM $QST4_1_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109810][*DO A= 1:10]
+OM $I_24_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109850][*DO A= 1:10]
+OM $S_912_1 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109890][*DO A= 1:10]
+OM $QINV2_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109930][*DO A= 1:10]
+OM $Q116_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 109970][*DO A= 1:10]
+OM $I_36_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 110010][*DO A= 1:10]
+OM $I_2_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 110050][*DO A= 1:10]
+OM $T_Q170a_1_6_Q170a_1_7_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 110090][*DO A= 1:10]
+OM $Q74a_34_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+
