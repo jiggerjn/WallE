@@ -7436,7 +7436,7 @@ DM $TQ187new = $A_Q187new/1..3+11,
 7,
 8,
 10,
-99,
+99+B,
 R,F,
 VT = "Q187new. EMPLOYMENT STATUS",
 V = "

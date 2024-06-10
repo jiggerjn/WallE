@@ -1,7 +1,7 @@
 START CONTROL,
 *PROJECT HELIOS-W3 (DECEMBER 2, 2022)
 
-C = WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
+C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
 !C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
 Y,
 OLDNAMES,
@@ -45,44 +45,7 @@ DM $Q22024 = $APR2024/NB,
 DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
-[*DATA Q74A = 
-1+2+3+4+5+6+7+8+9+10+11+12+30,
-13+14+15+16+40+41+42+43+17+18+19+20+31,
-21+22+23+24+34,
-25+26+27+35+36+37,
-29,
-28,
-38,
-39,
-44+33]
 
-[*DO A = 1:9]
-IF ($A_QL2/n99.nb).($A_Q74a/[Q74A.A]), CK $T_Q170a_[A]/1..11+
-$T_Q170a_[A]_Q170a_91_other/1020+
-$T_Q170a_[A]_Q170a_91_other/1021+
-$T_Q170a_[A]_Q170a_91_other/1022+
-$T_Q170a_[A]_Q170a_91_other/1027+
-$T_Q170a_[A]_Q170a_91_other/1024+
-$T_Q170a_[A]_Q170a_91_other/1025+
-$T_Q170a_[A]_Q170a_91_other/1026+
-$T_Q170a_[A]_Q170a_91_other/1028+
-$T_Q170a_[A]_Q170a_91_other/9999,
-[*END A]
-
-[*DO A = 1:9]
-IF ($A_QL2/n99.nb).($A_Q74a/[Q74A.A]),
-CK $T_Q170a_1_[A]/1..6+
-$T_Q170a_1_[A]_Q170a_1_7_other/1020+
-$T_Q170a_1_[A]_Q170a_1_7_other/1021+
-$T_Q170a_1_[A]_Q170a_1_7_other/1022+
-$T_Q170a_1_[A]_Q170a_1_7_other/1027+
-$T_Q170a_1_[A]_Q170a_1_7_other/1024+
-$T_Q170a_1_[A]_Q170a_1_7_other/1025+
-$T_Q170a_1_[A]_Q170a_1_7_other/1026+
-$T_Q170a_1_[A]_Q170a_1_7_other/1028+
-$T_Q170a_1_[A]_Q170a_1_7_other/9999,
-[*END A]
-  
 IF $Q42023/NB+$Q12024/NB, WRITE,
 [*SK 11]
  IF $Q12024/NB, lcsv (h) $1-10.

@@ -184,6 +184,35 @@ ABC1*(b);
 C2*(c);
 D*(d)",
 
+DM $HI =
+T,
+T,($SEC19/1+2).($Q17i/1),
+  ($SEC19/1+2).($Q17i/2),
+
+T,($SEC19/3).($Q17i/1),
+  ($SEC19/3).($Q17i/2),
+
+T,($SEC19/4).($Q17i/1),
+  ($SEC19/4).($Q17i/2),
+
+HT = "HEADER I. SEC X USERSHIP",
+H  = "
+TOTAL*(a);
+ABC1***
+TOTAL*(a)<S>;
+USERS*(b);
+NON-USERS*(c);
+
+C2***
+TOTAL*(a)<S>;
+USERS*(b);
+NON-USERS*(c);
+
+D***
+TOTAL*(a)<S>;
+USERS*(b);
+NON-USERS*(c)",
+
 
 DM $HLADTmonth(9),
 HT = "BRAND HEADER - SIDE BY SIDE",
@@ -400,6 +429,16 @@ DM $HHv2 =
         ($SEC19/3),
         ($SEC19/4),
         ($SEC19/3+4),
+
+DM $HIv =
+        ($SEC19/1+2).($Q17i/1),
+        ($SEC19/1+2).($Q17i/2),
+        
+        ($SEC19/3).($Q17i/1),
+        ($SEC19/3).($Q17i/2),
+
+        ($SEC19/4).($Q17i/1),
+        ($SEC19/4).($Q17i/2),
 
 DM $HBMoM = 
 T,
