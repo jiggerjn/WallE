@@ -15,11 +15,7 @@ $SEC19/1+2,
 $SEC19/3,
 $SEC19/4,
 
-$T_Q1_1/13..20,
-$T_Q1_1/21..28,
-$T_Q1_1/29..37,
-$T_Q1_1/38..51,
-$T_Q1_1/52..65,
+$T_Q1_1/1..20,21..30,31..35,36..45,46..65,
 
 $Q2/1,
 $Q2/2,
@@ -56,11 +52,11 @@ SEC\
 `     D;
 
 LIFESTAGE\
-`     13-20 years old (YOUTH);
-`     21-28 years old (YUPPIES);
-`     29-37 years old (TRANSITONERS);
-`     38-51 years old (BALANCERS);
-`     52-65 years old (OLDER ADULTS);
+`     Students (20 yo and below);
+`     Yuppies (21-30 yo);
+`     Transitioners (31-35 yo);
+`     Balancers (36-45 yo);
+`     Older Adults/Retirees (46-65 yo);
 
 GENDER\
 `     Male;
@@ -1633,6 +1629,8 @@ Travel Insurance(Covers insured during travel period);
 Other NON-LIFE Insurance Types]
 
 [*DO A = 1:14]
+ORDM $T_QINS2_RGD = $T_QINS2_[A],
+ORDM $XT_QINS2_RGD_QINS2_98_other = $XT_QINS2_[A]_QINS2_98_other,
 DM $TQINS2_[A] = 
 $T_QINS2_[A]/1-9,
 $XT_QINS2_[A]_QINS2_98_other/1020,
@@ -1662,6 +1660,34 @@ To the company where I work;
 Missing Answer<z>;
 Total Count<C>",
 [*END A]
+DM $TQINS2_RGD = 
+$T_QINS2_RGD/1-9,
+$XT_QINS2_RGD_QINS2_98_other/1020,
+$XT_QINS2_RGD_QINS2_98_other/1021,
+$XT_QINS2_RGD_QINS2_98_other/1022,
+$XT_QINS2_RGD_QINS2_98_other/1023,
+$XT_QINS2_RGD_QINS2_98_other/1024,
+
+R,F,
+VT = "QINS2. AVAILMENT CHANNEL FOR CURRENT INSURANCE - REGARDLESS OF TYPE OF INSURANCE",
+V = "
+Insurance Agent;
+Insurance Broker / Independent;
+Banks/ Bancassurance;
+Insurance Agent;
+Online through insurance companies  website/ mobile app;
+Online via banks  website/ mobile app;
+Online through fintech companies/ mobile wallets website/ mobile app (e..g, GCash, Maya, etc);
+Through online insurance marketplace (e.g., Kwik.insure);
+Though online shopping sites (e.g., Shopee, Lazada, etc);
+""Samahan or grupo"";
+GCash;
+Provided by company ;
+Lifebank Insurance;
+To the company where I work;
+
+Missing Answer<z>;
+Total Count<C>",
 
 !========= 
 [*DO A = 1:14]

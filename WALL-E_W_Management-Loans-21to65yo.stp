@@ -133,6 +133,12 @@ RURAL]
 SELECT WR $WTS,
 
 [*SET T = 0]
+!======SPECIAL REQUEST ONLY 
+[*DO Z = 1:3]
+T #[+T] = $TQ74a * $[HEADERWAVE3.Z],
+BT = "AMONG 21 to 65 years old only",
+[*END Z]
+
 [*SK 888]
 !======
 [*DO Z = 1:3]
@@ -210,6 +216,7 @@ BT = "AMONG THOSE WHO ALLOT MONTHLY BUDGET TO PAY FOR THEIR LOAN",
 [*888]
 ! ADDITIONAL
 IF $Q12024/NB, then,
+[*SK 555]
 !======
 [*DO Z = 1:3]
 T #[+T] = $TQL1 * $[HEADERWAVE3.Z],
@@ -229,7 +236,6 @@ T #[+T] = $TQL3 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENT",
 [*END Z]
 
-[*SK 555]
 !======
 [*DO Z = 1:3]
 T #[+T] = $TQL4_1 * $[HEADERWAVE3.Z],
