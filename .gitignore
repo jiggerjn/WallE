@@ -10,4 +10,5 @@
 *.sps
 *.txt
 *.zip
+*.code-workspace
 kfile/
