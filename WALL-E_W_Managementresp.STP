@@ -1,0 +1,272 @@
+DI $QSAV6a = 0,
+DI $QSAV6b = 0,
+DI $QSAV6c = 0,
+DI $QSAV6reg = 0,
+
+IF $1-10/32497656, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32561365, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32566828, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/32598624, then,DI $QSAV6a = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/32598625, then,DI $QSAV6b = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/32601765, then,DI $QSAV6a = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/32602414, then,DI $QSAV6a = 7000,DI $QSAV6reg = 7000,end if,
+IF $1-10/32650523, then,DI $QSAV6b = 1300,DI $QSAV6reg = 1300,end if,
+IF $1-10/32670761, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32676266, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32689557, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32696849, then,DI $QSAV6a = 1500,DI $QSAV6reg = 1500,end if,
+IF $1-10/32709586, then,DI $QSAV6a = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/32720945, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32725535, then,DI $QSAV6a = 1000,DI $QSAV6c = 99,DI $QSAV6reg = 1099,end if,
+IF $1-10/32726009, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32727592, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32734390, then,DI $QSAV6b = 5000,DI $QSAV6c = 99,DI $QSAV6reg = 5099,end if,
+IF $1-10/32755042, then,DI $QSAV6c = 10000,DI $QSAV6reg = 10000,end if,
+IF $1-10/32758188, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32758189, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/32758274, then,DI $QSAV6a = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/32758309, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32765664, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32775117, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32795995, then,DI $QSAV6a = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/32796756, then,DI $QSAV6b = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/32806586, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32806618, then,DI $QSAV6b = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/32808169, then,DI $QSAV6c = 15000,DI $QSAV6reg = 15000,end if,
+IF $1-10/32818974, then,DI $QSAV6a = 10000,DI $QSAV6reg = 10000,end if,
+IF $1-10/32829995, then,DI $QSAV6b = 1000,DI $QSAV6c = 1000,DI $QSAV6reg = 2000,end if,
+IF $1-10/32829997, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32838097, then,DI $QSAV6a = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/32844440, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32845421, then,DI $QSAV6c = 200,DI $QSAV6reg = 200,end if,
+IF $1-10/32847101, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32848525, then,DI $QSAV6b = 99,DI $QSAV6c = 99,DI $QSAV6reg = 198,end if,
+IF $1-10/32854719, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32855682, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32864756, then,DI $QSAV6b = 1500,DI $QSAV6reg = 1500,end if,
+IF $1-10/32864757, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32867439, then,DI $QSAV6c = 200,DI $QSAV6reg = 200,end if,
+IF $1-10/32879564, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32888910, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32888912, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32891747, then,DI $QSAV6a = 15000,DI $QSAV6reg = 15000,end if,
+IF $1-10/32910184, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32930841, then,DI $QSAV6a = 10000,DI $QSAV6reg = 10000,end if,
+IF $1-10/32931000, then,DI $QSAV6a = 198,DI $QSAV6reg = 198,end if,
+IF $1-10/32935147, then,DI $QSAV6a = 1500,DI $QSAV6reg = 1500,end if,
+IF $1-10/32937928, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/32951017, then,DI $QSAV6c = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/32951019, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/32951020, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33151779, then,DI $QSAV6c = 180,DI $QSAV6reg = 180,end if,
+IF $1-10/33153742, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33159530, then,DI $QSAV6b = 1000,DI $QSAV6c = 1000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33159531, then,DI $QSAV6c = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33178855, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33216593, then,DI $QSAV6a = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33219817, then,DI $QSAV6a = 6600,DI $QSAV6reg = 6600,end if,
+IF $1-10/33247237, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33297961, then,DI $QSAV6c = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33297963, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33327780, then,DI $QSAV6a = 20000,DI $QSAV6reg = 20000,end if,
+IF $1-10/33334719, then,DI $QSAV6a = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33336604, then,DI $QSAV6a = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33336606, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33338538, then,DI $QSAV6c = 100,DI $QSAV6reg = 100,end if,
+IF $1-10/33346629, then,DI $QSAV6a = 25000,DI $QSAV6reg = 25000,end if,
+IF $1-10/33348769, then,DI $QSAV6b = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33364828, then,DI $QSAV6a = 5000,DI $QSAV6c = 30000,DI $QSAV6reg = 35000,end if,
+IF $1-10/33400726, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33401537, then,DI $QSAV6a = 10000,DI $QSAV6b = 10000,DI $QSAV6reg = 20000,end if,
+IF $1-10/33417270, then,DI $QSAV6c = 10,DI $QSAV6reg = 10,end if,
+IF $1-10/33422263, then,DI $QSAV6b = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33431327, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33439175, then,DI $QSAV6b = 250,DI $QSAV6reg = 250,end if,
+IF $1-10/33439177, then,DI $QSAV6a = 300,DI $QSAV6reg = 300,end if,
+IF $1-10/33441921, then,DI $QSAV6c = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33441930, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33454215, then,DI $QSAV6a = 30000,DI $QSAV6reg = 30000,end if,
+IF $1-10/33465662, then,DI $QSAV6a = 2500,DI $QSAV6reg = 2500,end if,
+IF $1-10/33485048, then,DI $QSAV6a = 10000,DI $QSAV6reg = 10000,end if,
+IF $1-10/33486250, then,DI $QSAV6a = 297,DI $QSAV6reg = 297,end if,
+IF $1-10/33491299, then,DI $QSAV6b = 25000,DI $QSAV6reg = 25000,end if,
+IF $1-10/33491302, then,DI $QSAV6b = 25000,DI $QSAV6reg = 25000,end if,
+IF $1-10/33511010, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33511011, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33511012, then,DI $QSAV6a = 4000,DI $QSAV6b = 99,DI $QSAV6reg = 4099,end if,
+IF $1-10/33528529, then,DI $QSAV6b = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33571295, then,DI $QSAV6c = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33571297, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33600670, then,DI $QSAV6a = 4000,DI $QSAV6reg = 4000,end if,
+IF $1-10/33614895, then,DI $QSAV6a = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33615915, then,DI $QSAV6c = 100,DI $QSAV6reg = 100,end if,
+IF $1-10/33618754, then,DI $QSAV6a = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33624530, then,DI $QSAV6a = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33625249, then,DI $QSAV6b = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33625878, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33632174, then,DI $QSAV6a = 20000,DI $QSAV6reg = 20000,end if,
+IF $1-10/33638859, then,DI $QSAV6c = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33641840, then,DI $QSAV6b = 5000,DI $QSAV6c = 99,DI $QSAV6reg = 5099,end if,
+IF $1-10/33659289, then,DI $QSAV6a = 10000,DI $QSAV6c = 10000,DI $QSAV6reg = 20000,end if,
+IF $1-10/33665973, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33685086, then,DI $QSAV6b = 3500,DI $QSAV6reg = 3500,end if,
+IF $1-10/33685088, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33693979, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33747778, then,DI $QSAV6c = 6500,DI $QSAV6reg = 6500,end if,
+IF $1-10/33761026, then,DI $QSAV6b = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33775645, then,DI $QSAV6a = 12000,DI $QSAV6b = 5000,DI $QSAV6c = 2000,DI $QSAV6reg = 19000,end if,
+IF $1-10/33870633, then,DI $QSAV6c = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33870634, then,DI $QSAV6a = 2500,DI $QSAV6reg = 2500,end if,
+IF $1-10/33883139, then,DI $QSAV6a = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33884672, then,DI $QSAV6a = 8000,DI $QSAV6reg = 8000,end if,
+IF $1-10/33895757, then,DI $QSAV6a = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33898291, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33898591, then,DI $QSAV6c = 50,DI $QSAV6reg = 50,end if,
+IF $1-10/33901310, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33904202, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33905932, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33906340, then,DI $QSAV6a = 4000,DI $QSAV6reg = 4000,end if,
+IF $1-10/33906342, then,DI $QSAV6a = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33910375, then,DI $QSAV6a = 22000,DI $QSAV6reg = 22000,end if,
+IF $1-10/33910376, then,DI $QSAV6c = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33935307, then,DI $QSAV6b = 3000,DI $QSAV6reg = 3000,end if,
+IF $1-10/33942065, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33946073, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33947041, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33947042, then,DI $QSAV6a = 4099,DI $QSAV6reg = 4099,end if,
+IF $1-10/33948215, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33948865, then,DI $QSAV6b = 15000,DI $QSAV6reg = 15000,end if,
+IF $1-10/33957809, then,DI $QSAV6c = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33964509, then,DI $QSAV6b = 3000,DI $QSAV6c = 500,DI $QSAV6reg = 3500,end if,
+IF $1-10/33966343, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33966528, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33966532, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33973911, then,DI $QSAV6c = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33977254, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/33980410, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33982665, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/33982788, then,DI $QSAV6b = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/33982789, then,DI $QSAV6b = 1000,DI $QSAV6c = 99,DI $QSAV6reg = 1099,end if,
+IF $1-10/33984134, then,DI $QSAV6c = 200,DI $QSAV6reg = 200,end if,
+IF $1-10/33985443, then,DI $QSAV6a = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33988219, then,DI $QSAV6a = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33992546, then,DI $QSAV6c = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/33997703, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/33999173, then,DI $QSAV6c = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/34002885, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/34006943, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/34008239, then,DI $QSAV6b = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/34012000, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/34013607, then,DI $QSAV6a = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/34017482, then,DI $QSAV6b = 5000,DI $QSAV6c = 1000,DI $QSAV6reg = 6000,end if,
+IF $1-10/34022992, then,DI $QSAV6b = 10000,DI $QSAV6reg = 10000,end if,
+IF $1-10/34041517, then,DI $QSAV6b = 3000,DI $QSAV6c = 3000,DI $QSAV6reg = 6000,end if,
+IF $1-10/34041525, then,DI $QSAV6b = 3500,DI $QSAV6reg = 3500,end if,
+IF $1-10/34043941, then,DI $QSAV6c = 99,DI $QSAV6reg = 99,end if,
+IF $1-10/34048141, then,DI $QSAV6a = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/34049122, then,DI $QSAV6b = 2000,DI $QSAV6reg = 2000,end if,
+IF $1-10/34049123, then,DI $QSAV6b = 500,DI $QSAV6reg = 500,end if,
+IF $1-10/34049367, then,DI $QSAV6c = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/34049391, then,DI $QSAV6a = 35000,DI $QSAV6reg = 35000,end if,
+IF $1-10/34054742, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/34057649, then,DI $QSAV6a = 15000,DI $QSAV6reg = 15000,end if,
+IF $1-10/34060033, then,DI $QSAV6b = 1500,DI $QSAV6reg = 1500,end if,
+IF $1-10/34064382, then,DI $QSAV6c = 200,DI $QSAV6reg = 200,end if,
+IF $1-10/34068537, then,DI $QSAV6a = 1000,DI $QSAV6reg = 1000,end if,
+IF $1-10/34083770, then,DI $QSAV6b = 5000,DI $QSAV6reg = 5000,end if,
+IF $1-10/34090137, then,DI $QSAV6a = 2000,DI $QSAV6reg = 2000,end if,
+[*DATA qsav6val1 (;) =
+99;
+198;
+297;
+300;
+500;
+1000;
+1500;
+2000;
+2500;
+3000;
+4000;
+4099;
+5000;
+6600;
+7000;
+8000;
+10000;
+12000;
+15000;
+20000;
+22000;
+25000;
+30000;
+35000]
+
+[*DATA qsav6val2 (;) =
+99;
+250;
+500;
+1000;
+1300;
+1500;
+2000;
+3000;
+3500;
+5000;
+10000;
+15000;
+25000]
+
+[*DATA qsav6val3 (;) =
+10;
+50;
+99;
+100;
+180;
+200;
+500;
+1000;
+2000;
+3000;
+5000;
+6500;
+10000;
+15000;
+30000]
+
+[*DATA qsav6valreg (;) =
+10;
+50;
+99;
+100;
+180;
+198;
+200;
+250;
+297;
+300;
+500;
+1000;
+1099;
+1300;
+1500;
+2000;
+2500;
+3000;
+3500;
+4000;
+4099;
+5000;
+5099;
+6000;
+6500;
+6600;
+7000;
+8000;
+10000;
+15000;
+19000;
+20000;
+22000;
+25000;
+30000;
+35000]

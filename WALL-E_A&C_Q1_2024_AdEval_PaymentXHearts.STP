@@ -1,0 +1,997 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+
+C = JAN2024v3.ASC;FEB2024v3.ASC;MAR2024.ASC,
+Y,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START DATA,
+ORDER 1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY/9999999/,
+
+F=ADF,
+DI $RESP = $1-10,
+
+
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
+[*INSERT ADDITIONAL_COLUMNS]
+[*INSERT WALL_E_STUBS_CATEGORY]
+[*INSERT W_HEADER]
+!INSERT W_WTS
+
+
+
+!!!!!!!!!! 2 3 4 11 12 missing
+!-----------Unique
+DM $QPH1 = $26964/1-9,'0',
+
+
+!-----------Unique
+DM $QFI2 = $24663/1-9,'0',
+
+
+!-----------MultiSelect
+DM $A_QFI3 = $24664/1,$24665/1,$24666/1,$24667/1,$24668/1,$Blank/6-90,$24669/1,$24670/1,$24671/1,$Blank/94-98,$24672/1,
+
+
+!-----------MultiSelect
+DM $A_QFI4 = $24673/1,$24674/1,$Blank/3,$24675/1,$24676/1,$24677/1,$24678/1,$24679/1,$Blank/9,$24680/1,$24681/1,$24682/1,$24683/1,$24684/1,$24685/1,$24686/1,$24687/1,$24688/1,$24689/1,$24690/1,$Blank/21-90,$24691/1,
+
+
+
+!-----------Unique
+DM $QPH5 = $26965/1-9,'0',
+
+
+!-----------Unique
+DM $QPH6 = $26966/1-9,'0',
+
+
+!-----------MultipleTopics5
+
+DM $T_QPH8_1 = $26967/1-9,'0',
+DM $T_QPH8_2 = $26968/1-9,'0',
+DM $T_QPH8_3 = $26969/1-9,'0',
+DM $T_QPH8_4 = $26970/1-9,'0',
+DM $T_QPH8_5 = $26971/1-9,'0',
+
+
+
+!-----------MultipleTopics6
+
+DM $T_QPH9_1 = $26972/1-9,'0',
+DM $T_QPH9_2 = $26973/1-9,'0',
+DM $T_QPH9_3 = $26974/1-9,'0',
+DM $T_QPH9_4 = $26975/1-9,'0',
+DM $T_QPH9_5 = $26976/1-9,'0',
+DM $T_QPH9_6 = $26977/1-9,'0',
+
+
+
+!-----------MultiSelect
+DM $A_QPH10 = $26978/1,$26979/1,$26980/1,$26981/1,$26982/1,$26983/1,$26984/1,$26985/1,
+
+
+!-----------MultipleTopics10
+
+DM $T_QFI6_1 = $24692/1-9,'0',
+DM $T_QFI6_2 = $24693/1-9,'0',
+DM $T_QFI6_3 = $24694/1-9,'0',
+DM $T_QFI6_4 = $24695/1-9,'0',
+DM $T_QFI6_5 = $24696/1-9,'0',
+DM $T_QFI6_6 = $24697/1-9,'0',
+DM $T_QFI6_7 = $24698/1-9,'0',
+DM $T_QFI6_8 = $24699/1-9,'0',
+DM $T_QFI6_9 = $24700/1-9,'0',
+DM $T_QFI6_10 = $24701/1-9,'0',
+DM $T_QFI6_11 = $25352/1-9,'0',
+DM $T_QFI6_12 = $25353/1-9,'0',
+DM $T_QFI6_13 = $25354/1-9,'0',
+DM $T_QFI6_14 = $25355/1-9,'0',
+DM $T_QFI6_15 = $26986/1-9,'0',
+DM $T_QFI6_16 = $26987/1-9,'0',
+DM $T_QFI6_17 = $26988/1-9,'0',
+DM $T_QFI6_18 = $26989/1-9,'0',
+DM $T_QFI6_19 = $26990/1-9,'0',
+DM $T_QFI6_20 = $26991/1-9,'0',
+
+!-----------MultipleTopics8
+
+DM $T_QFI7_1 = $24702/1-9,'0',
+DM $T_QFI7_2 = $24703/1-9,'0',
+DM $T_QFI7_3 = $24704/1-9,'0',
+DM $T_QFI7_4 = $24705/1-9,'0',
+DM $T_QFI7_5 = $24706/1-9,'0',
+DM $T_QFI7_6 = $24707/1-9,'0',
+DM $T_QFI7_7 = $24708/1-9,'0',
+DM $T_QFI7_8 = $24709/1-9,'0',
+
+
+!-----------Unique
+DM $QVAL1 = $27403/1-9,'0',
+
+
+!=======================Unique
+
+DM $TQPH1 =
+$QPH1/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QPH1. VISIBILITY OF ADS",
+V = "
+Definitely haven't seen it;
+Don't think I've seen it;
+Unsure whether I've seen it;
+Yes I think I've seen it;
+Yes definitely seen it;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!=======================Unique
+
+DM $TQFI2 =
+$QFI2/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QPH2. AD VIEWED FREQUENCY",
+V = "
+Once;
+Twice;
+Thrice;
+4 times and more;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQFI3 =
+$A_QFI3/
+1,
+2,
+3,
+4,
+5,
+91+92+93,
+99,
+R,F,
+VT = "QPH3. BRAND LINK",
+V = "
+GCash;
+PayMaya/Maya;
+BPI;
+BDO;
+ShopeePay;
+Others;
+I can't recall;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQFI4 =
+$A_QFI4/
+1,
+2,
+4,
+5,
+6,
+7,
+8,
+
+10+11+12+13+14+15+16+17+18+19+20,
+11+12+13,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+
+20,
+91,
+R,F,
+VT = "QPH4. SOURCES OF AD AWARENESS",
+V = "
+Ads while browsing internet/Website ads (excluding social media) (Please specify site);
+Company Website (Official Website);
+Events;
+Family/relatives;
+Friends/colleagues;
+Online articles (blogs, reviews, news);
+Online videos (including ads);
+Social media (including ads) (NET) <Q>;
+`    Facebook (including ads) <Q>;
+`        Facebook Post;
+`        Facebook Fanpage;
+`    Twitter (including ads);
+`    Instagram (including ads);
+`    YouTube (including ads);
+`    TikTok (including ads);
+`    Out-of-Home (OOH) (e.g., billboards and posters);
+`    Influencers;
+TV;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+!=======================Unique
+
+DM $TQPH5 =
+$QPH5/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QPH5. ABSOLUTE LIKEABILITY",
+V = "
+Dislike it a lot (1) <v1>;
+Dislike it a little (2) <v2>;
+Neither like nor Dislike (3) <v3>;
+Like it a liittle (4) <v4>;
+Like it a lot (5) <v5>;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQPH6 =
+$QPH6/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QPH6. RELATIVE LIKEABILITY",
+V = "
+Dislike it a lot more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (1) <v1>;
+Dislike it a little more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (2) <v2>;
+Feel it's about average (3) <v3>;
+Like this ad a little more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (4) <v4>;
+Like this ad a lot more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (5) <v5>;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics5
+
+[*SET s = 0]
+[*DATA topic2 (;) = 
+GCash is the best way to pay;
+Send & Receive Money for free;
+Get exclusive Discounts when you pay online;
+Scan to Pay at Millions of Merchants;
+Pay in 200+ Countries No service Fees]
+
+[*FOR A = 1:2:3:4:5]
+DM $TQPH8_[A] =
+$T_QPH8_[A]/
+1,
+2,
+3,
+4,
+5,
+5,
+4+5,
+R,F,
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES",
+V = "
+[topic2.[+s]]\
+`    1- Very Weak <v1>;
+`    2 <v2>;
+`    3 <v3>;
+`    4 <v4>;
+`    5 - Very Strong <v5>;
+Top-box <Q>;
+Top-2-box <Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+[*SET s = 0]
+DM $TQPH8_TB =
+[*FOR A = 1:2:3:4:5]
+$T_QPH8_[A]/5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TB",
+V = "
+[*FOR A = 1:2:3:4:5]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+[*SET s = 0]
+DM $TQPH8_T2B =
+[*FOR A = 1:2:3:4:5]
+$T_QPH8_[A]/4+5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B",
+V = "
+[*FOR A = 1:2:3:4:5]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+
+!=======================MultipleTopics6
+
+[*SET s = 0]
+[*DATA topic3 (;) = 
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*FOR A = 1:2:3:4:5:6]
+DM $TQPH9_[A] =
+$T_QPH9_[A]/
+1,
+2,
+3,
+4,
+5,
+5,
+4+5,
+6,
+R,F,
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT",
+V = "
+[topic3.[+s]]\
+`    Not At All <v1>;
+`    2 <v2>;
+`    3 <v3>;
+`    4 <v4>;
+`    Very Strongly <v5>;
+Top-box <Q>;
+Top-2-box <Q>;
+Don't Know (DO NOT SHOW/READ);
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+[*SET s = 0]
+DM $TQPH9_TB =
+[*FOR A = 1:2:3:4:5:6]
+$T_QPH9_[A]/5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB",
+V = "
+[*FOR A = 1:2:3:4:5:6]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+
+[*SET s = 0]
+DM $TQPH9_T2B =
+[*FOR A = 1:2:3:4:5:6]
+$T_QPH9_[A]/4+5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B",
+V = "
+[*FOR A = 1:2:3:4:5:6]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+
+
+!=======================MultiSelect
+
+DM $TQPH10 =
+$A_QPH10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QPH10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+[*SET s = 0]
+[*DATA topic0 (;) = 
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to stay hopeful and pursue progress with GCash;
+Made me want to try GCrypto;
+Made me want to try GStocks;
+Made me want to try GCash Overseas;
+Made me want to try GCash Global Pay;
+Made me want to use GCash to prepare for the future as early as now;
+Made me want to use GCash to pay online and in-store for all my Christmas needs;
+Made me want to use GCash for sending and receiving money to others this Christmas;
+Made me want to use GCash to borrowing money in GCash via GLoan, GCredit and GGives to pay for all my Christmas needs;
+The song, dance, and the endorsers in the video made me want to use GCash as my preferred mode of payment this Christmas;
+I realized that GCash is the best way to pay because of this ad.;
+I am going to use GCash more to send & receive money because of this ad;
+I am going to use GCash more to scan to pay because of this ad;
+I am going to use GCash more to pay online because of this ad;
+I am going to use GCash more to pay abroad because of this ad;
+I will use GCash more for payment than cash because of this ad]
+
+[*DO A = 1:20]
+DM $TQFI6_[A] =
+$T_QFI6_[A]/
+1,
+2,
+3,
+R,F,
+VT = "QPH11. ACTION AFTER AD",
+V = "
+[topic0.[+s]]\
+`    Agree Strongly;
+`    Agree Somewhat;
+`    Disagree;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+[*SET s = 0]
+DM $TQFI6_TB =
+[*DO A = 1:20]
+$T_QFI6_[A]/1,
+[*END A]
+VT = "QPH11. ACTION AFTER AD - TB",
+V = "
+[*DO A = 1:20]
+[topic0.[+s]][*SLE];
+[*END A]",
+
+
+[*SET s = 0]
+DM $TQFI6_T2B =
+[*DO A = 1:20]
+$T_QFI6_[A]/1+2,
+[*END A]
+VT = "QPH11. ACTION AFTER AD - T2B",
+V = "
+[*DO A = 1:20]
+[topic0.[+s]][*SLE];
+[*END A]",
+
+
+[*SET s = 0]
+[*DATA topic1 (;) = 
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand]
+
+[*FOR A = 1:2:3:4:5:6:7:8]
+DM $TQFI7_[A] =
+$T_QFI7_[A]/
+1,
+2,
+3,
+R,F,
+VT = "QPH12. AD EVALUATION METRICS",
+V = "
+[topic1.[+s]]\
+`    Agree Strongly;
+`    Agree Somewhat;
+`    Disagree;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+[*SET s = 0]
+DM $TQFI7_TB =
+[*FOR A = 1:2:3:4:5:6:7:8]
+$T_QFI7_[A]/1,
+[*END A]
+VT = "QPH12. AD EVALUATION METRICS - TB",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8]
+[topic1.[+s]][*SLE];
+[*END A]",
+
+
+
+[*SET s = 0]
+DM $TQFI7_T2B =
+[*FOR A = 1:2:3:4:5:6:7:8]
+$T_QFI7_[A]/1+2,
+[*END A]
+VT = "QPH12. AD EVALUATION METRICS - T2B",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8]
+[topic1.[+s]][*SLE];
+[*END A]",
+
+
+
+!=======================Unique
+
+DM $TQVAL1 =
+$QVAL1/
+1,
+2,
+R,F,
+VT = "QVAL1. VALIDATION PAYMENTS X HEART",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+DM $HT = T,
+ HT = "TOTAL",
+  H = "TOTAL*(A)",
+  
+IF ($PaymentxHeartsResp2/NB).($QPH1/NB), WRITE,
+
+FINISH DATA,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+global bt# = 'All respondents', 
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+!F= SHG-1/SIG/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HEADERWAVE3 = HA,HB,HC,HD,HAPxH2,HBPxH2,HCPxH2,HDPxH2]
+
+
+
+! SELECT WR $WTS,
+
+[*SET T = 0]
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+T #[+T] = $TQPH1 * $[HEADERWAVE3.X],
+[*END X]
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI2 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI3 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI4 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+IF ($QPH1/4+5).($QVAL1/NB), T #[+T] = $TQVAL1 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+T #[+T] = $TQPH5 * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH5 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH5 * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+T #[+T] = $TQPH6 * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH6 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH6 * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics5
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQPH8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*FOR A = 2:3:4:5]
++T #[+T] = $TQPH8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/4+5, T #[+T] = $TQPH8_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5]
+IF $QPH1/4+5, +T #[+T] = $TQPH8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/1+2, T #[+T] = $TQPH8_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5]
+IF $QPH1/1+2, +T #[+T] = $TQPH8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQPH8_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH8_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH8_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQPH8_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH8_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH8_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+!~~~~~~~~~~~~MultipleTopics6
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQPH9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*FOR A = 2:3:4:5:6]
++T #[+T] = $TQPH9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/4+5, T #[+T] = $TQPH9_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6]
+IF $QPH1/4+5, +T #[+T] = $TQPH9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/1+2, T #[+T] = $TQPH9_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6]
+IF $QPH1/1+2, +T #[+T] = $TQPH9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQPH9_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH9_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH9_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQPH9_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH9_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH9_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQPH10 * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQPH10 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQPH10 * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics8
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*DO A = 2:4]
++T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+
+[*DO A = 15:20]
++T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/4+5, T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*DO A = 2:4]
+IF $QPH1/4+5, +T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+
+[*DO A = 15:20]
+IF $QPH1/4+5, +T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/1+2, T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*DO A = 2:4]
+IF $QPH1/1+2, +T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+
+[*DO A = 15:20]
+IF $QPH1/1+2, +T #[+T] = $TQFI6_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQFI6_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI6_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQFI6_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQFI6_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI6_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQFI6_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics8
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQFI7_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*FOR A = 2:3:4:5:6:7:8]
++T #[+T] = $TQFI7_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/4+5, T #[+T] = $TQFI7_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6:7:8]
+IF $QPH1/4+5, +T #[+T] = $TQFI7_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QPH1/1+2, T #[+T] = $TQFI7_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6:7:8]
+IF $QPH1/1+2, +T #[+T] = $TQFI7_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQFI7_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI7_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQFI7_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQFI7_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/4+5, T #[+T] = $TQFI7_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QPH1/1+2, T #[+T] = $TQFI7_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+FINISH TABLES,
+

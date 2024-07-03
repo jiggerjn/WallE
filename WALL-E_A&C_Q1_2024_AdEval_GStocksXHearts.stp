@@ -1,0 +1,1517 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+
+C = JAN2024v3.ASC;FEB2024v3.ASC;MAR2024.ASC,
+Y,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START DATA,
+ORDER 1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY/9999999/,
+
+F=ADF,
+DI $RESP = $1-10,
+
+
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
+[*INSERT ADDITIONAL_COLUMNS]
+[*INSERT WALL_E_STUBS_CATEGORY]
+[*INSERT W_HEADER]
+!INSERT W_WTS
+
+
+!!!!!!!!!!!!!!!!
+
+DM $HAPxH3 =
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
+
+
+[*DO A = 1:12]
+T,
+$HAv/[A].$Feb24toMar01/NB,
+$HAv/[A].$Mar02toMar08/NB,
+$HAv/[A].$Mar09toMar15/NB,
+$HAv/[A].$Mar16toMar22/NB,
+[*END A]
+HT = "HEADER A. GENERAL PROFILE - 1 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+GENDER****
+MALE***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+FEMALE***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+LIFESTAGE****
+Students (20 yo and below)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+Yuppies (21-30 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+Transitioners (31-35 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+Balancers (36-45 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+Older Adults/Retirees (46-65 yo)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+SEC****
+AB***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
+",
+
+
+DM $HBPxH3 =
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
+
+
+[*DO A = 1:15]
+T,
+$HBv/[A].$Feb24toMar01/NB,
+$HBv/[A].$Mar02toMar08/NB,
+$HBv/[A].$Mar09toMar15/NB,
+$HBv/[A].$Mar16toMar22/NB,
+[*END A]
+HT = "HEADER B. LOCALE AND MACROREGION - 1 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+LOCALE****
+URBAN (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+RURAL (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+
+NCR (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+
+NORTH CENTRAL LUZON****
+NCL (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+NCL Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+NCL Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+
+SOUTH LUZON****
+SL (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+SL Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+SL Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+
+VISAYAS****
+Visayas (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+Visayas Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+Visayas Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+
+MINDANAO****
+Mindanao (NET)***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+Mindanao Urban***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+Mindanao Rural***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
+",
+
+
+DM $HCPxH3 = 
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
+
+
+
+[*DO A = 1:4]
+T,
+$HCv/[A].$Feb24toMar01/NB,
+$HCv/[A].$Mar02toMar08/NB,
+$HCv/[A].$Mar09toMar15/NB,
+$HCv/[A].$Mar16toMar22/NB,
+[*END A]
+
+HT = "HEADER C. USERSHIP - 1 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+USERSHIP****
+NON-USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+WHETHER GCASH USERS****
+GCASH NON-USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+GCASH USERS***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
+",
+
+
+DM $HDPxH3 =
+T,
+$Feb24toMar01/NB,
+$Mar02toMar08/NB,
+$Mar09toMar15/NB,
+$Mar16toMar22/NB,
+
+
+[*DO A = 1:15]
+T,
+$HDv/[A].$Feb24toMar01/NB,
+$HDv/[A].$Mar02toMar08/NB,
+$HDv/[A].$Mar09toMar15/NB,
+$HDv/[A].$Mar16toMar22/NB,
+[*END A]
+
+HT = "HEADER D. MACROREGION X SEC - 1 WEEK PERIOD CUTS",
+H  = "
+TOTAL*(a);
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+MMA****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+NCL****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+SL****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+VISAYAS****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+
+MINDANAO****
+ABC1***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+C2***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e);
+
+
+
+D***
+TOTAL*(a)<S>;
+Feb24 to Mar01 *(b);
+Mar02 to Mar08 *(c);
+Mar09 to Mar15 *(d);
+Mar16 to Mar22 *(e)
+",
+
+
+
+!-----------Unique
+DM $QST1 = $27468/1-9,'0',
+
+
+!-----------Unique
+DM $QST2 = $27469/1-9,'0',
+
+
+!-----------MultiSelect
+DM $A_QST3 = $27470/1,$27471/1,$27472/1,$27473/1,$27474/1,$Blank/6-90,$27475/1,$27476/1,$27477/1,$Blank/94-98,$27478/1,
+
+
+!-----------Unique
+DM $QVAL3 = $27479/1-9,'0',
+
+
+!-----------MultiSelect
+DM $A_QST4 = $27480/1,$27481/1,$Blank/3,$27482/1,$27483/1,$27484/1,$27485/1,$27486/1,$Blank/9,$27487/1,$27488/1,$27489/1,$27490/1,$27491/1,$27492/1,$27493/1,$27494/1,$27495/1,$27496/1,$27497/1,$Blank/21-90,$27498/1,
+
+
+!-----------Unique
+DM $QST5 = $27499/1-9,'0',
+
+
+!-----------Unique
+DM $QST6 = $27500/1-9,'0',
+
+
+!-----------MultipleTopics2
+
+DM $T_QST8_1 = $27501/1-9,'0',
+DM $T_QST8_2 = $27502/1-9,'0',
+
+
+
+!-----------MultipleTopics6
+
+DM $T_QST9_1 = $27503/1-9,'0',
+DM $T_QST9_2 = $27504/1-9,'0',
+DM $T_QST9_3 = $27505/1-9,'0',
+DM $T_QST9_4 = $27506/1-9,'0',
+DM $T_QST9_5 = $27507/1-9,'0',
+DM $T_QST9_6 = $27508/1-9,'0',
+
+
+
+!-----------MultiSelect
+DM $A_QST10 = $27509/1,$27510/1,$27511/1,$27512/1,$27513/1,$27514/1,$27515/1,$27516/1,
+
+
+!-----------MultipleTopics6
+
+DM $T_QST11_1 = $27517/1-9,'0',
+DM $T_QST11_2 = $27518/1-9,'0',
+DM $T_QST11_3 = $27519/1-9,'0',
+DM $T_QST11_4 = $27520/1-9,'0',
+DM $T_QST11_5 = $27521/1-9,'0',
+DM $T_QST11_6 = $27522/1-9,'0',
+
+
+
+!-----------MultipleTopics8
+
+DM $T_QST12_1 = $27523/1-9,'0',
+DM $T_QST12_2 = $27524/1-9,'0',
+DM $T_QST12_3 = $27525/1-9,'0',
+DM $T_QST12_4 = $27526/1-9,'0',
+DM $T_QST12_5 = $27527/1-9,'0',
+DM $T_QST12_6 = $27528/1-9,'0',
+DM $T_QST12_7 = $27529/1-9,'0',
+DM $T_QST12_8 = $27530/1-9,'0',
+
+
+
+!=======================Unique
+
+DM $TQST1 =
+$QST1/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QST1. VISIBILITY OF ADS",
+V = "
+Definitely haven't seen it;
+Don't think I've seen it;
+Unsure whether I've seen it;
+Yes I think I've seen it;
+Yes definitely seen it;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQST2 =
+$QST2/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QST2. AD VIEWED FREQUENCY",
+V = "
+Once;
+Twice;
+Thrice;
+4 times and more;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQST3 =
+$A_QST3/
+1,
+2,
+3,
+4,
+5,
+91+92+93,
+99,
+R,F,
+VT = "QST3. BRAND LINK",
+V = "
+GCash;
+PayMaya/Maya;
+BPI;
+BDO;
+ShopeePay;
+Others;
+I can't recall;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQVAL3 =
+$QVAL3/
+1,
+2,
+R,F,
+VT = "QVAL3. VALIDATION GSTOCKS X HEART",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQST4 =
+$A_QST4/
+1,
+2,
+4,
+5,
+6,
+7,
+8,
+
+10+11+12+13+14+15+16+17+18+19+20,
+11+12+13,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+
+20,
+91,
+R,F,
+VT = "QST4. SOURCES OF AD AWARENESS",
+V = "
+Ads while browsing internet/Website ads (excluding social media) (Please specify site);
+Company Website (Official Website);
+Events;
+Family/relatives;
+Friends/colleagues;
+Online articles (blogs, reviews, news);
+Online videos (including ads);
+Social media (including ads) (NET) <Q>;
+`    Facebook (including ads) <Q>;
+`        Facebook Post;
+`        Facebook Fanpage;
+`    Twitter (including ads);
+`    Instagram (including ads);
+`    YouTube (including ads);
+`    TikTok (including ads);
+`    Out-of-Home (OOH) (e.g., billboards and posters);
+`    Influencers;
+TV;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQST5 =
+$QST5/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QST5. ABSOLUTE LIKEABILITY",
+V = "
+Dislike it a lot (1) <v1>;
+Dislike it a little (2) <v2>;
+Neither like nor Dislike (3) <v3>;
+Like it a liittle (4) <v4>;
+Like it a lot (5) <v5>;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQST6 =
+$QST6/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QST6. RELATIVE LIKEABILITY",
+V = "
+Dislike it a lot more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (1) <v1>;
+Dislike it a little more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (2) <v2>;
+Feel it's about average (3) <v3>;
+Like this ad a little more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (4) <v4>;
+Like this ad a lot more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (5) <v5>;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics3
+
+[*SET s = 0]
+[*DATA topic2 (;) = 
+Simple na with GStocks;
+Register in 3 simple steps`!]
+
+[*FOR A = 1:2]
+DM $TQST8_[A] =
+$T_QST8_[A]/
+1,
+2,
+3,
+4,
+5,
+5,
+4+5,
+R,F,
+VT = "QST8. PROMPTED COMMUNICATION - KEY MESSAGES",
+V = "
+[topic2.[+s]]\
+`    1- Very Weak <v1>;
+`    2 <v2>;
+`    3 <v3>;
+`    4 <v4>;
+`    5 - Very Strong <v5>;
+Top-box <Q>;
+Top-2-box <Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+[*SET s = 0]
+DM $TQST8_TB =
+[*FOR A = 1:2]
+$T_QST8_[A]/5,
+[*END A]
+VT = "QST8. PROMPTED COMMUNICATION - KEY MESSAGES - TB",
+V = "
+[*FOR A = 1:2]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+[*SET s = 0]
+DM $TQST8_T2B =
+[*FOR A = 1:2]
+$T_QST8_[A]/4+5,
+[*END A]
+VT = "QST8. PROMPTED COMMUNICATION - KEY MESSAGES - T2B",
+V = "
+[*FOR A = 1:2]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+
+!=======================MultipleTopics6
+
+[*SET s = 0]
+[*DATA topic3 (;) = 
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*FOR A = 1:2:3:4:5:6]
+DM $TQST9_[A] =
+$T_QST9_[A]/
+1,
+2,
+3,
+4,
+5,
+5,
+4+5,
+6,
+R,F,
+VT = "QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT",
+V = "
+[topic3.[+s]]\
+`    Not At All <v1>;
+`    2 <v2>;
+`    3 <v3>;
+`    4 <v4>;
+`    Very Strongly <v5>;
+Top-box <Q>;
+Top-2-box <Q>;
+Don't Know (DO NOT SHOW/READ);
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+[*SET s = 0]
+DM $TQST9_TB =
+[*FOR A = 1:2:3:4:5:6]
+$T_QST9_[A]/5,
+[*END A]
+VT = "QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TB",
+V = "
+[*FOR A = 1:2:3:4:5:6]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+
+[*SET s = 0]
+DM $TQST9_T2B =
+[*FOR A = 1:2:3:4:5:6]
+$T_QST9_[A]/4+5,
+[*END A]
+VT = "QST9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - T2B",
+V = "
+[*FOR A = 1:2:3:4:5:6]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+
+!=======================MultiSelect
+
+DM $TQST10 =
+$A_QST10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QST10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics6
+
+[*SET s = 0]
+[*DATA topic4 (;) = 
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+I will register to GStocks PH now that I know it�s simple to register in just 3 easy steps because of this ad;
+I will trade in GStocks PH now that I know it�s simple to invest in stocks because of this ad.]
+
+[*FOR A = 1:2:3:4:5:6]
+DM $TQST11_[A] =
+$T_QST11_[A]/
+1,
+2,
+3,
+R,F,
+VT = "QST11. ACTION AFTER AD",
+V = "
+[topic4.[+s]]\
+`    Agree Strongly;
+`    Agree Somewhat;
+`    Disagree;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+[*SET s = 0]
+DM $TQST11_TB =
+[*FOR A = 1:2:3:4:5:6]
+$T_QST11_[A]/1,
+[*END A]
+VT = "QST11. ACTION AFTER AD - TB",
+V = "
+[*FOR A = 1:2:3:4:5:6]
+[topic4.[+s]][*SLE];
+[*END A]",
+
+
+[*SET s = 0]
+DM $TQST11_T2B =
+[*FOR A = 1:2:3:4:5:6]
+$T_QST11_[A]/1+2,
+[*END A]
+VT = "QST11. ACTION AFTER AD - T2B",
+V = "
+[*FOR A = 1:2:3:4:5:6]
+[topic4.[+s]][*SLE];
+[*END A]",
+
+
+!=======================MultipleTopics8
+
+[*SET s = 0]
+[*DATA topic5 (;) = 
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand]
+
+[*FOR A = 1:2:3:4:5:6:7:8]
+DM $TQST12_[A] =
+$T_QST12_[A]/
+1,
+2,
+3,
+R,F,
+VT = "QST12. AD EVALUATION METRICS",
+V = "
+[topic5.[+s]]\
+`    Agree Strongly;
+`    Agree Somewhat;
+`    Disagree;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+[*SET s = 0]
+DM $TQST12_TB =
+[*FOR A = 1:2:3:4:5:6:7:8]
+$T_QST12_[A]/1,
+[*END A]
+VT = "QST12. AD EVALUATION METRICS - TB",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8]
+[topic5.[+s]][*SLE];
+[*END A]",
+
+
+
+[*SET s = 0]
+DM $TQST12_T2B =
+[*FOR A = 1:2:3:4:5:6:7:8]
+$T_QST12_[A]/1+2,
+[*END A]
+VT = "QST12. AD EVALUATION METRICS - T2B",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8]
+[topic5.[+s]][*SLE];
+[*END A]",
+
+
+
+
+
+DM $HT = T,
+ HT = "TOTAL",
+  H = "TOTAL*(A)",
+
+!IF $GsavexHeartsResp/NB, CK $QST1/NB,
+
+IF ($GsavexHeartsResp/NB).($QST1/NB), WRITE,
+
+FINISH DATA,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+global bt# = 'All respondents', 
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+F= SHG-1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+!F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HEADERWAVE3 = HA,HB,HC,HD,HAPxH3,HBPxH3,HCPxH3,HDPxH3]
+
+
+
+! SELECT WR $WTS,
+
+[*SET T = 0]
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+T #[+T] = $TQST1 * $[HEADERWAVE3.X],
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST2 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST3 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQVAL3 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST4 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+T #[+T] = $TQST5 * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST5 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST5 * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~Unique
+[*DO X = 1:8]
+T #[+T] = $TQST6 * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST6 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST6 * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics3
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*DO A = 2:2]
++T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/4+5, T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*DO A = 2:2]
+IF $QST1/4+5, +T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/1+2, T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*DO A = 2:2]
+IF $QST1/1+2, +T #[+T] = $TQST8_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST8_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST8_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST8_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST8_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST8_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST8_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics6
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*FOR A = 2:3:4:5:6]
++T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/4+5, T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6]
+IF $QST1/4+5, +T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/1+2, T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6]
+IF $QST1/1+2, +T #[+T] = $TQST9_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST9_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST9_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST9_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST9_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST9_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST9_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:8]
+T #[+T] = $TQST10 * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST10 * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST10 * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics6
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*FOR A = 2:3:4:5:6]
++T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/4+5, T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6]
+IF $QST1/4+5, +T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/1+2, T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6]
+IF $QST1/1+2, +T #[+T] = $TQST11_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST11_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST11_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST11_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST11_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST11_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST11_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+!~~~~~~~~~~~~MultipleTopics8
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*FOR A = 2:3:4:5:6:7:8]
++T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/4+5, T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6:7:8]
+IF $QST1/4+5, +T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+[*DO X = 1:8]
+[*SET s = 0]
+[*DO A = 1:1]
+IF $QST1/1+2, T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END A]
+[*FOR A = 2:3:4:5:6:7:8]
+IF $QST1/1+2, +T #[+T] = $TQST12_[A] * $[HEADERWAVE3.X],
+[*END A]
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST12_TB * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST12_TB * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST12_TB * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+[*DO X = 1:8]
+T #[+T] = $TQST12_T2B * $[HEADERWAVE3.X],
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/4+5, T #[+T] = $TQST12_T2B * $[HEADERWAVE3.X],
+BT = "Among aware of ad",
+[*END X]
+
+[*DO X = 1:8]
+IF $QST1/1+2, T #[+T] = $TQST12_T2B * $[HEADERWAVE3.X],
+BT = "Among not aware of ad",
+[*END X]
+
+
+
+
+
+FINISH TABLES,
+

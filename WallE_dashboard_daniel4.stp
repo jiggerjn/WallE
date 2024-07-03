@@ -1,0 +1,462 @@
+START CONTROL,
+*PROJECT WALL-E
+
+c = WALLE_NOVEMBER_MAIN.asc,
+
+Y,
+CEP,
+BIG,
+TIDY,
+CSVR2,
+OLDNAMES,
+FINISH CONTROL,
+
+START DATA,
+ORDER1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY /99999999/,
+
+DI $RESP = $1-10,
+
+[*INSERT WALLEv2_datasets.STP]
+[*INSERT WALLEv2_cardcol]
+[*INSERT WALLEv2_cardcol_nets]
+[*INSERT WALLEv2_stubs]
+
+
+
+[*INSERT WALL_E_newWTS]
+
+
+
+DM $HT = T,
+
+HT = 'TOTAL',
+ H = 'TOTAL',
+
+DM $HDboard = 
+T,
+$OCT2023/NB,
+$NOV2023/NB,
+
+
+HT = "HEADER DASHBOARD",
+H = "
+TOTAL;
+OCT 2023;
+NOV 2023",
+
+DM $GCASH_USER = $A_Q17e/1,
+DM $USER = $Q17i/1,
+
+
+DM $TQ8d = $Q8d/1,2,R,F,
+VT = "Q8d. P2M TRANSACTION INCIDENCE",
+V = "
+Did transaction in P2M;
+Did not do transaction in P2M;
+Missing answers<Z>;
+Total count<C>",
+
+
+[*DATA brladdertitle (;) = 
+Total Awareness;
+Aided;
+Other spontaneous;
+TOM;
+Ever Tried;
+P6M;
+With Existing Acc;
+P2M;
+P4W;
+BUMO;
+Favorite;
+Recommended]
+
+[*DATA brladdervar (;) = 
+TotAware;
+Aided;
+Otherspont;
+TOM;
+EverTried;
+P6M;
+WithExistingAcc;
+P2M;
+P4W;
+BUMO;
+Favorite;
+Recommended]
+
+[*DO B = 1:[brladdervar.#]:1]
+DM $RAW[brladdervar.B] = 
+[*FOR A = 7:9:11:6:10:8:5:2:4]
+$NOM_LAD[A]/[B],
+[*END A]
+
+XT = "[brladdertitle.B]",
+X = "
+[*FOR A = 7:9:11:6:10:8:5:2:4]
+[NOM2.A][*SLE];
+[*END A]",
+[*END B]
+
+[*DATA RAWSEC = 
+Total SEC,
+ABC1,
+C2,
+D]
+
+DM $RAWSEC = 
+$SEC19/
+1..4,
+1..2,
+3,
+4,
+
+
+DM $RAWSECTABLES =
+$SEC19/1..4,
+1,
+2,
+1..2,
+3,
+4,
+
+[*DATA RAWSECTABLES = 
+Total SEC,
+AB,
+C1,
+ABC1,
+C2,
+D]
+
+[*DATA RAWLIFESTAGE = 
+Total Lifestage,
+Youth (21 yo below),
+Yuppies (22-29 yo),
+Transitioners (30-34 yo),
+Balancers (35-44 yo),
+Older Adults/Retirees (45 yo above)]
+
+DM $RAWLIFESTAGE = 
+$T_Q1_1/1..99,
+$T_Q1_1/1..21,
+$T_Q1_1/22..29,
+$T_Q1_1/30..34,
+$T_Q1_1/35..44,
+$T_Q1_1/45..99,
+
+
+
+[*DATA RAWREGION = 
+Total Region,
+MMA,
+NCL,
+SL,
+VIS,
+MIN]
+
+DM $RAWREGION =
+$Q3/
+1..17,
+1,
+2+3+4+5,
+6+7+8,
+9+10+11,
+12+13+14+15+16+17,
+
+
+
+[*DATA RAWUSERSHIP = 
+Total Usership,
+User,
+Non-user]
+
+
+DM $RAWUSERSHIP = 
+$TQ17i/1..2,1-2,
+
+
+[*DATA RAWLOCALE = 
+Total Locale,
+Urban,
+Rural]
+
+
+DM $RAWLOCALE = 
+$Q4/1..2,1-2,
+
+
+[*DATA RAWNPS = Detractors,
+Passives,
+Promoters,
+NPS]
+
+[*DO A=1:4]
+DM $RAWNPS[A] = 
+		$TQ47R1/[A+11].($TQ17a/1+$TQ17b/1),
+		$TQ47R2/[A+11].($TQ17a/2+$TQ17b/2),
+		$TQ47R22/[A+11].($TQ17a/22+$TQ17b/22),
+		$TQ47R3/[A+11].($TQ17a/3+$TQ17b/3),
+		$TQ47R4/[A+11].($TQ17a/4+$TQ17b/4),
+		$TQ47R7/[A+11].($TQ17a/7+$TQ17b/7),
+		$TQ47R11/[A+11].($TQ17a/11+$TQ17b/11),
+		$TQ47R13/[A+11].($TQ17a/13+$TQ17b/13),
+		$TQ47R12/[A+11].($TQ17a/12+$TQ17b/12),
+[*END A]
+
+
+
+
+[*DATA RAWGENDER = 
+Total Gender,
+Male,
+Female]
+
+
+DM $RAWGENDER = 
+$Q2/1..2,1-2,
+
+
+
+[*DATA RAWEMPLOYMENTSTAT = 
+Total Employment Status,
+Working,
+Not Working]
+
+
+DM $RAWEMPLOYMENTSTAT = 
+$SEC21/1..2,1-2,
+
+
+[*DATA RAWSOURCEOFINCOME (;)=
+TOTAL SOURCE OF INCOME;
+Salary from employment;
+Salary from Part-time job;
+Own Business;
+Remittance from family member;
+Government allowance;
+Borrow money from other people;
+Debt from formal Institutions;
+Pension;
+Personal savings;
+Income from self-employment;
+Allowance;
+SALARY OF MEMBER (NET)<Q>;
+Salary from my husband/Wife;
+Salary of my children;
+Salary of my Mother/Father;
+ONLINE GAMES (NET)<Q>;
+ONLINE SABONG;
+Payments from games tournament;
+online games;
+No source of income]
+
+DM $RAWSOURCEOFINCOME = $TQ75/2..21,2-21,
+
+
+[*DATA brandDashboard (;) = 
+GCash;
+PayMaya/Maya;
+ShopeePay;
+Coins.ph;
+PayPal;
+GrabPay;
+CliQQ;
+BDO Mobile;
+BPI Mobile]
+
+[*doA=1:25]
+DM $RAWASSOC[A] = 
+		$T_Q64_[CQ63.A]/5,
+		$T_Q64_[CQ63.A]/7,
+		$T_Q64_[CQ63.A]/9,
+		$T_Q64_[CQ63.A]/4,
+		$T_Q64_[CQ63.A]/8,
+		$T_Q64_[CQ63.A]/6,
+		$T_Q64_[CQ63.A]/3,
+		$T_Q64_[CQ63.A]/1,
+		$T_Q64_[CQ63.A]/2,
+[*END A]
+
+
+!!!!!P2M USERS DEMOGS
+
+[*DO C = 1:[RAWSEC.#]:1]
+[*DO D = 1:[RAWLIFESTAGE.#]:1]
+[*DO E = 1:[RAWREGION.#]:1]
+[*DO F = 1:[RAWLOCALE.#]:1]
+DM $TRAWAge13to65[&C][&D][&E][&F] =
+$TQ1/1..5,
+R,
+X = "
+Age (13-65 years old)%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWLOCALE.F];
+MISSING<Z><S>",
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+
+
+[*DO C = 1:[RAWSEC.#]:1]
+[*DO D = 1:[RAWLIFESTAGE.#]:1]
+[*DO E = 1:[RAWREGION.#]:1]
+[*DO F = 1:[RAWLOCALE.#]:1]
+DM $TRAWQ8d[&C][&D][&E][&F] =
+$TQ8d/1-2,
+R,
+X = "
+With P2M Transaction%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWLOCALE.F];
+Without P2M Transaction%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWLOCALE.F];
+MISSING<Z><S>",
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+
+
+[*DO C = 1:[RAWSEC.#]:1]
+[*DO D = 1:[RAWLIFESTAGE.#]:1]
+[*DO E = 1:[RAWREGION.#]:1]
+[*DO F = 1:[RAWLOCALE.#]:1]
+DM $TRAWQ10[&C][&D][&E][&F] =
+$TQ10/1-2,
+R,
+X = "
+Non-Rejector%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWLOCALE.F];
+Rejector%[RAWSEC.C]%[RAWLIFESTAGE.D]%[RAWREGION.E]%[RAWLOCALE.F];
+MISSING<Z><S>",
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+
+IF $USER/NB, DC $Usership_Q17i = 'User-1',
+IF $USER/B, DC $Usership_Q17i = 'Non-User-2',
+
+IF $xQ102/1..2, DC $SEC_Q102 = 'ABC1-1+2',
+IF $xQ102/3, DC $SEC_Q102 = 'C2-3',
+IF $xQ102/4, DC $SEC_Q102 = 'D-4',
+
+IF $T_Q1_1/1..21, DC $Lifestage_Q1 = 'Youth (21 yo below)-1 to 21',
+IF $T_Q1_1/22..29, DC $Lifestage_Q1 = 'Yuppies (22-29 yo)-22 to 29',
+IF $T_Q1_1/30..34, DC $Lifestage_Q1 = 'Transitioners (30-34 yo)-30 to 34',
+IF $T_Q1_1/35..44, DC $Lifestage_Q1 = 'Balancers (35-44 yo)-35 to 44',
+IF $T_Q1_1/45..99, DC $Lifestage_Q1 = 'Older Adults/Retirees (45 yo above)-45 to 99',
+
+
+IF $Q3/1, DC $Region_Q3 = 'MMA-1',
+IF $Q3/2+3+4+5, DC $Region_Q3 = 'NCL-2 to 5',
+IF $Q3/6+7+8, DC $Region_Q3 = 'SL-6 to 8',
+IF $Q3/9+10+11, DC $Region_Q3 = 'VIS-9 to 11',
+IF $Q3/12+13+14+15+16+17, DC $Region_Q3 = 'MIN-12 to 17',
+
+IF $Q4/1, DC $Locale_Q4 = 'Urban-1',
+IF $Q4/2, DC $Locale_Q4 = 'Rural-2',
+
+IF $TQ8d/1, DC $p2mtransac_Q8d = 'With P2M Transaction-1',
+IF $TQ8d/2, DC $p2mtransac_Q8d = 'Without P2M Transaction-2',
+
+IF $TQ10/1, DC $Reject_Q10 = 'Non-Rejector-1',
+IF $TQ10/2, DC $Reject_Q10 = 'Rejector-2',
+
+!IF $JUL2023inci/NB+$AUG2023inci/NB+$SEP2023inci/NB, WRITE,
+
+
+FINISH DATA,
+
+START TABLES,
+
+
+!!!!!!!!!!!!!!!!
+!!!!!FORMAT!!!!!
+!!!!!!!!!!!!!!!!
+
+
+
+
+
+GLOBAL IT # = '<JL>Wall-E',
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW30/LBB1/TOC/SPL250/CNZ'*'/URS/
+  DPR1/PCS/BRS/BCS/PRC/BTS/LPP55/NSER/CLG1/RNC1/NDAT/NPGN/BAL/RBL/BCS/BTS/CLW9/PBL/MOD,
+
+F=SDV,		! ------ PRINT STD DEVIATION
+F=DPR4,		! ------ DECIMAL %
+F=DPT0,		! ------ DECIMAL RAW COUNT
+F=DPA4,		! ------ DECIMAL MEAN,SUM..
+F=DPS4,	        ! ------ DECIMAL STD,
+F=MOD,		! ------ DISPLAY MODE
+F=MED,		! ------ DISPLAY MEDIAN
+!F=MCB29,          ! ------ Less than 30 base
+F=BTS,                  ! ------ Blank Tables Suppress
+F=nBCS,                  ! ------ Blank Column Suppress
+F=NBRS,                  ! ------ Blank Row Suppress
+F=PBL/MOD,
+
+%AVG = 'Mean score<D2>',
+%DAT = '<&DD>/<&MONTH>/<&YY>',
+%RTH = '<ML3>ROW %',
+%RTV = '<ML3>COL %',
+%PRC = '<ML3>COUNT',
+%SER = '<ML3>STD ERR OF MEAN',
+%SDV ='STANDARD DEVIATION',
+%PTR = "TOTAL",
+!%AVG ='MEAN SCORE',
+%SDV ='STANDARD DEVIATION',
+%MED = '<ML7>MEDIAN            ',
+%UNR = '<ML7>(UNWEIGHTED BASE)',
+
+
+  
+F=SHG1/SIG1/SLA95/SLB95/BRS/FSL,  !---------SIGTEST
+
+!F=NRTV, ! ------- ONLY COUNT
+!F=NPRC, ! -------- ONLY %
+
+
+
+! SELECT WR $newwts,
+
+F=BRS,
+
+
+[*SET T = 0]
+
+
+
+[*DO C = 1:[RAWSEC.#]:1]
+[*DO D = 1:[RAWLIFESTAGE.#]:1]
+[*DO E = 1:[RAWREGION.#]:1]
+[*DO F = 1:[RAWLOCALE.#]:1]
+IF ($QAgeRange/1..5).$RAWSEC/[C].$RAWLIFESTAGE/[D].$RAWREGION/[E].$RAWLOCALE/[F], T # [+T] = $TRAWAge13to65[&C][&D][&E][&F] * $HDboard,
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+
+[*DO C = 1:[RAWSEC.#]:1]
+[*DO D = 1:[RAWLIFESTAGE.#]:1]
+[*DO E = 1:[RAWREGION.#]:1]
+[*DO F = 1:[RAWLOCALE.#]:1]
+IF ($TQ8d/1..2).$RAWSEC/[C].$RAWLIFESTAGE/[D].$RAWREGION/[E].$RAWLOCALE/[F], T # [+T] = $TRAWQ8d[&C][&D][&E][&F] * $HDboard,
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+
+[*DO C = 1:[RAWSEC.#]:1]
+[*DO D = 1:[RAWLIFESTAGE.#]:1]
+[*DO E = 1:[RAWREGION.#]:1]
+[*DO F = 1:[RAWLOCALE.#]:1]
+IF ($TQ10/1..2).$RAWSEC/[C].$RAWLIFESTAGE/[D].$RAWREGION/[E].$RAWLOCALE/[F], T # [+T] = $TRAWQ10[&C][&D][&E][&F] * $HDboard,
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+
+FINISH TABLES,
