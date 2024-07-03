@@ -77,6 +77,17 @@ EMPLOYMENT STATUS\
 `          Retired;  
 `          Unemployed",
 
+DM $TQ1_1 = 
+$T_Q1_1/1-65,
+R,F,
+VT = "Q1. ACTUAL AGE",
+V ="
+[*DO A = 1:65] 
+[A] years old <v[A]>;
+[*END A]
+Missing answers<Z>;
+Total count<C>",
+
 
 
 DM $TQ17i = $Q17i/
@@ -7749,3 +7760,538 @@ VAGUE (NET);
 NONE;
 Missing Answer<z>;
 Total Count<C>",
+
+
+
+
+
+!Q118
+[*DATA Q118 = 7,23,13,12,11,4,1,2]
+[*DATA Q118BRAND = GrabPay,ShopeePay,BDO Mobile/ Online,BPI Mobile/ Online,CLIQQ,PayPal,GCash,PayMaya/Maya]
+
+[*DO A = 1:8]
+DM $TQ118r[A] = $I_[Q118.A]_Q118/1001+1050+1052+1002+1004+1076+1003+1005+1012+1013+1014+1020+1054+1063+1098+1027+1031+1070+1029+1071+1026+1006+1043+1032+1033+1034+1092+1097+1035+1008+1049+1091+1081+1009+1018+1021+1062+1010+1015+1030+1016+1017+1045+1046+1068+1055+1056+1061+1067+1073+1077+1078+1088+1099+1084+1093+1101+1095,
+1001+1050+1052,
+1001,
+1050,
+1052,
+
+1002+1004+1076,
+1002,
+1004+1076,
+
+1003+1005+1012+1013+1014+1020+1054+1063+1098,
+1003,
+1005,
+1012,
+1013,
+1014,
+1020,
+1054,
+1063,
+1098,
+
+1027+1031+1070,
+1027,
+1031,
+1070,
+
+1029+1071,
+1029,
+1071,
+
+1026+1006+1043,
+1026+1006,
+1043,
+
+1032,
+1032,
+
+1033+1034+1092+1097,
+1033,
+1034,
+1092,
+1097,
+
+1035,
+1035,
+
+1008,
+1008,
+
+1049+1091+1081,
+1049,
+1091,
+1081,
+
+1009+1018+1021+1062,
+1009,
+1018,
+1021,
+1062,
+
+1010+1015,
+1010,
+1015,
+
+1030,
+1030,
+
+1016,
+1016,
+
+1017,
+1017,
+
+1045+1046+1068,
+1045,
+1046,
+1068,
+
+1055+1056+1061+1067+1073+1077+1078+1088+1099+1084+1093+1101+1095,
+1055,
+1056,
+1061,
+1067,
+1073,
+1077,
+1078,
+1088,
+1099,
+1084,
+1093,
+1101,
+1095,
+
+1024+1036+1039+1038+1057+1058+1080+1089+1028+1079+1040+1065+1059+1064+1025+1069+1094+1037+1102+1086+1048+1085+1085+1041+1053+1019+1044+1072+1075+1007+1022+1023+1051+1087+1011+1090+1103,
+1024+1036+1039+1038+1057+1058+1080+1089,
+1024,
+1036,
+1039,
+1038,
+1057,
+1058,
+1080,
+1089,
+
+1028+1079+1040+1065+1059+1064,
+1028,
+1079,
+1040+1065,
+1059,
+1064,
+
+1025+1069+1094,
+1025,
+1069,
+1094,
+
+1037,
+1037,
+
+1102+1086,
+1102,
+1086,
+
+1048,
+1048,
+
+1085,
+1085,
+
+1041+1053,
+1041,
+1053,
+
+1019+1044+1072+1075,
+1019,
+1044+1072,
+1075,
+
+1007+1022+1023+1051+1087,
+1007,
+1022,
+1023,
+1051,
+1087,
+
+1011+1090+1103,
+1011,
+1090,
+1103,
+
+1042+1047+1060+1066+1074+1082+1083+1100+1096+1104+1105,
+
+9998,
+9999,
+
+R,F,
+VT = "Q118. REASONS FOR NPS RATING - [Q118BRAND.A]",
+V = "
+POSITIVE<Q>;
+<g1B>GOOD CUSTOMER SERVICE (NET)<Q>;
+`     <G2B><G1P>Good customer service;
+`     <G1P>Well informed the personel;
+`     <G2E><G1P>Customer service replies insantly  when there are concerns;
+
+SAFETY AND SECURITY (NET)<Q>;
+`     <G2B><G1P>Secured;
+`     <G2E><G1P>Safe to use;
+
+EASE OF USE (NET)<Q>;
+`     <G2B><G1P>Easy to use;
+`     <G1P>Easy to transact;
+`     <G1P>Easy to send money;
+`     <G1P>Easy to use compared to other brands;
+`     <G1P>Easy to receive money;
+`     <G1P>Easy to pay using GCash;
+`     <G1P>Easy to cash in and cash out;
+`     <G1P>Fast on payments;
+`     <G2E><G1P>User friendly;
+
+RELIABLE (NET)<Q>;
+`     <G2B><G1P>GCash is reliable;
+`     <G1P>Good to use;
+`     <G2E><G1P>GCash is good in loading anytime;
+
+EASE OF ACCESS (NET)<Q>;
+`     <G2B><G1P>Easy to access;
+`     <G2E><G1P>Just scan the QR code you can receive the money instantly;
+
+COMPLETE AND ALL-IN-ONE APP (NET)<Q>;
+`     <G2B><G1P>Everything is in GCash;
+`     <G2E><G1P>Offer many services;
+
+CASHLESS (NET)<Q>;
+`     <G1P>Cashless;
+
+CAN DO DIFFERENT TRANSACTIONS USING GCASH (NET)<Q>;
+`     <G2B><G1P>Can save money using GCash;
+`     <G1P>Can be used for loan;
+`     <G1P>Everything you want is here in gcash;
+`     <G2E><G1P>Can send bank transfer;
+
+INTERNATIONAL/ABROAD (NET)<Q>;
+`     <G1P>Can be used internationally/abroad;
+
+COMFORTABLE TO USE (NET)<Q>;
+`     <G1P>Comfortable to use;
+
+LOW TRANSACTION FEES (NET)<Q>;
+`     <G2B><G1P>Fee is lower than other brands;
+`     <G1P>No maintaining balance;
+`     <G2E><G1P>No deduction when cash in cash out;
+
+CONVENIENCE (NET)<Q>;
+`     <G2B><G1P>Convenient;
+`     <G1P>Hassle-free;
+`     <G1P>No need to go outside to pay bills<Q>;
+`     <G2E><G1P>Can use anytime;
+
+FAST TRANSACTION (NET)<Q>;
+`     <G2B><G1P>Fast transaction;
+`     <G2E><G1P>Fast to use;
+
+ACCESSIBILITY (NET)<Q>;
+`     <G1P>Can be used anytime anywhere;
+
+BUSINESS (NET)<Q>;
+`     <G1P>Use for business;
+
+EVERYONE IS USING (NET)<Q>;
+`     <G1P>Almost everyone using it;
+
+<g1E>SATISFIED TO GCASH SERVICES (UNSPECIFIED) (NET)<Q>;
+`     <G2B><G1P>Satisfed to their services;
+`     <G1P>GCash is useful;
+`     <G2E><G1P>Has good plans for GCash users;
+
+OTHERS (NET)<Q>;
+`     <G2B><G1P>I like GCash;
+`     <G1P>Highly recommended;
+`     <G1P>Has improvement;
+`     <G1P>GCash has many users;
+`     <G1P>Has voucher;
+`     <G1P>Trusted;
+`     <G1P>Proven;
+`     <G1P>Use to it;
+`     <G1P>Featuristic;
+`     <G1P>Don't use gcash much;
+`     <G1P>Don't know their promo;
+`     <G1P>I'm not sure if everyone wants gcash;
+`     <G2E><G1P>More improved;
+
+NEGATIVE<Q>;
+<G1B>SAFETY AND SECURITY CONCERN (NET)<Q>;
+`     <G2B><G1P>Lost money in GCash;
+`     <G1P>Get rid of GCash hackers;
+`     <G1P>Sometimes it is a scam;
+`     <G1P>Afraid to lose money in Gcash;
+`     <G1P>Money is not that secured;
+`     <G1P>Not that safe to use;
+`     <G1P>Security issue;
+`     <G2E><G1P>Need OTP every transaction;
+
+ISSUES ON THE APP (NET)<Q>;
+`     <G2B><G1P>App is slow when I open it;
+`     <G1P>Need to always update the app;
+`     <G1P>Sometimes transactions are delayed;
+`     <G1P>Don't know about much about the apps yet;
+`     <G2E><G1P>Sometimes when GCash is updated the money is lost;
+
+NEGATIVE REVIEWS AND FEEDBACK (NET)<Q>;
+`     <G2B><G1P>A lot of complains in social media;
+`     <G1P>Heard a lot that their money is missing from their GCash;
+`     <G2E><G1P>Theres a littte problem sometimes;
+
+INCOMING AND OUTGOING LIMIT (NET)<Q>;
+`     <G1P>Transfer has limit;
+
+INACCESIBLITY (NET)<Q>;
+`     <G2B><G1P>Cash in cash out not available in other stores;
+`     <G2E><G1P>Not all transaction can use it some of business not accept gcash payment;
+
+DIFFICULT TO USE (NET)<Q>;
+`     <G1P>Difficult to use;
+
+LACK OF KNOWLEDGE ON FEATURES (NET)<Q>;
+`     <G1P>Don't know some features;
+
+VERIFICATION AND REGISTRATION PROCESS ISSUE (NET)<Q>;
+`     <G2B><G1P>Verification is difficult;
+`     <G2E><G1P>Registration is difficult;
+
+NEED LOAD/INTER(NET) CONNECTION TO ACCESS (NET)<Q>;
+`     <G2B><G1P>Can't access if there is no load;
+`     <G1P>Hope app can be accessed without data or internet connection;
+`     <G2E><G1P>High deduction in BDO;
+
+SERVICE DOWNTIME (NET)<Q>;
+`     <G2B><G1P>Under maintenance when needed;
+`     <G1P>Sometimes system is down;
+`     <G1P>App crashes without notification;
+`     <G1P>Sometimes offline;
+`     <G2E><G1P>Sometimes cant open;
+
+<G1E>NOT SATISFIED TO GCASH SERVICES (NET)<Q>;
+`     <G2B><G1P>Not satisfied to Gcash services;
+`     <G1P>Using gcash is insane;
+`     <G2E><G1P>Not use to it;
+
+VAGUE;
+Don't know;
+NONE;
+
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!Q119
+DM $TQ119 = $Q119/1001+1002+1066+1069,
+1001,
+1002,
+1066,
+1069,
+
+1012+1014+1015+1018+1023+1025+1037+1009+1060+1063+1079+1082,
+1012,
+1014,
+1015,
+1018,
+1023+1025,
+1037,
+1009,
+1060,
+1063,
+1079,
+1082,
+
+1030+1032+1033+1034+1059+1038+1062+1075,
+1030,
+1032,
+1033,
+1034,
+1059,
+1038,
+1062,
+1075,
+
+1044,
+1044,
+
+1043,
+1043,
+
+1036+1047+1078,
+1036+1047,
+1078,
+
+1003+1006+1013+1016+1050+1081,
+1003,
+1006,
+1013,
+1016,
+1050,
+1081,
+
+1024+1028+1040+1029+1035,
+1024+1028+1040,
+1029,
+1035,
+
+1031+1055+1064+1065+1071,
+1031+1055,
+1064,
+1065,
+1071,
+
+1056+1058,
+1056,
+1058,
+
+1005+1007+1020+1021+1026+1067,
+1005,
+1007,
+1020,
+1021,
+1026,
+1067,
+
+1008+1042+1011+1046+1052+1068,
+1008+1042,
+1011,
+1046+1052,
+1068,
+
+1017+1039+1048,
+1017+1039+1048,
+
+1022,
+1022,
+
+1053,
+1053,
+
+1045,
+1045,
+
+1070+1072+1077,
+1070,
+1072,
+1077,
+
+1080,
+1080,
+
+1004+1010+1019+1027+1041+1051+1054+1073+1074+1076,
+
+9997,
+9998+1057+1061,
+9999,
+R,F,
+VT = "Q119. IMPROVEMENT AREAS TO PROMOTE GCASH",
+V = "
+<g1b>SERVICE CHARGE/FEE (NET)<Q>;
+`     <G2B><G1P>Lower service charge for cashing in and cashing out;
+`     <G1P>No service fee;
+`     <G1P>No extra charge to every GCash transactions;
+`     <G2e><G1P>Every week has interest;
+
+STRENGTHEN SAFETY AND SECURITY (NET)<Q>;
+`     <G2B><G1P>Fix cyber security because the account is easy to hack;    
+`     <G1P>Fix to avoid scam;
+`     <G1P>Lost money be returned immediately;
+`     <G1P>Must be secure;
+`     <G1P>Strengthen safety and security to avoid scams and loss of money;
+`     <G1P>Ensure safety and security of money;
+`     <G1P>Ensure cash in and cash out money not to get lost;
+`     <G1P>Systems of Gcash must be better;
+`     <G1P>If apps are updated make sure that money is not lost;
+`     <G1P>Improved privacy of the customer;
+`     <G2e><G1P>Trusted;
+
+EASE OF USE/CONVENIENCE (NET)<Q>;
+`     <G2B><G1P>Easy to use;
+`     <G1P>Ease of sending money;
+`     <G1P>Ease of receiving/claiming money;
+`     <G1P>No need to go outside;
+`     <G1P>Easy to pay;
+`     <G1P>Easy to cash in/cash out;
+`     <G1P>Can pay anywhere;
+`     <G2E><G1P>Can used anytime;
+
+REMOVE OUTGOING AND INCOMING LIMIT (NET)<Q>;
+`     <G1P>Remove outgoing limit;
+
+SATISFIED (UNSPECIFIED (NET)<Q>;
+`     <G1P>Satisfied;
+
+REWARDS AND DISCOUNT (NET)<Q>;
+`     <G2B><G1P>Provide rewards and discounts;
+`     <G2e><G1P>More promos;
+
+CUSTOMER SERVICE (NET)<Q>;
+`     <G2B><G1P>Reliable customer service in every location;
+`     <G1P>Be proactive In responding to customer issues;
+`     <G1P>Fix customer service;
+`     <G1P>GCash must have genuine care among its customers;
+`     <G1P>Quick response from customer service;
+`     <G2e><G1P>Improved services;
+
+FAST TRANSACTION (NET)<Q>;
+`     <G2B><G1P>Faster  transactions;
+`     <G1P>Send money quickly;
+`     <G2e><G1P>Fast service;
+
+ACCESSIBILITY (NET)<Q>;
+`     <G2B><G1P>Can be used anywhere;
+`     <G1P>It still can be use even if SIM card was lost;
+`     <G1P>To have more store outlet;
+`     <G2e><G1P>Gcash must be used for all transactions, not all businesses accept online transactions;
+
+NOTIFCATIONS/CONFIRMATION (NET)<Q>;
+`     <G2B><G1P>Confirmation must not be delayed when sending money;
+`     <G2e><G1P>Notification must be given every transaction;
+
+AVOID SERVICE DOWNTIME (NET)<Q>;
+`     <G2B><G1P>Must avoid missing GCash transaction issues;
+`     <G1P>Settle issues on transaction;
+`     <G1P>Must not always be under maintenance;
+`     <G1P>Lessen updates;
+`     <G1P>Must be always online/have no service downtime so we can access all the time;
+`     <G2e><G1P>Fix the logs/loading;
+
+REQUIREMENTS (NET)<Q>;
+`     <G2B><G1P>Create a product that will not require ID as a requirement;
+`     <G1P>Reduce the number of requirements required to verify or open an account;
+`     <G1P>Student ID must be accepted for verification;
+`     <G2e><G1P>Verification make it fast;
+
+ACCESS GCASH EVEN WITHOUT DATA/INTERNET CONNECTION (NET)<Q>;
+`     <G1P>Must be able to access GCash even without data/internet connection;
+
+ACCESS TO GCASH AMONG KIDS/CHILDREN (NET)<Q>;
+`     <G1P>Kids must be able to use Gcash;
+
+ACCESSIBILITY WHEN NOT FULLY VERIFIED (NET)<Q>;
+`     <G1P>Must be able to use even if not fully verified;
+
+REGISTRATION PROCESS (NET)<Q>;
+`     <G1P>Easy and simple registration process;
+
+<g1e>CAN USE FOR DIFFERENT TRANSACTIONS/SERVICES (NET)<Q>;
+`     <G2B><G1P>Have insurance;
+`     <G1P>Can use as payment in transportation;
+`     <G2e><G1P>Can loan;
+
+OTHERS (NET)<Q>;
+`     <G1P>Need explanation for some features;
+
+VAGUE (NET);
+No comments;
+Don't know;
+NONE;
+
+Missing answers<Z>;
+Total count<C>",

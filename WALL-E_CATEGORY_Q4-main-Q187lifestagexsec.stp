@@ -48,6 +48,360 @@ DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
 
+DM $Lifestage21to22 =
+($T_Q1_1/13..17),
+($T_Q1_1/18..20)+(($T_Q1_1/21..22).($A_Q187new/5)),
+($T_Q1_1/13..20)+(($T_Q1_1/21..22).($A_Q187new/5)),
+($T_Q1_1/23..30)+(($T_Q1_1/21..22).($A_Q187new/N5)),
+($T_Q1_1/31..35),
+($T_Q1_1/23..35)+(($T_Q1_1/21..22).($A_Q187new/N5)),
+($T_Q1_1/36..45),
+($T_Q1_1/46..65),
+($T_Q1_1/36..65),
+
+[*DATA lifestage21to22name (;)=
+High School Youth;
+College Youth;
+TOTAL YOUTH;
+Yuppies;
+Transitioners;
+Yuppies+Transitioners;
+Balancers;
+Older Adults;
+Balancers+Older Adults]
+
+DM $Regions = 
+$Q3/1,
+$Q3/2+3+4+5,
+$Q3/6+7+8,
+$Q3/9+10+11,
+$Q3/12+13+14+15+16+17,
+
+[*DATA regionsname (;)=
+Metro Manila;
+North-Central Luzon;
+South Luzon;
+Visayas;
+Mindanao]
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew1 = T,
+         ($SEC19/1+2),
+           ($SEC19/3),
+           ($SEC19/4),
+           ($SEC19/3+4),
+         [*DO A = 1:9]
+           $Lifestage21to22/[A],
+         [*END A]
+         [*DO A = 1:5]
+           $Regions/[A],
+         [*END A]
+         
+HT = "HEADER 1. LIFESTAGE - SEC - MACROREGION",
+H  = "
+TOTAL*(a);
+BY SEC***
+ABC1 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C2 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+D *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C2D *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+
+BY LIFESTAGE***
+[*DO A = 1:9]
+[lifestage21to22name.A] *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+[*END A]
+
+BY REGION***
+[*DO A = 1:5]
+[regionsname.A] *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])[*SLE];
+[*END A]",
+
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew2 = T,
+           [*DO A = 1:9]
+           ($Lifestage21to22/[A]).($SEC19/1+2),
+           ($Lifestage21to22/[A]).($SEC19/3),
+           ($Lifestage21to22/[A]).($SEC19/4),
+           ($Lifestage21to22/[A]).($SEC19/3+4),
+           [*END A]
+         
+HT = "HEADER 2. LIFESTAGE X SEC",
+H  = "
+TOTAL*(a);
+[*DO A = 1:9]
+[lifestage21to22name.A]***
+ABC1 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C2 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+D *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C2D *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])[*SLE];
+[*END A]",
+
+[*DATA HGnew3name (;)= 
+HIGH SCHOOL YOUTH X C2D;
+COLLEGE YOUTH X C2D;
+TOTAL YOUTH X ABC1;
+TOTAL YOUTH X C2D;
+
+YUPPIES+TRANSITIONERS X C2;
+YUPPIES+TRANSITIONERS X D;
+YUPPIES+TRANSITIONERS X ABC1;
+
+BALANCERS X C2D;
+BALANCERS+OLDER ADULTS X ABC1]
+
+DM $HGnew3 = 
+($Lifestage21to22/1).($SEC19/3+4),
+($Lifestage21to22/2).($SEC19/3+4),
+($Lifestage21to22/3).($SEC19/1+2),
+($Lifestage21to22/3).($SEC19/3+4),
+
+($Lifestage21to22/6).($SEC19/3),
+($Lifestage21to22/6).($SEC19/4),
+($Lifestage21to22/6).($SEC19/1+2),
+
+($Lifestage21to22/7).($SEC19/3+4),
+($Lifestage21to22/9).($SEC19/1+2),
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew3a = 
+T,
+[*DO A = 1:4]
+($HGnew3/[A]).($Regions/1),
+($HGnew3/[A]).($Regions/2),
+($HGnew3/[A]).($Regions/3),
+($HGnew3/[A]).($Regions/4),
+($HGnew3/[A]).($Regions/5),
+[*END A]
+HT = "HEADER 3a. LIFESTAGE X SEC X MACROREGION",
+H  = "
+TOTAL*(a);
+[*DO A = 1:4]
+[HGnew3name.A]***
+NCR *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+NCL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+SL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+VIS *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+MIN *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])[*SLE];
+[*END A]",
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew3b = 
+T,
+[*DO A = 5:9]
+($HGnew3/[A]).($Regions/1),
+($HGnew3/[A]).($Regions/2),
+($HGnew3/[A]).($Regions/3),
+($HGnew3/[A]).($Regions/4),
+($HGnew3/[A]).($Regions/5),
+[*END A]
+HT = "HEADER 3b. LIFESTAGE X SEC X MACROREGION",
+H  = "
+TOTAL*(a);
+[*DO A = 5:9]
+[HGnew3name.A]***
+NCR *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+NCL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+SL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+VIS *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+MIN *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])[*SLE];
+[*END A]",
+
+[*DATA HGnew4name (;) =
+TOTAL ABC1;
+TOTAL C2;
+TOTAL D;
+TOTAL C2D]
+
+DM $SECnew4 = 
+$SEC19/1+2,
+$SEC19/3,
+$SEC19/4,
+$SEC19/3+4,
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew4 = 
+T,
+[*DO A = 1:4]
+($SECnew4/[A]).($Regions/1),
+($SECnew4/[A]).($Regions/2),
+($SECnew4/[A]).($Regions/3),
+($SECnew4/[A]).($Regions/4),
+($SECnew4/[A]).($Regions/5),
+[*END A]
+HT = "HEADER 4. SEC X MACROREGION",
+H  = "
+TOTAL*(a);
+[*DO A = 1:4]
+[HGnew4name.A]***
+NCR *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+NCL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+SL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+VIS *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+MIN *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])[*SLE];
+[*END A]",
+
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew5 = T,
+           [*DO A = 1:9]
+           ($Lifestage21to22/[A]).($Regions/1),
+           ($Lifestage21to22/[A]).($Regions/2),
+           ($Lifestage21to22/[A]).($Regions/3),
+           ($Lifestage21to22/[A]).($Regions/4),
+           ($Lifestage21to22/[A]).($Regions/5),
+           [*END A]
+HT = "HEADER 5. LIFESTAGE X MACROREGION",
+H  = "
+TOTAL*(a);
+[*DO A = 1:9]
+[lifestage21to22name.A]***
+NCR *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+NCL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+SL *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+VIS *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+MIN *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])[*SLE];
+[*END A]",
+
+
+[*SET S = 1]
+[*SET SS = 0]
+DM $HGnew6 = T,
+           ($Lifestage21to22/6+9).($SEC19/1+2),
+           ($Lifestage21to22/6+9).($SEC19/1),
+           ($Lifestage21to22/6+9).($SEC19/2),
+           ($Lifestage21to22/6+9).($SEC19/3),
+           ($Lifestage21to22/6+9).($SEC19/4),
+           ($Lifestage21to22/6+9).($SEC19/3+4),
+HT = "HEADER 6. LIFESTAGE X SEC",
+H  = "
+TOTAL*(a);
+YUPPIES + TRANSITIONERS + BALANCERS + OLDER ADULTS***
+ABC1 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+AB *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C1 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C2 *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+D *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7]);
+C2D *([*BLOCK 8 on S.GE.26][&[+SS]][*8][*SK 7 on S.GE.26][~[+S]][*7])",
+
+
+
+DM $BRAND_LAD_Q45 = 
+[*DO A = 1:51]
+$TQ16d/[A],
+($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
+($TQ16a/N[A]).($TQ16b/[A]),
+$TQ16a/[A],
+$TQ17l/[A],
+$TQ17d/[A],
+$TQ17f/[A],
+$TQ17e/[A],
+$TQ17a/[A],
+$TQ17c/[A],
+$TQ17k/[A],
+$TQ17b/[A],
+$TQ17o/[A],
+$TQ16e/[A],
+$TQ16g/[A],
+$T_Q45_[Q17CODES.A]/1+2,
+[*enda]
+VT = "Q16-Q17. BRAND FUNNEL",
+V = "
+[*DOA=1:51]
+[Q17ACCT.A]\
+`     Q16d. Total Awareness;
+`     Q16c. Aided;
+`     Q16b. Other spontaneous;
+`     Q16a. TOM;
+`     Q17l. Ever downloaded;
+`     Q17d. With Existing Acc;
+`     Q17f. Ever Tried;
+`     Q17e. P6M;
+`     Q17a. P2M;
+`     Q17c. P4W;
+`     Q17k. P1W;
+`     Q17b. BUMO;
+`     Q17o. P1M;
+`     Q16e. Favorite;
+`     Q16g. Recommended;
+`     Q45. Consideration[*sle];
+[*ENDA]",
+
+
+!=========
+[*DO A = 1:25]
+DM $BRDLADDER[A]nonuser = 
+($TQ194d/[A])+($TQ194a/[A])+($TQ194b/[A])+($TQ194c/[A]),
+($TQ194c/[A]).($TQ194a/n[A]).($TQ194b/n[A]),
+($TQ194b/[A]).($TQ194a/n[A]).($TQ194c/n[A]),
+($TQ194a/[A]).($TQ194b/n[A]).($TQ194c/n[A]),
+($TQ195a/[A]),
+($TQ195b/[A]),
+($TQ196/[A]),
+
+VT = "GCASH USED CASES LADDER",
+V = "[GBRAND.A]\
+`    TOTAL AWARENESS;
+`    Aided Awareness;
+`    Other Spontaneous;
+`    TOM;
+`    EVER USED;
+`    USED IN THE P2M;
+`    CONSIDERATION",
+[*END A]
+
+DM $TDO1smartphone = 
+$A_DO1/1+2,
+R,F,
+VT = "DO1. SMARTPHONE PENETRATION",
+V = "
+Smartphone users;
+
+No Answer<z>;
+Total Count<C>",
+
+!=========
+DM $TQ66anew = 
+$A_Q66a/1+($Q66a_91_other/1022),
+$A_Q66a/2+($Q66a_91_other/1037),
+$A_Q66a/3+($Q66a_91_other/1020+1023+1031+1033+1040+1041+1042+1044+1032+1045+1046+1049),
+$A_Q66a/4+($Q66a_91_other/5135),
+$A_Q66a/5,
+$A_Q66a/6+($Q66a_91_other/1024+1035),
+$A_Q66a/7,
+$A_Q66a/30+31,
+$A_Q66a/8+($Q66a_91_other/1026+1027+1028+1029+1025+1030+1034+1036+1038+1039+1043+1047+1048+1050),
+$Q66a_91_other/1016,
+
+$Q66a_91_other/9997,
+$A_Q66a/99+$Q66a_91_other/9999,
+!$A_Q66a/91,
+R,F,
+VT = "Q66a. INTERNET CONNECTION (ACCESS POINT)",
+V = "
+Internet Cafe/Pisonet (internet access using computer owned by shop);
+Office/School internet;
+Mobile Data from Prepaid or Postpaid SIM subscription;
+Free Public Wi-Fi (free internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc.); 
+Paid Public Wi-Fi(internet access in public places like malls, coffee shops/cafes, restaurants, bus, airport, parks, train/bus stations, terminals, city/municipal hall, etc., paid access after exceeding free GB); 
+Mobile Hotspot/Tether from a family/ relative/ friend;
+Wi-Fi Tingi/WiFi Hotspot Voucher (bought from store/electronic machine or kiosk/other retailers, provided with username and password, with time validity and limited data/GB allocation); 
+Owned paid access to internet connection/Wi-Fi at home (i.e. PLDT, Converge, etc.);
+Paid access to internet connection/Wi-Fi at home of neighbor/relative/friend (shared payment agreement); 
+
+Free access to internet connection/Wi-Fi at home of neighbor/relative/friend;
+Refused;
+NONE;
+
+No Answer<z>;
+Total Count<C>", 
+
 IF $Q42023/NB+$Q12024/NB+$Q22024/NB, WRITE,
   
 !lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
@@ -84,7 +438,7 @@ F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HEADERWAVE3 = HA,HB,HC]
+[*DATA HEADERWAVE3 = HGnew1,HGnew2,HGnew3a,HGnew3b,HGnew4,HGnew5,HGnew6]
 
 
 !
@@ -133,7 +487,141 @@ SELECT WR $WTS,
 
 
 !======
-IF ($Q187NEW/NB).($T_Q1_1/21..22), THEN,
+[*DO Z = 1:7]
+T #[+T] = $BRAND_LAD_Q45 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:7]
+T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:7]
+T #[+T] = $BRAND_LAD_Q45 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+
+!======
+[*DO Z = 1:7]
+IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*DO A = 2:25]
+IF $A_Q16d/1, +T #[+T] = $BRDLADDER[A] * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*END A]
+[*END Z]
+
+
+if $Q17i/1, then,
+[*DO Z = 1:7]
+IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE", 
+[*DO A = 2:25]
+IF $A_Q16d/1, +T #[+T] = $BRDLADDER[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE", 
+[*END A]
+[*END Z]
+END IF,
+
+
+
+if $Q17i/2, then,
+[*DO Z = 1:7]
+IF $A_Q16d/1, T #[+T] = $BRDLADDER1nonuser * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE", 
+[*DO A = 2:25]
+IF $A_Q16d/1, +T #[+T] = $BRDLADDER[A]nonuser * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE", 
+[*END A]
+[*END Z]
+END IF,
+
+
+
+
+
+!======
+[*DO Z = 1:7]
+T #[+T] = $TDO1smartphone * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:7]
+T #[+T] = $TDO1smartphone * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:7]
+T #[+T] = $TDO1smartphone * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+
+
+
+!======
+[*DO Z = 1:7]
+T #[+T] = $TQ66anew * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:7]
+T #[+T] = $TQ66anew * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:7]
+T #[+T] = $TQ66anew * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+[*SK 1]
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQ1_1 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:3]
+T #[+T] = $TQ1_1 * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+[*DO Z = 1:3]
+T #[+T] = $TQ1_1 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+!======
+IF ($T_Q1_1/21..22), THEN,
 [*DO Z = 1:3]
 T #[+T] = $TQ187new * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
@@ -153,7 +641,7 @@ BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 END IF,
-
+[*1]
 
 
 

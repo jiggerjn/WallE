@@ -1,4 +1,4 @@
-DM $WT = 
+DM $WT21to65 = 
 !=== USER
 !=== GMA
 $OCT2023/NB.$Q17i/1.$Q4/1.($Q3/1).$SEC19/1..2,
@@ -1117,7 +1117,7 @@ APR 2024 NON-USER\
 `     RURAL/MIN/D",
 
 
-DW $WTS = $WT(
+DW $WTS21to65 = $WT21to65(
 0.9956,
 1.8336,
 1.4845,
