@@ -1,0 +1,436 @@
+
+
+!-----------MultiSelect
+DM $A_Q102 = $25069/1,$25070/1,$25071/1,$25072/1,$25073/1,$25074/1,$25075/1,$25076/1,$25077/1,$Blank/10-90,$25078/1,$Blank/92-98,$25079/1,
+
+!-----------MultiSelect
+DM $A_Q102B = $25335/1,$25336/1,$25337/1,$25338/1,$25339/1,$25340/1,$25341/1,$25342/1,$25343/1,$25344/1,$25345/1,
+
+!-----------Unique
+DM $Q102C = $25346-25347/1-99,
+
+!-----------MultipleTopics18
+DM $T_Q103_1 = $25092/1-9,'0',
+DM $T_Q103_2 = $25093/1-9,'0',
+DM $T_Q103_3 = $25094/1-9,'0',
+DM $T_Q103_4 = $25095/1-9,'0',
+DM $T_Q103_5 = $25096/1-9,'0',
+DM $T_Q103_6 = $25097/1-9,'0',
+DM $T_Q103_7 = $25098/1-9,'0',
+DM $T_Q103_8 = $25099/1-9,'0',
+DM $T_Q103_9 = $25100/1-9,'0',
+DM $T_Q103_10 = $25101/1-9,'0',
+DM $T_Q103_11 = $25102/1-9,'0',
+DM $T_Q103_12 = $25103/1-9,'0',
+DM $T_Q103_13 = $25104/1-9,'0',
+DM $T_Q103_14 = $25105/1-9,'0',
+DM $T_Q103_15 = $25106/1-9,'0',
+DM $T_Q103_16 = $25107/1-9,'0',
+DM $T_Q103_17 = $25108/1-9,'0',
+DM $T_Q103_18 = $25109/1-9,'0',
+
+
+!-----------MultipleTopicsSelect18
+
+DM $T_Q104_1 = $25110/1,$25111/1,$25112/1,$25113/1,$25114/1,$25115/1,$25116/1,$25117/1,$25118/1,$Blank/10-90,$25119/1,$Blank/92-98,$25120/1,
+DM $T_Q104_2 = $25121/1,$25122/1,$25123/1,$25124/1,$25125/1,$25126/1,$25127/1,$25128/1,$25129/1,$Blank/10-90,$25130/1,$Blank/92-98,$25131/1,
+DM $T_Q104_3 = $25132/1,$25133/1,$25134/1,$25135/1,$25136/1,$25137/1,$25138/1,$25139/1,$25140/1,$Blank/10-90,$25141/1,$Blank/92-98,$25142/1,
+DM $T_Q104_4 = $25143/1,$25144/1,$25145/1,$25146/1,$25147/1,$25148/1,$25149/1,$25150/1,$25151/1,$Blank/10-90,$25152/1,$Blank/92-98,$25153/1,
+DM $T_Q104_5 = $25154/1,$25155/1,$25156/1,$25157/1,$25158/1,$25159/1,$25160/1,$25161/1,$25162/1,$Blank/10-90,$25163/1,$Blank/92-98,$25164/1,
+DM $T_Q104_6 = $25165/1,$25166/1,$25167/1,$25168/1,$25169/1,$25170/1,$25171/1,$25172/1,$25173/1,$Blank/10-90,$25174/1,$Blank/92-98,$25175/1,
+DM $T_Q104_7 = $25176/1,$25177/1,$25178/1,$25179/1,$25180/1,$25181/1,$25182/1,$25183/1,$25184/1,$Blank/10-90,$25185/1,$Blank/92-98,$25186/1,
+DM $T_Q104_8 = $25187/1,$25188/1,$25189/1,$25190/1,$25191/1,$25192/1,$25193/1,$25194/1,$25195/1,$Blank/10-90,$25196/1,$Blank/92-98,$25197/1,
+DM $T_Q104_9 = $25198/1,$25199/1,$25200/1,$25201/1,$25202/1,$25203/1,$25204/1,$25205/1,$25206/1,$Blank/10-90,$25207/1,$Blank/92-98,$25208/1,
+DM $T_Q104_10 = $25209/1,$25210/1,$25211/1,$25212/1,$25213/1,$25214/1,$25215/1,$25216/1,$25217/1,$Blank/10-90,$25218/1,$Blank/92-98,$25219/1,
+DM $T_Q104_11 = $25220/1,$25221/1,$25222/1,$25223/1,$25224/1,$25225/1,$25226/1,$25227/1,$25228/1,$Blank/10-90,$25229/1,$Blank/92-98,$25230/1,
+DM $T_Q104_12 = $25231/1,$25232/1,$25233/1,$25234/1,$25235/1,$25236/1,$25237/1,$25238/1,$25239/1,$Blank/10-90,$25240/1,$Blank/92-98,$25241/1,
+DM $T_Q104_13 = $25242/1,$25243/1,$25244/1,$25245/1,$25246/1,$25247/1,$25248/1,$25249/1,$25250/1,$Blank/10-90,$25251/1,$Blank/92-98,$25252/1,
+DM $T_Q104_14 = $25253/1,$25254/1,$25255/1,$25256/1,$25257/1,$25258/1,$25259/1,$25260/1,$25261/1,$Blank/10-90,$25262/1,$Blank/92-98,$25263/1,
+DM $T_Q104_15 = $25264/1,$25265/1,$25266/1,$25267/1,$25268/1,$25269/1,$25270/1,$25271/1,$25272/1,$Blank/10-90,$25273/1,$Blank/92-98,$25274/1,
+DM $T_Q104_16 = $25275/1,$25276/1,$25277/1,$25278/1,$25279/1,$25280/1,$25281/1,$25282/1,$25283/1,$Blank/10-90,$25284/1,$Blank/92-98,$25285/1,
+DM $T_Q104_17 = $25286/1,$25287/1,$25288/1,$25289/1,$25290/1,$25291/1,$25292/1,$25293/1,$25294/1,$Blank/10-90,$25295/1,$Blank/92-98,$25296/1,
+DM $T_Q104_18 = $25297/1,$25298/1,$25299/1,$25300/1,$25301/1,$25302/1,$25303/1,$25304/1,$25305/1,$Blank/10-90,$25306/1,$Blank/92-98,$25307/1,
+
+
+
+!-----------MultipleTopics4
+
+DM $T_Q105_1 = $25308/1-9,'0',
+DM $T_Q105_2 = $25309/1-9,'0',
+DM $T_Q105_3 = $25310/1-9,'0',
+DM $T_Q105_4 = $25311/1-9,'0',
+
+
+
+!-----------Unique
+DM $Q106 = $25312/1-9,'0',
+
+
+!-----------MultiSelect
+DM $A_Q107 = $25313/1,$25314/1,$25315/1,$25316/1,$25317/1,$25318/1,$25319/1,$25320/1,$25321/1,$25322/1,$25323/1,$25324/1,$25325/1,$25326/1,$25327/1,$25328/1,$25329/1,$25330/1,$25331/1,$25332/1,$25333/1,$25334/1,
+
+
+!-----------Unique
+DM $Q125 = $25524/1-9,'0',
+
+!=======================MultiSelect
+
+DM $TQ102 =
+$A_Q102/1,
+$A_Q102/2,
+$A_Q102/3,
+$A_Q102/4,
+$A_Q102/5,
+$A_Q102/6,
+$A_Q102/7,
+$A_Q102/8,
+$A_Q102/9,
+$Q102_91_other/1021+1022+1023+1024,
+$A_Q102/99,
+R,F,
+VT = "Q102. MODES OF PAYMENT AWARE OF",
+V = "
+Cash;
+Check;
+Debit Card;
+Credit Card;
+Banks (with physical branches and ATMs);
+Remittance Centers;
+E-Wallet/ Fintech;
+Mobile/ Online Banking App;
+E-remittance App;
+VAGUE NET;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!=======================MultiSelect
+
+DM $TQ102B =
+$A_Q102B/1,
+$A_Q102B/2,
+$A_Q102B/3,
+$A_Q102B/4,
+$A_Q102B/5,
+$A_Q102B/6,
+$A_Q102B/7,
+$A_Q102B/8,
+$A_Q102B/9,
+$Q102B_91_other/1021+1022+1023+1024,
+$A_Q102B/11,
+R,F,
+VT = "Q102B. MODES OF PAYMENT CURRENTLY USING",
+V = "
+Cash;
+Check;
+Debit Card;
+Credit Card;
+Banks (with physical branches and ATMs);
+Remittance Centers;
+E-Wallet/ Fintech;
+Mobile/ Online Banking App;
+E-remittance App;
+VAGUE NET;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+if $Q102C/10, dm $Q102c_other = $Q102B_91_other,
+DM $TQ102C =
+$Q102C/1,
+$Q102C/2,
+$Q102C/3,
+$Q102C/4,
+$Q102C/5,
+$Q102C/6,
+$Q102C/7,
+$Q102C/8,
+$Q102C/9,
+$Q102c_other/1021+1022+1023+1024,
+$Q102C/11,
+R,F,
+VT = "Q102C. MODES OF PAYMENT USED MOST OFTEN",
+V = "
+Cash;
+Check;
+Debit Card;
+Credit Card;
+Banks (with physical branches and ATMs);
+Remittance Centers;
+E-Wallet/ Fintech;
+Mobile/ Online Banking App;
+E-remittance App;
+VAGUE NET;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!=======================MultipleTopics18
+
+[*SET s = 0]
+[*DATA topic0 (;) = 
+Can be used whenever needed (any time and any day);
+Makes everyday life easier;
+Can be used anywhere (widely accepted, online and in-store);
+Has low to no transaction fees;
+I can depend on for emergency or additional funds;
+Helps me get ready for a better tomorrow;
+For everyone (young or old, rich or poor);
+Safe and secure to use for different financial transactions;
+Faster transactions;
+Convenient to use for different financial transactions;
+Is the mode of payment I use for my most important financial transactions;
+I feel comfortable using it for my different financial transactions;
+Hassle-free and easy to use;
+Gives me perks, rewards, deals, and discounts that are relevant to me Nagbibigay sa akin ng mga perks, rewards, deals, at discounts na naaangkop sa akin;
+Is the mode of payment that I can use for any and all of financial transactions;
+Convenient to send money anytime, anywhere for free;
+Low foreign exchange rates for purchases abroad;
+Accepted as payment in different countries with no service fees]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
+DM $TQ103_[A] =
+$T_Q103_[A]/
+1,
+2,
+3,
+4,
+5,
+4+5,
+5,
+1+2,
+
+R,F,
+VT = "Q103. STATED IMPORTANCE - MODE OF PAYMENT",
+V = "
+[topic0.[+s]]\
+`    Not important at all (1) <v1>;
+`    Somewhat not important (2) <v2>;
+`    May or may not be important (3) <v3>;
+`    Somewhat important (4) <v4>;
+`    Very important (5) <v5>;
+T2B <Q>;
+TB <Q>;
+B2B <Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+[*SET S = 0]
+DM $TQ103_TB =
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
+$T_Q103_[A]/5,
+[*END A]
+F,
+VT = "Q103. STATED IMPORTANCE - MODE OF PAYMENT - TB SUMMARY",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
+[topic0.[+s]];
+[*END A]
+Total count<C>",
+
+!=======================MultipleTopicsSelect18
+
+
+[*DO B = 1:9]
+[*SET s = 0]
+DM $TQ104R[B] =
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
+$T_Q104_[A]/[B],
+[*END A]
+R,F,
+VT = "Q104. ASSOCIATION - MODE OF PAYMENT",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
+[topic0.[+s]];
+[*END A]
+Not Associated<Z>;
+Total count<C>",
+[*END B]
+
+
+
+!=======================MultipleTopics4
+
+[*SET s = 0]
+[*DATA topic1 (;) = 
+GCash is better than cash;
+Cash is better than GCash;
+GCash is as good as cash;
+GCash is the best way to pay]
+
+[*FOR A = 1:2:3:4]
+DM $TQ105_[A] =
+$T_Q105_[A]/
+1,
+2,
+3,
+4,
+5,
+4+5,
+5,
+1+2,
+R,F,
+VT = "Q105. CASH VERSUS GCASH - AGREEMENT SCALE",
+V = "
+[topic1.[+s]]\
+`    Strongly Disagree (1) <v1>;
+`    Disagree (2) <v2>;
+`    Can't say if I agree or disagree (3) <v3>;
+`    Agree (4) <v4>;
+`    Strongly agree (5) <v5>;
+T2B <Q>;
+TB <Q>;
+B2B <Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+[*SET S = 0]
+DM $TQ105_TB =
+[*FOR A = 1:2:3:4]
+$T_Q105_[A]/5,
+[*END A]
+F,
+VT = "Q105. CASH VERSUS GCASH - AGREEMENT SCALE - TB SUMMARY",
+V = "
+[*FOR A = 1:2:3:4]
+[topic1.[+s]];
+[*END A]
+Total count<C>",
+
+
+
+[*SET S = 0]
+DM $TQ105_T2B =
+[*FOR A = 1:2:3:4]
+$T_Q105_[A]/4+5,
+[*END A]
+F,
+VT = "Q105. CASH VERSUS GCASH - AGREEMENT SCALE - TB2 SUMMARY",
+V = "
+[*FOR A = 1:2:3:4]
+[topic1.[+s]];
+[*END A]
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQ106 =
+$Q106/
+1,
+2,
+3,
+R,F,
+VT = "Q106. CASH VERSUS GCASH FORCED CHOICE",
+V = "
+GCash is better than cash;
+Cash is better than GCash;
+GCash is as good as cash;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQ107 =
+$A_Q107/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+R,F,
+VT = "Q107. REASON FOR SELECTION AMONG ANSWERED GCASH IS BETTER THAN CASH",
+V = "
+Creates new and continuously innovate its products and services;
+GCash is safe and secure;
+Provides relevant digital products and services;
+Can be used whenever needed (any time and any day);
+Makes everyday life easier;
+Has reliable customer service when needed;
+Gives me perks, rewards, deals, and discounts that are relevant to me;
+Opens up opportunities to progress more in life;
+Can be used anywhere (widely accepted, online and in-store);
+Has low to no transaction fees;
+Has features that can help me assure my future by growing my finances;
+Complete and all-in one financial app/ solution/ website;
+GCash is trustworthy;
+Products and services are easy to avail of and use;
+GCash helps customers to develop their financial skills and understanding;
+I can depend on to GCash for emergency or additional funds;
+Helps me get ready for a better tomorrow;
+Convenient to send money anytime, anywhere for free;
+Hassle-free payments;
+Easier access to exclusive deals and discounts;
+Low  foreign exchange rates and exclusive deals abroad;
+Accepted as payment in different countries with no service fees;
+Missing answers<Z>;
+Total count<C>",
+
+DM $HMOP(9),
+HT = "Mode of Payment Header",
+H = "
+Cash *(a);
+Check *(b);
+Debit Card *(c);
+Credit Card *(d);
+Banks (with physical branches and ATMs) *(e);
+Remittance Centers *(f);
+E-Wallet/ Fintech *(g);
+Mobile/ Online Banking App *(h);
+E-remittance App *(i)",
+
+DM $TQ125 =
+$Q125/
+1,
+2,
+3,
+4,
+5,
+4+5,
+5,
+1+2,
+R,F,
+VT = "Q125. GCASH IS SYNONYMOUS WITH E-WALLET/ FINTECH",
+V = "
+Strongly Disagree (1) <v1>;
+Disagree (2) <v2>;
+Can't say if I agree or disagree (3) <v3>;
+Agree (4) <v4>;
+Strongly agree (5) <v5>;
+T2B <Q>;
+TB <Q>;
+B2B <Q>;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
