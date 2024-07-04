@@ -8212,7 +8212,7 @@ Total Count<C>",
 !========= - Q2 ADDITIONAL
 [*DATA DA3 (;) =
 I prefer to manage as many aspects of my life via digital channels (ex. mobile phone, laptop, etc.) as possible;
-I�m confused about all of the different financial products/services available these days]
+I'm confused about all of the different financial products/services available these days]
 
 [*DO A = 1:2]
 DM $TDA3_[A] = $T_DA3_[A]/1-5,4+5,1+2,R,F,
@@ -8556,7 +8556,7 @@ OTHERS (NET)<Q>;
 `     <G1P>Use to it;
 `     <G1P>Featuristic;
 `     <G1P>Don't use gcash much;
-`     <G1P>Don�t know their promo;
+`     <G1P>Don't know their promo;
 `     <G1P>I'm not sure if everyone wants gcash;
 `     <G1P>More improved;
 `     <G1P>Well-know than other Ewallet;
@@ -8600,7 +8600,7 @@ DIFFICULT TO USE (NET)<Q>;
 `     <G1P>Difficult to use;
 
 LACK OF KNOWLEDGE ON FEATURES (NET)<Q>;
-`     <G1P>Don�t know some features;
+`     <G1P>Don't know some features;
 
 VERIFICATION AND REGISTRATION PROCESS ISSUE (NET)<Q>;
 `     <G2B><G1P>Verification is difficult;

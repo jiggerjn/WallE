@@ -1,8 +1,8 @@
 START CONTROL,
 *PROJECT WALLE (DECEMBER 2, 2022)
 
-C = WALLE_APRIL24V2.asc;WALLE_MAY2024.asc;WALLE_JUNE2024V2.asc,
-!C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
+!C = WALLE_APRIL24V2.asc;WALLE_MAY2024.asc;WALLE_JUNE2024V2.asc,
+C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 !C = .asc,
 Y,
 OLDNAMES,
@@ -60,7 +60,7 @@ DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
 
-IF $Q12024/nb+$Q22024/NB, WRITE,
+IF $Q42023/NB+$Q12024/NB+$Q22024/NB, WRITE,
   
 !lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
 
@@ -97,7 +97,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HA,HB,HC,HD]
-[*DATA HEADERWAVE3 = HA,HB,HC]
+[*DATA HEADERWAVE3 = HAT,HBT,HCT]
 
 
 !
@@ -140,7 +140,7 @@ URBAN,
 RURAL]
 
 
-!SELECT WR $WTS,
+SELECT WR $WTS,
 
 [*SET T = 0]
 
@@ -153,7 +153,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -161,7 +161,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -170,7 +170,7 @@ end if,
 
  
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b2_inci[A] * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
@@ -180,7 +180,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b2_inci[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
@@ -191,7 +191,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b2_inci[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
@@ -202,7 +202,7 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b2R[A] * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
@@ -212,7 +212,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b2R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
@@ -223,7 +223,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b2R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
@@ -235,14 +235,14 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8d * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8d * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -251,7 +251,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8d * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -263,7 +263,7 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -272,7 +272,7 @@ BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -282,7 +282,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -296,7 +296,7 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
@@ -305,7 +305,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
@@ -315,7 +315,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
@@ -329,7 +329,7 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -338,7 +338,7 @@ BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -349,7 +349,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -364,7 +364,7 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
@@ -373,7 +373,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
@@ -384,7 +384,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
@@ -403,14 +403,14 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8f * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8f * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -418,7 +418,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8f * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -430,20 +430,20 @@ end if,
 
 
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8b2_count * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8b2_count * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 end if,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8b2_count * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -456,20 +456,20 @@ end if,
 
 
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_count * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_count * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
 [*END Z]
 end if,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_count * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
 [*END Z]
@@ -480,20 +480,20 @@ end if,
 
 
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8b2_combi * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8b2_combi * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 end if,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ8b2_combi * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -505,20 +505,20 @@ end if,
 
 
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_combi * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_combi * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
 [*END Z]
 end if,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_combi * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
 [*END Z]
@@ -536,7 +536,7 @@ om $Q8B1 = $T_Q8b1_[L.A],
 [*enda]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b1_[Q8B2.A]/(5+6).(7..10), T #[+T] = $TQ193a[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B2STUBS.A]",
@@ -545,7 +545,7 @@ BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b1_[Q8B2.A]/(5+6).(7..10), T #[+T] = $TQ193a[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B2STUBS.A]",
@@ -556,7 +556,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b1_[Q8B2.A]/(5+6).(7..10), T #[+T] = $TQ193a[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B2STUBS.A]",
@@ -572,14 +572,14 @@ end if,
 
 
 !====== REGARDLESS
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q8B1/(5+6).(7..10), T #[+T] = $TQ193a * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M",
 [*END Z]
 
 if $Q17i/1, then,
 !====== REGARDLESS
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q8B1/(5+6).(7..10), T #[+T] = $TQ193a * $[HEADERWAVE3.Z],
 BT = "ALL USERS AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M",
 [*END Z]
@@ -588,7 +588,7 @@ end if,
 
 if $Q17i/2, then,
 !====== REGARDLESS
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q8B1/(5+6).(7..10), T #[+T] = $TQ193a * $[HEADERWAVE3.Z],
 BT = "ALL NON USERS AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M",
 [*END Z]
@@ -598,7 +598,7 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b1_[Q8B2.A]/(5+6).(7..10), T #[+T] = $TQ193b[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B2STUBS.A]",
@@ -607,7 +607,7 @@ BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b1_[Q8B2.A]/(5+6).(7..10), T #[+T] = $TQ193b[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B2STUBS.A]",
@@ -617,7 +617,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:7]
 IF $T_Q8b1_[Q8B2.A]/(5+6).(7..10), T #[+T] = $TQ193b[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M - [Q8B2STUBS.A]",
@@ -632,14 +632,14 @@ end if,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q8B1/(5+6).(7..10), T #[+T] = $TQ193b * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q8B1/(5+6).(7..10), T #[+T] = $TQ193b * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M",
 [*END Z]
@@ -648,7 +648,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $Q8B1/(5+6).(7..10), T #[+T] = $TQ193b * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P1M",
 [*END Z]
@@ -660,8 +660,8 @@ end if,
 
 
 !======
-if $NOV2023/nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF $Q8B1/(7).N(5..6+8..10+99), T #[+T] = $TQ193c * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE TRANSACTIONS WHO USE CASH ONLY",
 [*END Z]
@@ -669,8 +669,8 @@ END IF,
 
 !======
 if $Q17i/1, then,
-if $NOV2023/nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF $Q8B1/(7).N(5..6+8..10+99), T #[+T] = $TQ193c * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE TRANSACTIONS WHO USE CASH ONLY",
 [*END Z]
@@ -679,8 +679,8 @@ END IF,
 
 !======
 if $Q17i/2, then,
-if $NOV2023/nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF $Q8B1/(7).N(5..6+8..10+99), T #[+T] = $TQ193c * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE TRANSACTIONS WHO USE CASH ONLY",
 [*END Z]
@@ -694,7 +694,7 @@ END IF,
 !======
 
 IF $Q193dresp/1, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q193c/5,  T #[+T] = $TQ193d * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO DID NOT DO ANY TRANSACTION IN THE P1M",
 [*END Z]
@@ -703,7 +703,7 @@ END IF,
 
 IF $Q193dresp/1, THEN,
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q193c/5,  T #[+T] = $TQ193d * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO DID NOT DO ANY TRANSACTION IN THE P1M",
 [*END Z]
@@ -713,7 +713,7 @@ END IF,
 
 IF $Q193dresp/1, THEN,
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q193c/5,  T #[+T] = $TQ193d * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO DID NOT DO ANY TRANSACTION IN THE P1M",
 [*END Z]
@@ -733,14 +733,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF [*DO A = 1:9]$T_Q8b1_[Q8B2.A]/n5..6[*SLE].[*END A], T #[+T] = $TQ9b * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WITHOUT CODE 5,6 IN ANY OF THE FINANCIAL TRANSACTIONS IN Q8b1",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF [*DO A = 1:9]$T_Q8b1_[Q8B2.A]/n5..6[*SLE].[*END A], T #[+T] = $TQ9b * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WITHOUT CODE 5,6 IN ANY OF THE FINANCIAL TRANSACTIONS IN Q8b1",
 [*END Z]
@@ -748,7 +748,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF [*DO A = 1:9]$T_Q8b1_[Q8B2.A]/n5..6[*SLE].[*END A], T #[+T] = $TQ9b * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WITHOUT CODE 5,6 IN ANY OF THE FINANCIAL TRANSACTIONS IN Q8b1",
 [*END Z]
@@ -763,14 +763,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQFP1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQFP1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -778,7 +778,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQFP1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -792,14 +792,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/1..98, T #[+T] = $TQ70 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO CURRENTLY OWN FINANCIAL PRODUCTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/1..98, T #[+T] = $TQ70 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO CURRENTLY OWN FINANCIAL PRODUCTS",
 [*END Z]
@@ -808,7 +808,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_QFP1/1..98, T #[+T] = $TQ70 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO CURRENTLY OWN FINANCIAL PRODUCTS",
 [*END Z]
@@ -819,14 +819,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ72 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ72 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -835,7 +835,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ72 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -850,14 +850,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -865,7 +865,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -886,14 +886,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17a * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17a * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -901,7 +901,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17a * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -912,14 +912,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17b * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17b * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -927,44 +927,8 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17b * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END Z]
-END IF,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-!======
-[*DO Z = 1:1]
-T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
-
-if $Q17i/1, then,
-!======
-[*DO Z = 1:1]
-T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
-[*END Z]
-END IF,
-
-
-if $Q17i/2, then,
-!======
-[*DO Z = 1:1]
-T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 END IF,
@@ -979,8 +943,44 @@ END IF,
 
 
 
+
+
+
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+
+
+
+
+
+
+
+
+
+!======
+[*DO Z = 1:3]
 T #[+T] = $TQ17d * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
@@ -988,7 +988,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17d * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -997,7 +997,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17d * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1016,14 +1016,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17e * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17e * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -1031,7 +1031,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17e * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1046,14 +1046,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17f * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17f * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -1061,7 +1061,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17f * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1074,7 +1074,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $TQ17d/[A], T #[+T] = $TQ17h[A] * $[HEADERWAVE3.Z],
 BT = "AMONG WITH USERS OR WITH ACCOUNT - [Q17ACCT.A]",
@@ -1083,7 +1083,7 @@ BT = "AMONG WITH USERS OR WITH ACCOUNT - [Q17ACCT.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $TQ17d/[A], T #[+T] = $TQ17h[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG WITH USERS OR WITH ACCOUNT - [Q17ACCT.A]",
@@ -1094,7 +1094,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $TQ17d/[A], T #[+T] = $TQ17h[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG WITH USERS OR WITH ACCOUNT - [Q17ACCT.A]",
@@ -1109,20 +1109,20 @@ END IF,
 
 !======
 IF $FEB2024/NB+$MAR2024/NB, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17o * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17o * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17o * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1135,7 +1135,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $F64/[A], T #[+T] = $TQ16H[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NOMINATED BRANDS AWARE OF - [Q16NOMI.A]",
@@ -1144,7 +1144,7 @@ BT = "AMONG NOMINATED BRANDS AWARE OF - [Q16NOMI.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $F64/[A], T #[+T] = $TQ16H[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG NOMINATED BRANDS AWARE OF - [Q16NOMI.A]",
@@ -1154,7 +1154,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $F64/[A], T #[+T] = $TQ16H[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG NOMINATED BRANDS AWARE OF - [Q16NOMI.A]",
@@ -1201,7 +1201,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5:6:7:8:9:10:11:14:22:23:24:25:26:27:30:31:33:35:41:43:44:47]
 IF $TQ17f/[A], T #[+T] = $TQ17j[A] * $[HEADERWAVE3.Z],
 BT = "AMONG BRAND EVER USERS - [Q17ACCT.A]",
@@ -1210,7 +1210,7 @@ BT = "AMONG BRAND EVER USERS - [Q17ACCT.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5:6:7:8:9:10:11:14:22:23:24:25:26:27:30:31:33:35:41:43:44:47]
 IF $TQ17f/[A], T #[+T] = $TQ17j[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND EVER USERS - [Q17ACCT.A]",
@@ -1220,7 +1220,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5:6:7:8:9:10:11:14:22:23:24:25:26:27:30:31:33:35:41:43:44:47]
 IF $TQ17f/[A], T #[+T] = $TQ17j[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND EVER USERS - [Q17ACCT.A]",
@@ -1233,14 +1233,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17c/1).($T_Q17j_1/2), T #[+T] = $TQFMU * $[HEADERWAVE3.Z],
 BT = "AMONG P1M GCASH AND USERS AND HAS A FULLY VERIFIED ACCOUNT",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17c/1).($T_Q17j_1/2), T #[+T] = $TQFMU * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG P1M GCASH AND USERS AND HAS A FULLY VERIFIED ACCOUNT",
 [*END Z]
@@ -1248,7 +1248,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17c/1).($T_Q17j_1/2), T #[+T] = $TQFMU * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG P1M GCASH AND USERS AND HAS A FULLY VERIFIED ACCOUNT",
 [*END Z]
@@ -1264,14 +1264,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17f/1).($T_Q17j_1/1), T #[+T] = $TQSA1 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE EVER USED GCASH WITH BASIC ACCOUNT ONLY",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17f/1).($T_Q17j_1/1), T #[+T] = $TQSA1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE EVER USED GCASH WITH BASIC ACCOUNT ONLY",
 [*END Z]
@@ -1280,7 +1280,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17f/1).($T_Q17j_1/1), T #[+T] = $TQSA1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE EVER USED GCASH WITH BASIC ACCOUNT ONLY",
 [*END Z]
@@ -1292,14 +1292,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17aNET * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17aNET * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -1307,7 +1307,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17aNET * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1318,14 +1318,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17cNET * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17cNET * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -1334,7 +1334,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ17cNET * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1345,14 +1345,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AWARE OF AT LEAST ONE BRAND IN Q16d BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AWARE OF AT LEAST ONE BRAND IN Q16d BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
@@ -1361,7 +1361,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AWARE OF AT LEAST ONE BRAND IN Q16d BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
@@ -1372,14 +1372,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99).($A_Q17f/N99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AWARE OF AT LEAST ONE BRAND IN Q16d AND EVER USED BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99).($A_Q17f/N99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AWARE OF AT LEAST ONE BRAND IN Q16d AND EVER USED BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
@@ -1388,7 +1388,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99).($A_Q17f/N99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AWARE OF AT LEAST ONE BRAND IN Q16d AND EVER USED BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
@@ -1399,14 +1399,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99).($A_Q17f/99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AWARE OF AT LEAST ONE BRAND IN Q16d AND NOT EVER USED BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99).($A_Q17f/99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AWARE OF AT LEAST ONE BRAND IN Q16d AND NOT EVER USED BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
@@ -1415,7 +1415,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/N99).($A_Q17c/99).($A_Q17f/99), T #[+T] = $TQ60 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AWARE OF AT LEAST ONE BRAND IN Q16d AND NOT EVER USED BUT DID NOT USE IN THE PAST 1 MONTH",
 [*END Z]
@@ -1427,8 +1427,8 @@ END IF,
 
 
 !======
-if $NOV2023/Nb+$DEC2023/NB+$Q22024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/Nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF (([*DO A = 1:5]$A_Q17[&A]/N1[*SLE].[*END A])), T #[+T] = $TQ41 * $[HEADERWAVE3.Z],
 BT = "AMONG (NOT USED AND NO EXISTING ACCOUNT) - GCASH",
 [*END Z]
@@ -1436,8 +1436,8 @@ END IF,
 
 if $Q17i/1, then,
 !======
-if $NOV2023/Nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/Nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF (([*DO A = 1:5]$A_Q17[&A]/N1[*SLE].[*END A])), T #[+T] = $TQ41 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG (NOT USED AND NO EXISTING ACCOUNT) - GCASH",
 [*END Z]
@@ -1446,8 +1446,8 @@ END IF,
 
 if $Q17i/2, then,
 !======
-if $NOV2023/Nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/Nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF (([*DO A = 1:5]$A_Q17[&A]/N1[*SLE].[*END A])), T #[+T] = $TQ41 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG (NOT USED AND NO EXISTING ACCOUNT) - GCASH",
 [*END Z]
@@ -1456,7 +1456,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:3]
 IF ($A_Q17C/[Q40CODES.A]), T #[+T] = $TQ40B[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USED IN THE PAST 1 MONTH - [Q40.A]",
@@ -1464,7 +1464,7 @@ BT = "AMONG USED IN THE PAST 1 MONTH - [Q40.A]",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:3]
 IF ($A_Q17C/[Q40CODES.A]), T #[+T] = $TQ40B[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG USED IN THE PAST 1 MONTH - [Q40.A]",
@@ -1473,7 +1473,7 @@ BT = "AMONG USERS OF FINTECH APPS - AMONG USED IN THE PAST 1 MONTH - [Q40.A]",
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:3]
 IF ($A_Q17C/[Q40CODES.A]), T #[+T] = $TQ40B[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG USED IN THE PAST 1 MONTH - [Q40.A]",
@@ -1488,14 +1488,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q17C/1, T #[+T] = $TQCI1 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO USED GCASH IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q17C/1, T #[+T] = $TQCI1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO USED GCASH IN THE PAST 1 MONTH",
 [*END Z]
@@ -1503,7 +1503,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q17C/1, T #[+T] = $TQCI1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO USED GCASH IN THE PAST 1 MONTH",
 [*END Z]
@@ -1517,14 +1517,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q17C/1, T #[+T] = $TQCO2 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO USED GCASH IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q17C/1, T #[+T] = $TQCO2 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO USED GCASH IN THE PAST 1 MONTH",
 [*END Z]
@@ -1532,7 +1532,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q17C/1, T #[+T] = $TQCO2 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO USED GCASH IN THE PAST 1 MONTH",
 [*END Z]
@@ -1543,7 +1543,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:3]
 IF ($A_Q17L/[Q40CODES.A]).($A_Q17C/N[Q40CODES.A]), T #[+T] = $TQ40R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR - [Q40.A]",
@@ -1552,7 +1552,7 @@ BT = "AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR - [Q40.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:3]
 IF ($A_Q17L/[Q40CODES.A]).($A_Q17C/N[Q40CODES.A]), T #[+T] = $TQ40R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR - [Q40.A]",
@@ -1564,7 +1564,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:3]
 IF ($A_Q17L/[Q40CODES.A]).($A_Q17C/N[Q40CODES.A]), T #[+T] = $TQ40R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR - [Q40.A]",
@@ -1574,14 +1574,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17L/(1+2+23).$A_Q17C/(N1.n2.n23)), T #[+T] = $TQ40 * $[HEADERWAVE3.Z],
 BT = "AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17L/(1+2+23).$A_Q17C/(N1.n2.n23)), T #[+T] = $TQ40 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR",
 [*END Z]
@@ -1590,7 +1590,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q17L/(1+2+23).$A_Q17C/(N1.n2.n23)), T #[+T] = $TQ40 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG EVER DOWNLOADED BUT NOT USED IN THE PAST 1 MONTH FOR",
 [*END Z]
@@ -1602,7 +1602,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $A_Q16d/[Q17CODES.A], T #[+T] = $TQ45R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
@@ -1611,7 +1611,7 @@ BT = "AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $A_Q16d/[Q17CODES.A], T #[+T] = $TQ45R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
@@ -1622,7 +1622,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $A_Q16d/[Q17CODES.A], T #[+T] = $TQ45R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
@@ -1635,7 +1635,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $T_Q45_[Q17CODES.A]/1+2+3, T #[+T] = $TQ46R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
@@ -1644,7 +1644,7 @@ BT = "AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $T_Q45_[Q17CODES.A]/1+2+3, T #[+T] = $TQ46R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
@@ -1655,7 +1655,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF $T_Q45_[Q17CODES.A]/1+2+3, T #[+T] = $TQ46R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG AWARE OF THE BRAND - [Q17ACCT.A]",
@@ -1670,7 +1670,7 @@ END IF,
 
 [*SK 8989]
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $F64/[A], T #[+T] = $TQ48R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NOMINATED BRAND AWARE - [Q16NOMI.A]",
@@ -1679,7 +1679,7 @@ BT = "AMONG NOMINATED BRAND AWARE - [Q16NOMI.A]",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $F64/[A], T #[+T] = $TQ48R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG NOMINATED BRAND AWARE - [Q16NOMI.A]",
@@ -1690,7 +1690,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $F64/[A], T #[+T] = $TQ48R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG NOMINATED BRAND AWARE - [Q16NOMI.A]",
@@ -1702,7 +1702,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63R1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*DO A = 2:25]
@@ -1710,14 +1710,14 @@ BT = "ALL RESPONDENTS",
 BT = "ALL RESPONDENTS",
 [*END A]
 [*DO A = 26:28]
-IF $Q12024/NB, +T #[+T] = $TQ63R[A] * $[HEADERWAVE3.Z],
+IF $Q12024/NB+$Q22024/NB, +T #[+T] = $TQ63R[A] * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END A]
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63R1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*DO A = 2:25]
@@ -1725,7 +1725,7 @@ BT = "AMONG USERS OF FINTECH APPS",
 BT = "AMONG USERS OF FINTECH APPS",
 [*END A]
 [*DO A = 26:28]
-IF $Q12024/NB, +T #[+T] = $TQ63R[A] * $[HEADERWAVE3.Z],
+IF $Q12024/NB+$Q22024/NB, +T #[+T] = $TQ63R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END A]
 [*END Z]
@@ -1734,7 +1734,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63R1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*DO A = 2:25]
@@ -1742,7 +1742,7 @@ BT = "AMONG NON-USERS OF FINTECH APPS",
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END A]
 [*DO A = 26:28]
-IF $Q12024/NB, +T #[+T] = $TQ63R[A] * $[HEADERWAVE3.Z],
+IF $Q12024/NB+$Q22024/NB, +T #[+T] = $TQ63R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END A]
 [*END Z]
@@ -1754,7 +1754,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63SUMMTB * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
@@ -1762,7 +1762,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63SUMMTB * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -1770,7 +1770,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63SUMMTB * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1782,14 +1782,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63SUMMT2B * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63SUMMT2B * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -1798,7 +1798,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ63SUMMT2B * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -1818,7 +1818,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
@@ -1827,7 +1827,7 @@ BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
 
 !======
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
@@ -1838,7 +1838,7 @@ END IF,
 
 !======
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
@@ -1941,14 +1941,14 @@ END IF,
 !!GCASH USED CASES
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194a * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE",
 [*END Z]
 
 !======
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194a * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
@@ -1957,7 +1957,7 @@ END IF,
 
 !======
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194a * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
@@ -1971,7 +1971,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194b * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE",
 [*END Z]
@@ -1979,7 +1979,7 @@ BT = "AMONG GCASH AWARE",
 
 !======
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194b * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
@@ -1987,7 +1987,7 @@ END IF,
 
 !======
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194b * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
@@ -2006,21 +2006,21 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194c * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE",
 [*END Z]
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194c * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194c * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
@@ -2032,21 +2032,21 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194d * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE",
 [*END Z]
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194d * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ194d * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE",
 [*END Z]
@@ -2056,20 +2056,20 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17f/1), T #[+T] = $TQ195a * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE AND EVER USED",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17f/1), T #[+T] = $TQ195a * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE AND EVER USED",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17f/1), T #[+T] = $TQ195a * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE AND EVER USED",
 [*END Z]
@@ -2082,20 +2082,20 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17a/1), T #[+T] = $TQ195b * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE AND USED IN P2M", 
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17a/1), T #[+T] = $TQ195b * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN P2M", 
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17a/1), T #[+T] = $TQ195b * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN P2M", 
 [*END Z]
@@ -2112,13 +2112,13 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17o/1), T #[+T] = $TQ195c * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE AND USED IN P1M", 
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17o/1), T #[+T] = $TQ195c * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN P1M", 
 [*END Z]
@@ -2126,7 +2126,7 @@ END IF,
 
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17o/1), T #[+T] = $TQ195c * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN P1M", 
 [*END Z]
@@ -2135,14 +2135,14 @@ END IF,
 
 
 !======
-IF $Q12024/NB, THEN,
-[*DO Z = 1:1]
+IF $Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17k/1), T #[+T] = $TQ195D * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE AND USED IN PAST 1 WEEK", 
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17k/1), T #[+T] = $TQ195D * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN PAST 1 WEEK", 
 [*END Z]
@@ -2150,7 +2150,7 @@ END IF,
 
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q16d/1).($A_Q17k/1), T #[+T] = $TQ195D * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN PAST 1 WEEK", 
 [*END Z]
@@ -2165,16 +2165,16 @@ END IF,
 
 
 !======
-if $NOV2023/nb+$DEC2023/NB+$Q22024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ196 * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE", 
 [*END Z]
 END IF,
 
 if $Q17i/1, then,
-if $NOV2023/nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ196 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE", 
 [*END Z]
@@ -2182,8 +2182,8 @@ END IF,
 END IF,
 
 if $Q17i/2, then,
-if $NOV2023/nb+$DEC2023/NB+$Q12024/NB, THEN,
-[*DO Z = 1:1]
+if $NOV2023/nb+$DEC2023/NB+$Q12024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $TQ196 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE", 
 [*END Z]
@@ -2195,7 +2195,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH AWARE", 
 [*DO A = 2:25]
@@ -2206,7 +2206,7 @@ BT = "AMONG GCASH AWARE",
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE", 
 [*DO A = 2:25]
@@ -2219,7 +2219,7 @@ END IF,
 
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE", 
 [*DO A = 2:25]
@@ -2237,8 +2237,8 @@ END IF,
 
 !======
 [*DATA Q197ACODES = 8,9,16,17,18,19]
-IF $Q22024/NB, THEN,
-[*DO Z = 1:1]
+IF $FEB2024/NB+$MAR2024/NB+$Q22024/NB, THEN,
+[*DO Z = 1:3]
 [*DO A = 1:6]
 IF $A_Q195c/[Q197ACODES.A], T #[+T] = $TQ197a_[Q197ACODES.A] * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH SERVICES USED IN THE PAST 1 MONTH - [Q197ABRAND.A]",
@@ -2247,7 +2247,7 @@ BT = "AMONG GCASH SERVICES USED IN THE PAST 1 MONTH - [Q197ABRAND.A]",
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:6]
 IF $A_Q195c/[Q197ACODES.A], T #[+T] = $TQ197a_[Q197ACODES.A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH SERVICES USED IN THE PAST 1 MONTH - [Q197ABRAND.A]",
@@ -2257,7 +2257,7 @@ END IF,
 
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:6]
 IF $A_Q195c/[Q197ACODES.A], T #[+T] = $TQ197a_[Q197ACODES.A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH SERVICES USED IN THE PAST 1 MONTH - [Q197ABRAND.A]",
@@ -2277,7 +2277,7 @@ END IF,
 !======
 DM $T_Q17AD = $A_Q17A .OR. $A_Q17D,
 
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF ($A_Q17c/N99.NB).(($A_Q17c/[Q17CODES.A])+($A_Q17d/[Q17CODES.A])), T #[+T] = $TQ47R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG BRAND USED IN THE PAST 1 MONTHS - [Q17ACCT.A]",
@@ -2288,7 +2288,7 @@ MT #[T](R15) = #[T](R14) - #[T](R12), ! NPS=PROMOTERS MINUS DETRACTOR R15=R14-R1
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF ($A_Q17c/N99.NB).(($A_Q17c/[Q17CODES.A])+($A_Q17d/[Q17CODES.A])), T #[+T] = $TQ47R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND USED IN THE PAST 1 MONTHS - [Q17ACCT.A]",
@@ -2300,7 +2300,7 @@ END IF,
 
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:51]
 IF ($A_Q17c/N99.NB).(($A_Q17c/[Q17CODES.A])+($A_Q17d/[Q17CODES.A])), T #[+T] = $TQ47R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND USED IN THE PAST 1 MONTHS - [Q17ACCT.A]",
@@ -2314,7 +2314,7 @@ END IF,
 
 !======
 IF $FEB2024/NB+$MAR2024/NB+$Q22024/nb, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q17c/1, T #[+T] = $TQ117_1_1 * $[HEADERWAVE3.Z],
 BT = "AMONG BRAND USED IN THE PAST 1 MONTH - GCash",
 
@@ -2421,7 +2421,7 @@ MT #[T](R15) = #[T](R14) - #[T](R12), ! NPS=PROMOTERS MINUS DETRACTOR R15=R14-R1
 !
 if $Q17i/1, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q17c/1, T #[+T] = $TQ117_1_1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND USED IN THE PAST 1 MONTH - GCash",
 
@@ -2528,7 +2528,7 @@ END IF,
 !
 if $Q17i/2, then,
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q17c/1, T #[+T] = $TQ117_1_1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND USED IN THE PAST 1 MONTH - GCash",
 
@@ -2635,7 +2635,7 @@ END IF,
 
 !======
 IF $FEB2024/NB+$MAR2024/NB+$Q22024/nb, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $A_Q17c/[Q118.A], T #[+T] = $TQ118r[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NOMINATED BRAND - [Q118BRAND.A]",
@@ -2644,7 +2644,7 @@ BT = "AMONG NOMINATED BRAND - [Q118BRAND.A]",
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $A_Q17c/[Q118.A], T #[+T] = $TQ118r[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG NOMINATED BRAND - [Q118BRAND.A]",
@@ -2653,7 +2653,7 @@ BT = "AMONG USERS OF FINTECH APPS - AMONG NOMINATED BRAND - [Q118BRAND.A]",
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:9]
 IF $A_Q17c/[Q118.A], T #[+T] = $TQ118r[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG NOMINATED BRAND - [Q118BRAND.A]",
@@ -2666,14 +2666,14 @@ END IF,
 
 !======
 IF $FEB2024/NB+$MAR2024/NB+$Q22024/nb, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $T_Q47_1/1..9, T #[+T] = $TQ119 * $[HEADERWAVE3.Z],
 BT = "AMONG GCASH NPS RATING IS 1-9 (Detractors and Passives)",
 [*END Z]
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $T_Q47_1/1..9, T #[+T] = $TQ119 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH NPS RATING IS 1-9 (Detractors and Passives)",
 [*END Z]
@@ -2681,7 +2681,7 @@ END IF,
 
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $T_Q47_1/1..9, T #[+T] = $TQ119 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH NPS RATING IS 1-9 (Detractors and Passives)",
 [*END Z]
@@ -2694,20 +2694,20 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDO1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDO1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDO1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -2716,7 +2716,7 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:4]
 IF $A_DO1/[A], T #[+T] = $TDO2_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG AWARE MOBILE DEVICE OWNERSHIP - [DO2.A]",
@@ -2724,7 +2724,7 @@ BT = "AMONG AWARE MOBILE DEVICE OWNERSHIP - [DO2.A]",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:4]
 IF $A_DO1/[A], T #[+T] = $TDO2_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG AWARE MOBILE DEVICE OWNERSHIP - [DO2.A]",
@@ -2733,7 +2733,7 @@ BT = "AMONG USERS OF FINTECH APPS - AMONG AWARE MOBILE DEVICE OWNERSHIP - [DO2.A
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:4]
 IF $A_DO1/[A], T #[+T] = $TDO2_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG AWARE MOBILE DEVICE OWNERSHIP - [DO2.A]",
@@ -2744,20 +2744,20 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_DO1/1+2+3, T #[+T] = $TQ66a * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE A PERSONAL DEVICE WITH INTERNET CAPABILITIES",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_DO1/1+2+3, T #[+T] = $TQ66a * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE A PERSONAL DEVICE WITH INTERNET CAPABILITIES",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_DO1/1+2+3, T #[+T] = $TQ66a * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE A PERSONAL DEVICE WITH INTERNET CAPABILITIES",
 [*END Z]
@@ -2766,41 +2766,63 @@ END IF,
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_DO1/1+2+3, T #[+T] = $TQ66b * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE A PERSONAL DEVICE WITH INTERNET CAPABILITIES",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_DO1/1+2+3, T #[+T] = $TQ66b * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE A PERSONAL DEVICE WITH INTERNET CAPABILITIES",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF $A_DO1/1+2+3, T #[+T] = $TQ66b * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE A PERSONAL DEVICE WITH INTERNET CAPABILITIES",
 [*END Z]
 END IF,
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ65 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ65 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ65 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+IF $Q22024/NB, THEN,
+!====== - Q2 additional
+[*DO Z = 1:3]
+T #[+T] = $TQ123a * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:3]
+T #[+T] = $TQ123a * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+[*DO Z = 1:3]
+T #[+T] = $TQ123a * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 END IF,
@@ -2808,29 +2830,7 @@ END IF,
 
 
 !====== - Q2 additional
-[*DO Z = 1:1]
-T #[+T] = $TQ123a * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
-
-if $Q17i/1, then,
-[*DO Z = 1:1]
-T #[+T] = $TQ123a * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
-[*END Z]
-END IF,
-
-if $Q17i/2, then,
-[*DO Z = 1:1]
-T #[+T] = $TQ123a * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END Z]
-END IF,
-
-
-
-!====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:12]
 IF $A_Q123a/[Q123BC.A], T #[+T] = $TQ123B_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG TYPES OF MEDIA USED IN THE P1M - [Q123BS.A]",
@@ -2839,7 +2839,7 @@ BT = "AMONG TYPES OF MEDIA USED IN THE P1M - [Q123BS.A]",
 
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:12]
 IF $A_Q123a/[Q123BC.A], T #[+T] = $TQ123B_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG TYPES OF MEDIA USED IN THE P1M - [Q123BS.A]",
@@ -2848,31 +2848,32 @@ BT = "AMONG USERS OF FINTECH APPS - AMONG TYPES OF MEDIA USED IN THE P1M - [Q123
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:12]
 IF $A_Q123a/[Q123BC.A], T #[+T] = $TQ123B_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG TYPES OF MEDIA USED IN THE P1M - [Q123BS.A]",
 [*END A]
 [*END Z]
 END IF,
+END IF,
 
 
 if $Q22024/nb, then,
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q123a/9+10, T #[+T] = $TDA2 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q123a/9+10, T #[+T] = $TDA2 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q123a/9+10, T #[+T] = $TDA2 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
 [*END Z]
@@ -2882,7 +2883,7 @@ endif,
 
 if $Q22024/nb, then,
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:17]
 IF $A_Q123a/9+10, T #[+T] = $TQ124_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
@@ -2890,7 +2891,7 @@ BT = "AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:17]
 IF $A_Q123a/9+10, T #[+T] = $TQ124_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
@@ -2899,7 +2900,7 @@ BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE USED THE INTERNET IN TH
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:17]
 IF $A_Q123a/9+10, T #[+T] = $TQ124_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE USED THE INTERNET IN THE PAST 1 MONTH",
@@ -2911,20 +2912,20 @@ endif,
 
 if $Q22024/nb, then,
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -2933,20 +2934,20 @@ endif,
 
 if $Q22024/nb, then,
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDA1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDA1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TDA1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -2956,7 +2957,7 @@ END IF,
 
 if $Q22024/nb, then,
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:2]
 T #[+T] = $TDA3_[A] * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
@@ -2964,7 +2965,7 @@ BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:2]
 T #[+T] = $TDA3_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
@@ -2973,7 +2974,7 @@ BT = "AMONG USERS OF FINTECH APPS",
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 [*DO A = 1:2]
 T #[+T] = $TDA3_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
@@ -2990,21 +2991,20 @@ endif,
 
 
 !======
-IF $Q22024/NB, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ187new * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ187new * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQ187new * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -3014,89 +3014,88 @@ END IF,
 
 
 
-!======
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF1 * $[HEADERWAVE3.Z],
-BT = "AMONG FREELANCERS",
-[*END Z]
-
-if $Q17i/1, then,
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF1 * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS - AMONG FREELANCERS",
-[*END Z]
-END IF,
-
-if $Q17i/2, then,
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF1 * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS - AMONG FREELANCERS",
-[*END Z]
-END IF,
-
-
-
-!======
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF2 * $[HEADERWAVE3.Z],
-BT = "AMONG FREELANCERS",
-[*END Z]
-
-if $Q17i/1, then,
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF2 * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS - AMONG FREELANCERS",
-[*END Z]
-END IF,
-
-if $Q17i/2, then,
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF2 * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS - AMONG FREELANCERS",
-[*END Z]
-END IF,
-
-
-
-
-!======
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF3 * $[HEADERWAVE3.Z],
-BT = "AMONG FREELANCERS",
-[*END Z]
-
-if $Q17i/1, then,
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF3 * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS - AMONG FREELANCERS",
-[*END Z]
-END IF,
-
-if $Q17i/2, then,
-[*DO Z = 1:1]
-IF $A_Q187new/11, T #[+T] = $TQF3 * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS - AMONG FREELANCERS",
-[*END Z]
-END IF,
-end if,
-
-
 if $Q22024/nb, then,
+!======
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF1 * $[HEADERWAVE3.Z],
+BT = "AMONG FREELANCERS",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF1 * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG FREELANCERS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF1 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG FREELANCERS",
+[*END Z]
+END IF,
+
+
+
+!======
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF2 * $[HEADERWAVE3.Z],
+BT = "AMONG FREELANCERS",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF2 * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG FREELANCERS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF2 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG FREELANCERS",
+[*END Z]
+END IF,
+
+
+
+
+!======
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF3 * $[HEADERWAVE3.Z],
+BT = "AMONG FREELANCERS",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF3 * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG FREELANCERS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+[*DO Z = 1:3]
+IF $A_Q187new/11, T #[+T] = $TQF3 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG FREELANCERS",
+[*END Z]
+END IF,
+
+
 !====== new questions
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q187new/2+3, T #[+T] = $TQSAL1 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO ARE EMPLOYED EITHER FULL TIME OR PART TIME",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q187new/2+3, T #[+T] = $TQSAL1 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO ARE EMPLOYED EITHER FULL TIME OR PART TIME",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q187new/2+3, T #[+T] = $TQSAL1 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO ARE EMPLOYED EITHER FULL TIME OR PART TIME",
 [*END Z]
@@ -3106,30 +3105,30 @@ endif,
 
 !====== q2 ADDITIONAL - JUNE LANG SIYA NA ADD
 if $JUN2024/NB, THEN,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q187new/2+3+11, T #[+T] = $TQSAL2 * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO ARE EMPLOYED EITHER FULL TIME OR PART TIME AND FREELANCERS",
 [*END Z]
 
 if $Q17i/1, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q187new/2+3+11, T #[+T] = $TQSAL2 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO ARE EMPLOYED EITHER FULL TIME OR PART TIME AND FREELANCERS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 if $A_Q187new/2+3+11, T #[+T] = $TQSAL2 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO ARE EMPLOYED EITHER FULL TIME OR PART TIME AND FREELANCERS",
 [*END Z]
 END IF,
-ENDIF,
+END IF,
 
 
 
 
-
+[*SK 8989]
 
 !
 [*DATA filters =
@@ -3188,7 +3187,7 @@ T #[+T] = $TQ102C * $[HX.X],
 [*END X]
 
 
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB, then,
+IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, then,
 ! IF $DEC2023/NB+(($NOV2023/NB).$A_Q102/1), then,
 !~~~~~~~~~~~~MultipleTopics18
 [*DO X = 1:1]
@@ -3242,7 +3241,7 @@ end if,
 !~~~~~~~~~~~~MultipleTopicsSelect18
 [*SET s = 0]
 T #[+T] = $TQ104R1 * $HMOP,
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB, T #[T] = $TQ104R1 * 1,
+IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, T #[T] = $TQ104R1 * 1,
 [*DO B = 2:9]
 IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
 [*END B]
@@ -3252,7 +3251,7 @@ IF $TQ17c/1, then,
 !~~~~~~~~~~~~MultipleTopicsSelect18
 [*SET s = 0]
 T #[+T] = $TQ104R1 * $HMOP,
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB, T #[T] = $TQ104R1 * 1,
+IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, T #[T] = $TQ104R1 * 1,
 [*DO B = 2:9]
 IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
 [*END B]
@@ -3265,7 +3264,7 @@ IF $TQ17c/N1, then,
 !~~~~~~~~~~~~MultipleTopicsSelect18
 [*SET s = 0]
 T #[+T] = $TQ104R1 * $HMOP,
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB, T #[T] = $TQ104R1 * 1,
+IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, T #[T] = $TQ104R1 * 1,
 [*DO B = 2:9]
 IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
 [*END B]
@@ -3438,6 +3437,7 @@ end if,
 IF $TQ16d/1, T #[+T] = $TQ125 * $[HX.X],
 BT = "Among Aware of Gcash",
 [*END X]
+[*8989]
 
 
 
@@ -3446,10 +3446,9 @@ BT = "Among Aware of Gcash",
 
 
 
-
-
+IF $Q22024/NB, THEN,
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q41/3).($T_Q1_1/13..17), T #[+T] = $TQGJr1 * $[HEADERWAVE3.Z],
 BT = "AMONG 13-17 YEARS OLD WHO MENTIONED THAT VALID ID IS ONE OF THE BARRIERS",
 [*END Z]
@@ -3457,11 +3456,11 @@ BT = "AMONG 13-17 YEARS OLD WHO MENTIONED THAT VALID ID IS ONE OF THE BARRIERS",
 
 
 !====== - Q2 additional
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($A_Q41/3).($T_Q1_1/13..17), T #[+T] = $TQGJr2 * $[HEADERWAVE3.Z],
 BT = "AMONG 13-17 YEARS OLD WHO MENTIONED THAT VALID ID IS ONE OF THE BARRIERS",
 [*END Z]
-
+END IF,
 
 
 
