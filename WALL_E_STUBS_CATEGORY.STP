@@ -77,6 +77,17 @@ EMPLOYMENT STATUS\
 `          Retired;  
 `          Unemployed",
 
+DM $TQ1_1 = 
+$T_Q1_1/1-65,
+R,F,
+VT = "Q1. ACTUAL AGE",
+V ="
+[*DO A = 1:65] 
+[A] years old <v[A]>;
+[*END A]
+Missing answers<Z>;
+Total count<C>",
+
 
 
 DM $TQ17i = $Q17i/
@@ -8201,7 +8212,7 @@ Total Count<C>",
 !========= - Q2 ADDITIONAL
 [*DATA DA3 (;) =
 I prefer to manage as many aspects of my life via digital channels (ex. mobile phone, laptop, etc.) as possible;
-I’m confused about all of the different financial products/services available these days]
+Iï¿½m confused about all of the different financial products/services available these days]
 
 [*DO A = 1:2]
 DM $TDA3_[A] = $T_DA3_[A]/1-5,4+5,1+2,R,F,
@@ -8237,8 +8248,8 @@ Total Count<C>",
 DM $TQGJr1 = $QGJr1/1-2,R,F,
 VT = "QGJr1. AWARENESS OF GCASH JR.",
 V = "
-Yes, I’ve heard GCash Jr.;
-No, I haven’t heard GCash Jr.;
+Yes, Iï¿½ve heard GCash Jr.;
+No, I havenï¿½t heard GCash Jr.;
 Missing Answer<z>;
 Total Count<C>",
 
@@ -8545,7 +8556,7 @@ OTHERS (NET)<Q>;
 `     <G1P>Use to it;
 `     <G1P>Featuristic;
 `     <G1P>Don't use gcash much;
-`     <G1P>Don’t know their promo;
+`     <G1P>Donï¿½t know their promo;
 `     <G1P>I'm not sure if everyone wants gcash;
 `     <G1P>More improved;
 `     <G1P>Well-know than other Ewallet;
@@ -8589,7 +8600,7 @@ DIFFICULT TO USE (NET)<Q>;
 `     <G1P>Difficult to use;
 
 LACK OF KNOWLEDGE ON FEATURES (NET)<Q>;
-`     <G1P>Don’t know some features;
+`     <G1P>Donï¿½t know some features;
 
 VERIFICATION AND REGISTRATION PROCESS ISSUE (NET)<Q>;
 `     <G2B><G1P>Verification is difficult;
