@@ -27,19 +27,17 @@ DM $GsavexHeartsResp = $Feb24toMar01/NB+$Mar02toMar08/NB,
 
 
 DM $HA = T,
-         T,$Q2/1,2,
-         T,$T_Q1_1/1..20,21..30,31..35,36..45,46..65,
-         T,$SEC19/1,2,1+2,3,4,
+         $Q2/1,2,
+         $T_Q1_1/1..20,21..30,31..35,36..45,46..65,
+         $SEC19/1,2,1+2,3,4,
 HT = "HEADER A. GENERAL PROFILE",
 H  = "
 TOTAL*(a);
 GENDER***
-TOTAL*(a)<S>;
 MALE*(b);
 FEMALE*(c);
 
 LIFESTAGE***
-TOTAL*(a)<S>;
 Students (20 yo and below)*(d);
 Yuppies (21-30 yo)*(e);
 Transitioners (31-35 yo)*(f);
@@ -47,7 +45,6 @@ Balancers (36-45 yo)*(g);
 Older Adults/Retirees (46-65 yo)*(h);
 
 SEC***
-TOTAL*(a)<S>;
 AB*(i);
 C1 *(j);
 ABC1*(k);
@@ -55,22 +52,22 @@ C2*(l);
 D*(m)",
 
 DM $HB = T,
-         T,$Q4/1,2,
-         T,$Q3/1,
+         $Q4/1,2,
+         $Q3/1,
 
-         T,($Q3/2+3+4+5),
+         ($Q3/2+3+4+5),
            ($Q3/2+3+4+5).($Q4/1),
            ($Q3/2+3+4+5).($Q4/2),
            
-         T,($Q3/6+7+8),
+         ($Q3/6+7+8),
            ($Q3/6+7+8).($Q4/1),
            ($Q3/6+7+8).($Q4/2),
 
-         T,($Q3/9+10+11),
+         ($Q3/9+10+11),
            ($Q3/9+10+11).($Q4/1),
            ($Q3/9+10+11).($Q4/2),
 
-         T,($Q3/12+13+14+15+16+17),
+         ($Q3/12+13+14+15+16+17),
            ($Q3/12+13+14+15+16+17).($Q4/1),
            ($Q3/12+13+14+15+16+17).($Q4/2),
 
@@ -78,33 +75,27 @@ HT = "HEADER B. LOCALE AND MACROREGION",
 H  = "
 TOTAL*(a);
 LOCALE***
-TOTAL*(a)<S>;
 URBAN (NET)*(b);
 RURAL (NET)*(c);
 
-TOTAL*(a)<S>;
 NCR (NET)*(d);
 
 NORTH CENTRAL LUZON***
-TOTAL*(a)<S>;
 NCL (NET)*(e);
 NCL Urban*(f);
 NCL Rural*(g);
 
 SOUTH LUZON***
-TOTAL*(a)<S>;
 SL (NET)*(h);
 SL Urban*(i);
 SL Rural*(j);
 
 VISAYAS***
-TOTAL*(a)<S>;
 Visayas (NET)*(k);
 Visayas Urban*(l);
 Visayas Rural*(m);
 
 MINDANAO***
-TOTAL*(a)<S>;
 Mindanao (NET)*(n);
 Mindanao Urban*(o);
 Mindanao Rural*(p)",
@@ -112,18 +103,16 @@ Mindanao Rural*(p)",
 
 
 DM $HC = T,
-         T,$Q17i/2,1,
-         T,$A_Q17c/N1,1,
+         $Q17i/2,1,
+         $A_Q17c/N1,1,
 
 HT = "HEADER C. USERSHIP",
 H  = "
 TOTAL*(a);
 USERSHIP***
-TOTAL*(a)<S>;
 NON-USERS*(b);
 USERS*(c);
 
-TOTAL*(a)<S>;
 WHETHER GCASH USERS***
 GCASH NON-USERS*(d);
 GCASH USERS*(e)",
@@ -131,23 +120,23 @@ GCASH USERS*(e)",
 
 
 DM $HD = T,
-         T,($Q3/1).($SEC19/1+2),
+         ($Q3/1).($SEC19/1+2),
            ($Q3/1).($SEC19/3),
            ($Q3/1).($SEC19/4),
            
-         T,($Q3/2+3+4+5).($SEC19/1+2),
+         ($Q3/2+3+4+5).($SEC19/1+2),
            ($Q3/2+3+4+5).($SEC19/3),
            ($Q3/2+3+4+5).($SEC19/4),
 
-         T,($Q3/6+7+8).($SEC19/1+2),
+         ($Q3/6+7+8).($SEC19/1+2),
            ($Q3/6+7+8).($SEC19/3),
            ($Q3/6+7+8).($SEC19/4),
 
-         T,($Q3/9+10+11).($SEC19/1+2),
+         ($Q3/9+10+11).($SEC19/1+2),
            ($Q3/9+10+11).($SEC19/3),
            ($Q3/9+10+11).($SEC19/4),
 
-         T,($Q3/12+13+14+15+16+17).($SEC19/1+2),
+         ($Q3/12+13+14+15+16+17).($SEC19/1+2),
            ($Q3/12+13+14+15+16+17).($SEC19/3),
            ($Q3/12+13+14+15+16+17).($SEC19/4),
 
@@ -155,31 +144,26 @@ HT = "HEADER D. MACROREGION X SEC",
 H  = "
 TOTAL*(a);
 MMA***
-TOTAL*(a)<S>;
 ABC1*(b);
 C2*(c);
 D*(d);
 
 NCL***
-TOTAL*(a)<S>;
 ABC1*(b);
 C2*(c);
 D*(d);
 
 SL***
-TOTAL*(a)<S>;
 ABC1*(b);
 C2*(c);
 D*(d);
 
 VISAYAS***
-TOTAL*(a)<S>;
 ABC1*(b);
 C2*(c);
 D*(d);
 
 MINDANAO***
-TOTAL*(a)<S>;
 ABC1*(b);
 C2*(c);
 D*(d)",

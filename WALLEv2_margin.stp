@@ -2,7 +2,7 @@ START CONTROL,
 *PROJECT WALL-E
 
 
-C = JUN2024V2.asc,
+C = WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 
 
 Y,
@@ -2227,12 +2227,12 @@ DW $WTS = $WT(
 5.7394,
 1.5610),
 
-
+[*INSERT W_WTS21to65]
 
 !IF $FEB2024/NB, LCSV(H) $resp.$wts,
 !IF ($FEB2024/NB).($T_Q1_1/21..65), WRITE,
-!IF ($JUN2024/NB).($T_Q1_1/21..65), WRITE,
-IF ($JUN2024/NB), WRITE,
+IF ($MAY2024/NB+$JUN2024/NB).($T_Q1_1/21..65), WRITE,
+!IF ($JUN2024/NB), WRITE,
 FINISH DATA,
 
 START TABLES,
@@ -2318,12 +2318,22 @@ HPT]
 
 
 ! for testing expected base
-T [+T] = $WT * $hmarg,
+!T [+T] = $WT * $hmarg,
+!BT = "All respondents-UNWTD",
+
+!SELECT WR $wts,
+
+!T [+T] = $WT * $hmarg,
+!BT = "All respondents-WTD",
+
+
+! for testing expected base
+T [+T] = $WT21to65 * $hmarg,
 BT = "All respondents-UNWTD",
 
-SELECT WR $wts,
+SELECT WR $wts21to65,
 
-T [+T] = $WT * $hmarg,
+T [+T] = $WT21to65 * $hmarg,
 BT = "All respondents-WTD",
 
 
