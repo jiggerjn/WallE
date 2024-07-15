@@ -1,7 +1,8 @@
 START CONTROL,
 *PROJECT WALLE (DECEMBER 2, 2022)
 
-C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+C = WALLE_JUN24V2.asc,
 !C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 !C = .asc,
 Y,
@@ -228,7 +229,7 @@ Credit Card;
 E-Wallet/ Fintech Apps;
 Mobile/ Online Banking App;
 E-remittance App;
-Others, please specify;
+Others;
 None]
 
 [*FOR A = 1:2:3:4:5:6:7:91:99]
@@ -336,7 +337,7 @@ DM $HT = T,
 
 !-----------Unique
 DM $Q200 = $11/1-9,'0',
-!IF $DA4/B.$Q200/1, CK $JUN2024/B,
+
 
 IF ($Q42023/NB+$Q12024/NB+$Q22024/NB).($Q200/1), WRITE,
 !IF ($Q200/1), WRITE,
@@ -532,7 +533,7 @@ end if,
 [*DO Z= 1:3]
 [*SET s = 0]
 [*FOR A = 1:2:3:4:5:6:7:91:99]
-IF $A_QCH3a/[A], T #[+T] = $TQCH5_[A] * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($T_QCH5_[A]/NB).($A_QCH3a/[A]), T #[+T] = $TQCH5_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USING MODE OF PAYMENT - [topic2.[+s]]",
 [*END A]
 [*END Z]
@@ -542,7 +543,7 @@ if $Q17i/1, then,
 [*DO Z= 1:3]
 [*SET s = 0]
 [*FOR A = 1:2:3:4:5:6:7:91:99]
-IF $A_QCH3a/[A], T #[+T] = $TQCH5_[A] * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($T_QCH5_[A]/NB).($A_QCH3a/[A]), T #[+T] = $TQCH5_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USING MODE OF PAYMENT - [topic2.[+s]] - USERS OF FINTECH APPS",
 [*END A]
 [*END Z]
@@ -553,7 +554,7 @@ if $Q17i/2, then,
 [*DO Z= 1:3]
 [*SET s = 0]
 [*FOR A = 1:2:3:4:5:6:7:91:99]
-IF $A_QCH3a/[A], T #[+T] = $TQCH5_[A] * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($T_QCH5_[A]/NB).($A_QCH3a/[A]), T #[+T] = $TQCH5_[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USING MODE OF PAYMENT - [topic2.[+s]] - NON-USERS OF FINTECH APPS",
 [*END A]
 [*END Z]
@@ -567,7 +568,7 @@ end if,
 !======
 [*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
-T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($T_QCH4a_[A]/NB), T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
 [*END A]
 BT = "ALL RESPONDENTS",
 [*END Z]
@@ -577,7 +578,7 @@ if $Q17i/1, then,
 !======
 [*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
-T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($T_QCH4a_[A]/NB),T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
 [*END A]
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -587,7 +588,7 @@ if $Q17i/2, then,
 !======
 [*DO Z = 1:3]
 [*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
-T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($T_QCH4a_[A]/NB),T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
 [*END A]
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -597,20 +598,20 @@ END IF,
 
 !====== - Q2 additional
 [*DO Z = 1:3]
-T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($DA4/NB), T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 [*DO Z = 1:3]
-T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($DA4/NB),T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 END IF,
 
 if $Q17i/2, then,
 [*DO Z = 1:3]
-T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
+IF ($JUN2024/NB).($DA4/NB),T #[+T] = $TDA4 * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 END IF,
