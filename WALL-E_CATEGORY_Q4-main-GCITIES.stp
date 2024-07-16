@@ -341,10 +341,15 @@ MINDANAO,
 URBAN,
 RURAL]
 
-SELECT WR $WTS,
+!SELECT WR $WTS,
 
 [*SET T = 0]
 
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQProvince * $HT,
+BT = "ALL RESPONDENTS",
+[*END Z]
 
 [*SK 1]
 !======
@@ -352,7 +357,6 @@ SELECT WR $WTS,
 T #[+T] = $TQMunicipality * $HT,
 BT = "ALL RESPONDENTS",
 [*END Z]
-[*1]
 
 
 !======
@@ -378,6 +382,7 @@ BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 end if,
 
+[*1]
 
 FINISH TABLES,
 
