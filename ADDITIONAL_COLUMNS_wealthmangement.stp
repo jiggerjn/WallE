@@ -763,6 +763,34 @@ OM $I_33_QL6_91_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
+!! NEW Q2 2024
+
+[*SET B = 111570][*DO A= 1:10]
+OM $I_7_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 111610][*DO A= 1:10]
+OM $I_21_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 111810][*DO A= 1:10]
+OM $I_10_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 111850][*DO A= 1:10]
+OM $I_13_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 112250][*DO A= 1:10]
+OM $I_37_QL6_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
 [*SET B = 106890][*DO A= 1:10]
 OM $QL5_91_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
@@ -833,6 +861,13 @@ OM $QINS1_3_other = $[B]-[B+3]/1-9999,
 OM $T_Q175_2_Q175_4_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
+
+!! NEW Q2 2024
+[*SET B = 112290][*DO A= 1:10]
+OM $T_QINS3_2_QINS3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
 
 !DUMMY
 OM $XT_QINS2_1_QINS2_98_other = $blank/1-9999,

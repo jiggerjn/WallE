@@ -1,14 +1,11 @@
 START CONTROL,
-*PROJECT WALLE (DECEMBER 2, 2022)
+*PROJECT HELIOS-W3 (DECEMBER 2, 2022)
 
-!C = WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
-C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = WALLE_APR24V2.ASC;WALLE_MAY24V2.ASC;WALLE_JUN24V2.ASC,
+C = WALL_E_Q4_OCT.ASC;WALLE_NOVEMBER.ASC;WALLEDEC_1_10.ASC;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.ASC;WALLE_APR24V2.ASC;WALLE_MAY24V2.ASC;WALLE_JUN24V2.ASC,
 Y,
 OLDNAMES,
 CSV2R,
-TERSE,
-BIG,
-TIDY,
 !C,
 FINISH CONTROL,
 START DATA,
@@ -18,6 +15,9 @@ CARD CHARACTERS BINARY 300000,
 TEMPORARY/9999999/,
 
 F=ADF,
+
+
+
 DI $RESP = $1-10,
 
 DM $DEC2023 = $1-10/(33804768+33804771+33811044+33821764+33821766+33821767+33838706+33838707+33858745+33858746+33858747+33858748+33868310+33868311+33868313+33870630+33870631+33870633+33870634+33871583+33871584+33873941+33874864+33876038+33877320+33879672+33879673+33880069+33880071+33880072+33880075+33880458+33880885+33880888+33880889+33882332+33882747+33882748+33882749+33882750+33882751+33883137+33883139+33884157+33884158+33884670+33884671+33884672+33884841+33884971+33884972+33884974+33886223+33886224+33886225+33888269+33888270+33888271+33888272+33888275+33888276+33888996+33889948+33889949+33894714+33895014+33895015+33895202+33895449+33895757+33897881+33898291+33898515+33898591+33898592+33899636+33899637+33899638+33900433+33901310+33904198+33904199+33904200+33904201+33904202+33904203+33905559+33905560+33905561+33905932+33905933+33905934+33906340+33906342+33906344+33906918+33906919+33906920+33906921+33910374+33910375+33910376+33910378+33910734+33912078+33912079+33912080+33912081+33912082+33912083+33912084+33912580+33912581+33912582+33912583+33912584+33915155+33915156+33915575+33915576+33915577+33915578+33916174+33917612+33917613+33917614+33918261+33919799+33919800+33919801+33923046+33924130+33925101+33925102+33925103+33929882+33934825+33934826+33935307+33936461+33939560+33939561+33939562+33940570+33940573+33940574+33940721+33940722+33940723+33941316+33941317+33941318+33941319+33942065+33942066+33943349+33943350+33943571+33943572+33943573+33943574+33943575+33943576+33943587+33943588+33946073+33947038+33947039+33947040+33947041+33947042+33947043+33947726+33947727+33947728+33948215+33948216+33948217+33948865+33952698+33952699+33952700+33952701+33953430+33953432+33953588+33953589+33953590+33957711+33957712+33957713+33957714+33957715+33957809+33958430+33958431+33958432+33958433+33958649+33958650+33958651+33959086+33959087+33959088+33959689+33959690+33959886+33959908+33961608+33961609+33961610+33961611+33961612+33961613+33961614+33962242+33962243+33962244+33962307+33962308+33962309+33962311+33962558+33962735+33962736+33962737+33963210+33963211+33963443+33964508+33964509+33964510+33966343+33966528+33966530+33966532+33967819+33967820+33971045+33971156+33972421+33972960+33972961+33972962+33972994+33972995+33972996+33973910+33973911+33973912+33973913+33973914+33974184+33976713+33976714+33976715+33976946+33976947+33977009+33977010+33977011+33977012+33977013+33977014+33977254+33977417+33977418+33977725+33977726+33978291+33978292+33978293+33978294+33978295+33978296+33978314+33978317+33978941+33978943+33978944+33978945+33979632+33979963+33980407+33980410+33981377+33981378+33981379+33981380+33981383+33981384+33982111+33982112+33982665+33982666+33982667+33982788+33982789+33982790+33983575+33984130+33984133+33984134+33985442+33985443+33985444+33985445+33985446+33985654+33985747+33985748+33985749+33985834+33985838+33985839+33986945+33986946+33986947+33987190+33987191+33987192+33987193+33987194+33987195+33988218+33988219+33988220+33988221+33988291+33988333+33988334+33988335+33988336+33988920+33988921+33989260+33989261+33989262+33989263+33989264+33989265+33992546+33992547+33992550+33993077+33993078+33993079+33993080+33993081+33993082+33993083+33993807+33994201+33996171+33996172+33996676+33996922+33996923+33996924+33996925+33996967+33997631+33997632+33997633+33997634+33997635+33997637+33997638+33997639+33997676+33997695+33997696+33997698+33997703+33997704+33997705+33997708+33997709+33997710+33997711+33997712+33997713+33997714+33999170+33999172+33999173+33999298+33999299+34000759+34001967+34001968+34001969+34002551+34002552+34002579+34002581+34002582+34002843+34002885+34003146+34004350+34004628+34006236+34006237+34006767+34006943+34007693+34008213+34008239+34012000+34012002+34013607+34015706+34015794+34015795+34017479+34017482+34017483+34017808+34017809+34017810+34017812+34017813+34018531+34018784+34018787+34020806+34020807+34021277+34021278+34021279+34021352+34022345+34022992+34024969+34025795+34035989+34035990+34037354+34037355+34038490+34038491+34038492+34038493+34039759+34039760+34041517+34041524+34041525+34041526+34041854+34041855+34041966+34041967+34041968+34041969+34041970+34041971+34043941+34043942+34043943+34044598+34044599+34044600+34044601+34048141+34048591+34048655+34048656+34048657+34048658+34048704+34048808+34048809+34049122+34049123+34049124+34049125+34049319+34049367+34049391+34049936+34049957+34051105+34051109+34051110+34051111+34051112+34051113+34051777+34051778+34051779+34051780+34051781+34053929+34053930+34054742+34054743+34054744+34054745+34054746+34054747+34055795+34055796+34055797+34055798+34057647+34057648+34057649+34057650+34057651+34059117+34060033+34060554+34064382+34064383+34068537+34072229+34072428+34072429+34072430+34072431+34075280+34075281+34075282+34075283+34075284+34076493+34076494+34076495+34076496+34076497+34077379+34077380+34077381+34083032+34083033+34083034+34083035+34083036+34083769+34083770+34083771+34083905+34083906+34084126+34084127+34084128+34084129+34084130+34085183+34085184+34085185+34085186+34085187+34085188+34085511+34085512+34085513+34085514+34085515+34087813+34089325+34089326+34089327+34090137+34090139+34090140+34090499+34090500+34090501+34091256+34091257+34092183+34092184+34092185+34095444+34095445+34095446+34095447+34095448+34095535+34095578+34095994+34096031+34096032+34096192+34096223+34096543+34096544+34096611+34097323+34097324+34098196+34098197+34099836+34100443+34101529+34103043+34103872),
@@ -36,463 +36,40 @@ DM $JUN2024 = $resp/37172276+37182652+37186457+37210422+37216151+37216152+372161
 DM $Q22024 = $APR2024/NB+$MAY2024/NB+$JUN2024/NB,
 
 
-[*INSERT WALLEv2_CARDCOL_CATERGORY]
-[*INSERT ADDITIONAL_COLUMNS]
-[*INSERT ADDITIONAL_COLUMNS_JAN_FEB]
-[*INSERT WALL_E_STUBS_CATEGORY]
+
+[*INSERT WALLEv2_CARDCOL]
+[*INSERT ADDITIONAL_COLUMNS_wealthmangement]
+[*INSERT WALL-E_W_Managementresp]
+[*INSERT WALL-E_W_ManagementrespQ2_2024]
+[*INSERT WALL_E_STUBS_W_Managent]
 [*INSERT W_HEADER]
 [*INSERT W_WTS]
-
-!-----------MultiSelect
-DM $A_Q102 = $25069/1,$25070/1,$25071/1,$25072/1,$25073/1,$25074/1,$25075/1,$25076/1,$25077/1,$Blank/10-90,$25078/1,$Blank/92-98,$25079/1,
-
-!-----------MultiSelect
-DM $A_Q102B = $25335/1,$25336/1,$25337/1,$25338/1,$25339/1,$25340/1,$25341/1,$25342/1,$25343/1,$25344/1,$25345/1,
-
-
-!-----------Unique
-DM $Q102C = $25346-25347/1-99,
-
-!-----------MultipleTopics18
-
-DM $T_Q103_1 = $25092/1-9,'0',
-DM $T_Q103_2 = $25093/1-9,'0',
-DM $T_Q103_3 = $25094/1-9,'0',
-DM $T_Q103_4 = $25095/1-9,'0',
-DM $T_Q103_5 = $25096/1-9,'0',
-DM $T_Q103_6 = $25097/1-9,'0',
-DM $T_Q103_7 = $25098/1-9,'0',
-DM $T_Q103_8 = $25099/1-9,'0',
-DM $T_Q103_9 = $25100/1-9,'0',
-DM $T_Q103_10 = $25101/1-9,'0',
-DM $T_Q103_11 = $25102/1-9,'0',
-DM $T_Q103_12 = $25103/1-9,'0',
-DM $T_Q103_13 = $25104/1-9,'0',
-DM $T_Q103_14 = $25105/1-9,'0',
-DM $T_Q103_15 = $25106/1-9,'0',
-DM $T_Q103_16 = $25107/1-9,'0',
-DM $T_Q103_17 = $25108/1-9,'0',
-DM $T_Q103_18 = $25109/1-9,'0',
-
-
-
-!-----------MultipleTopicsSelect18
-
-DM $T_Q104_1 = $25110/1,$25111/1,$25112/1,$25113/1,$25114/1,$25115/1,$25116/1,$25117/1,$25118/1,$Blank/10-90,$25119/1,$Blank/92-98,$25120/1,
-DM $T_Q104_2 = $25121/1,$25122/1,$25123/1,$25124/1,$25125/1,$25126/1,$25127/1,$25128/1,$25129/1,$Blank/10-90,$25130/1,$Blank/92-98,$25131/1,
-DM $T_Q104_3 = $25132/1,$25133/1,$25134/1,$25135/1,$25136/1,$25137/1,$25138/1,$25139/1,$25140/1,$Blank/10-90,$25141/1,$Blank/92-98,$25142/1,
-DM $T_Q104_4 = $25143/1,$25144/1,$25145/1,$25146/1,$25147/1,$25148/1,$25149/1,$25150/1,$25151/1,$Blank/10-90,$25152/1,$Blank/92-98,$25153/1,
-DM $T_Q104_5 = $25154/1,$25155/1,$25156/1,$25157/1,$25158/1,$25159/1,$25160/1,$25161/1,$25162/1,$Blank/10-90,$25163/1,$Blank/92-98,$25164/1,
-DM $T_Q104_6 = $25165/1,$25166/1,$25167/1,$25168/1,$25169/1,$25170/1,$25171/1,$25172/1,$25173/1,$Blank/10-90,$25174/1,$Blank/92-98,$25175/1,
-DM $T_Q104_7 = $25176/1,$25177/1,$25178/1,$25179/1,$25180/1,$25181/1,$25182/1,$25183/1,$25184/1,$Blank/10-90,$25185/1,$Blank/92-98,$25186/1,
-DM $T_Q104_8 = $25187/1,$25188/1,$25189/1,$25190/1,$25191/1,$25192/1,$25193/1,$25194/1,$25195/1,$Blank/10-90,$25196/1,$Blank/92-98,$25197/1,
-DM $T_Q104_9 = $25198/1,$25199/1,$25200/1,$25201/1,$25202/1,$25203/1,$25204/1,$25205/1,$25206/1,$Blank/10-90,$25207/1,$Blank/92-98,$25208/1,
-DM $T_Q104_10 = $25209/1,$25210/1,$25211/1,$25212/1,$25213/1,$25214/1,$25215/1,$25216/1,$25217/1,$Blank/10-90,$25218/1,$Blank/92-98,$25219/1,
-DM $T_Q104_11 = $25220/1,$25221/1,$25222/1,$25223/1,$25224/1,$25225/1,$25226/1,$25227/1,$25228/1,$Blank/10-90,$25229/1,$Blank/92-98,$25230/1,
-DM $T_Q104_12 = $25231/1,$25232/1,$25233/1,$25234/1,$25235/1,$25236/1,$25237/1,$25238/1,$25239/1,$Blank/10-90,$25240/1,$Blank/92-98,$25241/1,
-DM $T_Q104_13 = $25242/1,$25243/1,$25244/1,$25245/1,$25246/1,$25247/1,$25248/1,$25249/1,$25250/1,$Blank/10-90,$25251/1,$Blank/92-98,$25252/1,
-DM $T_Q104_14 = $25253/1,$25254/1,$25255/1,$25256/1,$25257/1,$25258/1,$25259/1,$25260/1,$25261/1,$Blank/10-90,$25262/1,$Blank/92-98,$25263/1,
-DM $T_Q104_15 = $25264/1,$25265/1,$25266/1,$25267/1,$25268/1,$25269/1,$25270/1,$25271/1,$25272/1,$Blank/10-90,$25273/1,$Blank/92-98,$25274/1,
-DM $T_Q104_16 = $25275/1,$25276/1,$25277/1,$25278/1,$25279/1,$25280/1,$25281/1,$25282/1,$25283/1,$Blank/10-90,$25284/1,$Blank/92-98,$25285/1,
-DM $T_Q104_17 = $25286/1,$25287/1,$25288/1,$25289/1,$25290/1,$25291/1,$25292/1,$25293/1,$25294/1,$Blank/10-90,$25295/1,$Blank/92-98,$25296/1,
-DM $T_Q104_18 = $25297/1,$25298/1,$25299/1,$25300/1,$25301/1,$25302/1,$25303/1,$25304/1,$25305/1,$Blank/10-90,$25306/1,$Blank/92-98,$25307/1,
-
-
-
-!-----------MultipleTopics4
-
-DM $T_Q105_1 = $25308/1-9,'0',
-DM $T_Q105_2 = $25309/1-9,'0',
-DM $T_Q105_3 = $25310/1-9,'0',
-DM $T_Q105_4 = $25311/1-9,'0',
-
-
-
-!-----------Unique
-DM $Q106 = $25312/1-9,'0',
-
-
-!-----------MultiSelect
-DM $A_Q107 = $25313/1,$25314/1,$25315/1,$25316/1,$25317/1,$25318/1,$25319/1,$25320/1,$25321/1,$25322/1,$25323/1,$25324/1,$25325/1,$25326/1,$25327/1,$25328/1,$25329/1,$25330/1,$25331/1,$25332/1,$25333/1,$25334/1,
-
-
-!-----------Unique
-DM $Q125 = $25524/1-9,'0',
-
-!=======================MultiSelect
-
-DM $TQ102 =
-$A_Q102/1,
-$A_Q102/2,
-$A_Q102/3,
-$A_Q102/4,
-$A_Q102/5,
-$A_Q102/6,
-$A_Q102/7,
-$A_Q102/8,
-$A_Q102/9,
-$Q102_91_other/1021+1022+1023+1024,
-$A_Q102/99,
-R,F,
-VT = "Q102. MODES OF PAYMENT AWARE OF",
-V = "
-Cash;
-Check;
-Debit Card;
-Credit Card;
-Banks (with physical branches and ATMs);
-Remittance Centers;
-E-Wallet/ Fintech;
-Mobile/ Online Banking App;
-E-remittance App;
-VAGUE NET;
-None;
-Missing answers<Z>;
-Total count<C>",
-
-
-
-!=======================MultiSelect
-
-DM $TQ102B =
-$A_Q102B/1,
-$A_Q102B/2,
-$A_Q102B/3,
-$A_Q102B/4,
-$A_Q102B/5,
-$A_Q102B/6,
-$A_Q102B/7,
-$A_Q102B/8,
-$A_Q102B/9,
-$Q102B_91_other/1021+1022+1023+1024,
-$A_Q102B/11,
-R,F,
-VT = "Q102B. MODES OF PAYMENT CURRENTLY USING",
-V = "
-Cash;
-Check;
-Debit Card;
-Credit Card;
-Banks (with physical branches and ATMs);
-Remittance Centers;
-E-Wallet/ Fintech;
-Mobile/ Online Banking App;
-E-remittance App;
-VAGUE NET;
-None;
-Missing answers<Z>;
-Total count<C>",
-
-
-!=======================Unique
-
-if $Q102C/10, dm $Q102c_other = $Q102B_91_other,
-DM $TQ102C =
-$Q102C/1,
-$Q102C/2,
-$Q102C/3,
-$Q102C/4,
-$Q102C/5,
-$Q102C/6,
-$Q102C/7,
-$Q102C/8,
-$Q102C/9,
-$Q102c_other/1021+1022+1023+1024,
-$Q102C/11,
-R,F,
-VT = "Q102C. MODES OF PAYMENT USED MOST OFTEN",
-V = "
-Cash;
-Check;
-Debit Card;
-Credit Card;
-Banks (with physical branches and ATMs);
-Remittance Centers;
-E-Wallet/ Fintech;
-Mobile/ Online Banking App;
-E-remittance App;
-VAGUE NET;
-None;
-Missing answers<Z>;
-Total count<C>",
-
-
-
-!=======================MultipleTopics18
-
-[*SET s = 0]
-[*DATA topic0 (;) = 
-Can be used whenever needed (any time and any day);
-Makes everyday life easier;
-Can be used anywhere (widely accepted, online and in-store);
-Has low to no transaction fees;
-I can depend on for emergency or additional funds;
-Helps me get ready for a better tomorrow;
-For everyone (young or old, rich or poor);
-Safe and secure to use for different financial transactions;
-Faster transactions;
-Convenient to use for different financial transactions;
-Is the mode of payment I use for my most important financial transactions;
-I feel comfortable using it for my different financial transactions;
-Hassle-free and easy to use;
-Gives me perks, rewards, deals, and discounts that are relevant to me Nagbibigay sa akin ng mga perks, rewards, deals, at discounts na naaangkop sa akin;
-Is the mode of payment that I can use for any and all of financial transactions;
-Convenient to send money anytime, anywhere for free;
-Low foreign exchange rates for purchases abroad;
-Accepted as payment in different countries with no service fees]
-
-[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-DM $TQ103_[A] =
-$T_Q103_[A]/
-1,
-2,
-3,
-4,
-5,
-4+5,
-5,
-1+2,
-
-R,F,
-VT = "Q103. STATED IMPORTANCE - MODE OF PAYMENT",
-V = "
-[topic0.[+s]]\
-`    Not important at all (1) <v1>;
-`    Somewhat not important (2) <v2>;
-`    May or may not be important (3) <v3>;
-`    Somewhat important (4) <v4>;
-`    Very important (5) <v5>;
-T2B <Q>;
-TB <Q>;
-B2B <Q>;
-Missing answers<Z>;
-Total count<C>",
-[*END A]
-
-
-[*SET S = 0]
-DM $TQ103_TB =
-[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-$T_Q103_[A]/5,
-[*END A]
-F,
-VT = "Q103. STATED IMPORTANCE - MODE OF PAYMENT - TB SUMMARY",
-V = "
-[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-[topic0.[+s]];
-[*END A]
-Total count<C>",
-
-!=======================MultipleTopicsSelect18
-
-
-[*DO B = 1:9]
-[*SET s = 0]
-DM $TQ104R[B] =
-[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-$T_Q104_[A]/[B],
-[*END A]
-R,F,
-VT = "Q104. ASSOCIATION - MODE OF PAYMENT",
-V = "
-[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-[topic0.[+s]];
-[*END A]
-Not Associated<Z>;
-Total count<C>",
-[*END B]
-
-
-
-!=======================MultipleTopics4
-
-[*SET s = 0]
-[*DATA topic1 (;) = 
-GCash is better than cash;
-Cash is better than GCash;
-GCash is as good as cash;
-GCash is the best way to pay]
-
-[*FOR A = 1:2:3:4]
-DM $TQ105_[A] =
-$T_Q105_[A]/
-1,
-2,
-3,
-4,
-5,
-4+5,
-5,
-1+2,
-R,F,
-VT = "Q105. CASH VERSUS GCASH - AGREEMENT SCALE",
-V = "
-[topic1.[+s]]\
-`    Strongly Disagree (1) <v1>;
-`    Disagree (2) <v2>;
-`    Can't say if I agree or disagree (3) <v3>;
-`    Agree (4) <v4>;
-`    Strongly agree (5) <v5>;
-T2B <Q>;
-TB <Q>;
-B2B <Q>;
-Missing answers<Z>;
-Total count<C>",
-[*END A]
-
-[*SET S = 0]
-DM $TQ105_TB =
-[*FOR A = 1:2:3:4]
-$T_Q105_[A]/5,
-[*END A]
-F,
-VT = "Q105. CASH VERSUS GCASH - AGREEMENT SCALE - TB SUMMARY",
-V = "
-[*FOR A = 1:2:3:4]
-[topic1.[+s]];
-[*END A]
-Total count<C>",
-
-
-
-[*SET S = 0]
-DM $TQ105_T2B =
-[*FOR A = 1:2:3:4]
-$T_Q105_[A]/4+5,
-[*END A]
-F,
-VT = "Q105. CASH VERSUS GCASH - AGREEMENT SCALE - TB2 SUMMARY",
-V = "
-[*FOR A = 1:2:3:4]
-[topic1.[+s]];
-[*END A]
-Total count<C>",
-
-
-!=======================Unique
-
-DM $TQ106 =
-$Q106/
-1,
-2,
-3,
-R,F,
-VT = "Q106. CASH VERSUS GCASH FORCED CHOICE",
-V = "
-GCash is better than cash;
-Cash is better than GCash;
-GCash is as good as cash;
-Missing answers<Z>;
-Total count<C>",
-
-
-!=======================MultiSelect
-
-DM $TQ107 =
-$A_Q107/
-1,
-2,
-3,
-4,
-5,
-6,
-7,
-8,
-9,
-10,
-11,
-12,
-13,
-14,
-15,
-16,
-17,
-18,
-19,
-20,
-21,
-22,
-R,F,
-VT = "Q107. REASON FOR SELECTION AMONG ANSWERED GCASH IS BETTER THAN CASH",
-V = "
-Creates new and continuously innovate its products and services;
-GCash is safe and secure;
-Provides relevant digital products and services;
-Can be used whenever needed (any time and any day);
-Makes everyday life easier;
-Has reliable customer service when needed;
-Gives me perks, rewards, deals, and discounts that are relevant to me;
-Opens up opportunities to progress more in life;
-Can be used anywhere (widely accepted, online and in-store);
-Has low to no transaction fees;
-Has features that can help me assure my future by growing my finances;
-Complete and all-in one financial app/ solution/ website;
-GCash is trustworthy;
-Products and services are easy to avail of and use;
-GCash helps customers to develop their financial skills and understanding;
-I can depend on to GCash for emergency or additional funds;
-Helps me get ready for a better tomorrow;
-Convenient to send money anytime, anywhere for free;
-Hassle-free payments;
-Easier access to exclusive deals and discounts;
-Low  foreign exchange rates and exclusive deals abroad;
-Accepted as payment in different countries with no service fees;
-Missing answers<Z>;
-Total count<C>",
-
-DM $HMOP(9),
-HT = "Mode of Payment Header",
-H = "
-Cash *(a);
-Check *(b);
-Debit Card *(c);
-Credit Card *(d);
-Banks (with physical branches and ATMs) *(e);
-Remittance Centers *(f);
-E-Wallet/ Fintech *(g);
-Mobile/ Online Banking App *(h);
-E-remittance App *(i)",
-
-DM $TQ125 =
-$Q125/
-1,
-2,
-3,
-4,
-5,
-4+5,
-5,
-1+2,
-R,F,
-VT = "Q125. GCASH IS SYNONYMOUS WITH E-WALLET/ FINTECH",
-V = "
-Strongly Disagree (1) <v1>;
-Disagree (2) <v2>;
-Can't say if I agree or disagree (3) <v3>;
-Agree (4) <v4>;
-Strongly agree (5) <v5>;
-T2B <Q>;
-TB <Q>;
-B2B <Q>;
-Missing answers<Z>;
-Total count<C>",
-
+[*INSERT W_WTS21to65]
 
 DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
-! IF ($DEC2023/NB+$NOV2023/NB).$TQ16d/1, CK $Q106/NB, 
-
-IF $Q12024/NB+$Q22024/NB, WRITE,
   
+IF $Q42023/NB+$Q12024/NB+$Q22024/NB, WRITE,
 
+
+[*SK 11]
+ IF $Q22024/NB, lcsv (h) $1-10.
+ [*DO A = 1:48]
+ $I_[A]_QSAV6.
+ [*END A]
+ $QINV4.
+ $QINS6,
+[*11]
 
 FINISH DATA,
 START TABLES,
-%JH = 'PROJECT WALL E',  
-GLOBAL BT# = "All Respondents",
+%JH = 'PROJECT WALLE E',  
 
 
+!lcsv (h)$iobs.$A_QSAV1.$A_QSAV8.$T_Q8b1_10.$TQSAV4.$A_QSAV4.$QSAV4_other,
+lcsv (h)$iobs.$QINS5.$TQINS6.$QINS6,
+             
 
 !======FOR QPS WINDOWS (% + raw - for datachecking)
  
@@ -509,7 +86,7 @@ F=DPS2,          ! ------ Decimal Std
 F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
 
 
-F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+F= SHG1/SIG/SLA95/SLB95/NFSL, ! standard by segment
 
 !F= SHG-1/SIG/SLA95/SLB95/NFSL, ! ROUND ROBIN
 
@@ -518,7 +95,7 @@ F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HX = HA,HB,HC,HD]
+[*DATA HEADERWAVE3 = HAT,HBT,HCT]
 
 
 !
@@ -560,280 +137,60 @@ MINDANAO,
 URBAN,
 RURAL]
 
-SELECT WR $WTS,
+!SELECT WR $WTS,
 
 [*SET T = 0]
 
+SELECT WR $WTS21to65,
+!======
+[*DATA Q74A = 
+1+2+3+4+5+6+7+8+9+10+11+12+30,
+13+14+15+16+40+41+42+43+17+18+19+20+31,
+21+22+23+24+34,
+25+26+27+35+36+37,
+29,
+28,
+38,
+39,
+44+33]
 
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:3]
-T #[+T] = $TQ102 * $[HX.X],
-[*END X]
+!======
+[*DATA Q74ARAC = 
+1..12+30+21..24+34+25..27+35..37+39,
+13..20+31+40..43,
+29+28+38+44+33]
 
-
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:3]
-T #[+T] = $TQ102B * $[HX.X],
-[*END X]
-
-
-!~~~~~~~~~~~~Unique
-[*DO X = 1:3]
-T #[+T] = $TQ102C * $[HX.X],
-[*END X]
-
-
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, then,
-! IF $DEC2023/NB+(($NOV2023/NB).$A_Q102/1), then,
-!~~~~~~~~~~~~MultipleTopics18
-[*DO X = 1:3]
-T #[+T] = $TQ103_1 * $[HX.X],
-[*FOR A = 2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-+T #[+T] = $TQ103_[A] * $[HX.X],
+if $A_QL2/n99, then,
+[*DO Z = 1:3]
+[*DO A = 1:3]
+IF ($A_QL2/n99.nb).($A_Q74a/[Q74ARAC.A]).($T_Q1_1/21..65), T #[+T] = $TQ170a[A]_AC * $[HEADERWAVE3.Z],
+BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170aRAC.A]",
 [*END A]
-[*END X]
+[*END Z]
+endif,
 
-IF $TQ17c/1, then,
-[*DO X = 1:3]
-T #[+T] = $TQ103_1 * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*FOR A = 2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-+T #[+T] = $TQ103_[A] * $[HX.X],
+!======
+[*DO Z = 1:3]
+[*DO A = 1:3]
+IF ($A_QL2/n99.nb).($A_Q74a/[Q74ARAC.A]).($T_Q1_1/21..65),  T #[+T] = $TQ170a_1_[A]_AC * $[HEADERWAVE3.Z],
+BT = "AMONG EXISTING LOAN LOAN/BORROWING CHANNELS - [Q170aRAC.A]",
 [*END A]
-[*END X]
-end if,
+[*END Z]
 
-IF $TQ17c/N1, then,
-[*DO X = 1:3]
-T #[+T] = $TQ103_1 * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*FOR A = 2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18]
-+T #[+T] = $TQ103_[A] * $[HX.X],
+
+
+IF $Q12024/NB+$Q22024/NB.($T_Q1_1/21..65), THEN,
+!======
+[*DO Z = 1:3]
+[*DO A = 1:3]
+IF ($A_QL2/N99.NB).($A_Q74a/[Q74ARAC.A]), T #[+T] = $TQL6_[A]_AC * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO CURRENTLY HAVE A LOAN - [Q170aRAC.A]",
 [*END A]
-[*END X]
-end if,
+[*END Z]
+END IF,
 
 
-!~~~~~~~~~~~~MultipleTopics18
-[*DO X = 1:3]
-T #[+T] = $TQ103_TB * $[HX.X],
-[*END X]
-
-IF $TQ17c/1, then,
-[*DO X = 1:3]
-T #[+T] = $TQ103_TB * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-[*DO X = 1:3]
-T #[+T] = $TQ103_TB * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*END X]
-end if,
-
-
-!~~~~~~~~~~~~MultipleTopicsSelect18
-[*SET s = 0]
-T #[+T] = $TQ104R1 * $HMOP,
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, T #[T] = $TQ104R1 * 1,
-[*DO B = 2:9]
-IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
-[*END B]
-
-
-IF $TQ17c/1, then,
-!~~~~~~~~~~~~MultipleTopicsSelect18
-[*SET s = 0]
-T #[+T] = $TQ104R1 * $HMOP,
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, T #[T] = $TQ104R1 * 1,
-[*DO B = 2:9]
-IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
-[*END B]
-BT = "Among GCash users (Q17c = Code 1)",
-end if,
-
-
-
-IF $TQ17c/N1, then,
-!~~~~~~~~~~~~MultipleTopicsSelect18
-[*SET s = 0]
-T #[+T] = $TQ104R1 * $HMOP,
-IF $DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB, T #[T] = $TQ104R1 * 1,
-[*DO B = 2:9]
-IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
-[*END B]
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-end if,
-
-end if, !DECEMBER ONLY
-
-
-
-
-[*SK 5]
-[*DO X = 1:3]
-T #[+T] = $TQ104 * $[HX.X],
-[*END X]
-
-IF $TQ17c/1, then,
-[*DO X = 1:3]
-!~~~~~~~~~~~~MultipleTopicsSelect18
-[*SET s = 0]
-T #[+T] = $TQ104 * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-[*DO X = 1:3]
-!~~~~~~~~~~~~MultipleTopicsSelect18
-[*SET s = 0]
-T #[+T] = $TQ104 * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*END X]
-end if,
-[*5]
-
-
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_1 * $[HX.X],
-BT = "Among Aware of Gcash",
-[*FOR A = 2:3:4]
-IF $TQ16d/1, +T #[+T] = $TQ105_[A] * $[HX.X],
-[*END A]
-[*END X]
-
-IF $TQ17c/1, then,
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_1 * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*FOR A = 2:3:4]
-IF $TQ16d/1,+T #[+T] = $TQ105_[A] * $[HX.X],
-[*END A]
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_1 * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*FOR A = 2:3:4]
-IF $TQ16d/1, +T #[+T] = $TQ105_[A] * $[HX.X],
-[*END A]
-[*END X]
-end if,
-
-
-
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_TB * $[HX.X],
-BT = "Among Aware of Gcash",
-[*END X]
-
-IF $TQ17c/1, then,
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_TB * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_TB * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*END X]
-end if,
-
-
-
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_T2B * $[HX.X],
-BT = "Among Aware of Gcash",
-[*END X]
-
-IF $TQ17c/1, then,
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_T2B * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-!~~~~~~~~~~~~MultipleTopics4
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ105_T2B * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*END X]
-end if,
-
-
-
-
-!~~~~~~~~~~~~Unique
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ106 * $[HX.X],
-BT = "Among Aware of Gcash",
-[*END X]
-
-IF $TQ17c/1, then,
-!~~~~~~~~~~~~Unique
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ106 * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1)",
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-!~~~~~~~~~~~~Unique
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ106 * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1)",
-[*END X]
-end if,
-
-
-
-
-
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:3]
-IF ($T_Q105_1/4+5+$Q106/1), T #[+T] = $TQ107 * $[HX.X],
-BT = "Among those who think GCash is better than Cash",
-[*END X]
-
-IF $TQ17c/1, then,
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:3]
-IF ($T_Q105_1/4+5+$Q106/1), T #[+T] = $TQ107 * $[HX.X],
-BT = "Among GCash users (Q17c = Code 1) and those who think GCash is better than Cash",
-[*END X]
-end if,
-
-IF $TQ17c/N1, then,
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:3]
-IF ($T_Q105_1/4+5+$Q106/1), T #[+T] = $TQ107 * $[HX.X],
-BT = "Among Non-users of GCash (Q17c = Not Code 1) and those who think GCash is better than Cash",
-[*END X]
-end if,
-
-
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:3]
-IF $TQ16d/1, T #[+T] = $TQ125 * $[HX.X],
-BT = "Among Aware of Gcash",
-[*END X]
-
+!SELECT WR $WTS,
 
 
 FINISH TABLES,

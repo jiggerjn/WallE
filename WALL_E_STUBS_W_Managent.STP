@@ -15,7 +15,11 @@ $SEC19/1+2,
 $SEC19/3,
 $SEC19/4,
 
-$T_Q1_1/1..20,21..30,31..35,36..45,46..65,
+$T_Q1_1/13..20,
+$T_Q1_1/21..28,
+$T_Q1_1/29..37,
+$T_Q1_1/38..51,
+$T_Q1_1/52..65,
 
 $Q2/1,
 $Q2/2,
@@ -52,11 +56,11 @@ SEC\
 `     D;
 
 LIFESTAGE\
-`     Students (20 yo and below);
-`     Yuppies (21-30 yo);
-`     Transitioners (31-35 yo);
-`     Balancers (36-45 yo);
-`     Older Adults/Retirees (46-65 yo);
+`     13-20 years old (YOUTH);
+`     21-28 years old (YUPPIES);
+`     29-37 years old (TRANSITONERS);
+`     38-51 years old (BALANCERS);
+`     52-65 years old (OLDER ADULTS);
 
 GENDER\
 `     Male;
@@ -125,9 +129,14 @@ $QSAV2_98_other/1032,
 $QSAV2_98_other/1033,
 $QSAV2_98_other/1035,
 $QSAV2_98_other/1036,
+$QSAV2_98_other/1037,
+$QSAV2_98_other/1038,
+$QSAV2_98_other/1039,
 
-$QSAV2_98_other/1027+1024+1031+1029,
+$QSAV2_98_other/1027+1024+1031+1029+1040,
 
+$QSAV2_98_other/9999,
+$QSAV2_98_other/9998,
 R,F,
 VT = "QSAV2. BANKS WHERE SAVINGS ARE KEPT (PHYSICAL BANK WITHOUT ACCESS TO ONLINE BANKING)",
 V = "
@@ -160,8 +169,14 @@ Barbaza Multi Puirpose Cooperative;
 AFPSLAI;
 Development Bank of the Philippines (DBP);
 LDB;
+MRI central bank;
+Rural bank;
+Pamana Savings;
 
 VAGUE (NET);
+NONE;
+refused;
+
 Missing Answer<z>;
 Total Count<C>",
 
@@ -176,7 +191,7 @@ $A_QSAV3/5,
 $A_QSAV3/6,
 $A_QSAV3/7,
 $A_QSAV3/8,
-$A_QSAV3/9,
+$A_QSAV3/9+($QSAV3_98_other/1047),
 $A_QSAV3/10,
 $A_QSAV3/11,
 $A_QSAV3/12,
@@ -202,6 +217,7 @@ $QSAV3_98_other/1042,
 $QSAV3_98_other/1043,
 $QSAV3_98_other/1044,
 $QSAV3_98_other/1045,
+$QSAV3_98_other/1046,
 
 $QSAV3_98_other/1033+1037+1040,
 
@@ -244,6 +260,7 @@ Barbaza Multi Puirpose Cooperative;
 Legazpi Savings Bank;
 China Bank;
 AUB;
+PNB;
 
 VAGUE (NET);
 None;
@@ -258,6 +275,7 @@ $A_QSAV8/1+($QSAV8_98_other/1038),
 $A_QSAV8/2,
 $A_QSAV8/3,
 $A_QSAV8/4,
+$A_QSAV8/5,
 $A_QSAV8/6,
 $A_QSAV8/7,
 $A_QSAV8/8,
@@ -282,6 +300,8 @@ $QSAV8_98_other/1033,
 $QSAV8_98_other/1036,
 $QSAV8_98_other/1039,
 $QSAV8_98_other/1040,
+$QSAV8_98_other/1041,
+$QSAV8_98_other/1043,
 
 $QSAV8_98_other/1025+1029,
 $QSAV8_98_other/1025,
@@ -290,7 +310,7 @@ $QSAV8_98_other/1029,
 $QSAV8_98_other/1034,
 $QSAV8_98_other/1034,
 
-$QSAV8_98_other/1020+1021+1027+1035+1037,
+$QSAV8_98_other/1020+1021+1027+1035+1037+1042,
 
 $A_QSAV8/17,
 R,F,
@@ -300,6 +320,7 @@ Maya Savings;
 CIMB Bank PH;
 GoTyme;
 UNOBank;
+SEABank;
 Tonik;
 Overseas Filipino Bank (OFBank);
 UnionDigital Bank;
@@ -325,6 +346,8 @@ PHYSICAL BANKS WITH ONLINE/MOBILE BANKING (NET)<Q>;
 `     Landbank;
 `     GSave;
 `     CIMB Bank;
+`     Rural Bank;
+`     Metrobank;
 
 E-REMITTANCE (NET)<Q>;
 `     Palawan pay;
@@ -360,7 +383,7 @@ $A_QSAV4/14,
 $A_QSAV4/15,
 $A_QSAV4/16,
 !$A_QSAV4/98,
-$QSAV4_other/1022+1023+1024+1026+1028+1030+1031+1032+1033+1036+1039+1040,
+$QSAV4_other/1022+1023+1024+1026+1028+1030+1031+1032+1033+1036+1039+1040+1041+1043,
 $QSAV4_other/1022,
 $QSAV4_other/1023,
 $QSAV4_other/1024,
@@ -373,6 +396,8 @@ $QSAV4_other/1033,
 $QSAV4_other/1036,
 $QSAV4_other/1039,
 $QSAV4_other/1040,
+$QSAV4_other/1041,
+$QSAV4_other/1043,
 
 $QSAV4_other/1025+1029,
 $QSAV4_other/1025,
@@ -381,7 +406,7 @@ $QSAV4_other/1029,
 $QSAV4_other/1034,
 $QSAV4_other/1034,
 
-$QSAV4_other/1020+1021+1027+1035+1037+B,
+$QSAV4_other/1020+1021+1027+1035+1037+1042+B,
 R,F,
 VT = "QSAV4. DIGITAL BANKS WHERE SAVINGS ARE KEPT (SAVINGS ACCOUNT IN A DIGITAL BANK",
 V = "
@@ -415,6 +440,8 @@ PHYSICAL BANKS WITH ONLINE/MOBILE BANKING (NET)<Q>;
 `     Landbank;
 `     GSave;
 `     CIMB Bank;
+`     Rural Bank;
+`     Metrobank;
 
 E-REMITTANCE (NET)<Q>;
 `     Palawan pay;
@@ -495,51 +522,77 @@ Total Count<C>",
 
 !========= 
 [*DO A = 1:48]
-DM $TQSAV6_[A] = $I_[A]_QSAV6/10,50,80,99,100,150,175,200,240,250,300,400,500,508,600,700,1000,1200,1300,1500,2000,2500,3000,3500,4000,4200,5000,6000,6500,6600,7000,8000,10000,14000,15000,16000,17000,18000,20000,25000,30000,35000,50000, R,F,
+DM $TQSAV6_[A] = $I_[A]_QSAV6/1,10,50,80,99,100,150,175,180,198,200,240,250,297,300,400,500,508,599,600,700,1000,1099,1200,1300,1500,1508,1600,2000,2500,3000,3198,3297,3500,4000,4099,4200,4500,5000,5099,6000,6500,6600,7000,8000,9000,10000,10200,11000,12000,13000,14000,15000,16000,17000,18000,19000,20000,20501,21000,22000,25000,30000,30099,30297,34000,35000,40000,50000,R,F,
 XT = "QSAV6. AMOUNT SAVED IN P1M - [QSAV5.A]",
 X = "
+1<v1>;
 10<v10>;
 50<v50>;
 80<v80>;
 99<v99>;
 100<v100>;
-150<V150>;
+150<v150>;
 175<v175>;
+180<v180>;
+198<v198>;
 200<v200>;
-240<v240>;
+240<v200>;
 250<v250>;
+297<v297>;
 300<v300>;
 400<v400>;
 500<v500>;
-508<v508>;
+508<v500>;
+599<v599>;
 600<v600>;
 700<v700>;
 1000<v1000>;
+1099<v1099>;
 1200<v1200>;
 1300<v1300>;
 1500<v1500>;
+1508<v1508>;
+1600<v1600>;
 2000<v2000>;
 2500<v2500>;
 3000<v3000>;
+3198<v3198>;
+3297<v3297>;
 3500<v3500>;
 4000<v4000>;
+4099<v4099>;
 4200<v4200>;
+4500<v4500>;
 5000<v5000>;
+5099<v5099>;
 6000<v6000>;
 6500<v6500>;
 6600<v6600>;
 7000<v7000>;
 8000<v8000>;
+9000<v9000>;
 10000<v10000>;
+10200<v10200>;
+11000<v11000>;
+12000<v12000>;
+13000<v13000>;
 14000<v14000>;
 15000<v15000>;
 16000<v16000>;
 17000<v17000>;
 18000<v18000>;
+19000<v19000>;
 20000<v20000>;
+20501<v20501>;
+21000<v21000>;
+22000<v22000>;
 25000<v25000>;
 30000<v30000>;
+30099<v30099>;
+30297<v30297>;
+34000<v34000>;
 35000<v35000>;
+40000<v40000>;
 50000<v50000>;
 
 MISSING ANSWER<Z>;
@@ -650,6 +703,7 @@ $QL2_98_other/1038,
 
 1022+1026,
 $A_QL2/99,
+$QL2_98_other/9998,
 R,F,
 VT = "QL2. TYPES OF LOANS CURENTLY HAVE",
 V = "
@@ -687,6 +741,7 @@ Card MRI;
 
 VAGUE (NET);
 NONE;
+Don't Know;
 Missing Answer<z>;
 Total Count<C>",
 
@@ -741,10 +796,11 @@ $Q74A_OTHERS/1059,
 $Q74A_OTHERS/1065,
 $Q74A_OTHERS/1068,
 $Q74A_OTHERS/1073,
+$Q74A_OTHERS/1083,
 
 $A_Q74a/28+29+38+39+44+33,
-$A_Q74a/28,
-$A_Q74a/29,
+$A_Q74a/28+($Q74A_OTHERS/1084),
+$A_Q74a/29+($Q74A_OTHERS/1072),
 $A_Q74a/38+($Q74A_OTHERS/1074),
 $A_Q74a/39,
 $A_Q74a/44,
@@ -757,8 +813,13 @@ $Q74A_OTHERS/1058,
 $Q74A_OTHERS/1076,
 $Q74A_OTHERS/1075,
 $Q74A_OTHERS/1078,
+$Q74A_OTHERS/1079,
+$Q74A_OTHERS/1080,
+$Q74A_OTHERS/1081,
+$Q74A_OTHERS/1082,
+$Q74A_OTHERS/1086,
 
-$Q74A_OTHERS/1056+1072+1060+1061+1062+1066,
+$Q74A_OTHERS/1056+1072+1060+1061+1062+1066+1085,
 
 R,F,
 VT = "Q74a. EXISTING LOAN LOAN/BORROWING CHANNELS",
@@ -812,6 +873,7 @@ FORMAL INSTITUTIONS (NET)<Q>;
 `          ASA;
 `          AFPSLAI;
 `          AMCOOP;
+`          Infinity Lending;
 
 LOANS/DEBTS FROM INFORMAL ROUTES (NET)<Q>;
 `     Loan from friends/relative/friends/neighbor;
@@ -829,6 +891,11 @@ LOANS/DEBTS FROM INFORMAL ROUTES (NET)<Q>;
 `     PNB;
 `     One puhunan;
 `     Wheeltek;
+`     Skyro;
+`     Inhouse Financing;
+`     Rural Bank;
+`     Konek card;
+`     Car Loan;
 VAGUE (NET);
 
 Missing Answer<z>;
@@ -837,7 +904,7 @@ Total Count<C>",
 !========= 
 DM $Q159A_OTHERS = $Q159a_5_other.OR.$Q159a_98_other,
 
-DM $TQ159a = $A_Q159a/1..4+($Q159A_OTHERS/1020+1050+1040+1047+1051+1042)+($Q159a_5_other/1031+1033+1034+1035+1038+1049+1048),
+DM $TQ159a = $A_Q159a/1..4+($Q159A_OTHERS/1020+1050+1040+1047+1051+1042)+($Q159a_5_other/1031+1033+1034+1035+1038+1049+1048+1053),
 $A_Q159a/1+($Q159A_OTHERS/1020),
 $A_Q159a/2+($Q159A_OTHERS/1050),
 $A_Q159a/3+($Q159A_OTHERS/1040+1047),
@@ -849,9 +916,10 @@ $Q159a_5_other/1035,
 $Q159a_5_other/1038,
 $Q159a_5_other/1049,
 $Q159a_5_other/1048,
+$Q159a_5_other/1053,
 
 
-$A_Q159a/6..7+($Q159A_OTHERS/1036+1039+1041)+($Q159a_98_other/1031+1033+1034+1035+1038+1049+1048),
+$A_Q159a/6..7+($Q159A_OTHERS/1036+1039+1041)+($Q159a_98_other/1031+1033+1034+1035+1038+1049+1048+1053),
 $A_Q159a/6,
 $A_Q159a/7+($Q159A_OTHERS/1036+1039+1041),
 $Q159a_98_other/1031,
@@ -861,8 +929,9 @@ $Q159a_98_other/1035,
 $Q159a_98_other/1038,
 $Q159a_98_other/1049,
 $Q159a_98_other/1048,
+$Q159a_98_other/1053,
 
-$Q159A_OTHERS/1030+1032+1037+1043+1044+1045+1046,
+$Q159A_OTHERS/1030+1032+1037+1043+1044+1045+1046+1052,
 R,F,
 VT = "Q159a. WHERE PAY EXISTING LOANS PAYMENT CHANNELS",
 V = "
@@ -878,6 +947,7 @@ OFFLINE/NON-DIGITAL (NET)<Q>;
 `     Coop Center;
 `     Ewallet;
 `     SSS and PAG IBIG office;
+`     ASA Center;
 
 ONLINE/DIGITAL (NET)<Q>;
 `     Mobile/Online/Digital bank;
@@ -889,6 +959,7 @@ ONLINE/DIGITAL (NET)<Q>;
 `     Coop Center;
 `     Ewallet;
 `     SSS and PAG IBIG office;
+`     ASA Center;
 
 VAGUE;
 Missing Answer<z>;
@@ -897,12 +968,12 @@ Total Count<C>",
 !========= 
 DM $QLO3_OTHERS = $QLO3_31_other.OR.$QLO3_12_other,
 
-DM $TQLO3 = $A_QLO3/1..11+($QLO3_OTHERS/1094),
+DM $TQLO3 = $A_QLO3/1..11+($QLO3_OTHERS/1094+1099),
 $A_QLO3/1,
 $A_QLO3/2,
 $A_QLO3/3,
 $A_QLO3/4,
-$A_QLO3/5,
+$A_QLO3/5+($QLO3_OTHERS/1099),
 $A_QLO3/6,
 $A_QLO3/7,
 $A_QLO3/8,
@@ -984,6 +1055,8 @@ $QLO3_OTHERS/1090,
 $QLO3_OTHERS/1091,
 $QLO3_OTHERS/1092,
 $QLO3_OTHERS/1093,
+$QLO3_OTHERS/1097,
+$QLO3_OTHERS/1098,
 
 
 R,F,
@@ -1076,6 +1149,8 @@ Collector;
 Cardbank;
 BPI loan;
 AFPSLAI;
+Katipunan Bank;
+Rural Bank;
 
 Missing Answer<z>;
 Total Count<C>",
@@ -1102,6 +1177,9 @@ $T_Q170a_[A]_Q170a_91_other/1024,
 $T_Q170a_[A]_Q170a_91_other/1025,
 $T_Q170a_[A]_Q170a_91_other/1026,
 $T_Q170a_[A]_Q170a_91_other/1028,
+$T_Q170a_[A]_Q170a_91_other/1029,
+$T_Q170a_[A]_Q170a_91_other/1030,
+$T_Q170a_[A]_Q170a_91_other/1031,
 $T_Q170a_[A]_Q170a_91_other/9999,
 
 R,F,
@@ -1126,6 +1204,69 @@ Monthly;
 Weekly;
 30 YEARS;
 Daily;
+2 month;
+3 days;
+Every other day;
+None;
+
+Missing Answer<z>;
+Total Count<C>",
+[*END A]
+
+[*DATA Q170aRAC = 
+Formal - Traditional (NET),
+Formal - Digital (NET),
+Formal - Informal Loans (NET)]
+
+DM $T_Q170a_1_AC = $T_Q170a_1 .OR. $T_Q170a_3 .OR. $T_Q170a_4 .OR. $T_Q170a_8,
+DM $T_Q170a_2_AC = $T_Q170a_2,
+DM $T_Q170a_3_AC = $T_Q170a_5 .OR. $T_Q170a_6 .OR. $T_Q170a_7 .OR. $T_Q170a_9,
+
+DM $T_Q170a_1_AC_Q170a_91_other = $T_Q170a_1_Q170a_91_other .OR. $T_Q170a_3_Q170a_91_other .OR. $T_Q170a_4_Q170a_91_other .OR. $T_Q170a_8_Q170a_91_other,
+DM $T_Q170a_2_AC_Q170a_91_other = $T_Q170a_2_Q170a_91_other,
+DM $T_Q170a_3_AC_Q170a_91_other = $T_Q170a_5_Q170a_91_other .OR. $T_Q170a_6_Q170a_91_other .OR. $T_Q170a_7_Q170a_91_other .OR. $T_Q170a_9_Q170a_91_other,
+
+[*DO A = 1:3]
+DM $TQ170a[A]_AC = 
+$T_Q170a_[A]_AC/1-11,
+$T_Q170a_[A]_AC_Q170a_91_other/1020,
+$T_Q170a_[A]_AC_Q170a_91_other/1021,
+$T_Q170a_[A]_AC_Q170a_91_other/1022,
+$T_Q170a_[A]_AC_Q170a_91_other/1027,
+$T_Q170a_[A]_AC_Q170a_91_other/1024,
+$T_Q170a_[A]_AC_Q170a_91_other/1025,
+$T_Q170a_[A]_AC_Q170a_91_other/1026,
+$T_Q170a_[A]_AC_Q170a_91_other/1028,
+$T_Q170a_[A]_AC_Q170a_91_other/1029,
+$T_Q170a_[A]_AC_Q170a_91_other/1030,
+$T_Q170a_[A]_AC_Q170a_91_other/1031,
+$T_Q170a_[A]_AC_Q170a_91_other/9999,
+
+R,F,
+VT = "Q170a. PAYMENT TERMS - [Q170aRAC.A]",
+V = "
+Month - One month;
+Three months;
+Six months;
+Nine months;
+12 months;
+18 months;
+24 months;
+2 years;
+3-5 years;
+6-10 years;
+More than 10 years;
+Everyday;
+Every 15 days;
+2X month;
+Monthly;
+4 months;
+Weekly;
+30 YEARS;
+Daily;
+2 month;
+3 days;
+Every other day;
 None;
 
 Missing Answer<z>;
@@ -1134,15 +1275,18 @@ Total Count<C>",
 
 !========= 
 [*DO A = 1:9]
-DM $TQ170a_1_[A] = $T_Q170a_1_[A]/1-6,
-$T_Q170a_1_[A]_Q170a_1_7_other/1020,
+DM $TQ170a_1_[A] = 
+$T_Q170a_1_[A]/1+$T_Q170a_1_[A]_Q170a_1_7_other/1025,
+$T_Q170a_1_[A]/2+$T_Q170a_1_[A]_Q170a_1_7_other/1027,
+$T_Q170a_1_[A]/3-6,
+$T_Q170a_1_[A]_Q170a_1_7_other/1020+$T_Q170a_1_[A]_Q170a_1_7_other/1028,
 $T_Q170a_1_[A]_Q170a_1_7_other/1021,
 $T_Q170a_1_[A]_Q170a_1_7_other/1022,
-$T_Q170a_1_[A]_Q170a_1_7_other/1027,
 $T_Q170a_1_[A]_Q170a_1_7_other/1024,
-$T_Q170a_1_[A]_Q170a_1_7_other/1025,
 $T_Q170a_1_[A]_Q170a_1_7_other/1026,
-$T_Q170a_1_[A]_Q170a_1_7_other/1028,
+$T_Q170a_1_[A]_Q170a_1_7_other/1029,
+$T_Q170a_1_[A]_Q170a_1_7_other/1030,
+$T_Q170a_1_[A]_Q170a_1_7_other/1031,
 $T_Q170a_1_[A]_Q170a_1_7_other/9999,
 
 R,F,
@@ -1154,14 +1298,63 @@ Bi-monthly;
 Quarterly;
 Semi-annual;
 Annually;
-Everyday;
+
+Everyday/Daily;
 Every 15 days;
 2X month;
-Monthly;
 4 months;
-Weekly;
 30 YEARS;
-Daily;
+2 month;
+3 days;
+Every other day;
+None;
+Missing Answer<z>;
+Total Count<C>",
+[*END A]
+
+
+DM $T_Q170a_1_1_AC = $T_Q170a_1_1 .OR. $T_Q170a_1_3 .OR. $T_Q170a_1_4 .OR. $T_Q170a_1_8,
+DM $T_Q170a_1_2_AC = $T_Q170a_1_2,
+DM $T_Q170a_1_3_AC = $T_Q170a_1_5 .OR. $T_Q170a_1_6 .OR. $T_Q170a_1_7 .OR. $T_Q170a_1_9,
+
+DM $T_Q170a_1_1_AC_Q170a_1_7_other = $T_Q170a_1_1_Q170a_1_7_other .OR. $T_Q170a_1_3_Q170a_1_7_other .OR. $T_Q170a_1_4_Q170a_1_7_other .OR. $T_Q170a_1_8_Q170a_1_7_other,
+DM $T_Q170a_1_2_AC_Q170a_1_7_other = $T_Q170a_1_2_Q170a_1_7_other,
+DM $T_Q170a_1_3_AC_Q170a_1_7_other = $T_Q170a_1_5_Q170a_1_7_other .OR. $T_Q170a_1_6_Q170a_1_7_other .OR. $T_Q170a_1_7_Q170a_1_7_other .OR. $T_Q170a_1_9_Q170a_1_7_other,
+
+!========= 
+[*DO A = 1:3]
+DM $TQ170a_1_[A]_AC =
+$T_Q170a_1_[A]_AC/1+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1025,
+$T_Q170a_1_[A]_AC/2+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1027,
+$T_Q170a_1_[A]_AC/3-6,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1020+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1028,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1021,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1022,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1024,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1026,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1029,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1030,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/1031,
+$T_Q170a_1_[A]_AC_Q170a_1_7_other/9999,
+
+R,F,
+VT = "Q170a_1. FREQUENCY OF PAYMENT - [Q170aRAC.A]",
+V = "
+Weekly;
+Monthly;
+Bi-monthly;
+Quarterly;
+Semi-annual;
+Annually;
+
+Everyday/Daily;
+Every 15 days;
+2X month;
+4 months;
+30 YEARS;
+2 month;
+3 days;
+Every other day;
 None;
 Missing Answer<z>;
 Total Count<C>",
@@ -1177,9 +1370,10 @@ Missing Answer<z>;
 Total Count<C>",
 
 !=========  
-DM $TQLO2 = $QLO2/1000,1170,1200,1500,2000,2500,2600,3500,4000,5000,20000, R,F,
+DM $TQLO2 = $QLO2/500,1000,1170,1200,1500,2000,2500,2600,3500,4000,5000,20000, R,F,
 XT = "QLO2. AMOUNT ALLOTED FOR LOAN ON MONTHLY BUDGET",
 X = "
+500<V500>;
 1000<V1000>;
 1170<V1170>;
 1200<V1200>;
@@ -1294,8 +1488,9 @@ $Q178_5_other/1035,
 $Q178_5_other/1038,
 $Q178_5_other/1049,
 $Q178_5_other/1048,
+$Q178_5_other/1053,
 
-$Q178_5_other/1030+1032+1037+1043+1044+1045+1046,
+$Q178_5_other/1030+1032+1037+1043+1044+1045+1046+1052,
 R,F,
 VT = "Q178. INVESTMENT PAYMENT CHANNELS",
 V = "
@@ -1316,6 +1511,7 @@ M luillier;
 Coop Center;
 Ewallet;
 SSS and PAG IBIG office;
+ASA Center;
 
 VAGUE (NET);
 
@@ -1552,7 +1748,7 @@ $QINS1_3_other/1027,
 
 $A_QINS1/4..13,
 $A_QINS1/4,
-$A_QINS1/5,
+$A_QINS1/5+($QINS1_OTHERS/1031),
 $A_QINS1/6+($QINS1_OTHERS/1025),
 $A_QINS1/7,
 $A_QINS1/8,
@@ -1565,13 +1761,16 @@ $QINS1_14_other/1024,
 $QINS1_14_other/1026,
 $QINS1_14_other/1027,
 
-$QINS1_OTHERS/1020+1021+1022+1023+1028+1029,
+$QINS1_OTHERS/1020+1021+1022+1023+1028+1029+1030,
 $QINS1_OTHERS/1020,
 $QINS1_OTHERS/1021,
 $QINS1_OTHERS/1022,
 $QINS1_OTHERS/1023,
 $QINS1_OTHERS/1028,
 $QINS1_OTHERS/1029,
+$QINS1_OTHERS/1030,
+
+$QINS1_OTHERS/1032,
 
 R,F,
 VT = "QINS1. TYPES OF INSURANCE CURRENTLY HAVE",
@@ -1607,6 +1806,9 @@ GOVERNMENT INSURANCE (NET)<q>;
 `     Bdo Life;
 `     Pru Life;
 `     Health Care;
+`     Rizal Bank;
+
+VAGUE (NET);
 
 Missing Answer<z>;
 Total Count<C>",
@@ -1629,8 +1831,6 @@ Travel Insurance(Covers insured during travel period);
 Other NON-LIFE Insurance Types]
 
 [*DO A = 1:14]
-ORDM $T_QINS2_RGD = $T_QINS2_[A],
-ORDM $XT_QINS2_RGD_QINS2_98_other = $XT_QINS2_[A]_QINS2_98_other,
 DM $TQINS2_[A] = 
 $T_QINS2_[A]/1-9,
 $XT_QINS2_[A]_QINS2_98_other/1020,
@@ -1638,6 +1838,7 @@ $XT_QINS2_[A]_QINS2_98_other/1021,
 $XT_QINS2_[A]_QINS2_98_other/1022,
 $XT_QINS2_[A]_QINS2_98_other/1023,
 $XT_QINS2_[A]_QINS2_98_other/1024,
+$XT_QINS2_[A]_QINS2_98_other/1025,
 
 R,F,
 VT = "QINS2. AVAILMENT CHANNEL FOR CURRENT INSURANCE - [QINS2.A]",
@@ -1656,38 +1857,11 @@ GCash;
 Provided by company ;
 Lifebank Insurance;
 To the company where I work;
+Cooperative;
 
 Missing Answer<z>;
 Total Count<C>",
 [*END A]
-DM $TQINS2_RGD = 
-$T_QINS2_RGD/1-9,
-$XT_QINS2_RGD_QINS2_98_other/1020,
-$XT_QINS2_RGD_QINS2_98_other/1021,
-$XT_QINS2_RGD_QINS2_98_other/1022,
-$XT_QINS2_RGD_QINS2_98_other/1023,
-$XT_QINS2_RGD_QINS2_98_other/1024,
-
-R,F,
-VT = "QINS2. AVAILMENT CHANNEL FOR CURRENT INSURANCE - REGARDLESS OF TYPE OF INSURANCE",
-V = "
-Insurance Agent;
-Insurance Broker / Independent;
-Banks/ Bancassurance;
-Insurance Agent;
-Online through insurance companies  website/ mobile app;
-Online via banks  website/ mobile app;
-Online through fintech companies/ mobile wallets website/ mobile app (e..g, GCash, Maya, etc);
-Through online insurance marketplace (e.g., Kwik.insure);
-Though online shopping sites (e.g., Shopee, Lazada, etc);
-""Samahan or grupo"";
-GCash;
-Provided by company ;
-Lifebank Insurance;
-To the company where I work;
-
-Missing Answer<z>;
-Total Count<C>",
 
 !========= 
 [*DO A = 1:14]
@@ -1774,15 +1948,20 @@ Missing Answer<z>;
 Total Count<C>",
 
 !=========  
-DM $TQINS6 = $QINS6/600,1500,3000,4000,5000,8000, R,F,
+DM $TQINS6 = $QINS6/600,1000,1500,1600,2000,3000,4000,5000,8000,10000,15000, R,F,
 XT = "QINS6. AMOUNT ALLOTED FOR INSURANCE ON MONTHLY BUDGET",
 X = "
-600<V600>;
-1500<V1500>;
-3000<V3000>;
-4000<V4000>;
-5000<V5000>;
-8000<V8000>;
+600<v600>;
+1000<v1000>;
+1500<v1500>;
+1600<v1600>;
+2000<v2000>;
+3000<v3000>;
+4000<v4000>;
+5000<v5000>;
+8000<v8000>;
+10000<v10000>;
+15000<v15000>;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
@@ -1830,6 +2009,7 @@ $QL1_98_other/1038,
 
 $QL1_98_other/1022+1026,
 $A_QL1/99,
+$QL1_98_other/9998,
 R,F,
 XT = "QL1. AWARENESS  - LOANS",
 X = "
@@ -1867,6 +2047,7 @@ Card MRI;
 VAGUE (NET);
 
 NONE;
+Don't Know;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
@@ -1908,7 +2089,8 @@ $QL3_98_other/1037,
 $QL3_98_other/1038,
 
 $QL3_98_other/1022+1026,
-$A_QL3/99,R,F,
+$A_QL3/99,
+$QL3_98_other/9998,R,F,
 XT = "QL3. CONSIDERATION FOR FUTURE USAGE",
 X = $TQL1,
 
@@ -1951,6 +2133,7 @@ $QL2_98_other/1038,
 
 $QL2_98_other/1022+1026,
 $A_QL2/99,
+$QL2_98_other/9998,
 R,F,
 XT = "QL2. USAGE OF LOAN PRODUCTS AND SERVICES",
 X = $TQL1,
@@ -2034,12 +2217,14 @@ X = $TQL4_TOP2BOX,
 DM $TQL5 = 
 $A_QL5/1,
 $A_QL5/2+($QL5_91_other/1026),
-$A_QL5/3+($QL5_91_other/1022+1023+1024+1027+1029+1030+1031+1034+1035),
-$A_QL5/4,
+$A_QL5/3+($QL5_91_other/1022+1023+1024+1027+1029+1030+1031+1034+1035+1038),
+$A_QL5/4+($QL5_91_other/1037),
 $QL5_91_other/1020,
 $QL5_91_other/1021,
 $QL5_91_other/1032,
 $QL5_91_other/1033,
+$QL5_91_other/1036,
+$QL5_91_other/1039,
 
 $QL5_91_other/1028+1025,
 $QL5_91_other/9999,
@@ -2054,6 +2239,8 @@ For tuition in college;
 Motor;
 Bills payment;
 Household expenses;
+For Medicine;
+Payment for SSS;
 
 VAGUE (NET);
 None;
@@ -2088,7 +2275,8 @@ $I_[ql6stubscode.A]_QL6_91_other/1001,
 $I_[ql6stubscode.A]_QL6_91_other/1002,
 $I_[ql6stubscode.A]_QL6_91_other/1004,
 $I_[ql6stubscode.A]_QL6_91_other/1012,
-$I_[ql6stubscode.A]_QL6_91_other/1010+1011,
+$I_[ql6stubscode.A]_QL6_91_other/1019,
+$I_[ql6stubscode.A]_QL6_91_other/1010+1011+1018,
 $I_[ql6stubscode.A]_QL6_91_other/9999+b,
 R,F,
 XT = "QL6. LOAN PURPOSE - [ql6stubs.A]",
@@ -2113,8 +2301,116 @@ Borrow for others;
 Buying of motor;
 Emergency;
 For Requirements;
+Down payment for Ebike;
 VAGUE NET;
 None;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+[*SET ROW = 0]
+[*DATA Q74A[+ROW](t=+) = 1+2+3+4+5+6+7+8+9+10+11+12+30]
+[*DATA Q74A[+ROW](t=+) = 13+14+15+16+40+41+42+43+17+18+19+20+31]
+[*DATA Q74A[+ROW](t=+) = 21+22+23+24+34]
+[*DATA Q74A[+ROW](t=+) = 25+26+27+35+36+37]
+[*DATA Q74A[+ROW](t=+) = 29]
+[*DATA Q74A[+ROW](t=+) = 28]
+[*DATA Q74A[+ROW](t=+) = 38]
+[*DATA Q74A[+ROW](t=+) = 39]
+[*DATA Q74A[+ROW](t=+) = 44+33]
+
+
+[*DO C = 1:16]
+DM $I_1_A_QL6_[C]_AC = [*FOR A = 1:3:4:8]
+                     [*DO B = 1:[Q74A[A].#]:1]
+                         $I_[Q74A[A].B]_A_QL6_[C] [*SLE].OR.
+                     [*END B][*SLE].OR.
+                     [*END A],
+
+DM $I_2_A_QL6_[C]_AC = [*DO A = 2:2]
+                     [*DO B = 1:[Q74A[A].#]:1]
+                         $I_[Q74A[A].B]_A_QL6_[C] [*SLE].OR.
+                     [*END B][*SLE].OR.
+                     [*END A],
+DM $I_3_A_QL6_[C]_AC = [*FOR A = 5:6:7:9]
+                     [*DO B = 1:[Q74A[A].#]:1]
+                         $I_[Q74A[A].B]_A_QL6_[C] [*SLE].OR.
+                     [*END B][*SLE].OR.
+                     [*END A],
+[*END C]
+
+DM $I_1_QL6_91_other_AC =
+                     [*FOR A = 1:3:4:8]
+                     [*DO B = 1:[Q74A[A].#]:1]
+                         $I_[Q74A[A].B]_QL6_91_other [*SLE].OR.
+                     [*END B][*SLE].OR.
+                     [*END A],
+
+DM $I_2_QL6_91_other_AC =
+                     [*DO A = 2:2]
+                     [*DO B = 1:[Q74A[A].#]:1]
+                         $I_[Q74A[A].B]_QL6_91_other [*SLE].OR.
+                     [*END B][*SLE].OR.
+                     [*END A],
+DM $I_3_QL6_91_other_AC =
+                     [*FOR A = 5:6:7:9]
+                     [*DO B = 1:[Q74A[A].#]:1]
+                         $I_[Q74A[A].B]_QL6_91_other [*SLE].OR.
+                     [*END B][*SLE].OR.
+                     [*END A],
+
+[*DO A = 1:3]
+DM $TQL6_[A]_AC = 
+$I_[A]_A_QL6_1_AC/1+($I_[A]_QL6_91_other_AC/1009),
+$I_[A]_A_QL6_2_AC/1+($I_[A]_QL6_91_other_AC/1015),
+$I_[A]_A_QL6_3_AC/1+($I_[A]_QL6_91_other_AC/1008),
+$I_[A]_A_QL6_4_AC/1+($I_[A]_QL6_91_other_AC/1016),
+$I_[A]_A_QL6_5_AC/1+($I_[A]_QL6_91_other_AC/1014),
+$I_[A]_A_QL6_6_AC/1,
+$I_[A]_A_QL6_7_AC/1+($I_[A]_QL6_91_other_AC/1007),
+$I_[A]_A_QL6_8_AC/1,
+$I_[A]_A_QL6_9_AC/1,
+$I_[A]_A_QL6_10_AC/1+($I_[A]_QL6_91_other_AC/1013),
+$I_[A]_A_QL6_11_AC/1,
+$I_[A]_A_QL6_12_AC/1+($I_[A]_QL6_91_other_AC/1017),
+$I_[A]_A_QL6_13_AC/1+($I_[A]_QL6_91_other_AC/1003),
+$I_[A]_A_QL6_14_AC/1,
+$I_[A]_A_QL6_15_AC/1+($I_[A]_QL6_91_other_AC/1005),
+$I_[A]_A_QL6_16_AC/1+($I_[A]_QL6_91_other_AC/1006),
+
+$I_[A]_QL6_91_other_AC/1001,
+$I_[A]_QL6_91_other_AC/1002,
+$I_[A]_QL6_91_other_AC/1004,
+$I_[A]_QL6_91_other_AC/1012,
+$I_[A]_QL6_91_other_AC/1019,
+$I_[A]_QL6_91_other_AC/1010+1011+1018,
+$I_[A]_QL6_91_other_AC/9999+b,
+R,F,
+XT = "QL6. LOAN PURPOSE - [Q170aRAC.A]",
+X = "
+Payment for food and groceries;
+Payment for house rent; 
+Payment for house expenses like electricity, water, or landline;
+Payment for tuition fee; 
+Payment for school supplies; 
+Payment for personal items like clothes, shoes, bags, etc;
+Payment for gadgets like cellphone, tablet, laptop, etc;
+Payment for home appliances; 
+Payment for house purchase or construction; 
+Payment for car purchase or car repairs; 
+Payment for medical needs like medicine, hospital bill, etc;
+Payment for other loans;
+Payment for personal leisure like travel, vacation, or gimmick; 
+Capital for business or investment; 
+Payment for celebrations like wedding, birthday, christening, etc; 
+Payment for funeral or burial; 
+Borrow for others;
+Buying of motor;
+Emergency;
+For Requirements;
+Down payment for Ebike;
+VAGUE NET;
+None<S>;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 [*END A]

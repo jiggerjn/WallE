@@ -478,6 +478,12 @@ IF $T_Q104_[C]/[B], DI $Q104_[C] = [B],
 IF $A_Q102B/[B], DI $Q102b = [B],
 [*END B]
 
+IF ($TQ17a/1).($TQ17c/N1), DI $P1MLAPSER = 1,
+IF N(($TQ17a/1).($TQ17c/N1)), DI $P1MLAPSER = 0,
+
+IF ($TQ17c/1).($TQ17k/N1), DI $P1WLAPSER = 1,
+IF N(($TQ17c/1).($TQ17k/N1)), DI $P1WLAPSER = 0,
+
 DI $QProvince = $120-121,
 
 
@@ -486,9 +492,10 @@ IF ($Q22024/NB), LCSV (H) $RespNo.$Brands.$Aware.$Consider.$Favrite.$Recmnd.$Pre
 $Attr[B].
 [*ENDB]
 $AREA.$LOCALE.$SEC.$AGE_RANGE.$GENDER.$LIFESTAGE.$WORKING_STAT.$USERSHIP.$GCASH_USER.$BANK_CON.$REGION.$AREAXLOC.
-$Month.
+$Quarter.
 $QProvince.
-$QPH1.$QSH1.$QST1.$QGI1.$QSC1.
+$P1MLAPSER.
+$P1WLAPSER.
 $WTS,
 [*END A]
 

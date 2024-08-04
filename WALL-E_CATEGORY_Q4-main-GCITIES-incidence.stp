@@ -48,226 +48,33 @@ DM $Q193DRESP = $1-10/(34993117+34993118+34993119+34993120+34993121+34993465+349
 DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
-
-DI $QProvince = $120-121,
-DM $TQProvince = 
-$Qprovince/1:"ABRA",
-$Qprovince/2:"AGUSAN DEL NORTE",
-$Qprovince/3:"AGUSAN DEL SUR",
-$Qprovince/4:"AKLAN",
-$Qprovince/5:"ALBAY",
-$Qprovince/6:"ANTIQUE",
-$Qprovince/7:"APAYAO",
-$Qprovince/8:"AURORA",
-$Qprovince/9:"BASILAN",
-$Qprovince/10:"BATAAN",
-$Qprovince/11:"BATANES",
-$Qprovince/12:"BATANGAS",
-$Qprovince/13:"BENGUET",
-$Qprovince/14:"BILIRAN",
-$Qprovince/15:"BOHOL",
-$Qprovince/16:"BUKIDNON",
-$Qprovince/17:"BULACAN",
-$Qprovince/18:"CAGAYAN",
-$Qprovince/19:"CAMARINES NORTE",
-$Qprovince/20:"CAMARINES SUR",
-$Qprovince/21:"CAMIGUIN",
-$Qprovince/22:"CAPIZ",
-$Qprovince/23:"CATANDUANES",
-$Qprovince/24:"CAVITE",
-$Qprovince/25:"CEBU",
-$Qprovince/26:"COMPOSTELA VALLEY",
-$Qprovince/27:"COTABATO (NORTH COTABATO)",
-$Qprovince/28:"DAVAO DEL NORTE",
-$Qprovince/29:"DAVAO DEL SUR",
-$Qprovince/30:"DAVAO OCCIDENTAL",
-$Qprovince/31:"DAVAO ORIENTAL",
-$Qprovince/32:"DINAGAT ISLANDS",
-$Qprovince/33:"EASTERN SAMAR",
-$Qprovince/34:"GUIMARAS",
-$Qprovince/35:"IFUGAO",
-$Qprovince/36:"ILOCOS NORTE",
-$Qprovince/37:"ILOCOS SUR",
-$Qprovince/38:"ILOILO",
-$Qprovince/39:"ISABELA",
-$Qprovince/40:"KALINGA",
-$Qprovince/41:"LA UNION",
-$Qprovince/42:"LAGUNA",
-$Qprovince/43:"LANAO DEL NORTE",
-$Qprovince/44:"LANAO DEL SUR",
-$Qprovince/45:"LEYTE",
-$Qprovince/46:"MAGUINDANAO",
-$Qprovince/47:"MARINDUQUE",
-$Qprovince/48:"MASBATE",
-$Qprovince/49:"MISAMIS OCCIDENTAL",
-$Qprovince/50:"MISAMIS ORIENTAL",
-$Qprovince/51:"MOUNTAIN PROVINCE",
-$Qprovince/52:"NCR - CALOOCAN CITY",
-$Qprovince/53:"NCR - CITY OF LAS PIÑAS",
-$Qprovince/54:"NCR - CITY OF MAKATI",
-$Qprovince/55:"NCR - CITY OF MALABON",
-$Qprovince/56:"NCR - CITY OF MANDALUYONG",
-$Qprovince/57:"NCR - CITY OF MANILA",
-$Qprovince/58:"NCR - CITY OF MARIKINA",
-$Qprovince/59:"NCR - CITY OF MUNTINLUPA",
-$Qprovince/60:"NCR - CITY OF NAVOTAS",
-$Qprovince/61:"NCR - CITY OF PARAÑAQUE",
-$Qprovince/62:"NCR - CITY OF PASIG",
-$Qprovince/63:"NCR - CITY OF SAN JUAN",
-$Qprovince/64:"NCR - CITY OF VALENZUELA",
-$Qprovince/65:"NCR - PASAY CITY",
-$Qprovince/66:"NCR - PATEROS",
-$Qprovince/67:"NCR - QUEZON CITY",
-$Qprovince/68:"NCR - TAGUIG CITY",
-$Qprovince/69:"NEGROS OCCIDENTAL",
-$Qprovince/70:"NEGROS ORIENTAL",
-$Qprovince/71:"NORTHERN SAMAR",
-$Qprovince/72:"NUEVA ECIJA",
-$Qprovince/73:"NUEVA VIZCAYA",
-$Qprovince/74:"OCCIDENTAL MINDORO",
-$Qprovince/75:"ORIENTAL MINDORO",
-$Qprovince/76:"PALAWAN",
-$Qprovince/77:"PAMPANGA",
-$Qprovince/78:"PANGASINAN",
-$Qprovince/79:"QUEZON",
-$Qprovince/80:"QUIRINO",
-$Qprovince/81:"RIZAL",
-$Qprovince/82:"ROMBLON",
-$Qprovince/83:"SAMAR (WESTERN SAMAR)",
-$Qprovince/84:"SARANGANI",
-$Qprovince/85:"SIQUIJOR",
-$Qprovince/86:"SORSOGON",
-$Qprovince/87:"SOUTH COTABATO",
-$Qprovince/88:"SOUTHERN LEYTE",
-$Qprovince/89:"SULTAN KUDARAT",
-$Qprovince/90:"SULU",
-$Qprovince/91:"SURIGAO DEL NORTE",
-$Qprovince/92:"SURIGAO DEL SUR",
-$Qprovince/93:"TARLAC",
-$Qprovince/94:"TAWI-TAWI",
-$Qprovince/95:"ZAMBALES",
-$Qprovince/96:"ZAMBOANGA DEL NORTE",
-$Qprovince/97:"ZAMBOANGA DEL SUR",
-$Qprovince/98:"ZAMBOANGA SIBUGAY",
-
-R:"Missing Answer<z>",
-F:"Total Count<C>",
-VT = "Province",
-
-
-DM $TQProvince2 = 
-
-$Qprovince/67:"NCR - QUEZON CITY",
-$Qprovince/54:"NCR - CITY OF MAKATI",
-$Qprovince/62:"NCR - CITY OF PASIG",
-$Qprovince/57:"NCR - CITY OF MANILA",
-$Qprovince/61:"NCR - CITY OF PARAÑAQUE",
-$Qprovince/13:"BENGUET - BAGUIO",
-$Qprovince/24:"CAVITE - DASMARINAS",
-$Qprovince/25:"CEBU - CEBU CITY",
-$Qprovince/25:"CEBU - MANDAUE CITY",
-$Qprovince/69:"NEGROS OCCIDENTAL - BACOLOD",
-$Qprovince/29:"DAVAO DEL SUR - DAVAO CITY",
-$Qprovince/49:"MISAMIS OCCIDENTAL - CAGAYAN DE ORO",
-$Qprovince/87:"SOUTH COTABATO - GENERAL SANTOS",
-$Qprovince/38:"ILOILO",
-VT = "Province",
-
-!-----------Unique
-DM $QMunicipality = $122-125/1-9999,
-DM $TQMunicipality =
-$Qprovince/67:"NCR - QUEZON CITY",
-$Qprovince/54:"NCR - CITY OF MAKATI",
-$Qprovince/62:"NCR - CITY OF PASIG",
-$Qprovince/57:"NCR - CITY OF MANILA",
-$Qprovince/61:"NCR - CITY OF PARAÑAQUE",
-$Qprovince/59:"NCR - CITY OF MUNTINLUPA",
-
-$QMunicipality/36:"BAGUIO CITY",
-$QMunicipality/1536:"CITY OF ANTIPOLO",
-$QMunicipality/1417:"LIPA CITY",
-$QMunicipality/1442:"CITY OF DASMARINAS",
-
-$QMunicipality/735:"CEBU CITY (CAPITAL)",
-$QMunicipality/752:"MANDAUE CITY",
-$QMunicipality/618:"ILOILO CITY (CAPITAL)",
-$QMunicipality/641:"BACOLOD CITY (CAPITAL)",
-
-$QMunicipality/1149:"DAVAO CITY",
-$QMunicipality/1103:"CAGAYAN DE ORO CITY (CAPITAL)",
-$QMunicipality/1238:"GENERAL SANTOS CITY (DADIANGAS)",
-
-VT = "Municipality",
-
-
-DM $HAGCities =
-T,
-T,
-$TQMunicipality/1..17,
-$TQMunicipality/N1..17,
-T,
-$TQMunicipality/1..6,
-($Q3/1).N($TQMunicipality/1..6),
-
-T,
-$TQMunicipality/7..10,
-($Q3/2..8).N($TQMunicipality/7..10),
-
-T,
-$TQMunicipality/11..14,
-($Q3/9+10+11).N($TQMunicipality/11..14),
-
-T,
-$TQMunicipality/15..17,
-($Q3/12+13+14+15+16+17).N($TQMunicipality/15..17),
-HT = "A. GCITIES VS NON-GCITIES MACROREGION",
-H = "
-TOTAL*(a);
-
-TOTAL PH***
-TOTAL*(a)<S>;
-TOTAL GCITIES *(j);
-TOTAL NON-GCITIES *(k);
-
-NCR***
-TOTAL*(a)<S>;
-GCITIES*(b);
-NON-GCITIES*(c);
-
-LUZON (NCL+SL)***
-TOTAL*(a)<S>;
-GCITIES*(d);
-NON-GCITIES*(e);
-
-VISAYAS***
-TOTAL*(a)<S>;
-GCITIES*(f);
-NON-GCITIES*(g);
-
-MINDANAO***
-TOTAL*(a)<S>;
-GCITIES*(h);
-NON-GCITIES*(i)",
-
-DM $HBGCities = 
-T,
-
-T,
-$TQMunicipality/1..9+11..13+15+16,
-$TQMunicipality/10+14+17,
-HT = "B. PROTECT VS GROW CITIES",
-H = "
-TOTAL*(a);
-
-PROTECT VS GROW***
-TOTAL*(a)<S>;
-PROTECT CITIES *(b);
-GROW CITIES *(c)",
+DM $Tincidencedata = 
+$Q8d/1,
+$Q8f/1,
+$Q10/2,
+$Q10/N2,
+($A_Q17l/N99).$Q10/N2,
+($A_Q17a/N99).$Q10/N2,
+$Q17i/1,
+$Q17i/2,
+R,F,
+VT = "Incidence data",
+V = "
+With P2M Transaction;
+With P1M Transaction;
+Rejectors;
+Non Rejector (A);
+Downloaded the App;
+P2M Users;
+P1M Users (B);
+Non Users;
+Missing answers<Z>;
+Total count<C>",
 
 !-----------Unique
 DM $Q200 = $11/1-9,'0',
 
-IF ($Q42023/NB+$Q12024/NB+$Q22024/NB).($Q200/1), WRITE,
+IF (($Q42023/NB+$Q12024/NB+$Q22024/NB).($SEC19/N5).($Q200/1)), WRITE,
   
 !lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
 
@@ -303,7 +110,7 @@ F= SHG-1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HEADERWAVE3 = HAGCities,HBGCities,HCT]
+[*DATA HEADERWAVE3 = HAGCities2,HBGCities,HCT]
 
 
 !
@@ -348,14 +155,19 @@ RURAL]
 !SELECT WR $WTS,
 
 [*SET T = 0]
+!======
+[*DO Z = 1:2]
+T #[+T] = $Tincidencedata * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
 
+[*SK 1]
 !======
 [*DO Z = 1:1]
 T #[+T] = $TQProvince * $HT,
 BT = "ALL RESPONDENTS",
 [*END Z]
 
-[*SK 1]
 !======
 [*DO Z = 1:1]
 T #[+T] = $TQMunicipality * $HT,
