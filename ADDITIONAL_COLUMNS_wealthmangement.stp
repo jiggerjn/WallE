@@ -933,3 +933,6 @@ OM $Q16a_92_other = $blank/1-9999,
 IF $A_Q17c/91, OM $Q17c_91_other = $Q16a_91_other,
 IF $A_Q17c/92, OM $Q17c_92_other = $Q16b_92_other,
 
+
+
+OM $QL2a_98_other = $Blank/1-9999,

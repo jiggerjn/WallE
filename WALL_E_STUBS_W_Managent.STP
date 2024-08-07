@@ -968,7 +968,7 @@ Total Count<C>",
 !========= 
 DM $QLO3_OTHERS = $QLO3_31_other.OR.$QLO3_12_other,
 
-DM $TQLO3 = $A_QLO3/1..11+($QLO3_OTHERS/1094+1099),
+DM $TQLO3 = $A_QLO3/1..11+($QLO3_OTHERS/1094+1099)+(($A_QLO3/12).($QLO3_12_other/B)),
 $A_QLO3/1,
 $A_QLO3/2,
 $A_QLO3/3,
@@ -980,6 +980,7 @@ $A_QLO3/8,
 $A_QLO3/9+($QLO3_OTHERS/1094),
 $A_QLO3/10,
 $A_QLO3/11,
+($A_QLO3/12).($QLO3_12_other/B),
 $A_QLO3/13..20,
 $A_QLO3/13,
 $A_QLO3/14,
@@ -989,7 +990,7 @@ $A_QLO3/17,
 $A_QLO3/18,
 $A_QLO3/19,
 $A_QLO3/20,
-$A_QLO3/21..30+($QLO3_OTHERS/1096+1095),
+$A_QLO3/21..30+($QLO3_OTHERS/1096+1095)+(($A_QLO3/31).($QLO3_31_other/B)),
 $A_QLO3/21+($QLO3_OTHERS/1096),
 $A_QLO3/22,
 $A_QLO3/23,
@@ -1000,6 +1001,7 @@ $A_QLO3/27,
 $A_QLO3/28,
 $A_QLO3/29,
 $A_QLO3/30,
+($A_QLO3/31).($QLO3_31_other/B),
 $QLO3_31_other/1090,
 $QLO3_31_other/1091,
 $A_QLO3/32..53,
@@ -1074,6 +1076,7 @@ REMITTANCE CENTER<Q>;
 `     Tambunting;
 `     Villarica Pawnshop;
 `     Smart Padala Centers;
+`     Other remittance centers;
 BAYAD CENTERS<Q>;
 `     Sinag Pawnshop;
 `     Ministop;
@@ -1094,6 +1097,7 @@ PHYSICAL BANKS<Q>;
 `     RCBC;
 `     Security Bank;
 `     Unionbank;
+`     Other banks;
 `     Collector;
 `     Cardbank;
 MOBILE/ ONLINE/ DIGITAL BANK<Q>;
@@ -1982,24 +1986,32 @@ $A_QL1/5+($QL1_98_other/1021+1027+1032+1034),
 $A_QL1/6,
 $A_QL1/7,
 $A_QL1/8,
-$A_QL1/9+10+11+12+13+14+15+16+17+18+($QL1_98_other/1030+1035+1023+1025+1029+1033+1036),
+
+$A_QL1/9+10+11+23+24+25+12+13+14+15+16+17+18+19+20+21+26+27+28+29+($QL1_98_other/1030+1035+1023+1025+1029+1033+1036),
 $A_QL1/9+($QL1_98_other/1030),
 $A_QL1/10+($QL1_98_other/1035),
 $A_QL1/11+($QL1_98_other/1023+1025+1029),
+$A_QL1/23,
+$A_QL1/24,
+$A_QL1/25,
 $A_QL1/12+($QL1_98_other/1033+1036),
 $A_QL1/13,
-$A_QL1/14+15+16+($QL1_98_other/1024+1028),
 $A_QL1/14+($QL1_98_other/1024),
 $A_QL1/15,
 $A_QL1/16+($QL1_98_other/1028),
-$A_QL1/17+18,
 $A_QL1/17,
 $A_QL1/18,
 
-$A_QL1/19+20+21,
+$A_QL1/19+20+21+26+27+28+29,
 $A_QL1/19,
 $A_QL1/20,
 $A_QL1/21,
+$A_QL1/26,
+$A_QL1/27,
+$A_QL1/28,
+$A_QL1/29,
+
+$A_QL1/98.$QL1_98_other/B,
 
 $QL1_98_other/1020,
 $QL1_98_other/1030,
@@ -2011,34 +2023,42 @@ $QL1_98_other/1022+1026,
 $A_QL1/99,
 $QL1_98_other/9998,
 R,F,
-XT = "QL1. AWARENESS  - LOANS",
+XT = "QL1. AWARENESS - LOANS",
 X = "
 FROM BANKS (NET)<Q>;
-`     Housing Loan/Mortgage with bank;
-`     Auto Loan/Car Loan with bank;
+`     Home loan from banks;
+`     Car loan from banks;
 `     Business Loan with bank;
 `     MicroBusiness/SME Loan with bank;
 `     Loan with bank;
-`     Personal Loan with bank;
+`     Personal / Salary loan sa mga traditional banks;
 `     Salary Loan with bank;
 `     Credit card;
 FROM NON-BANK SOURCES (NET)<Q>;
-`     Loan with Cooperative;
+`     Loan from cooperatives;
 `     Loan with Non-Stock Savings and Loan Association;
-`     Loan with Microfinance NGO;
-`     Loan with Gov't agencies (i.e. GSIS, SSS, Pag-ibig);
-`     Loan from pawnshop/pawning;
-`     LOAN WITH LENDING INSTITUTIONS/FINANCING COMPANIES (E.G. HOME CREDIT, ETC) (SUBNET)<Q>;
-`          Loan via Home Credit;
-`          Online Loans;
-`          Loans from e-wallet/mobile money/mobile bank/ e-remittance/any financial apps or websites;
-`     MULTI-PURPOSE LOANS FROM PRIVATE COMPANIES (SUBNET)<Q>;
-`          Car Loan with Dealership's Financing Service;
-`          Housing Loan via Real Estate Developer In-house financing (not via bank);
-INFORMAL LOANS (NET)<Q>;
-`     5-6 lending /Bombay/Turko;
-`     Loan from relatives/family/friend/neighbor;
-`     Loan from Sari-sari-store;
+`     Loan from Microfinance NGO;
+`     SSS Loan;
+`     GSIS Loan;
+`     Pag-ibig Loan;
+`     Loan from other Gov't agencies (e.g., DTI, DSWD, OWWA, etc);
+`     Pawn items at pawnshops;
+`     Loan via Home Credit;
+`     Loans from online banks;
+`     Loans from non-bank consumer financing or mobile lending apps;
+`     Loan from private lending companies;
+`     Housing Loan via Real Estate Developer In-house financing (not via bank);
+`     INFORMAL LOANS (SUBNET)<Q>;
+`          Loan from other people who offer 5-6 lending;
+`          Loan from family;
+`          Loan or credit from sari-sari store;
+`          Loan from relatives;
+`          Loan from friends;
+`          Loan from the office;
+`          Loan from other people where ATM is pawned;
+
+Others;
+
 motor loan;
 Social action;
 Loan from colleagues;
@@ -2063,24 +2083,32 @@ $A_QL3/5+($QL3_98_other/1021+1027+1032+1034),
 $A_QL3/6,
 $A_QL3/7,
 $A_QL3/8,
-$A_QL3/9+10+11+12+13+14+15+16+17+18+($QL3_98_other/1030+1035+1023+1025+1029+1033+1036),
+
+$A_QL3/9+10+11+23+24+25+12+13+14+15+16+17+18+19+20+21+26+27+28+29+($QL3_98_other/1030+1035+1023+1025+1029+1033+1036),
 $A_QL3/9+($QL3_98_other/1030),
 $A_QL3/10+($QL3_98_other/1035),
 $A_QL3/11+($QL3_98_other/1023+1025+1029),
+$A_QL3/23,
+$A_QL3/24,
+$A_QL3/25,
 $A_QL3/12+($QL3_98_other/1033+1036),
 $A_QL3/13,
-$A_QL3/14+15+16+($QL3_98_other/1024+1028),
 $A_QL3/14+($QL3_98_other/1024),
 $A_QL3/15,
 $A_QL3/16+($QL3_98_other/1028),
-$A_QL3/17+18,
 $A_QL3/17,
 $A_QL3/18,
 
-$A_QL3/19+20+21,
+$A_QL3/19+20+21+26+27+28+29,
 $A_QL3/19,
 $A_QL3/20,
 $A_QL3/21,
+$A_QL3/26,
+$A_QL3/27,
+$A_QL3/28,
+$A_QL3/29,
+
+$A_QL3/98.$QL3_98_other/B,
 
 $QL3_98_other/1020,
 $QL3_98_other/1030,
@@ -2090,7 +2118,8 @@ $QL3_98_other/1038,
 
 $QL3_98_other/1022+1026,
 $A_QL3/99,
-$QL3_98_other/9998,R,F,
+$QL3_98_other/9998,
+R,F,
 XT = "QL3. CONSIDERATION FOR FUTURE USAGE",
 X = $TQL1,
 
@@ -2106,24 +2135,32 @@ $A_QL2/5+($QL2_98_other/1021+1027+1032+1034),
 $A_QL2/6,
 $A_QL2/7,
 $A_QL2/8,
-$A_QL2/9+10+11+12+13+14+15+16+17+18+($QL2_98_other/1030+1035+1023+1025+1029+1033+1036),
+
+$A_QL2/9+10+11+23+24+25+12+13+14+15+16+17+18+19+20+21+26+27+28+29+($QL2_98_other/1030+1035+1023+1025+1029+1033+1036),
 $A_QL2/9+($QL2_98_other/1030),
 $A_QL2/10+($QL2_98_other/1035),
 $A_QL2/11+($QL2_98_other/1023+1025+1029),
+$A_QL2/23,
+$A_QL2/24,
+$A_QL2/25,
 $A_QL2/12+($QL2_98_other/1033+1036),
 $A_QL2/13,
-$A_QL2/14+15+16+($QL2_98_other/1024+1028),
 $A_QL2/14+($QL2_98_other/1024),
 $A_QL2/15,
 $A_QL2/16+($QL2_98_other/1028),
-$A_QL2/17+18,
 $A_QL2/17,
 $A_QL2/18,
 
-$A_QL2/19+20+21,
+$A_QL2/19+20+21+26+27+28+29,
 $A_QL2/19,
 $A_QL2/20,
 $A_QL2/21,
+$A_QL2/26,
+$A_QL2/27,
+$A_QL2/28,
+$A_QL2/29,
+
+$A_QL2/98.$QL2_98_other/B,
 
 $QL2_98_other/1020,
 $QL2_98_other/1030,
@@ -2136,6 +2173,58 @@ $A_QL2/99,
 $QL2_98_other/9998,
 R,F,
 XT = "QL2. USAGE OF LOAN PRODUCTS AND SERVICES",
+X = $TQL1,
+
+
+!=========  
+DM $TQL2a = 
+$A_QL2a/1+2+3+4+5+6+7+8+($QL2a_98_other/1021+1027+1032+1034),
+$A_QL2a/1,
+$A_QL2a/2,
+$A_QL2a/3,
+$A_QL2a/4,
+$A_QL2a/5+($QL2a_98_other/1021+1027+1032+1034),
+$A_QL2a/6,
+$A_QL2a/7,
+$A_QL2a/8,
+
+$A_QL2a/9+10+11+23+24+25+12+13+14+15+16+17+18+19+20+21+26+27+28+29+($QL2a_98_other/1030+1035+1023+1025+1029+1033+1036),
+$A_QL2a/9+($QL2a_98_other/1030),
+$A_QL2a/10+($QL2a_98_other/1035),
+$A_QL2a/11+($QL2a_98_other/1023+1025+1029),
+$A_QL2a/23,
+$A_QL2a/24,
+$A_QL2a/25,
+$A_QL2a/12+($QL2a_98_other/1033+1036),
+$A_QL2a/13,
+$A_QL2a/14+($QL2a_98_other/1024),
+$A_QL2a/15,
+$A_QL2a/16+($QL2a_98_other/1028),
+$A_QL2a/17,
+$A_QL2a/18,
+
+$A_QL2a/19+20+21+26+27+28+29,
+$A_QL2a/19,
+$A_QL2a/20,
+$A_QL2a/21,
+$A_QL2a/26,
+$A_QL2a/27,
+$A_QL2a/28,
+$A_QL2a/29,
+
+$A_QL2a/98.$QL2a_98_other/B,
+
+$QL2a_98_other/1020,
+$QL2a_98_other/1030,
+$QL2a_98_other/1031,
+$QL2a_98_other/1037,
+$QL2a_98_other/1038,
+
+$QL2a_98_other/1022+1026,
+$A_QL2a/99,
+$QL2a_98_other/9998,
+R,F,
+XT = "QL2a. LOAN PRODUCTS AND SERVICE EVER TRIED",
 X = $TQL1,
 
 
@@ -2219,6 +2308,9 @@ $A_QL5/1,
 $A_QL5/2+($QL5_91_other/1026),
 $A_QL5/3+($QL5_91_other/1022+1023+1024+1027+1029+1030+1031+1034+1035+1038),
 $A_QL5/4+($QL5_91_other/1037),
+
+$A_QL5/91.$QL5_91_other/B,
+
 $QL5_91_other/1020,
 $QL5_91_other/1021,
 $QL5_91_other/1032,
@@ -2228,6 +2320,7 @@ $QL5_91_other/1039,
 
 $QL5_91_other/1028+1025,
 $QL5_91_other/9999,
+
 R,F,
 XT = "QL5. LOAN TRIGGER",
 X = "
@@ -2235,6 +2328,9 @@ Not enough budget for essential needs;
 There were emergency expenses;
 There were large expenses that needed funding;
 There was something not essential but I wanted to buy it already but I didn't have enough budget;
+
+Others;
+
 For tuition in college;
 Motor;
 Bills payment;

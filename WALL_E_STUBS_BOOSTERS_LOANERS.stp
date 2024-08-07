@@ -1,0 +1,1609 @@
+
+!=======================Unique
+
+DM $TBoosterTagging =
+$BoosterTagging/
+1+2+3+4,
+1,
+2,
+3,
+4,
+6+7+8,
+6,
+7,
+8,
+9+10+11,
+9,
+10,
+11,
+12+13+14,
+12,
+13,
+14,
+15+16+17,
+15,
+16,
+17,
+R,F,
+VT = "BoosterTagging",
+V = "
+LOANING (NET) <Q>;
+`     Digital Loans;
+`     Banks;
+`     Microfinance/ Coop and other lending corporations;
+`     Government Agencies;
+INSURANCE (NET) <Q>;
+`     Life Insurance;
+`     Investment-linked/ Variable Insurance;
+`     Non-life insurance;
+SAVINGS (NET) <Q>;
+`     Traditional Banks;
+`     GSave;
+`     Other Digital Banks;
+ACTIVE INVESTORS (NET) <Q>;
+`     Funds;
+`     Stocks;
+`     Crypto;
+PASSIVE INVESTORS (NET) <Q>;
+`     Funds;
+`     Stocks;
+`     Crypto;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!=======================MultiSelect
+
+DM $TQL7a =
+$A_QL7a/
+1+2+3+4+5+6+7+22+8+9,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+22,
+8,
+9,
+10+11+12+13+14+15+16+17+18+19+20+21,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+99,
+R,F,
+VT = "QL7a. AWARENESS OF DIFFERENT LOANS  - DIGITAL/ ONLINE LOANS & E-WALLET/ FINTECH APPS",
+V = "
+E-WALLET/ FINTECH APPS (NET) <Q>;
+`     GCredit by Gcash;
+`     GGives by Gcash;
+`     GLoan by Gcash;
+`     SPay Later;
+`     Sloan;
+`     Maya Credit;
+`     Maya Personal Loan;
+`     Maya Pay in 4;
+`     LazPay Later;
+`     Lazada Loan;
+ONLINE LENDING PLATFORMS (NET) <Q>;
+`     BillEase;
+`     Cashalo;
+`     Cashwagon;
+`     Revi Credit;
+`     Juan Hand;
+`     Pesoloan;
+`     Robocash;
+`     Tala;
+`     Home Credit;
+`     CIMB Loan;
+`     Kuya Loan;
+`     Online Loans Pilipinas;
+
+NONE;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!=======================Unique
+
+DM $TQL28 =
+$QL28/
+1,
+2,
+3,
+R,F,
+VT = "QL28. WHETHER AWARE OF AND EVER TRIED GLOAN SAKTO",
+V = "
+Yes, I am aware of Gloan Sakto;
+Yes, I am aware of and have taken a loan from GLoan Sakto;
+No, I have never heard of GLoan Sakto;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQL7b =
+$A_QL7b/
+1+2+3+4+5+6+7+22+8+9,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+22,
+8,
+9,
+10+11+12+13+14+15+16+17+18+19+20+21,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+99,
+R,F,
+VT = "QL7b. CONSIDERATION FOR FUTURE USAGE - DIGITAL/ONLINE LOANS AND E-WALLET/ FINTECH APPS",
+V = "
+E-WALLET/ FINTECH APPS (NET) <Q>;
+`     GCredit by Gcash;
+`     GGives by Gcash;
+`     GLoan by Gcash;
+`     SPay Later;
+`     Sloan;
+`     Maya Credit;
+`     Maya Personal Loan;
+`     Maya Pay in 4;
+`     LazPay Later;
+`     Lazada Loan;
+ONLINE LENDING PLATFORMS (NET) <Q>;
+`     BillEase;
+`     Cashalo;
+`     Cashwagon;
+`     Revi Credit;
+`     Juan Hand;
+`     Pesoloan;
+`     Robocash;
+`     Tala;
+`     Home Credit;
+`     CIMB Loan;
+`     Kuya Loan;
+`     Online Loans Pilipinas;
+
+NONE;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics23
+
+[*SET s = 0]
+[*DATA topic6 (;) = 
+Few to no documentary requirements to apply for a loan;
+No need for valid ID;
+Fast processing and approval of loan;
+Can get a loan anytime;
+Can negotiate on payment terms;
+Recommended by people I know;
+Low interest rate for loans;
+No minimum amount for loans;
+Tenor or length of time to pay the borrowed money;
+No service charges for late payments;
+Minimal service charges;
+No need for collateral;
+Accepts different types of collateral;
+Can still borrow even if with prior unpaid loan;
+Easily accessible locations;
+Reputation of the institution;
+Easy payment terms;
+Ease and simplicity of application process;
+Frequency of payment;
+Amount of regular payments;
+Fast disbursement or fast releasing of money/loan;
+High credit limit/maximum amount for loans;
+No need for co-maker or guarantor]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+DM $TQL8_[A] =
+$T_QL8_[A]/
+1,
+2,
+3,
+4,
+5,
+4+5,
+1+2,
+R,F,
+VT = "QL8. MAIN CONSIDERATIONS IN BORROWING MONEY",
+V = "
+[topic6.[+s]]\
+`     Not important at all (1) <v1>;
+`     Somewhat not important (2) <v2>;
+`     May or may not be important (3) <v3>;
+`     Somewhat important (4) <v4>;
+`     Very important (5) <v5>;
+`          TOP 2 BOX<Q>;
+`          BOTTOM 2 BOX<Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+DM $TQL8_TOP2BOX = 
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+$T_QL8_[A]/4+5,
+[*END A]
+VT = "QL8. MAIN CONSIDERATIONS IN BORROWING MONEY - SUMMARY OF TOP2BOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+[topic6.[+s]][*SLE];
+[*END A]",
+
+DM $TQL8_TOPBOX = 
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+$T_QL8_[A]/5,
+[*END A]
+VT = "QL8. MAIN CONSIDERATIONS IN BORROWING MONEY - SUMMARY OF TOPBOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+[topic6.[+s]][*SLE];
+[*END A]",
+
+DM $TQL8_BOTTOM2BOX = 
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+$T_QL8_[A]/1+2,
+[*END A]
+VT = "QL8. MAIN CONSIDERATIONS IN BORROWING MONEY - SUMMARY OF BOTTOM2BOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+[topic6.[+s]][*SLE];
+[*END A]",
+
+
+
+!=======================MultipleTopicsSelect23
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23]
+DM $TQL9_[A] =
+$A_QL9_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+99,
+R,F,
+VT = "QL9. ASSOCIATION - FORMAL LENDING INSTITUTIONS",
+V = "
+[topic6.[+s]]\
+`     Banks;
+`     Microfinance;
+`     Cooperative;
+`     Government Agencies;
+`     Other Financing Companies;
+`     Online Loan Apps/ Online Lending Platforms;
+`     Loans from e-wallet/ fintech Apps;
+`     NONE;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultiSelect
+
+[*SET s = 0]
+[*DATA QL2xQL10 (;) =
+Home loan from banks;
+Car loan from banks;
+Business Loan with bank;
+MicroBusiness/SME Loan with bank;
+Loan with bank;
+Personal / Salary loan sa mga traditional banks;
+Salary Loan with bank;
+Credit card;
+Loans from online banks]
+[*FOR A = 1:2:3:4:5:6:7:8:15]
+ORDM $Q10_RGD = $I_[A]_A_QL10,
+DM $TQL10_[A] =
+$I_[A]_A_QL10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+91,
+R,F,
+VT = "QL10. SPECIFIC LOAN BORROWING CHANNELS - BANK - [QL2xQL10.[+s]]",
+V = "
+BDO;
+BPI;
+Chinabank;
+CIMB Bank;
+CTBC Bank;
+EastWest Bank;
+Maybank;
+Metrobank;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+Landbank;
+Philippine National Bank (PNB);
+Other banks;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+DM $TQL10_RGD =
+$Q10_RGD/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+91,
+R,F,
+VT = "QL10. SPECIFIC LOAN BORROWING CHANNELS - BANK - REGARDLESS",
+V = $TQL10_1,
+
+
+!=======================MultiSelect
+
+DM $TQL11a =
+$A_QL11a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91,
+R,F,
+VT = "QL11a. SPECIFIC LOAN BORROWING CHANNELS - GOVERNMENT AGENCIES",
+V = "
+GSIS;
+PAG-IBIG;
+SSS;
+National Home Mortgage;
+Department of Trade and Industry (DTI);
+Department of Social Welfare and Development (DSWD);
+Overseas Workers Welfare Administration (OWWA);
+Commission on Higher Education (CHED);
+Department of Agriculture;
+Other government agencies;
+Missing answers<Z>;
+Total count<C>",
+
+
+[*SET s = 0]
+[*DATA Ql11axb (;) =
+GSIS;
+PAG-IBIG;
+SSS;
+National Home Mortgage;
+Department of Trade and Industry (DTI);
+Department of Social Welfare and Development (DSWD);
+Overseas Workers Welfare Administration (OWWA);
+Commission on Higher Education (CHED);
+Department of Agriculture;
+Other government agencies]
+!=======================MultiSelect
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:91]
+DM $TQL11b_[A] =
+$I_[A]_A_QL11b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+91,
+R,F,
+VT = "QL11b. SPECIFIC TYPE OF LOAN AVAILED OR APPLIED FROM GOVERNMENT AGENCIES - [Ql11axb.[+s]]",
+V = "
+Personal Loan;
+Student/ Educational Assistance Loan;
+Business Loan;
+Emergency Loan;
+Home/ House loan;
+Microloans;
+Disaster Relief Loans;
+Agricultural Loans;
+Other type of loans;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultiSelect
+
+DM $TQL12 =
+$A_QL12/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+91,
+R,F,
+VT = "QL12. SPECIFIC LOAN BORROWING CHANNELS - ONLINE LOAN APPS/ ONLINE LENDING PLATFORMS",
+V = "
+BillEase;
+Cashalo;
+Cashwagon;
+Revi Credit;
+Juan Hand;
+Pesoloan;
+Robocash;
+Tala;
+Home Credit;
+CIMB Loan;
+Kuya Loan;
+Online Loans Pilipinas;
+Other online lending platforms;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQL13 =
+$A_QL13/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+22,
+8,
+9,
+91,
+R,F,
+VT = "QL13. SPECIFIC LOAN BORROWING CHANNELS - E-WALLET/ FINTECH APPS",
+V = "
+GCredit by Gcash;
+GGives by Gcash;
+GLoan by Gcash;
+SPay Later;
+Sloan;
+Maya Credit;
+Maya Personal Loan;
+Maya Pay in 4;
+LazPay Later;
+Lazada Loan;
+Other e-wallet/fintech apps;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $QL6_net_[NET] = $I_[A]_A_QL6_Booster,
+ORDM $QL6_RGD = $I_[A]_A_QL6_Booster,
+[*901]
+
+[*END A]
+
+!=======================MultiSelect
+[*SET s = 0]
+[*DATA QL6title (;) =
+BANKS - REGARDLESS;
+BDO;
+BPI;
+Chinabank;
+CIMB Bank;
+CTBC Bank;
+EastWest Bank;
+Maybank;
+Metrobank;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+Landbank;
+Philippine National Bank (PNB);
+
+GOVERNMENT AGENCIES - REGARDLESS;
+GSIS;
+PAG-IBIG;
+SSS;
+National Home Mortgage;
+Department of Trade and Industry (DTI);
+Department of Social Welfare and Development (DSWD);
+Overseas Workers Welfare Administration (OWWA);
+Commission on Higher Education (CHED);
+Department of Agriculture;
+
+ONLINE APPS/ ONLINE LENDING PLATFORMS - REGARDLESS;
+BillEase;
+Cashalo;
+Cashwagon;
+Revi Credit;
+Juan Hand;
+Pesoloan;
+Robocash;
+Tala;
+Home Credit;
+CIMB Loan;
+Kuya Loan;
+Online Loans Pilipinas;
+
+E-WALLET/ FINTECH APPS - REGARDLESS;
+GCredit by Gcash;
+GGives by Gcash;
+GLoan by Gcash;
+SPay Later;
+Sloan;
+Maya Credit;
+Maya Personal Loan;
+Maya Pay in 4;
+LazPay Later;
+Lazada Loan;
+
+INFORMAL LOANING CHANNELS - REGARDLESS;
+Loan from other people who offer 5-6 lending;
+Loan from family;
+Loan or credit from sari-sari store;
+Loan from relatives;
+Loan from friends;
+Loan from the office;
+Loan from other people where ATM is pawned]
+
+
+[*DATA QL6filter (m=p,t=;) =
+$Q10_RGD/1..14;
+$Q10_RGD/1;
+$Q10_RGD/2;
+$Q10_RGD/3;
+$Q10_RGD/4;
+$Q10_RGD/5;
+$Q10_RGD/6;
+$Q10_RGD/7;
+$Q10_RGD/8;
+$Q10_RGD/9;
+$Q10_RGD/10;
+$Q10_RGD/11;
+$Q10_RGD/12;
+$Q10_RGD/13;
+$Q10_RGD/14;
+
+$A_QL11a/1..9;
+$A_QL11a/1;
+$A_QL11a/2;
+$A_QL11a/3;
+$A_QL11a/4;
+$A_QL11a/5;
+$A_QL11a/6;
+$A_QL11a/7;
+$A_QL11a/8;
+$A_QL11a/9;
+
+$A_QL12/1..12;
+$A_QL12/1;
+$A_QL12/2;
+$A_QL12/3;
+$A_QL12/4;
+$A_QL12/5;
+$A_QL12/6;
+$A_QL12/7;
+$A_QL12/8;
+$A_QL12/9;
+$A_QL12/10;
+$A_QL12/11;
+$A_QL12/12;
+
+$A_QL13/1..7+22+8+9;
+$A_QL13/1;
+$A_QL13/2;
+$A_QL13/3;
+$A_QL13/4;
+$A_QL13/5;
+$A_QL13/6;
+$A_QL13/7;
+$A_QL13/22;
+$A_QL13/8;
+$A_QL13/9;
+
+
+$A_QL2/19+20+21+26+27+28+29;
+$A_QL2/19;
+$A_QL2/20;
+$A_QL2/21;
+$A_QL2/26;
+$A_QL2/27;
+$A_QL2/28;
+$A_QL2/29]
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQL6_Booster_[A] =
+[*BLOCK 900 ON A.GT.900]
+$QL6_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_A_QL6_Booster/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91,
+R,F,
+VT = "QL6. LOAN PURPOSE - [QL6title.[+s]]",
+V = "
+Payment for food and groceries;
+Payment for house rent;
+Payment for house expenses like electricity, water, or landline;
+Payment for tuition fee;
+Payment for school supplies;
+Payment for personal items like clothes, shoes, bags, etc.;
+Payment for gadgets like cellphone, tablet, laptop, etc.;
+Payment for home appliances;
+Payment for house purchase or construction;
+Payment for car purchase or car repairs;
+Payment for medical needs like medicine, hospital bill, etc.;
+Payment for other loans;
+Payment for personal leisure like travel, vacation, or gimmick;
+Capital for business or investment;
+Payment for celebrations like wedding, birthday, christening, etc.;
+Payment for funeral or burial;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+DM $TQL6_Booster_RGD =
+$QL6_RGD/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91,
+R,F,
+VT = "QL6. LOAN PURPOSE - REGARDLESS OF CHANNEL",
+V = $TQL6_Booster_1,
+
+!=======================MultipleTopics7
+
+[*SET s = 0]
+[*DATA topic2 (;) = 
+Banks;
+Microfinance;
+Cooperative;
+Government Agencies;
+Other Financing Companies;
+Online Loan Apps/ Online Lending Platforms;
+Loans from e-wallet/ fintech Apps]
+
+[*FOR A = 1:2:3:4:5:6:7]
+DM $TQL14a_[A] =
+$T_QL14a_[A]/
+1,
+2,
+3,
+4,
+5,
+1+2,
+4+5,
+R,F,
+VT = "QL14a. PERCEIVED EASE OF APPLYING FOR A LOAN - [topic2.[+s]]",
+V = "
+Definitely easy (5) <v5>;
+Somewhat easy (4) <v4>;
+Cant say (3) <v3>;
+Somewhat difficult (2) <v2>;
+Definitely difficult (1) <v1>;
+`     TOP 2 BOX<Q>;
+`     BOTTOM 2 BOX<Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+DM $TQL14a_TOP2BOX =
+[*FOR A = 1:2:3:4:5:6:7]
+$T_QL14a_[A]/1+2,
+[*END A]
+VT = "QL14a. PERCEIVED EASE OF APPLYING FOR A LOAN - SUMMMARY OF TOP2BOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+DM $TQL14a_TOPBOX =
+[*FOR A = 1:2:3:4:5:6:7]
+$T_QL14a_[A]/1,
+[*END A]
+VT = "QL14a. PERCEIVED EASE OF APPLYING FOR A LOAN - SUMMMARY OF TOPBOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+DM $TQL14a_BOTTOM2BOX =
+[*FOR A = 1:2:3:4:5:6:7]
+$T_QL14a_[A]/4+5,
+[*END A]
+VT = "QL14a. PERCEIVED EASE OF APPLYING FOR A LOAN - SUMMMARY OF BOTTOM2BOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7]
+[topic2.[+s]][*SLE];
+[*END A]",
+
+
+!=======================MultipleTopics10
+
+[*SET s = 0]
+[*DATA topic3 (;) = 
+GCredit by Gcash;
+GGives by Gcash;
+GLoan by Gcash;
+SPay Later;
+Sloan;
+Maya Credit;
+Maya Personal Loan;
+Maya Pay in 4;
+LazPay Later;
+Lazada Loan]
+
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+DM $TQL14b_[A] =
+$T_QL14b_[A]/
+1,
+2,
+3,
+4,
+5,
+1+2,
+4+5,
+R,F,
+VT = "QL14b. PERCEIVED EASE OF APPLYING FOR A LOAN - SPECIFIC TO E-WALLET/FINTECH APPS - [topic3.[+s]]",
+V = "
+Definitely easy (5) <v5>;
+Somewhat easy (4) <v4>;
+Cant say (3) <v3>;
+Somewhat difficult (2) <v2>;
+Definitely difficult (1) <v1>;
+`     TOP 2 BOX<Q>;
+`     BOTTOM 2 BOX<Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+DM $TQL14b_TOP2BOX =
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+$T_QL14b_[A]/1+2,
+[*END A]
+VT = "QL14b. PERCEIVED EASE OF APPLYING FOR A LOAN - SPECIFIC TO E-WALLET/FINTECH APPS - SUMMMARY OF TOP2BOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+DM $TQL14b_TOPBOX =
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+$T_QL14b_[A]/1,
+[*END A]
+VT = "QL14b. PERCEIVED EASE OF APPLYING FOR A LOAN - SPECIFIC TO E-WALLET/FINTECH APPS - SUMMMARY OF TOPBOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+DM $TQL14b_BOTTOM2BOX =
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+$T_QL14b_[A]/4+5,
+[*END A]
+VT = "QL14b. PERCEIVED EASE OF APPLYING FOR A LOAN - SPECIFIC TO E-WALLET/FINTECH APPS - SUMMMARY OF BOTTOM2BOX",
+V = "
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+[topic3.[+s]][*SLE];
+[*END A]",
+
+!=======================MultiSelect
+
+[*SET s = 0]
+[*DO A = 1:7]
+DM $TQL15a_[A] =
+$I_[A]_A_QL15a/
+1+2+4+5+6+7+91,
+1,
+2,
+4,
+5,
+6,
+7,
+91,
+15+16+17+18+19+20+21+22+23+92,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+92,
+R,F,
+VT = "QL15a. REASONS FOR PERCEIVED EASE/ DIFFICULTY FOR APPLYING FOR A LOAN - [topic2.[+s]]",
+V = "
+EASY (NET) <Q>;
+`     I have collateral;
+`     I have the documentary requirements to apply for a loan;
+`     I have a long relationship with the financial institution;
+`     I have a good credit score;
+`     I have valid IDs;
+`     The process for applying is simple and easy to understand;
+`     Others;
+DIFFICULT (NET) <Q>;
+`     I do not have collateral;
+`     I do not have documentary requirements;
+`     I do not have enough IDs;
+`     I have been blacklisted before;
+`     My level of salary is not acceptable;
+`     I dont know how to be eligible for the loan;
+`     I dont know how to apply for a loan;
+`     I dont understand the application process;
+`     Application process has too many steps and complicated;
+`     Others;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+!=======================MultiSelect
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:22:8:9]
+DM $TQL15b_[A] =
+$I_[A]_A_QL15b/
+901+1+2+4+5+6+7+91,
+1,
+2,
+4,
+5,
+6,
+7,
+91,
+902+15+16+17+18+19+20+21+22+23+92,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+92,
+R,F,
+VT = "QL15b. REASONS FOR PERCEIVED EASE/ DIFFICULTY FOR APPLYING FOR A LOAN - [topic3.[+s]]",
+V = "
+EASY (NET) <Q>;
+`     I have collateral;
+`     I have the documentary requirements to apply for a loan;
+`     I have a long relationship with the financial institution;
+`     I have a good credit score;
+`     I have valid IDs;
+`     The process for applying is simple and easy to understand;
+`     Others;
+DIFFICULT (NET) <Q>;
+`     I do not have collateral;
+`     I do not have documentary requirements;
+`     I do not have enough IDs;
+`     I have been blacklisted before;
+`     My level of salary is not acceptable;
+`     I dont know how to be eligible for the loan;
+`     I dont know how to apply for a loan;
+`     I dont understand the application process;
+`     Application process has too many steps and complicated;
+`     Others;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+
+
+!=======================MultiSelect
+
+DM $TQL16 =
+$A_QL16/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+91,
+R,F,
+VT = "QL16. BARRIERS FOR APPLYING FOR A LOAN IN ONLINE LENDING PLATFORMS AND E-WALLET",
+V = "
+I heard negative reviews and feedback about borrowing money online;
+Bad experience from family and friends who borrowed money online;
+Not familiar with the application process and documentary requirements;
+I prefer to borrow money on institutions with physical branches;
+I prefer to apply for a loan on institutions with physical branches so someone can assist me with the process;
+I am afraid to take out a loan online;
+I think it is not safe to borrow money online;
+I heard/ saw/ read news of people with negative experience from borrowing money online when they were not able to pay on time;
+High interest rate;
+I don't use e-wallets/fintech apps;
+I need a smaller amount than the minimum amount that I can loan from e-wallet/fintech app;
+I need a larger amount than the maximum amount that I can loan from e-wallets/fintech apps;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+[*DO C = 1:3]
+ORDM $QL17_net_[NET]_[C] = $I_[A]_QL17_O[C],
+ORDM $QL17_RGD_[C] = $I_[A]_QL17_O[C],
+[*END C]
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQL17_[A] = 
+[*BLOCK 900 ON A.GT.900]
+$QL17_net_[A]_1/1-12,
+$QL17_net_[A]_2/1-12,
+$QL17_net_[A]_3/1-12,
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_QL17_O1/1-12,
+$I_[A]_QL17_O2/1-12,
+$I_[A]_QL17_O3/1-12,
+[*901]
+R,F,
+VT = "QL17. REASONS FOR CHOOSING LOAN CHANNEL FOR BORROWING MONEY - [QL6title.[+s]]",
+V = "
+[*DO C = 1:3]
+RANK [C]\
+`     I already used this e-wallet/fintech app/ online lending platforms/ bank for other products / services;
+`     Influenced by my family / relatives / friends;
+`     Influenced by my employer;
+`     A referral from a person I know;
+`     Careful evaluation of the terms and interest rates compared to other loaning channels;
+`     Speed and ease of application and approval process;
+`     Good conversation with the representative/ employee who assisted me when applying for a loan;
+`     The brand name and reputation of the institution;
+`     Influence of advertising for this institutions loan products TV, radio, or print (magazines, newspapers, posters, flyers, etc.);
+`     Influence of advertising for this institutions loan products online/on the Internet;
+`     No Rank 2;
+`     No Rank 3;
+[*END C]
+
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+!=======================MultiSelect
+
+DM $TQL20 =
+$A_QL20/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+91,
+R,F,
+VT = "QL20. NEEDED INFORMATION PRIOR LOANING",
+V = "
+Most recommended channel or institution to loan according to my needs;
+Loaning process;
+Processing turnaround time;
+Offered interest rate/ Which offers the lowest interest rate;
+Needed requirements to apply;
+Payment terms;
+Which has good customer service;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Q159_net_[NET] = $I_[A]_A_Q159,
+ORDM $Q159_RGD = $I_[A]_A_Q159,
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQ159_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Q159_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_A_Q159/
+[*901]
+1+2+3+4+5,
+1,
+2,
+3,
+4,
+5,
+6+7+98+8,
+6,
+7,
+98,
+8,
+R,F,
+VT = "Q159. WHERE PAY EXISTING LOANS - PAYMENT CHANNELS - [QL6title.[+s]]",
+V = "
+OFFLINE / NON-DIGITAL (NET) <Q>;
+`     Remittance Center;
+`     Bayad Center;
+`     Physical bank;
+`     Convenience Store;
+`     Other physical store;
+ONLINE / DIGITAL (NET) <Q>;
+`     Mobile / Online / Digital bank;
+`     E-money / Mobile wallet;
+`     Other financial app/websites;
+`     Automatic salary deduction;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================Unique
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Q170_net_[NET] = $I_[A]_Q170_Booster,
+ORDM $Q170_RGD = $I_[A]_Q170_Booster,
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQ170_Booster_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Q170_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_Q170_Booster/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+9,
+10,
+11,
+12,
+13,
+R,F,
+VT = "Q170. PAYMENT TERMS - [QL6title.[+s]]",
+V = "
+Within a week to less than a month;
+One month to two months;
+Three months to five months;
+Six months to eight months;
+Nine months to 11 months;
+12 months to 17 months;
+18 months to 23 months;
+2 to about 3 years;
+3-5 years;
+6-10 years;
+More than 10 years;
+No definite payment terms;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+!=======================Unique
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Q170a_net_[NET] = $I_[A]_Q170a_Booster,
+ORDM $Q170a_RGD = $I_[A]_Q170a_Booster,
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQ170a_Booster_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Q170a_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_Q170a_Booster/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "Q170a. FREQUENCY OF PAYMENT - [QL6title.[+s]]",
+V = "
+Weekly;
+Monthly;
+Bi-monthly;
+Quarterly;
+Semi-annual;
+Annually;
+One-time payment only;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+
+
+!=======================Unique
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Ql21_net_[NET] = $I_[A]_QL21,
+ORDM $Ql21_RGD = $I_[A]_QL21,
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQL21_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Ql21_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_QL21/
+[*901]
+1,
+2,
+3,
+R,F,
+VT = "QL21. TIMELINESS OF LOAN PAYMENT - [QL6title.[+s]]",
+V = "
+I pay before due date;
+I pay on due date;
+I pay several days after due date;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+!=======================MultiSelect
+
+DM $TQL27a =
+$A_QL27a/
+1,
+2,
+3,
+4,
+5,
+6,
+91,
+R,F,
+VT = "QL27a. WHY PAY EARLY",
+V = "
+I have extra money;
+I want to get a higher credit limit;
+I want to get rewards;
+I am afraid to be charged of the late payment fee;
+I usually pay it together with my other bills;
+To be able to manage my budget;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQL27b =
+$A_QL27b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+91,
+R,F,
+VT = "QL27b. WHY PAY ON TIME",
+V = "
+Due date matches my pay date;
+I want to get a higher credit limit;
+I want to get rewards;
+I am afraid to be charged of the late payment fee;
+I usually pay it together with my other bills;
+To be able to manage my budget;
+Dont have time to pay earlier;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQL27c =
+$A_QL27c/
+1,
+2,
+3,
+4,
+5,
+91,
+R,F,
+VT = "QL27c. WHY PAY LATE",
+V = "
+My salary arrived late;
+Don't have enough money at the moment;
+I have more urgent needs/something unexpected came up;
+Forgot to pay;
+Don't have time to pay;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Ql22_net_[NET] = $I_[A]_QL22,
+ORDM $Ql22_RGD = $I_[A]_QL22,
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQL22_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Ql22_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_QL22/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+R,F,
+VT = "QL22. INTEREST RATE - [QL6title.[+s]]",
+V = "
+`< 2% per month / `< 24% per year;
+2.0 to 2.9% per month / 24-35.9% per year;
+3.0 to 3.9% per month / 36-47.9% per year;
+4.0 to 4.9% per month / 48-59.9% per year;
+`> 5% per month / `> 60% per year;
+No interest rate;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+
+
+!=======================Unique
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Ql23_net_[NET] = $I_[A]_QL23,
+ORDM $Ql23_RGD = $I_[A]_QL23,
+[*901]
+
+[*END A]
+!ADD PASSIVES DETRACTORS ETC
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQL23_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Ql23_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_QL23/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+R,F,
+VT = "QL23. LIKELIHOOD TO RECOMMEND (NPS) - [QL6title.[+s]]",
+V = "
+0 (Will definitely not recommend) (0) <v0>;
+1 (1) <v1>;
+2 (2) <v2>;
+3 (3) <v3>;
+4 (4) <v4>;
+5 (5) <v5>;
+6 (6) <v6>;
+7 (7) <v7>;
+8 (8) <v8>;
+9 (9) <v9>;
+10 (Will definitely recommend) (10) <v10>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+!Placeholder Q24 OE
+
+
+
+!=======================Unique
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Ql25_net_[NET] = $I_[A]_QL25,
+ORDM $Ql25_RGD = $I_[A]_QL25,
+[*901]
+
+[*END A]
+
+!ADD TOP BOX ETC
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+DM $TQL25_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Ql25_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_QL25/
+[*901]
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QL25. OVERALL SATISFACTION - [QL6title.[+s]]",
+V = "
+Completely dissatisfied (1) <v1>;
+Somewhat Dissatisfied (2) <v2>;
+Neither satisfied nor dissatisfied (3) <v3>;
+Somewhat Satisfied (4) <v4>;
+Completely satisfied (5) <v5>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+!Placeholder QL26 OE
+
+
+!=======================MultipleTopics12
+
+
+[*DATA topic4 (;) = 
+Ease and simplicity of loaning process;
+Quality of customer service;
+Interest Rate;
+Documentary requirements needed to apply for a loan;
+Eligibility requirements;
+Payment terms;
+Tenor or length of time to pay the borrowed money;
+Availability of and accepts loan payment from different channels or modes of payment;
+Minimum loan amount;
+Maximum loan amount;
+Ease and simplicity of repayment process;
+Speed of loan release or disbursement]
+
+
+[*FOR B = 1:2:3:4:5:6:7:8:9:10:11:12]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Ql29_net_[NET]_[B] = $I_[A]_T_QL29_[B],
+ORDM $Ql29_RGD_[B] = $I_[A]_T_QL29_[B],
+[*901]
+
+[*END A]
+[*END B]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52]
+[*SET s = s + 1]
+[*SET u = 0]
+
+[*FOR B = 1:2:3:4:5:6:7:8:9:10:11:12]
+DM $TQL29_[A]_[B] =
+[*BLOCK 900 ON A.GT.900]
+$Ql29_net_[A]_[B]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_T_QL29_[B]/
+[*901]
+1,
+2,
+3,
+4,
+5,
+1+2,
+4+5,
+
+6,
+R,F,
+VT = "QL29. SATISFACTION ON LOANING ATTRIBUTES - [QL6title.[s]]",
+V = "
+[topic4.[+u]]\
+`     Completely Satisfied (5) <v5>;
+`     Somewhat Satisfied  (4) <v4>;
+`     Neither Satisfied nor satisfied  (3) <v3>;
+`     Somewhat Dissatisfied (2) <v2>;
+`     Completely Dissatisfied (1) <v1>;
+`          TOP 2 BOX<Q>;
+`          BOTTOM 2 BOX<Q>;
+Not Applicable;
+Missing answers<Z>;
+Total count<C>",
+[*END B]
+[*END A]
+[*SK 4000]
+[*4000]

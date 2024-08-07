@@ -1538,6 +1538,71 @@ Q1 2024 *(g);
 Q2 2024 *(h)",
 
 
+DM $HATBoost =
+$Q22024/NB,
+$Booster/NB,
+[*DO A = 1:12]
+$HAv/[A].$Q22024/NB,
+$HAv/[A].$Booster/NB,
+[*END A]
+HT = "HEADER A. GENERAL PROFILE",
+H  = "<F=SHG1>
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+GENDER****
+MALE***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+FEMALE***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+LIFESTAGE****
+Students (20 yo and below)***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+Yuppies (21-30 yo)***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+Transitioners (31-35 yo)***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+Balancers (36-45 yo)***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+Older Adults/Retirees (46-65 yo)***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+
+SEC****
+AB***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+C1***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+ABC1***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+C2***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+D***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i)",
+
+
 DM $HBT =
 T,
 $Q42023/NB,
@@ -1655,6 +1720,43 @@ Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h)",
 
+DM $HBvBoost = 
+         $Q3/1,
+
+         ($Q3/2+3+4+5+6+7+8),
+         
+         ($Q3/9+10+11),
+
+         ($Q3/12+13+14+15+16+17),
+
+DM $HBTBoost =
+$Q22024/NB,
+$Booster/NB,
+[*DO A = 1:4]
+$HBvBoost/[A].$Q22024/NB,
+$HBvBoost/[A].$Booster/NB,
+[*END A]
+HT = "HEADER B. LOCALE AND MACROREGION",
+H  = "<F=SHG1>
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+NCR***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+BALANCE LUZON (NCL + SL)***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+VISAYAS***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+MINDANAO***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i)",
+
 
 DM $HCT = 
 T,
@@ -1700,6 +1802,38 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h)",
+
+
+DM $HCTBoost = 
+$Q22024/NB,
+$Booster/NB,
+[*DO A = 1:4]
+$HCv/[A].$Q22024/NB,
+$HCv/[A].$Booster/NB,
+[*END A]
+
+HT = "HEADER C. USERSHIP",
+H  = "<F=SHG1>
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+USERSHIP****
+NON-USERS***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+USERS***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+WHETHER GCASH USERS****
+GCASH NON-USERS***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i);
+
+GCASH USERS***
+Q2 2024 *(h);
+BOOSTER SAMPLE *(i)",
 
 DM $HDT =
 T,
