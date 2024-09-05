@@ -856,6 +856,21 @@ OM $I_8_I_37_QRMO4_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
+[*SET B = 112730][*DO A= 1:10]
+OM $I_7_I_8_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 116450][*DO A= 1:10]
+OM $I_7_I_21_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 117570][*DO A= 1:10]
+OM $I_9_I_16_QRMO4_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
 
 !DUMMY
 
@@ -870,14 +885,12 @@ OM $I_7_I_2_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_4_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_6_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_7_QRMO4_98_other = $blank/1-9999,
-OM $I_7_I_8_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_9_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_10_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_11_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_15_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_19_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_20_QRMO4_98_other = $blank/1-9999,
-OM $I_7_I_21_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_22_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_23_QRMO4_98_other = $blank/1-9999,
 OM $I_7_I_24_QRMO4_98_other = $blank/1-9999,
@@ -900,7 +913,6 @@ OM $I_9_I_9_QRMO4_98_other = $blank/1-9999,
 OM $I_9_I_10_QRMO4_98_other = $blank/1-9999,
 OM $I_9_I_11_QRMO4_98_other = $blank/1-9999,
 OM $I_9_I_15_QRMO4_98_other = $blank/1-9999,
-OM $I_9_I_16_QRMO4_98_other = $blank/1-9999,
 OM $I_9_I_19_QRMO4_98_other = $blank/1-9999,
 OM $I_9_I_21_QRMO4_98_other = $blank/1-9999,
 OM $I_9_I_22_QRMO4_98_other = $blank/1-9999,

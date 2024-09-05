@@ -1,0 +1,27 @@
+
+DW $X[var.1]_sum = 0.0,
+!ADD ALL FACTORS
+[*DO P = 1:[codes.#]:1]
+IF ($[var.1]/[codes.P]), DW $X[var.1]_sum = $X[var.1]_sum + [factors.P],
+[*END P]
+
+!COUNT THE ANSWERS
+DI $X[var.1]_count = 0,
+[*DO P = 1:[codes.#]:1]
+IF $[var.1]/[codes.P], DI $X[var.1]_count = $X[var.1]_count + 1,
+[*END P]
+
+!COMPUTE AVERAGE THEN MULTIPLY BY 1000
+IF $X[var.1]_count.ne.0, DI $X[var.1]_SA_abs = ($X[var.1]_sum /$X[var.1]_count) * 1000,
+
+!PUT ALL INTO ONE VARIABLE AND INCLUDE NETS
+DM $X[var.1]_SA = $X[var.1]_SA_abs/
+[*DO P = 1:[factorsrange.#]:1]
+[factorsrange.P],
+[*END P]
+
+!VARIABLE TO BE USED FOR CROSSTAB
+DM $[finalvar.1]_SA = $X[var.1]_SA/1-[factorsrange.#],
+R,
+F,
+

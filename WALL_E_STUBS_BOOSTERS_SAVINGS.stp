@@ -1,0 +1,1305 @@
+!=======================MultiSelect
+
+DM $TQSAV1 =
+$A_QSAV1/
+1,
+2,
+3,
+4,
+5,
+6,
+R,F,
+VT = "QSAV1. HOW SAVINGS ARE KEPT",
+V = "
+I keep the cash at home/kept in a coin bank;
+Savings account in a physical bank (has physical branches and ATMs) -- no access to online banking;
+Savings account in a physical bank (has physical branches and ATMs) -- has access to online banking;
+Savings account in a digital bank (must have no physical branches);
+I don't have savings, I withdraw all my money every payday/ salary is just enough ('sakto') for expenses;
+Savings in non-bank institutions such as coop, microsavings in pawnshops etc;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQSAV10 =
+$A_QSAV10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+98,
+R,F,
+VT = "QSAV10. BRICK-AND-MORTAR BANKS AWARE OF",
+V = "
+AUB (Asia United Bank);
+Banco De Oro (BDO);
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQSAV2 =
+$A_QSAV2/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+98,
+R,F,
+VT = "QSAV2. BANKS WHERE SAVINGS ARE KEPT (PHYSICAL BANK WITHOUT ACCESS TO ONLINE BANKING)",
+V = $TQSAV10,
+
+
+!=======================MultiSelect
+
+DM $TQSAV3 =
+$A_QSAV3/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+98,
+R,F,
+VT = "QSAV3. BANKS WHERE SAVINGS ARE KEPT (PHYSICAL BANK WITH ACCESS TO ONLINE BANKING)",
+V = "
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank's Isave;
+PBCOMobile;
+PSBank Mobile;
+SeaBank;
+Development Bank of the Philippines Online Banking;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQSAV8 =
+$A_QSAV8/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+98,
+17,
+R,F,
+VT = "QSAV8. DIGITAL BANKS AWARE OF",
+V = "
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQSAV4 =
+$A_QSAV4/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+98,
+R,F,
+VT = "QSAV4. DIGITAL BANKS WHERE SAVINGS ARE KEPT (SAVINGS ACCOUNT IN A DIGITAL BANK",
+V = "
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics53
+
+[*SET s = 0]
+[*DATA topic50 (;) = 
+BRICK-AND-MORTAR BANKS (NO ACCESS TO ONLINE BANKING);
+AUB (Asia United Bank);
+BDO;
+BPI-/ BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others from QSAV10_91;
+BRICK-AND-MORTAR BANKS (WITH ACCESS TO ONLINE BANKING);
+BPI-Mobile/ Online;
+BDO-Mobile/ Online;
+Landbank-Mobile/ Online;
+Metrobank-Mobile/ Online;
+Unionbank-Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank's Isave;
+PBCOMobile;
+PSBank Mobile;
+Others from QSAV3_98;
+DIGITAL BANKS;
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others from QSAV8_98;
+SeaBank;
+Development Bank of the Philippines Online Banking]
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:902:20:21:22:23:24:25:26:27:28:29:30:31:903:32:33:34:35:36:37:38:39:40:41:42:43:44:45:46:47:48:49:50]
+DM $TQSAV5_[A] =
+$T_QSAV5_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QSAV5. FREQUENCY OF SAVING MONEY - [topic50.[+s]]",
+V = "
+Everyday;
+At least once a week;
+At least once a month;
+Every other month;
+Once every quarter (every 3 moths);
+Once every year;
+I don-t regularly add money to my savings, I just retain money in savings account;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultiSelect
+
+DM $TQSAV7 =
+$A_QSAV7/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QSAV7. SAVINGS BEHAVIOR",
+V = "
+I set aside money first for my savings then spend on what is left for my expenses;
+I set aside money first for all my expenses, then save from what is left;
+I only save when I receive a bonus (e.g., 13th month pay, Christmas bonus, etc) or extra income;
+I often use the money I save for emergencies, It is not really meant for long term savings;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQSAV8a =
+$QSAV8a/
+1,
+2,
+3,
+4,
+91,
+R,F,
+VT = "QSAV8a. ATTITUDE TOWARDS SAVING MONEY",
+V = "
+I automatically save a certain portion of my salary when I get paid;
+Whenever I have extra money that I don't use for daily expenses, I save that money;
+I start saving money when there is a specific purchase that I'd like to make;
+I save when I want to buy something;
+Other;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQSAV9 =
+[*DO A = 1:3]
+$QSAV9_O[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+17,
+18,
+19,
+20,
+21,
+15,
+16,
+[*END A]
+R,F,
+VT = "QSAV9. REASONS FOR SAVING MONEY",
+V = "
+[*DO A = 1:3]
+RANK [A]\
+`     To pay for basic living expenses, like food and household bills (rent, electricity, etc);
+`     To protect myself and / or my family just in case something happens in the future (e.g. emergencies, illness);
+`     To have enough money to buy a house;
+`     To have enough money to buy a car;
+`     To have enough money to buy a two-wheeler (i.e. motorcycle);
+`     To have enough money for purchases like appliances and electronics;
+`     To have enough spending money for luxuries that I want (i.e. entertainment / recreational expenses, vacation, nice clothes, etc-);
+`     To be able to support my immediate family's future needs, such as education expenses;
+`     To have enough money for starting or growing a business;
+`     To have enough money to pay for important event/occasion (i.e. wedding, birthday, graduation celebration, fiesta, etc-);
+`     To pay for a debt that I incurred;
+`     To be able to support my extended family (such as parents, relatives, etc);
+`     To ensure I have enough money for retirement;
+`     I don't really have a particular reason for saving -- I just feel like it is what I should do;
+`     To have credit card;
+`     To be able to loan from banks/digital banks;
+`     To pay for house construction/ home renovation;
+`     For travel Para makapag-travel;
+`     To have funds for impulse shopping;
+`     No Rank 2;
+`     No Rank 3;
+[*END A]
+
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+[*DATA QSAV11title (;) = 
+AUB (Asia United Bank);
+Banco De Oro (BDO);
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others;
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others]
+
+
+[*DO A = 1:36]
+DM $TQSAV11 =
+$I_[A]_A_QSAV11/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+21,
+22,
+23,
+24,
+R,F,
+VT = "QSAV11. SOURCES OF BRAND AWARENESS - [QSAV11title.A]",
+V = "
+Banners or tarps on waiting sheds, inside the malls, terminals/ stop-overs, etc.;
+Billboards;
+Blog (Blogger endorsements);
+Branded delivery trucks;
+Celebrity endorser;
+Cinemas;
+Company website;
+Email blasts;
+Events/Activations;
+Heard from family/ relatives;
+Heard from friend/colleagues/workmates;
+In-store materials (i.e. posters, price tags, streamers, stickers, brochures, etc.) 1;
+Newspapers/Magazines;
+Product Displays in Stores;
+Radio;
+Samples/leaflets;
+Transit ads;
+TV;
+Facebook;
+Instagram;
+Twitter;
+Youtube;
+Tiktok;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics29
+
+[*SET s = 0]
+[*DATA topic44 (;) = 
+Has better interest rates compared to other banks;
+Trusted bank;
+Has appealing and easy to understand and follow promo mechanics;
+Has attractive interest rates;
+Easy to open an account;
+Has good customer service;
+Fees and charges are affordable/ reasonable;
+Helps me to grow my finances;
+Makes it simple and easy for customers to conduct transactions with numerous banks, stores, service providers, and other financial services;
+Does not experience frequent system downtime;
+Has the best Mobile banking App;
+User interface is user-friendly and easy to navigate;
+Log-in & registration have strict security and verification measures;
+Has features that can help me in managing my finances better;
+Provides clear information and explanation on measures in place to protect users- data and cash;
+Consistently notifies me regarding all my activities through multiple channels (SMS, emails, in-app notification, etc.);
+Has products and features that are relevant or suitable to my needs;
+Let me start a savings account with no maintaining balance;
+No negative reviews or news about the bank;
+Recommended by family and friends;
+Has many branches accessible to me;
+Has many reliable and accessible ATMs;
+App is easy to use and use-friendly;
+No to rare occasions of app service downtime;
+No lags or delays when using the app;
+A bank that has been long-established;
+Is the bank/fintech I go for my most important financial transactions;
+I am assured that my money is safe and secured;
+Has good customer service]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29]
+DM $TQSAV12_[A] =
+$T_QSAV12_[A]/
+1,
+2,
+3,
+4,
+5,
+4+5,
+1+2,
+R,F,
+VT = "QSAV12. ATTRIBUTE IMPORTANCE RATING",
+V = "
+[topic44.[+s]]\
+`     Definitely NOT important (1) <v1>;
+`     Somewhat NOT important (2) <v2>;
+`     Neither important or unimportant (3) <v3>;
+`     Somewhat important (4) <v4>;
+`     Definitely important (5) <v5>;
+`     TOP 2 BOX<Q>;
+`     BOTTOM 2 BOX<Q>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopicsSelect29
+
+[*SET s = 0]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29]
+DM $TQSAV13_[A] =
+$A_QSAV13_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+99,
+R,F,
+VT = "QSAV13. BRAND ASSOCIATION - [topic44.[+s]]",
+V = "
+Maya Savings;
+GSave by CIMB;
+#MySaveUp by BPI;
+EzySave+ by Maybank;
+#UNOReady@GCash by UNO Digital Bank;
+BDO;
+BPI;
+Landbank;
+Metrobank;
+UnionDigital Bank;
+UNO Bank;
+NONE OF THESE;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultiSelect
+
+
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:902:20:21:22:23:24:25:26:27:28:29:30:31:903:32:33:34:35:36:37:38:39:40:41:42:43:44:45:46:47:48:49:50]
+DM $TQSAV14_[A] =
+$I_[A]_A_QSAV14/
+1+2+3+4+5+6,
+1,
+2,
+3,
+4,
+5,
+6,
+7+8+9,
+7,
+8,
+9,
+10+11,
+10,
+11,
+R,F,
+VT = "QSAV14. TYPE OF SAVINGS ACCOUNT CURRENTLY OWNED - [topic50.[+s]]",
+V = "
+BANKS - SAVINGS ACOUNT (NON-PAYROLL) (NET) <Q>;
+`     Savings account with passbook (non-payroll);
+`     Savings account with ATM/Debit card (non-payroll);
+`     Foreign Savings;
+`     Prepaid card / Cash card/ Mobile wallet (non-payroll);
+`     Time-deposit / Term-deposit;
+`     Savings with Insurance;
+BANKS - SAVINGS ACOUNT (PAYROLL) (NET) <Q>;
+`     Payroll Savings account with ATM/Debit card;
+`     Payroll via Prepaid card / Cash card;
+`     Payroll via Mobile wallet;
+BANKS - CURRENT/CHECKING ACCOUNT (NET) <Q>;
+`     Peso Checking account;
+`     Foreign current/checking account;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQSAV15 =
+$QSAV15/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+R,F,
+VT = "QSAV15.  PRIMARY BANK",
+V = "
+AUB (Asia United Bank);
+BDO;
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others from QSAV10_98;
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank's Isave;
+PBCOMobile;
+PSBank Mobile;
+SeaBank;
+Development Bank of the Philippines Online Banking;
+Others from QSAV3_98;
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+[*DATA QSAV16title (;) =
+Maya Savings;
+GSave by CIMB;
+#MySaveUp by BPI;
+EzySave+ by Maybank;
+#UNOReady@GCash by UNO Digital Bank;
+BDO;
+BPI;
+LANDBANK;
+METROBANK;
+UNIONDIGITAL BANK;
+UNO BANK]
+
+[*DO A = 1:11]
+DM $TQSAV16_[A] =
+$I_[A]_A_QSAV16/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+91,
+R,F,
+VT = "QSAV16. REASONS FOR OPENING AN ACCOUNT WITH CURRENT BANK - [QSAV16title.A]",
+V = "
+Has competitive interest rate compared to other banks;
+Has competitive interest rate compared to traditional banks (i.e., banks with physical branches);
+Has enticing promos and rewards;
+To grow my money (i.e., can use bank to invest and trade stocks, crypto, etc);
+To easily check my balance;
+To easily make online transactions;
+For easier account management;
+Contactless banking;
+There is no maintaining balance required;
+Low to no fees and charges;
+No minimum deposit amount is required to open an account;
+Mobile app is easy to use;
+Has more digital options and solutions;
+Enticed by endorsers/ celebrities to open an account with this digital bank;
+Easy and convenient to use for different transactions;
+My family and friends encouraged me to open a savings account in digital bank;
+Real time or quick processing time for deposits/withdrawals;
+Good security features;
+Good customer service;
+Raise financial awareness/ gives financial education;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+!Placeholder QSAV17 - numeric
+
+!=======================MultipleTopicsSelect50
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:902:20:21:22:23:24:25:26:27:28:29:30:31:903:32:33:34:35:36:37:38:39:40:41:42:43:44:45:46:47:48:49:50]
+DM $TQSAV18_[A] =
+$A_QSAV18_[A]/
+1,
+2,
+3,
+4,
+5,
+91,
+R,F,
+VT = "QSAV18. HOW TO FUND SAVINGS ACCOUNT - [topic46.[+s]]",
+V = "
+Deposit cash using traditional banks with;
+Via mobile/ online banking linked to my physical bank;
+Via my e-wallet/ fintech;
+Via PESONet and Instapay;
+Via other digital banks;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================Unique
+
+DM $TQSAV19 =
+$QSAV19/
+2+3+4+5,
+2,
+3,
+4,
+5,
+7+8+9+10+11,
+7,
+8,
+9,
+10,
+11,
+R,F,
+VT = "QSAV19. HOW TO FUND E-WALLET",
+V = "
+CASH IN FROM OFFLINE CHANNELS (NET) <Q>;
+`     Cash in from remittance centers (ex. Palawan, Cebuana, etc.);
+`     Cash in from offline/ physical bank;
+`     Cash-in from cash-in/cash-out outlets/ SSS;
+`     Cash-in from convenience store;
+CASH IN FROM OTHER ONLINE/ DIGITAL CHANNELS (NET) <Q>;
+`     Cash in from online bank;
+`     Transferred from another e wallet;
+`     Salary directly received in my e-wallet;
+`     Remittance from relatives/ friends;
+`     Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQSAV20a =
+$A_QSAV20a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+99,
+R,F,
+VT = "QSAV20a. WHETHER AWARE OF TIME DEPOSIT FEATURE",
+V = "
+AUB (Asia United Bank);
+BDO;
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others;
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank's Isave;
+PBCOMobile;
+PSBank Mobile;
+SeaBank;
+Development Bank of the Philippines Online Banking;
+Others;
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQSAV20b =
+$A_QSAV20b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+R,F,
+VT = "QSAV20b. WHETHER USING TIME DEPOSIT FEATURE",
+V = "
+AUB (Asia United Bank);
+BDO;
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+SeaBank;
+Others;
+BPI Mobile/ Online;
+BDO Mobile/ Online;
+Landbank Mobile/ Online;
+Metrobank Mobile/ Online;
+Unionbank Mobile/ Online;
+Security Bank Mobile/ Online;
+BancNet Online;
+RCBC mobile;
+Maybank's Isave;
+PBCOMobile;
+PSBank Mobile;
+SeaBank;
+Development Bank of the Philippines Online Banking;
+Others;
+Maya Savings;
+CIMB Bank PH;
+GoTyme;
+UNOBank;
+SEABank;
+Tonik;
+Overseas Filipino Bank (OFBank);
+UnionDigital Bank;
+ING Philipines;
+DiskarTech;
+Komo;
+GSave (bank partner unspecified);
+GSave by CIMB;
+GSave - #MySaveUp by BPI;
+GSave - EzySave+ by Maybank;
+GSave - #UNOReady@GCash by UNO Digital Bank;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+!Placeholder QSAV21 numeric
+
+!=======================Unique
+
+DM $TQSAV22 =
+$QSAV22/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+91,
+R,F,
+VT = "QSAV22. PURPOSE OF USING BRICK-AND-MORTAR VERSUS DIGITAL BANKS SAVINGS ACCOUNT",
+V = "
+Most of my savings are in non-digital savings;
+I trust my physical bank/ traditional bank more;
+I receive my salary in my savings account in traditional banks with physical branches;
+I have a time deposit account in a physical bank/ traditional bank;
+I pay my bills using my physical bank (manual / auto-debit);
+Need my physical bank to transfer allowance/ funds to others;
+Need my physical bank to transfer funds/ payments for business-related transactions;
+Less or no downtime;
+Has a physical branch I can go to for transactions;
+Has a physical branch I can go to for concerns and issues;
+Has a physical card for withdrawal;
+Has a passbook where I can monitor my funds;
+Has mobile banking linked to my physical account;
+Traditional banks with physical branches are safer and more secure compared to digital banks;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*DATA topic48 (;) = 
+Maya Savings;
+GSave by CIMB;
+#MySaveUp by BPI;
+EzySave+ by Maybank;
+#UNOReady@GCash by UNO Digital Bank;
+BDO;
+BPI;
+Landbank;
+Metrobank;
+UnionDigital Bank;
+UNO BANK]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11]
+DM $TQSAV23_[A] =
+$T_QSAV23_[A]/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QSAV23. OVERALL SATISFACTION - [topic48.[+s]]",
+V = "
+Completely dissatisfied (1) <v1>;
+Somewhat dissatisfied (1) <v1>;
+Neither satisfied nor dissatisfied (1) <v1>;
+Somewhat satisfied (1) <v1>;
+Completely satisfied (1) <v1>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11]
+DM $TQSAV24_[A] =
+$T_QSAV24_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+R,F,
+VT = "QSAV24. NET PROMOTER SCORE  - [topic48.[+s]]",
+V = "
+'0 - Not at all likely (0) <v;
+1;
+2;
+3;
+4;
+5;
+6;
+7;
+8;
+9;
+10 - Highly likely;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*DATA topic49 (;) = 
+Being safe and secured to use;
+Ease of and convenience to use;
+Smooth app experience (no lags or delays);
+Has competitive interest rate;
+Has high interest rate;
+Ease of depositing money;
+Ease of withdrawing money;
+Ease of opening an account;
+User-friendliness of the app;
+Can customize products and features that are relevant to my needs;
+Easy to contact and responsiveness of customer service]
+
+
+[*DO B = 1:11]
+[*DO A = 1:11]
+DM $TQSAV25_[A] =
+$I_[B]_T_QSAV25_[A]/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QSAV25.  - [topic49.[+s]]",
+V = "
+Completely dissatisfied;
+Somewhat dissatisfied;
+Neither satisfied nor dissatisfied;
+Somewhat satisfied;
+Completely satisfied;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+[*END B]
+
+
+!=======================MultiSelect
+
+DM $TQSAV26 =
+$I_1_A_QSAV26/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+13,
+14,
+91,
+99,
+R,F,
+VT = "QSAV26. ",
+V = "
+Not as safe and secure to use as other digital banks  Hindi kasing ligtas at secure gamitin kumpara sa ibang digital banks;
+Not as safe and secure to use as traditional banks with physical branches  Hindi kasing ligtas at secure gamitin gaya ng mga tradiyunal na bangko na may physical branches;
+There are no physical branches that I can go to if I have any issues or concerns  Walang pisikal na branches na maari kong puntahan kapag ako ay mayroong mga issues or concern;
+Customer service is not responsive  Hindi responsive ang kanilang customer service;
+App and website are too difficult or complicated to use  Masyadong mahirap o komplikadong gamitin ang kanilang app at website;
+App is not user-friendly  Hindi user-friendly ang kanilang app;
+Low interest rate  Mababa ang interest rate;
+Difficult to deposit money  Mahirap magdeposito ng pera;
+Difficult to withdraw  Mahirap mag-withdraw ng pera;
+Not used by my family and friends  Hindi ginagamit ng mga kapamilya at kaibigan ko;
+Has system downtime often  Madalas ang system downtime;
+Has high service fees and charges  Mataas ang service fees at charges;
+Heard negative reviews/ feedback from others  Nakarinig ng mga negatibong reviews/ feedback mula sa ibang tao;
+Others, please specify Iba pa, pakibanggit;
+None  Wala;
+Missing answers<Z>;
+Total count<C>",

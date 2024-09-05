@@ -621,7 +621,7 @@ N($A_Q17c/1+([*do a = 91:92]$Q17c_[a]_other/1056[*sle]+[*end a])).N($A_Q17c/99+(
 $A_Q17c/99+([*do a = 91:92]$Q17c_[a]_other/9999[*sle]+[*end a]),
 $A_Q17c/B+([*do a = 91:92]$Q17c_[a]_other/B[*sle]+[*end a]),
 R,F,
-VT = "Q17c. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 MONTH - WITH GCSAH NETS",
+VT = "Q17c. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 1 MONTH - WITH GCASH NETS",
 V = "
 GCASH USERS;
 NON-GCASH USERS;
