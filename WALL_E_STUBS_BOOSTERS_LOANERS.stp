@@ -1022,25 +1022,25 @@ Maya Pay in 4;
 LazPay Later;
 Lazada Loan]
 
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*DATA codes = 1,2,3,4,5]
 [*FOR A = 1:2:3:4:5:6:7:22:8:9]
 [*DO B = 1:5]
-IF $T_QL14b_[A]/[codes.B], DI $dummysum = $dummysum + [codes.B],
-IF $T_QL14b_[A]/[codes.B], DI $dummycount = $dummycount + 1,
+IF $T_QL14b_[A]/[codes.B], DI $xdummysum = $xdummysum + [codes.B],
+IF $T_QL14b_[A]/[codes.B], DI $xdummycount = $xdummycount + 1,
 [*END B]
 
 [*BLOCK 1 ON A.EQ.3]
-DI $QL14b_GCash = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $QL14b_GCash = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*1]
 
 [*BLOCK 1 ON A.EQ.9]
-DI $QL14b_NOTGCash = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $QL14b_NOTGCash = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*1]
 
 DM $TQL14b_[A] =
@@ -1613,12 +1613,12 @@ V = $TQ159_1,
 !=======================Unique
 
 
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
-DI $nostub = 0,
-DI $nostubrgd = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
+DI $xnostub = 0,
+DI $xnostubrgd = 0,
 [*DATA codes = 1,2,3,4,5,6,7,8,9,10,11,12]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -1629,75 +1629,75 @@ DI $nostubrgd = 0,
 !ORDM $Q170_net_[NET] = $I_[A]_Q170_Booster,
 !ORDM $Q170_RGD = $I_[A]_Q170_Booster,
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_Q170_Booster/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_Q170_Booster/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_Q170_Booster/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_Q170_Booster/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_Q170_Booster/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_Q170_Booster/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_Q170_Booster/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_Q170_Booster/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
-IF $I_[A]_Q170_Booster/13, DI $nostub = 1,
-IF $I_[A]_Q170_Booster/13, DI $nostubrgd = 1,
+IF $I_[A]_Q170_Booster/13, DI $xnostub = 1,
+IF $I_[A]_Q170_Booster/13, DI $xnostubrgd = 1,
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Q170_net_[NET] = $dummysum/$dummycount,
-DI $Q170_net_[NET]rgd = $dummysum/$dummycount,
-DI $Q170_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Q170_net_[NET] = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q170_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*901]
 
 [*END A]
-DI $Q170_RGD = $rgdsum/$rgdcount,
+DI $Q170_RGD = $xrgdsum/$xrgdcount,
 
 [*SET s = 0]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
@@ -1777,7 +1777,7 @@ $Q170_RGD/
 10,
 11,
 12,
-13+$nostubrgd/1,
+13+$xnostubrgd/1,
 R,F,
 VT = "Q170. PAYMENT TERMS - REGARDLESS OF LOANING CHANNEL",
 V = $TQ170_Booster_1,
@@ -1797,7 +1797,7 @@ $Q170_RGD/
 10,
 11,
 12,
-13+$nostubrgd/1,
+13+$xnostubrgd/1,
 R,F,
 VT = "Q170. PAYMENT TERMS - TOTAL DIGITAL LOANS",
 V = $TQ170_Booster_1,
@@ -1805,10 +1805,10 @@ V = $TQ170_Booster_1,
 !=======================Unique
 
 
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
 [*DATA codes = 1,2,3,4,5,6,7]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -1819,52 +1819,52 @@ DI $rgdcount = 0,
 !ORDM $Q170a_net_[NET] = $I_[A]_Q170a_Booster,
 !ORDM $Q170a_RGD = $I_[A]_Q170a_Booster,
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_Q170a_Booster/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_Q170a_Booster/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_Q170a_Booster/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_Q170a_Booster/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_Q170a_Booster/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_Q170a_Booster/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_Q170a_Booster/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_Q170a_Booster/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Q170a_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Q170a_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*901]
 
 [*END A]
-DI $Q170a_RGD = $rgdsum/$rgdcount,
+DI $Q170a_RGD = $xrgdsum/$xrgdcount,
 
 
 [*SET s = 0]
@@ -1944,10 +1944,10 @@ V = $TQ170a_Booster_1,
 
 !=======================Unique
 
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
 [*DATA codes = 1,2,3]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -1958,52 +1958,52 @@ DI $rgdcount = 0,
 !ORDM $Ql21_net_[NET] = $I_[A]_QL21,
 !ORDM $Ql21_RGD = $I_[A]_QL21,
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_QL21/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_QL21/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_QL21/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_QL21/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_QL21/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_QL21/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_QL21/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_QL21/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Ql21_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql21_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*901]
 
 [*END A]
-DI $Ql21_RGD = $rgdsum/$rgdcount,
+DI $Ql21_RGD = $xrgdsum/$xrgdcount,
 
 [*SET s = 0]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
@@ -2136,12 +2136,12 @@ Total count<C>",
 
 !=======================Unique
 
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
-DI $nostub = 0,
-DI $nostubrgd = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
+DI $xnostub = 0,
+DI $xnostubrgd = 0,
 [*DATA codes = 1,2,3,4,5]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -2152,75 +2152,75 @@ DI $nostubrgd = 0,
 !ORDM $Ql22_net_[NET] = $I_[A]_QL22,
 !ORDM $Ql22_RGD = $I_[A]_QL22,
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_QL22/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_QL22/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_QL22/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_QL22/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_QL22/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_QL22/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_QL22/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_QL22/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
-IF $I_[A]_QL22/6, DI $nostub = 1,
-IF $I_[A]_QL22/6, DI $nostubrgd = 1,
+IF $I_[A]_QL22/6, DI $xnostub = 1,
+IF $I_[A]_QL22/6, DI $xnostubrgd = 1,
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Ql22_net_[NET] = $dummysum/$dummycount,
-DI $Ql22_net_[NET]rgd = $dummysum/$dummycount,
-DI $Ql22_net_[NET]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql22_net_[NET] = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Ql22_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*901]
 
 [*END A]
-DI $Ql22_RGD = $rgdsum/$rgdcount,
+DI $Ql22_RGD = $xrgdsum/$xrgdcount,
 
 [*SET s = 0]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
@@ -2272,7 +2272,7 @@ $Ql22_RGD/
 3,
 4,
 5,
-6+$nostubrgd/1,
+6+$xnostubrgd/1,
 R,F,
 VT = "QL22. INTEREST RATE - REGARDLESS OF LOANING CHANNEL",
 V = $TQL22_1,
@@ -2284,7 +2284,7 @@ $Ql22_RGD/
 3,
 4,
 5,
-6+$nostubrgd/1,
+6+$xnostubrgd/1,
 R,F,
 VT = "QL22. INTEREST RATE - TOTAL DIGITAL LOANS",
 V = $TQL22_1,
@@ -2294,10 +2294,10 @@ V = $TQL22_1,
 !=======================Unique
 
 
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
 [*DATA codes = 1,2,3,4,5,6,7,8,9,10,11]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -2308,52 +2308,52 @@ DI $rgdcount = 0,
 !ORDM $Ql23_net_[NET] = $I_[A]_QL23,
 !ORDM $Ql23_RGD = $I_[A]_QL23,
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_QL23/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_QL23/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_QL23/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_QL23/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_QL23/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_QL23/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_QL23/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_QL23/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Ql23_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql23_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*901]
 
 [*END A]
-DI $Ql23_RGD = $rgdsum/$rgdcount,
+DI $Ql23_RGD = $xrgdsum/$xrgdcount,
 
 
 !ADD PASSIVES DETRACTORS ETC
@@ -2472,10 +2472,10 @@ V = $TQL23_1,
 
 !=======================Unique
 
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
 [*DATA codes = 1,2,3,4,5]
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -2486,52 +2486,52 @@ DI $rgdcount = 0,
 !ORDM $Ql25_net_[NET] = $I_[A]_QL25,
 !ORDM $Ql25_RGD = $I_[A]_QL25,
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_QL25/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_QL25/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_QL25/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_QL25/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_QL25/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_QL25/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_QL25/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_QL25/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Ql25_net_[NET] = $dummysum/$dummycount,
-DI $dummysum = 0,
-DI $dummycount = 0,
+DI $Ql25_net_[NET] = $xdummysum/$xdummycount,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
 [*5]
 [*901]
 
 [*END A]
-DI $Ql25_RGD = $rgdsum/$rgdcount,
+DI $Ql25_RGD = $xrgdsum/$xrgdcount,
 
 !ADD TOP BOX ETC
 [*SET s = 0]
@@ -2605,7 +2605,59 @@ R,F,
 VT = "QL25. OVERALL SATISFACTION - TOTAL DIGITAL LOANS",
 V = $TQL25_1,
 
-!Placeholder QL26 OE
+
+[*SK 99999]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $QL26_net_[NET] = $I_[A]_QL26,
+ORDM $QL26_RGD = $I_[A]_QL26,
+[*901]
+
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
+DM $TQL26_[A] =
+[*BLOCK 900 ON A.GT.900]
+$QL26_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_QL26/
+[*901]
+1+2+3+4+5,
+1,
+2,
+3,
+4,
+5,
+6+7+98+8,
+6,
+7,
+98,
+8,
+R,F,
+VT = "QL26. WHERE PAY EXISTING LOANS - PAYMENT CHANNELS - [QL6title.[+s]]",
+V = "
+OFFLINE / NON-DIGITAL (NET) <Q>;
+`     Remittance Center;
+`     Bayad Center;
+`     Physical bank;
+`     Convenience Store;
+`     Other physical store;
+ONLINE / DIGITAL (NET) <Q>;
+`     Mobile / Online / Digital bank;
+`     E-money / Mobile wallet;
+`     Other financial app/websites;
+`     Automatic salary deduction;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+[*99999]
 
 
 !=======================MultipleTopics12
@@ -2628,12 +2680,12 @@ Speed of loan release or disbursement]
 
 [*DATA codes = 1,2,3,4,5]
 [*FOR B = 1:2:3:4:5:6:7:8:9:10:11:12]
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $rgdsum = 0,
-DI $rgdcount = 0,
-DI $nostub = 0,
-DI $nostubrgd_[B] = 0,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
+DI $xnostub = 0,
+DI $xnostubrgd_[B] = 0,
 
 [*FOR A = 901:1:2:3:4:5:6:7:8:9:10:11:12:13:14:902:15:16:17:18:19:20:21:22:23:903:24:25:26:27:28:29:30:31:32:33:34:35:904:36:37:38:39:40:41:42:48:43:44:905:45:46:47:49:50:51:52:921:53:54:998:55:56:57:58:59:60:61:62:63:64:65]
 [*BLOCK 900 ON A.GT.900]
@@ -2644,76 +2696,76 @@ DI $nostubrgd_[B] = 0,
 !ORDM $Ql29_net_[NET]_[B] = $I_[A]_T_QL29_[B],
 !ORDM $Ql29_RGD_[B] = $I_[A]_T_QL29_[B],
 [*DO E = 1:[codes.#]:1]
-IF $I_[A]_T_QL29_[B]/[codes.E], DI $dummysum = $dummysum + [codes.E],
-IF $I_[A]_T_QL29_[B]/[codes.E], DI $dummycount = $dummycount + 1,
-IF $I_[A]_T_QL29_[B]/[codes.E], DI $rgdsum = $rgdsum + [codes.E],
-IF $I_[A]_T_QL29_[B]/[codes.E], DI $rgdcount = $rgdcount + 1,
+IF $I_[A]_T_QL29_[B]/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_T_QL29_[B]/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_T_QL29_[B]/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_T_QL29_[B]/[codes.E], DI $xrgdcount = $xrgdcount + 1,
 [*END E]
-IF $I_[A]_T_QL29_[B]/6, DI $nostub = 1,
-IF $I_[A]_T_QL29_[B]/6, DI $nostubrgd_[B] = 1,
+IF $I_[A]_T_QL29_[B]/6, DI $xnostub = 1,
+IF $I_[A]_T_QL29_[B]/6, DI $xnostubrgd_[B] = 1,
 
 
 [*BLOCK 1 ON A.EQ.14]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*1]
 [*BLOCK 2 ON A.EQ.23]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*2]
 [*BLOCK 3 ON A.EQ.35]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*3]
 [*BLOCK 4 ON A.EQ.44]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*4]
 [*BLOCK 5 ON A.EQ.52]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.54]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*BLOCK 5 ON A.EQ.65]
-DI $Ql29_net_[NET]_[B] = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]rgd = $dummysum/$dummycount,
-DI $Ql29_net_[NET]_[B]nostub = $nostub,
-DI $dummysum = 0,
-DI $dummycount = 0,
-DI $nostub = 0,
+DI $Ql29_net_[NET]_[B] = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]rgd = $xdummysum/$xdummycount,
+DI $Ql29_net_[NET]_[B]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
 [*5]
 [*901]
 
 [*END A]
 
-DI $Ql29_RGD_[B] = $rgdsum/$rgdcount,
+DI $Ql29_RGD_[B] = $xrgdsum/$xrgdcount,
 [*END B]
 
 [*SET s = 0]
@@ -2784,7 +2836,7 @@ $Ql29_RGD_[B]/
 1+2,
 4+5,
 
-6+$nostubrgd_[B]/1,
+6+$xnostubrgd_[B]/1,
 R,F,
 VT = "QL29. SATISFACTION ON LOANING ATTRIBUTES - REGARDLESS OF LOANING CHANNEL",
 V = $TQL29_1_[B],
@@ -2799,7 +2851,7 @@ $Ql29_RGD_[B]/
 1+2,
 4+5,
 
-6+$nostubrgd_[B]/1,
+6+$xnostubrgd_[B]/1,
 R,F,
 VT = "QL29. SATISFACTION ON LOANING ATTRIBUTES - TOTAL DIGITAL LOANS",
 V = $TQL29_1_[B],

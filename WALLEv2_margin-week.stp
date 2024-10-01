@@ -43,6 +43,16 @@ DM $HMARG = T,
             $Q17i/2.$Q4/1,  
             $Q17i/2.$Q4/2, 
  
+            $MAY2023/nb.$Q17i/1.$Q4/1,  
+            $MAY2023/nb.$Q17i/1.$Q4/2,
+            $MAY2023/nb.$Q17i/2.$Q4/1,  
+            $MAY2023/nb.$Q17i/2.$Q4/2,
+ 
+            $JUN2023/nb.$Q17i/1.$Q4/1,  
+            $JUN2023/nb.$Q17i/1.$Q4/2,
+            $JUN2023/nb.$Q17i/2.$Q4/1,  
+            $JUN2023/nb.$Q17i/2.$Q4/2,
+ 
             $OCT2023/nb.$Q17i/1.$Q4/1,  
             $OCT2023/nb.$Q17i/1.$Q4/2,
             $OCT2023/nb.$Q17i/2.$Q4/1,  
@@ -103,12 +113,22 @@ DM $HMARG = T,
 
 HT = "USER AND NON-USER URBANITY",            
 H = "TOTAL;
-     QUARTER 3 2024*****
+     TOTAL*****
      USER\
      URBAN;RURAL;
      NON-USER\
      URBAN;RURAL;
-     OCTOBER*****
+     MAY 2023*****
+     USER\
+     URBAN;RURAL;
+     NON-USER\
+     URBAN;RURAL;
+     JUNE 2023*****
+     USER\
+     URBAN;RURAL;
+     NON-USER\
+     URBAN;RURAL;
+     OCTOBER 2023*****
      USER\
      URBAN;RURAL;
      NON-USER\
@@ -2697,12 +2717,25 @@ DW $WTS = $WT(
 0.8438,
 1.5729),
 
-[*INSERT W_WTS21to65]
+
+[*INSERT W_WTS_trended]
+
+DM $filter =
+$MAY2023/NB,
+($Week19_2023/NB+$Week20_2023/NB),
+$Week21_2023/NB,
+$Week22_2023/NB,
+($Week23_2023/NB+$Week24_2023/NB),
+$Week25_2023/NB,
+$Week26_2023/NB,
+($Week41_2023/NB+$Week42_2023/NB),
+$Week43_2023/NB,
+$Week44_2023/NB,
 
 !IF $FEB2024/NB, LCSV(H) $resp.$wts,
 !IF ($AUG2024/NB).($T_Q1_1/21..65), WRITE,
 !IF ($MAY2024/NB+$JUN2024/NB).($T_Q1_1/21..65), WRITE,
-IF ($AUG2024/NB), WRITE,
+IF $May2023/NB+$Jun2023/NB+$OCT2023/NB, WRITE,
 FINISH DATA,
 
 START TABLES,
@@ -2781,31 +2814,19 @@ HPT]
 
 
 
+
 [*SET T = 0]
 ! for initial marginals
 !T [+T] = $TMARGQ4 * $hmarg,
 !BT = "All respondents",
 
 ! for testing expected base
-T [+T] = $WT * $hmarg,
+T [+T] = $WTlegacy * $hmarg,
 BT = "All respondents-UNWTD",
 
-SELECT WR $wts,
+SELECT WR $wtslegacy,
 
-T [+T] = $WT * $hmarg,
+T [+T] = $WTlegacy * $hmarg,
 BT = "All respondents-WTD",
-
-
-[*SK 5]
-! for testing expected base
-T [+T] = $WT21to65 * $hmarg,
-BT = "All respondents-UNWTD",
-
-SELECT WR $wts21to65,
-
-T [+T] = $WT21to65 * $hmarg,
-BT = "All respondents-WTD",
-
-[*5]
 
 FINISH TABLES,

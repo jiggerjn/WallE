@@ -11,12 +11,12 @@ OM $Q70_91_other = $[B]-[B+3]/1-9999,
 [*END A]
 
 [*SET B = 100090][*DO A= 1:10]
-OM $Q16a_91_other = $[B]-[B+3]/1-9999,
+OM $xQ16a_91_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
 [*SET B = 100130][*DO A= 1:10]
-OM $Q16b_92_other = $[B]-[B+3]/1-9999,
+OM $xQ16b_92_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
@@ -554,9 +554,9 @@ OM $Q159a_98_other = $[B]-[B+3]/1-9999,
 
 OM $I_8_Q193a_98_other = $blank/1-9999,
 OM $I_8_Q193b_98_other = $blank/1-9999,
-OM $Q16a_92_other = $blank/1-9999,
+OM $xQ16a_92_other = $blank/1-9999,
 
 
 
-IF $A_Q17c/91, OM $Q17c_91_other = $Q16a_91_other,
-IF $A_Q17c/92, OM $Q17c_92_other = $Q16b_92_other,
+IF $A_Q17c/91, OM $xQ17c_91_other = $xQ16a_91_other,
+IF $A_Q17c/92, OM $xQ17c_92_other = $xQ16b_92_other,

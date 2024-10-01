@@ -1,24 +1,24 @@
 
 !{=============== BRANDS ===============}!
 [*DOD=1:XBRX]
-IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_91,
-IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_91,
-IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q47_[ROWBRANDALL.D] = $T_Q47_91,
+IF ([*do a = 91:92]$xQ16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_91,
+IF ([*do a = 91:92]$xQ16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_91,
+IF ([*do a = 91:92]$xQ16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q47_[ROWBRANDALL.D] = $T_Q47_91,
 
 
 
-IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_92,
-IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_92,
-IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q47_[ROWBRANDALL.D] = $T_Q47_92,
+IF ([*do a = 91:92]$xQ16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_92,
+IF ([*do a = 91:92]$xQ16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_92,
+IF ([*do a = 91:92]$xQ16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), ORDM $T_Q47_[ROWBRANDALL.D] = $T_Q47_92,
 
 
 
 ! --- Update Q1 2022
-IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_91,
-IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_92,
+IF ([*do a = 91:92]$xQ16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_91,
+IF ([*do a = 91:92]$xQ16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q45_[ROWBRANDALL.D] = $T_Q45_92,
 
-IF ([*do a = 91:92]$Q16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_91,
-IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_92,
+IF ([*do a = 91:92]$xQ16a_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_91,
+IF ([*do a = 91:92]$xQ16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q46_[ROWBRANDALL.D] = $T_Q46_92,
 !
 [*ENDD]
 
@@ -32,54 +32,54 @@ IF ([*do a = 91:92]$Q16b_[a]_other/[SOEBRANDNONE.D][*sle]+[*end a]), 	ORDM $T_Q4
 
 
 !=========
-IF $A_Q17a/91, OM $Q17a_91_other = $Q16a_91_other,
-IF $A_Q17a/92, OM $Q17a_92_other = $Q16b_91_other,
+IF $A_Q17a/91, OM $xQ17a_91_other = $xQ16a_91_other,
+IF $A_Q17a/92, OM $xQ17a_92_other = $xQ16b_91_other,
 
 !=========
 
-IF $A_Q17b/91, OM $Q17b_91_other = $Q16a_91_other,
-IF $A_Q17b/92, OM $Q17b_92_other = $Q16b_91_other,
+IF $A_Q17b/91, OM $xQ17b_91_other = $xQ16a_91_other,
+IF $A_Q17b/92, OM $xQ17b_92_other = $xQ16b_91_other,
 
 !=========
 
-IF $A_Q17c/91, OM $Q17c_91_other = $Q16a_91_other,
-IF $A_Q17c/92, OM $Q17c_92_other = $Q16b_91_other,
+IF $A_Q17c/91, OM $xQ17c_91_other = $xQ16a_91_other,
+IF $A_Q17c/92, OM $xQ17c_92_other = $xQ16b_91_other,
 
 !=========
-IF $A_Q17d/91, OM $Q17d_91_other = $Q16a_91_other,
-IF $A_Q17d/92, OM $Q17d_92_other = $Q16b_91_other,
-
-!=========
-
-IF $A_Q17e/91, OM $Q17e_91_other = $Q16a_91_other,
-IF $A_Q17e/92, OM $Q17e_92_other = $Q16b_91_other,
-
-!=========
-IF $A_Q17f/91, OM $Q17f_91_other = $Q16a_91_other,
-IF $A_Q17f/92, OM $Q17f_92_other = $Q16b_91_other,
+IF $A_Q17d/91, OM $xQ17d_91_other = $xQ16a_91_other,
+IF $A_Q17d/92, OM $xQ17d_92_other = $xQ16b_91_other,
 
 !=========
 
-IF $A_Q17l/91, OM $Q17l_91_other = $Q16a_91_other,
-IF $A_Q17l/92, OM $Q17l_92_other = $Q16b_91_other,
+IF $A_Q17e/91, OM $xQ17e_91_other = $xQ16a_91_other,
+IF $A_Q17e/92, OM $xQ17e_92_other = $xQ16b_91_other,
+
+!=========
+IF $A_Q17f/91, OM $xQ17f_91_other = $xQ16a_91_other,
+IF $A_Q17f/92, OM $xQ17f_92_other = $xQ16b_91_other,
 
 !=========
 
-IF $A_Q17k/91, OM $Q17k_91_other = $Q16a_91_other,
-IF $A_Q17k/92, OM $Q17k_92_other = $Q16b_91_other,
+IF $A_Q17l/91, OM $xQ17l_91_other = $xQ16a_91_other,
+IF $A_Q17l/92, OM $xQ17l_92_other = $xQ16b_91_other,
+
+!=========
+
+IF $A_Q17k/91, OM $xQ17k_91_other = $xQ16a_91_other,
+IF $A_Q17k/92, OM $xQ17k_92_other = $xQ16b_91_other,
 
 
-IF $A_Q16d/91, OM $Q16d_91_other = $Q16a_91_other,
-IF $A_Q16d/92, OM $Q16d_92_other = $Q16b_91_other,
+IF $A_Q16d/91, OM $xQ16d_91_other = $xQ16a_91_other,
+IF $A_Q16d/92, OM $xQ16d_92_other = $xQ16b_91_other,
 
-IF $A_Q16e/91, OM $Q16e_91_other = $Q16a_91_other,
-IF $A_Q16e/92, OM $Q16e_92_other = $Q16b_91_other,
+IF $A_Q16e/91, OM $xQ16e_91_other = $xQ16a_91_other,
+IF $A_Q16e/92, OM $xQ16e_92_other = $xQ16b_91_other,
 
-IF $A_Q16f/91, OM $Q16f_91_other = $Q16a_91_other,
-IF $A_Q16f/92, OM $Q16f_92_other = $Q16b_91_other,
+IF $A_Q16f/91, OM $xQ16f_91_other = $xQ16a_91_other,
+IF $A_Q16f/92, OM $xQ16f_92_other = $xQ16b_91_other,
 
-IF $A_Q16g/91, OM $Q16g_91_other = $Q16a_91_other,
-IF $A_Q16g/92, OM $Q16g_92_other = $Q16b_91_other,
+IF $A_Q16g/91, OM $xQ16g_91_other = $xQ16a_91_other,
+IF $A_Q16g/92, OM $xQ16g_92_other = $xQ16b_91_other,
 
 
 !=========

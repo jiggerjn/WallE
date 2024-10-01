@@ -1,0 +1,286 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+
+!C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C =WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
+!C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = Wall-E_booster_sav_ins.asc,
+C = Boosterv3.asc,
+!C = .asc,
+Y,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START DATA,
+ORDER 1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY/9999999/,
+
+F=ADF,
+
+[*INSERT Wall_E_resp]
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
+[*INSERT WALL_E_CARDCOL_BOOSTERS_INSURANCE_OESOE]
+[*INSERT WALL_E_CARDCOL_BOOSTERS_INSURANCE]
+[*INSERT ADDITIONAL_COLUMNS]
+[*INSERT ADDITIONAL_COLUMNS_JAN_FEB]
+
+[*INSERT WALL_E_STUBS_CATEGORY]
+[*INSERT WALL_E_STUBS_BOOSTERS_INSURANCE]
+[*INSERT W_HEADER]
+[*INSERT Wall-E-boosters-Global]
+
+[*INSERT W_WTS21to65]
+
+
+DM $HT = T,
+ HT = "TOTAL",
+  H = "TOTAL*(A)",
+
+IF $Q42023/NB+$Q12024/NB+$Q22024/NB+$BoosterInsurance/NB, WRITE,
+  
+!lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
+
+
+FINISH DATA,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HDLoaners,HALoaners,HC,HD]
+[*DATA HEADERWAVE3 = HEInsurance,HAInsurance,HCT,HAGCitiesT,HBGCitiesT]
+
+
+!
+[*DATA filters =
+$Q2/1,
+$Q2/2,
+$T_Q1_1/1..20,
+$T_Q1_1/21..30,
+$T_Q1_1/31..35,
+$T_Q1_1/36..45,
+$T_Q1_1/46..99,
+$SEC19/1..2,
+$SEC19/3,
+$SEC19/4,
+$Q3/1,
+($Q3/2+3+4+5),
+($Q3/6+7+8),
+($Q3/9+10+11),
+($Q3/12+13+14+15+16+17),
+$Q4/1,
+$Q4/2]
+
+[*DATA filtername =
+MALE,
+FEMALE,
+STUDENTS (20 yo and below),
+YUPPIES (21-30 yo),
+TRANSITIONERS (31-35 yo),
+BALANCERS (36-45 yo),
+OLDER ADULTS/RETIREES (46-65 yo),
+ABC1,
+C2,
+D,
+NCR,
+NCL,
+SL,
+VISAYAS,
+MINDANAO,
+URBAN,
+RURAL]
+
+
+SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+
+
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQINS7 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS7/N99, T #[+T] = $TQINS1a * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF DIFFERENT INSURANCE PRODUCTS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS7/N99, T #[+T] = $TQINS1b * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/1..3, T #[+T] = $TQINS1c * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT LIFE INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS8 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS9 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS10a * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS10b * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS11 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS12 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS13 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS14 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:2]
+[*SET s = 0]
+[*FOR A = 901:1:2:3:902:4:5:6:7:8:9:10:11:12:13:14:16:15:17:18:19:20:91:99]
+IF $A_QINS1a/[Qins1acode.[+s]], T #[+T] = $TQINS15_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS - [topic3.s]",
+[*END A]
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS16a * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS16a/N99, T #[+T] = $TQINS16b * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF ONLINE INSURANCE MARKETPLACE",
+[*END Z]
+
+
+[*DO Z = 1:2]
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:91]
+IF $A_QINS16b/[QINS16ccode.[+s]], T #[+T] = $TQINS16c[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO HAVE PURCHASED FROM ONLINE INSURANCE MARKETPLACE - [QINS16cname.[s]]",
+[*END A]
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:2]
+[*SET s = 0]
+[*FOR A = 901:1:2:3:902:4:5:6:7:8:9:10:11:12:13:14:16:15:17:18:19:20:91:99]
+IF $A_QINS1a/[Qins1acode.[+s]], T #[+T] = $TQINS2a_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS - [topic3.s]",
+[*END A]
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:2]
+IF ($A_QINS16a/N99).($QINS2a_RGD/N7..9), T #[+T] = $TQINS17 * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO ARE AWARE OF ONLINE INSURANCE MARKET PLACE BUT DID NOT PURCHASE VIA THIS CHANNEL",
+[*END Z]
+
+
+
+[*DO Z = 1:2]
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:91]
+IF $A_QINS16b/[QINS16ccode.[+s]], T #[+T] = $TQINS27_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO AVAILED INSURANCE FROM ONLINE INSURANCE MARKETPLACE - [QINS16cname.[s]]",
+[*END A]
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:2]
+IF $A_QINS1a/N99, T #[+T] = $TQINS26 * $[HEADERWAVE3.Z],
+BT = "AMONG CURRENT INSURANCE OWNERS",
+[*END Z]
+FINISH TABLES,
+

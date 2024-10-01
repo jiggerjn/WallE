@@ -6,7 +6,7 @@ $Q17i/2.$Q4/1:'NON-USER - Urban',
 $Q17i/2.$Q4/2:'NON-USER - Rural',
 xt='Marginal Top',
 
-DM $WT = 
+DM $WTlegacy = 
 $xAUG2021/NB.$Q3/1.$SEC19/1.$MARGINAL_TOP/1:"placeholder",
 $xAUG2021/NB.$Q3/1.$SEC19/2.$MARGINAL_TOP/1:"placeholder",
 $xAUG2021/NB.$Q3/1.$SEC19/3.$MARGINAL_TOP/1:"placeholder",
@@ -2575,7 +2575,7 @@ MAR 2024 NON-USER\
 `     RURAL/MIN/ABC1C2D",
 [*111]
 
-DW $WTS = $WT(
+DW $WTSlegacy = $WTlegacy(
 0.6742,
 2.8090,
 1.0534,

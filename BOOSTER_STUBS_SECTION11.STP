@@ -1,0 +1,1472 @@
+
+
+
+!=======================MultiSelect
+
+DM $TQINV1a =
+$A_QINV1a/
+1+2+3,
+1,
+2,
+3,
+4+5+6+7,
+4,
+5,
+6,
+7,
+8+9+10,
+8,
+9,
+10,
+11+12+13+14+15,
+11,
+12,
+13,
+14,
+15,
+
+98,
+99,
+R,F,
+VT = "QINV1a. TYPES OF INVESTMENTS AWARE OF",
+V = "
+INTEREST-BEARING DEPOSIT (NET) <Q>;
+`     Time deposits (interest-bearing bank account that has a pre-set date of maturity. The money must remain in the account for the fixed term in order to earn the stated interest rate);
+`     Money Market Account  (type of savings account offered by banks and credit unions just like regular savings accounts. The difference is that they usually pay higher interest, have higher minimum balance requirements, and only allow three to six withdrawals per month);
+`     Certificate of Deposit Account  (bank product that earns interest on a lump-sum deposit that's untouched for a predetermined period of time);
+BROKERED INVESTMENT ACCOUNTS (NET) <Q>;
+`     Mutual fund  (type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other assets);
+`     Unit Investment Trust Fund (UITF)  (financial instruments managed by professionals. They do not earn through a fixed interest rate but grow in value depending on the assets it carries and the market. UITFs carry a risk of going down in value as the market moves);
+`     Publicly traded stocks  (type of security that gives stockholders a share of ownership in a company);
+`     Publicly traded bonds (fixed income instrument that represents a loan made by an investor to a borrower);
+INVESTMENT-BACKED INSURANCE (NET) <Q>;
+`     Variable Universal Life (VUL) insurance plan (financial product that offers both guaranteed insurance benefit and fund accumulation);
+`     Retirement plan (financial strategies of saving, investments, and ultimately distributing money meant to sustain oneself during retirement);
+`     Educational plan (a savings, insurance, and investment plan that helps parents save funds for their child's college education);
+GOVERNMENT SECURITIES (NET) <Q>;
+`     Treasury bills (short-term secure investments issued by the Philippine government through the Bureau of Treasury (BTr));
+`     Treasury bonds (medium to long-term investments issued by the Philippine government to make securities available to small investors);
+`     Real Estate (e.g., house, land, condominium, etc.);
+`     Cryptocurrency  (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+`     Stockbroker/ Investment Firm (e.g. COL Financial, etc.);
+
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINV1b =
+$A_QINV1b/
+1+2+3,
+1,
+2,
+3,
+4+5+6+7,
+4,
+5,
+6,
+7,
+8+9+10,
+8,
+9,
+10,
+11+12+13+14+15,
+11,
+12,
+13,
+14,
+15,
+
+98,
+99,
+R,F,
+VT = "QINV1b. TYPES OF INVESTMENTS EVER TRIED",
+V = $TQINV1a,
+
+
+!=======================MultiSelect
+
+DM $TQINV2 =
+$A_QINV2/
+1+2+3,
+1,
+2,
+3,
+4+5+6+7,
+4,
+5,
+6,
+7,
+8+9+10,
+8,
+9,
+10,
+11+12+13+14+15,
+11,
+12,
+13,
+14,
+15,
+
+98,
+99,
+R,F,
+VT = "QINV2. TYPES OF INVESTMENTS CURENTLY HAVE",
+V = $TQINV1a,
+
+
+[*DATA QINV1acode =
+1+2+3,
+1,
+2,
+3,
+4+5+6+7,
+4,
+5,
+6,
+7,
+8+9+10,
+8,
+9,
+10,
+11+12+13+14+15,
+11,
+12,
+13,
+14,
+15,
+
+98,
+99]
+
+[*DATA QINV1aname(;) =
+INTEREST-BEARING DEPOSIT (NET);
+Time deposits (interest-bearing bank account that has a pre-set date of maturity. The money must remain in the account for the fixed term in order to earn the stated interest rate);
+Money Market Account  (type of savings account offered by banks and credit unions just like regular savings accounts. The difference is that they usually pay higher interest, have higher minimum balance requirements, and only allow three to six withdrawals per month);
+Certificate of Deposit Account  (bank product that earns interest on a lump-sum deposit that's untouched for a predetermined period of time);
+BROKERED INVESTMENT ACCOUNTS (NET);
+Mutual fund  (type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other assets);
+Unit Investment Trust Fund (UITF)  (financial instruments managed by professionals. They do not earn through a fixed interest rate but grow in value depending on the assets it carries and the market. UITFs carry a risk of going down in value as the market moves);
+Publicly traded stocks  (type of security that gives stockholders a share of ownership in a company);
+Publicly traded bonds (fixed income instrument that represents a loan made by an investor to a borrower);
+INVESTMENT-BACKED INSURANCE (NET);
+Variable Universal Life (VUL) insurance plan (financial product that offers both guaranteed insurance benefit and fund accumulation);
+Retirement plan (financial strategies of saving, investments, and ultimately distributing money meant to sustain oneself during retirement);
+Educational plan (a savings, insurance, and investment plan that helps parents save funds for their child's college education);
+GOVERNMENT SECURITIES (NET);
+Treasury bills (short-term secure investments issued by the Philippine government through the Bureau of Treasury (BTr));
+Treasury bonds (medium to long-term investments issued by the Philippine government to make securities available to small investors);
+Real Estate (e.g., house, land, condominium, etc.);
+Cryptocurrency  (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+Stockbroker/ Investment Firm (e.g. COL Financial, etc.);
+
+Others;
+None]
+
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xrgdsum = 0,
+DI $xrgdcount = 0,
+DI $xnostub = 0,
+DI $xnostubrgd = 0,
+[*DATA codes = 1,2,3,4,5,6]
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:991:98]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+!ORDM $Q176_net_[NET] = $I_[A]_Q176_Booster,
+!ORDM $Q176_RGD = $I_[A]_Q176_Booster,
+
+[*DO E = 1:[codes.#]:1]
+IF $I_[A]_Q176_Booster/[codes.E], DI $xdummysum = $xdummysum + [codes.E],
+IF $I_[A]_Q176_Booster/[codes.E], DI $xdummycount = $xdummycount + 1,
+IF $I_[A]_Q176_Booster/[codes.E], DI $xrgdsum = $xrgdsum + [codes.E],
+IF $I_[A]_Q176_Booster/[codes.E], DI $xrgdcount = $xrgdcount + 1,
+[*END E]
+IF $I_[A]_Q176_Booster/7, DI $xnostub = 1,
+IF $I_[A]_Q176_Booster/7, DI $xnostubrgd = 1,
+
+
+[*BLOCK 1 ON A.EQ.3]
+DI $Q176_net_[NET] = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
+[*1]
+[*BLOCK 2 ON A.EQ.7]
+DI $Q176_net_[NET] = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
+[*2]
+[*BLOCK 3 ON A.EQ.10]
+DI $Q176_net_[NET] = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
+[*3]
+[*BLOCK 4 ON A.EQ.15]
+DI $Q176_net_[NET] = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
+[*4]
+[*BLOCK 5 ON A.EQ.98]
+DI $Q176_net_[NET] = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]rgd = $xdummysum/$xdummycount,
+DI $Q176_net_[NET]nostub = $xnostub,
+DI $xdummysum = 0,
+DI $xdummycount = 0,
+DI $xnostub = 0,
+[*5]
+[*901]
+[*END A]
+DI $Q176_RGD = $xrgdsum/$xrgdcount,
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
+DM $TQ176_Booster_[A] =
+[*BLOCK 900 ON A.GT.900]
+$Q176_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_Q176_Booster/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7[*BLOCK 900 ON A.GT.900]+$Q176_net_[A]nostub/1[*900],
+R,F,
+VT = "Q176. FREQUENCY OF PAYMENT - [QINV1aname.[+s]]",
+V = "
+Weekly;
+Monthly;
+Bi-monthly;
+Quarterly;
+Semi-annual;
+Annually;
+I only deposited money once and wait to accumulate interest/ dividend;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+DM $TQ176_Booster_RGD =
+$Q176_RGD/
+1,
+2,
+3,
+4,
+5,
+6,
+7+$xnostubrgd/1,
+R,F,
+VT = "Q176. FREQUENCY OF PAYMENT - REGARDLESS OF INVESTMENT",
+V = $TQ176_Booster_1,
+
+
+!========== 
+DM $TQINV6 = $A_QINV6/1..3,
+1,
+2,
+3,
+4..7,
+4,
+5,
+6,
+7,
+8..10,
+8,
+9,
+10,
+11..15,
+11,
+12,
+13,
+14,
+15,
+98,
+99,
+
+R,F,
+XT = "QINV6. INVESTMENTS INTENT TO OWN IN THE NEXT 12 MONTHS",
+X = "
+INTEREST-BEARING DEPOSIT (NET)<Q>;
+`     Time deposits (interest-bearing bank account that has a pre-set date of maturity.  The money must remain in the account for the fixed term in order to earn the stated interest rate);
+`     Money Market Account (type of savings account offered by banks and credit unions just like regular savings accounts. The difference is that they usually pay higher interest, have higher minimum balance requirements, and only allow three to six withdrawals per month);
+`     Certificate of Deposit Account (bank product that earns interest on a lump-sum deposit that's untouched for a predetermined period of time);
+BROKERED INVESTMENT ACCOUNTS (NET)<Q>;
+`     Mutual fund (type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other assets);
+`     Unit Investment Trust Fund (UITF) (financial instruments managed by professionals. They do not earn through a fixed interest rate but grow in value depending on the assets it carries and the market. UITFs carry a risk of going down in value as the market moves);
+`     Publicly traded stocks  (type of security that gives stockholders a share of ownership in a company);
+`     Publicly traded bonds (fixed income instrument that represents a loan made by an investor to a borrower);
+INVESTMENT-BACKED INSURANCE (NET)<Q>;
+`     Variable Universal Life (VUL) insurance plan (financial product that offers both guaranteed insurance benefit and fund accumulation);
+`     Retirement plan(financial strategies of saving, investments, and ultimately distributing money meant to sustain oneself during retirement);
+`     Educational plan (a savings, insurance, and investment plan that helps parents save funds for their child's college education);
+GOVERNMENT SECURITIES (NET)<Q>;
+`     Treasury bills (short-term secure investments issued by the Philippine government through the Bureau of Treasury (BTr));
+`     Treasury bonds (medium to long-term investments issued by the Philippine government to make securities available to small investors);
+`     Real Estate (e.g., house, land, condominium, etc.);
+`     Cryptocurrency (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+`     Stockbroker/Investment Firm (e.g. COL Financial, etc.);
+Others;
+None;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+!========== 
+[*DATA Q175B (;) =
+Time deposits (interest-bearing bank account that has a pre-set date of maturity.  The money must remain in the account for the fixed term in order to earn the stated interest rate);
+Money Market Account (type of savings account offered by banks and credit unions just like regular savings accounts. The difference is that they usually pay higher interest, have higher minimum balance requirements, and only allow three to six withdrawals per month);
+Certificate of Deposit Account (bank product that earns interest on a lump-sum deposit that's untouched for a predetermined period of time);
+Mutual fund (type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other assets);
+Unit Investment Trust Fund (UITF) (financial instruments managed by professionals. They do not earn through a fixed interest rate but grow in value depending on the assets it carries and the market. UITFs carry a risk of going down in value as the market moves);
+Publicly traded stocks  (type of security that gives stockholders a share of ownership in a company);
+Publicly traded bonds (fixed income instrument that represents a loan made by an investor to a borrower);
+Variable Universal Life (VUL) insurance plan (financial product that offers both guaranteed insurance benefit and fund accumulation);
+Retirement plan(financial strategies of saving, investments, and ultimately distributing money meant to sustain oneself during retirement);
+Educational plan (a savings, insurance, and investment plan that helps parents save funds for their child's college education);
+Treasury bills (short-term secure investments issued by the Philippine government through the Bureau of Treasury (BTr));
+Treasury bonds (medium to long-term investments issued by the Philippine government to make securities available to small investors);
+Real Estate (e.g., house, land, condominium, etc.);
+Cryptocurrency (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+Stockbroker/Investment Firm (e.g. COL Financial, etc.);
+Others]
+[*DATA Q175 = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,98]
+
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Q175_net_[NET] = $I_[A]_A_Q175_Booster,
+ORDM $Q175_RGD = $I_[A]_A_Q175_Booster,
+[*901]
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
+DM $TQ175_Booster_[A] = 
+[*BLOCK 900 ON A.GT.900]
+$Q175_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_A_Q175_Booster/
+[*901]
+1-4,
+91,
+R,F,
+XT = "Q175. HOW INVESTMENT PRODUCTS WERE AVAILED - [QINV1aname.[+s]]",
+X = "
+Directly from the financial institution/ company offering investment (non-bank);
+Directly from the bank offering the investment via a relationship manager;
+Thru an agent or broker;
+Thru online trading platforms or online brokers;
+Others;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*end a]
+
+
+DM $TQ175_Booster_RGD = $Q175_RGD/
+1-4,
+91,
+R,F,
+XT = "Q175. HOW INVESTMENT PRODUCTS WERE AVAILED - REGARDLESS OF INVESTMENT",
+X = $TQ175_Booster_1,
+
+
+
+!========== 
+DM $TQINV7a = $A_QINV7a/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16+1030,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+(91).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027,
+1028,
+1029,
+99,
+
+R,F,
+XT = "QINV7a. ONLINE BROKERS/TRADING PLATFORMS AWARE OF",
+X = "
+GInvest;
+GFunds;
+GStocks Global;
+GStocks PH;
+GCrypto;
+Maya Funds;
+Maya Crypto;
+Bonds.Ph;
+eToro;
+Investa;
+Coins Pro;
+PDAX;
+First Metro Securities;
+COL Financial;
+BDO Nomura Securities;
+BPI Trade;
+AB Capital Securities Inc;
+Philstocks;
+ALPHASEC;
+BASecOnline;
+GoTrade;
+Luckysec Online;
+MyTrade;
+China Bank Securities;
+iTrade;
+2TradeAsia;
+Landbank Securities;
+Maybank Trade;
+RCBC ezTrade;
+Timson Trade;
+uTrade;
+VC Trade;
+Wealth Securities;
+Others;
+
+Air Trade;
+Binance;
+Card Bank Inc.;
+Coinmate Plus;
+Gfund;
+Infinity Trade;
+Manulife Investment;
+Maya Stocks;
+OKY Binance Bybt;
+
+None;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+!========== 
+[*DATA QIN7BN (;) =
+Mutual fund (type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other assets);
+Unit Investment Trust Fund (UITF) (financial instruments managed by professionals. They do not earn through a fixed interest rate but grow in value depending on the assets it carries and the market. UITFs carry a risk of going down in value as the market moves);
+Publicly traded stocks  (type of security that gives stockholders a share of ownership in a company);
+Cryptocurrency (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+Stockbroker/Investment Firm (e.g. COL Financial, etc.)]
+
+[*DATA QIN7B = 4,5,6,14,15]
+[*DO A = 1:5]
+DM $TQINV7b_[QIN7B.A] = $I_[QIN7B.A]_A_QINV7b/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+(91).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027,
+1028,
+1029,
+99,
+
+R,F,
+XT = "QINV7b. ONLINE BROKERS/ TRADING PLATFORM CURRENTLY USING - [QIN7BN.A]",
+X = $TQINV7a,
+[*END A]
+
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $QINV8a_net_[NET] = $I_[A]_A_QINV8a,
+ORDM $QINV8a_RGD = $I_[A]_A_QINV8a,
+[*901]
+[*END A]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
+DM $TQINV8a_[A] = 
+[*BLOCK 900 ON A.GT.900]
+$QINV8a_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_A_QINV8a/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+(91).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027+1028,
+99,
+R,F,
+XT = "QINV8a. BANKS EVER TRIED FOR INVESTMENT - [QINV1aname.[+s]]",
+X = "
+AUB (Asia United Bank);
+Banco De Oro (BDO);
+BPI/BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+Others;
+
+Rizal Bank;
+Second Bulacan Development Bank;
+CAP;
+Afslai;
+Insular Life;
+Maya;
+
+VAGUE;
+None;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*end a]
+
+DM $TQINV8a_RGD =
+$QINV8a_RGD/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+(91).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027+1028,
+99,
+R,F,
+XT = "QINV8a. BANKS EVER TRIED FOR INVESTMENT - REGARDLESS OF INVESTMENT",
+X = $TQINV8a_1,
+
+
+
+[*DATA QIN7B = 4,5,6,14,15]
+[*DO A = 1:5]
+DM $TQINV8_[QIN7B.A] = $I_[QIN7B.A]_A_QINV8/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91,
+99,
+
+R,F,
+XT = "QINV8. BANKS CURRENTLY WITH INVESTMENT - [QIN7BN.A]",
+X = "
+AUB (Asia United Bank);
+Banco De Oro (BDO);
+BPI/BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+Others;
+None;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+
+
+
+DM $TQINV11 = $QINV11/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+91,
+
+R,F,
+XT = "QINV11. TRIGGERS/REASONS FOR GETTING INVESTMENT",
+X = "
+My employer offered me investment options with my employment;
+I got a salary increase / I got an additional source of income;
+I got married;
+I was planning for children / I had a child;
+I saw people around me getting an investment account and I thought I should as well;
+I saw people around me making a lot of money through their investment accounts and I thought I should start investing too;
+I saw an advertisement about investing;
+My family members/ friends encouraged me to start investing my money;
+I was approached by a sales person for investment accounts;
+Influence of advertising for investment products on TV, radio or print;
+Influence of advertising for investment products on other outdoor displays (billboard, transit ads on buses and other public transport vehicles);
+Influence of advertising for investment products online/on the Internet;
+I saw people who became successful in building their wealth by investing;
+I wanted to grow my money;
+My colleagues at work encouraged me to start investing;
+I saw online influencers talking about investments;
+Others;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+DM $TQINV10 = 
+[*do a = 1:3]
+$QINV10_O[a]/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+13,
+14,
+15,
+16,
+17,
+11,
+12,
+91,
+[*END A]
+R,F,
+XT = "QINV10. REASONS FOR INVESTING MONEY",
+X = "
+[*DO A = 1:3]
+RANK [A]\
+`    To protect myself and / or my family just in case something happens in the future (e.g. emergencies, illness);
+`    To have enough money to buy a house;
+`    To have enough money to buy a car;
+`    To improve my living standards and lifestyle;
+`    To be able to support my immediate family's future needs, such as education expenses;
+`    To have enough money to start or grow a business;
+`    To have enough money to pay for important event/occasion (i.e. wedding, birthday, enrollment, graduation, fiesta,ETC);
+`    To be able to support my extended family (such as parents, relatives, etc);
+`    To ensure I have enough money for retirement;
+`    To enjoy the excitement of making larger gains on my investments;
+`    To grow my money;
+`    To have passive income;
+`    To purchase personal items such as clothes, gadgets, bags etc;
+`    To purchase household appliances;
+`    To be able to have additional income;
+`    No Rank 2;
+`    No Rank 3;
+`    Other;
+[*END A]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+[*DATA QINV12ATT (;) =
+It is important to have an investment of my own;
+I invest to achieve financial freedom;
+It is important to start investing while young and financially stable;
+Investments are great way to grow wealth;
+I accumulate investments so I can leave something behind for my family;
+I was inspired to engage in having investments because of my friends, wealthy people, etc;
+I want high returns for my investments to grow my wealth;
+I am afraid to take risks when it comes to investments;
+I invest so that in the future I do not have to depend from my family financially;
+I tend to seek financial advisors for advice to help me manage my investments;
+I tend to seek and watch online influencers who are investment-savvy to get some advice and ideas on how to manage my investments;
+Investment products are a must in my financial portfolio;
+I like to minimize risks and put my money in different places or investment facility;
+I am willing to spend time to research and manage my investments;
+I lack the budget to invest as much as I want to;
+I don't know enough about the investment process;
+I feeling like investment platforms are hard to navigate;
+I feel like investing requires high initial deposit;
+I prefer to grow my money through other means such as business;
+I prefer to grow my money through other means such as savings;
+I prefer to grow my money through other means such as availing an insurance]
+
+[*do a = 1:21]
+DM $TQINV12_[A] = $T_QINV12_[A]/1-5,4+5,1+2,R,F,
+XT = "QINV12. ATTITUDE TOWARDS INVESTMENT",
+X = "[QINV12ATT.A]\
+`      Totally Disagree<v1>;
+`      Somewhat Disagree<v2>;
+`      Neither Agree nor Disagree<v3>;
+`      Somewhat Agree<v4>;
+`      Totally Agree<v5>;
+`          TOP 2 BOX<Q>;
+`          BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+
+!
+DM $TQINV13a = $QINV13a/1-5,R,F,
+XT = "QINV13a. INVESTMENT RISK APPETITE - NOW",
+X = "
+I want my investments to grow and earn the highest possible return. I can ccept possible loss of principal up to -20%;
+My main goal is long-term capital appreciation, I can accept potential loss of principal up to -15%;
+My investment risk adversity is moderate, and I can accept potential loss of principal up to -10%;
+I am conservative, but I can accept potential loss of principal up to -5%;
+I am a very conservative investor, and I will not accept any potential loss of principal;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+!
+DM $TQINV13b = $QINV13b/1-5,R,F,
+XT = "QINV13b. INVESTMENT RISK APPETITE - 5 YEARS LATER",
+X = "
+I want my investments to grow and earn the highest possible return. I can ccept possible loss of principal up to -20%;
+My main goal is long-term capital appreciation, I can accept potential loss of principal up to -15%;
+My investment risk adversity is moderate, and I can accept potential loss of principal up to -10%;
+I am conservative, but I can accept potential loss of principal up to -5%;
+I am a very conservative investor, and I will not accept any potential loss of principal;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+!
+DM $TQINV14a = $A_QINV14a/1-21,R,F,
+XT = "QINV14a. CONSIDERATION FACTORS - INVESTMENT",
+X = "
+Have recommendations and reviews from my trusted circle of peers who are also into investments;
+Can be withdrawable any time that I need it;
+Can be passed on to my kids and grandchildren;
+Agents that I talk to about the investment is knowledgeable and expert in the investment type;
+Has several payment terms (monthly, quarterly, semi-annual, annual);
+Has several means to pay for the investment (online banking, e-wallet, cash, etc.);
+Has high returns/ high growth potential whether investment is in peso, or in foreign currency (USD);
+Quick and straightforward application process;
+Lenient customer background check;
+Can be a collateral;
+Few requirements only;
+From a reputable company/brand;
+Accommodating customer service;
+Has dedicated customer service hotline;
+Minimum investment required is affordable;
+The bank/ online broker/ online trading platform is safe;
+Known for good customer experience and service;
+Has knowledgeable wealth consultants;
+It has been highly recommended by my family / friends / colleagues, etc;
+The app or website is easy to navigate;
+The app or website is easy to use and navigate for those who are beginners in investing;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+!
+DM $TQINV14b = $QINV14b/1-21,R,F,
+XT = "QINV14b. CONSIDERATION FACTORS - INVESTMENT (MOST IMPORTANT)",
+X = "
+Have recommendations and reviews from my trusted circle of peers who are also into investments;
+Can be withdrawable any time that I need it;
+Can be passed on to my kids and grandchildren;
+Agents that I talk to about the investment is knowledgeable and expert in the investment type;
+Has several payment terms (monthly, quarterly, semi-annual, annual);
+Has several means to pay for the investment (online banking, e-wallet, cash, etc.);
+Has high returns/ high growth potential whether investment is in peso, or in foreign currency (USD);
+Quick and straightforward application process;
+Lenient customer background check;
+Can be a collateral;
+Few requirements only;
+From a reputable company/brand;
+Accommodating customer service;
+Has dedicated customer service hotline;
+Minimum investment required is affordable;
+The bank/ online broker/ online trading platform is safe;
+Known for good customer experience and service;
+Has knowledgeable wealth consultants;
+It has been highly recommended by my family / friends / colleagues, etc;
+The app or website is easy to navigate;
+The app or website is easy to use and navigate for those who are beginners in investing;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+!
+DM $TQINV20 = $QINV20/1-5,R,F,
+XT = "QINV20. RELATIONSHIP WITH INVESTMENT ACCOUNT MANAGER",
+X = "
+I do research on my own to make investment decisions and rely very little on my account manager;
+My account manager provides me with investment materials to review and I make my selection;
+I rely on my account manager for most investment decisions, but I sometimes make my own decisions;
+I rely on my account manager to manage most or all of my investment decisions;
+I do not have an account manager for my investments;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+!
+DM $TQ178 = $A_Q178/1..5,
+1,
+2,
+3,
+4,
+5,
+6+7+98,
+6,
+7,
+98,
+R,F,
+XT = "Q178. INVESTMENT PAYMENT CHANNELS",
+X = "
+OFFLINE/NON-DIGITAL (NET)<Q>;
+`     Remittance Center;
+`     Bayad Center;
+`     Physical bank;
+`     Convenience Store;
+`     Other physical store;
+ONLINE/DIGITAL (NET)<Q>;
+`     Mobile/Online/Digital bank;
+`     E-money/Mobile wallet;
+`     Other financial app/websites;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+!
+DM $TQINV5 = $A_QINV5/1..12,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13..20,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21..31,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+(31).N(1000..9999),
+32..53+1024,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50+1024,
+51,
+52,
+53,
+54..78,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+68,
+69,
+70,
+71,
+72,
+73,
+74,
+75,
+76,
+77,
+78,
+
+1021,
+1022,
+1023,
+
+
+R,F,
+XT = "QINV5. INVESTMENT PAYMENT CHANNELS - BRANDS USED",
+X = "
+REMITTANCE CENTER;
+`     Cebuana Lhuillier;
+`     LBC;
+`     M Lhuillier;
+`     MoneyGram;
+`     Palawan Express Pera Padala;
+`     RD Pawnshop;
+`     TrueMoney;
+`     Western Union;
+`     Tambunting;
+`     Villarica Pawnshop;
+`     Smart Padala Centers;
+`     Other remittance centers, please specify;
+`     BAYAD CENTERS;
+`     Sinag Pawnshop;
+`     Ministop;
+`     Super Service Center;
+`     CVM Pawnshop;
+`     Raquel Pawnshop;
+`     Pera Hub;
+`     Robinsons Department Store;
+`     Robinsons Supermarket;
+PHYSICAL BANKS;
+`     BDO;
+`     BPI / BPI Savings;
+`     China bank;
+`     Eastwest;
+`     Landbank;
+`     Metrobank;
+`     PNB;
+`     RCBC;
+`     Security Bank;
+`     Unionbank;
+`     Other banks;
+MOBILE/ ONLINE/ DIGITAL BANK;
+`     BPI Mobile/ Online;
+`     BDO Mobile/ Online;
+`     Landbank Mobile/ Online;
+`     Metrobank Mobile/ Online;
+`     CIMB Bank;
+`     UnionBank Mobile/ Online;
+`     Security Bank Mobile/ Online;
+`     DiskarTech;
+`     BDO Pay;
+`     Tonik;
+`     BancNet Online;
+`     Payoneer;
+`     Maybank's Isave;
+`     RCBC mobile;
+`     Eon;
+`     Komo;
+`     OFBank;
+`     PBCOMobile;
+`     PSBank Mobile;
+`     SeaBank;
+`     Vybe by BPI;
+`     GoTyme;
+E-WALLET;
+`     GCash;
+`     PayMaya/ Maya;
+`     Coins.ph;
+`     PayPal;
+`     TrueMoney;
+`     DragonPay;
+`     GrabPay;
+`     AliPay;
+`     WeChat Pay;
+`     Beep;
+`     CLIQQ;
+`     ECPay;
+`     ShopeePay;
+`     LazWallet;
+`     ML Wallet;
+`     eCebuana;
+`     SquidPay;
+`     Bayad Center Online / App;
+`     Moneygment;
+`     StarPay;
+`     HelloMoney;
+`     Touch Pay;
+`     Remitly;
+`     Xendpay;
+`     PalawanPay;
+
+Card Bank Inc.;
+Rizal Bank;
+Second Bulacan Development Bank;
+
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+
+!========== 
+DM $TQINV3 = $QINV3/1-2,R,F,
+XT = "QINV3. INCIDENCE OF ALLOTING MONTHLY BUDGET FOR INVESTMENTS - MORE THAN MONTHLY FREQUENCY",
+X = "
+Yes;
+No;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+[*DATA QINV4amount =
+20,100,200,300,400,500,1000,1200,1500,1800,2000,2500,3000,3500,4000,5000,10000,20000,30000,50000,200000,300010]
+
+[*DATA QINV4percent =
+1,2,3,5,6,8,10,15,20,25,30,40,50,80,90]
+
+!========== 
+DM $TT_QINV4_Booster_1 = $T_QINV4_Booster_1/
+[*DO A = 1:[QINV4amount.#]:1]
+[QINV4amount.A],
+[*END A]
+R,F,
+XT = "QINV4. AMOUNT ALLOTED FOR INVESTMENTS ON MONTHLY BUDGET - MONTHLY BUDGET ALLOTTED FOR INVESTMENTS",
+X = "
+[*DO A = 1:[QINV4amount.#]:1]
+[QINV4amount.A] <v[QINV4amount.A]>;
+[*END A]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+!========== 
+DM $TT_QINV4_Booster_2 = $T_QINV4_Booster_2/
+[*DO A = 1:[QINV4percent.#]:1]
+[QINV4percent.A],
+[*END A]
+R,F,
+XT = "QINV4. AMOUNT ALLOTED FOR INVESTMENTS ON MONTHLY BUDGET - % OF MONTHLY ALLOCATION FOR INVESTMENTS",
+X = "
+[*DO A = 1:[QINV4percent.#]:1]
+[QINV4percent.A] <v[QINV4percent.A]>;
+[*END A]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+
+
+
+!========== 
+[*DATA QINV19ATT (;) = 
+GInvest;
+GFunds;
+GStocks Global;
+GStocks PH;
+GCrypto;
+Maya Funds;
+Maya Crypto;
+Bonds.Ph;
+eToro;
+Investa;
+Coins Pro;
+PDAX;
+First Metro Securities;
+COL Financial;
+BDO Nomura Securities;
+BPI Trade;
+AB Capital Securities Inc;
+Philstocks;
+ALPHASEC;
+BASecOnline;
+GoTrade;
+Luckysec Online;
+MyTrade;
+China Bank Securities;
+iTrade;
+2TradeAsia;
+Landbank Securities;
+Maybank Trade;
+RCBC ezTrade;
+Timson Trade;
+uTrade;
+VC Trade;
+Wealth Securities;
+Others, please specify  Iba pa, paki-specify;
+AUB (Asia United Bank);
+Banco De Oro (BDO);
+BPI / BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+Mutual fund (type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other assets);
+Unit Investment Trust Fund (UITF) (financial instruments managed by professionals. They do not earn through a fixed interest rate but grow in value depending on the assets it carries and the market. UITFs carry a risk of going down in value as the market moves);
+Publicly traded stocks  (type of security that gives stockholders a share of ownership in a company);
+Cryptocurrency (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that takes the form of tokens or “coins.” While some cryptocurrencies have ventured into the physical world with credit cards or other projects, the large majority remain entirely intangible);
+Stockbroker/ Investment Firm (e.g. COL Financial, etc.)]
+
+
+[*DO A = 1:56]
+DM $TQINV19_[A] = $I_[A]_QINV19/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+XT = "QINV19. LIKELIHOOD TO RECOMMEND (NPS) - [QINV19ATT.A]",
+X = "
+0 (Will definitely not recommend) (0) <v0>;
+1 (1) <v1>;
+2 (2) <v2>;
+3 (3) <v3>;
+4 (4) <v4>;
+5 (5) <v5>;
+6 (6) <v6>;
+7 (7) <v7>;
+8 (8) <v8>;
+9 (9) <v9>;
+10 (Will definitely recommend) (10) <v10>;
+DETRACTORS NET <Q>;
+PASSIVES NET <Q>;
+PROMOTERS NET <Q>;
+NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+
+!
+[*DO A = 1:56]
+DM $TQINV17_[A] = $I_[A]_QINV17/1-5,4+5,1+2,R,F,
+XT = "QINV17. OVERALL SATISFACTION - INVESTMENT - [QINV19ATT.A]",
+X = "
+Completely dissatisfied<V1>;
+Somewhat dissatisfied<V2>;
+Neither satisfied nor dissatisfied<V3>;
+Somewhat satisfied<V4>;
+Completely satisfied<V5>;
+`     TOP 2 box<Q>;
+`     BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+
+
+!
+[*DO A = 1:56]
+DM $TQINV16_[A]R = 
+[*DO C = 1:3]
+$I_[A]_QINV16_O[C]/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91,
+10,
+11,
+99,
+[*END C]
+R,F,
+XT = "QINV16. SOURCE OF INFORMATION USED TO DETERMINE CHANNEL FOR INVESTMENTS - [QINV19ATT.A]",
+X = "
+[*DO C = 1:3]
+RANK [C]\
+`    Family members/relatives;
+`    Friends;
+`    Employer;
+`    Website of the channel/ trading platform;
+`    Sales person/account manager/financial advisor at a bank branch;
+`    Social media (Facebook,YouTube, Tiktok, Instagram, etc);
+`    Mobile App of the channel/ platform;
+`    Online influencers or financial gurus;
+`    Financial advisors;
+`    Other;
+`    No Rank 2;
+`    No Rank 3;
+`    I did not gather any information before I chose the bank;
+[*END C]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+
+!
+[*DO A = 1:56]
+DM $TQINV15_[A]R = 
+[*DO C = 1:3]
+$I_[A]_QINV15_O[C]/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+11,
+12,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+91,
+13,
+14,
+[*END C]
+
+R,F,
+XT = "QINV15. REASONS FOR GETTING INVESTMENT WITH CURRENT INVESTMENT PLATFORM/ CHANNEL - [QINV19ATT.A]",
+X = "
+[*DO C = 1:3]
+RANK[C]\
+`    the lowest fees/commission for investment products;
+`    had the most suitable selection of investment products I wanted;
+`    was the most helpful in explaining the features of the investment account;
+`    Getting the investment account from the most convenient and easiest;
+`    I feel this channel in general are the best places for an investment account;
+`    I already have an investment account at other places;
+`    I know someone who works at, which made it easier for me to get the investments;
+`    Influence of advertising for the investment products on TV or radio;
+`    Influence of advertising for the investment products on other outdoor displays (billboard, transit ads on buses and other public transport vehicles);
+`    Influence of advertising for the investment products online/on the Internet;
+`    Faster transactions/crediting time in;
+`    is a brand that is trustworthy;
+`    What my friends/family/colleagues are using;
+`    Helps me decide which stocks to buy/sell;
+`    is easier to use;
+`    can be accessed via mobile phone;
+`    Rarely encounters any error/downtime;
+`    This is the brand that I am used to;
+`    Other;
+`    No Rank 2;
+`    No Rank 3;
+[*END C]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END A]
+
+
+!
+[*DATA QINV18ATTR (;) =
+Product features;
+Ease of and convenience to use;
+Ease of application or creating an investment account;
+Ease of buying and selling different investment products in the app/online platform;
+Minimum amount required to invest;
+Flexibility or liquidity of investment products (e.g., withdraw whenever I want);
+Easy to contact and responsiveness of customer service;
+Low transaction fees;
+Quick processing time;
+Helps in educating me about investing and trading;
+Has comprehensive features]
+
+[*DO A = 1:56]
+[*DO C = 1:11]
+DM $TQINV18_[A]R[c] = $I_[A]_T_QINV18_[C]/1-5,4+5,1+2,R,F,
+XT = "QINV18. ELEMENTS RATING - [QINV19ATT.A]",
+X = "
+[QINV18ATTR.c]\
+`     Completely dissatisfied<V1>;
+`     Somewhat dissatisfied<V2>;
+`     Neither satisfied nor dissatisfied<V3>;
+`     Somewhat satisfied<V4>;
+`     Completely satisfied<V5>;
+`          TOP 2 BOX<Q>;
+`          BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END C]
+[*END A]
+
+

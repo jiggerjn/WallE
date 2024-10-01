@@ -4,11 +4,12 @@ START CONTROL,
 !C = ..\rejectdata\WALLE_APR24V2.ASC;..\rejectdata\WALLE_MAY24V2.ASC;..\rejectdata\WALLE_JUN24V2.ASC,
 !C = ..\WALLEDATA_12_04_2024\WALLE_JAN24V3.asc;..\WALLEDATA_12_04_2024\WALLE_FEB24V2.asc;..\WALLEDATA_12_04_2024\WALLE_MAR24V2.asc,
 !C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
-C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 !C = P_WALLE_2023Q1.ASC;P_WALLE_2023Q2.ASC;P_WALLE_2023Q3.ASC;WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
 !C = P_WALLE_2023Q2.ASC;P_WALLE_2023Q3.ASC,
 !C = ..\rejectdata\P_WALLE_2023Q3_V2_PQ10.ASC;..\rejectdata\WALLE_Q3_JUL_INCIONLY_Q10F1_V2.ASC;..\rejectdata\WALLE_Q3_AUG_INCIONLY_Q10F1_V2.ASC;..\rejectdata\WALLE_Q3_SEP_INCIONLY_Q10F1_V2.ASC;..\rejectdata\WALLE_Q1_MAP1_INCI_ONLY_Q10F1_V2.ASC;..\rejectdata\WALLE_Q2_APR_TOTALV4_Q10F1_V2.ASC;..\rejectdata\WALLE_Q2_JUN_INCIBOS_Q10F1_V2.ASC;..\rejectdata\WALL_E_Q4_OCT.ASC;..\rejectdata\WALLE_NOVEMBER.ASC;..\rejectdata\WALLEDEC_1_10.ASC;..\rejectdata\WALLE_JAN24V3.asc;..\rejectdata\WALLE_FEB24V2.asc;..\rejectdata\WALLE_MAR24V2.ASC;..\rejectdata\WALLE_APR24V2.ASC;..\rejectdata\WALLE_MAY24V2.ASC;..\rejectdata\WALLE_JUN24V2.ASC,
 !C = ..\rejectdata\WALL_E_Q4_OCT.ASC;..\rejectdata\WALLE_NOVEMBER.ASC;..\rejectdata\WALLEDEC_1_10.ASC;..\rejectdata\WALLE_JAN24V3.asc;..\rejectdata\WALLE_FEB24V2.asc;..\rejectdata\WALLE_MAR24V2.ASC;..\rejectdata\WALLE_APR24V2.ASC;..\rejectdata\WALLE_MAY24V2.ASC;..\rejectdata\WALLE_JUN24V2.ASC,
+C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 
 Y,
 OLDNAMES,
@@ -2603,6 +2604,22 @@ Q2 2024 *(h)
 ",
 
 
+DM $NewClientHeaderv2 = 
+T,
+($SEC19/4).($T_Q1_1/22..65).($A_Q187new/1+2+11+4),
+($SEC19/4).($T_Q1_1/22..65).($A_Q187new/1+2+11),
+($SEC19/4).($T_Q1_1/22..65).($A_Q187new/4),
+($SEC19/3+4).($T_Q1_1/13..21),
+($SEC19/1+2).($T_Q1_1/22..35),
+HT = "NEW CLIENT HEADER V2",
+H = "<F=SHG-1>
+Total *(a);
+Mass Market (Total) *(b);
+Mass Market (Earner) *(c);
+Mass Market (Budgeter) *(d);
+Youth *(e);
+Mass Affluent *(f)",
+
 !-----------Unique
 DM $Q200 = $11/1-9,'0',
 
@@ -2643,7 +2660,7 @@ F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HEADERWAVE3 = HAGCitiesT,HBTL]
+[*DATA HEADERWAVE3 = NewClientHeaderv2,HBTL]
 
 
 
@@ -2652,8 +2669,6 @@ F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 [*SET T = 0]
 
 
-[*SK 1]
-[*1]
 !======
 [*DO Z = 1:1]
 IF $TQ10/2, T #[+T] = $TPROFILE2 * $[HEADERWAVE3.Z],
@@ -2684,6 +2699,7 @@ BT = "Among rejectors of fintech",
 ![*END Z]
 
 
+[*SK 1]
 
 !~~~~~~~~~~~~MultiSelect
 [*DO Z = 1:1]
@@ -2868,5 +2884,6 @@ BT = "Among rejectors of fintech and ever used gcash",
 
 [*SK 999]
 [*999]
+[*1]
 FINISH TABLES,
 

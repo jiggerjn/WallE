@@ -1221,6 +1221,7 @@ IF $1-10/34103872, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $
 5300;
 5500;
 5600;
+5700;
 5800;
 5900;
 5940;
@@ -1240,6 +1241,7 @@ IF $1-10/34103872, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $
 9100;
 9500;
 9700;
+9800;
 10000;
 10200;
 10300;
@@ -1263,14 +1265,17 @@ IF $1-10/34103872, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $
 15400;
 15500;
 16000;
+16500;
 17000;
 17300;
+17500;
 18000;
 18800;
 19000;
 20000;
 21000;
 21100;
+21500;
 22000;
 23000;
 23940;
@@ -1284,6 +1289,7 @@ IF $1-10/34103872, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $
 29850;
 30000;
 31000;
+31500;
 32000;
 35000;
 36000;
@@ -1293,6 +1299,8 @@ IF $1-10/34103872, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $
 41000;
 42000;
 45000;
+46000;
+47000;
 50000;
 50700;
 51000;
@@ -1302,13 +1310,20 @@ IF $1-10/34103872, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $
 60000;
 60500;
 64000;
+65000;
 67000;
 70000;
 72100;
 75000;
 80000;
+82000;
+85000;
 88000;
-89000]
+89000;
+90000;
+125000;
+140000;
+155000]
 
 !Q1 2024
 IF $1-10/34333331, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_3_QRMAMTnondigital = 500,DI $I_3_QRMAMTreg = 500,DI $I_6_QRMAMTnondigital = 200,DI $I_6_QRMAMTreg = 200,DI $I_9_QRMAMTregofreg = 1700,end if,
@@ -3131,3 +3146,174 @@ IF $1-10/38536828, then,DI $I_6_QRMAMTnondigital = 2500,DI $I_6_QRMAMTdigital = 
 IF $1-10/38537612, then,DI $I_6_QRMAMTdigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
 IF $1-10/38546515, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
 IF $1-10/38581667, then,DI $I_2_QRMAMTnondigital = 20000,DI $I_2_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+
+!!BOOSTER SAVINGS INVESTMENT
+IF $1-10/37901258, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/37902547, then,DI $I_2_QRMAMTnondigital = 15000,DI $I_2_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/37918736, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/37926906, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/37928617, then,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/37939801, then,DI $I_5_QRMAMTdigital = 40000,DI $I_5_QRMAMTreg = 40000,DI $I_9_QRMAMTregofreg = 40000,end if,
+IF $1-10/37951195, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 2000,DI $I_2_QRMAMTdigital = 1000,DI $I_2_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/37971843, then,DI $I_1_QRMAMTnondigital = 25000,DI $I_1_QRMAMTdigital = 25000,DI $I_1_QRMAMTreg = 50000,DI $I_2_QRMAMTnondigital = 10000,DI $I_2_QRMAMTreg = 10000,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 65000,end if,
+IF $1-10/37989393, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 3500,DI $I_3_QRMAMTnondigital = 500,DI $I_3_QRMAMTdigital = 500,DI $I_3_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 4500,end if,
+IF $1-10/37990807, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/37995442, then,DI $I_2_QRMAMTnondigital = 15000,DI $I_2_QRMAMTdigital = 3000,DI $I_2_QRMAMTreg = 18000,DI $I_9_QRMAMTregofreg = 18000,end if,
+IF $1-10/37996878, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_2_QRMAMTdigital = 5000,DI $I_2_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 8000,end if,
+IF $1-10/38014720, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38015654, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 1500,end if,
+IF $1-10/38015655, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38015656, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38019533, then,DI $I_2_QRMAMTnondigital = 25000,DI $I_2_QRMAMTreg = 25000,DI $I_9_QRMAMTregofreg = 25000,end if,
+IF $1-10/38024003, then,DI $I_6_QRMAMTnondigital = 12000,DI $I_6_QRMAMTdigital = 12000,DI $I_6_QRMAMTreg = 24000,DI $I_9_QRMAMTregofreg = 24000,end if,
+IF $1-10/38025154, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38025445, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38042798, then,DI $I_1_QRMAMTnondigital = 10000,DI $I_1_QRMAMTdigital = 12000,DI $I_1_QRMAMTreg = 22000,DI $I_9_QRMAMTregofreg = 22000,end if,
+IF $1-10/38047206, then,DI $I_2_QRMAMTdigital = 10000,DI $I_2_QRMAMTreg = 10000,DI $I_5_QRMAMTnondigital = 5000,DI $I_5_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38047564, then,DI $I_2_QRMAMTnondigital = 20000,DI $I_2_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38050200, then,DI $I_6_QRMAMTnondigital = 30000,DI $I_6_QRMAMTdigital = 125000,DI $I_6_QRMAMTreg = 155000,DI $I_9_QRMAMTregofreg = 155000,end if,
+IF $1-10/38060926, then,DI $I_6_QRMAMTnondigital = 6000,DI $I_6_QRMAMTreg = 6000,DI $I_9_QRMAMTregofreg = 6000,end if,
+IF $1-10/38063687, then,DI $I_1_QRMAMTnondigital = 50000,DI $I_1_QRMAMTreg = 50000,DI $I_2_QRMAMTnondigital = 90000,DI $I_2_QRMAMTreg = 90000,DI $I_9_QRMAMTregofreg = 140000,end if,
+IF $1-10/38066080, then,DI $I_1_QRMAMTdigital = 5000,DI $I_1_QRMAMTreg = 5000,DI $I_5_QRMAMTnondigital = 3000,DI $I_5_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 8000,end if,
+IF $1-10/38079801, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38079802, then,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38085009, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38085779, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38091905, then,DI $I_1_QRMAMTnondigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38091906, then,DI $I_6_QRMAMTnondigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38094251, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38095426, then,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_5_QRMAMTdigital = 4000,DI $I_5_QRMAMTreg = 4000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38095989, then,DI $I_1_QRMAMTnondigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38106926, then,DI $I_5_QRMAMTdigital = 46000,DI $I_5_QRMAMTreg = 46000,DI $I_6_QRMAMTdigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 47000,end if,
+IF $1-10/38110987, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_6_QRMAMTnondigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38114373, then,DI $I_2_QRMAMTdigital = 10000,DI $I_2_QRMAMTreg = 10000,DI $I_5_QRMAMTnondigital = 8000,DI $I_5_QRMAMTreg = 8000,DI $I_9_QRMAMTregofreg = 18000,end if,
+IF $1-10/38128282, then,DI $I_1_QRMAMTdigital = 15000,DI $I_1_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38128283, then,DI $I_1_QRMAMTnondigital = 5000,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 7000,DI $I_9_QRMAMTregofreg = 7000,end if,
+IF $1-10/38128777, then,DI $I_2_QRMAMTdigital = 20000,DI $I_2_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38128778, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 4000,DI $I_9_QRMAMTregofreg = 4000,end if,
+IF $1-10/38128782, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 1500,end if,
+IF $1-10/38128784, then,DI $I_1_QRMAMTdigital = 5000,DI $I_1_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38128786, then,DI $I_1_QRMAMTdigital = 1800,DI $I_1_QRMAMTreg = 1800,DI $I_9_QRMAMTregofreg = 1800,end if,
+IF $1-10/38128787, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38128788, then,DI $I_1_QRMAMTdigital = 3500,DI $I_1_QRMAMTreg = 3500,DI $I_9_QRMAMTregofreg = 3500,end if,
+IF $1-10/38128795, then,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38129449, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38153512, then,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38155557, then,DI $I_1_QRMAMTnondigital = 80000,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 82000,DI $I_9_QRMAMTregofreg = 82000,end if,
+IF $1-10/38165667, then,DI $I_1_QRMAMTdigital = 6000,DI $I_1_QRMAMTreg = 6000,DI $I_2_QRMAMTdigital = 10000,DI $I_2_QRMAMTreg = 10000,DI $I_6_QRMAMTdigital = 4000,DI $I_6_QRMAMTreg = 4000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38165668, then,DI $I_5_QRMAMTdigital = 10000,DI $I_5_QRMAMTreg = 10000,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38168164, then,DI $I_5_QRMAMTnondigital = 2000,DI $I_5_QRMAMTreg = 2000,DI $I_6_QRMAMTnondigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38169690, then,DI $I_2_QRMAMTnondigital = 85000,DI $I_2_QRMAMTdigital = 5000,DI $I_2_QRMAMTreg = 90000,DI $I_9_QRMAMTregofreg = 90000,end if,
+IF $1-10/38181326, then,DI $I_1_QRMAMTnondigital = 2500,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38186773, then,DI $I_6_QRMAMTdigital = 3000,DI $I_6_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38217696, then,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_6_QRMAMTdigital = 3000,DI $I_6_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38218791, then,DI $I_1_QRMAMTnondigital = 30000,DI $I_1_QRMAMTreg = 30000,DI $I_9_QRMAMTregofreg = 30000,end if,
+IF $1-10/38219982, then,DI $I_2_QRMAMTnondigital = 10000,DI $I_2_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38221590, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 6000,DI $I_9_QRMAMTregofreg = 6000,end if,
+IF $1-10/38221591, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38224716, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38235563, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38235565, then,DI $I_6_QRMAMTdigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38237107, then,DI $I_1_QRMAMTdigital = 5700,DI $I_1_QRMAMTreg = 5700,DI $I_9_QRMAMTregofreg = 5700,end if,
+IF $1-10/38249394, then,DI $I_2_QRMAMTnondigital = 5000,DI $I_2_QRMAMTdigital = 2500,DI $I_2_QRMAMTreg = 7500,DI $I_4_QRMAMTdigital = 1000,DI $I_4_QRMAMTreg = 1000,DI $I_5_QRMAMTnondigital = 23000,DI $I_5_QRMAMTreg = 23000,DI $I_9_QRMAMTregofreg = 31500,end if,
+IF $1-10/38255205, then,DI $I_6_QRMAMTnondigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38263683, then,DI $I_2_QRMAMTdigital = 500,DI $I_2_QRMAMTreg = 500,DI $I_5_QRMAMTdigital = 21000,DI $I_5_QRMAMTreg = 21000,DI $I_9_QRMAMTregofreg = 21500,end if,
+IF $1-10/38265153, then,DI $I_1_QRMAMTnondigital = 5000,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 8000,DI $I_2_QRMAMTnondigital = 5000,DI $I_2_QRMAMTdigital = 2000,DI $I_2_QRMAMTreg = 7000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38265274, then,DI $I_1_QRMAMTdigital = 4000,DI $I_1_QRMAMTreg = 4000,DI $I_9_QRMAMTregofreg = 4000,end if,
+IF $1-10/38271057, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 2500,DI $I_3_QRMAMTdigital = 1000,DI $I_3_QRMAMTreg = 1000,DI $I_5_QRMAMTnondigital = 30000,DI $I_5_QRMAMTreg = 30000,DI $I_6_QRMAMTnondigital = 2000,DI $I_6_QRMAMTdigital = 2500,DI $I_6_QRMAMTreg = 4500,DI $I_9_QRMAMTregofreg = 38000,end if,
+IF $1-10/38273490, then,DI $I_6_QRMAMTdigital = 20000,DI $I_6_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38287511, then,DI $I_5_QRMAMTdigital = 20000,DI $I_5_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38290670, then,DI $I_2_QRMAMTnondigital = 50000,DI $I_2_QRMAMTreg = 50000,DI $I_5_QRMAMTnondigital = 10000,DI $I_5_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 60000,end if,
+IF $1-10/38296913, then,DI $I_1_QRMAMTnondigital = 2000,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 5000,DI $I_4_QRMAMTnondigital = 1500,DI $I_4_QRMAMTreg = 1500,DI $I_6_QRMAMTnondigital = 5000,DI $I_6_QRMAMTdigital = 10000,DI $I_6_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 21500,end if,
+IF $1-10/38315016, then,DI $I_1_QRMAMTnondigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38315017, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38315019, then,DI $I_6_QRMAMTdigital = 500,DI $I_6_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38315108, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_4_QRMAMTdigital = 500,DI $I_4_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38315109, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 6500,end if,
+IF $1-10/38344221, then,DI $I_6_QRMAMTnondigital = 20000,DI $I_6_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38359213, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38360821, then,DI $I_2_QRMAMTdigital = 5000,DI $I_2_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38375827, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_6_QRMAMTdigital = 10000,DI $I_6_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38396957, then,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38403579, then,DI $I_5_QRMAMTnondigital = 25000,DI $I_5_QRMAMTreg = 25000,DI $I_9_QRMAMTregofreg = 25000,end if,
+IF $1-10/38426669, then,DI $I_6_QRMAMTdigital = 11000,DI $I_6_QRMAMTreg = 11000,DI $I_9_QRMAMTregofreg = 11000,end if,
+IF $1-10/38463003, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38471249, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38471250, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 6000,DI $I_9_QRMAMTregofreg = 6000,end if,
+IF $1-10/38471781, then,DI $I_5_QRMAMTdigital = 6000,DI $I_5_QRMAMTreg = 6000,DI $I_9_QRMAMTregofreg = 6000,end if,
+IF $1-10/38476189, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_2_QRMAMTdigital = 20000,DI $I_2_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 23000,end if,
+IF $1-10/38476190, then,DI $I_1_QRMAMTdigital = 15000,DI $I_1_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38480764, then,DI $I_4_QRMAMTnondigital = 1000,DI $I_4_QRMAMTdigital = 1000,DI $I_4_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38484247, then,DI $I_1_QRMAMTnondigital = 4200,DI $I_1_QRMAMTreg = 4200,DI $I_9_QRMAMTregofreg = 4200,end if,
+IF $1-10/38484771, then,DI $I_1_QRMAMTdigital = 50000,DI $I_1_QRMAMTreg = 50000,DI $I_9_QRMAMTregofreg = 50000,end if,
+IF $1-10/38490254, then,DI $I_1_QRMAMTnondigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38491555, then,DI $I_1_QRMAMTnondigital = 5000,DI $I_1_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38492813, then,DI $I_1_QRMAMTnondigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_2_QRMAMTnondigital = 10000,DI $I_2_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38493422, then,DI $I_5_QRMAMTdigital = 5000,DI $I_5_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38493577, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 1500,end if,
+IF $1-10/38494924, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_5_QRMAMTdigital = 7000,DI $I_5_QRMAMTreg = 7000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38496299, then,DI $I_1_QRMAMTnondigital = 3500,DI $I_1_QRMAMTreg = 3500,DI $I_9_QRMAMTregofreg = 3500,end if,
+IF $1-10/38504891, then,DI $I_3_QRMAMTdigital = 10000,DI $I_3_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38506316, then,DI $I_1_QRMAMTnondigital = 500,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 1000,DI $I_2_QRMAMTnondigital = 500,DI $I_2_QRMAMTdigital = 500,DI $I_2_QRMAMTreg = 1000,DI $I_3_QRMAMTnondigital = 500,DI $I_3_QRMAMTdigital = 500,DI $I_3_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38509494, then,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38509495, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 1500,end if,
+IF $1-10/38510909, then,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 2000,DI $I_9_QRMAMTregofreg = 2000,end if,
+IF $1-10/38512238, then,DI $I_1_QRMAMTdigital = 5000,DI $I_1_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38513135, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_2_QRMAMTdigital = 5000,DI $I_2_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 8000,end if,
+IF $1-10/38514522, then,DI $I_1_QRMAMTdigital = 30000,DI $I_1_QRMAMTreg = 30000,DI $I_9_QRMAMTregofreg = 30000,end if,
+IF $1-10/38515468, then,DI $I_6_QRMAMTnondigital = 4000,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 9000,DI $I_9_QRMAMTregofreg = 9000,end if,
+IF $1-10/38524666, then,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38525924, then,DI $I_6_QRMAMTdigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38525925, then,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 2500,DI $I_4_QRMAMTdigital = 1500,DI $I_4_QRMAMTreg = 1500,DI $I_6_QRMAMTdigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38527035, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 1500,end if,
+IF $1-10/38546514, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38548384, then,DI $I_1_QRMAMTdigital = 8000,DI $I_1_QRMAMTreg = 8000,DI $I_9_QRMAMTregofreg = 8000,end if,
+IF $1-10/38552936, then,DI $I_5_QRMAMTdigital = 25000,DI $I_5_QRMAMTreg = 25000,DI $I_6_QRMAMTdigital = 60000,DI $I_6_QRMAMTreg = 60000,DI $I_9_QRMAMTregofreg = 85000,end if,
+IF $1-10/38552937, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTdigital = 6000,DI $I_1_QRMAMTreg = 9000,DI $I_9_QRMAMTregofreg = 9000,end if,
+IF $1-10/38557136, then,DI $I_5_QRMAMTnondigital = 2000,DI $I_5_QRMAMTdigital = 3000,DI $I_5_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38557138, then,DI $I_1_QRMAMTnondigital = 500,DI $I_1_QRMAMTdigital = 2000,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38571962, then,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38580878, then,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38596879, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 4500,DI $I_9_QRMAMTregofreg = 4500,end if,
+IF $1-10/38596880, then,DI $I_1_QRMAMTnondigital = 10000,DI $I_1_QRMAMTdigital = 6000,DI $I_1_QRMAMTreg = 16000,DI $I_9_QRMAMTregofreg = 16000,end if,
+IF $1-10/38612773, then,DI $I_1_QRMAMTdigital = 16000,DI $I_1_QRMAMTreg = 16000,DI $I_9_QRMAMTregofreg = 16000,end if,
+IF $1-10/38616810, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38617020, then,DI $I_1_QRMAMTnondigital = 5000,DI $I_1_QRMAMTreg = 5000,DI $I_2_QRMAMTdigital = 20000,DI $I_2_QRMAMTreg = 20000,DI $I_5_QRMAMTdigital = 50000,DI $I_5_QRMAMTreg = 50000,DI $I_9_QRMAMTregofreg = 75000,end if,
+IF $1-10/38621138, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38653461, then,DI $I_6_QRMAMTdigital = 1000,DI $I_6_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38663661, then,DI $I_3_QRMAMTdigital = 500,DI $I_3_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38663662, then,DI $I_5_QRMAMTnondigital = 9800,DI $I_5_QRMAMTreg = 9800,DI $I_9_QRMAMTregofreg = 9800,end if,
+IF $1-10/38695190, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 6000,DI $I_9_QRMAMTregofreg = 6000,end if,
+IF $1-10/38706248, then,DI $I_6_QRMAMTdigital = 5000,DI $I_6_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38708603, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 1500,end if,
+IF $1-10/38723476, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38737880, then,DI $I_1_QRMAMTdigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38737884, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_6_QRMAMTnondigital = 500,DI $I_6_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38741795, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38743976, then,DI $I_5_QRMAMTdigital = 20000,DI $I_5_QRMAMTreg = 20000,DI $I_9_QRMAMTregofreg = 20000,end if,
+IF $1-10/38749056, then,DI $I_2_QRMAMTnondigital = 50000,DI $I_2_QRMAMTdigital = 3000,DI $I_2_QRMAMTreg = 53000,DI $I_9_QRMAMTregofreg = 53000,end if,
+IF $1-10/38749059, then,DI $I_1_QRMAMTdigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38749060, then,DI $I_1_QRMAMTnondigital = 1000,DI $I_1_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38751571, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38786732, then,DI $I_1_QRMAMTnondigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_5_QRMAMTdigital = 5000,DI $I_5_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 8000,end if,
+IF $1-10/38786733, then,DI $I_1_QRMAMTnondigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_4_QRMAMTnondigital = 1500,DI $I_4_QRMAMTreg = 1500,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38792157, then,DI $I_5_QRMAMTdigital = 10000,DI $I_5_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38798225, then,DI $I_5_QRMAMTdigital = 10000,DI $I_5_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38800785, then,DI $I_1_QRMAMTdigital = 1500,DI $I_1_QRMAMTreg = 1500,DI $I_6_QRMAMTdigital = 15000,DI $I_6_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 16500,end if,
+IF $1-10/38806653, then,DI $I_1_QRMAMTdigital = 5000,DI $I_1_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38835884, then,DI $I_3_QRMAMTnondigital = 1000,DI $I_3_QRMAMTreg = 1000,DI $I_9_QRMAMTregofreg = 1000,end if,
+IF $1-10/38837679, then,DI $I_4_QRMAMTdigital = 10000,DI $I_4_QRMAMTreg = 10000,DI $I_6_QRMAMTdigital = 7500,DI $I_6_QRMAMTreg = 7500,DI $I_9_QRMAMTregofreg = 17500,end if,
+IF $1-10/38838804, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38838805, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38838806, then,DI $I_1_QRMAMTdigital = 15000,DI $I_1_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38838807, then,DI $I_1_QRMAMTdigital = 15000,DI $I_1_QRMAMTreg = 15000,DI $I_9_QRMAMTregofreg = 15000,end if,
+IF $1-10/38838808, then,DI $I_1_QRMAMTdigital = 3000,DI $I_1_QRMAMTreg = 3000,DI $I_9_QRMAMTregofreg = 3000,end if,
+IF $1-10/38844829, then,DI $I_6_QRMAMTnondigital = 10000,DI $I_6_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38849882, then,DI $I_2_QRMAMTdigital = 5000,DI $I_2_QRMAMTreg = 5000,DI $I_9_QRMAMTregofreg = 5000,end if,
+IF $1-10/38855767, then,DI $I_1_QRMAMTdigital = 10000,DI $I_1_QRMAMTreg = 10000,DI $I_9_QRMAMTregofreg = 10000,end if,
+IF $1-10/38862268, then,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38862269, then,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38862270, then,DI $I_1_QRMAMTdigital = 4500,DI $I_1_QRMAMTreg = 4500,DI $I_9_QRMAMTregofreg = 4500,end if,
+IF $1-10/38862271, then,DI $I_1_QRMAMTdigital = 2500,DI $I_1_QRMAMTreg = 2500,DI $I_9_QRMAMTregofreg = 2500,end if,
+IF $1-10/38862828, then,DI $I_1_QRMAMTnondigital = 500,DI $I_1_QRMAMTreg = 500,DI $I_9_QRMAMTregofreg = 500,end if,
+IF $1-10/38896925, then,DI $I_1_QRMAMTdigital = 3500,DI $I_1_QRMAMTreg = 3500,DI $I_9_QRMAMTregofreg = 3500,end if,

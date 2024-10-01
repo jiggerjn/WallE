@@ -1,0 +1,1109 @@
+!=======================MultiSelect
+
+DM $TQINS7 =
+$A_QINS7/1+2+(($A_QINS7/3).($xQINS7_3_other/B))+$xQINS7_3_other/1001+1002+1004+1005+1006+1007+1008+1010+1011,
+$A_QINS7/1,
+$A_QINS7/2+$xQINS7_3_other/1003+1013,
+(($A_QINS7/3).($xQINS7_3_other/B)),
+$xQINS7_3_other/1001,
+$xQINS7_3_other/1002,
+$xQINS7_3_other/1004,
+$xQINS7_3_other/1005,
+$xQINS7_3_other/1006,
+$xQINS7_3_other/1007,
+$xQINS7_3_other/1008,
+$xQINS7_3_other/1010,
+$xQINS7_3_other/1011,
+
+
+$A_QINS7/4+5+6+7+8+9+10+11+12+13+14+16+15+17+18+19+20+(($A_QINS7/91).($xQINS7_91_other/B))+$xQINS7_91_other/1001+1002+1004+1005+1006+1007+1008+1010+1011,
+$A_QINS7/4+$xQINS7_91_other/1012,
+$A_QINS7/5,
+$A_QINS7/6,
+$A_QINS7/7,
+$A_QINS7/8,
+$A_QINS7/9,
+$A_QINS7/10,
+$A_QINS7/11,
+$A_QINS7/12,
+$A_QINS7/13+$xQINS7_91_other/1009,
+$A_QINS7/14,
+$A_QINS7/16,
+$A_QINS7/15,
+$A_QINS7/17,
+$A_QINS7/18,
+$A_QINS7/19,
+$A_QINS7/20,
+(($A_QINS7/91).($xQINS7_91_other/B)),
+$xQINS7_91_other/1001,
+$xQINS7_91_other/1002,
+$xQINS7_91_other/1004,
+$xQINS7_91_other/1005,
+$xQINS7_91_other/1006,
+$xQINS7_91_other/1007,
+$xQINS7_91_other/1008,
+$xQINS7_91_other/1010,
+$xQINS7_91_other/1011,
+$A_QINS7/99,
+R,F,
+VT = "QINS7. TYPES OF INSURANCE AWARE OF",
+V = "
+LIFE INSURANCE (NET) <Q>;
+`     Traditional life insurance (Provides guaranteed benefits (e.g., death, endowment));
+`     Variable life insurance (Provides non-guaranteed benefits, benefit amount is dependent on the investment account / fund value);
+
+`     Other LIFE Insurance Types;
+`     Kaizer Insurance;
+`     Sunlife Insurance;
+`     Saint Peter;
+`     For Retirement;
+`     Life bank;
+`     BDO Life Insurance;
+`     Profile Insurance;
+`     Money protection Insurance;
+`     Microfinance non life;
+
+NON-LIFE INSURANCE (NET) <Q>;
+`     Health Insurance without Life Insurance (Covers medical expenses such as inpatient, outpatient, and with laboratory and diagnostics);
+`     Personal Accident Insurance without Life Insurance (Provides accident coverage);
+`     Critical Illness Insurance without Life insurance (Provides lumpsum amount when the insured is diagnosed with a covered critical illness/ serious disease);
+`     Wealth Management without Life insurance (Provides an investment advisory service that combines other financial services to address needs of clients);
+`     Trust fund without Life insurance (Provides a fund held by trustees for beneficiaries);
+`     Education insurance without Life insurance (Pre-need educational fund);
+`     Pension Plan without Life insurance (Pre-need pension fund);
+`     Business insurance without Life insurance (Covers businesses and its assets);
+`     Property Insurance (Covers property of the insured);
+`     Vehicle Insurance (Covers vehicle of the insured);
+`     Travel Insurance (Covers insured during travel period);
+`     Lifestyle Insurance (Covers insurance for pets, online shopping, gadgets, etc);
+`     Microinsurance  (meets the risk protection needs of the low-income such as illness, disaster, and death);
+`     Load insurance;
+`     Bills insurance;
+`     Online shopping insurance;
+`     Pet insurance;
+
+`     Other NON-LIFE Insurance Types;
+`     Kaizer Insurance;
+`     Sunlife Insurance;
+`     Saint Peter;
+`     For Retirement;
+`     Life bank;
+`     BDO Life Insurance;
+`     Profile Insurance;
+`     Money protection Insurance;
+`     Microfinance non life;
+
+NONE OF THE ABOVE;
+Missing answers<Z>;
+Total count<C>",
+
+
+IF $A_QINS1a/3, OM $xQINS1a_3_other = $xQINS7_3_other,
+IF $A_QINS1a/91, OM $xQINS1a_91_other = $xQINS7_91_other,
+!=======================MultiSelect
+
+DM $TQINS1a =
+$A_QINS1a/1+2+(($A_QINS1a/3).($xQINS1a_3_other/B))+$xQINS1a_3_other/1001+1002+1004+1005+1006+1007+1008+1010+1011,
+$A_QINS1a/1,
+$A_QINS1a/2+$xQINS1a_3_other/1003+1013,
+(($A_QINS1a/3).($xQINS1a_3_other/B)),
+$xQINS1a_3_other/1001,
+$xQINS1a_3_other/1002,
+$xQINS1a_3_other/1004,
+$xQINS1a_3_other/1005,
+$xQINS1a_3_other/1006,
+$xQINS1a_3_other/1007,
+$xQINS1a_3_other/1008,
+$xQINS1a_3_other/1010,
+$xQINS1a_3_other/1011,
+
+
+$A_QINS1a/4+5+6+7+8+9+10+11+12+13+14+16+15+17+18+19+20+(($A_QINS1a/91).($xQINS1a_91_other/B))+$xQINS1a_91_other/1001+1002+1004+1005+1006+1007+1008+1010+1011,
+$A_QINS1a/4+$xQINS1a_91_other/1012,
+$A_QINS1a/5,
+$A_QINS1a/6,
+$A_QINS1a/7,
+$A_QINS1a/8,
+$A_QINS1a/9,
+$A_QINS1a/10,
+$A_QINS1a/11,
+$A_QINS1a/12,
+$A_QINS1a/13+$xQINS1a_91_other/1009,
+$A_QINS1a/14,
+$A_QINS1a/16,
+$A_QINS1a/15,
+$A_QINS1a/17,
+$A_QINS1a/18,
+$A_QINS1a/19,
+$A_QINS1a/20,
+(($A_QINS1a/91).($xQINS1a_91_other/B)),
+$xQINS1a_91_other/1001,
+$xQINS1a_91_other/1002,
+$xQINS1a_91_other/1004,
+$xQINS1a_91_other/1005,
+$xQINS1a_91_other/1006,
+$xQINS1a_91_other/1007,
+$xQINS1a_91_other/1008,
+$xQINS1a_91_other/1010,
+$xQINS1a_91_other/1011,
+$A_QINS1a/99,
+R,F,
+VT = "QINS1a. TYPES OF INSURANCE CURRENTLY HAVE",
+V = $TQINS7,
+
+
+IF $A_QINS1b/3, OM $xQINS1b_3_other = $xQINS7_3_other,
+IF $A_QINS1b/91, OM $xQINS1b_91_other = $xQINS7_91_other,
+!=======================MultiSelect
+
+DM $TQINS1b =
+$A_QINS1b/1+2+(($A_QINS1b/3).($xQINS1b_3_other/B))+$xQINS1b_3_other/1001+1002+1004+1005+1006+1007+1008+1010+1011,
+$A_QINS1b/1,
+$A_QINS1b/2+$xQINS1b_3_other/1003+1013,
+(($A_QINS1b/3).($xQINS1b_3_other/B)),
+$xQINS1b_3_other/1001,
+$xQINS1b_3_other/1002,
+$xQINS1b_3_other/1004,
+$xQINS1b_3_other/1005,
+$xQINS1b_3_other/1006,
+$xQINS1b_3_other/1007,
+$xQINS1b_3_other/1008,
+$xQINS1b_3_other/1010,
+$xQINS1b_3_other/1011,
+
+
+$A_QINS1b/4+5+6+7+8+9+10+11+12+13+14+16+15+17+18+19+20+(($A_QINS1b/91).($xQINS1b_91_other/B))+$xQINS1b_91_other/1001+1002+1004+1005+1006+1007+1008+1010+1011,
+$A_QINS1b/4+$xQINS1b_91_other/1012,
+$A_QINS1b/5,
+$A_QINS1b/6,
+$A_QINS1b/7,
+$A_QINS1b/8,
+$A_QINS1b/9,
+$A_QINS1b/10,
+$A_QINS1b/11,
+$A_QINS1b/12,
+$A_QINS1b/13+$xQINS1b_91_other/1009,
+$A_QINS1b/14,
+$A_QINS1b/16,
+$A_QINS1b/15,
+$A_QINS1b/17,
+$A_QINS1b/18,
+$A_QINS1b/19,
+$A_QINS1b/20,
+(($A_QINS1b/91).($xQINS1b_91_other/B)),
+$xQINS1b_91_other/1001,
+$xQINS1b_91_other/1002,
+$xQINS1b_91_other/1004,
+$xQINS1b_91_other/1005,
+$xQINS1b_91_other/1006,
+$xQINS1b_91_other/1007,
+$xQINS1b_91_other/1008,
+$xQINS1b_91_other/1010,
+$xQINS1b_91_other/1011,
+$A_QINS1b/99,
+R,F,
+VT = "QINS1b. INSURANCE TYPES PLANNING TO PURCHASE IN THE NEXT 12 MONTHS",
+V = $TQINS7,
+
+!=======================MultiSelect
+
+DM $TQINS1c =
+$A_QINS1c/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+91.N(1000..9999),
+1021,
+99,
+R,F,
+VT = "QINS1c. LIFE INSURANCE COVERAGE",
+V = "
+Accident & Health Insurance  (Life insurance with Health and Accident Coverage);
+Hospital/ Medical Insurance  (Life insurance with Hospitalization and Health Coverage);
+Wealth Management/Investment Fund  (Life Insurance with large single or short term premiums);
+Trust Fund  (Life insurance bought for the purpose of a Trust Fund);
+Education Insurance (Life insurance bought for the purpose of an Educational Fund);
+Pension Fund/Retirement Fund  (Life insurance bought for the purpose of a Retirement Fund);
+Mortgage Redemption Insurance (MRI)  (Life insurance tied in with a Home Loan);
+Credit Cover with Life Insurance (Life Insurance tied in with credit card and/or non collateralized loans);
+Others;
+Traditional/Memorial plans;
+None, it only covers life insurance;
+Missing answers<Z>;
+Total count<C>",
+
+!=======================Unique
+
+DM $TQINS8 =
+$QINS8/
+1,
+2,
+3,
+4,
+5,
+R,F,
+VT = "QINS8. PERCEPTION OF INSURANCE",
+V = "
+It is a necessity to have an insurance along with meeting my basic needs;
+It is a secondary priority after I am stable in sustaining my basic needs;
+It is another form of investment where I can put my funds if I want my wealth to grow in the future;
+It is a safety net for my family so that we have extra money during times of emergency;
+It is a luxury product, only when I have extra cash/funds to spare;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS9 =
+$A_QINS9/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+91,
+R,F,
+VT = "QINS9. PURPOSE OF INSURANCE",
+V = "
+For long term savings;
+To financially protect family in case of untimely death;
+To reduce financial burden in case of accidents;
+For health or hospitalization;
+For my children/legacy for children;
+For future enjoyment (cash benefit after end of insurance);
+For tax benefits (to protect my estate and heirs);
+To diversify my investments;
+For rewards or tie-ups for discounts;
+For the purpose of trust fund;
+For the purpose of funding education;
+For retirement;
+To avoid dipping into my savings for medical bills/ hospitalization;
+To be prepared for emergencies;
+To protect myself from financial burden from medical-related expenses;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS10a =
+$A_QINS10a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+91.N(1000..9999),
+9999,
+R,F,
+VT = "QINS10a. LIFE EVENT TRIGGERS",
+V = "
+Getting into high school;
+Getting into college;
+Getting my first job;
+Moving into a new job;
+Getting a promotion at work;
+Getting a raise;
+Getting married;
+Started to have kids;
+Needing to send kids to school;
+My kid/s graduated from college;
+About to retire;
+A family member/relative passed away;
+I got sick / I got into an accident;
+Due to fear of the pandemic / COVID-19;
+A family member/relative got sick / got into an accident;
+A trusted friend / family member / relative recommended it to me;
+I started to become interested in it due to knowing a person / relative / family member / friend actually got a big claim from an insurance;
+Previous loans have been fully paid;
+Just realizing I have extra cash to spare for investments since I don't have big responsibilities yet (i.e. do not have my own family yet, do not have kids yet, etc.);
+Was convinced by an agent;
+I started to become aware of it due to different advertising channels (i.e. TV, radio, internet/social media, newspapers/magazines, etc.);
+Family and friends were getting insurance policies as well;
+Others;
+Wala;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS10b =
+$A_QINS10b/
+1+2+3+4,
+1,
+2,
+3,
+4,
+5+6+26+7+8,
+5,
+6,
+26,
+7,
+8,
+9+10+11+12+13,
+9,
+10,
+11,
+12,
+13,
+14+15+16,
+14,
+15,
+16,
+17+18,
+17,
+18,
+19+20+21,
+19,
+20,
+21,
+22+23+24+25,
+22,
+23,
+24,
+25,
+91.N(1000..9999),
+9999,
+R,F,
+VT = "QINS10b. NEED TRIGGER FOR INSURANCE",
+V = "
+Health (NET) <Q>;
+`     Change in health condition (e.g. serious illness);
+`     Health scare;
+`     Poor recent experience with public hospital service;
+`     Recent accident (e.g. traffic accident);
+Finance (NET) <Q>;
+`     Purchasing a new car;
+`     Buying property or a new house;
+`     Purchasing a new gadget;
+`     Starting a business;
+`     Change in financial situation (e.g. job loss, additional funds/windfalls);
+Family (NET) <Q>;
+`     Marriage;
+`     Having children/ Pregnancy;
+`     Children-s education;
+`     Change in health condition of family members (health scare or serious illness);
+`     Death (of a family member, spouse, or friend);
+Career (NET) <Q>;
+`     Graduation/ Starting to work;
+`     Career change;
+`     Retirement;
+Lifestyle and Travel (NET) <Q>;
+`     Active Lifestyle (e.g. sports, high-risk activities);
+`     Migration/ moving out of the Philippines;
+External Interactions (NET) <Q>;
+`     Marketing/ Advertisements about insurance protection;
+`     Recent catch-up with an Agent/Financial consultant/IFA/Broker/Bancassurance staff (e.g. Policy review/ Financial assessment);
+`     Recommendation by people (family, friends) around me;
+External Environment Factors (NET) <Q>;
+`     COVID-19 pandemic;
+`     Other recent medical news/ health trends;
+`     Global events (e.g. War, political instability);
+`     State of the economy (e.g. low interest rate environment);
+
+Others;
+Wala;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!=======================MultiSelect
+
+DM $TQINS11 =
+$A_QINS11/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91.N(1000..9999),
+9999,
+R,F,
+VT = "QINS11. PURCHASE TRIGGERS",
+V = "
+Convincing sales talk by financial agent/advisor;
+Benefits perfectly fit my life's priorities;
+Came from an insurance company with good track record on invesment product performance;
+Came from an insurance company with a reputation on excellent quality service;
+Already partnered with my current bank account;
+Recommended/approved by someone I trust (e.g., family, friend);
+Policy terms fits my life status (payment frequency, mode of payment, etc.);
+Price is reasonable/competitive;
+Endorsed by a famous celebrity/influencer;
+Convinced by the interesting advertisment;
+I am familiar with the insurance brand;
+Comprehensive coverage;
+Branches are accessibile and have a wide presence;
+Application was easy and convenient;
+Claims and benefits are convenient and accessible;
+Affordable amount of premium to be paid;
+Health concerns brought by the COVID-19 pandemic;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS12 =
+$A_QINS12/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91,
+R,F,
+VT = "QINS12. PURCHASE INFLUENCERS - CURRENT",
+V = "
+No one, just decided on my own;
+Spouse;
+Children;
+Other family members/ relatives;
+Friends/Colleagues;
+Company I was/am working for;
+Financial agent/advisor;
+Self-research from online articles, forums, or blogs;
+Celebrity endorsers and/or social media personalities;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS13 =
+$A_QINS13/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+R,F,
+VT = "QINS13. FACTORS CONSIDERED WHEN CHOOSING AN INSURANCE PROVIDER",
+V = "
+Years of insurance coverage (e.g., claimable in 5 years, etc.);
+Level of interest rate;
+The stability / reputation of the company;
+Has an affordable premium payment;
+Easy to talk to and trustworthy financial advisor;
+Recommended by my family and friends;
+The application process is seamless and hassle-free;
+Has a flexible premium payment schedule/frequency (e.g., monthly, quarterly, yearly);
+Has flexible payment options (e.g., bank, agent, branch, online);
+Number of years to pay;
+Ease of transaction with insurance company (e.g., customer service, payments, application, etc.);
+The financial advisor is knowledgeable of the products and services being offered by the insurance company;
+Transferable insurance products;
+Amount of guaranteed money (face amount) upon reaching policy maturity date;
+Policy can be monitored via a mobile app;
+Provides timely customer alerts and notifications Nagbibigay ng customer alert at notification na nasa oras;
+Can be tied with bank account;
+Easy claims process;
+Endorsed by a famous celebrity and/or social media influencer;
+Can avail insurance from e-wallet/ fintech or online insurance market place;
+Has a wide range of insurance products and services to choose from;
+Offers customized products and services that are relevant to my financial needs;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS14 =
+$A_QINS14/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+(91..93).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027,
+1028,
+
+9999,
+R,F,
+VT = "QINS14. AIDED BRAND AWARENESS",
+V = "
+Asianlife & General Assurance Corporation;
+Allianz PNB Life Insurance Inc.;
+AXA / Philippine AXA Life Insurance Corp.;
+BDO Life Assurance Company;
+BPI-AIA Life Assurance Corporation (formerly BPI-Philam);
+AIA Philippines Life and General Ins. Co. Inc. (formerly Philam life);
+Coco Life / United Coconut Planters Life Assurance Corporation;
+Troo/ EastWest Ageas Insurance;
+Fortune Life Insurance Company;
+FWD / FWD Life Insurance Corp.;
+Generali Pilipinas Life Assurance Corporation;
+Insular Life / The Insular Life Assurance Company;
+Manufacturers Life Insurance Co. (Phils.), Inc.;
+Manulife Chinabank Life Assurance Corporation;
+Paramount Life & General Insurance Corporation;
+Philippine Prudential Life Insurance Corporation;
+Pioneer Life Inc.;
+Pru Life / Pru Life Insurance Corp. of UK;
+Sun Life of Canada (Philippines), Inc.;
+Sun Life Grepa Financial, Inc.;
+Singlife Philippines Inc.;
+Others;
+
+EMBI - TSPI;
+Entra - Strata;
+Health Care Insurance;
+Katipunan Bank;
+Life Insurance;
+Micro Insurace;
+Palawan Pawnshop Pamilya Protektado;
+St. Peter;
+
+NONE;
+
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+[*DATA Qins1acode = 
+1+2+3,
+1,
+2,
+3,
+4+5+6+7+8+9+10+11+12+13+14+16+15+17+18+19+20+91,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16,
+15,
+17,
+18,
+19,
+20,
+91,
+99]
+
+
+[*DATA topic3 (;) = 
+LIFE INSURANCE (NET);
+Traditional life insurance;
+Variable life insurance;
+Other;
+NON-LIFE INSURANCE (NET);
+Health Insurance without Life Insurance;
+Personal Accident Insurance without Life Insurance;
+Critical Illness Insurance without Life insurance;
+Wealth Management without Life insurance;
+Trust fund without Life insurance;
+Education insurance without Life insurance;
+Pension Plan without Life insurance;
+Business insurance without Life insurance;
+Property Insurance;
+Vehicle Insurance;
+Travel Insurance;
+Lifestyle Insurance;
+Microinsurance;
+Load insurance;
+Bills insurance;
+Online shopping insurance;
+Pet insurance;
+Other;
+NONE OF THE ABOVE]
+
+[*SET s = 0]
+[*FOR A = 901:1:2:3:902:4:5:6:7:8:9:10:11:12:13:14:16:15:17:18:19:20:91:99]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $QINS15_net_[NET] = $I_[A]_A_QINS15,
+ORDM $QINS15_RGD = $I_[A]_A_QINS15,
+[*901]
+[*END A]
+
+[*FOR A = 901:1:2:3:902:4:5:6:7:8:9:10:11:12:13:14:16:15:17:18:19:20:91:99]
+DM $TQINS15_[A] =
+[*BLOCK 900 ON A.GT.900]
+$QINS15_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$I_[A]_A_QINS15/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+(91..93).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027,
+1028,
+
+9999,
+R,F,
+VT = "QINS15. BRANDS CURRENTLY OWNED - [topic3.[+s]]",
+V = $TQINS14,
+[*END A]
+
+!=======================MultiSelect
+
+DM $TQINS16a =
+$A_QINS16a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91.N(1000..9999),
+1021,
+99,
+R,F,
+VT = "QINS16a. AWARENESS OF ONLINE INSURANCE MARKETPLACE",
+V = "
+Kwik.insure;
+Ginsure;
+Shopee Insurance;
+Lazada;
+LazMall;
+Maya Insurance;
+Igloo;
+MariaHealth;
+MYEG Insurance;
+Others;
+St. Peter;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQINS16b =
+$A_QINS16b/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91.N(1000..9999),
+1021,
+99,
+R,F,
+VT = "QINS16b. ONLINE INSURANCE MARKETPLACE PURCHASED",
+V = $TQINS16a,
+
+
+!=======================MultiSelect
+
+[*DATA QINS16cname (;)=
+Kwik.insure;
+Ginsure;
+Shopee Insurance;
+Lazada;
+LazMall;
+Maya Insurance;
+Igloo;
+MariaHealth;
+MYEG Insurance;
+Others;
+None]
+
+[*DATA QINS16ccode =
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91,
+99]
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:91:99]
+DM $TQINS16c[A] =
+$I_[A]_A_QINS16c/
+1+2+3,
+1,
+2,
+3,
+4+5+6+7+8+9+10+11+12+13+14+16+15+17+18+19+20+91,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16,
+15,
+17,
+18,
+19,
+20,
+91,
+99,
+R,F,
+VT = "QINS16c. TYPES OF INSURANCE PURCHASED FROM ONLINE INSURANCE MARKETPLACE - [QINS16cname.[+s]]",
+V = "
+LIFE INSURANCE (NET) <Q>;
+`     Traditional life insurance (Provides guaranteed benefits (e.g., death, endowment));
+`     Variable life insurance (Provides non-guaranteed benefits, benefit amount is dependent on the investment account / fund value);
+`     Other;
+NON-LIFE INSURANCE (NET) <Q>;
+`     Health Insurance without Life Insurance (Covers medical expenses such as inpatient, outpatient, and with laboratory and diagnostics);
+`     Personal Accident Insurance without Life Insurance (Provides accident coverage);
+`     Critical Illness Insurance without Life insurance (Provides lumpsum amount when the insured is diagnosed with a covered critical illness/ serious disease);
+`     Wealth Management without Life insurance (Provides an investment advisory service that combines other financial services to address needs of clients);
+`     Trust fund without Life insurance (Provides a fund held by trustees for beneficiaries);
+`     Education insurance without Life insurance (Pre-need educational fund);
+`     Pension Plan without Life insurance (Pre-need pension fund);
+`     Business insurance without Life insurance (Covers businesses and its assets);
+`     Property Insurance (Covers property of the insured);
+`     Vehicle Insurance (Covers vehicle of the insured);
+`     Travel Insurance (Covers insured during travel period);
+`     Lifestyle Insurance (Covers insurance for pets, online shopping, gadgets, etc);
+`     Microinsurance  (meets the risk protection needs of the low-income such as illness, disaster, and death);
+`     Load insurance;
+`     Bills insurance;
+`     Online shopping insurance;
+`     Pet insurance;
+`     Other;
+
+NONE OF THE ABOVE;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics24
+
+[*SET s = 0]
+
+
+[*FOR A = 901:1:2:3:902:4:5:6:7:8:9:10:11:12:13:14:16:15:17:18:19:20:91:99]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $QINS2a_net_[NET] = $T_QINS2a_[A],
+ORDM $QINS2a_RGD = $T_QINS2a_[A],
+[*901]
+[*END A]
+
+[*FOR A = 901:1:2:3:902:4:5:6:7:8:9:10:11:12:13:14:16:15:17:18:19:20:91:99]
+DM $TQINS2a_[A] =
+[*BLOCK 900 ON A.GT.900]
+$QINS2a_net_[A]/
+[*900]
+
+[*SK 901 ON A.GT.900]
+$T_QINS2a_[A]/
+[*901]
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91.N(1000..9999),
+1020,
+1021,
+1022,
+1023,
+1024,
+1025,
+1027,
+1028,
+
+
+1026,
+
+9999,
+R,F,
+VT = "QINS2a. AVAILMENT CHANNEL FOR CURRENT INSURANCE - [topic3.[+s]]",
+V = "
+Insurance Agent;
+Insurance Broker / Independent Financial Advisor;
+Banks/ Bancassurance;
+Insurance Agent;
+Online through insurance companies- website/ mobile app;
+Online via banks- website/ mobile app;
+Online through fintech companies/ mobile wallets website/ mobile app (e..g, GCash, Maya, etc);
+Through online insurance marketplace (e.g., Kwik.insure);
+Though online shopping sites (e.g., Shopee, Lazada, etc);
+Other channels;
+
+Samahan or grupo;
+GCash;
+Provided by company; 
+Lifebank insurance;
+To the company where I work;
+Cooperative;
+Mlullier;
+Philhealth office;
+
+VAGUE (NET);
+
+None;
+
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+!=======================MultiSelect
+
+DM $TQINS17 =
+$A_QINS17/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+91,
+R,F,
+VT = "QINS17. REASONS FOR NOT AVAILING INSURANCE FROM ONLINE INSURANCE MARKETPLACE",
+V = "
+Lack of knowledge about the product features;
+I prefer having a financial advisor or insurance agent to explain to me the products;
+I prefer having a financial advisor or insurance agent to assist me during the application process and I can reach out to me whenever I have queries;
+Because of negative news / negative experience from others;
+I don't trust the insurance products being sold online;
+The insurance products and processes are difficult to understand;
+Fear that the insurance product is not legit;
+Others;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:91:99]
+DM $TQINS27_[A] =
+$I_[A]_A_QINS27/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+91,
+R,F,
+VT = "QINS27. REASONS FOR AVAILING INSURANCE FROM ONLINE INSURANCE MARKETPLACE",
+V = "
+Offers affordable insurance products;
+Simple process and easy to apply;
+Recommended by family and friends;
+Convenient to get an insurance;
+Has wide range of insurance products with different companies;
+Has positive reviews and feedback;
+Quick application and purchase process;
+Convenience in making online payment;
+Others;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultiSelect
+
+DM $TQINS26 =
+$A_QINS26/
+1+2+91,
+1,
+2,
+91,
+4+5+6+7+8+9+10+11+12+13+14+16+15+17+18+19+20+92,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16,
+15,
+17,
+18,
+19,
+20,
+92,
+99,
+R,F,
+VT = "QINS26. TYPES OF INSURANCE INTENDING TO PURCHASE ONLINE",
+V = "
+LIFE INSURANCE (NET) <Q>;
+`     Traditional life insurance (Provides guaranteed benefits (e.g., death, endowment));
+`     Variable life insurance (Provides non-guaranteed benefits, benefit amount is dependent on the investment account / fund value);
+`     Other LIFE Insurance Types;
+NON-LIFE INSURANCE (NET) <Q>;
+`     Health Insurance without Life Insurance (Covers medical expenses such as inpatient, outpatient, and with laboratory and diagnostics);
+`     Personal Accident Insurance without Life Insurance (Provides accident coverage);
+`     Critical Illness Insurance without Life insurance (Provides lumpsum amount when the insured is diagnosed with a covered critical illness/ serious disease);
+`     Wealth Management without Life insurance (Provides an investment advisory service that combines other financial services to address needs of clients);
+`     Trust fund without Life insurance (Provides a fund held by trustees for beneficiaries);
+`     Education insurance without Life insurance (Pre-need educational fund);
+`     Pension Plan without Life insurance (Pre-need pension fund);
+`     Business insurance without Life insurance (Covers businesses and its assets);
+`     Property Insurance (Covers property of the insured);
+`     Vehicle Insurance (Covers vehicle of the insured);
+`     Travel Insurance (Covers insured during travel period);
+`     Lifestyle Insurance (Covers insurance for pets, online shopping, gadgets, etc);
+`     Microinsurance (meets the risk protection needs of the low-income such as illness, disaster, and death);
+`     Load insurance;
+`     Bills insurance;
+`     Online shopping insurance;
+`     Pet insurance;
+`     Other NON-LIFE Insurance Types;
+
+NONE OF THE ABOVE;
+Missing answers<Z>;
+Total count<C>",
