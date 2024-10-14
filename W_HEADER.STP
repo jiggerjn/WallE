@@ -1450,13 +1450,13 @@ T,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
-$JUL2024/NB,
+$Q32024/NB,
 [*DO A = 1:12]
 T,
 $HAv/[A].$Q42023/NB,
 $HAv/[A].$Q12024/NB,
 $HAv/[A].$Q22024/NB,
-$HAv/[A].$JUL2024/NB,
+$HAv/[A].$Q32024/NB,
 [*END A]
 HT = "HEADER A. GENERAL PROFILE",
 H  = "<F=SHG1>
@@ -1464,7 +1464,7 @@ TOTAL*(a);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 GENDER****
 MALE***
@@ -1472,14 +1472,14 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 FEMALE***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 LIFESTAGE****
 Students (20 yo and below)***
@@ -1487,35 +1487,35 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Yuppies (21-30 yo)***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Transitioners (31-35 yo)***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Balancers (36-45 yo)***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Older Adults/Retirees (46-65 yo)***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 
 SEC****
@@ -1524,35 +1524,35 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 C1***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 ABC1***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 C2***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 D***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i)",
+Q3 2024 *(i)",
 
 
 DM $HBT =
@@ -1560,13 +1560,13 @@ T,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
-$JUL2024/NB,
+$Q32024/NB,
 [*DO A = 1:15]
 T,
 $HBv/[A].$Q42023/NB,
 $HBv/[A].$Q12024/NB,
 $HBv/[A].$Q22024/NB,
-$HBv/[A].$JUL2024/NB,
+$HBv/[A].$Q32024/NB,
 
 [*END A]
 HT = "HEADER B. LOCALE AND MACROREGION",
@@ -1575,7 +1575,7 @@ TOTAL*(a);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 LOCALE****
 URBAN (NET)***
@@ -1583,21 +1583,21 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 RURAL (NET)***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 NCR (NET)***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 NORTH CENTRAL LUZON****
 NCL (NET)***
@@ -1605,21 +1605,21 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 NCL Urban***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 NCL Rural***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 
 SOUTH LUZON****
@@ -1628,21 +1628,21 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 SL Urban***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 SL Rural***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 
 VISAYAS****
@@ -1651,21 +1651,21 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Visayas Urban***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Visayas Rural***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 
 MINDANAO****
@@ -1674,21 +1674,21 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Mindanao Urban***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i);
+Q3 2024 *(i);
 
 Mindanao Rural***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
-JUL 2024 *(i)",
+Q3 2024 *(i)",
 
 
 DM $HCT = 
@@ -1696,11 +1696,13 @@ T,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
+$Q32024/NB,
 [*DO A = 1:4]
 T,
 $HCv/[A].$Q42023/NB,
 $HCv/[A].$Q12024/NB,
 $HCv/[A].$Q22024/NB,
+$HCv/[A].$Q32024/NB,
 [*END A]
 
 HT = "HEADER C. USERSHIP",
@@ -1709,6 +1711,7 @@ TOTAL*(a);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 USERSHIP****
 NON-USERS***
@@ -1716,12 +1719,14 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 USERS***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 WHETHER GCASH USERS****
 GCASH NON-USERS***
@@ -1729,12 +1734,14 @@ TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 GCASH USERS***
 TOTAL*(a)<S>;
 Q4 2023 *(f);
 Q1 2024 *(g);
-Q2 2024 *(h)",
+Q2 2024 *(h);
+Q3 2024 *(i)",
 DM $HDT =
 T,
 $Q42023/NB,
