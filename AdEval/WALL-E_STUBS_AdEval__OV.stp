@@ -343,9 +343,30 @@ Total count<C>",
 
 
 
+DM $TQADR =
+$A_QADR/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
 
-
-
+R,F,
+VT = "QADR. ",
+V = "
+AD 1: BUY LOAD STREAMING;
+AD 2: BUY LOAD GAMING;
+AD 3: LENDING GLOAN FILM X CEILING;
+AD 4: LENDING GLOAN FILM X GRADUATION;
+AD 5: GCASH STORIES: ADZ;
+AD 6: LENDING GCREDIT FILM x WATER;
+AD 7: LENDING GCREDIT FILM x NEXT TIME;
+AD 8: Sugod-Suyod It’s Showtime;
+Missing answers<Z>;
+Total count<C>",
 
 
 

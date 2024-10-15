@@ -82,11 +82,7 @@ QFI5]
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[*DATA KeyMessagesSG(;)=
-(R1) Kapag sabay sabay na ang gastusin, si GLoan ang sasalo sa'yo;
-(R2) Sa mga malalaking bilihin, kayang pagaanin at unti-untiin with GGives;
-(R3) Kapag gipit o petsa de peligro na, hindi ka maiipit with GCredit;
-(R4) Kaya today when you borrow with GCash]
+
 [*DATA KeyMessagesSGCode(;)=
 T_QPH8_9;
 T_QPH8_10;
@@ -128,13 +124,7 @@ V = "
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-[*DATA StatementsSG(;)=
-Comprehension: Most people would find the ad easy to follow;
-Relevance: Is relevant to me as an individual;
-Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
-Persuasion: Makes me feel happier or more comfortable about buying the brand;
-Use More: Makes me want to increase my usage;
-Wear Out: I am getting fed up with seeing the ad]
+
 
 [*DO A=1:[StatementsSG.#]]
     [*DATA STUBSContents(M=P,T=;) = 
@@ -197,18 +187,9 @@ None of the above;
 Missing answers<Z>;
 Total count<C>",
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-[*DATA Statements11SG(;)=
-Made me want to use GCash more in my transactions;
-I became more interested in other GCash features;
-I will likely recommend GCash to other people;
-Made me want to use GCash over other brands for my transactions;
-Made me want to avail of a loan with GCash/ GLoan ;
-Made me consider GGives to purchase gadgets through installments ;
-Made me consider GCredit for instant funds related to bills during petsa de peligro;
-Made me want to switch from borrowing from informal channels (ex. family, friends, tindahan, 5/6, etc.) ;
-Made me want to switch from borrowing from other lenders like home credit or online lending/ digital loans (ex. Cashalo, JuanHand, Tala, etc)]
 [*DATA Statements11SGCode(;)=
 T_QFI6_1;
 T_QFI6_2;
@@ -260,15 +241,7 @@ V = "
 
 
 
-[*DATA Statements12SG(;)=
-The episode or segment is unique and different;
-The episode or segment was very enjoyable to watch;
-The episode or segment told me something new;
-What was told in the episode or segment is relevant to me;
-The episode or segment increased my interest in the brand;
-You found it difficult to believe what the episode or segment said;
-The episode or segment is meaningful for me;
-This episode or segment is fit for the brand]
+
 
 [*DO A=1:[Statements12SG.#]]
     [*DATA STUBSContents(M=P,T=;) = 

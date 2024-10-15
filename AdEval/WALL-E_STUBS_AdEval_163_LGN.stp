@@ -52,10 +52,6 @@ QNT7]
 [*INSERT AdEval\_stub_oe]
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[*DATA KeyMessagesLGN(;)=
-(R1) Gipit sa pangluto? Kaya Today with GCredit `!  ;
-(R2) Nago-offer ng flexible at instantly accessible na loan kung saan pwedeng humiram mula P1,000 hanggang P50,000;
-(R3) Borrow with GCash kapag gipit sa pangluto at pamalengke o groceries]
 
 [*DATA KeyMessagesLGNCode(;)=
 T_QNT8_1;
@@ -101,13 +97,7 @@ V = "
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-[*DATA StatementsLGN(;)=
-Comprehension: Most people would find the ad easy to follow;
-Relevance: Is relevant to me as an individual;
-Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
-Persuasion: Makes me feel happier or more comfortable about buying the brand;
-Use More: Makes me want to increase my usage;
-Wear Out: I am getting fed up with seeing the ad]
+
 
 [*DO A=1:[StatementsLGN.#]]
     [*DATA STUBSContents(M=P,T=;) = 
@@ -172,17 +162,6 @@ Total count<C>",
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[*DATA Statements11LGN(;)=
-Made me want to use GCash more in my transactions;
-I became more interested in other GCash features;
-I will likely recommend GCash to other people;
-Made me want to use GCash over other brands for my transactions;
-Made me want to avail of a loan with GCash/ GCredit ;
-Made me consider GCredit for instant funds related to groceries during petsa de peligro;
-Made me want to borrow from GCash because it makes me feel less anxious vs borrowing from informal channels during petsa-de-peligro. (ex. family, friends, tindahan, 5/6, etc.);
-Made me want to switch from borrowing from other online loaning apps and e-wallet/fintech apps;
-Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov’t agencies, etc]
-
 
 
 [*DATA Statements11LGNCode(;)=
@@ -232,18 +211,10 @@ V = "
 
 
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-[*DATA Statements12LGN(;)=
-The ad is unique and different;
-The ad was very enjoyable to watch;
-The ad told me something new;
-What was told in the ad is relevant to me ;
-The ad increased my interest in the brand;
-You found it difficult to believe what the said;
-The ad is meaningful for me;
-This ad is fit for the brand 
-]
+
 
 [*DO A=1:[Statements12LGN.#]]
     [*DATA STUBSContents(M=P,T=;) = 

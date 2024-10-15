@@ -43,7 +43,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 [*DATA HX = HA,HB,HC,HD]
 [*DATA HEADERWAVE3 = HATBoost,HBTBoost,HCTBoost,HAGCitiesT,HBGCitiesT]
 
-[*DATA HEADERWAVE3 = HT,HA,HB,HC,HD]
+[*DATA HEADERWAVE3 = HTT,HA,HB,HC,HD]
 
 !
 [*DATA filters =
@@ -89,7 +89,7 @@ RURAL]
 !SELECT WR $WTS21to65,
 
 [*SET T = 0]
-ORDM $OCT2024 = $Blank/1,
+
 
 DM $FILTER_OV1a = $JUL2024/NB+$AUG2024/NB+$SEP2024/NB,
     V = "OV1a - July to October",
@@ -106,9 +106,10 @@ DM $FILTER_SHOW = $SEP2024/NB+$OCT2024/NB,
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 [*DO Z = 1:1]
-!T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
-!BT = "ALL RESPONDENTS",
+T #[+T] = $TQADR * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
 [*END Z]
+
 
 
 

@@ -65,10 +65,6 @@ QSC7]
 [*INSERT AdEval\_stub_oe]
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[*DATA KeyMessagesADZ(;)=
-(R1) Kahit sino, kaya with GCash;
-(R2) Sa GCash, kaya ko ang pag-angat at pag-asenso;
-(R3) Ang GCash ay para sa lahat, kahit ang mga may kapansanan]
 
 [*DATA KeyMessagesADZCode(;)=
 T_QSC8_4;
@@ -114,13 +110,7 @@ V = "
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-[*DATA StatementsADZ(;)=
-Comprehension: Most people would find the ad easy to follow;
-Relevance: Is relevant to me as an individual;
-Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
-Persuasion: Makes me feel happier or more comfortable about buying the brand;
-Use More: Makes me want to increase my usage;
-Wear Out: I am getting fed up with seeing the ad]
+
 
 [*DO A=1:[StatementsADZ.#]]
     [*DATA STUBSContents(M=P,T=;) = 
@@ -185,14 +175,7 @@ Total count<C>",
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[*DATA Statements11ADZ(;)=
-Made me want to use GCash more in my transactions;
-I became more interested in other GCash features;
-I will likely recommend GCash to other people;
-Made me want to use GCash over other brands for my transactions;
-Made me realize that GCash is for everyone;
-Made me want to use GCash to progress in life;
-Made me want to use GCash to help other people]
+
 
 
 
@@ -242,19 +225,10 @@ V = "
 [*END A]",
 
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
-[*DATA Statements12ADZ(;)=
-The ad is unique and different;
-The ad was very enjoyable to watch;
-The ad told me something new;
-What was told in the ad is relevant to me ;
-The ad increased my interest in the brand;
-You found it difficult to believe what the said;
-The ad is meaningful for me;
-This ad is fit for the brand 
-]
 
 [*DO A=1:[Statements12ADZ.#]]
     [*DATA STUBSContents(M=P,T=;) = 

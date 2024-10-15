@@ -37,8 +37,9 @@ F=ADF,
 [*dbopen dfEpsStub='AdEval\EPS_AdEval.xlsx']
 
 [*INSERT AdEval\WALLEv2_CARDCOL_ADEval]
-[*INSERT AdEval\WALL-E_STUBS_AdEval__OV]
+[*INSERT AdEval\DATASETS]
 
+[*INSERT AdEval\WALL-E_STUBS_AdEval__OV]
 [*INSERT AdEval\WALL-E_STUBS_AdEval_156_BLS]
 [*INSERT AdEval\WALL-E_STUBS_AdEval_157_BLG]
 [*INSERT AdEval\WALL-E_STUBS_AdEval_158_LEND]
@@ -56,6 +57,35 @@ DM $HT = T,
 HT = "TOTAL",
 H = "TOTAL*(A)",
 
+DM $HTT = T,
+$Q22024/NB,
+    $APR2024/NB,
+    $MAY2024/NB,
+    $JUN2024/NB,
+$Q32024/NB,
+    $JUL2024/NB,
+    $AUG2024/NB,
+    $SEP2024/NB,
+$Q42024/NB,  
+    $OCT2024/NB,  
+    $NOV2024/NB,  
+    $DEC2024/NB,  
+HT = "TOTAL",
+H = "
+TOTAL *;
+$Q2 2024 *;
+    $APR 2024 *;
+    $MAY 2024 *;
+    $JUN 2024 *;
+$Q3 2024 *;
+    $JUL 2024 *;
+    $AUG 2024 *;
+    $SEP 2024 *;
+$Q4 2024 *;
+    $OCT 2024 *;
+    $NOV 2024 *;
+    $DEC 2024 *
+",
 
 
 

@@ -1,0 +1,349 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA KeyMessagesBLS(;)=
+(R1) Madali magload sa GCash anytime, anywhere`! ;
+(R2) Pwede magload for all networks`! ;
+(R3) Mas okay pala mag-load sa GCash kaysa sa tindahan (SSS)`! ]
+
+[*DATA StatementsBLS(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DATA Statements11BLS(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to Buy Load in GCash;
+Made me want to switch from buying load in nearby stores/ sari-sari stores to GCash]
+
+[*DATA Statements12BLS(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA KeyMessagesBLG(;)=
+(R1) Madali magload sa GCash anytime, anywhere`! ;
+(R2) Pwede magload for all networks`! ;
+(R3) Mas okay pala mag-load sa GCash kaysa sa tindahan (SSS)`! 
+
+]
+[*DATA StatementsBLG(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DATA Statements11BLG(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to Buy Load in GCash;
+Made me want to switch from buying load in nearby stores/ sari-sari stores to GCash]
+
+
+[*DATA Statements12BLG(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA KeyMessagesLEND(;)=
+(R1) Sabay sabay na pangangailangan sa emergencies? Kaya Today with Gloan`! ;
+(R2) Instant access to funds from P100 up to P125,000 ;
+(R3) Borrow with GCash]
+
+
+[*DATA StatementsLEND(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DATA Statements11LEND(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GLoan;
+Made me want to switch from borrowing from informal channels (ex. family, friends, tindahan, 5/6, etc.);
+Made me want to switch from borrowing from other lenders like home credit or online lending/digital loans (ex. Cashalo, JuanHand, Tala, etc);
+Made me want to switch from borrowing from banks to GCash;
+Made me want to switch from borrowing from non-bank/ formal institutions such as Coop, Government Agencies, Microfinance etc to GCash;
+Made me consider GLoan for instant funds related to emergencies]
+
+[*DATA Statements12LEND(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesLOAN(;)=
+(R1) Sabay sabay ang school fees? Kaya Today with GLoan `! ;
+(R2) Instant access to funds from P100 up to P125,000 ;
+(R3) Borrow with GCash]
+
+
+
+[*DATA StatementsLOAN(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+
+[*DATA Statements11LOAN(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GLoan;
+Made me want to switch from borrowing from informal channels (ex. family, friends, tindahan, 5/6, etc.);
+Made me want to switch from borrowing from other lenders like home credit or online lending/ digital loans (ex. Cashalo, JuanHand, Tala, etc);
+Made me want to switch from borrowing from banks to GCash;
+Made me want to switch from borrowing from non-bank/ formal institutions such as Coop,Government Agencies, Microfinance etc to GCash;
+Made me consider GLoan for instant funds for my/ my child's school needs ]
+
+
+
+
+
+
+
+[*DATA Statements12LOAN(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesADZ(;)=
+(R1) Kahit sino, kaya with GCash;
+(R2) Sa GCash, kaya ko ang pag-angat at pag-asenso;
+(R3) Ang GCash ay para sa lahat, kahit ang mga may kapansanan]
+
+
+[*DATA StatementsADZ(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DATA Statements11ADZ(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me realize that GCash is for everyone;
+Made me want to use GCash to progress in life;
+Made me want to use GCash to help other people]
+
+[*DATA Statements12ADZ(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA KeyMessagesLGW(;)=
+(R1) Gipit sa pambayad ng bills?  Kaya Today with GCredit`! ;
+(R2) Nago-offer ng flexible at instantly accessible na loan kung saan pwedeng humiram mula P1,000 hanggang P50,000 ;
+(R3) Borrow with GCash kapag gipit sa pambayad ng tubig at iba pang bills
+]
+
+[*DATA StatementsLGW(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+
+[*DATA Statements11LGW(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GCredit ;
+Made me consider GCredit for instant funds related to bills during petsa de peligro ;
+Made me want to borrow from GCash because it makes me feel less anxious vs borrowing from informal channels during petsa-de-peligro. (ex. family, friends, tindahan, 5/6, etc.);
+Made me want to switch from borrowing from other online loaning apps and e-wallet/fintech apps;
+Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov’t agencies, etc]
+
+
+[*DATA Statements12LGW(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesLGN(;)=
+(R1) Gipit sa pangluto? Kaya Today with GCredit `!  ;
+(R2) Nago-offer ng flexible at instantly accessible na loan kung saan pwedeng humiram mula P1,000 hanggang P50,000;
+(R3) Borrow with GCash kapag gipit sa pangluto at pamalengke o groceries]
+
+
+
+[*DATA StatementsLGN(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+
+
+
+[*DATA Statements11LGN(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GCredit ;
+Made me consider GCredit for instant funds related to groceries during petsa de peligro;
+Made me want to borrow from GCash because it makes me feel less anxious vs borrowing from informal channels during petsa-de-peligro. (ex. family, friends, tindahan, 5/6, etc.);
+Made me want to switch from borrowing from other online loaning apps and e-wallet/fintech apps;
+Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov’t agencies, etc]
+
+
+
+
+[*DATA Statements12LGN(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesSG(;)=
+(R1) Kapag sabay sabay na ang gastusin, si GLoan ang sasalo sa'yo;
+(R2) Sa mga malalaking bilihin, kayang pagaanin at unti-untiin with GGives;
+(R3) Kapag gipit o petsa de peligro na, hindi ka maiipit with GCredit;
+(R4) Kaya today when you borrow with GCash]
+
+[*DATA StatementsSG(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+
+
+[*DATA Statements11SG(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GLoan ;
+Made me consider GGives to purchase gadgets through installments ;
+Made me consider GCredit for instant funds related to bills during petsa de peligro;
+Made me want to switch from borrowing from informal channels (ex. family, friends, tindahan, 5/6, etc.) ;
+Made me want to switch from borrowing from other lenders like home credit or online lending/ digital loans (ex. Cashalo, JuanHand, Tala, etc)]
+
+
+[*DATA Statements12SG(;)=
+The episode or segment is unique and different;
+The episode or segment was very enjoyable to watch;
+The episode or segment told me something new;
+What was told in the episode or segment is relevant to me;
+The episode or segment increased my interest in the brand;
+You found it difficult to believe what the episode or segment said;
+The episode or segment is meaningful for me;
+This episode or segment is fit for the brand]
+

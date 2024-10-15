@@ -95,7 +95,7 @@ RURAL]
 
 
 
-DM $FILTER_BLS =  ($JUL2024/NB)+($AUG2024/NB),
+DM $FILTER_LOAN =  ($JUL2024/NB)+($AUG2024/NB),
     V = "Ad 15.6 Buy load streaming",
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -107,50 +107,50 @@ BT = "ALL RESPONDENTS",
 [*END Z]
 
 
-FILTER $FILTER_BLS/1,
+FILTER $FILTER_LOAN/1,
 
  
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQBLS1 * $[HEADERWAVE3.Z],
+T #[+T] = $TQLOAN1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-IF ($TQBLS1/4..5), T #[+T] = $TQBLS2 * $[HEADERWAVE3.Z],
+IF ($TQLOAN1/4..5), T #[+T] = $TQLOAN2 * $[HEADERWAVE3.Z],
 BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-IF ($TQBLS1/4..5), T #[+T] = $TQBLS3 * $[HEADERWAVE3.Z],
+IF ($TQLOAN1/4..5), T #[+T] = $TQLOAN3 * $[HEADERWAVE3.Z],
 BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 
 !======
 [*DO Z = 1:1]
-IF ($TQBLS1/4..5), T #[+T] = $TQBLS4 * $[HEADERWAVE3.Z],
+IF ($TQLOAN1/4..5), T #[+T] = $TQLOAN4 * $[HEADERWAVE3.Z],
 BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQBLS5 * $[HEADERWAVE3.Z],
+T #[+T] = $TQLOAN5 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQBLS6 * $[HEADERWAVE3.Z],
+T #[+T] = $TQLOAN6 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQBLS7 * $[HEADERWAVE3.Z],
+T #[+T] = $TQLOAN7 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
@@ -159,19 +159,19 @@ BT = "ALL RESPONDENTS",
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQBLS8r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN8r[A] * $[HEADERWAVE3.X],
 [*END A]
-[*DO A = 2:[KeyMessagesBLS.#]]
-+T #[+T] = $TQBLS8r[A] * $[HEADERWAVE3.X],
+[*DO A = 2:[KeyMessagesLOAN.#]]
++T #[+T] = $TQLOAN8r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS8_TB * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN8_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS8_T2B * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN8_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 !======
@@ -179,25 +179,25 @@ T #[+T] = $TQBLS8_T2B * $[HEADERWAVE3.X],
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQBLS9r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN9r[A] * $[HEADERWAVE3.X],
 [*END A]
-[*DO A = 2:[StatementsBLS.#]]
-+T #[+T] = $TQBLS9r[A] * $[HEADERWAVE3.X],
+[*DO A = 2:[StatementsLOAN.#]]
++T #[+T] = $TQLOAN9r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS9_TB * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN9_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS9_T2B * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN9_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQBLS10 * $[HEADERWAVE3.Z],
+T #[+T] = $TQLOAN10 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
@@ -207,19 +207,19 @@ BT = "ALL RESPONDENTS",
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQBLS11r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN11r[A] * $[HEADERWAVE3.X],
 [*END A]
-[*DO A = 2:[Statements11BLS.#]]
-+T #[+T] = $TQBLS11r[A] * $[HEADERWAVE3.X],
+[*DO A = 2:[Statements11LOAN.#]]
++T #[+T] = $TQLOAN11r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS11_TB * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN11_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS11_T2B * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN11_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 
@@ -228,19 +228,19 @@ T #[+T] = $TQBLS11_T2B * $[HEADERWAVE3.X],
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQBLS12r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN12r[A] * $[HEADERWAVE3.X],
 [*END A]
-[*DO A = 2:[Statements12BLS.#]]
-+T #[+T] = $TQBLS12r[A] * $[HEADERWAVE3.X],
+[*DO A = 2:[Statements12LOAN.#]]
++T #[+T] = $TQLOAN12r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS12_TB * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN12_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQBLS12_T2B * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN12_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 
