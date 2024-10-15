@@ -129,7 +129,17 @@ IF ($TQSG1/4..5), T #[+T] = $TQSG3 * $[HEADERWAVE3.Z],
 BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
+!======
+[*DO Z = 1:1]
+IF ($TQSG1/4..5), T #[+T] = $TQSG3a * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
+[*END Z]
 
+!======
+[*DO Z = 1:1]
+IF ($TQSG1/4..5), T #[+T] = $TQSG3b * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
+[*END Z]
 !======
 [*DO Z = 1:1]
 IF ($TQSG1/4..5), T #[+T] = $TQSG4 * $[HEADERWAVE3.Z],

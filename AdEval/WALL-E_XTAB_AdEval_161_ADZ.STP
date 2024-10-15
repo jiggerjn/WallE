@@ -122,6 +122,11 @@ BT = "ALL RESPONDENTS",
 IF ($TQADZ1/4..5), T #[+T] = $TQADZ2 * $[HEADERWAVE3.Z],
 BT = "ASK AMONG AWARE OF AD",
 [*END Z]
+!======
+[*DO Z = 1:1]
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ2a * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
+[*END Z]
 
 !======
 [*DO Z = 1:1]
