@@ -1,0 +1,11 @@
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+1,
+2,
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",

@@ -1,0 +1,303 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 15.9 LENDING GLOAN FILM X GRADUATION
+[*DATA STUBSContents(;) = 
+TQLOAN1;
+QGI1;
+QLOAN1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQLOAN2;
+QGI2;
+QLOAN2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQLOAN3;
+A_QGI3;
+QLOAN3. BRAND LINK;
+Brandlink1]
+[*INSERT AdEval\_stub_soe]
+
+ 
+
+[*DATA STUBSContents(;) = 
+TQLOAN4;
+A_QGI4;
+QLOAN4. SOURCES OF AD AWARENESS;
+SOA2]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQLOAN5;
+QGI5;
+QLOAN5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQLOAN6;
+QGI6;
+QLOAN6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQLOAN7;
+QGI7;
+QLOAN7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QGI7]
+[*INSERT AdEval\_stub_oe]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA KeyMessagesLOAN(;)=
+(R1) Sabay sabay ang school fees? Kaya Today with GLoan `! ;
+(R2) Instant access to funds from P100 up to P125,000 ;
+(R3) Borrow with GCash]
+
+[*DATA KeyMessagesLOANCode(;)=
+T_QGI8_5;
+T_QGI8_6;
+T_QGI8_7
+]
+
+
+[*DO A=1:[KeyMessagesLOAN.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLOAN8r[A];
+    [KeyMessagesLOANCode.A];
+    QLOAN8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesLOAN.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQLOAN8_T2B = 
+[*DO A=1:[KeyMessagesLOAN.#]]
+$[KeyMessagesLOANCode.A]/4..5,
+[*END A]
+VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesLOAN.#]]
+[KeyMessagesLOAN.A][*SLE];
+[*END A]",
+
+DM $TQLOAN8_TB = 
+[*DO A=1:[KeyMessagesLOAN.#]]
+$[KeyMessagesLOANCode.A]/5,
+[*END A]
+VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesLOAN.#]]
+[KeyMessagesLOAN.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA StatementsLOAN(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DO A=1:[StatementsLOAN.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLOAN9r[A];
+    T_QGI9_[A];
+    QLOAN9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsLOAN.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQLOAN9_T2B = 
+[*DO A=1:[StatementsLOAN.#]]
+$T_QGI9_[A]/4..5,
+[*END A]
+VT = "QLOAN9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsLOAN.#]]
+[StatementsLOAN.A][*SLE];
+[*END A]",
+
+DM $TQLOAN9_TB = 
+[*DO A=1:[StatementsLOAN.#]]
+$T_QGI9_[A]/5,
+[*END A]
+VT = "QLOAN9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsLOAN.#]]
+[StatementsLOAN.A][*SLE];
+[*END A]",
+
+
+DM $TQLOAN10 =
+$A_QGI10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QLM10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA Statements11LOAN(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GLoan;
+Made me want to switch from borrowing from informal channels (ex. family, friends, tindahan, 5/6, etc.);
+Made me want to switch from borrowing from other lenders like home credit or online lending/ digital loans (ex. Cashalo, JuanHand, Tala, etc);
+Made me want to switch from borrowing from banks to GCash;
+Made me want to switch from borrowing from non-bank/ formal institutions such as Coop,Government Agencies, Microfinance etc to GCash;
+Made me consider GLoan for instant funds for my/ my child's school needs ]
+
+
+[*DATA Statements11LOANCode(;)=
+T_QGI11_1;
+T_QGI11_2;
+T_QGI11_3;
+T_QGI11_4;
+T_QGI11_9;
+T_QGI11_10;
+T_QGI11_11;
+T_QGI11_12;
+T_QGI11_13;
+T_QGI11_14]
+
+
+[*DO A=1:[Statements11LOAN.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLOAN11r[A];
+    [Statements11LOANCode.A];
+    QLOAN11. ACTION AFTER AD;
+    [Statements11LOAN.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQLOAN11_T2B = 
+[*DO A=1:[Statements11LOAN.#]]
+$[Statements11LOANCode.A]/1..2,
+[*END A]
+VT = "QLOAN11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11LOAN.#]]
+[Statements11LOAN.A][*SLE];
+[*END A]",
+
+DM $TQLOAN11_TB = 
+[*DO A=1:[Statements11LOAN.#]]
+$[Statements11LOANCode.A]/1,
+[*END A]
+VT = "QLOAN11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11LOAN.#]]
+[Statements11LOAN.A][*SLE];
+[*END A]",
+
+
+
+
+
+[*DATA Statements12LOAN(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+[*DO A=1:[Statements12LOAN.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLOAN12r[A];
+    T_QGI12_[A];
+    QLOAN12. AD EVALUATION METRICS;
+    [Statements12LOAN.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQLOAN12_T2B = 
+[*DO A=1:[Statements12LOAN.#]]
+$T_QGI12_[A]/1..2,
+[*END A]
+VT = "QLOAN12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12LOAN.#]]
+[Statements12LOAN.A][*SLE];
+[*END A]",
+
+DM $TQLOAN12_TB = 
+[*DO A=1:[Statements12LOAN.#]]
+$T_QGI12_[A]/1,
+[*END A]
+VT = "QLOAN12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12LOAN.#]]
+[Statements12LOAN.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

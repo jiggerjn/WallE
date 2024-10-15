@@ -1,0 +1,313 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 15.9 LENDING GLOAN FILM X GRADUATION
+[*DATA STUBSContents(;) = 
+TQADZ1;
+QSC1;
+QADZ1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQADZ2;
+QSC2;
+QADZ2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+DM $TQADZ2a =
+$QSC2a/
+1,
+2,
+R,F,
+VT = "QADZ2a. WHETHER FINISHED WATCHING THE AD",
+V = "
+Yes, I finished watching the full ad/ film;
+No, I did not finish watching the full ad/ film;	
+Missing answers<Z>;
+Total count<C>",
+
+
+
+[*DATA STUBSContents(;) = 
+TQADZ3;
+A_QSC3;
+QADZ3. BRAND LINK;
+Brandlink1]
+[*INSERT AdEval\_stub_soe]
+
+
+
+[*DATA STUBSContents(;) = 
+TQADZ4;
+A_QSC4;
+QADZ4. SOURCES OF AD AWARENESS;
+SOA2]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQADZ5;
+QSC5;
+QADZ5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQADZ6;
+QSC6;
+QADZ6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQADZ7;
+QSC7;
+QADZ7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QSC7]
+[*INSERT AdEval\_stub_oe]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA KeyMessagesADZ(;)=
+(R1) Kahit sino, kaya with GCash;
+(R2) Sa GCash, kaya ko ang pag-angat at pag-asenso;
+(R3) Ang GCash ay para sa lahat, kahit ang mga may kapansanan]
+
+[*DATA KeyMessagesADZCode(;)=
+T_QSC8_4;
+T_QSC8_5;
+T_QSC8_6]
+
+
+
+[*DO A=1:[KeyMessagesADZ.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQADZ8r[A];
+    [KeyMessagesADZCode.A];
+    QADZ8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesADZ.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQADZ8_T2B = 
+[*DO A=1:[KeyMessagesADZ.#]]
+$[KeyMessagesADZCode.A]/4..5,
+[*END A]
+VT = "QADZ8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesADZ.#]]
+[KeyMessagesADZ.A][*SLE];
+[*END A]",
+
+DM $TQADZ8_TB = 
+[*DO A=1:[KeyMessagesADZ.#]]
+$[KeyMessagesADZCode.A]/5,
+[*END A]
+VT = "QADZ8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesADZ.#]]
+[KeyMessagesADZ.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA StatementsADZ(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DO A=1:[StatementsADZ.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQADZ9r[A];
+    T_QSC9_[A];
+    QADZ9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsADZ.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQADZ9_T2B = 
+[*DO A=1:[StatementsADZ.#]]
+$T_QSC9_[A]/4..5,
+[*END A]
+VT = "QADZ9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsADZ.#]]
+[StatementsADZ.A][*SLE];
+[*END A]",
+
+DM $TQADZ9_TB = 
+[*DO A=1:[StatementsADZ.#]]
+$T_QSC9_[A]/5,
+[*END A]
+VT = "QADZ9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsADZ.#]]
+[StatementsADZ.A][*SLE];
+[*END A]",
+
+
+DM $TQADZ10 =
+$A_QSC10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QADZ10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA Statements11ADZ(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me realize that GCash is for everyone;
+Made me want to use GCash to progress in life;
+Made me want to use GCash to help other people]
+
+
+
+[*DATA Statements11ADZCode(;)=
+T_QSC11_1;
+T_QSC11_2;
+T_QSC11_3;
+T_QSC11_4;
+T_QSC11_7;
+T_QSC11_8;
+T_QSC11_9
+
+]
+
+
+[*DO A=1:[Statements11ADZ.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQADZ11r[A];
+    [Statements11ADZCode.A];
+    QADZ11. ACTION AFTER AD;
+    [Statements11ADZ.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQADZ11_T2B = 
+[*DO A=1:[Statements11ADZ.#]]
+$[Statements11ADZCode.A]/1..2,
+[*END A]
+VT = "QADZ11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11ADZ.#]]
+[Statements11ADZ.A][*SLE];
+[*END A]",
+
+DM $TQADZ11_TB = 
+[*DO A=1:[Statements11ADZ.#]]
+$[Statements11ADZCode.A]/1,
+[*END A]
+VT = "QADZ11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11ADZ.#]]
+[Statements11ADZ.A][*SLE];
+[*END A]",
+
+
+
+
+
+[*DATA Statements12ADZ(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+[*DO A=1:[Statements12ADZ.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQADZ12r[A];
+    T_QSC12_[A];
+    QADZ12. AD EVALUATION METRICS;
+    [Statements12ADZ.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQADZ12_T2B = 
+[*DO A=1:[Statements12ADZ.#]]
+$T_QSC12_[A]/1..2,
+[*END A]
+VT = "QADZ12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12ADZ.#]]
+[Statements12ADZ.A][*SLE];
+[*END A]",
+
+DM $TQADZ12_TB = 
+[*DO A=1:[Statements12ADZ.#]]
+$T_QSC12_[A]/1,
+[*END A]
+VT = "QADZ12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12ADZ.#]]
+[Statements12ADZ.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,327 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 16.4 SUGOD-SUYOD IT’S SHOWTIME
+[*DATA STUBSContents(;) = 
+TQSG1;
+QPH1;
+QSG1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQSG2;
+QFI2;
+QSG2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQSG3;
+A_QFI3;
+QSG3. BRAND LINK;
+Brandlink1]
+[*INSERT AdEval\_stub_soe]
+
+
+[*DATA STUBSContents(;) = 
+TQSG3a;
+QFI3a;
+QSG3a. PRODUCT ADVERTISED RECALLED – SPONTANEOUS;
+QFI3a]
+[*INSERT AdEval\_stub_oe]
+
+ 
+ 
+DM $TQSG3b =
+$A_QFI3b/
+1,
+2,
+3,
+4,
+5,
+6,
+R,F,
+VT = "QSG3b. PRODUCT ADVERTISED RECALLED – AIDED",
+V = "
+GLoan;
+GGives;
+GCredit;
+All of the above;
+None of the above;
+Don’t recall;
+Missing answers<Z>;
+Total count<C>",
+
+[*DATA STUBSContents(;) = 
+TQSG4;
+A_QFI4;
+QSG4. SOURCES OF AD AWARENESS;
+SOA1]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQSG5;
+QPH5;
+QSG5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQSG6;
+QPH6;
+QSG6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQSG7;
+QFI5;
+QSG7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QFI5]
+[*INSERT AdEval\_stub_oe]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA KeyMessagesSG(;)=
+(R1) Kapag sabay sabay na ang gastusin, si GLoan ang sasalo sa'yo;
+(R2) Sa mga malalaking bilihin, kayang pagaanin at unti-untiin with GGives;
+(R3) Kapag gipit o petsa de peligro na, hindi ka maiipit with GCredit;
+(R4) Kaya today when you borrow with GCash]
+[*DATA KeyMessagesSGCode(;)=
+T_QPH8_9;
+T_QPH8_10;
+T_QPH8_11;
+T_QPH8_12]
+
+[*DO A=1:[KeyMessagesSG.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQSG8r[A];
+    [KeyMessagesSGCode.A];
+    QSG8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesSG.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+DM $TQSG8_T2B = 
+[*DO A=1:[KeyMessagesSG.#]]
+$[KeyMessagesSGCode.A]/4..5,
+[*END A]
+VT = "QSG8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesSG.#]]
+[KeyMessagesSG.A][*SLE];
+[*END A]",
+
+DM $TQSG8_TB = 
+[*DO A=1:[KeyMessagesSG.#]]
+$[KeyMessagesSGCode.A]/5,
+[*END A]
+VT = "QSG8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesSG.#]]
+[KeyMessagesSG.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA StatementsSG(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DO A=1:[StatementsSG.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQSG9r[A];
+    T_QPH9_[A];
+    QSG9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsSG.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQSG9_T2B = 
+[*DO A=1:[StatementsSG.#]]
+$T_QPH9_[A]/4..5,
+[*END A]
+VT = "QSG9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsSG.#]]
+[StatementsSG.A][*SLE];
+[*END A]",
+
+DM $TQSG9_TB = 
+[*DO A=1:[StatementsSG.#]]
+$T_QPH9_[A]/5,
+[*END A]
+VT = "QSG9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsSG.#]]
+[StatementsSG.A][*SLE];
+[*END A]",
+
+
+DM $TQSG10 =
+$A_QPH10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QSG10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+[*DATA Statements11SG(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to avail of a loan with GCash/ GLoan ;
+Made me consider GGives to purchase gadgets through installments ;
+Made me consider GCredit for instant funds related to bills during petsa de peligro;
+Made me want to switch from borrowing from informal channels (ex. family, friends, tindahan, 5/6, etc.) ;
+Made me want to switch from borrowing from other lenders like home credit or online lending/ digital loans (ex. Cashalo, JuanHand, Tala, etc)]
+[*DATA Statements11SGCode(;)=
+T_QFI6_1;
+T_QFI6_2;
+T_QFI6_3;
+T_QFI6_4;
+T_QFI6_23;
+T_QFI6_24;
+T_QFI6_25;
+T_QFI6_26;
+T_QFI6_27
+
+]
+
+
+[*DO A=1:[Statements11SG.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQSG11r[A];
+    [Statements11SGCode.A];
+    QSG11. ACTION AFTER AD;
+    [Statements11SG.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQSG11_T2B = 
+[*DO A=1:[Statements11SG.#]]
+$[Statements11SGCode.A]/1..2,
+[*END A]
+VT = "QSG11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11SG.#]]
+[Statements11SG.A][*SLE];
+[*END A]",
+
+DM $TQSG11_TB = 
+[*DO A=1:[Statements11SG.#]]
+$[Statements11SGCode.A]/1,
+[*END A]
+VT = "QSG11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11SG.#]]
+[Statements11SG.A][*SLE];
+[*END A]",
+
+
+
+
+
+[*DATA Statements12SG(;)=
+The episode or segment is unique and different;
+The episode or segment was very enjoyable to watch;
+The episode or segment told me something new;
+What was told in the episode or segment is relevant to me;
+The episode or segment increased my interest in the brand;
+You found it difficult to believe what the episode or segment said;
+The episode or segment is meaningful for me;
+This episode or segment is fit for the brand]
+
+[*DO A=1:[Statements12SG.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQSG12r[A];
+    T_QFI7_[A];
+    QSG12. AD EVALUATION METRICS;
+    [Statements12SG.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQSG12_T2B = 
+[*DO A=1:[Statements12SG.#]]
+$T_QFI7_[A]/1..2,
+[*END A]
+VT = "QSG12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12SG.#]]
+[Statements12SG.A][*SLE];
+[*END A]",
+
+DM $TQSG12_TB = 
+[*DO A=1:[Statements12SG.#]]
+$T_QFI7_[A]/1,
+[*END A]
+VT = "QSG12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12SG.#]]
+[Statements12SG.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

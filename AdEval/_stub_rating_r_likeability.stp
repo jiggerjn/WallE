@@ -1,0 +1,23 @@
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+1,
+2,
+3,
+4,
+5,
+4..5,
+1..2,
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+Dislike it a lot more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (1)<V1>;
+Dislike it a little more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (2)<V2>;
+Feel it's about average (3)<V3>;
+Like this ad a little more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (4)<V4>;
+Like this ad a lot more than most e-wallet/ fintech/ mobile banking/ e-remittance ads (5)<V5>;
+`    Top 2 Box<Q>;
+`    Bottom 2 Box<Q>;
+Missing answers<Z>;
+Total count<C>",
+
+

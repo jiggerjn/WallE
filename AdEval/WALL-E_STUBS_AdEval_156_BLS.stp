@@ -1,0 +1,294 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 15.6 BUY LOAD STREAMING
+[*DATA STUBSContents(;) = 
+TQBLS1;
+QPH1;
+QPH1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQBLS2;
+QFI2;
+QFI2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQBLS3;
+A_QFI3;
+QFI3. BRAND LINK;
+Brandlink1]
+[*INSERT AdEval\_stub_soe]
+
+ 
+
+[*DATA STUBSContents(;) = 
+TQBLS4;
+A_QFI4;
+QFI4. SOURCES OF AD AWARENESS;
+SOA1]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQBLS5;
+QPH5;
+QPH5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQBLS6;
+QPH6;
+QPH6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQBLS7;
+QFI5;
+QFI5. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QFI5]
+[*INSERT AdEval\_stub_oe]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA KeyMessagesBLS(;)=
+(R1) Madali magload sa GCash anytime, anywhere`! ;
+(R2) Pwede magload for all networks`! ;
+(R3) Mas okay pala mag-load sa GCash kaysa sa tindahan (SSS)`! ]
+[*DATA KeyMessagesBLSCode(;)=
+T_QPH8_6;
+T_QPH8_7;
+T_QPH8_8]
+
+
+[*DO A=1:[KeyMessagesBLS.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQBLS8r[A];
+    [KeyMessagesBLSCode.A];
+    QPH8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesBLS.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQBLS8_T2B = 
+[*DO A=1:[KeyMessagesBLS.#]]
+$[KeyMessagesBLSCode.A]/4..5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesBLS.#]]
+[KeyMessagesBLS.A][*SLE];
+[*END A]",
+
+DM $TQBLS8_TB = 
+[*DO A=1:[KeyMessagesBLS.#]]
+$[KeyMessagesBLSCode.A]/5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesBLS.#]]
+[KeyMessagesBLS.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA StatementsBLS(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+[*DO A=1:[StatementsBLS.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQBLS9r[A];
+    T_QPH9_[A];
+    QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsBLS.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQBLS9_T2B = 
+[*DO A=1:[StatementsBLS.#]]
+$T_QPH9_[A]/4..5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsBLS.#]]
+[StatementsBLS.A][*SLE];
+[*END A]",
+
+DM $TQBLS9_TB = 
+[*DO A=1:[StatementsBLS.#]]
+$T_QPH9_[A]/5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsBLS.#]]
+[StatementsBLS.A][*SLE];
+[*END A]",
+
+
+DM $TQBLS10 =
+$A_QPH10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QPH10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DATA Statements11BLS(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me want to Buy Load in GCash;
+Made me want to switch from buying load in nearby stores/ sari-sari stores to GCash]
+
+[*DATA Statements11BLSCode(;)=
+T_QFI6_1;
+T_QFI6_2;
+T_QFI6_3;
+T_QFI6_4;
+T_QFI6_21;
+T_QFI6_22
+
+]
+
+
+[*DO A=1:[Statements11BLS.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQBLS11r[A];
+    [Statements11BLSCode.A];
+    QFI6. ACTION AFTER AD;
+    [Statements11BLS.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQBLS11_T2B = 
+[*DO A=1:[Statements11BLS.#]]
+$[Statements11BLSCode.A]/1..2,
+[*END A]
+VT = "QFI6. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11BLS.#]]
+[Statements11BLS.A][*SLE];
+[*END A]",
+
+DM $TQBLS11_TB = 
+[*DO A=1:[Statements11BLS.#]]
+$[Statements11BLSCode.A]/1,
+[*END A]
+VT = "QFI6. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11BLS.#]]
+[Statements11BLS.A][*SLE];
+[*END A]",
+
+
+
+
+
+[*DATA Statements12BLS(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me ;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand 
+]
+
+[*DO A=1:[Statements12BLS.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQBLS12r[A];
+    T_QFI7_[A];
+    QFI7. AD EVALUATION METRICS;
+    [Statements12BLS.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQBLS12_T2B = 
+[*DO A=1:[Statements12BLS.#]]
+$T_QFI7_[A]/1..2,
+[*END A]
+VT = "QFI7. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12BLS.#]]
+[Statements12BLS.A][*SLE];
+[*END A]",
+
+DM $TQBLS12_TB = 
+[*DO A=1:[Statements12BLS.#]]
+$T_QFI7_[A]/1,
+[*END A]
+VT = "QFI7. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12BLS.#]]
+[Statements12BLS.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

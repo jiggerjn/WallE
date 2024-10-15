@@ -1,0 +1,19 @@
+
+
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+[*dbloop dlStubs=dfEpsStub;[STUBSContents.4]]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.Code],
+    [*99]
+[*dbend dlStubs]
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+[*dbloop dlStubs=dfEpsStub;[STUBSContents.4]]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.Stub];
+    [*99]
+[*dbend dlStubs]
+Missing answers<Z>;
+Total count<C>",
