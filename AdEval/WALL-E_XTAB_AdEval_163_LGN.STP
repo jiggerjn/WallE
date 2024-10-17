@@ -95,20 +95,17 @@ RURAL]
 
 
 
-DM $FILTER_LGN =  ($JUL2024/NB)+($AUG2024/NB),
-    V = "Ad 15.6 Buy load streaming",
+DM $FILTER_LGN =  ($Resp_AD_LGN/NB).($Q32024/NB),
+    V = "Ad 16.3 ",
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 
-[*DO Z = 1:1]
-T #[+T] = $TQADR * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
+ 
 
 
 FILTER $FILTER_LGN/1,
-
+global bt# = "ALL RESPONDENTS", 
  
 
 !======

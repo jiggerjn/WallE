@@ -93,22 +93,23 @@ RURAL]
 [*INSERT Datasets]
 
 
-
-
-DM $FILTER_ADZ =  ($JUL2024/NB)+($AUG2024/NB),
-    V = "Ad 15.6 Buy load streaming",
+DM $FILTER_ADZ_1 =  (($Resp_AD_ADZ/NB).($Resp_AD_ADZ_SEP24/B)).($Q32024/NB),
+    V = "Ad 161 Gcash Storoies - ADZ - Until Septermber 23",
+DM $FILTER_ADZ_2 =  ($Resp_AD_ADZ_SEP24/NB).($Q32024/NB),
+    V = "Ad 161 Gcash Storoies - ADZ - September 24 Onwards",
+!DM $FILTER_ADZ =  ($Resp_AD_ADZ/NB).($Q32024/NB),
+DM $FILTER_ADZ =  ($FILTER_ADZ_1/NB)+($FILTER_ADZ_2/NB),
+    V = "Ad 161 Gcash Storoies - ADZ",
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 
-[*DO Z = 1:1]
-T #[+T] = $TQADR * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
+!======
+ 
 
 
 FILTER $FILTER_ADZ/1,
-
+global bt# = "ALL RESPONDENTS", 
  
 
 !======
@@ -143,40 +144,41 @@ BT = "ASK AMONG AWARE OF AD",
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQADZ5 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ5 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQADZ6 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ6 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQADZ7 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ7 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
+global bt# = "ASK AMONG AWARE OF AD",
 
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQADZ8r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ8r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*DO A = 2:[KeyMessagesADZ.#]]
-+T #[+T] = $TQADZ8r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), +T #[+T] = $TQADZ8r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ8_TB * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ8_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ8_T2B * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ8_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 !======
@@ -184,26 +186,26 @@ T #[+T] = $TQADZ8_T2B * $[HEADERWAVE3.X],
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQADZ9r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ9r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*DO A = 2:[StatementsADZ.#]]
-+T #[+T] = $TQADZ9r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), +T #[+T] = $TQADZ9r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ9_TB * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ9_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ9_T2B * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ9_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQADZ10 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ10 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 
@@ -212,19 +214,19 @@ BT = "ALL RESPONDENTS",
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*DO A = 2:[Statements11ADZ.#]]
-+T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 
@@ -233,19 +235,19 @@ T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.X],
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQADZ12r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ12r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*DO A = 2:[Statements12ADZ.#]]
-+T #[+T] = $TQADZ12r[A] * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), +T #[+T] = $TQADZ12r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ12_TB * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ12_TB * $[HEADERWAVE3.X],
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQADZ12_T2B * $[HEADERWAVE3.X],
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ12_T2B * $[HEADERWAVE3.X],
 [*END X]
 
 

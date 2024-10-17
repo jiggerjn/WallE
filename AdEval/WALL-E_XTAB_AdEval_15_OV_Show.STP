@@ -105,11 +105,7 @@ DM $FILTER_SHOW = $SEP2024/NB+$OCT2024/NB,
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[*DO Z = 1:1]
-T #[+T] = $TQADR * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
-
+ 
 
 
 

@@ -2,7 +2,7 @@
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!
-!SECTION 16.4 SUGOD-SUYOD IT’S SHOWTIME
+!SECTION 16.4 SUGOD-SUYOD IT`'S SHOWTIME
 [*DATA STUBSContents(;) = 
 TQSG1;
 QPH1;
@@ -27,7 +27,7 @@ Brandlink1]
 [*DATA STUBSContents(;) = 
 TQSG3a;
 QFI3a;
-QSG3a. PRODUCT ADVERTISED RECALLED – SPONTANEOUS;
+QSG3a. PRODUCT ADVERTISED RECALLED - SPONTANEOUS;
 QFI3a]
 [*INSERT AdEval\_stub_oe]
 
@@ -42,14 +42,14 @@ $A_QFI3b/
 5,
 6,
 R,F,
-VT = "QSG3b. PRODUCT ADVERTISED RECALLED – AIDED",
+VT = "QSG3b. PRODUCT ADVERTISED RECALLED - AIDED",
 V = "
 GLoan;
 GGives;
 GCredit;
 All of the above;
 None of the above;
-Don’t recall;
+Don`'t recall;
 Missing answers<Z>;
 Total count<C>",
 

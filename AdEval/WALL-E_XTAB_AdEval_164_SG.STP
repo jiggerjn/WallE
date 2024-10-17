@@ -95,20 +95,16 @@ RURAL]
 
 
 
-DM $FILTER_SG =  ($JUL2024/NB)+($AUG2024/NB),
-    V = "Ad 15.6 Buy load streaming",
+DM $FILTER_SG =  ($Resp_AD_SG/NB).($Q32024/NB),
+    V = "Ad 16.4 SG",
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 
-[*DO Z = 1:1]
-T #[+T] = $TQADR * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
-
+ 
 
 FILTER $FILTER_SG/1,
-
+global bt# = "ALL RESPONDENTS", 
  
 
 !======
@@ -148,20 +144,20 @@ BT = "ASK AMONG AWARE OF AD",
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQSG5 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQSG1/4..5), T #[+T] = $TQSG5 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQSG6 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQSG1/4..5), T #[+T] = $TQSG6 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQSG7 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQSG1/4..5), T #[+T] = $TQSG7 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 !======
@@ -169,19 +165,22 @@ BT = "ALL RESPONDENTS",
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[KeyMessagesSG.#]]
-+T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG8_TB * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG8_TB * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG8_T2B * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG8_T2B * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 !======
@@ -189,26 +188,29 @@ T #[+T] = $TQSG8_T2B * $[HEADERWAVE3.X],
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[StatementsSG.#]]
-+T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG9_TB * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG9_TB * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG9_T2B * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG9_T2B * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQSG10 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+IF ($TQSG1/4..5), T #[+T] = $TQSG10 * $[HEADERWAVE3.Z],
+BT = "ASK AMONG AWARE OF AD",
 [*END Z]
 
 
@@ -217,19 +219,22 @@ BT = "ALL RESPONDENTS",
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[Statements11SG.#]]
-+T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG11_TB * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG11_TB * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG11_T2B * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG11_T2B * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 
@@ -238,19 +243,22 @@ T #[+T] = $TQSG11_T2B * $[HEADERWAVE3.X],
 [*DO X = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[Statements12SG.#]]
-+T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.X],
 [*END A]
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG12_TB * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG12_TB * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 [*DO X = 1:1]
-T #[+T] = $TQSG12_T2B * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), T #[+T] = $TQSG12_T2B * $[HEADERWAVE3.X],
+BT = "ASK AMONG AWARE OF AD",
 [*END X]
 
 
