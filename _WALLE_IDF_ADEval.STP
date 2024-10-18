@@ -134,7 +134,7 @@ $Q4 2024 *;
 ![*END A]
 !,
 
-!IF $Q32024/NB.($Resp_AD_SG/NB), LCSV (H) $iobs.&$TQSG1.&$TQSG3a.$QFI3a.&$TQSG3b.$A_QFI3b,
+!IF $Q32024/NB.($Resp_AD_SG/NB), LCSV (H) $iobs.&$TQSG1.&$TQSG3a.$QFI3a.&$TQSG3b.$A_QFI3b.&$TQSG4.$A_QFI4.$QFI4_1_other.$QFI4_91_other,
 !IF $Resp_AD_SG/NB, LCSV (H) $iobs.&$TQSG1
 ![*DO A=1:[KeyMessagesSG.#]]
 !    .&$TQSG8r[A].$[KeyMessagesSGCode.A]
@@ -181,9 +181,9 @@ $Q4 2024 *;
 !,
 !IF $Q32024/NB.$Resp_AD_LGW/NB, LCSV (H) $iobs.$JUL2024.$AUG2024.$SEP2024.&$TQLGW1.&$TQLGW3.$A_QLM3,
 
-IF $Q32024/NB.($Resp_AD_ADZ_SEP24_Before/NB+$Resp_AD_ADZ_SEP24_Onward/NB), LCSV (H) $iobs.$Resp_AD_ADZ_SEP24_Before.$Resp_AD_ADZ_SEP24_Onward.&$TQADZ1
-.&$TQADZ4.$A_QSC4.$QSC4_1_oth.$QSC4_91_oth
-,
+!IF $Q32024/NB.($Resp_AD_ADZ_SEP24_Before/NB+$Resp_AD_ADZ_SEP24_Onward/NB), LCSV (H) $iobs.$Resp_AD_ADZ_SEP24_Before.$Resp_AD_ADZ_SEP24_Onward.&$TQADZ1
+!.&$TQADZ4.$A_QSC4.$QSC4_1_oth.$QSC4_91_oth
+!,
 
 IF $Q32024/NB, WRITE,
 
