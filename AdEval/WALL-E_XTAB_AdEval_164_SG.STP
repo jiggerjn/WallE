@@ -31,9 +31,9 @@ F=DPS2,          ! ------ Decimal Std
 F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
 
 
-!F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 
-F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 
 
 %UNR = '(UNWEIGHTED BASE)',
@@ -41,51 +41,13 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HA,HB,HC,HD]
-[*DATA HEADERWAVE3 = HATBoost,HBTBoost,HCTBoost,HAGCitiesT,HBGCitiesT]
+ 
+[*DATA HEADERWAVE3 = HA,HB,HC]
 
-[*DATA HEADERWAVE3 = HTT,HA,HB,HC,HD]
-
-!
-[*DATA filters =
-$Q2/1,
-$Q2/2,
-$T_Q1_1/1..20,
-$T_Q1_1/21..30,
-$T_Q1_1/31..35,
-$T_Q1_1/36..45,
-$T_Q1_1/46..99,
-$SEC19/1..2,
-$SEC19/3,
-$SEC19/4,
-$Q3/1,
-($Q3/2+3+4+5),
-($Q3/6+7+8),
-($Q3/9+10+11),
-($Q3/12+13+14+15+16+17),
-$Q4/1,
-$Q4/2]
-
-[*DATA filtername =
-MALE,    
-FEMALE,
-STUDENTS (20 yo and below),
-YUPPIES (21-30 yo),
-TRANSITIONERS (31-35 yo),
-BALANCERS (36-45 yo),
-OLDER ADULTS/RETIREES (46-65 yo),
-ABC1,
-C2,
-D,
-NCR,
-NCL,
-SL,
-VISAYAS,
-MINDANAO,
-URBAN,
-RURAL]
+F=NBCS,
 
 
-!SELECT WR $WTS,
+SELECT WR $WTS,
 !SELECT WR $WTS21to65,
 
 [*SET T = 0]
@@ -108,158 +70,158 @@ global bt# = "ALL RESPONDENTS",
  
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQSG1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG2 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG3 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG3a * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG3b * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG4 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG5 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG6 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG7 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:3]
 [*SET s = 0]
 [*DO A = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
+IF ($TQSG1/4..5), T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[KeyMessagesSG.#]]
-IF ($TQSG1/4..5), +T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG8_TB * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG8_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG8_T2B * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG8_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:3]
 [*SET s = 0]
 [*DO A = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
+IF ($TQSG1/4..5), T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[StatementsSG.#]]
-IF ($TQSG1/4..5), +T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG9_TB * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG9_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG9_T2B * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG9_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQSG1/4..5), T #[+T] = $TQSG10 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:3]
 [*SET s = 0]
 [*DO A = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
+IF ($TQSG1/4..5), T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[Statements11SG.#]]
-IF ($TQSG1/4..5), +T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG11_TB * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG11_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG11_T2B * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG11_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:3]
 [*SET s = 0]
 [*DO A = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
+IF ($TQSG1/4..5), T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
 [*END A]
 [*DO A = 2:[Statements12SG.#]]
-IF ($TQSG1/4..5), +T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.X],
+IF ($TQSG1/4..5), +T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG12_TB * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG12_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
-[*DO X = 1:1]
-IF ($TQSG1/4..5), T #[+T] = $TQSG12_T2B * $[HEADERWAVE3.X],
-BT = "ASK AMONG AWARE OF AD",
-[*END X]
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG12_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
 
 
 

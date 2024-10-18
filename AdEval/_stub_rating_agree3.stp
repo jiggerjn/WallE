@@ -7,9 +7,9 @@ R,F,
 VT = "[STUBSContents.3]",
 V = "
 [STUBSContents.4]\
-`    Agree Strongly (1)<V1>;
+`    Agree Strongly (3)<V3>;
 `    Agree Somewhat (2)<V2>;
-`    Disagree (3)<V3>;
+`    Disagree (1)<V1>;
 Missing answers<Z>;
 Total count<C>",
 
