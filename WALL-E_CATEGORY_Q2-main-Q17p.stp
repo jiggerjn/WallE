@@ -1,0 +1,165 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+
+!C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+!C =WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
+!C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;Wall-E_booster.asc,
+!C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;Wall-E_booster.asc;Wall-E_booster_sav_ins.asc,
+!C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+!C = .asc,
+Y,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START DATA,
+ORDER 1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY/9999999/,
+
+F=ADF,
+
+[*INSERT WALL_E_resp]
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
+[*INSERT ADDITIONAL_COLUMNS]
+[*INSERT ADDITIONAL_COLUMNS_JAN_FEB]
+[*INSERT WALL_E_STUBS_CATEGORY]
+[*INSERT WALL_E_CATEGORY_Q4_Q103toQ107]
+[*INSERT W_HEADER]
+[*INSERT Wall-E-boosters-GLOBAL]
+[*INSERT W_WTS21to65]
+[*INSERT W_WTS]
+
+DM $HT = T,
+ HT = "TOTAL",
+  H = "TOTAL*(A)",
+DM $regionvar =
+$Q3/1,
+$Q3/2+3+4+5,
+$Q3/6+7+8,
+$Q3/9+10+11,
+$Q3/12+13+14+15+16+17,
+
+
+!IF (($Q42023/NB+$Q12024/NB+$Q22024/NB+$Booster/NB).($T_Q1_1/21..65))+
+!   (($BoosterSavings/NB+$BoosterInvestors/NB).($T_Q1_1/18..65)), WRITE,
+
+IF ($Q42023/NB+$Q12024/NB+$Q22024/NB+$Q32024/NB), WRITE,
+
+!IF $Booster/NB, lcsv (h) $1-10.$regionvar.$WTS21to65,
+
+
+FINISH DATA,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+[*DATA HEADERWAVE3 = HA,HB,HC,HAGCitiesT,HBGCitiesT]
+
+
+!
+[*DATA filters =
+$Q2/1,
+$Q2/2,
+$T_Q1_1/1..20,
+$T_Q1_1/21..30,
+$T_Q1_1/31..35,
+$T_Q1_1/36..45,
+$T_Q1_1/46..99,
+$SEC19/1..2,
+$SEC19/3,
+$SEC19/4,
+$Q3/1,
+($Q3/2+3+4+5),
+($Q3/6+7+8),
+($Q3/9+10+11),
+($Q3/12+13+14+15+16+17),
+$Q4/1,
+$Q4/2]
+
+[*DATA filtername =
+MALE,
+FEMALE,
+STUDENTS (20 yo and below),
+YUPPIES (21-30 yo),
+TRANSITIONERS (31-35 yo),
+BALANCERS (36-45 yo),
+OLDER ADULTS/RETIREES (46-65 yo),
+ABC1,
+C2,
+D,
+NCR,
+NCL,
+SL,
+VISAYAS,
+MINDANAO,
+URBAN,
+RURAL]
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+
+!======
+IF $Q12024/NB+$Q22024/NB+$Q32024/NB, THEN,
+[*DO Z = 1:3]
+IF ($A_Q16d/1).($A_Q17k/1), T #[+T] = $TQ17p * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE AND USED IN PAST 1 WEEK", 
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:3]
+IF ($A_Q16d/1).($A_Q17k/1), T #[+T] = $TQ17p * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN PAST 1 WEEK", 
+[*END Z]
+END IF,
+
+
+if $Q17i/2, then,
+[*DO Z = 1:3]
+IF ($A_Q16d/1).($A_Q17k/1), T #[+T] = $TQ17p * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG GCASH AWARE AND USED IN PAST 1 WEEK", 
+[*END Z]
+END IF,
+END IF,
+
+
+
+FINISH TABLES,
+
+[*SK 999]
+[*999]

@@ -1590,12 +1590,36 @@ RURAL]
 
 [*SET T = 0]
 
+
+!======
+[*DO Z = 1:3]
+T #[+T] = $BRAND_LAD * $NewClientHeaderv2,
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:3]
+T #[+T] = $BRAND_LAD * $NewClientHeaderv2,
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:3]
+T #[+T] = $BRAND_LAD * $NewClientHeaderv2,
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+[*SK 111]
 [*DO Z = 1:1]
 T #[+T] = $Tincidencedata * $NewClientHeaderv2,
 BT = "ALL RESPONDENTS",
 [*END Z]
 
-[*SK 111]
 [*DO Z = 1:1]
 T #[+T] = $TQ17cNET * $HAGEXSECE,
 BT = "ALL RESPONDENTS",

@@ -2,7 +2,7 @@ START CONTROL,
 *PROJECT WALL-E
 !C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 !C = WALLE_JUL24.asc,
-C = WALLE_AUG24.asc,
+C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
 
 
 Y,
@@ -255,7 +255,7 @@ DM $TOM =
 ($A_Q16a/12+([*do a = 91:92]$xQ16a_[a]_other/1010[*sle]+[*end a])),
 ($A_Q16a/11+([*do a = 91:92]$xQ16a_[a]_other/1072[*sle]+[*end a])),
 ($A_Q16a/3+([*do a = 91:92]$xQ16a_[a]_other/1062[*sle]+[*end a])),
-($A_Q16a/1+([*do a = 91:92]$xQ16a_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q16a/1+([*do a = 91:92]$xQ16a_[a]_other/1056[*sle]+[*end a])),
 ($A_Q16a/7+([*do a = 91:92]$xQ16a_[a]_other/1029[*sle]+[*end a])),
 ($A_Q16a/2+([*do a = 91:92]$xQ16a_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q16a/4+([*do a = 91:92]$xQ16a_[a]_other/1058+1061[*sle]+[*end a])),
@@ -270,7 +270,7 @@ DM $OTH =
 ($A_Q16b/12+([*do a = 91:92]$xQ16b_[a]_other/1010[*sle]+[*end a])),
 ($A_Q16b/11+([*do a = 91:92]$xQ16b_[a]_other/1072[*sle]+[*end a])),
 ($A_Q16b/3+([*do a = 91:92]$xQ16b_[a]_other/1062[*sle]+[*end a])),
-($A_Q16b/1+([*do a = 91:92]$xQ16b_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q16b/1+([*do a = 91:92]$xQ16b_[a]_other/1056[*sle]+[*end a])),
 ($A_Q16b/7+([*do a = 91:92]$xQ16b_[a]_other/1029[*sle]+[*end a])),
 ($A_Q16b/2+([*do a = 91:92]$xQ16b_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q16b/4+([*do a = 91:92]$xQ16b_[a]_other/1058+1061[*sle]+[*end a])),
@@ -284,7 +284,7 @@ DM $AID =
 ($A_Q16c/12+([*do a = 91:92]$xQ16c_[a]_other/1010[*sle]+[*end a])),
 ($A_Q16c/11+([*do a = 91:92]$xQ16c_[a]_other/1072[*sle]+[*end a])),
 ($A_Q16c/3+([*do a = 91:92]$xQ16c_[a]_other/1062[*sle]+[*end a])),
-($A_Q16c/1+([*do a = 91:92]$xQ16c_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q16c/1+([*do a = 91:92]$xQ16c_[a]_other/1056[*sle]+[*end a])),
 ($A_Q16c/7+([*do a = 91:92]$xQ16c_[a]_other/1029[*sle]+[*end a])),
 ($A_Q16c/2+([*do a = 91:92]$xQ16c_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q16c/4+([*do a = 91:92]$xQ16c_[a]_other/1058+1061[*sle]+[*end a])),
@@ -298,7 +298,7 @@ DM $BUMO =
 ($A_Q17b/12+([*do a = 91:92]$xQ17b_[a]_other/1010[*sle]+[*end a])),
 ($A_Q17b/11+([*do a = 91:92]$xQ17b_[a]_other/1072[*sle]+[*end a])),
 ($A_Q17b/3+([*do a = 91:92]$xQ17b_[a]_other/1062[*sle]+[*end a])),
-($A_Q17b/1+([*do a = 91:92]$xQ17b_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q17b/1+([*do a = 91:92]$xQ17b_[a]_other/1056[*sle]+[*end a])),
 ($A_Q17b/7+([*do a = 91:92]$xQ17b_[a]_other/1029[*sle]+[*end a])),
 ($A_Q17b/2+([*do a = 91:92]$xQ17b_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q17b/4+([*do a = 91:92]$xQ17b_[a]_other/1058+1061[*sle]+[*end a])),
@@ -313,7 +313,7 @@ DM $XP2M =
 ($A_Q17a/12+([*do a = 91:92]$xQ17a_[a]_other/1010[*sle]+[*end a])),
 ($A_Q17a/11+([*do a = 91:92]$xQ17a_[a]_other/1072[*sle]+[*end a])),
 ($A_Q17a/3+([*do a = 91:92]$xQ17a_[a]_other/1062[*sle]+[*end a])),
-($A_Q17a/1+([*do a = 91:92]$xQ17a_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q17a/1+([*do a = 91:92]$xQ17a_[a]_other/1056[*sle]+[*end a])),
 ($A_Q17a/7+([*do a = 91:92]$xQ17a_[a]_other/1029[*sle]+[*end a])),
 ($A_Q17a/2+([*do a = 91:92]$xQ17a_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q17a/4+([*do a = 91:92]$xQ17a_[a]_other/1058+1061[*sle]+[*end a])),
@@ -346,7 +346,7 @@ DM $FFAVE =
 ($A_Q16e/12+([*do a = 91:92]$xQ16e_[a]_other/1010[*sle]+[*end a])),
 ($A_Q16e/11+([*do a = 91:92]$xQ16e_[a]_other/1072[*sle]+[*end a])),
 ($A_Q16e/3+([*do a = 91:92]$xQ16e_[a]_other/1062[*sle]+[*end a])),
-($A_Q16e/1+([*do a = 91:92]$xQ16e_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q16e/1+([*do a = 91:92]$xQ16e_[a]_other/1056[*sle]+[*end a])),
 ($A_Q16e/7+([*do a = 91:92]$xQ16e_[a]_other/1029[*sle]+[*end a])),
 ($A_Q16e/2+([*do a = 91:92]$xQ16e_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q16e/4+([*do a = 91:92]$xQ16e_[a]_other/1058+1061[*sle]+[*end a])),
@@ -359,7 +359,7 @@ DM $SFAVE =
 ($A_Q16f/12+([*do a = 91:92]$xQ16f_[a]_other/1010[*sle]+[*end a])),
 ($A_Q16f/11+([*do a = 91:92]$xQ16f_[a]_other/1072[*sle]+[*end a])),
 ($A_Q16f/3+([*do a = 91:92]$xQ16f_[a]_other/1062[*sle]+[*end a])),
-($A_Q16f/1+([*do a = 91:92]$xQ16f_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q16f/1+([*do a = 91:92]$xQ16f_[a]_other/1056[*sle]+[*end a])),
 ($A_Q16f/7+([*do a = 91:92]$xQ16f_[a]_other/1029[*sle]+[*end a])),
 ($A_Q16f/2+([*do a = 91:92]$xQ16f_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q16f/4+([*do a = 91:92]$xQ16f_[a]_other/1058+1061[*sle]+[*end a])),
@@ -372,7 +372,7 @@ DM $RECO =
 ($A_Q16g/12+([*do a = 91:92]$xQ16g_[a]_other/1010[*sle]+[*end a])),
 ($A_Q16g/11+([*do a = 91:92]$xQ16g_[a]_other/1072[*sle]+[*end a])),
 ($A_Q16g/3+([*do a = 91:92]$xQ16g_[a]_other/1062[*sle]+[*end a])),
-($A_Q16g/1+([*do a = 91:92]$xQ16g_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q16g/1+([*do a = 91:92]$xQ16g_[a]_other/1056[*sle]+[*end a])),
 ($A_Q16g/7+([*do a = 91:92]$xQ16g_[a]_other/1029[*sle]+[*end a])),
 ($A_Q16g/2+([*do a = 91:92]$xQ16g_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q16g/4+([*do a = 91:92]$xQ16g_[a]_other/1058+1061[*sle]+[*end a])),
@@ -385,7 +385,7 @@ DM $EVERD =
 ($A_Q17l/12+([*do a = 91:92]$xQ17l_[a]_other/1010[*sle]+[*end a])),
 ($A_Q17l/11+([*do a = 91:92]$xQ17l_[a]_other/1072[*sle]+[*end a])),
 ($A_Q17l/3+([*do a = 91:92]$xQ17l_[a]_other/1062[*sle]+[*end a])),
-($A_Q17l/1+([*do a = 91:92]$xQ17l_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q17l/1+([*do a = 91:92]$xQ17l_[a]_other/1056[*sle]+[*end a])),
 ($A_Q17l/7+([*do a = 91:92]$xQ17l_[a]_other/1029[*sle]+[*end a])),
 ($A_Q17l/2+([*do a = 91:92]$xQ17l_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q17l/4+([*do a = 91:92]$xQ17l_[a]_other/1058+1061[*sle]+[*end a])),
@@ -398,7 +398,7 @@ DM $EXIST =
 ($A_Q17d/12+([*do a = 91:92]$xQ17d_[a]_other/1010[*sle]+[*end a])),
 ($A_Q17d/11+([*do a = 91:92]$xQ17d_[a]_other/1072[*sle]+[*end a])),
 ($A_Q17d/3+([*do a = 91:92]$xQ17d_[a]_other/1062[*sle]+[*end a])),
-($A_Q17d/1+([*do a = 91:92]$xQ17d_[a]_other/1056+1117[*sle]+[*end a])),
+($A_Q17d/1+([*do a = 91:92]$xQ17d_[a]_other/1056[*sle]+[*end a])),
 ($A_Q17d/7+([*do a = 91:92]$xQ17d_[a]_other/1029[*sle]+[*end a])),
 ($A_Q17d/2+([*do a = 91:92]$xQ17d_[a]_other/1050+1043[*sle]+[*end a])),
 ($A_Q17d/4+([*do a = 91:92]$xQ17d_[a]_other/1058+1061[*sle]+[*end a])),
@@ -460,6 +460,56 @@ IF ($A_Q16d/22+([*do c = 91:92]$xQ16d_[c]_other/1022[*sle]+[*end c])).$T_Q64_[B]
 [*DO A = 4:11]
 [*FOR b = 1:3:4:5:6:7:8:10:11:12:13:14:16:17:20:21:22:23:24:25:26:27:28:29:30:31:32:33]
 IF $T_Q64_[B]/[a-2],               DI $Brand[a]_Attr[b] = 1,
+[*end b]
+[*END A]
+
+
+
+[*DO A = 1:1]
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14]
+IF $T_Q64b_[B]/[a],    DI $Brand1_Attrb[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 2:2] !bdo online
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14]
+IF ($A_Q16d/13+([*do c = 91:92]$xQ16d_[c]_other/1002[*sle]+[*end c])).$T_Q64b_[B]/[a-1],  DI $Brand2_Attrb[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 3:3] !bdo pay
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14]
+IF ($A_Q16d/22+([*do c = 91:92]$xQ16d_[c]_other/1022[*sle]+[*end c])).$T_Q64b_[B]/[a-2],      DI $Brand3_Attrb[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 4:11]
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14]
+IF $T_Q64b_[B]/[a-2],               DI $Brand[a]_Attrb[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 1:1]
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17]
+IF $T_Q64c_[B]/[a],    DI $Brand1_Attrc[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 2:2] !bdo online
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17]
+IF ($A_Q16d/13+([*do c = 91:92]$xQ16d_[c]_other/1002[*sle]+[*end c])).$T_Q64c_[B]/[a-1],  DI $Brand2_Attrc[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 3:3] !bdo pay
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17]
+IF ($A_Q16d/22+([*do c = 91:92]$xQ16d_[c]_other/1022[*sle]+[*end c])).$T_Q64c_[B]/[a-2],      DI $Brand3_Attrc[b] = 1,
+[*end b]
+[*END A]
+
+[*DO A = 4:11]
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17]
+IF $T_Q64c_[B]/[a-2],               DI $Brand[a]_Attrc[b] = 1,
 [*end b]
 [*END A]
 
@@ -547,6 +597,16 @@ IF $Brand[A]_Attr[b]/1, DI $Attr[B] = 1,
 IF $Brand[A]_Attr[b]/n1, DI $Attr[B] = 0,
 [*END b] 
 
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14]
+IF $Brand[A]_Attrb[b]/1, DI $Attrb[B] = 1,
+IF $Brand[A]_Attrb[b]/n1, DI $Attrb[B] = 0,
+[*END b] 
+
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17]
+IF $Brand[A]_Attrc[b]/1, DI $Attrc[B] = 1,
+IF $Brand[A]_Attrc[b]/n1, DI $Attrc[B] = 0,
+[*END b] 
+
 !! == SEGMENTS / FILTERS == !!
 
 if $Q3/1,                   DI $AREA = 1,
@@ -608,9 +668,9 @@ if ($Q3/6+7+8).($Q4/2),               DI $AREAXLOC = 8,
 if ($Q3/9+10+11).($Q4/2),             DI $AREAXLOC = 9,
 if ($Q3/12+13+14+15+16+17).($Q4/2),   DI $AREAXLOC = 10,
 
-If $APR2024/NB, DI $Month = 1,
-If $MAY2024/NB, DI $Month = 2,
-If $JUN2024/NB, DI $Month = 3,
+If $JUL2024/NB, DI $Month = 1,
+If $AUG2024/NB, DI $Month = 2,
+If $SEP2024/NB, DI $Month = 3,
 ! +$OCT2023/NB+$NOV2023/NB
 
 [*DO C = 1:18]
@@ -846,7 +906,14 @@ IF ($Q12024/NB+$Q22024/NB+$Q32024/NB), LCSV (H) $RespNo.$Brands.$Aware.$Consider
 [*FORB=1:3:4:5:6:7:8:10:11:12:13:14:16:17:20:21:22:23:24:25:26:27:28:29:30:31:32:33]
 $Attr[B].
 [*ENDB]
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14]
+$Attrb[B].
+[*ENDB]
+[*FOR b = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17]
+$Attrc[B].
+[*ENDB]
 $AREA.$LOCALE.$SEC.$AGE_RANGE.$GENDER.$LIFESTAGE.$WORKING_STAT.$USERSHIP.$GCASH_USER.$BANK_CON.$REGION.$AREAXLOC.
+$MONTH.
 $P2M.
 $WTS,
 [*END A]

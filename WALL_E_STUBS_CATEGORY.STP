@@ -1880,6 +1880,7 @@ VT = "Q17c. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE P1M B
 V = $TQ17aNET,
 
 
+
 !=========
 IF $A_Q17d/91, OM $xQ17d_91_other = $xQ16a_91_other,
 IF $A_Q17d/92, OM $xQ17d_92_other = $xQ16b_92_other,
@@ -2771,6 +2772,138 @@ VT = "Q17p. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE PAST 
 V = $TQ17a,
 
 
+!=========
+DM $TQ17pNET = 
+$A_Q17p/1+2+3+4+6+7+8+9+10+11+14+23+24+27+28+31+32+34+36+37+([*do a = 91:92]$xQ17p_[a]_other/1056+1050+1043+1062+1058+1061+1080+1029+1078+1079+1172+1089+1009+1046+1053+1059+1015+1042+1087+1071+1013[*sle]+[*End a]),
+$A_Q17p/1+([*do a = 91:92]$xQ17p_[a]_other/1056[*sle]+[*End a]),
+$A_Q17p/2+([*do a = 91:92]$xQ17p_[a]_other/1050+1043[*sle]+[*End a]),
+$A_Q17p/3+([*do a = 91:92]$xQ17p_[a]_other/1062[*sle]+[*End a]),
+$A_Q17p/4+([*do a = 91:92]$xQ17p_[a]_other/1058+1061[*sle]+[*End a]),
+$A_Q17p/6+([*do a = 91:92]$xQ17p_[a]_other/1080[*sle]+[*End a]),
+$A_Q17p/7+([*do a = 91:92]$xQ17p_[a]_other/1029[*sle]+[*End a]),
+$A_Q17p/8+([*do a = 91:92]$xQ17p_[a]_other/1078[*sle]+[*End a]),
+$A_Q17p/9,
+$A_Q17p/10+([*do a = 91:92]$xQ17p_[a]_other/1079[*sle]+[*End a]),
+$A_Q17p/11+([*do a = 91:92]$xQ17p_[a]_other/1172[*sle]+[*End a]),
+$A_Q17p/14+([*do a = 91:92]$xQ17p_[a]_other/1089[*sle]+[*End a]),
+$A_Q17p/23+([*do a = 91:92]$xQ17p_[a]_other/1009+1046+1053+1059[*sle]+[*End a]),
+$A_Q17p/24+([*do a = 91:92]$xQ17p_[a]_other/1015[*sle]+[*End a]),
+$A_Q17p/27,
+$A_Q17p/28+([*do a = 91:92]$xQ17p_[a]_other/1042+1087[*sle]+[*End a]),
+$A_Q17p/31,
+$A_Q17p/32+([*do a = 91:92]$xQ17p_[a]_other/1071[*sle]+[*End a]),
+$A_Q17p/34,
+$A_Q17p/36+([*do a = 91:92]$xQ17p_[a]_other/1013[*sle]+[*End a]),
+$A_Q17p/37,
+
+$A_Q17p/50+51+12+13+16+17+19+20+22+30+33+35+40+41+18+21+29+38+39+49+([*do a = 91:92]$xQ17p_[a]_other/1113+1010+1002+1008+1051+1054+1022+1047+1082[*sle]+[*End a]),
+$A_Q17p/12+13+16+17+19+20+22+30+33+35+40+41+([*do a = 91:92]$xQ17p_[a]_other/1113+1010+1002+1008+1051+1054+1022[*sle]+[*End a]),
+$A_Q17p/12+([*do a = 91:92]$xQ17p_[a]_other/1010[*sle]+[*End a]),
+$A_Q17p/13+([*do a = 91:92]$xQ17p_[a]_other/1002[*sle]+[*End a]),
+$A_Q17p/16+([*do a = 91:92]$xQ17p_[a]_other/1008+1051[*sle]+[*End a]),
+$A_Q17p/17,
+$A_Q17p/19+([*do a = 91:92]$xQ17p_[a]_other/1054[*sle]+[*End a]),
+$A_Q17p/20+([*do a = 91:92]$xQ17p_[a]_other/1113[*sle]+[*End a]),
+$A_Q17p/22+([*do a = 91:92]$xQ17p_[a]_other/1022[*sle]+[*End a]),
+$A_Q17p/30,
+$A_Q17p/33+([*do a = 91:92]$xQ17p_[a]_other/1116[*sle]+[*End a]),
+$A_Q17p/35,
+$A_Q17p/40,
+$A_Q17p/41,
+
+$A_Q17p/50+51+18+21+29+38+39+49+([*do a = 91:92]$xQ17p_[a]_other/1047+1082[*sle]+[*End a]),
+$A_Q17p/18+([*do a = 91:92]$xQ17p_[a]_other/1047[*sle]+[*End a]),
+$A_Q17p/21,
+$A_Q17p/29+([*do a = 91:92]$xQ17p_[a]_other/1082[*sle]+[*End a]),
+$A_Q17p/38,
+$A_Q17p/39,
+$A_Q17p/49,
+$A_Q17p/50,
+$A_Q17p/51,
+
+$A_Q17p/5+25+26+48+([*do a = 91:92]$xQ17p_[a]_other/1020+1016+1033+1060+1045[*sle]+[*End a]),
+$A_Q17p/5+([*do a = 91:92]$xQ17p_[a]_other/1020[*sle]+[*End a]),
+$A_Q17p/25+([*do a = 91:92]$xQ17p_[a]_other/1016+1033+1060[*sle]+[*End a]),
+$A_Q17p/26+([*do a = 91:92]$xQ17p_[a]_other/1045[*sle]+[*End a]),
+$A_Q17p/48,
+
+$A_Q17p/42+43+44+45+46+47+([*do a = 91:92]$xQ17p_[a]_other/1083[*sle]+[*End a]),
+$A_Q17p/42+([*do a = 91:92]$xQ17p_[a]_other/1083[*sle]+[*End a]),
+$A_Q17p/43,
+$A_Q17p/44,
+$A_Q17p/45,
+$A_Q17p/46,
+$A_Q17p/47,
+
+([*do a = 91:92]$xQ17p_[a]_other/1001[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1003[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1004+1005+1006+1017[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1007[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1011[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1012[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1014[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1018[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1019+1041[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1021[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1028[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1030[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1031[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1032[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1034[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1035[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1036[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1040[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1044[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1048[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1049[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1052[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1055[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1057[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1063[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1064[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1065[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1066[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1067[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1068[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1069[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1070[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1073[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1074[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1076[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1077[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1081[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1084[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1085[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1086[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1088[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1090+1092[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1093[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1094[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1096[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1097[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1098[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1099[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1100[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1102[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1104[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1106[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1109[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1110[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1111[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1114[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1117[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1118[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/1119[*sle]+[*End a]),
+
+([*do a = 91:92]$xQ17p_[a]_other/1075+1091+1095+1101+1103+1107+1108+1105+1112+1115+1116[*sle]+[*End a]),
+([*do a = 91:92]$xQ17p_[a]_other/9998[*sle]+[*End a]),
+
+
+$A_Q17p/99+([*do a = 91:92]$xQ17p_[a]_other/9999[*sle]+[*End a]),
+
+R,F,
+VT = "Q17p. E-WALLET/MOBILE MONEY/ANY FINANCIAL APP OR WEBSITE USED IN THE P1D Brand Usage with Netting",
+V = $TQ17aNET,
 
 
 
@@ -3016,6 +3149,7 @@ $TQ17e/[A],
 $TQ17a/[A],
 $TQ17c/[A],
 $TQ17k/[A],
+$TQ17p/[A],
 $TQ17b/[A],
 $TQ17o/[A],
 $TQ16e/[A],
@@ -3036,6 +3170,7 @@ V = "
 `     Q17a. P2M;
 `     Q17c. P4W;
 `     Q17k. P1W;
+`     Q17p. P1D;
 `     Q17b. BUMO;
 `     Q17o. P1M;
 `     Q16e. Favorite;
@@ -8869,8 +9004,8 @@ Total Count<C>",
 DM $TQGJr1 = $QGJr1/1-2,R,F,
 VT = "QGJr1. AWARENESS OF GCASH JR.",
 V = "
-Yes, Iï¿½ve heard GCash Jr.;
-No, I havenï¿½t heard GCash Jr.;
+Yes, I've heard GCash Jr.;
+No, I haven't heard GCash Jr.;
 Missing Answer<z>;
 Total Count<C>",
 
@@ -9830,8 +9965,8 @@ Easy to navigate the app;
 Convenient to use;
 Quick payment using;
 I used [Q40BNEWBD.A] for emergency purposes;
-Convenient because I don’t need to go out anymore to do my transactions (ex. buy load, pay bills, send/receive money etc);
-Because I don’t need to go outside anymore to pay for my bills;
+Convenient because I don't need to go out anymore to do my transactions (ex. buy load, pay bills, send/receive money etc);
+Because I don't need to go outside anymore to pay for my bills;
 Has low to no service charge;
 It is easy to cash in/ cash out in [Q40BNEWBD.A];
 I use [Q40BNEWBD.A] to pay for online games;
@@ -9839,7 +9974,7 @@ I use [Q40BNEWBD.A] to save money;
 I use [Q40BNEWBD.A] to invest;
 I use [Q40BNEWBD.A] to loan/ borrow money;
 Can be used anywhere and whenever;
-I don’t need to to go outside anymore to send/ receive money;
+I don't need to to go outside anymore to send/ receive money;
 Money is safe because you do not need to bring cash anymore;
 I use it to avail discounts/ promos/ and rewards;
 I use [Q40BNEWBD.A] because it makes my life easier;
@@ -9949,7 +10084,7 @@ NEGATIVE (NET)<Q>;
 `     Sometimes transactions are delayed/ confirmation is delayed in {0}Minsan delayed ang mga transaksiyon/ delayed ang confirmation sa [Q118BRAND.A];
 `     Verifying my account in [Q118BRAND.A] is difficult;
 `     Registering for an account in [Q118BRAND.A] is difficult;
-I don’t use it much since I don't retain funds to my account;
+I don't use it much since I don't retain funds to my account;
 Weak signal can't open;
 Maya is rare;
 Second option;
@@ -10045,7 +10180,7 @@ $XI_[QCI1a.A]_QCI1a_98_other/1035+1036+1038+1039+1040+1041+1042+1043+1044,
 $I_[QCI1a.A]_A_QCI1a/99,
 $XI_[QCI1a.A]_QCI1a_98_other/9999,
 R,F,
-VT = "QCI1a. MODE OF CASHING-IN –FINTECH/MOBILE BANKING APPS - [QCI1aBRAND.A]",
+VT = "QCI1a. MODE OF CASHING-IN - FINTECH/MOBILE BANKING APPS - [QCI1aBRAND.A]",
 V = "
 From my bank account;
 Nearby Sari-sari store;
@@ -10098,9 +10233,9 @@ $A_QGT2/99+([*DO A = 91:92]$XQGT2_91_other/1021[*SLE]+[*END A]),
 R,F,
 VT = "QGT2. CHANNELS USED IF NEED TO DO TRANSACTIONS VIA GCASH",
 V = "
-Use my family’s GCash account/ Ask my family to do the transaction using their GCash account;
-Use my friend’s GCash account/ Ask my friend to do the transaction using their GCash account;
-Use my coworker/ colleague’s GCash account/ Ask my coworker/ colleagues to do the transaction using their GCash account;
+Use my family's GCash account/ Ask my family to do the transaction using their GCash account;
+Use my friend's GCash account/ Ask my friend to do the transaction using their GCash account;
+Use my coworker/ colleague's GCash account/ Ask my coworker/ colleagues to do the transaction using their GCash account;
 Go to nearby sari-sari stores where I can send/receive money via GCash;
 Go to nearby convenience/ drugstores/ supermarkets to cash in to GCash via Cash-In machines to send money/ to pay;
 Go to nearby convenience/ drugstores/ supermarkets/ pawnshops/ payment facilities to send/receive money/ to pay over-the-counter; 
@@ -10110,7 +10245,7 @@ I Use Cash for payment;
 Sending money in Palawan;
 VAGUE (NET);
 
-I don’t need GCash to do any of my transactions;
+I don't need GCash to do any of my transactions;
 Missing answers<Z>;
 Total count<C>",
 
@@ -10146,7 +10281,7 @@ To be able to pay bills on-time (ex. electricity, water, insurance, rent/ amorti
 I trust that my money is safe in GCash ;
 Online shopping payment;
 VAGUE(NET);
-I don’t usually retain funds on my GCash account;
+I don't usually retain funds on my GCash account;
 None;
 Missing answers<Z>;
 Total count<C>",
@@ -10227,7 +10362,7 @@ I look forward to this brand's activities/ads;
 This brand has been involved in a lot of my memories;
 This brand is more interesting than other brands;
 This brand has qualities that are consistent with important values in my life;
-People who know what’s new and “cool” in the world are more likely to use this brand;
+People who know what's new and 'cool' in the world are more likely to use this brand;
 This brand allows me to express different dimensions of myself;
 This brand is the most well-known e-wallet/fintech brand;
 People who use this brand tend to have similar attitudes and beliefs about a lot of things;
@@ -10298,7 +10433,7 @@ PRODUCT<Q>;
 `     This brand has all digital products (saving, loan, insurance, investments etc.) to meet my needs;
 PLACE<Q>;
 `     This brand has the channels/platforms for all my needs;
-`     This brand’s customer service can be reached in different channels/ platforms;
+`     This brand's customer service can be reached in different channels/ platforms;
 `     This brand has accessible branches;
 PRICE<Q>;
 `     The products and services of this brand are worth the price;
@@ -10356,13 +10491,13 @@ Paying in cash makes me feel safer and secured;
 It is convenient/ less hassle to pay in cash;
 No need to have access to data or internet to be able to pay for my purchases;
 I can just give cash directly to the seller to pay for my purchases;
-I don’t know how to use online payment/e-wallet to pay;
+I don't know how to use online payment/e-wallet to pay;
 Cash is the only mode of payment accepted;
 Cash can be used anywhere;
 Cash is accepted anywhere;
 I am more used to using cash;
 Physical stores requires cash payment;
-I don’t know how to use online payment;
+I don't know how to use online payment;
 I use cash to avoid scam;
 No process is required for cash payment/ No need for confirmation or code when using cash;
 Confident that when I use cash I get the exact change;
