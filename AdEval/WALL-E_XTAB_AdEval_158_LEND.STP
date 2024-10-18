@@ -152,43 +152,43 @@ BT = "ALL RESPONDENTS",
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[KeyMessagesLEND.#]]
-+T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND8_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND8_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND8_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND8_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[StatementsLEND.#]]
-+T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND9_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND9_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND9_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND9_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 !======
@@ -200,44 +200,44 @@ BT = "ALL RESPONDENTS",
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[Statements11LEND.#]]
-+T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND11_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND11_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND11_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND11_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[Statements12LEND.#]]
-+T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND12_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND12_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLEND12_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLEND12_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 

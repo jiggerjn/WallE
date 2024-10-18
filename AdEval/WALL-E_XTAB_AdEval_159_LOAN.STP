@@ -154,43 +154,43 @@ BT = "ALL RESPONDENTS",
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLOAN8r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN8r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[KeyMessagesLOAN.#]]
-+T #[+T] = $TQLOAN8r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLOAN8r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN8_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN8_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN8_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN8_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLOAN9r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN9r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[StatementsLOAN.#]]
-+T #[+T] = $TQLOAN9r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLOAN9r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN9_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN9_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN9_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN9_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 !======
@@ -202,44 +202,44 @@ BT = "ALL RESPONDENTS",
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLOAN11r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN11r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[Statements11LOAN.#]]
-+T #[+T] = $TQLOAN11r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLOAN11r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN11_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN11_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN11_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN11_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLOAN12r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLOAN12r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[Statements12LOAN.#]]
-+T #[+T] = $TQLOAN12r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLOAN12r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN12_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN12_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLOAN12_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLOAN12_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 

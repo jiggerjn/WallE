@@ -153,43 +153,43 @@ BT = "ALL RESPONDENTS",
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLGW8r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLGW8r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[KeyMessagesLGW.#]]
-+T #[+T] = $TQLGW8r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLGW8r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW8_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW8_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW8_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW8_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLGW9r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLGW9r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[StatementsLGW.#]]
-+T #[+T] = $TQLGW9r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLGW9r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW9_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW9_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW9_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW9_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 !======
@@ -201,44 +201,44 @@ BT = "ALL RESPONDENTS",
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLGW11r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLGW11r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[Statements11LGW.#]]
-+T #[+T] = $TQLGW11r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLGW11r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW11_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW11_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW11_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW11_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 !======
 
-[*DO X = 1:1]
+[*DO Z = 1:1]
 [*SET s = 0]
 [*DO A = 1:1]
-T #[+T] = $TQLGW12r[A] * $[HEADERWAVE3.X],
+T #[+T] = $TQLGW12r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*DO A = 2:[Statements12LGW.#]]
-+T #[+T] = $TQLGW12r[A] * $[HEADERWAVE3.X],
++T #[+T] = $TQLGW12r[A] * $[HEADERWAVE3.Z],
 [*END A]
-[*END X]
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW12_TB * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW12_TB * $[HEADERWAVE3.Z],
+[*END Z]
 
-[*DO X = 1:1]
-T #[+T] = $TQLGW12_T2B * $[HEADERWAVE3.X],
-[*END X]
+[*DO Z = 1:1]
+T #[+T] = $TQLGW12_T2B * $[HEADERWAVE3.Z],
+[*END Z]
 
 
 
