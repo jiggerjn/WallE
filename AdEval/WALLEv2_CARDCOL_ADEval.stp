@@ -33,6 +33,12 @@ OM $QSHOW4 = $[B]-[B+3]/1-9999,
 [*END A]
 
 
+
+[*SET B = 103370][*DO A= 1:10]
+OM $QFI3_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
 [*SET B = 106970][*DO A= 1:10]
 OM $QFI3_92_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
