@@ -190,7 +190,7 @@ Made me realize that GCash is for everyone;
 Made me want to use GCash to progress in life;
 Made me want to use GCash to help other people]
 
-[*DATA BackupStatements11ADZ(;)=
+[*DATA Statements11ADZ(;)=
 Made me want to use GCash more in my transactions;
 I became more interested in other GCash features;
 I will likely recommend GCash to other people;
@@ -236,7 +236,7 @@ Made me want to avail of a loan with GCash/ GCredit ;
 Made me consider GCredit for instant funds related to bills during petsa de peligro ;
 Made me want to borrow from GCash because it makes me feel less anxious vs borrowing from informal channels during petsa-de-peligro. (ex. family, friends, tindahan, 5/6, etc.);
 Made me want to switch from borrowing from other online loaning apps and e-wallet/fintech apps;
-Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov’t agencies, etc]
+Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov`'t agencies, etc]
 
 
 [*DATA Statements12LGW(;)=
@@ -283,7 +283,7 @@ Made me want to avail of a loan with GCash/ GCredit ;
 Made me consider GCredit for instant funds related to groceries during petsa de peligro;
 Made me want to borrow from GCash because it makes me feel less anxious vs borrowing from informal channels during petsa-de-peligro. (ex. family, friends, tindahan, 5/6, etc.);
 Made me want to switch from borrowing from other online loaning apps and e-wallet/fintech apps;
-Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov’t agencies, etc]
+Made me want to switch from borrowing from formal lending institutions such as banks, microfinance, cooperative, gov`'t agencies, etc]
 
 
 
@@ -351,4 +351,32 @@ The episode or segment increased my interest in the brand;
 You found it difficult to believe what the episode or segment said;
 The episode or segment is meaningful for me;
 This episode or segment is fit for the brand]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+[*DATA AdEvallabel(;)=
+BUY LOAD STREAMING;
+BUY LOAD GAMING;
+LENDING GLOAN FILM X CEILING;
+LENDING GLOAN FILM X GRADUATION;
+GCASH STORIES: ADZ;
+LENDING GCREDIT FILM x WATER;
+LENDING GCREDIT FILM x NEXT TIME;
+Sugod-Suyod It`'s Showtime]
+
+[*DATA AdEvalVar(;)=
+TQBLS1;
+TQBLG1;
+TQLEND1;
+TQLOAN1;
+TQADZ1;
+TQLGW1;
+TQLGN1;
+TQSG1]
 

@@ -78,6 +78,7 @@ $TQ17e/[A],
 $TQ17a/[A],
 $TQ17c/[A],
 $TQ17k/[A],
+$TQ17p/[A],
 $TQ17b/[A],
 $TQ17o/[A],
 $TQ16e/[A],
@@ -98,6 +99,7 @@ Q17e. P6M;
 Q17a. P2M;
 Q17c. P4W;
 Q17k. P1W;
+Q17p. P1D;
 Q17b. BUMO;
 Q17o. P1M;
 Q16e. Favorite;
@@ -107,36 +109,7 @@ Q16g. Recommended[*sle];
 
 
 
-[*DATA AdEvallabel(;)=
-BUY LOAD STREAMING;
-BUY LOAD GAMING;
-LENDING GLOAN FILM X CEILING;
-LENDING GLOAN FILM X GRADUATION;
-GCASH STORIES: ADZ;
-LENDING GCREDIT FILM x WATER;
-LENDING GCREDIT FILM x NEXT TIME;
-Sugod-Suyod It`'s Showtime]
 
-[*DATA AdEvalVar(;)=
-TQBLS1;
-TQBLG1;
-TQLEND1;
-TQLOAN1;
-TQADZ1;
-TQLGW1;
-TQLGN1;
-TQSG1]
-
-[*DOB =1:8]
-DM $H_BrandAssocXAdeval = T,
-$[AdEvalVar.b]/4..5,
-$[AdEvalVar.b]/1..2,
-HT = "HEADER AD [b]: [AdEvallabel.b]",
-H = "
-TOTAL*(a);
-AMONG AWARE OF AD *(b);
-AMONG NOT AWARE OF AD *(c)",
-[*END b]
 
 
 
@@ -160,19 +133,16 @@ ShopeePay]
 
 
 
-F=BRS,
-![*DATA HEADERWAVE3 = HA,HBT,HCT]
+F=NBRS,
 
 
-!======
-[*DO Z = 1:1]
-[*DO A = 5:5]
-if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
-BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
-[*END A]
-[*END Z]
+[*DATA HEADERWAVE3 = H_BrandAssocXAdeval8]
 
-![*DATA HEADERWAVE3 = HA,HBT,HCT]
+
+
+FILTER $FILTER_SG/1,
+global bt# = "ALL RESPONDENTS", 
+ 
 
 
 
@@ -194,19 +164,58 @@ BT = "ALL RESPONDENTS",
 [*END Z]
 
 
+[*DO Z = 1:1]
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
 
-FILTER $FILTER_SG/1,
-global bt# = "ALL RESPONDENTS", 
- 
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+FILTER OFF,
+[*SK64]
 
 !======
 [*DO Z = 1:1]
-T #[+T] = $TQSG1 * $[HEADERWAVE3.Z],
+If $FILTER_SG/1, T #[+T] = $TQSG1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
- 
- 
 
 
+!======
+[*DO Z = 1:1]
+[*DO A = 5:5]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:1]
+IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*DO A = 2:25]
+IF $A_Q16d/1, +T #[+T] = $BRDLADDER[A] * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*END A]
+[*END Z]
+
+
+[*DO Z = 1:1]
+T #[+T] = $BRAND_LAD_GCASH * $[HEADERWAVE3.Z],
+VT = "Q16-Q17. BRAND FUNNEL - GCASH",
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+[*DO Z = 1:1]
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+[*64]
 
 FINISH TABLES,

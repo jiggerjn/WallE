@@ -186,7 +186,7 @@ T_QSC11_9
 
 ]
 
-[*DATA BackUPStatements11ADZCode(;)=
+[*DATA Statements11ADZCode(;)=
 T_QSC11_1;
 T_QSC11_2;
 T_QSC11_3;
@@ -206,7 +206,7 @@ T_QSC11_9
     ![STUBSContents.2]
     ![STUBSContents.3]
     ![STUBSContents.4]
-    [*INSERT AdEval\_stub_rating_agree3]
+    [*INSERT AdEval\_stub_rating_agree3_NA]
 [*END A]
 
 DM $TQADZ11_T2B = 

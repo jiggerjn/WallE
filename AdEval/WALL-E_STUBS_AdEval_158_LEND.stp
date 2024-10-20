@@ -35,7 +35,7 @@ SOA2]
 [*DATA STUBSContents(;) = 
 TQLEND5;
 QST5;
-QLEND. ABSOLUTE LIKEABILITY]
+QLEND5. ABSOLUTE LIKEABILITY]
 [*INSERT AdEval\_stub_rating_a_likeability]
 
 [*DATA STUBSContents(;) = 
@@ -50,6 +50,9 @@ QST7;
 QLEND7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
 QST7]
 [*INSERT AdEval\_stub_oe]
+
+DM $Filter_QLEND7 = $QST7/nb,
+V = "Among those who answered",
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -81,7 +84,7 @@ DM $TQLEND8_T2B =
 [*DO A=1:[KeyMessagesLEND.#]]
 $[KeyMessagesLENDCode.A]/4..5,
 [*END A]
-VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+VT = "QLEND8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
 V = "
 [*DO A=1:[KeyMessagesLEND.#]]
 [KeyMessagesLEND.A][*SLE];
@@ -91,7 +94,7 @@ DM $TQLEND8_TB =
 [*DO A=1:[KeyMessagesLEND.#]]
 $[KeyMessagesLENDCode.A]/5,
 [*END A]
-VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+VT = "QLEND8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
 V = "
 [*DO A=1:[KeyMessagesLEND.#]]
 [KeyMessagesLEND.A][*SLE];
@@ -149,7 +152,7 @@ $A_QST10/
 7,
 8,
 R,F,
-VT = "QLM10. PERSUASION SCALE",
+VT = "QLEND10. PERSUASION SCALE",
 V = "
 It definitely made me want to buy that brand;
 It sounded interesting and I wanted to tell others about it;
@@ -188,7 +191,7 @@ T_QST11_12]
     ![STUBSContents.2]
     ![STUBSContents.3]
     ![STUBSContents.4]
-    [*INSERT AdEval\_stub_rating_agree3]
+    [*INSERT AdEval\_stub_rating_agree3_NA]
 [*END A]
 
 DM $TQLEND11_T2B = 

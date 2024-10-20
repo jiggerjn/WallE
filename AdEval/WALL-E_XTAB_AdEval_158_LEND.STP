@@ -47,7 +47,7 @@ F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 F=NBCS,
 
 
-!SELECT WR $WTS,
+SELECT WR $WTS,
 !SELECT WR $WTS21to65,
 
 [*SET T = 0]
@@ -68,144 +68,189 @@ DM $FILTER_LEND =  ($Resp_AD_LEND/NB).($Q32024/NB),
 !BT = "ALL RESPONDENTS",
 [*END Z]
 
- 
+DM $Filter_Ad_Aware = 
+($TQLEND1/1..5),
+($TQLEND1/4..5),
+($TQLEND1/1..2),
+
+
+[*DATA BTAdAware(;)=
+ALL RESPONDENTS;
+AMONG AWARE OF AD;
+AMONG NOT AWARE OF AD
+]
 
 FILTER $FILTER_LEND/1,
 global bt# = "ALL RESPONDENTS", 
  
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 T #[+T] = $TQLEND1 * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQLEND1/4..5), T #[+T] = $TQLEND2 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQLEND1/4..5), T #[+T] = $TQLEND3 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 
 !======
-[*DO Z = 1:1]
+[*DO Z = 1:3]
 IF ($TQLEND1/4..5), T #[+T] = $TQLEND4 * $[HEADERWAVE3.Z],
-BT = "ASK AMONG AWARE OF AD",
+BT = "AMONG AWARE OF AD",
 [*END Z]
 
 !======
-[*DO Z = 1:1]
-T #[+T] = $TQLEND5 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND5 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
 
 !======
-[*DO Z = 1:1]
-T #[+T] = $TQLEND6 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND6 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
 
 !======
-[*DO Z = 1:1]
-T #[+T] = $TQLEND7 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
-
-!======
-
-[*DO Z = 1:1]
-[*SET s = 0]
-[*DO A = 1:1]
-T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*DO A = 2:[KeyMessagesLEND.#]]
-+T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*END Z]
-
-[*DO Z = 1:1]
-T #[+T] = $TQLEND8_TB * $[HEADERWAVE3.Z],
-[*END Z]
-
-[*DO Z = 1:1]
-T #[+T] = $TQLEND8_T2B * $[HEADERWAVE3.Z],
-[*END Z]
-
-!======
-
-[*DO Z = 1:1]
-[*SET s = 0]
-[*DO A = 1:1]
-T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*DO A = 2:[StatementsLEND.#]]
-+T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*END Z]
-
-[*DO Z = 1:1]
-T #[+T] = $TQLEND9_TB * $[HEADERWAVE3.Z],
-[*END Z]
-
-[*DO Z = 1:1]
-T #[+T] = $TQLEND9_T2B * $[HEADERWAVE3.Z],
-[*END Z]
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND7 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]).($Filter_QLEND7/NB), T #[+T] = $TQLEND7 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F] - those who answered QLEND7",
+    [*END Z]
+[*END F]
 
 
 !======
-[*DO Z = 1:1]
-T #[+T] = $TQLEND10 * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[KeyMessagesLEND.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQLEND8r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND8_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND8_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
+
+!======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[StatementsLEND.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQLEND9r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND9_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND9_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
+
+!======
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND10 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
 
 
 !======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[Statements11LEND.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+    !
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]).($TQLEND11r[A]/1..3), T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
+    BT = "[BTAdAware.F] - those who answered QLEND11(R1-R4)",
+    [*END A]
+    [*DO A = 2:4]
+    IF ($Filter_Ad_Aware/[F]).($TQLEND11r[A]/1..3), +T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+    !
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND11_TB * $[HEADERWAVE3.Z],
+    [*END Z]
 
-[*DO Z = 1:1]
-[*SET s = 0]
-[*DO A = 1:1]
-T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*DO A = 2:[Statements11LEND.#]]
-+T #[+T] = $TQLEND11r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*END Z]
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND11_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
 
-[*DO Z = 1:1]
-T #[+T] = $TQLEND11_TB * $[HEADERWAVE3.Z],
-[*END Z]
-
-[*DO Z = 1:1]
-T #[+T] = $TQLEND11_T2B * $[HEADERWAVE3.Z],
-[*END Z]
 
 
 !======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[Statements12LEND.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
 
-[*DO Z = 1:1]
-[*SET s = 0]
-[*DO A = 1:1]
-T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*DO A = 2:[Statements12LEND.#]]
-+T #[+T] = $TQLEND12r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*END Z]
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND12_TB * $[HEADERWAVE3.Z],
+    [*END Z]
 
-[*DO Z = 1:1]
-T #[+T] = $TQLEND12_TB * $[HEADERWAVE3.Z],
-[*END Z]
-
-[*DO Z = 1:1]
-T #[+T] = $TQLEND12_T2B * $[HEADERWAVE3.Z],
-[*END Z]
-
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T#[+T] = $TQLEND12_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
 
 
 FINISH TABLES,

@@ -51,6 +51,10 @@ QLOAN7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
 QGI7]
 [*INSERT AdEval\_stub_oe]
 
+DM $Filter_QLOAN7 = $QGI7/nb,
+V = "Among those who answered",
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -80,7 +84,7 @@ DM $TQLOAN8_T2B =
 [*DO A=1:[KeyMessagesLOAN.#]]
 $[KeyMessagesLOANCode.A]/4..5,
 [*END A]
-VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+VT = "QLOAN8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
 V = "
 [*DO A=1:[KeyMessagesLOAN.#]]
 [KeyMessagesLOAN.A][*SLE];
@@ -90,7 +94,7 @@ DM $TQLOAN8_TB =
 [*DO A=1:[KeyMessagesLOAN.#]]
 $[KeyMessagesLOANCode.A]/5,
 [*END A]
-VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+VT = "QLOAN8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
 V = "
 [*DO A=1:[KeyMessagesLOAN.#]]
 [KeyMessagesLOAN.A][*SLE];
@@ -147,7 +151,7 @@ $A_QGI10/
 7,
 8,
 R,F,
-VT = "QLM10. PERSUASION SCALE",
+VT = "QLOAN10. PERSUASION SCALE",
 V = "
 It definitely made me want to buy that brand;
 It sounded interesting and I wanted to tell others about it;
@@ -187,7 +191,7 @@ T_QGI11_14]
     ![STUBSContents.2]
     ![STUBSContents.3]
     ![STUBSContents.4]
-    [*INSERT AdEval\_stub_rating_agree3]
+    [*INSERT AdEval\_stub_rating_agree3_NA]
 [*END A]
 
 DM $TQLOAN11_T2B = 
