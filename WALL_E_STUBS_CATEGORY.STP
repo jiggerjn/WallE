@@ -3523,7 +3523,9 @@ Total Count<C>",
 
 
 
-DM $Q60otheranswer = $A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
+DM $Q60otheranswer =
+
+$A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
 $A_Q60/2+
 $A_Q60/15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
 
@@ -3547,6 +3549,8 @@ $A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1066[*sle]+[*End a])+
 
 $A_Q60/6+
 $A_Q60/19+
+$A_Q60/23+
+
 ([*do a = 91:93]$Q60_[a]_other/1002+1040[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1004+1027[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1006+1010[*sle]+[*End a])+
@@ -3590,6 +3594,7 @@ $A_Q60/19+
 ([*do a = 91:93]$Q60_[a]_other/1083[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1084[*sle]+[*End a])+
 
+
 ([*do a = 91:93]$Q60_[a]_other/1067+1070+1072[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1067[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1070[*sle]+[*End a])+
@@ -3616,7 +3621,7 @@ $A_Q60/19+
 ([*do a = 91:93]$Q60_[a]_other/1079[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1079[*sle]+[*End a])+
 
-([*do a = 91:93]$Q60_[a]_other/1074+1077+1082[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1074+1077+1082+1084+1085[*sle]+[*End a])+
 
 ([*do a = 91:93]$Q60_[a]_other/9999[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/9998[*sle]+[*End a]),
@@ -3636,10 +3641,9 @@ $A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a]),
 $A_Q60/2,
 $A_Q60/15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a]),
 
-$A_Q60/7+21+23+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043+1064[*sle]+[*End a]),
+$A_Q60/7+21+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043+1064[*sle]+[*End a]),
 $A_Q60/7+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043[*sle]+[*End a]),
 $A_Q60/21+([*do a = 91:93]$Q60_[a]_other/1064[*sle]+[*End a]),
-$A_Q60/23,
 
 $A_Q60/11+12+13+14+([*do a = 91:93]$Q60_[a]_other/1035+1037+1001+1009+1048+1078[*sle]+[*End a]),
 $A_Q60/11+([*do a = 91:93]$Q60_[a]_other/1035+1037[*sle]+[*End a]),
@@ -3666,6 +3670,8 @@ $A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1066[*sle]+[*End a]),
 
 $A_Q60/6,
 $A_Q60/19,
+$A_Q60/23,
+
 ([*do a = 91:93]$Q60_[a]_other/1002+1040[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1004+1027[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1006+1010[*sle]+[*End a]),
@@ -3760,7 +3766,6 @@ VOLUNTARY EXCLUSION NET	<Q>;
 KNOWLEDGE NET <Q>;
 `     Lack of knowledge on features;
 `     No available channels or sources to learn how to use the financial app;
-`     I have other family members who already have a GCash account;
 
 INVOLUNTARY EXCLUSION NET <Q>;
 `     No reliable internet connection;
@@ -3787,6 +3792,7 @@ TRUST RELATED CONCERNS NET (EXCLUSIVE) <Q>;
 
 Hesitation to open another financial account;
 Has cash-in fee every time I fund my account;
+I have other family members who already have a GCash account;
 
 Prefers cash payment;
 Tedious process of using online/digital banking or financial app;
@@ -10217,19 +10223,19 @@ Total count<C>",
 
 
 !
-DM $TQGT2 = $A_QGT2/1+([*DO A = 91:92]$XQGT2_91_other/1025[*SLE]+[*END A]),
+DM $TQGT2 = $A_QGT2/1+([*DO A = 91:92]$XQGT2_[A]_other/1025[*SLE]+[*END A]),
 $A_QGT2/2,
 $A_QGT2/3,
-$A_QGT2/4+([*DO A = 91:92]$XQGT2_91_other/1028[*SLE]+[*END A]),
+$A_QGT2/4+([*DO A = 91:92]$XQGT2_[A]_other/1028[*SLE]+[*END A]),
 $A_QGT2/5,
 $A_QGT2/6,
-$A_QGT2/7+([*DO A = 91:92]$XQGT2_91_other/1023[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1024[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1026[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1127[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1022[*SLE]+[*END A]),
+$A_QGT2/7+([*DO A = 91:92]$XQGT2_[A]_other/1023[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1024[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1026[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1127[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1022[*SLE]+[*END A]),
 
-$A_QGT2/99+([*DO A = 91:92]$XQGT2_91_other/1021[*SLE]+[*END A]),
+$A_QGT2/99+([*DO A = 91:92]$XQGT2_[A]_other/1021[*SLE]+[*END A]),
 R,F,
 VT = "QGT2. CHANNELS USED IF NEED TO DO TRANSACTIONS VIA GCASH",
 V = "

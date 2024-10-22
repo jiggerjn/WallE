@@ -607,6 +607,7 @@ IF $Brand[A]_Attrc[b]/1, DI $Attrc[B] = 1,
 IF $Brand[A]_Attrc[b]/n1, DI $Attrc[B] = 0,
 [*END b] 
 
+[*END A]
 !! == SEGMENTS / FILTERS == !!
 
 if $Q3/1,                   DI $AREA = 1,
@@ -681,6 +682,19 @@ IF $T_Q104_[C]/[B], DI $Q104_[C] = [B],
 
 [*DO B = 1:11]
 IF $A_Q102B/[B], DI $Q102b = [B],
+[*END B]
+
+
+[*DO C = 1:18]
+[*FOR B = 1:2:3:4:5:6:7:8:9:91:99]
+IF $T_Q104_[C]/[B], DI $Q104_[C]_[B] = 1,
+IF $T_Q104_[C]/N[B], DI $Q104_[C]_[B] = 0,
+[*END B]
+[*END C]
+
+[*DO B = 1:11]
+IF $A_Q102B/[B], DI $Q102b_[B] = 1,
+IF $A_Q102B/N[B], DI $Q102b_[B] = 0,
 [*END B]
 
 IF ($TQ17a/1).($TQ17c/N1), DI $P1MLAPSER = 1,
@@ -914,9 +928,17 @@ $Attrc[B].
 [*ENDB]
 $AREA.$LOCALE.$SEC.$AGE_RANGE.$GENDER.$LIFESTAGE.$WORKING_STAT.$USERSHIP.$GCASH_USER.$BANK_CON.$REGION.$AREAXLOC.
 $MONTH.
+[*DO B = 1:11]
+$Q102b_[B].
+[*END B]
+$Q102C.
+[*DO C = 1:18]
+[*FOR B = 1:2:3:4:5:6:7:8:9:91:99]
+$Q104_[C]_[B].
+[*END B]
+[*END C]
 $P2M.
 $WTS,
-[*END A]
 FINISH DATA,
 
 

@@ -1,0 +1,564 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+
+!C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+!C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+!C = .asc,
+Y,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START DATA,
+ORDER 1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY/9999999/,
+
+F=ADF,
+
+
+[*INSERT WALL_E_resp]
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
+[*INSERT ADDITIONAL_COLUMNS]
+[*INSERT ADDITIONAL_COLUMNS_JAN_FEB]
+[*INSERT WALL_E_STUBS_CATEGORY]
+[*INSERT WALL_E_CATEGORY_Q4_Q103toQ107]
+[*INSERT W_HEADER]
+[*INSERT W_WTS]
+
+!-----------Unique
+DM $QCH1 = $38959-38960/1-99,
+
+
+!-----------Unique
+DM $QCH2 = $38961-38962/1-99,
+
+
+!-----------MultiSelect
+DM $A_QCH3a = $38963/1,$38964/1,$38965/1,$38966/1,$38967/1,$38968/1,$38969/1,$Blank/8-90,$38970/1,$Blank/92-98,$38971/1,
+
+
+!-----------MultipleTopics9
+
+DM $T_QCH3b_1 = $38972/1-9,'0',
+DM $T_QCH3b_2 = $38973/1-9,'0',
+DM $T_QCH3b_3 = $38974/1-9,'0',
+DM $T_QCH3b_4 = $38975/1-9,'0',
+DM $T_QCH3b_5 = $38976/1-9,'0',
+DM $T_QCH3b_6 = $38977/1-9,'0',
+DM $T_QCH3b_7 = $38978/1-9,'0',
+DM $T_QCH3b_91 = $38979/1-9,'0',
+DM $T_QCH3b_99 = $38980/1-9,'0',
+
+
+
+!-----------MultipleTopics9
+
+DM $T_QCH5_1 = $38981/1-9,'0',
+DM $T_QCH5_2 = $38982/1-9,'0',
+DM $T_QCH5_3 = $38983/1-9,'0',
+DM $T_QCH5_4 = $38984/1-9,'0',
+DM $T_QCH5_5 = $38985/1-9,'0',
+DM $T_QCH5_6 = $38986/1-9,'0',
+DM $T_QCH5_7 = $38987/1-9,'0',
+DM $T_QCH5_91 = $38988/1-9,'0',
+DM $T_QCH5_99 = $38989/1-9,'0',
+
+
+
+!-----------MultipleTopics15
+
+DM $T_QCH4_1 = $38990/1-9,'0',
+DM $T_QCH4_2 = $38991/1-9,'0',
+DM $T_QCH4_3 = $38992/1-9,'0',
+DM $T_QCH4_4 = $38993/1-9,'0',
+DM $T_QCH4_5 = $38994/1-9,'0',
+DM $T_QCH4_6 = $38995/1-9,'0',
+DM $T_QCH4_7 = $38996/1-9,'0',
+DM $T_QCH4_8 = $38997/1-9,'0',
+DM $T_QCH4_9 = $38998/1-9,'0',
+DM $T_QCH4_10 = $38999/1-9,'0',
+DM $T_QCH4_11 = $39000/1-9,'0',
+DM $T_QCH4_12 = $39001/1-9,'0',
+DM $T_QCH4_13 = $39002/1-9,'0',
+DM $T_QCH4_14 = $39003/1-9,'0',
+DM $T_QCH4_15 = $39004/1-9,'0',
+
+
+
+!-----------MultipleTopics25
+
+DM $T_QCH4a_1 = $39005/1-9,'0',
+DM $T_QCH4a_2 = $39006/1-9,'0',
+DM $T_QCH4a_3 = $39007/1-9,'0',
+DM $T_QCH4a_4 = $39008/1-9,'0',
+DM $T_QCH4a_5 = $39009/1-9,'0',
+DM $T_QCH4a_6 = $39010/1-9,'0',
+DM $T_QCH4a_7 = $39011/1-9,'0',
+DM $T_QCH4a_8 = $39012/1-9,'0',
+DM $T_QCH4a_9 = $39013/1-9,'0',
+DM $T_QCH4a_10 = $39014/1-9,'0',
+DM $T_QCH4a_11 = $39015/1-9,'0',
+DM $T_QCH4a_12 = $39016/1-9,'0',
+DM $T_QCH4a_13 = $39017/1-9,'0',
+DM $T_QCH4a_14 = $39018/1-9,'0',
+DM $T_QCH4a_15 = $39019/1-9,'0',
+DM $T_QCH4a_16 = $39020/1-9,'0',
+DM $T_QCH4a_17 = $39021/1-9,'0',
+DM $T_QCH4a_18 = $39022/1-9,'0',
+DM $T_QCH4a_19 = $39023/1-9,'0',
+DM $T_QCH4a_20 = $39024/1-9,'0',
+DM $T_QCH4a_21 = $39025/1-9,'0',
+DM $T_QCH4a_22 = $39026/1-9,'0',
+DM $T_QCH4a_23 = $39027/1-9,'0',
+DM $T_QCH4a_24 = $39028/1-9,'0',
+DM $T_QCH4a_25 = $39029/1-9,'0',
+
+!=======================Unique
+
+DM $TQCH1 =
+$QCH1/
+1,
+2,
+3,
+4,
+5,
+99,
+R,F,
+VT = "QCH1. CATEGORY HEALTH- USAGE COMPARED TO 1 YEAR AGO",
+V = "
+Less frequent than 1 year ago;
+About the same as 1 year ago;
+More frequent than 1 year ago;
+I used e-wallet or fintech apps one year ago, but I am not using it anymore;
+I have never tried using e-wallet or fintech apps;
+Don't know;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================Unique
+
+DM $TQCH2 =
+$QCH2/
+1,
+2,
+3,
+4,
+5,
+99,
+R,F,
+VT = "QCH2. CATEGORY HEALTH - USAGE COMPARED TO THE 2020 PANDEMIC 4 YEARS AGO",
+V = "
+Less frequent compared to the 2020 pandemic;
+About the same as the 2020 pandemic;
+More frequent compared to the 2020 pandemic;
+I used e-wallet or fintech apps during the 2020 pandemic, but I am not using it anymore;
+I have never tried using e-wallet or fintech apps;
+Don't Know;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultiSelect
+
+DM $TQCH3a =
+$A_QCH3a/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+91,
+99,
+R,F,
+VT = "QCH3a. CATEGORY HEALTH REPERTOIRE",
+V = "
+Cash;
+Check;
+Debit Card;
+Credit Card;
+E-Wallet/ Fintech Apps;
+Mobile/ Online Banking App;
+E-remittance App;
+Others;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+
+!=======================MultipleTopics9
+
+[*SET s = 0]
+[*DATA topic2 (;) = 
+Cash;
+Check;
+Debit Card;
+Credit Card;
+E-Wallet/ Fintech Apps;
+Mobile/ Online Banking App;
+E-remittance App;
+Others;
+None]
+
+[*FOR A = 1:2:3:4:5:6:7:91:99]
+DM $TQCH3b_[A] =
+$T_QCH3b_[A]/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QCH3b. CATEGORY HEALTH - USAGE OF CATEGORY REPERTOIRE - [topic2.[+s]]",
+V = "
+Less frequent than the past 1 year;
+Same as the past 1 year;
+More frequent than the past 1 year;
+Don't know;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics9
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:91:99]
+DM $TQCH5_[A] =
+$T_QCH5_[A]/
+1,
+2,
+3,
+4,
+R,F,
+VT = "QCH5. CATEGORY HEALTH - FREQUENCY OF USAGE - [topic2.[+s]]",
+V = "
+I use it everyday (7x a week);
+I use it almost everyday (4-6x a week);
+1-3x a week;
+3x or less in a month;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics25
+
+[*SET s = 0]
+[*DATA topic4 (;) = 
+Concerns with hacking and data breaches;
+Fears of loss of money;
+Fears surrounding fraud;
+Fear of being scammed;
+Not safe and secured;
+Mistrust on e-wallet/ fintech and online apps;
+Long delay in resolving issues;
+Negative experiences of friends;
+Doubts with capability of the financial app to provide strong security for my account;
+No available channels or sources to learn how to use the financial app;
+Negative feedback regarding customer service;
+Inaccessible outlets to cash in/ cash out;
+No reliable means to request for refund;
+It is tedious and complicated to download and register;
+Uncertainty of transactions;
+Do not know how to use e-wallet/ fintech app;
+Do not know how to register or create an account in e-wallet/ fintech;
+Lack of knowledge on the different features of e-wallet/ fintech;
+Has service charge/fee to do different transactions (e.g., buy load, money transfer or banks or other apps etc);
+Do not have a personal smartphone to use e-wallet or fintech apps;
+No stable/ reliable internet connection;
+No valid ID to create an account;
+Fear of hidden charges;
+Has cash-in fee every time I fund my account;
+It is tedious and complicated to use]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+DM $TQCH4a_[A] =
+$T_QCH4a_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QCH4a. CONCERNS ABOUT CATEGORY - [topic4.[+s]]",
+V = "
+1 - Not a concern for me (1) <v1>;
+2 (2) <v2>;
+3 (3) <v3>;
+4 (4) <v4>;
+5 (5) <v5>;
+6 (6) <v6>;
+7 -A serious concern for me (7) <v7>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+[*SET s = 0]
+DM $TQCH4a_TB =
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+$T_QCH4a_[A]/7,
+[*END A]
+VT = "QCH4a. CONCERNS ABOUT CATEGORY - TOP BOX SUMMARY",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+[topic4.[+s]][*SLE];
+[*END A]",
+
+[*SET s = 0]
+DM $TQCH4a_T2B =
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+$T_QCH4a_[A]/6+7,
+[*END A]
+VT = "QCH4a. CONCERNS ABOUT CATEGORY - TOP 2 BOX SUMMARY",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+[topic4.[+s]][*SLE];
+[*END A]",
+
+[*SET s = 0]
+DM $TQCH4a_T3B =
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+$T_QCH4a_[A]/5+6+7,
+[*END A]
+VT = "QCH4a. CONCERNS ABOUT CATEGORY - TOP 3 BOX SUMMARY",
+V = "
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+[topic4.[+s]][*SLE];
+[*END A]",
+
+
+
+
+DM $HT = T,
+ HT = "TOTAL",
+  H = "TOTAL*(A)",
+
+!-----------Unique
+DM $Q200 = $11/1-9,'0',
+!IF $DA4/B.$Q200/1, CK $JUN2024/B,
+[*FOR A = 1:2:3:4:5:6:7:91:99]
+!IF ($A_QCH3a/[A]).$Q200/1.$JUN2024/NB, CK $T_QCH5_[A]/1..4,
+[*END A]
+
+
+IF ($Q42023/NB+$Q12024/NB+$Q22024/NB+$Q32024/NB), WRITE,
+!IF ($Q200/1), WRITE,
+  
+!lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
+
+
+FINISH DATA,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG-1/SIG/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+[*DATA HEADERWAVE3 = HA,HB,HC]
+
+
+!
+[*DATA filters =
+$Q2/1,
+$Q2/2,
+$T_Q1_1/1..20,
+$T_Q1_1/21..30,
+$T_Q1_1/31..35,
+$T_Q1_1/36..45,
+$T_Q1_1/46..99,
+$SEC19/1..2,
+$SEC19/3,
+$SEC19/4,
+$Q3/1,
+($Q3/2+3+4+5),
+($Q3/6+7+8),
+($Q3/9+10+11),
+($Q3/12+13+14+15+16+17),
+$Q4/1,
+$Q4/2]
+
+[*DATA filtername =
+MALE,
+FEMALE,
+STUDENTS (20 yo and below),
+YUPPIES (21-30 yo),
+TRANSITIONERS (31-35 yo),
+BALANCERS (36-45 yo),
+OLDER ADULTS/RETIREES (46-65 yo),
+ABC1,
+C2,
+D,
+NCR,
+NCL,
+SL,
+VISAYAS,
+MINDANAO,
+URBAN,
+RURAL]
+
+
+SELECT WR $WTS,
+
+[*SET T = 0]
+
+
+!======
+[*DO Z = 1:1]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END A]
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25]
+T #[+T] = $TQCH4a_[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_TB * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_TB * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_TB * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_T2B * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_T3B * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_T3B * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQCH4a_T3B * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+
+
+
+!====== NEW
+[*DO Z = 1:1]
+T #[+T] = $TQHH1 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENT",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:1]
+T #[+T] = $TQHH1 * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+if $Q17i/2, then,
+[*DO Z = 1:1]
+T #[+T] = $TQHH1 * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+FINISH TABLES,
+
