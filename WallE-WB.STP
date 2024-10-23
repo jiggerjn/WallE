@@ -28,6 +28,25 @@ TEMPORARY /99999999/,
 [*INSERT Wall-E-boosters-GLOBAL]
 [*INSERT W_WTS]
 [*INSERT W_WTS21to65]
+
+
+DM $QPH1 = $26964/1-9,!Buy load streaming
+DM $QSH1 = $27404/1-9,!Buy load gaming
+DM $QST1 = $27468/1-9,!GloanxCeiling
+DM $QGI1 = $33025/1-9,!GloanxGraduation
+DM $QLM1a = $47641/1-9,!FilmxWater
+DM $QNT1 = $47672/1-9,!FilmxNext
+DM $QSC1 = $33093/1-9,!Adz
+
+IF $QST1/3+$QGI1/3, DI $QST1xQGI1 = 3,
+IF $QST1/4+5+$QGI1/4+5, DI $QST1xQGI1 = 5,
+IF ($QST1/1+2).($QGI1/1+2), DI $QST1xQGI1 = 1,
+
+IF $QLM1a/3+$QNT1/3, DI $QLM1axQNT1 = 3,
+IF $QLM1a/4+5+$QNT1/4+5, DI $QLM1axQNT1 = 5,
+IF ($QLM1a/1+2).($QNT1/1+2), DI $QLM1axQNT1 = 1,
+
+
 DM $A_QL2 = $23284/1,$23285/1,$23286/1,$23287/1,$23288/1,$23289/1,$23290/1,$23291/1,$23293/1,$23294/1,$23295/1,$23296/1,$23297/1,$23299/1,$23300/1,$23301/1,$23303/1,$23304/1,$23306/1,$23307/1,$23308/1,$Blank/22,$39083/1,$39084/1,$39085/1,$39086/1,$39087/1,$39088/1,$39089/1,$Blank/30-97,$23310/1,$23311/1,$Blank/100-900,$23283/1,$23292/1,$23298/1,$23302/1,$23305/1,$23309/1,
 
 
@@ -132,17 +151,6 @@ Don't Know;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
-
-!-----------Unique
-DM $QPH1 = $26964/1-9,'0',
-!-----------Unique
-DM $QSH1 = $27404/1-9,'0',
-!-----------Unique
-DM $QST1 = $27468/1-9,'0',
-!-----------Unique
-DM $QGI1 = $33025/1-9,'0',
-!-----------Unique
-DM $QSC1 = $33093/1-9,'0',
 
 
 DM $T_Q104_1 = $25110/1,$25111/1,$25112/1,$25113/1,$25114/1,$25115/1,$25116/1,$25117/1,$25118/1,$Blank/10-90,$25119/1,$Blank/92-98,$25120/1,
@@ -607,7 +615,6 @@ IF $Brand[A]_Attrc[b]/1, DI $Attrc[B] = 1,
 IF $Brand[A]_Attrc[b]/n1, DI $Attrc[B] = 0,
 [*END b] 
 
-[*END A]
 !! == SEGMENTS / FILTERS == !!
 
 if $Q3/1,                   DI $AREA = 1,
@@ -937,8 +944,18 @@ $Q102C.
 $Q104_[C]_[B].
 [*END B]
 [*END C]
+$QPH1.
+$QSH1.
+$QST1.
+$QGI1.
+$QLM1a.
+$QNT1.
+$QSC1.
+$QST1xQGI1.
+$QLM1axQNT1.
 $P2M.
 $WTS,
+[*END A]
 FINISH DATA,
 
 

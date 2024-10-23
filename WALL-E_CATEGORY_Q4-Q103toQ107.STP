@@ -220,7 +220,7 @@ Convenient to use for different financial transactions;
 Is the mode of payment I use for my most important financial transactions;
 I feel comfortable using it for my different financial transactions;
 Hassle-free and easy to use;
-Gives me perks, rewards, deals, and discounts that are relevant to me Nagbibigay sa akin ng mga perks, rewards, deals, at discounts na naaangkop sa akin;
+Gives me perks, rewards, deals, and discounts that are relevant to me;
 Is the mode of payment that I can use for any and all of financial transactions;
 Convenient to send money anytime, anywhere for free;
 Low foreign exchange rates for purchases abroad;
@@ -623,9 +623,9 @@ end if,
 !~~~~~~~~~~~~MultipleTopicsSelect18
 [*SET s = 0]
 T #[+T] = $TQ104R1 * $HMOP,
-IF $Q32024/NB, T #[T] = $TQ104R1 * 1,
+IF ($A_Q102/1).($Q32024/NB), T #[T] = $TQ104R1 * 1,
 [*DO B = 2:9]
-IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
+IF ($A_Q102/[B]).($Q32024/NB), T #[T] = $TQ104R[B] * [B],
 [*END B]
 
 !$DEC2023/NB+($NOV2023/NB.$A_Q102/1)+$Q12024/NB+$Q22024/NB+
@@ -633,9 +633,9 @@ IF $TQ17c/1, then,
 !~~~~~~~~~~~~MultipleTopicsSelect18
 [*SET s = 0]
 T #[+T] = $TQ104R1 * $HMOP,
-IF $Q32024/NB, T #[T] = $TQ104R1 * 1,
+IF ($A_Q102/1).($Q32024/NB), T #[T] = $TQ104R1 * 1,
 [*DO B = 2:9]
-IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
+IF ($A_Q102/[B]).($Q32024/NB), T #[T] = $TQ104R[B] * [B],
 [*END B]
 BT = "Among GCash users (Q17c = Code 1)",
 end if,
@@ -646,9 +646,9 @@ IF $TQ17c/N1, then,
 !~~~~~~~~~~~~MultipleTopicsSelect18
 [*SET s = 0]
 T #[+T] = $TQ104R1 * $HMOP,
-IF $Q32024/NB, T #[T] = $TQ104R1 * 1,
+IF ($A_Q102/1).($Q32024/NB), T #[T] = $TQ104R1 * 1,
 [*DO B = 2:9]
-IF $A_Q102/[B], T #[T] = $TQ104R[B] * [B],
+IF ($A_Q102/[B]).($Q32024/NB), T #[T] = $TQ104R[B] * [B],
 [*END B]
 BT = "Among Non-users of GCash (Q17c = Not Code 1)",
 end if,
