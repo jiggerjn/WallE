@@ -11,7 +11,8 @@ START CONTROL,
 !C = rejectdata\WALLE_Q2_APR_TOTALV4_Q10F1_V2.ASC;rejectdata\WALLE_Q2_JUN_INCIBOS_Q10F1_V2.ASC;rejectdata\WALLE_Q2_MAY_MAINONLY_CODED.ASC;rejectdata\P_WALLE_2023Q2_PUNCHED_JUN_Q10F1.ASC;rejectdata\P_WALLE_2023Q3_V2_PQ10.ASC;rejectdata\WALLE_Q3_JUL_INCIONLY_Q10F1_V2.ASC;rejectdata\WALLE_Q3_AUG_INCIONLY_Q10F1_V2.ASC;rejectdata\WALLE_Q3_SEP_INCIONLY_Q10F1_V2.ASC,
 !C = <dataincidence.txt>,
 !C = PostpaidUser\OCT23ppu.ASC;PostpaidUser\NOV23ppu.ASC;PostpaidUser\DEC23ppu.ASC;PostpaidUser\JAN24ppu.ASC;PostpaidUser\FEB24ppu.ASC;PostpaidUser\MAR24ppu.ASC,
-C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+!C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
 Y,
 OLDNAMES,
 CSV2R,
@@ -1457,6 +1458,45 @@ I don't need GCash to do any of my transactions;
 Missing answers<Z>;
 Total count<C>",
 
+[*DATA Areaname (;) = 
+NCR;
+CAR;
+Region I;
+Region II;
+Region III;
+Region IV-A;
+Region IV-B;
+Region V;
+Region VI;
+Region VII;
+Region VIII;
+Region IX;
+Region X;
+Region XI;
+Region XII;
+Region XIII;
+BARMM]
+
+
+DM $HMinArea =
+T,
+[*DO A = 12:17]
+T,
+$Q3/[A].$Q12024/NB,
+$Q3/[A].$Q22024/NB,
+$Q3/[A].$Q32024/NB,
+[*END A]
+HT = "HEADER. MINDANAO AREA",
+H = "<F=SHG1>
+TOTAL*(a);
+[*DO A = 12:17]
+[AreaName.A]\
+TOTAL*(a)<S>;
+Q1 2024 *(b);
+Q2 2024 *(c);
+Q3 2024 *(d)[*SLE];
+[*END A]",
+
 !lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
 
 !IF $Apr2023Inci/NB+$Jun2023Inci/NB+$JUL2023inci/NB+$AUG2023inci/NB+$SEP2023inci/NB+(($Q42023/NB+$Q12024/NB+$Q22024/NB).($SEC19/N5).($Q200/1)), WRITE,
@@ -1540,13 +1580,19 @@ RURAL]
 
 [*SET T = 0]
 
+!======
+[*DO Z = 1:1]
+IF $Q3/12..17, T #[+T] = $Tincidencedata * $HMinArea,
+BT = "AMONG MINDANAO",
+[*END Z]
+
+[*SK 111]
 !====== NEW
 [*DO Z = 1:2]
 if ($A_Q17d/n1.nb).($TQ10/1).($A_QFR2c/N1).($A_QGT2/NB),  T #[+T] = $TQGT2 * $[HEADERWAVE3norm.Z],
 BT = "Among those who do not have an existing account with gcash",
 [*END Z]
 
-[*SK 111]
 
 
 !======

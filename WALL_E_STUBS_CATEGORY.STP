@@ -3135,6 +3135,45 @@ Missing Answer<z>;
 Total Count<C>",   
 [*END B]
 
+DM $BRAND_LAD_RGDfilter = 
+($TQ16d/N1)+
+($TQ16c/N1)+
+($TQ16b/N1)+
+($TQ16a/N1)+
+($TQ17l/N1)+
+($TQ17d/N1)+
+($TQ17f/N1)+
+($TQ17e/N1)+
+($TQ17a/N1)+
+($TQ17c/N1)+
+($TQ17k/N1)+
+($TQ17p/N1)+
+($TQ17b/N1)+
+($TQ17o/N1)+
+($TQ16e/N1)+
+($TQ16g/N1),
+
+[*DO A = 2:51]
+ORDM $BRAND_LAD_RGD = 
+(($TQ16c/N1).($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]))+
+(($TQ16b/N1).($TQ16a/N[A]).($TQ16b/[A]))+
+(($TQ16a/N1).($TQ16a/[A])),
+($TQ16c/N1).($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
+($TQ16b/N1).($TQ16a/N[A]).($TQ16b/[A]),
+($TQ16a/N1).($TQ16a/[A]),
+($TQ17l/N1).($TQ17l/[A]),
+($TQ17d/N1).($TQ17d/[A]),
+($TQ17f/N1).($TQ17f/[A]),
+($TQ17e/N1).($TQ17e/[A]),
+($TQ17a/N1).($TQ17a/[A]),
+($TQ17c/N1).($TQ17c/[A]),
+($TQ17k/N1).($TQ17k/[A]),
+($TQ17p/N1).($TQ17p/[A]),
+($TQ17b/N1).($TQ17b/[A]),
+($TQ17o/N1).($TQ17o/[A]),
+($TQ16e/N1).($TQ16e/[A]),
+($TQ16g/N1).($TQ16g/[A]),
+[*enda]
 
 DM $BRAND_LAD = 
 [*DO A = 1:51]
@@ -3176,6 +3215,29 @@ V = "
 `     Q16e. Favorite;
 `     Q16g. Recommended[*sle];
 [*ENDA]",
+
+
+DM $TBRAND_LAD_RGD = 
+$BRAND_LAD_RGD/1-16,
+VT = "Q16-Q17. BRAND FUNNEL - EXCLUDING GCASH",
+V = "
+ALL BRANDS EXCLUDING GCASH\
+`     Q16d. Total Awareness;
+`     Q16c. Aided;
+`     Q16b. Other spontaneous;
+`     Q16a. TOM;
+`     Q17l. Ever downloaded;
+`     Q17d. With Existing Acc;
+`     Q17f. Ever Tried;
+`     Q17e. P6M;
+`     Q17a. P2M;
+`     Q17c. P4W;
+`     Q17k. P1W;
+`     Q17p. P1D;
+`     Q17b. BUMO;
+`     Q17o. P1M;
+`     Q16e. Favorite;
+`     Q16g. Recommended",
 
 
 
