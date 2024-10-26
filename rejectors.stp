@@ -2954,7 +2954,7 @@ F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HEADERWAVE3 = HA,HB]
+[*DATA HEADERWAVE3 = HATM,HBTM]
 
 
 
@@ -3002,6 +3002,21 @@ RURAL]
 [*SET T = 0]
 
 
+!======
+[*DO Z = 1:2]
+IF $TQ10/2, T #[+T] = $TPROFILE2 * $[HEADERWAVE3.Z],
+BT = "Among rejectors of fintech",
+[*END Z]
+
+
+[*DO Z = 1:2]
+IF ($TQ10/2).($DATA2024/1), T #[+T] = $TA_Q10_1new * $[HEADERWAVE3.Z],
+BT = "Among rejectors of fintech",
+[*END Z]
+
+
+[*SK 1111]
+
 
 [*DO Z = 1:2]
 [*DO Y = 11:15]
@@ -3009,9 +3024,6 @@ IF ($TQ10/2).($DATA2024/1).([filters.Y]), T #[+T] = $TA_Q10_1new * $[HEADERWAVE3
 BT = "Among rejectors of fintech - [filtername.Y]",
 [*END Y]
 [*END Z]
-
-[*SK 1111]
-
 
 !~~~~~~~~~~~~MultiSelect
 [*DO X = 1:2]
