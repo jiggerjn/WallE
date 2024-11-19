@@ -83,18 +83,6 @@ IF ($TQADZ1/4..5), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
 IF ($TQADZ1/4..5), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
 [*END A]
 [*END Z]
-!
-[*DO Z = 1:3]
-[*SET s = 0]
-[*DO A = 1:1]
-IF ($TQADZ1/4..5).($TQADZ11r[A]/1..3), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
-BT = "Among Aware of - Total GCash Stories: Adz - those who answered QADZ11(R1-R3)",
-[*END A]
-[*DO A = 2:3]
-IF ($TQADZ1/4..5).($TQADZ11r[A]/1..3), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
-[*END A]
-[*END Z]
-!
 
 [*DO Z = 1:3]
 IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
@@ -104,6 +92,28 @@ IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
 IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.Z],
 [*END Z]
 
+!
+[*DO Z = 1:3]
+[*SET s = 0]
+[*DO A = 1:1]
+IF ($TQADZ1/4..5).($TQADZ11r1/1..3), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+BT = "Among Aware of - Total GCash Stories: Adz - those who answered QADZ11 (R1-R4)",
+[*END A]
+[*DO A = 2:[Statements11ADZ.#]]
+IF ($TQADZ1/4..5).($TQADZ11r1/1..3), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+[*END A]
+[*END Z]
+!
+
+[*DO Z = 1:3]
+IF ($TQADZ1/4..5).($TQADZ11r1/1..3), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
+BT = "Among Aware of - Total GCash Stories: Adz - those who answered QADZ11 (R1-R4)",
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQADZ1/4..5).($TQADZ11r1/1..3), T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.Z],
+BT = "Among Aware of - Total GCash Stories: Adz - those who answered QADZ11 (R1-R4)",
+[*END Z]
 
 
 
@@ -128,18 +138,7 @@ global bt# = "Among Aware of  Gcash Stories: Adz - Photoboard",
     IF ($TQADZ1/4..5), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
     [*END A]
     [*END Z]
-    !
-    [*DO Z = 1:3]
-    [*SET s = 0]
-    [*DO A = 1:1]
-    IF ($TQADZ1/4..5).($TQADZ11r[A]/1..3), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
-    BT = "Among Aware of  Gcash Stories: Adz - Photoboard - those who answered QADZ11(R1-R3)",
-    [*END A]
-    [*DO A = 2:3]
-    IF ($TQADZ1/4..5).($TQADZ11r[A]/1..3), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
-    [*END A]
-    [*END Z]
-    !
+
 
     [*DO Z = 1:3]
     IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
@@ -149,9 +148,72 @@ global bt# = "Among Aware of  Gcash Stories: Adz - Photoboard",
     IF ($TQADZ1/4..5), T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.Z],
     [*END Z]
 
+    !
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($TQADZ1/4..5).($TQADZ11r1/1..3), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+    BT = "Among Aware of  Gcash Stories: Adz - Photoboard - those who answered QADZ11 (R1-R4)",
+    [*END A]
+    [*DO A = 2:[Statements11ADZ.#]]
+    IF ($TQADZ1/4..5).($TQADZ11r1/1..3), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+    !
+
+    [*DO Z = 1:3]
+    IF ($TQADZ1/4..5).($TQADZ11r1/1..3), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
+    BT = "Among Aware of  Gcash Stories: Adz - Photoboard - those who answered QADZ11 (R1-R4)",
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($TQADZ1/4..5).($TQADZ11r1/1..3), T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.Z],
+    BT = "Among Aware of  Gcash Stories: Adz - Photoboard - those who answered QADZ11 (R1-R4)",
+    [*END Z]
 
 
 
+
+FILTER OFF,
+
+
+DM $Filter_Ad_Aware_AdZ11_Vid = 
+($FILTER_ADZ_3/1).($TQADZ1/1..5),
+($FILTER_ADZ_3/1).($TQADZ1/4..5),
+($FILTER_ADZ_3/1).($TQADZ1/1..2),
+
+
+[*DATA BTAdAwareAdZ11Vid(;)=
+Among Total Gcash Stories: Adz - 30s Video Ad;
+Among Aware of Gcash Stories: Adz - 30s Video Ad;
+Among Not Aware of Gcash Stories: Adz - 30s Video Ad
+]
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[*DO F=1:3]
+FILTER $Filter_Ad_Aware_AdZ11_Vid/[F],
+global bt# = "[BTAdAwareAdZ11Vid.F]", 
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[Statements11ADZ.#]]
+    +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+
+    [*DO Z = 1:3]
+    T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
 
 
 

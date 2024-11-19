@@ -1,0 +1,279 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+IDF = ..\_WALLE_IDF_ADEval,
+Y,
+TIDY,
+ 
+NORPT,
+NOTAB,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+ 
+[*DATA HEADERWAVE3 = HA,HB,HC]
+
+F=NBCS,
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+[*INSERT Datasets]
+
+
+
+
+DM $FILTER_SG =  ($Resp_AD_SG/NB).($Q32024/NB),
+    V = "Ad 16.4 SG",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+DM $BRAND_LAD_GCASH = 
+[*DO A = 1:1]
+$TQ16d/[A],
+($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
+($TQ16a/N[A]).($TQ16b/[A]),
+$TQ16a/[A],
+$TQ17l/[A],
+$TQ17d/[A],
+$TQ17f/[A],
+$TQ17e/[A],
+$TQ17a/[A],
+$TQ17c/[A],
+$TQ17k/[A],
+$TQ17p/[A],
+$TQ17b/[A],
+$TQ17o/[A],
+$TQ16e/[A],
+$TQ16g/[A],
+[*enda]
+VT = "Q16-Q17. BRAND FUNNEL",
+V = "
+[*DOA=1:1]
+!GCASH\
+Q16d. Total Awareness;
+Q16c. Aided;
+Q16b. Other spontaneous;
+Q16a. TOM;
+Q17l. Ever downloaded;
+Q17d. With Existing Acc;
+Q17f. Ever Tried;
+Q17e. P6M;
+Q17a. P2M;
+Q17c. P4W;
+Q17k. P1W;
+Q17p. P1D;
+Q17b. BUMO;
+Q17o. P1M;
+Q16e. Favorite;
+Q16g. Recommended[*sle];
+[*ENDA]",
+
+
+
+
+
+
+
+
+!=========
+[*DATA Q16NOMI (;) =
+BDO Mobile/Online;
+BPI Mobile/Online;
+CLIQQ;
+Coins.ph;
+GCash;
+GrabPay;
+PayMaya/Maya;
+PayPal;
+ShopeePay]
+
+
+
+[*DATA HEADERWAVE3 = H_BrandAssocXAdeval]
+
+
+
+
+
+F=NBRS,
+
+
+[*DATA HeaderX(;) = 
+H_BrandAssocXAdeval1;
+H_BrandAssocXAdeval2;
+H_BrandAssocXAdeval3;
+H_BrandAssocXAdeval4;
+H_BrandAssocXAdeval5;
+H_BrandAssocXAdeval6;
+H_BrandAssocXAdeval7;
+H_BrandAssocXAdeval8;
+H_BrandAssocXAdeval5;
+H_BrandAssocXAdeval5]
+
+
+
+DM $FILTER_BLS =  ($Resp_AD_BLS/NB).($Q32024/NB),
+DM $FILTER_BLG =  ($Resp_AD_BLG/NB).($Q32024/NB),
+DM $FILTER_LEND =  ($Resp_AD_LEND/NB).($Q32024/NB),
+DM $FILTER_LOAN =  ($Resp_AD_LOAN/NB).($Q32024/NB),
+DM $FILTER_ADZ = (($Resp_AD_ADZ_SEP24_Onward/NB)+($Resp_AD_ADZ_SEP24_Before/NB)).($Q32024/NB),
+DM $FILTER_LGW =  ($Resp_AD_LGW/NB).($Q32024/NB),
+DM $FILTER_LGN =  ($Resp_AD_LGN/NB).($Q32024/NB),
+DM $FILTER_SG =  ($Resp_AD_SG/NB).($Q32024/NB),
+DM $FILTER_ADZ_2 =  ($Resp_AD_ADZ_SEP24_Before/NB).($Q32024/NB),
+DM $FILTER_ADZ_3 =  ($Resp_AD_ADZ_SEP24_Onward/NB).($Q32024/NB),
+
+[*DATA AdEvalVarFilter(;)=
+BLS;
+BLG;
+LEND;
+LOAN;
+ADZ;
+LGW;
+LGN;
+SG;
+ADZ_2;
+ADZ_3]
+
+[*DATA AdEvallabelFilter(;)=
+BUY LOAD STREAMING;
+BUY LOAD GAMING;
+LENDING GLOAN FILM X CEILING;
+LENDING GLOAN FILM X GRADUATION;
+TOTAL GCASH STORIES ADZ;
+LENDING GCREDIT FILM x WATER;
+LENDING GCREDIT FILM x NEXT TIME;
+SUGOD-SUYOD IT`'S SHOWTIME;
+GCASH STORIES ADZ - PHOTOBOARD;
+GCASH STORIES ADZ - 30s VIDEO AD]
+
+
+!FILTER $FILTER_SG/1,
+
+
+[*FOR HEAD = 5:9:10]
+[*DATA HEADERWAVE3(M=P)=[HeaderX.HEAD]]
+FILTER $FILTER_[AdEvalVarFilter.HEAD]/1,
+
+
+
+global bt# = "ALL RESPONDENTS", 
+
+
+ 
+
+
+!======
+[*DO Z = 1:1]
+[*DO A = 5:5]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+HT = "HEADER AD 5: [AdEvallabelFilter.Head]",
+BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+
+!======
+[*DO Z = 1:1]
+IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
+HT = "HEADER AD 5: [AdEvallabelFilter.Head]",
+BT = "AMONG GCASH AWARE", 
+[*DO A = 2:25]
+IF $A_Q16d/1, +T #[+T] = $BRDLADDER[A] * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*END A]
+[*END Z]
+
+ 
+ 
+
+[*END HEAD]
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+FILTER OFF,
+[*SK64]
+
+!======
+[*DO Z = 1:1]
+If $FILTER_SG/1, T #[+T] = $TQSG1 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+!======
+[*DO Z = 1:1]
+[*DO A = 5:5]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+
+
+
+!======
+[*DO Z = 1:1]
+IF $A_Q16d/1, T #[+T] = $BRDLADDER1 * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*DO A = 2:25]
+IF $A_Q16d/1, +T #[+T] = $BRDLADDER[A] * $[HEADERWAVE3.Z],
+BT = "AMONG GCASH AWARE", 
+[*END A]
+[*END Z]
+
+
+[*DO Z = 1:1]
+T #[+T] = $BRAND_LAD_GCASH * $[HEADERWAVE3.Z],
+VT = "Q16-Q17. BRAND FUNNEL - GCASH",
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+[*DO Z = 1:1]
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+[*64]
+
+FINISH TABLES,
