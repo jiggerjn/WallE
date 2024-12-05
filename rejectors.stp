@@ -2912,6 +2912,353 @@ Total count<C>",
 
 
 
+DM $T_Q8b2_1 = $Blank/1-4,$230/1,$231/1,$232/1,$233/1,$234/1,$235/1,$Blank/11-98,$236/1,
+DM $T_Q8b2_2 = $Blank/1-4,$237/1,$238/1,$239/1,$240/1,$241/1,$242/1,$Blank/11-98,$243/1,
+DM $T_Q8b2_4 = $Blank/1-4,$244/1,$245/1,$246/1,$247/1,$248/1,$249/1,$Blank/11-98,$250/1,
+DM $T_Q8b2_9 = $Blank/1-4,$251/1,$252/1,$253/1,$254/1,$255/1,$256/1,$Blank/11-98,$257/1,
+DM $T_Q8b2_10 = $Blank/1-4,$258/1,$259/1,$260/1,$261/1,$262/1,$263/1,$Blank/11-98,$264/1,
+DM $T_Q8b2_8 = $Blank/1-4,$265/1,$266/1,$267/1,$268/1,$269/1,$270/1,$Blank/11-98,$271/1,
+DM $T_Q8b2_11 = $Blank/1-4,$272/1,$273/1,$274/1,$275/1,$276/1,$277/1,$Blank/11-98,$278/1,
+DM $T_Q8b2_91 = $Blank/1-4,$279/1,$280/1,$281/1,$282/1,$283/1,$284/1,$Blank/11-98,$285/1,
+DM $T_Q8b2_92 = $Blank/1-4,$286/1,$287/1,$288/1,$289/1,$290/1,$291/1,$Blank/11-98,$292/1,
+DM $Q8d = $309/1-9,
+DM $T_Q8b1_1 = $Blank/1-4,$310/1,$311/1,$312/1,$313/1,$314/1,$315/1,$Blank/11-98,$316/1,
+DM $T_Q8b1_2 = $Blank/1-4,$317/1,$318/1,$319/1,$320/1,$321/1,$322/1,$Blank/11-98,$323/1,
+DM $T_Q8b1_4 = $Blank/1-4,$324/1,$325/1,$326/1,$327/1,$328/1,$329/1,$Blank/11-98,$330/1,
+DM $T_Q8b1_9 = $Blank/1-4,$331/1,$332/1,$333/1,$334/1,$335/1,$336/1,$Blank/11-98,$337/1,
+DM $T_Q8b1_10 = $Blank/1-4,$338/1,$339/1,$340/1,$341/1,$342/1,$343/1,$Blank/11-98,$344/1,
+DM $T_Q8b1_8 = $Blank/1-4,$345/1,$346/1,$347/1,$348/1,$349/1,$350/1,$Blank/11-98,$351/1,
+DM $T_Q8b1_11 = $Blank/1-4,$352/1,$353/1,$354/1,$355/1,$356/1,$357/1,$Blank/11-98,$358/1,
+DM $T_Q8b1_91 = $Blank/1-4,$359/1,$360/1,$361/1,$362/1,$363/1,$364/1,$Blank/11-98,$365/1,
+DM $T_Q8b1_92 = $Blank/1-4,$366/1,$367/1,$368/1,$369/1,$370/1,$371/1,$Blank/11-98,$372/1,
+DM $Q8f = $389/1-9,
+
+!=========
+[*DATA Q8B2 = 1,2,4,9,10,8,11,91,92]
+[*DATA Q8B2STUBS (;) = 
+Bought load;
+Payments for purchases from any store or establishments in-store or online;
+Pay bills;
+Send money for any purposes;
+Receive money for any purposes;
+Pay for transportation;
+Pay for subscriptions]
+
+[*DO A = 1:7]
+DM $TQ8b2R[A] = $T_Q8b2_[Q8B2.A]/
+7..10,7-10,
+5..6,5-6,
+99,R,F,
+VT = "Q8b2. GENERAL FINANCIAL TRANSACTIONS METHODS (P2M) - [Q8B2STUBS.A]",
+V = "
+NON-DIGITAL/ OFFLINE<Q>;
+`     Cash;
+`     Check;
+`     Debit Card;
+`     Credit Card;
+DIGITAL<Q>;
+`     eWallet;
+`     Mobile/Online Banking;
+DID NOT DO THIS TRANSACTION;
+Missing Answer<z>;
+Total Count<C>",
+[*END A]
+
+!=========
+DM $TQ8d = $Q8d/1-2,R,F,
+VT = "Q8d. P2M TRANSACTION INCIDENCE",
+V = "
+Did transaction in P2M;
+Did not do transaction in P2M;
+Missing Answer<z>;
+Total Count<C>",
+
+
+!=========
+[*DO A = 1:7]
+DM $TQ8b1R[A] = $T_Q8b1_[Q8B2.A]/
+7..10,7-10,
+5..6,5-6,
+99,R,F,
+VT = "Q8b1. GENERAL FINANCIAL TRANSACTIONS METHODS (P1M) - [Q8B2STUBS.A]",
+V = $TQ8b2R1,
+[*END A]
+
+
+!=========
+[*DO A = 1:7]
+ORDM $T_Q8b1_rgd = $T_Q8b1_[Q8B2.A],
+DM $TQ8b1R[A]rb = $T_Q8b1_[Q8B2.A]/
+7..10,7-10,
+5..6,5-6,
+99+R,F,
+VT = "Q8b1. GENERAL FINANCIAL TRANSACTIONS METHODS (P1M) - [Q8B2STUBS.A] - REBASED",
+V = "
+NON-DIGITAL/ OFFLINE<Q>;
+`     Cash;
+`     Check;
+`     Debit Card;
+`     Credit Card;
+DIGITAL<Q>;
+`     eWallet;
+`     Mobile/Online Banking;
+DID NOT DO THIS TRANSACTION;
+Total Count<C>",
+[*END A]
+
+
+
+[*SET Q8blen = Q8B2STUBS.#]
+[*DATA averageQ8btitle (;) = 
+NON-DIGITAL/ OFFLINE ONLY;
+TOTAL NON-DIGITAL/ OFFLINE;
+DIGITAL;
+DIGITAL ONLY;
+HYBRID (BOTH DIGITAL AND OFFLINE)]
+
+[*DO u = 1:2]
+[*DO A = 1:Q8blen]
+DM $Q8b[u]_total[Q8B2.A] = $T_Q8b[u]_[Q8B2.A]/5..10,
+DM $Q8b[u]_offlineonly[Q8B2.A] = ($T_Q8b[u]_[Q8B2.A]/7+8+9+10).N($T_Q8b[u]_[Q8B2.A]/5+6),
+DM $Q8b[u]_digitalonly[Q8B2.A] = N($T_Q8b[u]_[Q8B2.A]/7+8+9+10).($T_Q8b[u]_[Q8B2.A]/5+6),
+DM $Q8b[u]_hybrid[Q8B2.A] =  ($T_Q8b[u]_[Q8B2.A]/7+8+9+10).($T_Q8b[u]_[Q8B2.A]/5+6),
+
+OM $Q8b[u]_totalrgd = $Q8b[u]_total[Q8B2.A],
+OM $Q8b[u]_offlineonlyrgd = $Q8b[u]_offlineonly[Q8B2.A],
+OM $Q8b[u]_digitalonlyrgd = $Q8b[u]_digitalonly[Q8B2.A],
+OM $Q8b[u]_hybridrgd =  $Q8b[u]_hybrid[Q8B2.A],
+
+DM $TQ8b[u]_inci[A] = 
+$Q8b[u]_total[Q8B2.A]/NB,
+$Q8b[u]_offlineonly[Q8B2.A]/NB,
+$Q8b[u]_offlineonly[Q8B2.A]/NB+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_digitalonly[Q8B2.A]/NB+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_digitalonly[Q8B2.A]/NB,
+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_total[Q8B2.A]/B,
+R,F,
+XT = "Q8b[u]. GENERAL FINANCIAL TRANSACTIONS METHODS (P[u]M) - INCIDENCE - [Q8B2STUBS.A]",
+X = "
+TOTAL INCIDENCE;
+NON-DIGITAL/ OFFLINE ONLY;
+TOTAL NON-DIGITAL/ OFFLINE;
+DIGITAL;
+`    DIGITAL ONLY;
+`    HYBRID (BOTH DIGITAL AND OFFLINE);
+DID NOT DO THIS TRANSACTION;
+Missing Answer<z>; 
+Total Count<c>",
+
+DM $TQ8b[u]_inci[A]rb = 
+$Q8b[u]_total[Q8B2.A]/NB,
+$Q8b[u]_offlineonly[Q8B2.A]/NB,
+$Q8b[u]_offlineonly[Q8B2.A]/NB+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_digitalonly[Q8B2.A]/NB+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_digitalonly[Q8B2.A]/NB,
+$Q8b[u]_hybrid[Q8B2.A]/NB,
+$Q8b[u]_total[Q8B2.A]/B+R,
+F,
+XT = "Q8b[u]. GENERAL FINANCIAL TRANSACTIONS METHODS (P[u]M) - INCIDENCE - [Q8B2STUBS.A] - REBASED",
+X = "
+TOTAL INCIDENCE;
+NON-DIGITAL/ OFFLINE ONLY;
+TOTAL NON-DIGITAL/ OFFLINE;
+DIGITAL;
+`    DIGITAL ONLY;
+`    HYBRID (BOTH DIGITAL AND OFFLINE);
+DID NOT DO THIS TRANSACTION;
+Total Count<c>",
+[*END A]
+
+
+
+DM $TQ8b[u]_inci_rb_RGD = 
+$Q8b[u]_totalrgd/NB,
+$Q8b[u]_offlineonlyrgd/NB,
+$Q8b[u]_offlineonlyrgd/NB+$Q8b[u]_hybridrgd/NB,
+$Q8b[u]_digitalonlyrgd/NB+$Q8b[u]_hybridrgd/NB,
+$Q8b[u]_digitalonlyrgd/NB,
+$Q8b[u]_hybridrgd/NB,
+$Q8b[u]_totalrgd/B+R,
+F,
+XT = "Q8b[u]. GENERAL FINANCIAL TRANSACTIONS METHODS (P[u]M) - INCIDENCE - REGARDLESS - REBASED",
+X = "
+TOTAL INCIDENCE;
+NON-DIGITAL/ OFFLINE ONLY;
+TOTAL NON-DIGITAL/ OFFLINE;
+DIGITAL;
+`    DIGITAL ONLY;
+`    HYBRID (BOTH DIGITAL AND OFFLINE);
+DID NOT DO THIS TRANSACTION;
+Total Count<c>",
+
+
+DM $Q8b[u]_RGD = 
+[*DO A = 1:Q8blen]
+$T_Q8b[u]_[Q8B2.A]/5..10,
+[*END A]
+
+DM $TQ8b[u]_count = 
+[*DO B = 1:Q8blen]
+CT($Q8b[u]_RGD)/[B],
+[*END B]
+F,
+XT = "Q8b[u]. Average # of transactions done in the P[u]M",
+X = "
+1 TRANSACTION ONLY <V1>;
+
+[*DO B = 2:Q8blen]
+[B] TRANSACTIONS <V[B]>;
+[*END B]
+Total Count<c>",
+
+[*DO D = 2:6]
+DM $TQ8b[u]_count[D] = 
+[*DO B = 1:Q8blen]
+(CT($Q8b[u]_RGD)/[B]).([*DO A = 1:Q8blen]$TQ8b[u]_inci[A]/[D][*SLE]+[*END A]),
+[*END B]
+F,
+XT = "Q8b[u]. Average # of transactions done in the P[u]M - [averageQ8btitle.[D-1]]",
+X = "
+1 TRANSACTION ONLY <V1>;
+
+[*DO B = 2:Q8blen]
+[B] TRANSACTIONS <V[B]>;
+[*END B]
+Total Count<c>",
+[*END D]
+
+
+
+[*DATA combicodes = 
+1,
+2,
+3,
+4,
+5,
+6,
+7]
+!combicodes are the number of codes in the variable, this are not the literal codes
+!we have 7 codes so i put 1,2,3,4,5,6,7 in the dataset
+ 
+
+ !WORKS ONLY UPTO 19!
+DM $TQ8b[u]_combi =
+ 
+[*DO R = 1:7]! [R] COMBINATION
+CT($Q8b[u]_RGD)/[R],
+[*DO A = 1:7]! code [A]
+[*DO B = [A]:7]
+[*DO C = [B]:7]
+[*DO D = [C]:7]
+[*DO E = [D]:7]
+[*DO F = [E]:7]
+[*DO G = [F]:7]
+ 
+[*BLOCK 2 ON R.EQ.1]
+[*BLOCK 1 ON A.EQ.B][*BLOCK 1 ON B.EQ.C][*BLOCK 1 ON C.EQ.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.2]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.EQ.C][*BLOCK 1 ON C.EQ.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.3]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.EQ.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.4]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.5]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.NE.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.6]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.NE.E][*BLOCK 1 ON E.NE.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.7]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.NE.E][*BLOCK 1 ON E.NE.F][*BLOCK 1 ON F.NE.G]
+[*2]
+CT($Q8b[u]_RGD)/[R].$Q8b[u]_RGD/([*DO Y = 1:[R]][combicodes.[~Y]][*SLE].[*END Y]),
+[*1]
+[*END G]
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+[*END B]
+[*END A]
+[*END R]
+
+R,F,
+ 
+VT = "Q8B[u]. Combination data (Permutation of transactions) - P[u]M",
+V = "
+[*DO R = 1:7]
+COMBINATION [R]<Q>;
+[*DO A = 1:7]
+[*DO B = [A]:7]
+[*DO C = [B]:7]
+[*DO D = [C]:7]
+[*DO E = [D]:7]
+[*DO F = [E]:7]
+[*DO G = [F]:7]
+ 
+[*BLOCK 2 ON R.EQ.1]
+[*BLOCK 1 ON A.EQ.B][*BLOCK 1 ON B.EQ.C][*BLOCK 1 ON C.EQ.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.2]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.EQ.C][*BLOCK 1 ON C.EQ.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.3]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.EQ.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.4]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.EQ.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.5]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.NE.E][*BLOCK 1 ON E.EQ.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.6]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.NE.E][*BLOCK 1 ON E.NE.F][*BLOCK 1 ON F.EQ.G]
+[*2]
+ 
+[*BLOCK 2 ON R.EQ.7]
+[*BLOCK 1 ON A.NE.B][*BLOCK 1 ON B.NE.C][*BLOCK 1 ON C.NE.D][*BLOCK 1 ON D.NE.E][*BLOCK 1 ON E.NE.F][*BLOCK 1 ON F.NE.G]
+[*2]
+`     [*DO Y = 1:[R]][Q8B2STUBS.[~Y]][*SLE] + [*END Y];
+[*1]
+[*END G]
+[*END F]
+[*END E]
+[*END D]
+[*END C]
+[*END B]
+[*END A]
+[*END R]
+ 
+Missing answers<Z>;
+Total count<C>",
+[*END u]
+
+
+!=========
+DM $TQ8f = $Q8f/1-2,R,F,
+VT = "Q8f. P1M TRANSACTION INCIDENCE",
+V = "
+Did transaction in P1M;
+Did not do transaction in P1M;
+Missing Answer<z>;
+Total Count<C>",
+
 !-----------Unique
 DM $Q200 = $11/1-9,'0',
 
@@ -2954,7 +3301,7 @@ F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
 %AVG = 'Mean Score<d2>',
 %SDV = 'Standard Deviation<d2>',
 
-[*DATA HEADERWAVE3 = HATM,HBTM]
+[*DATA HEADERWAVE3 = HA,HB]
 
 
 
@@ -3002,20 +3349,385 @@ RURAL]
 [*SET T = 0]
 
 
+
 !======
 [*DO Z = 1:2]
-IF $TQ10/2, T #[+T] = $TPROFILE2 * $[HEADERWAVE3.Z],
-BT = "Among rejectors of fintech",
+[*DO A = 1:7]
+T #[+T] = $TQ8b2_inci[A] * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END A]
 [*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b2_inci[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b2_inci[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b2R[A] * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END A]
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b2R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b2R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+
+
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQ8d * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQ8d * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQ8d * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+
+
+
+
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
+[*END A]
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
+[*END A]
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
+[*END A]
+[*END Z]
+end if,
+
+
+
+
+
+
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END A]
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+
+
+
+
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
+[*END A]
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
+[*END A]
+[*END Z]
+end if,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
+[*END A]
+[*END Z]
+end if,
+
+
+
+
+
+
+
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END A]
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+[*DO A = 1:7]
+T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END A]
+[*END Z]
+end if,
+
+
+
+
+
+
+
+
+
+
+
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQ8f * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQ8f * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:2]
+T #[+T] = $TQ8f * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+
+
+
 
 
 [*DO Z = 1:2]
-IF ($TQ10/2).($DATA2024/1), T #[+T] = $TA_Q10_1new * $[HEADERWAVE3.Z],
-BT = "Among rejectors of fintech",
+T #[+T] = $TQ8b2_count * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
 [*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:2]
+T #[+T] = $TQ8b2_count * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+[*DO Z = 1:2]
+T #[+T] = $TQ8b2_count * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+
+
+
+
+
+
+[*DO Z = 1:2]
+IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_count * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:2]
+IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_count * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+[*DO Z = 1:2]
+IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_count * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
+[*END Z]
+end if,
+
+
+
+
+
+
+[*DO Z = 1:2]
+T #[+T] = $TQ8b2_combi * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:2]
+T #[+T] = $TQ8b2_combi * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+[*DO Z = 1:2]
+T #[+T] = $TQ8b2_combi * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+
+
+
+
+
+[*DO Z = 1:2]
+IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_combi * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
+[*END Z]
+
+if $Q17i/1, then,
+[*DO Z = 1:2]
+IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_combi * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+[*DO Z = 1:2]
+IF $TQ8b2_count/1..[Q8blen], T #[+T] = $TQ8b1_combi * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M",
+[*END Z]
+end if,
 
 
 [*SK 1111]
+
+[*DO Z = 1:2]
+IF ($TQ10/2).($DATA2024/1).($A_QGT1/99), T #[+T] = $TA_Q10_1new * $[HEADERWAVE3.Z],
+BT = "Among rejectors of fintech - don't need GCash to do any transactions (QGT1=99)",
+[*END Z]
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:2]
+IF ($TQ10/2).($A_QFR2c/N1).($A_QGT1/NB).($Q3/2..4), T #[+T] = $TQGT1 * $[HEADERWAVE3.X],
+BT = "Among rejectors who have no existing account with gcash - North Luzon",
+[*END X]
+
+
+
+!~~~~~~~~~~~~MultiSelect
+[*DO X = 1:2]
+IF ($TQ10/2).($A_QFR2c/N1).($A_QGT1/NB).($Q3/5), T #[+T] = $TQGT1 * $[HEADERWAVE3.X],
+BT = "Among rejectors who have no existing account with gcash - Central Luzon",
+[*END X]
 
 
 [*DO Z = 1:2]
@@ -3024,12 +3736,6 @@ IF ($TQ10/2).($DATA2024/1).([filters.Y]), T #[+T] = $TA_Q10_1new * $[HEADERWAVE3
 BT = "Among rejectors of fintech - [filtername.Y]",
 [*END Y]
 [*END Z]
-
-!~~~~~~~~~~~~MultiSelect
-[*DO X = 1:2]
-IF ($TQ10/2).($A_QFR2c/N1).($A_QGT1/NB), T #[+T] = $TQGT1 * $[HEADERWAVE3.X],
-BT = "Among rejectors who have no existing account with gcash",
-[*END X]
 
 
 !====== NEW
