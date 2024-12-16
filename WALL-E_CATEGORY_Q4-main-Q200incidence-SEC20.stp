@@ -1060,11 +1060,15 @@ DM $HGnewinc5T = T,
            ($Q32023/NB),
            ($Q42023/NB),
            ($Q12024/NB),
+           ($Q22024/NB),
+           ($Q32024/NB),
            [*DO A = 2:46]
            T,
            ($HGnewinc5/[A]).($Q32023/NB),
            ($HGnewinc5/[A]).($Q42023/NB),
            ($HGnewinc5/[A]).($Q12024/NB),
+           ($HGnewinc5/[A]).($Q22024/NB),
+           ($HGnewinc5/[A]).($Q32024/NB),
            [*END A]
 HT = "HEADER 5. LIFESTAGE X MACROREGION - TRENDED",
 H  = "
@@ -1072,6 +1076,8 @@ TOTAL*(a);
 Q3 2023 *(b);
 Q4 2023 *(c);
 Q1 2024 *(d);
+Q2 2024 *(e);
+Q3 2024 *(f);
 [*DO A = 1:9]
 [lifestage21to22name.A]****
 NCR***
@@ -1079,26 +1085,36 @@ TOTAL*(a)<S>;
 Q3 2023 *(b);
 Q4 2023 *(c);
 Q1 2024 *(d);
+Q2 2024 *(e);
+Q3 2024 *(f);
 NCL***
 TOTAL*(a)<S>;
 Q3 2023 *(b);
 Q4 2023 *(c);
 Q1 2024 *(d);
+Q2 2024 *(e);
+Q3 2024 *(f);
 SL***
 TOTAL*(a)<S>;
 Q3 2023 *(b);
 Q4 2023 *(c);
 Q1 2024 *(d);
+Q2 2024 *(e);
+Q3 2024 *(f);
 VIS***
 TOTAL*(a)<S>;
 Q3 2023 *(b);
 Q4 2023 *(c);
 Q1 2024 *(d);
+Q2 2024 *(e);
+Q3 2024 *(f);
 MIN***
 TOTAL*(a)<S>;
 Q3 2023 *(b);
 Q4 2023 *(c);
-Q1 2024 *(d)[*SLE];
+Q1 2024 *(d);
+Q2 2024 *(e);
+Q3 2024 *(f)[*SLE];
 [*END A]",
 
 DM $HT = T,

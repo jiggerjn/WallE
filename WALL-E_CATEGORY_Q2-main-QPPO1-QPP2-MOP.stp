@@ -2664,8 +2664,6 @@ Total Count<C>",
 
 
 
-
-
 DM $PaymentPeneRGD = 
 $TQBLD1RGD .OR. 
 $TQBPD1RGD .OR.
@@ -2988,6 +2986,167 @@ Did not do this transaction;
 Total Count<C>",
 
 
+
+
+DM $TQRSMO3_RGD = $TQSMO3_RGD .OR. $TQRMO3REGARDLESS,
+
+[*FOR B = 7:9:10:8]
+DM $TQRSMO3_RGD[B] = $TQSMO3_R[B]_ALL .OR. $TQRMO3_[B]REGARD,
+[*END B]
+
+
+
+DM $TTransferPeneRGDcat = 
+$TQRSMO3_RGD/
+1+
+3..13+
+15..24+
+26..33,
+
+1,
+1,
+3..13,
+3-13,
+15..24,
+15-24,
+26..33,
+26-33,
+[*FOR B = 7:9:10:8]
+$TQRSMO3_RGD[B]/
+1+
+3..13+
+15..24+
+26..33,
+
+1,
+1,
+3..13,
+3-13,
+15..24,
+15-24,
+26..33,
+26-33,
+[*END B]
+
+
+[*DO D = 1:[codesposition.#]:1]
+$TransferPeneRGD/[codesposition.D],
+[*END D]
+
+
+R,F,
+VT = "TOTAL TRANSFER PENETRATION (P1M USAGE)",
+V = "
+[*DO A = 1:5]
+[*SK 333 ON [QPPO1PP2[A].3].EQ.1]` [*333][*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333][QPPO1PP2[A].1];
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]    Gcash Offline (SUBNET)<Q>;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]        Sent money via Sari-Sari Stores using Gcash;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]    REMITTANCE CENTER<Q>;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Cebuana Lhuillier;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         LBC;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         M Lhuillier;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         MoneyGram;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Palawan Express Pera Padala;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         RD Pawnshop;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         TrueMoney;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Western Union;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Tambunting;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Villarica Pawnshop;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Smart Padala Centers;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]    PHYSICAL BANKS<Q>;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         BDO;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         BPI/BPI Savings;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         China bank;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Eastwest;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Landbank;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Metrobank;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         PNB;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         RCBC;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Security Bank;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Unionbank;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]    BAYAD CENTERS<Q>;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Sinag Pawnshop;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Ministop;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Super Service Center;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         CVM Pawnshop;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Raquel Pawnshop;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Pera Hub;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Robinsons Department Store;
+` [*SK 333 ON [QPPO1PP2[A].3].EQ.1][*DO Y = 1:[[QPPO1PP2[A].3]-1]]    [*END Y][*333]         Robinsons Supermarket;
+[*END A]
+
+
+B. DIGITAL;
+`	E-WALLET (NET);
+`		GCash;
+`		Maya;
+`		GrabPay;
+`		WeChat Pay;
+`		Beep;
+`		BDO Pay;
+`		Moneygment;
+`		StarPay;
+`		Hello Money;
+`		Vybe by BPI;
+`		Coins.PH;
+`		Alipay;
+
+`	BANKS/DIGIBANKS (NET);
+`		CIMB Bank;
+`		BPI Mobile/Online;
+`		BDO Mobile /Online;
+`		LandBank Mobile/Online;
+`		MetroBank Mobile /Online;
+`		UnionBank Mobile/Online;
+`		Security Bank Mobile /Online;
+`		Diskartech;
+`		Tonik;
+`		BancNet Online;
+`		RCBC mobile ;
+`		Maybank's Isave;
+`		Eon;
+`		Komo;
+`		OFBank;
+`		PBCOMobile;
+`		PSBank Mobile;
+`		SeaBank;
+`		GoTyme;
+`		UNO Digital Bank;
+`		Own Bank;
+`		Netbank Mobile;
+`		BPI Direct BanKo;
+`		EastWest Bank Mobile;
+
+`	E-REMITTANCE (NET);
+`		Palawan Pay;
+`		E-Cebuana;
+`		Paypal;
+`		True Money;
+`		ML Wallet;
+`		Payoneer;
+`		Remitly;
+`		Xendpay;
+`		USSC;
+
+`	E-COMMERCE (NET);
+`		LazWallet;
+`		ShopeePay;
+
+`	PAYMENT GATEWAY/ AGGREGATOR (NET);
+`		DragonPay;
+`		CLIQQ;
+`		ECPay;
+`		SquidPay;
+`		Bayad Center online/app;
+`		Touch Pay;
+
+Did not do this transaction<S>;
+Total Count<C>",
+
+
+
+
+
 DM $TSendReceive = 
 ($T_Q8b1_9/5..10).($T_Q8b1_10/5..10),
 ($T_Q8b1_9/5..10).N($T_Q8b1_10/5..10),
@@ -3005,6 +3164,67 @@ Sender AND receiver: IF Q8b1 = R9 (Send money) and R10 (Receive money) DIGITAL;
 Send only: IF Q8b1 = R9 (Send money) only DIGITAL;
 Receive only: IF Q8b1 = R10 (Receive money) only DIGITAL;
 Total Count<C>",
+
+
+DM $Q191 = $24614/1-9,
+DM $A_Q191new = $27007/1,$27008/1,$27009/1,
+
+
+DM $HTargetMarket1Q187 =
+T,
+($SEC19/1..4).($T_Q1_1/13..20),
+($SEC19/3..4).($T_Q1_1/21..65),
+($SEC19/3..4).($T_Q1_1/21..65).($A_Q187new/1+2+11),
+($SEC19/3..4).($T_Q1_1/21..65).($A_Q187new/4),
+($SEC19/1+2).($T_Q1_1/21..65),
+($A_Q191new/2),
+($A_Q187new/1),
+HT = "TARGET MARKET HEADER 1",
+H = "
+TOTAL *(a);
+YOUTH *(b);
+TOTAL MASS MARKET *(c);
+MASS MARKET EARNER *(d);
+MASS MARKET BUDGETER *(e);
+MASS AFFLUENT *(f);
+OFW DEPENDENTS *(g);
+INFORMAL SELLERS *(h)",
+  
+
+[*DATA TargetMarket (;)=
+TOTAL;
+YOUTH;
+TOTAL MASS MARKET;
+MASS MARKET EARNER;
+MASS MARKET BUDGETER;
+MASS AFFLUENT;
+OFW DEPENDENTS;
+INFORMAL SELLERS]
+
+DM $HTargetMarket1Q187T =
+T,
+($Q12024/NB),
+($Q22024/NB),
+($Q32024/NB),
+[*FOR A = 2:3:4:5:6:7:8]
+T,
+($HTargetMarket1Q187/[A]).($Q12024/NB),
+($HTargetMarket1Q187/[A]).($Q22024/NB),
+($HTargetMarket1Q187/[A]).($Q32024/NB),
+[*END A]
+HT = "TARGET MARKET HEADER 1",
+H = "
+TOTAL *(a);
+Q1 2024 *(b);
+Q2 2024 *(c);
+Q3 2024 *(d);
+[*FOR A = 2:3:4:5:6:7:8]
+[TargetMarket.A]***
+TOTAL*(a)<S>;
+Q1 2024 *(b);
+Q2 2024 *(c);
+Q3 2024 *(d)[*SLE];
+[*END A]",
 
 
 !IF (($Q42023/NB+$Q12024/NB+$Q22024/NB+$Booster/NB).($T_Q1_1/21..65))+
@@ -3047,7 +3267,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HA,HB,HC,HD]
-[*DATA HEADERWAVE3 = HAT,HBT,HCT,HAGCitiesT,HBGCitiesT]
+[*DATA HEADERWAVE3 = HTargetMarket1Q187T,HBT,HCT,HAGCitiesT,HBGCitiesT]
 [*DATA HEADERWAVE3new = HA,HB,HC,HAGCities,HBGCities]
 
 
@@ -3098,90 +3318,87 @@ SELECT WR $WTS,
 
 
 
-
 F=MPS49,
 !======
-[*DO Z = 1:3]
-IF $TQ8b1_inci5/1, T #[+T] = $TQRMO3QRM6RB * $[HEADERWAVE3.Z],
-BT = "AMONG THOSE WHO RECEIVE MONEY",
+[*DO Z = 1:1]
+T #[+T] = $TPaymentsPene * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
 [*END Z]
 
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
-IF $TQ8b1_inci5/1, T #[+T] = $TQRMO3QRM6RB * $[HEADERWAVE3.Z],
-BT = "AMONG THOSE WHO RECEIVE MONEY - USERS OF FINTECH APPS",
+[*DO Z = 1:1]
+T #[+T] = $TPaymentsPene * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:3]
-IF $TQ8b1_inci5/1, T #[+T] = $TQRMO3QRM6RB * $[HEADERWAVE3.Z],
-BT = "AMONG THOSE WHO RECEIVE MONEY - NON-USERS OF FINTECH APPS",
+[*DO Z = 1:1]
+T #[+T] = $TPaymentsPene * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 end if,
 F=MPS0,
 
 
-[*SK 111]
-IF $T_Q8b1_rgd/N7, THEN,
+F=MPS49,
 !======
-[*DO Z = 1:3]
-T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+[*DO Z = 1:1]
+IF $T_QSSO2_RGD/1, T #[+T] = $TQPPO1QPP2RB * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
-T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+[*DO Z = 1:1]
+IF $T_QSSO2_RGD/1, T #[+T] = $TQPPO1QPP2RB * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:3]
-T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+[*DO Z = 1:1]
+IF $T_QSSO2_RGD/1, T #[+T] = $TQPPO1QPP2RB * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
 end if,
-
-
-
-!======
-[*DO Z = 1:3]
-T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END Z]
-
-if $Q17i/1, then,
-!======
-[*DO Z = 1:3]
-T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
-[*END Z]
-END IF,
-
-
-if $Q17i/2, then,
-!======
-[*DO Z = 1:3]
-T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END Z]
-END IF,
-END IF,
-
-
+F=MPS0,
 
 
 F=MPS49,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
+IF $TQ8b1_inci6/1, T #[+T] = $TQTP1QTD2_9RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO PAY FOR TRANSPORTATION",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci6/1, T #[+T] = $TQTP1QTD2_9RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO PAY FOR TRANSPORTATION - USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci6/1, T #[+T] = $TQTP1QTD2_9RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO PAY FOR TRANSPORTATION - NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+F=MPS0,
+
+
+F=MPS49,
+!======
+[*DO Z = 1:1]
 IF $T_QSSO2_RGD/1, T #[+T] = $TQSSO1QSS4RB * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO OWN SUBSCRIPTION",
 [*END Z]
@@ -3189,7 +3406,7 @@ BT = "AMONG THOSE WHO OWN SUBSCRIPTION",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 IF $T_QSSO2_RGD/1, T #[+T] = $TQSSO1QSS4RB * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO OWN SUBSCRIPTION - USERS OF FINTECH APPS",
 [*END Z]
@@ -3197,12 +3414,150 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 IF $T_QSSO2_RGD/1, T #[+T] = $TQSSO1QSS4RB * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO OWN SUBSCRIPTION - NON-USERS OF FINTECH APPS",
 [*END Z]
 end if,
 F=MPS0,
+
+
+F=MPS49,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci5/1+$TQ8b1_inci4/1, T #[+T] = $TTransferPeneRGDcat * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci5/1+$TQ8b1_inci4/1, T #[+T] = $TTransferPeneRGDcat * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY - USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci5/1+$TQ8b1_inci4/1, T #[+T] = $TTransferPeneRGDcat * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY - NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+F=MPS0,
+
+
+
+F=MPS49,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci5/1, T #[+T] = $TQRMO3QRM6RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO RECEIVE MONEY",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci5/1, T #[+T] = $TQRMO3QRM6RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO RECEIVE MONEY - USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci5/1, T #[+T] = $TQRMO3QRM6RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO RECEIVE MONEY - NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+F=MPS0,
+
+
+
+F=MPS49,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci4/1, T #[+T] = $TQSMO3QSM2RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO SEND MONEY",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci4/1, T #[+T] = $TQSMO3QSM2RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO SEND MONEY - USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+IF $TQ8b1_inci4/1, T #[+T] = $TQSMO3QSM2RB * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO SEND MONEY - NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+F=MPS0,
+
+
+
+
+
+
+[*SK 111]
+IF $T_Q8b1_rgd/N7, THEN,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+
+
+
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+
+
+if $Q17i/2, then,
+!======
+[*DO Z = 1:1]
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+END IF,
+END IF,
+
+
 
 [*111]
 
@@ -3210,7 +3565,7 @@ F=MPS0,
 [*SK 999]
 
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 IF ($T_Q8b1_9/5..10)+($T_Q8b1_10/5..10), T #[+T] = $TSendReceive * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY",
 [*END Z]
@@ -3218,7 +3573,7 @@ BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 IF ($T_Q8b1_9/5..10)+($T_Q8b1_10/5..10), T #[+T] = $TSendReceive * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY - USERS OF FINTECH APPS",
 [*END Z]
@@ -3227,7 +3582,7 @@ end if,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 IF ($T_Q8b1_9/5..10)+($T_Q8b1_10/5..10), T #[+T] = $TSendReceive * $[HEADERWAVE3.Z],
 BT = "AMONG THOSE WHO SEND OR RECEIVE MONEY - NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -3244,7 +3599,7 @@ IF N($PaymentPeneRGD/
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1_inci[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -3254,7 +3609,7 @@ end if,
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
@@ -3264,7 +3619,7 @@ end if,
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 [*DO A = 1:7]
 IF $T_Q8b2_[Q8B2.A]/5..10, T #[+T] = $TQ8b1R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG THOSE WHO HAVE DONE GENERAL FINANCIAL TRANSACTIONS IN THE P2M - [Q8B2STUBS.A]",
@@ -3274,7 +3629,7 @@ end if,
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:3]
+[*DO Z = 1:1]
 [*DO A = 1:7]
 T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
