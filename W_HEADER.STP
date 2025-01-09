@@ -1786,6 +1786,9 @@ Q4 2024 *(j)",
 
 DM $HATM =
 T,
+$OCT2023/NB,
+$NOV2023/NB,
+$DEC2023/NB,
 $JAN2024/NB,
 $FEB2024/NB,
 $MAR2024/NB,
@@ -1797,8 +1800,12 @@ $AUG2024/NB,
 $SEP2024/NB,
 $OCT2024/NB,
 $NOV2024/NB,
+$DEC2024/NB,
 [*DO A = 1:12]
 T,
+$HAv/[A].$OCT2023/NB,
+$HAv/[A].$NOV2023/NB,
+$HAv/[A].$DEC2023/NB,
 $HAv/[A].$JAN2024/NB,
 $HAv/[A].$FEB2024/NB,
 $HAv/[A].$MAR2024/NB,
@@ -1810,197 +1817,253 @@ $HAv/[A].$AUG2024/NB,
 $HAv/[A].$SEP2024/NB,
 $HAv/[A].$OCT2024/NB,
 $HAv/[A].$NOV2024/NB,
+$HAv/[A].$DEC2024/NB,
 [*END A]
 HT = "HEADER A. GENERAL PROFILE - MONTH",
 H  = "<F=SHG1>
 TOTAL*(a);
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 GENDER****
 MALE***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 FEMALE***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 LIFESTAGE****
 Students (20 yo and below)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Yuppies (21-30 yo)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Transitioners (31-35 yo)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Balancers (36-45 yo)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Older Adults/Retirees (46-65 yo)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 
 SEC****
 AB***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 C1***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 ABC1***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 C2***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 D***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l)",
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p)",
 
 
 DM $HBTM =
 T,
+$OCT2023/NB,
+$NOV2023/NB,
+$DEC2023/NB,
 $JAN2024/NB,
 $FEB2024/NB,
 $MAR2024/NB,
@@ -2012,8 +2075,12 @@ $AUG2024/NB,
 $SEP2024/NB,
 $OCT2024/NB,
 $NOV2024/NB,
+$DEC2024/NB,
 [*DO A = 1:15]
 T,
+$HBv/[A].$OCT2023/NB,
+$HBv/[A].$NOV2023/NB,
+$HBv/[A].$DEC2023/NB,
 $HBv/[A].$JAN2024/NB,
 $HBv/[A].$FEB2024/NB,
 $HBv/[A].$MAR2024/NB,
@@ -2025,244 +2092,312 @@ $HBv/[A].$AUG2024/NB,
 $HBv/[A].$SEP2024/NB,
 $HBv/[A].$OCT2024/NB,
 $HBv/[A].$NOV2024/NB,
+$HBv/[A].$DEC2024/NB,
 
 [*END A]
 HT = "HEADER B. LOCALE AND MACROREGION - MONTH",
 H  = "<F=SHG1>
 TOTAL*(a);
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 LOCALE****
 URBAN (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 RURAL (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 NCR (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 NORTH CENTRAL LUZON****
 NCL (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 NCL Urban***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 NCL Rural***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 
 SOUTH LUZON****
 SL (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 SL Urban***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 SL Rural***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 
 VISAYAS****
 Visayas (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Visayas Urban***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Visayas Rural***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 
 MINDANAO****
 Mindanao (NET)***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Mindanao Urban***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 Mindanao Rural***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l)",
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p)",
 
 
 DM $HCTM = 
 T,
+$OCT2023/NB,
+$NOV2023/NB,
+$DEC2023/NB,
 $JAN2024/NB,
 $FEB2024/NB,
 $MAR2024/NB,
@@ -2274,8 +2409,12 @@ $AUG2024/NB,
 $SEP2024/NB,
 $OCT2024/NB,
 $NOV2024/NB,
+$DEC2024/NB,
 [*DO A = 1:4]
 T,
+$HCv/[A].$OCT2023/NB,
+$HCv/[A].$NOV2023/NB,
+$HCv/[A].$DEC2023/NB,
 $HCv/[A].$JAN2024/NB,
 $HCv/[A].$FEB2024/NB,
 $HCv/[A].$MAR2024/NB,
@@ -2287,80 +2426,102 @@ $HCv/[A].$AUG2024/NB,
 $HCv/[A].$SEP2024/NB,
 $HCv/[A].$OCT2024/NB,
 $HCv/[A].$NOV2024/NB,
+$HCv/[A].$DEC2024/NB,
 [*END A]
 
 HT = "HEADER C. USERSHIP - MONTH",
 H  = "<F=SHG1>
 TOTAL*(a);
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 USERSHIP****
 NON-USERS***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 USERS***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 WHETHER GCASH USERS****
 GCASH NON-USERS***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l);
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p);
 
 GCASH USERS***
 TOTAL*(a)<S>;
-JAN 2024 *(b);
-FEB 2024 *(c);
-MAR 2024 *(d);
-APR 2024 *(e);
-MAY 2024 *(f);
-JUN 2024 *(g);
-JUL 2024 *(h);
-AUG 2024 *(i);
-SEP 2024 *(j);
-OCT 2024 *(k);
-NOV 2024 *(l)",
+OCT 2023 *(b);
+NOV 2023 *(c);
+DEC 2023 *(d);
+JAN 2024 *(e);
+FEB 2024 *(f);
+MAR 2024 *(g);
+APR 2024 *(h);
+MAY 2024 *(i);
+JUN 2024 *(j);
+JUL 2024 *(k);
+AUG 2024 *(l);
+SEP 2024 *(m);
+OCT 2024 *(n);
+NOV 2024 *(o);
+DEC 2024 *(p)",
+
 DM $HDT =
 T,
 $Q42023/NB,

@@ -39,7 +39,8 @@ DM $HT = T,
  HT = "TOTAL",
   H = "TOTAL*(A)",
 
-IF $Q42023/NB+$Q12024/NB+$Q22024/NB+$Booster/NB, WRITE,
+!IF $Q42023/NB+$Q12024/NB+$Q22024/NB+$Booster/NB, WRITE,
+IF $Q42023/NB+$Q12024/NB+$Q22024/NB+$BoosterInvestors/NB, WRITE,
   
 !lcsv (h) $1-10.$TQ17C.$A_Q17C.$A_QCO2.$QCO2_98_other,
 
@@ -76,7 +77,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HDLoaners,HALoaners,HC,HD]
-[*DATA HEADERWAVE3 = HEA,HEB,HCT,HAGCitiesT,HBGCitiesT]
+[*DATA HEADERWAVE3 = HG1Invest,HHInvest,HIInvest,HJInvest,HBGCitiesT]
 
 
 !
@@ -126,7 +127,7 @@ SELECT WR $WTS21to65,
 
 
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $TQ63SUMMTB * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
@@ -134,7 +135,7 @@ BT = "ALL RESPONDENTS",
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $TQ63SUMMTB * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -142,7 +143,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $TQ63SUMMTB * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -154,14 +155,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $TQ63SUMMT2B * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $TQ63SUMMT2B * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -170,7 +171,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $TQ63SUMMT2B * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -181,7 +182,29 @@ END IF,
 IF ($F64/1..9).($Booster/NB), THEN,
 T [+T] = $TQ64R1 * $HLADTMonth,
 VT = "Q64. BRAND ASSOCIATION Side-by-Side",
-BT = "Among aware of the brand",
+BT = "Among aware of the brand - TOTAL INVESTORS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+
+
+IF ($F64/1..9).($BoosterTagging/12..14), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - ACTIVE INVESTORS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+
+
+IF ($F64/1..9).($BoosterTagging/15..17), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - PASSIVE INVESTORS",
 [*SETS=0]
 [*FORA=5:7:1:2:3:4:6:8:9]
 IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
@@ -191,14 +214,14 @@ END IF,
 
 
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
 [*END Z]
 
 if $Q17i/1, then,
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
@@ -206,7 +229,7 @@ END IF,
 
 if $Q17i/2, then,
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 T #[+T] = $BRAND_LAD * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
 [*END Z]
@@ -218,7 +241,7 @@ END IF,
 
 [*SK 111]
 !======
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 [*DO A = 1:9]
 if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
@@ -227,7 +250,7 @@ BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
 
 !======
 if $Q17i/1, then,
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 [*DO A = 1:9]
 if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
@@ -238,7 +261,7 @@ END IF,
 
 !======
 if $Q17i/2, then,
-[*DO Z = 1:2]
+[*DO Z = 1:4]
 [*DO A = 1:9]
 if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
