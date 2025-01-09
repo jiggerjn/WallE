@@ -755,3 +755,16 @@ OM $I_8_Q193a_98_other = $[B]-[B+3]/1-9999,
 OM $I_8_Q193b_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
+
+
+
+[*SET B = 119930][*DO A= 1:10]
+OM $QBFM1 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 119970][*DO A= 1:10]
+OM $QBFM2 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+	

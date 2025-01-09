@@ -3590,6 +3590,20 @@ $A_Q16d/7+([*do a = 91:92]$xQ16d_[a]_other/1029[*sle]+[*end a]),
 $A_Q16d/2+([*do a = 91:92]$xQ16d_[a]_other/1050+1043[*sle]+[*end a]),
 $A_Q16d/4+([*do a = 91:92]$xQ16d_[a]_other/1058+1061[*sle]+[*end a]),
 $A_Q16d/23+([*do a = 91:92]$xQ16d_[a]_other/1009+1046+1053+1059[*sle]+[*end a]),
+$A_Q16d/46,
+
+
+DM $F64NoOthers = 
+$A_Q16d/13,
+$A_Q16d/12,
+$A_Q16d/11,
+$A_Q16d/3,
+$A_Q16d/1,
+$A_Q16d/7,
+$A_Q16d/2,
+$A_Q16d/4,
+$A_Q16d/23,
+$A_Q16d/46,
 
 [*DO A = 1:9]
 DM $TQ16H[A] = 
@@ -7842,6 +7856,132 @@ R,F,
 VT = "Q195c. GCASH SERVICES USED IN THE PAST 4 WEEKS",
 V = $TQ194a, 
 
+
+
+!=========
+
+IF $A_Q195d/91, OM $Q195d_91_other = $Q194a_91_other,
+IF $A_Q195d/92, OM $Q195d_92_other = $Q194b_92_other,
+IF $A_Q195d/93, OM $Q195d_93_other = $Q194b_93_other,
+
+DM $TQ195D = 
+$A_Q195d/1+([*do a = 91:93]$Q195d_[a]_other/1001[*sle]+[*end a]),
+$A_Q195d/2+([*do a = 91:93]$Q195d_[a]_other/1002+1062+1076[*sle]+[*end a]),
+$A_Q195d/3,
+$A_Q195d/4,
+$A_Q195d/5,
+$A_Q195d/6,
+$A_Q195d/7+([*do a = 91:93]$Q195d_[a]_other/1007+1071[*sle]+[*end a]),
+$A_Q195d/8,
+$A_Q195d/9+([*do a = 91:93]$Q195d_[a]_other/1009[*sle]+[*end a]),
+$A_Q195d/21+([*do a = 91:93]$Q195d_[a]_other/2100[*sle]+[*end a]),
+$A_Q195d/11,
+$A_Q195d/12,
+$A_Q195d/13+([*do a = 91:93]$Q195d_[a]_other/1013[*sle]+[*end a]),
+$A_Q195d/14,
+$A_Q195d/15,
+$A_Q195d/16+([*do a = 91:93]$Q195d_[a]_other/1016[*sle]+[*end a]),
+$A_Q195d/17,
+$A_Q195d/18,
+$A_Q195d/19,
+$A_Q195d/20,
+$A_Q195d/22,
+$A_Q195d/23,
+$A_Q195d/24,
+$A_Q195d/25,
+$A_Q195d/26,
+([*do a = 91:93]$Q195d_[a]_other/1010[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1050+1051+1021[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1052[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1053[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1054[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1055[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1056[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1057[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1058[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1059[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1060[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1061[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1063[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1064[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1065[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1066[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1067[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1068[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1075[*sle]+[*end a]),
+([*do a = 91:93]$Q195d_[a]_other/1079[*sle]+[*end a]),
+
+([*do a = 91:93]$Q195d_[a]_other/1070+1072+1073+1074[*sle]+[*end a]),
+$A_Q195d/99+([*do a = 91:93]$Q195d_[a]_other/9999[*sle]+[*end a]),
+R,F,
+
+VT = "Q195d. GCASH SERVICES USED IN THE PAST 1 WEEK",
+V = $TQ194a, 
+
+
+
+!=========
+
+IF $A_Q195e/91, OM $Q195e_91_other = $Q194a_91_other,
+IF $A_Q195e/92, OM $Q195e_92_other = $Q194b_92_other,
+IF $A_Q195e/93, OM $Q195e_93_other = $Q194b_93_other,
+
+DM $TQ195e = 
+$A_Q195e/1+([*do a = 91:93]$Q195e_[a]_other/1001[*sle]+[*end a]),
+$A_Q195e/2+([*do a = 91:93]$Q195e_[a]_other/1002+1062+1076[*sle]+[*end a]),
+$A_Q195e/3,
+$A_Q195e/4,
+$A_Q195e/5,
+$A_Q195e/6,
+$A_Q195e/7+([*do a = 91:93]$Q195e_[a]_other/1007+1071[*sle]+[*end a]),
+$A_Q195e/8,
+$A_Q195e/9+([*do a = 91:93]$Q195e_[a]_other/1009[*sle]+[*end a]),
+$A_Q195e/21+([*do a = 91:93]$Q195e_[a]_other/2100[*sle]+[*end a]),
+$A_Q195e/11,
+$A_Q195e/12,
+$A_Q195e/13+([*do a = 91:93]$Q195e_[a]_other/1013[*sle]+[*end a]),
+$A_Q195e/14,
+$A_Q195e/15,
+$A_Q195e/16+([*do a = 91:93]$Q195e_[a]_other/1016[*sle]+[*end a]),
+$A_Q195e/17,
+$A_Q195e/18,
+$A_Q195e/19,
+$A_Q195e/20,
+$A_Q195e/22,
+$A_Q195e/23,
+$A_Q195e/24,
+$A_Q195e/25,
+$A_Q195e/26,
+([*do a = 91:93]$Q195e_[a]_other/1010[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1050+1051+1021[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1052[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1053[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1054[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1055[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1056[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1057[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1058[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1059[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1060[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1061[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1063[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1064[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1065[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1066[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1067[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1068[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1069[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1075[*sle]+[*end a]),
+([*do a = 91:93]$Q195e_[a]_other/1079[*sle]+[*end a]),
+
+([*do a = 91:93]$Q195e_[a]_other/1070+1072+1073+1074[*sle]+[*end a]),
+$A_Q195e/99+([*do a = 91:93]$Q195e_[a]_other/9999[*sle]+[*end a]),
+R,F,
+
+VT = "Q195e. GCASH SERVICES USED IN THE PAST 1 DAY",
+V = $TQ194a, 
+
 !=========
 
 DM $TQ196 = 
@@ -7941,6 +8081,8 @@ DM $BRDLADDER[A] =
 ($TQ195a/[A]),
 ($TQ195b/[A]),
 ($TQ195c/[A]),
+($TQ195d/[A]),
+($TQ195e/[A]),
 ($TQ196/[A]),
 
 VT = "GCASH USED CASES LADDER",
@@ -7952,6 +8094,8 @@ V = "[GBRAND.A]\
 `    EVER USED;
 `    USED IN THE P2M;
 `    USED IN THE P4W;
+`    USED IN THE P1W;
+`    USED IN THE P1D;
 `    CONSIDERATION",
 [*END A]
 
@@ -8879,67 +9023,6 @@ Missing Answer<z>;
 Total Count<C>",
 
 
-
-!=========
-
-IF $A_Q195d/91, OM $Q195d_91_other = $Q194a_91_other,
-IF $A_Q195d/92, OM $Q195d_92_other = $Q194b_92_other,
-IF $A_Q195d/93, OM $Q195d_93_other = $Q194b_93_other,
-
-DM $TQ195D = 
-$A_Q195d/1+([*do a = 91:93]$Q195d_[a]_other/1001[*sle]+[*end a]),
-$A_Q195d/2+([*do a = 91:93]$Q195d_[a]_other/1002+1062+1076[*sle]+[*end a]),
-$A_Q195d/3,
-$A_Q195d/4,
-$A_Q195d/5,
-$A_Q195d/6,
-$A_Q195d/7+([*do a = 91:93]$Q195d_[a]_other/1007+1071[*sle]+[*end a]),
-$A_Q195d/8,
-$A_Q195d/9+([*do a = 91:93]$Q195d_[a]_other/1009[*sle]+[*end a]),
-$A_Q195d/21+([*do a = 91:93]$Q195d_[a]_other/2100[*sle]+[*end a]),
-$A_Q195d/11,
-$A_Q195d/12,
-$A_Q195d/13+([*do a = 91:93]$Q195d_[a]_other/1013[*sle]+[*end a]),
-$A_Q195d/14,
-$A_Q195d/15,
-$A_Q195d/16+([*do a = 91:93]$Q195d_[a]_other/1016[*sle]+[*end a]),
-$A_Q195d/17,
-$A_Q195d/18,
-$A_Q195d/19,
-$A_Q195d/20,
-$A_Q195d/22,
-$A_Q195d/23,
-$A_Q195d/24,
-$A_Q195d/25,
-$A_Q195d/26,
-([*do a = 91:93]$Q195d_[a]_other/1010[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1050+1051+1021[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1052[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1053[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1054[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1055[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1056[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1057[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1058[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1059[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1060[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1061[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1063[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1064[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1065[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1066[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1067[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1068[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1069[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1075[*sle]+[*end a]),
-([*do a = 91:93]$Q195d_[a]_other/1079[*sle]+[*end a]),
-
-([*do a = 91:93]$Q195d_[a]_other/1070+1072+1073+1074[*sle]+[*end a]),
-$A_Q195d/99+([*do a = 91:93]$Q195d_[a]_other/9999[*sle]+[*end a]),
-R,F,
-
-VT = "Q195d. GCASH SERVICES USED IN THE PAST 1 WEEK",
-V = $TQ194a, 
 
 
 !=========
@@ -11077,3 +11160,148 @@ V = "
 Missing answers<Z>;
 Total count<C>",
 [*end a]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*DATA topic84 (;) = 
+BDO Mobile/Online;
+BPI Mobile/Online;
+CLIQQ;
+Coins.ph;
+GCash;
+GrabPay;
+PayMaya/Maya;
+PayPal;
+ShopeePay;
+GoTyme;
+None]
+
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:99]
+DM $TQAF1_[A] =
+$T_QAF1_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QAF1. AFFINITY - [topic84.[+s]]",
+V = "
+I hate it (1)<v1>;
+(-2) (2)<v2>;
+(-1) (3)<v3>;
+Neutral (4)<v4>;
+(+1) (5)<v5>;
+(+2) (6)<v6>;
+I love it (7)<v7>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:99]
+DM $TQUQ1_[A] =
+$T_QUQ1_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QUQ1. UNIQUENESS - [topic84.[+s]]",
+V = "
+Exactly the same (1)<v1>;
+2 (2)<v2>;
+3 (3)<v3>;
+4 (4)<v4>;
+5 (5)<v5>;
+6 (6)<v6>;
+Very different (7)<v7>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:99]
+DM $TQMN1_[A] =
+$T_QMN1_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QMN1. MEETS NEEDS - [topic84.[+s]]",
+V = "
+Doesn't meet your needs at all (1)<v1>;
+2 (2)<v2>;
+3 (3)<v3>;
+4 (4)<v4>;
+5 (5)<v5>;
+6 (6)<v6>;
+Meets your needs very well (7)<v7>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:99]
+DM $TQD1_[A] =
+$T_QD1_[A]/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+R,F,
+VT = "QD1. DYNAMIC - [topic84.[+s]]",
+V = "
+Follows other brands (1)<v1>;
+2 (2)<v2>;
+3 (3)<v3>;
+4 (4)<v4>;
+5 (5)<v5>;
+6 (6)<v6>;
+Sets the trends (7)<v7>;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
+
+
+!=======================MultipleTopics11
+
+[*SET s = 0]
+[*FOR A = 1:2:3:4:5:6:7:8:9:10:99]
+DM $TQW1_[A] =
+$T_QW1_[A]/
+1,
+2,
+3,
+R,F,
+VT = "QW1. WORTH - [topic84.[+s]]",
+V = "
+Worth more than it costs;
+Worth same as it costs;
+Worth less than it costs;
+Missing answers<Z>;
+Total count<C>",
+[*END A]
