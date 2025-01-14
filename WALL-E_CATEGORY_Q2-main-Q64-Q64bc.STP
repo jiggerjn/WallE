@@ -89,7 +89,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HA,HB,HC,HD]
-[*DATA HEADERWAVE3 = HATM,HBTM,HCTM,HAGCitiesT,HBGCitiesT]
+[*DATA HEADERWAVE3 = HAT,HBT,HCT,HAGCitiesT,HBGCitiesT]
 [*DATA HEADERWAVE3new = HA,HB,HC,HAGCities,HBGCities]
 
 
@@ -139,71 +139,362 @@ SELECT WR $WTS,
 [*SET T = 0]
 
 
+
+
+!TOTAL
+
+IF ($F64/1..9).($Q32024/NB), THEN,
+T [+T] = $TQ64b1 * $HLADTMonth,
+VT = "Q64b. BRAND RESONANCE Side-by-Side",
+BT = "Among aware of the brand",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64b[a] * [+S],
+[*ENDA]
+END IF,
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]), THEN,
+T [+T] = $TQ64b1 * $HLADTMonth,
+VT = "Q64b. BRAND RESONANCE Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y]",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64b[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+
+!USER
+
+IF ($F64/1..9).($Q17i/1), THEN,
+T [+T] = $TQ64b1 * $HLADTMonth,
+VT = "Q64b. BRAND RESONANCE Side-by-Side",
+BT = "Among aware of the brand - USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64b[a] * [+S],
+[*ENDA]
+END IF,
+
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]).($Q17i/1), THEN,
+T [+T] = $TQ64b1 * $HLADTMonth,
+VT = "Q64b. BRAND RESONANCE Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y] - USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64b[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+!Non-USER
+
+IF ($F64/1..9).($Q17i/2), THEN,
+T [+T] = $TQ64b1 * $HLADTMonth,
+VT = "Q64b. BRAND RESONANCE Side-by-Side",
+BT = "Among aware of the brand - NON-USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64b[a] * [+S],
+[*ENDA]
+END IF,
+
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]).($Q17i/2), THEN,
+T [+T] = $TQ64b1 * $HLADTMonth,
+VT = "Q64b. BRAND RESONANCE Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y] - NON-USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64b[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+[*SK 99999]
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
 [*END A]
 [*END Z]
 
+!======
 if $Q17i/1, then,
-!======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
 [*END A]
 [*END Z]
-end if,
+END IF,
 
+
+!======
 if $Q17i/2, then,
-!======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
 [*END A]
 [*END Z]
-end if,
+END IF,
+
+
+
+
+
+
+
+
+
+
+
+
+!TOTAL
+
+IF ($F64/1..9).($Q32024/NB), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+
+
+[*SK 1]
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y]",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+
+!USER
+
+IF ($F64/1..9).($Q17i/1), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]).($Q17i/1), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y] - USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+!Non-USER
+
+IF ($F64/1..9).($Q17i/2), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - NON-USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]).($Q17i/2), THEN,
+T [+T] = $TQ64R1 * $HLADTMonth,
+VT = "Q64. BRAND ASSOCIATION Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y] - NON-USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64R[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+[*1]
+
 
 
 
 
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64b[A] * $[HEADERWAVE3new.Z],
+BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
 [*END A]
 [*END Z]
 
+!======
 if $Q17i/1, then,
-!======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64b[A] * $[HEADERWAVE3new.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
 [*END A]
 [*END Z]
-end if,
+END IF,
 
 
+!======
 if $Q17i/2, then,
-!======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64b[A] * $[HEADERWAVE3new.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
 [*END A]
 [*END Z]
-end if,
+END IF,
+
+
+
+!======
+[*DO Z = 1:3]
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64c[A] * $[HEADERWAVE3new.Z],
+BT = "AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+
+!======
+if $Q17i/1, then,
+[*DO Z = 1:3]
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64c[A] * $[HEADERWAVE3new.Z],
+BT = "AMONG USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+END IF,
+
+
+!======
+if $Q17i/2, then,
+[*DO Z = 1:3]
+[*DO A = 1:9]
+if $F64/[A], T #[+T] = $TQ64c[A] * $[HEADERWAVE3new.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS - AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+END IF,
 
 
 
 
+
+
+
+
+
+
+
+
+!TOTAL
+
+IF ($F64/1..9).($Q32024/NB), THEN,
+T [+T] = $TQ64c1 * $HLADTMonth,
+VT = "Q64c. MARKETING IMPACT Side-by-Side",
+BT = "Among aware of the brand",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64c[a] * [+S],
+[*ENDA]
+END IF,
+
+
+[*SK 1]
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]), THEN,
+T [+T] = $TQ64c1 * $HLADTMonth,
+VT = "Q64c. MARKETING IMPACT Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y]",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64c[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+
+!USER
+
+IF ($F64/1..9).($Q17i/1), THEN,
+T [+T] = $TQ64c1 * $HLADTMonth,
+VT = "Q64c. MARKETING IMPACT Side-by-Side",
+BT = "Among aware of the brand - USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64c[a] * [+S],
+[*ENDA]
+END IF,
+
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]).($Q17i/1), THEN,
+T [+T] = $TQ64c1 * $HLADTMonth,
+VT = "Q64c. MARKETING IMPACT Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y] - USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64c[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+
+!Non-USER
+
+IF ($F64/1..9).($Q17i/2), THEN,
+T [+T] = $TQ64c1 * $HLADTMonth,
+VT = "Q64c. MARKETING IMPACT Side-by-Side",
+BT = "Among aware of the brand - NON-USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64c[a] * [+S],
+[*ENDA]
+END IF,
+
+
+
+[*DO Y = 1:17]
+IF ($F64/1..9).([filters.Y]).($Q17i/2), THEN,
+T [+T] = $TQ64c1 * $HLADTMonth,
+VT = "Q64c. MARKETING IMPACT Side-by-Side",
+BT = "Among aware of the brand - [Filtername.Y] - NON-USERS",
+[*SETS=0]
+[*FORA=5:7:1:2:3:4:6:8:9]
+IF ($F64/[A]), T # [T] = $TQ64c[a] * [+S],
+[*ENDA]
+END IF,
+[*END Y]
+[*1]
+
+[*99999]
 
 FINISH TABLES,
-
-[*SK 999]
-[*999]

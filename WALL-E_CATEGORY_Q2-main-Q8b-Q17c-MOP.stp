@@ -3,11 +3,12 @@ START CONTROL,
 
 !C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 !C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
 !C =WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
 !C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
 !C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;Wall-E_booster.asc,
 !C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;Wall-E_booster.asc;Wall-E_booster_sav_ins.asc,
-C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+!C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
 !C = .asc,
 Y,
 OLDNAMES,
@@ -89,7 +90,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HA,HB,HC,HD]
-[*DATA HEADERWAVE3 = HATM,HBTM,HCTM,HAGCitiesT,HBGCitiesT]
+[*DATA HEADERWAVE3 = HAT,HBT,HCT,HAGCitiesT,HBGCitiesT]
 [*DATA HEADERWAVE3new = HA,HB,HC,HAGCities,HBGCities]
 
 
@@ -138,69 +139,83 @@ SELECT WR $WTS,
 
 [*SET T = 0]
 
-
+IF $T_Q8b1_rgd/N7, THEN,
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
-[*END A]
 [*END Z]
+
 
 if $Q17i/1, then,
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
-[*END A]
 [*END Z]
 end if,
 
 if $Q17i/2, then,
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
+T #[+T] = $TPROFILE * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END A]
 [*END Z]
 end if,
 
 
 
-
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
 BT = "ALL RESPONDENTS",
-[*END A]
 [*END Z]
 
 if $Q17i/1, then,
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
 BT = "AMONG USERS OF FINTECH APPS",
-[*END A]
 [*END Z]
-end if,
+END IF,
 
 
 if $Q17i/2, then,
 !======
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
+T #[+T] = $TQ17c * $[HEADERWAVE3.Z],
 BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END A]
+[*END Z]
+END IF,
+END IF,
+
+
+
+
+[*SK 111]
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQ8b1Q17cRB * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+if $Q17i/1, then,
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQ8b1Q17cRB * $[HEADERWAVE3.Z],
+BT = "AMONG USERS OF FINTECH APPS",
 [*END Z]
 end if,
 
-
-
+if $Q17i/2, then,
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQ8b1Q17cRB * $[HEADERWAVE3.Z],
+BT = "AMONG NON-USERS OF FINTECH APPS",
+[*END Z]
+end if,
+[*111]
 
 
 FINISH TABLES,

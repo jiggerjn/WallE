@@ -1,9 +1,9 @@
 START CONTROL,
 *PROJECT WALL-E
 !C = WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
-!C = WALLE_JUL24.asc,
-C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
-
+C = WALLE_OCT24.asc;WALLE_NOV24v2.asc,
+!C = WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
+!C = WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
 
 Y,
 CEP,
@@ -28,6 +28,30 @@ TEMPORARY /99999999/,
 [*INSERT Wall-E-boosters-GLOBAL]
 [*INSERT W_WTS]
 [*INSERT W_WTS21to65]
+
+DM $Q191 = $24614/1-9,
+DM $QPH1 = $26964/1-9,!Buy load streaming, Sugod Suyod OCTOBER 2024
+DM $QSH1 = $27404/1-9,!Buy load gaming
+DM $QST1 = $27468/1-9,!GloanxCeiling
+DM $QGI1 = $33025/1-9,!GloanxGraduation Gbirthday promo NOVEMBER 2024
+DM $QMK1 = $49131/1-9,!Gbirthday Main KV
+DM $QLM1a = $47641/1-9,!FilmxWater
+DM $QNT1 = $47672/1-9,!FilmxNext
+DM $QSC1 = $33093/1-9,!Adz
+
+IF $QST1/3+$QGI1/3, DI $QST1xQGI1 = 3,
+IF $QST1/4+5+$QGI1/4+5, DI $QST1xQGI1 = 5,
+IF ($QST1/1+2).($QGI1/1+2), DI $QST1xQGI1 = 1,
+
+IF $QMK1/3+$QGI1/3, DI $QMK1xQGI1 = 3,
+IF $QMK1/4+5+$QGI1/4+5, DI $QMK1xQGI1 = 5,
+IF ($QMK1/1+2).($QGI1/1+2), DI $QMK1xQGI1 = 1,
+
+IF $QLM1a/3+$QNT1/3, DI $QLM1axQNT1 = 3,
+IF $QLM1a/4+5+$QNT1/4+5, DI $QLM1axQNT1 = 5,
+IF ($QLM1a/1+2).($QNT1/1+2), DI $QLM1axQNT1 = 1,
+
+
 DM $A_QL2 = $23284/1,$23285/1,$23286/1,$23287/1,$23288/1,$23289/1,$23290/1,$23291/1,$23293/1,$23294/1,$23295/1,$23296/1,$23297/1,$23299/1,$23300/1,$23301/1,$23303/1,$23304/1,$23306/1,$23307/1,$23308/1,$Blank/22,$39083/1,$39084/1,$39085/1,$39086/1,$39087/1,$39088/1,$39089/1,$Blank/30-97,$23310/1,$23311/1,$Blank/100-900,$23283/1,$23292/1,$23298/1,$23302/1,$23305/1,$23309/1,
 
 
@@ -132,17 +156,6 @@ Don't Know;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 
-
-!-----------Unique
-DM $QPH1 = $26964/1-9,'0',
-!-----------Unique
-DM $QSH1 = $27404/1-9,'0',
-!-----------Unique
-DM $QST1 = $27468/1-9,'0',
-!-----------Unique
-DM $QGI1 = $33025/1-9,'0',
-!-----------Unique
-DM $QSC1 = $33093/1-9,'0',
 
 
 DM $T_Q104_1 = $25110/1,$25111/1,$25112/1,$25113/1,$25114/1,$25115/1,$25116/1,$25117/1,$25118/1,$Blank/10-90,$25119/1,$Blank/92-98,$25120/1,
@@ -607,6 +620,7 @@ IF $Brand[A]_Attrc[b]/1, DI $Attrc[B] = 1,
 IF $Brand[A]_Attrc[b]/n1, DI $Attrc[B] = 0,
 [*END b] 
 
+
 !! == SEGMENTS / FILTERS == !!
 
 if $Q3/1,                   DI $AREA = 1,
@@ -668,8 +682,8 @@ if ($Q3/6+7+8).($Q4/2),               DI $AREAXLOC = 8,
 if ($Q3/9+10+11).($Q4/2),             DI $AREAXLOC = 9,
 if ($Q3/12+13+14+15+16+17).($Q4/2),   DI $AREAXLOC = 10,
 
-If $JUL2024/NB, DI $Month = 1,
-If $AUG2024/NB, DI $Month = 2,
+If $OCT2024/NB, DI $Month = 1,
+If $NOV2024/NB, DI $Month = 2,
 If $SEP2024/NB, DI $Month = 3,
 ! +$OCT2023/NB+$NOV2023/NB
 
@@ -681,6 +695,19 @@ IF $T_Q104_[C]/[B], DI $Q104_[C] = [B],
 
 [*DO B = 1:11]
 IF $A_Q102B/[B], DI $Q102b = [B],
+[*END B]
+
+
+[*DO C = 1:18]
+[*FOR B = 1:2:3:4:5:6:7:8:9:91:99]
+IF $T_Q104_[C]/[B], DI $Q104_[C]_[B] = 1,
+IF $T_Q104_[C]/N[B], DI $Q104_[C]_[B] = 0,
+[*END B]
+[*END C]
+
+[*DO B = 1:11]
+IF $A_Q102B/[B], DI $Q102b_[B] = 1,
+IF $A_Q102B/N[B], DI $Q102b_[B] = 0,
 [*END B]
 
 IF ($TQ17a/1).($TQ17c/N1), DI $P1MLAPSER = 1,
@@ -894,15 +921,68 @@ IF $Lifestagesegment/N[K], DI $Lifestagesegment[K] = 0,
 
 IF $Q12024/NB, DI $Quarter = 1,
 IF $Q22024/NB, DI $Quarter = 2,
+IF $Q32024/NB, DI $Quarter = 3,
 
-!$Quarter.
+
+!
 
 [*DO B = 1:[GCities2filters.#]:1]
 !$GCities[B].
 [*END B]
 !$QProvince.
 
-IF ($Q12024/NB+$Q22024/NB+$Q32024/NB), LCSV (H) $RespNo.$Brands.$Aware.$Consider.$Favrite.$Recmnd.$Premium.$Everdl.$Existacc.
+
+!$QSH1.
+!$QST1.
+!$QGI1.
+!$QLM1a.
+!$QNT1.
+!$QSC1.
+!$QST1xQGI1.
+!$QLM1axQNT1.
+
+
+!
+![*DO B = 1:11]
+!$Q102b_[B].
+![*END B]
+!$Q102C.
+![*DO C = 1:18]
+![*FOR B = 1:2:3:4:5:6:7:8:9:91:99]
+!$Q104_[C]_[B].
+![*END B]
+![*END C]
+
+!$QPH1.
+
+IF ($SEC19/1..4).($T_Q1_1/13..20),DI $TargetMarketHeader1 = 1, 
+IF N(($SEC19/1..4).($T_Q1_1/13..20)),DI $TargetMarketHeader1 = 0,
+
+IF ($SEC19/3..4).($T_Q1_1/21..65),DI $TargetMarketHeader2 = 1, 
+IF N(($SEC19/3..4).($T_Q1_1/21..65)),DI $TargetMarketHeader2 = 0,
+
+IF ($SEC19/3..4).($T_Q1_1/21..65).($A_Q187new/1+2+11),DI $TargetMarketHeader3 = 1, 
+IF N(($SEC19/3..4).($T_Q1_1/21..65).($A_Q187new/1+2+11)),DI $TargetMarketHeader3 = 0,
+
+IF ($SEC19/3..4).($T_Q1_1/21..65).($A_Q187new/4),DI $TargetMarketHeader4 = 1, 
+IF N(($SEC19/3..4).($T_Q1_1/21..65).($A_Q187new/4)),DI $TargetMarketHeader4 = 0, 
+
+IF ($SEC19/1+2).($T_Q1_1/21..65),DI $TargetMarketHeader5 = 1, 
+IF N(($SEC19/1+2).($T_Q1_1/21..65)),DI $TargetMarketHeader5 = 0, 
+
+IF ($Q191/2),DI $TargetMarketHeader6 = 1, 
+IF N($Q191/2),DI $TargetMarketHeader6 = 0,
+
+IF ($A_Q187new/1),DI $TargetMarketHeader7 = 1, 
+IF N($A_Q187new/1),DI $TargetMarketHeader7 = 0, 
+
+
+!$Quarter.
+[*DO B = 1:7]
+!$TargetMarketHeader[B].
+[*END B]
+
+IF ($Q12024/NB+$Q22024/NB+$Q32024/NB+$Q42024/NB), LCSV (H) $RespNo.$Brands.$Aware.$Consider.$Favrite.$Recmnd.$Premium.$Everdl.$Existacc.
 [*FORB=1:3:4:5:6:7:8:10:11:12:13:14:16:17:20:21:22:23:24:25:26:27:28:29:30:31:32:33]
 $Attr[B].
 [*ENDB]
@@ -914,11 +994,10 @@ $Attrc[B].
 [*ENDB]
 $AREA.$LOCALE.$SEC.$AGE_RANGE.$GENDER.$LIFESTAGE.$WORKING_STAT.$USERSHIP.$GCASH_USER.$BANK_CON.$REGION.$AREAXLOC.
 $MONTH.
+$QGI1.
+$QMK1.
+$QMK1xQGI1.
 $P2M.
 $WTS,
 [*END A]
 FINISH DATA,
-
-
-
-

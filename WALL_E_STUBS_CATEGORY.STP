@@ -240,6 +240,20 @@ V = $TQ8b2R1,
 
 !=========
 [*DO A = 1:7]
+ORDM $T_Q8b1_rgd = $T_Q8b1_[Q8B2.A],
+[*SK 5 ON A.EQ.4]
+[*SK 5 ON A.EQ.5]
+ORDM $T_Q8b1_rgdexclude4_5 = $T_Q8b1_[Q8B2.A],
+[*5]
+
+
+[*SK 6 ON A.EQ.1]
+[*SK 6 ON A.EQ.2]
+[*SK 6 ON A.EQ.3]
+[*SK 6 ON A.EQ.6]
+[*SK 6 ON A.EQ.7]
+ORDM $T_Q8b1_rgd4_5 = $T_Q8b1_[Q8B2.A],
+[*6]
 DM $TQ8b1R[A]rb = $T_Q8b1_[Q8B2.A]/
 7..10,7-10,
 5..6,5-6,
@@ -1746,6 +1760,156 @@ V = $TQ17a,
 
 
 
+DM $TQ8b1Q17cRB = $T_Q8b1_rgd/
+7..10,
+7,9,10,8,
+
+$TQ17c/
+1+2+7+9+10+21+30+33+35+46+3+8+
+17+12+13+15+16+18+19+20+28+29+32+34+36+37+38+39+40+42+94+48+49+50+51+80+
+47+25+4+5+24+31+43+44+76+
+23+22+
+6+11+14+26+27+41,
+
+1+2+7+9+10+21+30+33+35+46+3+8,
+1,
+2,
+7,
+9,
+10,
+21,
+30,
+33,
+35,
+46,
+3,
+8,
+
+17+12+13+15+16+18+19+20+28+29+32+34+36+37+38+39+40+42+45+48+49+50+51+80,
+17,
+12,
+13,
+15,
+16,
+18,
+19,
+20,
+28,
+29,
+32,
+34,
+36,
+37,
+38,
+39,
+40,
+42,
+45,
+48,
+49,
+50,
+51,
+80,
+
+47+25+4+5+24+31+43+44+76,
+47,
+25,
+4,
+5,
+24,
+31,
+43,
+44,
+76,
+
+23+22,
+23,
+22,
+
+6+11+14+26+27+41,
+6,
+11,
+14,
+26,
+27,
+41,
+
+F,
+VT = "CATEGORY PENETRATION (USAGE)",
+V = "
+A. OFFLINE/PHYSICAL (Q8b1 - REGARDLESS OF TRANSACTION) - REBASED;
+`	Cash;
+`	Debit Card;
+`	Credit Card;
+`	Cheque;
+
+B. DIGITAL (Q17c);
+`	E-WALLET (NET);
+`		GCash;
+`		Maya;
+`		GrabPay;
+`		WeChat Pay;
+`		Beep;
+`		BDO Pay;
+`		Moneygment;
+`		StarPay;
+`		Hello Money;
+`		Vybe by BPI;
+`		Coins.PH;
+`		Alipay;
+
+`	BANKS/DIGIBANKS (NET);
+`		CIMB Bank;
+`		BPI Mobile/Online;
+`		BDO Mobile /Online;
+`		LandBank Mobile/Online;
+`		MetroBank Mobile /Online;
+`		UnionBank Mobile/Online;
+`		Security Bank Mobile /Online;
+`		Diskartech;
+`		Tonik;
+`		BancNet Online;
+`		RCBC mobile ;
+`		Maybank's Isave;
+`		Eon;
+`		Komo;
+`		OFBank;
+`		PBCOMobile;
+`		PSBank Mobile;
+`		SeaBank;
+`		GoTyme;
+`		UNO Digital Bank;
+`		Own Bank;
+`		Netbank Mobile;
+`		BPI Direct BanKo;
+`		EastWest Bank Mobile;
+
+`	E-REMITTANCE (NET);
+`		Palawan Pay;
+`		E-Cebuana;
+`		Paypal;
+`		True Money;
+`		ML Wallet;
+`		Payoneer;
+`		Remitly;
+`		Xendpay;
+`		USSC;
+
+`	E-COMMERCE (NET);
+`		LazWallet;
+`		ShopeePay;
+
+`	PAYMENT GATEWAY/ AGGREGATOR (NET);
+`		DragonPay;
+`		CLIQQ;
+`		ECPay;
+`		SquidPay;
+`		Bayad Center online/app;
+`		Touch Pay;
+
+Total Count<C>",
+
+
 !=========
 DM $TQ17cNET = 
 $A_Q17c/1+2+3+4+6+7+8+9+10+11+14+23+24+27+28+31+32+34+36+37+([*do a = 91:92]$xQ17c_[a]_other/1056+1050+1043+1062+1058+1061+1080+1029+1078+1079+1172+1089+1009+1046+1053+1059+1015+1042+1087+1071+1013[*sle]+[*End a]),
@@ -3135,6 +3299,45 @@ Missing Answer<z>;
 Total Count<C>",   
 [*END B]
 
+DM $BRAND_LAD_RGDfilter = 
+($TQ16d/N1)+
+($TQ16c/N1)+
+($TQ16b/N1)+
+($TQ16a/N1)+
+($TQ17l/N1)+
+($TQ17d/N1)+
+($TQ17f/N1)+
+($TQ17e/N1)+
+($TQ17a/N1)+
+($TQ17c/N1)+
+($TQ17k/N1)+
+($TQ17p/N1)+
+($TQ17b/N1)+
+($TQ17o/N1)+
+($TQ16e/N1)+
+($TQ16g/N1),
+
+[*DO A = 2:51]
+ORDM $BRAND_LAD_RGD = 
+(($TQ16c/N1).($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]))+
+(($TQ16b/N1).($TQ16a/N[A]).($TQ16b/[A]))+
+(($TQ16a/N1).($TQ16a/[A])),
+($TQ16c/N1).($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
+($TQ16b/N1).($TQ16a/N[A]).($TQ16b/[A]),
+($TQ16a/N1).($TQ16a/[A]),
+($TQ17l/N1).($TQ17l/[A]),
+($TQ17d/N1).($TQ17d/[A]),
+($TQ17f/N1).($TQ17f/[A]),
+($TQ17e/N1).($TQ17e/[A]),
+($TQ17a/N1).($TQ17a/[A]),
+($TQ17c/N1).($TQ17c/[A]),
+($TQ17k/N1).($TQ17k/[A]),
+($TQ17p/N1).($TQ17p/[A]),
+($TQ17b/N1).($TQ17b/[A]),
+($TQ17o/N1).($TQ17o/[A]),
+($TQ16e/N1).($TQ16e/[A]),
+($TQ16g/N1).($TQ16g/[A]),
+[*enda]
 
 DM $BRAND_LAD = 
 [*DO A = 1:51]
@@ -3176,6 +3379,29 @@ V = "
 `     Q16e. Favorite;
 `     Q16g. Recommended[*sle];
 [*ENDA]",
+
+
+DM $TBRAND_LAD_RGD = 
+$BRAND_LAD_RGD/1-16,
+VT = "Q16-Q17. BRAND FUNNEL - EXCLUDING GCASH",
+V = "
+ALL BRANDS EXCLUDING GCASH\
+`     Q16d. Total Awareness;
+`     Q16c. Aided;
+`     Q16b. Other spontaneous;
+`     Q16a. TOM;
+`     Q17l. Ever downloaded;
+`     Q17d. With Existing Acc;
+`     Q17f. Ever Tried;
+`     Q17e. P6M;
+`     Q17a. P2M;
+`     Q17c. P4W;
+`     Q17k. P1W;
+`     Q17p. P1D;
+`     Q17b. BUMO;
+`     Q17o. P1M;
+`     Q16e. Favorite;
+`     Q16g. Recommended",
 
 
 
@@ -3523,7 +3749,9 @@ Total Count<C>",
 
 
 
-DM $Q60otheranswer = $A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
+DM $Q60otheranswer =
+
+$A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
 $A_Q60/2+
 $A_Q60/15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a])+
 
@@ -3547,6 +3775,8 @@ $A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1066[*sle]+[*End a])+
 
 $A_Q60/6+
 $A_Q60/19+
+$A_Q60/23+
+
 ([*do a = 91:93]$Q60_[a]_other/1002+1040[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1004+1027[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1006+1010[*sle]+[*End a])+
@@ -3590,6 +3820,7 @@ $A_Q60/19+
 ([*do a = 91:93]$Q60_[a]_other/1083[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1084[*sle]+[*End a])+
 
+
 ([*do a = 91:93]$Q60_[a]_other/1067+1070+1072[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1067[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1070[*sle]+[*End a])+
@@ -3616,7 +3847,7 @@ $A_Q60/19+
 ([*do a = 91:93]$Q60_[a]_other/1079[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/1079[*sle]+[*End a])+
 
-([*do a = 91:93]$Q60_[a]_other/1074+1077+1082[*sle]+[*End a])+
+([*do a = 91:93]$Q60_[a]_other/1074+1077+1082+1084+1085[*sle]+[*End a])+
 
 ([*do a = 91:93]$Q60_[a]_other/9999[*sle]+[*End a])+
 ([*do a = 91:93]$Q60_[a]_other/9998[*sle]+[*End a]),
@@ -3636,10 +3867,9 @@ $A_Q60/2+15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a]),
 $A_Q60/2,
 $A_Q60/15+([*do a = 91:93]$Q60_[a]_other/1020+1041[*sle]+[*End a]),
 
-$A_Q60/7+21+23+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043+1064[*sle]+[*End a]),
+$A_Q60/7+21+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043+1064[*sle]+[*End a]),
 $A_Q60/7+([*do a = 91:93]$Q60_[a]_other/1008+9997+1034+1043[*sle]+[*End a]),
 $A_Q60/21+([*do a = 91:93]$Q60_[a]_other/1064[*sle]+[*End a]),
-$A_Q60/23,
 
 $A_Q60/11+12+13+14+([*do a = 91:93]$Q60_[a]_other/1035+1037+1001+1009+1048+1078[*sle]+[*End a]),
 $A_Q60/11+([*do a = 91:93]$Q60_[a]_other/1035+1037[*sle]+[*End a]),
@@ -3666,6 +3896,8 @@ $A_Q60/16+([*do a = 91:93]$Q60_[a]_other/1066[*sle]+[*End a]),
 
 $A_Q60/6,
 $A_Q60/19,
+$A_Q60/23,
+
 ([*do a = 91:93]$Q60_[a]_other/1002+1040[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1004+1027[*sle]+[*End a]),
 ([*do a = 91:93]$Q60_[a]_other/1006+1010[*sle]+[*End a]),
@@ -3760,7 +3992,6 @@ VOLUNTARY EXCLUSION NET	<Q>;
 KNOWLEDGE NET <Q>;
 `     Lack of knowledge on features;
 `     No available channels or sources to learn how to use the financial app;
-`     I have other family members who already have a GCash account;
 
 INVOLUNTARY EXCLUSION NET <Q>;
 `     No reliable internet connection;
@@ -3787,6 +4018,7 @@ TRUST RELATED CONCERNS NET (EXCLUSIVE) <Q>;
 
 Hesitation to open another financial account;
 Has cash-in fee every time I fund my account;
+I have other family members who already have a GCash account;
 
 Prefers cash payment;
 Tedious process of using online/digital banking or financial app;
@@ -7497,7 +7729,7 @@ GFOREST;
 EARN MONEY;
 JOBS;
 SHIP & DELIVER;
-OTHERS]
+GCASH CARD]
 
 
 !=========
@@ -10217,19 +10449,19 @@ Total count<C>",
 
 
 !
-DM $TQGT2 = $A_QGT2/1+([*DO A = 91:92]$XQGT2_91_other/1025[*SLE]+[*END A]),
+DM $TQGT2 = $A_QGT2/1+([*DO A = 91:92]$XQGT2_[A]_other/1025[*SLE]+[*END A]),
 $A_QGT2/2,
 $A_QGT2/3,
-$A_QGT2/4+([*DO A = 91:92]$XQGT2_91_other/1028[*SLE]+[*END A]),
+$A_QGT2/4+([*DO A = 91:92]$XQGT2_[A]_other/1028[*SLE]+[*END A]),
 $A_QGT2/5,
 $A_QGT2/6,
-$A_QGT2/7+([*DO A = 91:92]$XQGT2_91_other/1023[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1024[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1026[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1127[*SLE]+[*END A]),
-([*DO A = 91:92]$XQGT2_91_other/1022[*SLE]+[*END A]),
+$A_QGT2/7+([*DO A = 91:92]$XQGT2_[A]_other/1023[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1024[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1026[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1127[*SLE]+[*END A]),
+([*DO A = 91:92]$XQGT2_[A]_other/1022[*SLE]+[*END A]),
 
-$A_QGT2/99+([*DO A = 91:92]$XQGT2_91_other/1021[*SLE]+[*END A]),
+$A_QGT2/99+([*DO A = 91:92]$XQGT2_[A]_other/1021[*SLE]+[*END A]),
 R,F,
 VT = "QGT2. CHANNELS USED IF NEED TO DO TRANSACTIONS VIA GCASH",
 V = "

@@ -452,7 +452,7 @@ OM $T_QINS2_3_QINS2_98_other = $[B]-[B+3]/1-9999,
 [*END A]
 
 [*SET B = 104210][*DO A= 1:10]
-OM $T_QINS3_3_QINS3_98_other = $[B]-[B+3]/1-9999,
+OM $xT_QINS3_3_QINS3_98_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
@@ -864,7 +864,12 @@ OM $T_Q175_2_Q175_4_other = $[B]-[B+3]/1-9999,
 
 !! NEW Q2 2024
 [*SET B = 112290][*DO A= 1:10]
-OM $T_QINS3_2_QINS3_98_other = $[B]-[B+3]/1-9999,
+OM $xT_QINS3_2_QINS3_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 119730][*DO A= 1:10]
+OM $T_Q170a_1_9_Q170a_1_7_other = $[B]-[B+3]/1-9999,
 [*SET B = B + 4]
 [*END A]
 
@@ -918,6 +923,9 @@ OM $I_35_QL6_91_other = $blank/1-9999,
 OM $I_37_QL6_91_other = $blank/1-9999,
 OM $I_27_QL6_91_other = $blank/1-9999,
 OM $I_44_QL6_91_other = $blank/1-9999,
+[*DO A = 51:57]
+OM $I_[A]_QL6_91_other = $blank/1-9999,
+[*END A]
 
 OM $T_Q170a_8_Q170a_91_other = $blank/1-9999,
 OM $T_Q170a_1_2_Q170a_1_7_other = $blank/1-9999,

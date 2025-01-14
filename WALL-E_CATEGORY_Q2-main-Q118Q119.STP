@@ -89,7 +89,7 @@ F= SHG1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
 %SDV = 'Standard Deviation<d2>',
 
 [*DATA HX = HA,HB,HC,HD]
-[*DATA HEADERWAVE3 = HATM,HBTM,HCTM,HAGCitiesT,HBGCitiesT]
+[*DATA HEADERWAVE3 = HA,HB,HC,HAGCitiesT,HBGCitiesT]
 [*DATA HEADERWAVE3new = HA,HB,HC,HAGCities,HBGCities]
 
 
@@ -139,67 +139,38 @@ SELECT WR $WTS,
 [*SET T = 0]
 
 
-!======
-[*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END A]
-[*END Z]
+[*DATA Q118filtername = DETRACTORS,PASSIVES,PROMOTERS]
+[*DATA Q118filtercode = 1..7,8..9,10..11]
 
-if $Q17i/1, then,
-!======
-[*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
-[*END A]
-[*END Z]
-end if,
 
-if $Q17i/2, then,
-!======
+IF $Q32024/NB, THEN,
+!====== NEW
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1_inci[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END A]
+IF ($A_Q17c/1).($T_Q47_1/1..11).($A_Q17k/N1),  T #[+T] = $TQ118new1 * $[HEADERWAVE3new.Z],
+BT = "Among  GCash users in the P1M but did not use in the P1W",
 [*END Z]
-end if,
+END IF,
 
+
+[*DO D = 1:3]
+IF $Q32024/NB, THEN,
+!====== NEW
+[*DO Z = 1:3]
+IF ($A_Q17c/1).($T_Q47_1/[Q118filtercode.D]).($A_Q17k/N1),  T #[+T] = $TQ118new1 * $[HEADERWAVE3new.Z],
+BT = "Among  GCash users in the P1M but did not use in the P1W - [Q118filtername.D]",
+[*END Z]
+END IF,
+[*END D]
 
 
 
 !======
+IF $FEB2024/NB+$MAR2024/NB+$Q22024/NB+$Q32024/NB, THEN,
 [*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
-BT = "ALL RESPONDENTS",
-[*END A]
+IF ($T_Q47_1/1..9).($TQ17c/1).($A_Q17k/N1), T #[+T] = $TQ119 * $[HEADERWAVE3.Z],
+BT = "Among  GCash users in the P1M but did not use in the P1W (Detractors and Passives)",
 [*END Z]
-
-if $Q17i/1, then,
-!======
-[*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG USERS OF FINTECH APPS",
-[*END A]
-[*END Z]
-end if,
-
-
-if $Q17i/2, then,
-!======
-[*DO Z = 1:3]
-[*DO A = 1:7]
-T #[+T] = $TQ8b1R[A]rb * $[HEADERWAVE3.Z],
-BT = "AMONG NON-USERS OF FINTECH APPS",
-[*END A]
-[*END Z]
-end if,
-
-
+END IF,
 
 
 
