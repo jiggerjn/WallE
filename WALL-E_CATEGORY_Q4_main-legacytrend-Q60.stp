@@ -2,7 +2,7 @@ START CONTROL,
 *PROJECT WALLE (DECEMBER 2, 2022)
 
 !C = P_WALLE_2021Q3.ASC;P_WALLE_2021Q4.ASC;P_WALLE_2022Q1.ASC;P_WALLE_2022Q2.ASC;P_WALLE_2022Q3.ASC;P_WALLE_2022Q4.ASC;P_WALLE_2023Q1.ASC;P_WALLE_2023Q2.ASC;P_WALLE_2023Q3.ASC;WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V2.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc,
-C = P_WALLE_2023Q1.ASC;P_WALLE_2023Q2.ASC;P_WALLE_2023Q3.ASC;WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc,
+C = WALL_E_Q4_OCT.asc;WALLE_NOVEMBER.asc;WALLEDEC_1_10.asc;WALLE_JAN24V3.asc;WALLE_FEB24V2.asc;WALLE_MAR24V2.asc;WALLE_APR24V2.asc;WALLE_MAY24V2.asc;WALLE_JUN24V2.asc;WALLE_JUL24V2.ASC;WALLE_AUG24V2.ASC;WALLE_SEP24V2.ASC,
 Y,
 OLDNAMES,
 CSV2R,
@@ -90,6 +90,7 @@ $Q32023/NB,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
+$Q32024/NB,
 [*DO A = 1:12]
 T,
 $HAv/[A].$Q42022/NB,
@@ -99,6 +100,7 @@ $HAv/[A].$Q32023/NB,
 $HAv/[A].$Q42023/NB,
 $HAv/[A].$Q12024/NB,
 $HAv/[A].$Q22024/NB,
+$HAv/[A].$Q32024/NB,
 [*END A]
 HT = "HEADER A. GENERAL PROFILE",
 H  = "
@@ -110,6 +112,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 GENDER****
 MALE***
@@ -121,6 +124,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 FEMALE***
 TOTAL*(a)<S>;
@@ -131,6 +135,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 LIFESTAGE****
 Students (20 yo and below)***
@@ -142,6 +147,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Yuppies (21-30 yo)***
 TOTAL*(a)<S>;
@@ -152,6 +158,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Transitioners (31-35 yo)***
 TOTAL*(a)<S>;
@@ -162,6 +169,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Balancers (36-45 yo)***
 TOTAL*(a)<S>;
@@ -172,6 +180,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Older Adults/Retirees (46-65 yo)***
 TOTAL*(a)<S>;
@@ -182,6 +191,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 
 SEC****
@@ -194,6 +204,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 C1***
 TOTAL*(a)<S>;
@@ -204,6 +215,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 ABC1***
 TOTAL*(a)<S>;
@@ -214,6 +226,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 C2***
 TOTAL*(a)<S>;
@@ -224,6 +237,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 D***
 TOTAL*(a)<S>;
@@ -233,7 +247,8 @@ Q2 2023 *(d);
 Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
-Q2 2024 *(h)",
+Q2 2024 *(h);
+Q3 2024 *(i)",
 
 
 DM $HATL_LIFESTAGE =
@@ -245,6 +260,7 @@ $Q32023/NB,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
+$Q32024/NB,
 [*DO A = 3:7]
 T,
 $HAv/[A].$Q42022/NB,
@@ -254,6 +270,7 @@ $HAv/[A].$Q32023/NB,
 $HAv/[A].$Q42023/NB,
 $HAv/[A].$Q12024/NB,
 $HAv/[A].$Q22024/NB,
+$HAv/[A].$Q32024/NB,
 [*END A]
 HT = "HEADER A. GENERAL PROFILE - LIFESTAGE ONLY",
 H  = "
@@ -265,6 +282,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 LIFESTAGE****
 Students (20 yo and below)***
@@ -276,6 +294,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Yuppies (21-30 yo)***
 TOTAL*(a)<S>;
@@ -286,6 +305,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Transitioners (31-35 yo)***
 TOTAL*(a)<S>;
@@ -296,6 +316,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Balancers (36-45 yo)***
 TOTAL*(a)<S>;
@@ -306,6 +327,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Older Adults/Retirees (46-65 yo)***
 TOTAL*(a)<S>;
@@ -315,7 +337,8 @@ Q2 2023 *(d);
 Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
-Q2 2024 *(h)",
+Q2 2024 *(h);
+Q3 2024 *(i)",
 
 
 DM $HBTL =
@@ -327,6 +350,7 @@ $Q32023/NB,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
+$Q32024/NB,
 [*DO A = 1:15]
 T,
 $HBv/[A].$Q42022/NB,
@@ -336,6 +360,7 @@ $HBv/[A].$Q32023/NB,
 $HBv/[A].$Q42023/NB,
 $HBv/[A].$Q12024/NB,
 $HBv/[A].$Q22024/NB,
+$HBv/[A].$Q32024/NB,
 [*END A]
 HT = "HEADER B. LOCALE AND MACROREGION",
 H  = "
@@ -347,6 +372,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 LOCALE****
 URBAN (NET)***
 TOTAL*(a)<S>;
@@ -357,6 +383,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 RURAL (NET)***
 TOTAL*(a)<S>;
@@ -367,6 +394,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 
 NCR (NET)***
@@ -378,6 +406,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 
 NORTH CENTRAL LUZON****
@@ -390,6 +419,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 NCL Urban***
 TOTAL*(a)<S>;
@@ -400,6 +430,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 NCL Rural***
 TOTAL*(a)<S>;
@@ -410,6 +441,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 
 SOUTH LUZON****
@@ -422,6 +454,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 SL Urban***
 TOTAL*(a)<S>;
@@ -432,6 +465,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 SL Rural***
 TOTAL*(a)<S>;
@@ -442,6 +476,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 
 VISAYAS****
@@ -454,6 +489,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Visayas Urban***
 TOTAL*(a)<S>;
@@ -464,6 +500,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Visayas Rural***
 TOTAL*(a)<S>;
@@ -474,6 +511,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 
 MINDANAO****
@@ -486,6 +524,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Mindanao Urban***
 TOTAL*(a)<S>;
@@ -496,6 +535,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 Mindanao Rural***
 TOTAL*(a)<S>;
@@ -505,7 +545,8 @@ Q2 2023 *(d);
 Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
-Q2 2024 *(h)",
+Q2 2024 *(h);
+Q3 2024 *(i)",
 
 
 DM $HDTL =
@@ -517,6 +558,7 @@ $Q32023/NB,
 $Q42023/NB,
 $Q12024/NB,
 $Q22024/NB,
+$Q32024/NB,
 [*DO A = 1:15]
 T,
 $HDv/[A].$Q42022/NB,
@@ -526,6 +568,7 @@ $HDv/[A].$Q32023/NB,
 $HDv/[A].$Q42023/NB,
 $HDv/[A].$Q12024/NB,
 $HDv/[A].$Q22024/NB,
+$HDv/[A].$Q32024/NB,
 [*END A]
 
 HT = "HEADER D. MACROREGION X SEC",
@@ -538,6 +581,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 MMA****
 ABC1***
 TOTAL*(a)<S>;
@@ -548,6 +592,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 C2***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -557,6 +602,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 D***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -566,6 +612,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 NCL****
 ABC1***
@@ -577,6 +624,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 C2***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -586,6 +634,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 D***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -595,6 +644,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 SL****
 ABC1***
@@ -606,6 +656,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 C2***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -615,6 +666,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 D***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -624,6 +676,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 VISAYAS****
 ABC1***
@@ -635,6 +688,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 C2***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -644,6 +698,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 D***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -653,6 +708,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 
 MINDANAO****
 ABC1***
@@ -664,6 +720,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 C2***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -673,6 +730,7 @@ Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
 Q2 2024 *(h);
+Q3 2024 *(i);
 D***
 TOTAL*(a)<S>;
 Q4 2022 *(b);
@@ -681,7 +739,8 @@ Q2 2023 *(d);
 Q3 2023 *(e);
 Q4 2023 *(f);
 Q1 2024 *(g);
-Q2 2024 *(h)",
+Q2 2024 *(h);
+Q3 2024 *(i)",
 
 ! DM $test =
 ! $SEP2023/NB,
@@ -775,7 +834,7 @@ MINDANAO,
 URBAN,
 RURAL]
 
-SELECT WR $WTS,
+SELECT WR $WTSlegacy,
 
 [*SET T = 0]
 

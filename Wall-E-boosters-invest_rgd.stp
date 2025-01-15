@@ -1,0 +1,408 @@
+START CONTROL,
+*PROJECT BOOSTER
+C = Boosterv3.asc,     
+
+
+Y,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START DATA,
+ORDER 1234567890XV,
+SERIAL NUMBER IN COLUMNS 1-10,
+CARD CHARACTERS BINARY 300000,
+TEMPORARY/9999999/,
+F = ADF,
+
+
+[*INSERT Wall_E_resp]
+[*INSERT WALLEv2_CARDCOL_CATERGORY]
+[*INSERT WALL_E_CARDCOL_BOOSTERS_INVESTMENT_OESOE]
+[*INSERT XCARDCOL_SECTION11_BOOSTER]
+[*INSERT BOOSTER_STUBS_SECTION11]
+[*INSERT W_HEADER]
+[*INSERT Wall-E-boosters-GLOBAL]
+[*INSERT W_WTS21to65]
+
+DM $HT = T,
+ HT = "TOTAL",
+  H = "TOTAL*(A)",
+
+
+DM $HSummTab1 = 
+T,
+$QINV7bRGD/8+9+10+12+13+14+16+1030+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+91,
+$QINV7bRGD/1..7+11,
+$QINV8a_RGD/N99,
+HT = "HEADER 1 (INVESTMENT CHANNELS/ PLATFORMS)",
+H = "<F=SHG-1>
+TOTAL *(a);
+ONLINE TRADING PLATFORMS *(b);
+E-WALLET/ FINTECH APPS NET *(c);
+BANKS NET *(d)",
+
+DM $HSummTab2 = 
+T,
+$QINV7bRGD/8+9+10+12+13+14+16+1030+17+18+19+20+21+22+23+24+25+26+27+28+29+30+31+32+33+34+91,
+8,9,10,12,13,14,16+1030,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,91,
+
+HT = "HEADER 2 (ONLINE TRADING PLATFORMS)",
+H = "<F=SHG-1>
+TOTAL *(a);
+ONLINE TRADING PLATFORMS *(b);
+Bonds.Ph *(c);
+eToro *(d);
+Investa *(e);
+PDAX *(f);
+First Metro Securities *(g);
+COL Financial *(h);
+BDO Nomura Securities *(i);
+BPI Trade *(j);
+AB Capital Securities Inc *(k);
+Philstocks *(l);
+ALPHASEC *(m);
+BASecOnline *(n);
+GoTrade *(o);
+Luckysec Online *(p);
+MyTrade *(q);
+China Bank Securities *(r);
+iTrade *(s);
+2TradeAsia *(t);
+Landbank Securities *(u);
+Maybank Trade *(v);
+RCBC ezTrade *(w);
+Timson Trade *(x);
+uTrade *(y);
+VC Trade *(z);
+Wealth Securities *(A);
+Others *(B)",
+
+
+DM $HSummTab3 = 
+T,
+$QINV7bRGD/1..7+11,
+$QINV7bRGD/1-7,11,
+HT = "HEADER 3 (E-WALLET FINTECH APPS)",
+H = "<F=SHG-1>
+TOTAL *(a);
+E-WALLET/ FINTECH APPS NET *(b);
+GInvest *(c);
+GFunds *(d);
+GStocks Global *(e);
+GStocks PH *(f);
+GCrypto *(g);
+Maya Funds *(h);
+Maya Crypto *(i);
+Coins Pro *(j)",
+
+
+DM $HSummTab4 = 
+T,
+$QINV8a_RGD/1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+91,
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,91,
+HT = "HEADER 4 (BANKS)",
+H = "<F=SHG-1>
+TOTAL *(a);
+BANKS NET *(b);
+AUB (Asia United Bank) *(c);
+Banco De Oro (BDO) *(d);
+BPI/BPI Savings *(e);
+China Bank *(f);
+Citibank *(g);
+CIMB Bank *(h);
+EastWest *(i);
+HSBC *(j);
+Landbank *(k);
+Metrobank *(l);
+Philippine Bank of Communications (PBCOM) *(m);
+PNB *(n);
+PSBank *(o);
+RCBC *(p);
+Security Bank *(q);
+Unionbank *(r);
+UCPB *(s);
+Others *(t)",
+
+
+!IF $BoosterInvestors/NB, CK $T_QINV4_Booster_1/B,
+!IF $BoosterInvestors/NB, CK $T_QINV4_Booster_2/B,
+
+IF $BoosterInvestors/NB, WRITE,
+!lcsv (h) $1-10.$Q113,
+
+FINISH DATA,
+START TABLES,
+
+!======FOR QPS WINDOWS (% + RAW - FOR DATACHECKING)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/NSER/CLG1/RNC1/NDAT/BAL/RBL/CLW7,
+ 
+!F=MCB29,        ! ------ LESS THAN 30 BASE
+F=BTS,          ! ------ BLANK TABLES SUPPRESS
+F=NBCS,          ! ------ BLANK COLUMN SUPPRESS
+F=DPR4,          ! ------ DECIMAL %
+F=DPT0,          ! ------ DECIMAL RAW COUNT
+F=DPA2,          ! ------ DECIMAL MEAN SUM
+F=DPS2,          ! ------ DECIMAL STD
+F=BRS,          ! ------ BLANK ROW SUPPRESS
+ 
+F = SHG1/SIG1/SLA95/SLB95/NFSL,
+!F= SHG1/SIG/SLA95/SLB95/NFSL,
+!F= SHG-1/SIG/SLA95/SLB95/NFSL, !round robin
+!F= SHG2/SIG/SLA95/SLB95/NFSL,  !HEADER A1.1 AND HEADE A4 
+F=PBL/MOD/MED,
+
+
+%UNR = '<ML7>(UNWEIGHTED BASE)',
+%AVG = '<ML7>MEAN SCORE <D2>',
+%SDV = '<ML7>STANDARD DEVIATION<D2>',
+
+SELECT WR $WTS21TO65,
+
+[*SET T = 0]
+
+[*DATA UAI = HG1Invest,HHInvest,HHInvest,HIInvest,HJInvest,HD2,HE1,HE2,HF1,HF2,HG1,HG2]
+
+[*DATA filtername = 
+Total investors,
+Total active investors,
+Total passive investors,
+Funds - Active,
+Funds - Passive,
+Stocks- Active,
+Stocks - Passive,
+Crypto - Active,
+Crypto - Passive]
+
+[*DATA filter =
+$BoosterTagging/12..17,
+$BoosterTagging/12..14,
+$BoosterTagging/15..17,
+$BoosterTagging/12,
+$BoosterTagging/15,
+$BoosterTagging/13,
+$BoosterTagging/16,
+$BoosterTagging/14,
+$BoosterTagging/17]
+
+
+[*data QINV15 = 4,5,6,14,15]
+[*data QINV7bcode = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,91,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
+[*DO X = 1:2]
+IF [*DO A = 1:5](($A_QINV2/[QIN7B.A]).([*DO B = 1:16]$I_[Q175.B]_A_Q175_Booster/2[*SLE]+[*END B]))[*SLE]+[*end a], T #[+T] = $TQINV8_RGD * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS AND AVAILED THEIR INVESTMENTS FROM A BANK - REGARDLESS OF TYPE OF INVESTMENT",
+[*END X]
+
+[*DO X = 1:2]
+IF ($A_QINV7a/N99.NB).([*DO A = 1:5]($A_QINV2/[QIN7B.a])[*SLE]+[*end a]), T #[+T] = $TQINV7b_RGD * $[UAI.X],
+BT = "AMONG AWARE OF ONLINE BROKERS/TRADING PLATFORMS - REGARDLESS OF TYPE OF INVESTMENT",
+[*END X]
+
+
+
+! =======
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV16_RGD * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND",
+[*END X]
+
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV16_GCASH * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH",
+[*END X]
+
+
+! =======
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV15_RGD * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND",
+[*END X]
+
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV15_GCASH * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH",
+[*END X]
+
+[*SK 11]
+! =======
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV17_RGD * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND",
+[*END X]
+
+[*DO F = 1:9]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV17_RGD * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND - [filtername.F]",
+[*END F]
+
+
+
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV17_GCASH * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH",
+[*END X]
+
+
+[*DO F = 1:9]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV17_GCASH * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH - [filtername.F]",
+[*END F]
+
+
+! =======
+[*DO X = 1:2]
+
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV18_RGD1 * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND",
+
+[*DO C = 2:11]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), +T #[+T] = $TQINV18_RGD[C] * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND",
+[*END C]
+[*END X]
+
+[*DO F = 1:9]
+
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV18_RGD1 * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND - [filtername.F]",
+
+[*DO C = 2:11]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), +T #[+T] = $TQINV18_RGD[C] * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND - [filtername.F]",
+[*END C]
+[*END F]
+
+
+
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV181_GCASH * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH",
+
+[*DO C = 2:11]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), +T #[+T] = $TQINV18[C]_GCASH * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH",
+[*END C]
+[*END X]
+
+
+[*DO F = 1:9]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV181_GCASH * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH - [filtername.F]",
+
+[*DO C = 2:11]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), +T #[+T] = $TQINV18[C]_GCASH * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH - [filtername.F]",
+[*END C]
+[*END F]
+
+
+
+
+
+
+! =======
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV19_RGD * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND",
+MT #[T](R15) = #[T](R14) - #[T](R12), ! NPS=PROMOTERS MINUS DETRACTOR R15=R14-R12
+[*END X]
+
+[*DO F = 1:9]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:14]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])+[*end z]
+    [*do z = 15:34]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    [*do z = 35:51]([*do b = 1:5]$I_[QINV15.b]_A_QINV8/[QINV7bcode.z][*sle]+[*end b])+[*end z]
+    ([*do b = 1:5]$I_[QINV15.b]_A_QINV8/91[*sle]+[*end b])
+), T #[+T] = $TQINV19_RGD * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - REGARDLESS OF BRAND - [filtername.F]",
+MT #[T](R15) = #[T](R14) - #[T](R12), ! NPS=PROMOTERS MINUS DETRACTOR R15=R14-R12
+[*END F]
+
+
+
+[*DO X = 1:2]
+IF ($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV19_GCASH * $[UAI.X],
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH",
+MT #[T](R15) = #[T](R14) - #[T](R12), ! NPS=PROMOTERS MINUS DETRACTOR R15=R14-R12
+[*END X]
+
+
+[*DO F = 1:9]
+IF ([filter.F]).($A_QINV2/n99.nb).(
+    [*do z = 1:5]([*do b = 1:5]$I_[QINV15.b]_A_QINV7b/[z][*sle]+[*end b])[*SLE]+[*end z]
+), T #[+T] = $TQINV19_GCASH * $HSummTab1,
+BT = "AMONG THOSE WHO CURRENTLY HAVE INVESTMENTS - TOTAL GCASH - [filtername.F]",
+MT #[T](R15) = #[T](R14) - #[T](R12), ! NPS=PROMOTERS MINUS DETRACTOR R15=R14-R12
+[*END F]
+
+[*11]
+
+FINISH TABLES,
+
