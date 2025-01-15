@@ -356,9 +356,94 @@ This episode or segment is fit for the brand]
 
 
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesGPV(;)=
+(R1) GCash is celebrating 20 years of milestones and financial inclusion;
+(R2) Celebrate Natin ang Lahat;
+(R3) Sa GCash, mas kaya ko ang araw-araw
+]
+
+[*DATA StatementsGPV(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
 
 
 
+[*DATA Statements11GPV(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me realize that GCash is a Brand for Me;
+Made me want to use GCash to progress in life;
+Made me want to use GCash for my daily transactions;
+I will use GCash because it has rewards and features meant for me
+]
+
+
+[*DATA Statements12GPV(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand
+]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesGMK(;)=
+(R1) GCash is celebrating 20 years of milestones and financial inclusion;
+(R2) Celebrate Natin ang Lahat;
+(R3) Sa GCash, mas kaya ko ang araw-araw
+]
+
+[*DATA StatementsGMK(;)=
+Comprehension: Most people would find the ad easy to follow;
+Relevance: Is relevant to me as an individual;
+Uniqueness: Is different to other e-wallet/ fintech/ mobile banking/ e-remittance ads;
+Persuasion: Makes me feel happier or more comfortable about buying the brand;
+Use More: Makes me want to increase my usage;
+Wear Out: I am getting fed up with seeing the ad]
+
+
+
+[*DATA Statements11GMK(;)=
+Made me want to use GCash more in my transactions;
+I became more interested in other GCash features;
+I will likely recommend GCash to other people;
+Made me want to use GCash over other brands for my transactions;
+Made me realize that GCash is a Brand for Me;
+Made me want to use GCash to progress in life;
+Made me want to use GCash for my daily transactions ;
+I will use GCash because it has rewards and features meant for me
+]
+
+
+[*DATA Statements12GMK(;)=
+The ad is unique and different;
+The ad was very enjoyable to watch;
+The ad told me something new;
+What was told in the ad is relevant to me;
+The ad increased my interest in the brand;
+You found it difficult to believe what the said;
+The ad is meaningful for me;
+This ad is fit for the brand
+]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 [*DATA AdEvallabel(;)=
 BUY LOAD STREAMING;
@@ -368,7 +453,10 @@ LENDING GLOAN FILM X GRADUATION;
 GCASH STORIES: ADZ;
 LENDING GCREDIT FILM x WATER;
 LENDING GCREDIT FILM x NEXT TIME;
-SUGOD-SUYOD IT`'S SHOWTIME]
+SUGOD-SUYOD IT`'S SHOWTIME;
+GBIRTHDAY PROMO VIDEO;
+GBirthday Main KV
+]
 
 [*DATA AdEvalVar(;)=
 TQBLS1;
@@ -378,5 +466,7 @@ TQLOAN1;
 TQADZ1;
 TQLGW1;
 TQLGN1;
-TQSG1]
+TQSG1;
+TQGPV1;
+TQGMK1]
 

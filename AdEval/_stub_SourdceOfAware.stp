@@ -1,0 +1,19 @@
+
+
+DM $[STUBSContents.1] =
+[*dbloop dlStubs=dfEpsStub;SOA_Trended]
+    [*BLOCK 99 string  dlStubs.[STUBSContents.1].ne.'']
+        ([dlStubs.[STUBSContents.1]]),
+    [*99]
+    [*BLOCK 99 string  dlStubs.[STUBSContents.1].eq.'']
+        F,
+    [*99]
+[*dbend dlStubs]
+R,F,
+VT = "[STUBSContents.1]",
+V = "
+[*dbloop dlStubs=dfEpsStub;SOA_Trended]
+    [dlStubs.Stubs];
+[*dbend dlStubs]
+Missing answers<Z>;
+Total count<C>",
