@@ -723,8 +723,6 @@ OM $I_23_Q118new_98_other = $blank/1-9999,
 
 
 OM $I_2_Q40bnew_91_other = $blank/1-9999,
-OM $I_8_Q193a_98_other = $blank/1-9999,
-OM $I_8_Q193b_98_other = $blank/1-9999,
 OM $xQ16a_92_other = $blank/1-9999,
 
 
@@ -732,3 +730,41 @@ OM $xQ16a_92_other = $blank/1-9999,
 
 IF $A_Q17c/91, OM $xQ17c_91_other = $xQ16a_91_other,
 IF $A_Q17c/92, OM $xQ17c_92_other = $xQ16b_92_other,
+
+
+[*SET B = 106730][*DO A= 1:10]
+OM $Q123a_91_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 106770][*DO A= 1:10]
+OM $Q123a_92_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+dm $Q123a_other = $Q123a_91_other.or.$Q123a_92_other,
+
+
+[*SET B = 121730][*DO A= 1:10]
+OM $I_8_Q193a_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 121770][*DO A= 1:10]
+OM $I_8_Q193b_98_other = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+
+
+[*SET B = 119930][*DO A= 1:10]
+OM $QBFM1 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+
+[*SET B = 119970][*DO A= 1:10]
+OM $QBFM2 = $[B]-[B+3]/1-9999,
+[*SET B = B + 4]
+[*END A]
+	

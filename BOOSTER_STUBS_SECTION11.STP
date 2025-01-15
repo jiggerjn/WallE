@@ -140,7 +140,10 @@ V = $TQINV1a,
 15,
 
 98,
-99]
+
+4+5,
+6+15,
+14]
 
 [*DATA QINV1aname(;) =
 INTEREST-BEARING DEPOSIT (NET);
@@ -164,7 +167,10 @@ Cryptocurrency  (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that tak
 Stockbroker/ Investment Firm (e.g. COL Financial, etc.);
 
 Others;
-None]
+
+FUNDS (NET);
+STOCKS (NET);
+CRYPTOCURRENCIES (NET)]
 
 DI $xdummysum = 0,
 DI $xdummycount = 0,
@@ -363,8 +369,18 @@ ORDM $Q175_RGD = $I_[A]_A_Q175_Booster,
 [*901]
 [*END A]
 
+[*FOR A = 981:4:5:982:6:15:983:14]
+[*BLOCK 900 ON A.GT.900]
+[*SET NET = [A]]
+[*900]
+
+[*SK 901 ON A.GT.900]
+ORDM $Q175_net_[NET] = $I_[A]_A_Q175_Booster,
+[*901]
+[*END A]
+
 [*SET s = 0]
-[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
+[*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98:981:982:983]
 DM $TQ175_Booster_[A] = 
 [*BLOCK 900 ON A.GT.900]
 $Q175_net_[A]/
@@ -386,6 +402,7 @@ Others;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 [*end a]
+
 
 
 DM $TQ175_Booster_RGD = $Q175_RGD/
@@ -506,6 +523,7 @@ Stockbroker/Investment Firm (e.g. COL Financial, etc.)]
 
 [*DATA QIN7B = 4,5,6,14,15]
 [*DO A = 1:5]
+ORDM $QINV7bRGD = $I_[QIN7B.A]_A_QINV7b,
 DM $TQINV7b_[QIN7B.A] = $I_[QIN7B.A]_A_QINV7b/1,
 2,
 3,
@@ -555,6 +573,57 @@ R,F,
 XT = "QINV7b. ONLINE BROKERS/ TRADING PLATFORM CURRENTLY USING - [QIN7BN.A]",
 X = $TQINV7a,
 [*END A]
+
+
+
+DM $TQINV7b_RGD = $QINV7bRGD/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+(91).N(1000..9999),
+1021,
+1022,
+1023,
+1024,
+1025,
+1026,
+1027,
+1028,
+1029,
+99,
+
+R,F,
+XT = "QINV7b. ONLINE BROKERS/ TRADING PLATFORM CURRENTLY USING - REGARDLESS OF TYPE OF INVESTMENT",
+X = $TQINV7a,
 
 [*FOR A = 901:1:2:3:902:4:5:6:7:903:8:9:10:904:11:12:13:14:15:98]
 [*BLOCK 900 ON A.GT.900]
@@ -674,6 +743,7 @@ X = $TQINV8a_1,
 
 [*DATA QIN7B = 4,5,6,14,15]
 [*DO A = 1:5]
+ORDM $QINV8_RGD = $I_[QIN7B.A]_A_QINV8,
 DM $TQINV8_[QIN7B.A] = $I_[QIN7B.A]_A_QINV8/1,
 2,
 3,
@@ -719,6 +789,52 @@ None;
 MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 [*END A]
+
+
+DM $TQINV8_RGD = $QINV8_RGD/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+91,
+99,
+
+R,F,
+XT = "QINV8. BANKS CURRENTLY WITH INVESTMENT - REGARDLESS OF TYPE OF INVESTMENT",
+X = "
+AUB (Asia United Bank);
+Banco De Oro (BDO);
+BPI/BPI Savings;
+China Bank;
+Citibank;
+CIMB Bank;
+EastWest;
+HSBC;
+Landbank;
+Metrobank;
+Philippine Bank of Communications (PBCOM);
+PNB;
+PSBank;
+RCBC;
+Security Bank;
+Unionbank;
+UCPB;
+Others;
+None;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
 
 
 
@@ -1278,7 +1394,18 @@ Cryptocurrency (e.g. Bitcoin, Ethereum, etc) (virtual or digital money that take
 Stockbroker/ Investment Firm (e.g. COL Financial, etc.)]
 
 
+DI $xQINV19_SUM = 0,
+DI $xQINV19_COUNT = 0,
 [*DO A = 1:56]
+[*DO B = 1:11]
+IF $I_[A]_QINV19/[B], DI $xQINV19_SUM = $xQINV19_SUM + [B],
+IF $I_[A]_QINV19/[B], DI $xQINV19_COUNT = $xQINV19_COUNT + 1,
+[*END B]
+
+[*BLOCK 1 ON A.EQ.5]
+DI $QINV19_GCASH = $xQINV19_SUM/$xQINV19_COUNT,
+[*1]
+
 DM $TQINV19_[A] = $I_[A]_QINV19/
 1,
 2,
@@ -1317,9 +1444,96 @@ MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 [*END A]
 
+DI $QINV19_RGD = $xQINV19_SUM/$xQINV19_COUNT,
+
+DM $TQINV19_GCASH = $QINV19_GCASH/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+XT = "QINV19. LIKELIHOOD TO RECOMMEND (NPS) - TOTAL GCASH",
+X = "
+0 (Will definitely not recommend) (0) <v0>;
+1 (1) <v1>;
+2 (2) <v2>;
+3 (3) <v3>;
+4 (4) <v4>;
+5 (5) <v5>;
+6 (6) <v6>;
+7 (7) <v7>;
+8 (8) <v8>;
+9 (9) <v9>;
+10 (Will definitely recommend) (10) <v10>;
+DETRACTORS NET <Q>;
+PASSIVES NET <Q>;
+PROMOTERS NET <Q>;
+NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+DM $TQINV19_RGD = $QINV19_RGD/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+1..7,
+8..9,
+10..11,
+F,
+R,F,
+XT = "QINV19. LIKELIHOOD TO RECOMMEND (NPS) - REGARDLESS OF BRAND",
+X = "
+0 (Will definitely not recommend) (0) <v0>;
+1 (1) <v1>;
+2 (2) <v2>;
+3 (3) <v3>;
+4 (4) <v4>;
+5 (5) <v5>;
+6 (6) <v6>;
+7 (7) <v7>;
+8 (8) <v8>;
+9 (9) <v9>;
+10 (Will definitely recommend) (10) <v10>;
+DETRACTORS NET <Q>;
+PASSIVES NET <Q>;
+PROMOTERS NET <Q>;
+NET PROMOTER SCORE (PROPORTION OF PROMOTERS MINUS DETRACTOR<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
 
 !
+DI $xQINV17_SUM = 0,
+DI $xQINV17_COUNT = 0,
 [*DO A = 1:56]
+[*DO B = 1:5]
+IF $I_[A]_QINV17/[B], DI $xQINV17_SUM = $xQINV17_SUM + [B],
+IF $I_[A]_QINV17/[B], DI $xQINV17_COUNT = $xQINV17_COUNT + 1,
+[*END B]
+
+[*BLOCK 1 ON A.EQ.5]
+DI $QINV17_GCASH = $xQINV17_SUM/$xQINV17_COUNT,
+[*1]
+
 DM $TQINV17_[A] = $I_[A]_QINV17/1-5,4+5,1+2,R,F,
 XT = "QINV17. OVERALL SATISFACTION - INVESTMENT - [QINV19ATT.A]",
 X = "
@@ -1334,10 +1548,44 @@ MISSING ANSWER<Z>;
 TOTAL COUNT<C>",
 [*END A]
 
+DI $QINV17_RGD = $xQINV17_SUM/$xQINV17_COUNT,
 
+
+DM $TQINV17_RGD = $QINV17_RGD/1-5,4+5,1+2,R,F,
+XT = "QINV17. OVERALL SATISFACTION - INVESTMENT - REGARDLESS OF BRAND",
+X = "
+Completely dissatisfied<V1>;
+Somewhat dissatisfied<V2>;
+Neither satisfied nor dissatisfied<V3>;
+Somewhat satisfied<V4>;
+Completely satisfied<V5>;
+`     TOP 2 box<Q>;
+`     BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+DM $TQINV17_GCASH = $QINV17_GCASH/1-5,4+5,1+2,R,F,
+XT = "QINV17. OVERALL SATISFACTION - INVESTMENT - TOTAL GCASH",
+X = "
+Completely dissatisfied<V1>;
+Somewhat dissatisfied<V2>;
+Neither satisfied nor dissatisfied<V3>;
+Somewhat satisfied<V4>;
+Completely satisfied<V5>;
+`     TOP 2 box<Q>;
+`     BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
 
 !
 [*DO A = 1:56]
+[*DO C = 1:3]
+ORDM $QINV16_O[C]RGD = $I_[A]_QINV16_O[C],
+
+[*BLOCK 1 ON A.EQ.5]
+ORDM $QINV16_O[C]GCASH = $QINV16_O[C]RGD,
+[*1]
+[*END C]
 DM $TQINV16_[A]R = 
 [*DO C = 1:3]
 $I_[A]_QINV16_O[C]/1,
@@ -1378,8 +1626,93 @@ TOTAL COUNT<C>",
 [*END A]
 
 
+DM $TQINV16_RGD = 
+[*DO C = 1:3]
+$QINV16_O[C]RGD/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91,
+10,
+11,
+99,
+[*END C]
+R,F,
+XT = "QINV16. SOURCE OF INFORMATION USED TO DETERMINE CHANNEL FOR INVESTMENTS - REGARDLESS OF INVESTMENT",
+X = "
+[*DO C = 1:3]
+RANK [C]\
+`    Family members/relatives;
+`    Friends;
+`    Employer;
+`    Website of the channel/ trading platform;
+`    Sales person/account manager/financial advisor at a bank branch;
+`    Social media (Facebook,YouTube, Tiktok, Instagram, etc);
+`    Mobile App of the channel/ platform;
+`    Online influencers or financial gurus;
+`    Financial advisors;
+`    Other;
+`    No Rank 2;
+`    No Rank 3;
+`    I did not gather any information before I chose the bank;
+[*END C]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
+DM $TQINV16_GCASH = 
+[*DO C = 1:3]
+$QINV16_O[C]GCASH/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+91,
+10,
+11,
+99,
+[*END C]
+R,F,
+XT = "QINV16. SOURCE OF INFORMATION USED TO DETERMINE CHANNEL FOR INVESTMENTS - TOTAL GCASH",
+X = "
+[*DO C = 1:3]
+RANK [C]\
+`    Family members/relatives;
+`    Friends;
+`    Employer;
+`    Website of the channel/ trading platform;
+`    Sales person/account manager/financial advisor at a bank branch;
+`    Social media (Facebook,YouTube, Tiktok, Instagram, etc);
+`    Mobile App of the channel/ platform;
+`    Online influencers or financial gurus;
+`    Financial advisors;
+`    Other;
+`    No Rank 2;
+`    No Rank 3;
+`    I did not gather any information before I chose the bank;
+[*END C]
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+
 !
 [*DO A = 1:56]
+[*DO C = 1:3]
+ORDM $QINV15_O[C]RGD = $I_[A]_QINV15_O[C],
+
+[*BLOCK 1 ON A.EQ.5]
+ORDM $QINV15_O[C]GCASH = $QINV15_O[C]RGD,
+[*1]
+[*END C]
 DM $TQINV15_[A]R = 
 [*DO C = 1:3]
 $I_[A]_QINV15_O[C]/1,
@@ -1437,6 +1770,65 @@ TOTAL COUNT<C>",
 [*END A]
 
 
+DM $TQINV15_RGD = 
+[*DO C = 1:3]
+$QINV15_O[C]RGD/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+11,
+12,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+91,
+13,
+14,
+[*END C]
+
+R,F,
+XT = "QINV15. REASONS FOR GETTING INVESTMENT WITH CURRENT INVESTMENT PLATFORM/ CHANNEL - REGARDLESS OF INVESTMENT",
+X = $TQINV15_1R,
+
+
+DM $TQINV15_GCASH = 
+[*DO C = 1:3]
+$QINV15_O[C]GCASH/1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+11,
+12,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+91,
+13,
+14,
+[*END C]
+
+R,F,
+XT = "QINV15. REASONS FOR GETTING INVESTMENT WITH CURRENT INVESTMENT PLATFORM/ CHANNEL - TOTAL GCASH",
+X = $TQINV15_1R,
+
 !
 [*DATA QINV18ATTR (;) =
 Product features;
@@ -1451,8 +1843,23 @@ Quick processing time;
 Helps in educating me about investing and trading;
 Has comprehensive features]
 
+
+[*DO C = 1:11]
+DI $xQINV18[C]_SUM = 0,
+DI $xQINV18[C]_COUNT = 0,
+[*END C]
+
 [*DO A = 1:56]
 [*DO C = 1:11]
+[*DO B = 1:5]
+IF $I_[A]_T_QINV18_[C]/[B], DI $xQINV18[C]_SUM = $xQINV18[C]_SUM + [B],
+IF $I_[A]_T_QINV18_[C]/[B], DI $xQINV18[C]_COUNT = $xQINV18[C]_COUNT + 1,
+[*END B]
+
+[*BLOCK 1 ON A.EQ.5]
+DI $QINV18[C]_GCASH = $xQINV18[C]_SUM/$xQINV18[C]_COUNT,
+[*1]
+
 DM $TQINV18_[A]R[c] = $I_[A]_T_QINV18_[C]/1-5,4+5,1+2,R,F,
 XT = "QINV18. ELEMENTS RATING - [QINV19ATT.A]",
 X = "
@@ -1470,3 +1877,34 @@ TOTAL COUNT<C>",
 [*END A]
 
 
+[*DO C = 1:11]
+DI $QINV18_RGD[C] = $xQINV18[C]_SUM/$xQINV18[C]_COUNT,
+
+DM $TQINV18_RGD[C] = $QINV18_RGD[C]/1-5,4+5,1+2,R,F,
+XT = "QINV18. ELEMENTS RATING - REGARDLESS OF BRAND",
+X = "
+[QINV18ATTR.c]\
+`     Completely dissatisfied<V1>;
+`     Somewhat dissatisfied<V2>;
+`     Neither satisfied nor dissatisfied<V3>;
+`     Somewhat satisfied<V4>;
+`     Completely satisfied<V5>;
+`          TOP 2 BOX<Q>;
+`          BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+
+DM $TQINV18[C]_GCASH = $QINV18[C]_GCASH/1-5,4+5,1+2,R,F,
+XT = "QINV18. ELEMENTS RATING - TOTAL GCASH",
+X = "
+[QINV18ATTR.c]\
+`     Completely dissatisfied<V1>;
+`     Somewhat dissatisfied<V2>;
+`     Neither satisfied nor dissatisfied<V3>;
+`     Somewhat satisfied<V4>;
+`     Completely satisfied<V5>;
+`          TOP 2 BOX<Q>;
+`          BOTTOM 2 BOX<Q>;
+MISSING ANSWER<Z>;
+TOTAL COUNT<C>",
+[*END C]
