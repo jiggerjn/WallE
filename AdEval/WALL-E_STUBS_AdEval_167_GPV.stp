@@ -1,0 +1,274 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 16.7 GBIRTHDAY PROMO VIDEO
+[*DATA STUBSContents(;) = 
+TQGPV1;
+QGI1;
+QPH1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQGPV2;
+QGI2;
+QPH2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQGPV3;
+A_QGI3;
+QPH3. BRAND LINK;
+Brandlink1]
+[*INSERT AdEval\_stub_soe]
+
+ 
+
+[*DATA STUBSContents(;) = 
+TQGPV4;
+A_QGI4;
+QPH4. SOURCES OF AD AWARENESS;
+SOA_CE]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQGPV5;
+QGI5;
+QPH5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQGPV6;
+QGI6;
+QPH6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQGPV7;
+QGI7;
+QPH7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QGI7]
+[*INSERT AdEval\_stub_oe]
+
+DM $Filter_QGPV7 = $QGI7/nb,
+V = "Among those who answered",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesGPVCode(;)=
+T_QGI8_8;
+T_QGI8_9;
+T_QGI8_10
+
+]
+
+
+[*DO A=1:[KeyMessagesGPV.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGPV8r[A];
+    [KeyMessagesGPVCode.A];
+    QPH8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesGPV.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQGPV8_T2B = 
+[*DO A=1:[KeyMessagesGPV.#]]
+$[KeyMessagesGPVCode.A]/4..5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesGPV.#]]
+[KeyMessagesGPV.A][*SLE];
+[*END A]",
+
+DM $TQGPV8_TB = 
+[*DO A=1:[KeyMessagesGPV.#]]
+$[KeyMessagesGPVCode.A]/5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesGPV.#]]
+[KeyMessagesGPV.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DO A=1:[StatementsGPV.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGPV9r[A];
+    T_QGI9_[A];
+    QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsGPV.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQGPV9_T2B = 
+[*DO A=1:[StatementsGPV.#]]
+$T_QGI9_[A]/4..5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsGPV.#]]
+[StatementsGPV.A][*SLE];
+[*END A]",
+
+DM $TQGPV9_TB = 
+[*DO A=1:[StatementsGPV.#]]
+$T_QGI9_[A]/5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsGPV.#]]
+[StatementsGPV.A][*SLE];
+[*END A]",
+
+
+DM $TQGPV10 =
+$A_QGI10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QPH10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA Statements11GPVCode(;)=
+T_QGI11_1;
+T_QGI11_2;
+T_QGI11_3;
+T_QGI11_4;
+T_QGI11_15;
+T_QGI11_16;
+T_QGI11_17;
+T_QGI11_18
+]
+
+
+[*DO A=1:[Statements11GPV.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGPV11r[A];
+    [Statements11GPVCode.A];
+    QPH11. ACTION AFTER AD;
+    [Statements11GPV.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3_NA]
+[*END A]
+
+DM $TQGPV11_T2B = 
+[*DO A=1:[Statements11GPV.#]]
+$[Statements11GPVCode.A]/1..2,
+[*END A]
+VT = "QPH11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11GPV.#]]
+[Statements11GPV.A][*SLE];
+[*END A]",
+
+DM $TQGPV11_TB = 
+[*DO A=1:[Statements11GPV.#]]
+$[Statements11GPVCode.A]/1,
+[*END A]
+VT = "QPH11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11GPV.#]]
+[Statements11GPV.A][*SLE];
+[*END A]",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DO A=1:[Statements12GPV.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGPV12r[A];
+    T_QGI12_[A];
+    QPH12. AD EVALUATION METRICS;
+    [Statements12GPV.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQGPV12_T2B = 
+[*DO A=1:[Statements12GPV.#]]
+$T_QGI12_[A]/1..2,
+[*END A]
+VT = "QPH12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12GPV.#]]
+[Statements12GPV.A][*SLE];
+[*END A]",
+
+DM $TQGPV12_TB = 
+[*DO A=1:[Statements12GPV.#]]
+$T_QGI12_[A]/1,
+[*END A]
+VT = "QPH12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12GPV.#]]
+[Statements12GPV.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

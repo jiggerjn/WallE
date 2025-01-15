@@ -1,0 +1,67 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+IDF = _WALLE_IDF_ADEval_trendedQ1Q2Q3,
+Y,
+TIDY,
+NORPT,
+NOTAB,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+ 
+[*DATA HEADERWAVE3 = HAT,HBT,HCT]
+ 
+[*DATA HEADERWAVE3 = HTargetMarket1Q187T]
+
+F=NBCS,
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+
+
+
+[*DO X = 1:1]
+IF $F_Aware_Trended/4+5, T #[+T] = $TSOA_Trended * $[HEADERWAVE3.X],
+VT = "SOURCES OF AD AWARENESS - REGARDLESS",
+BT = "Among aware of ad",
+[*END X]
+
+
+FINISH TABLES,

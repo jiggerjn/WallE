@@ -1,0 +1,187 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+IDF = ..\_WALLE_IDF_ADEval_Nov,
+Y,
+TIDY,
+NORPT,
+NOTAB,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+ 
+[*DATA HEADERWAVE3 = HA,HB,HC]
+
+F=NBCS,
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+[*INSERT Datasets]
+
+
+
+
+
+DM $FILTER_GPV =  ($Resp_AD_GPV/NB).($Q42024/NB),
+    V = "Ad 16.7",
+
+DM $FILTER_GMK =  ($Resp_AD_GMK/NB).($Q42024/NB),
+    V = "Ad 16.8",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+!Header Checking Weighted
+[*DO Z = 1:3]
+!T #PROFILE[&Z] = $TPROFILE * $[HEADERWAVE3.Z],
+!BT = "ALL RESPONDENTS",
+[*END Z]
+
+DM $Filter_Ad_Aware = 
+($TQGPV1/1..5),
+($TQGPV1/4..5),
+($TQGPV1/1..2),
+
+
+[*DATA BTAdAware(;)=
+ALL RESPONDENTS;
+AMONG AWARE OF AD;
+AMONG NOT AWARE OF AD
+]
+
+
+!FILTER $FILTER_GPV/1,
+!global bt# = "ALL RESPONDENTS", 
+ 
+
+
+
+
+DM $BRAND_LAD_GCASH = 
+[*DO A = 1:1]
+$TQ16d/[A],
+($TQ16a/N[A].$TQ16b/N[A]).($TQ16c/[A]),
+($TQ16a/N[A]).($TQ16b/[A]),
+$TQ16a/[A],
+$TQ17l/[A],
+$TQ17d/[A],
+$TQ17f/[A],
+$TQ17e/[A],
+$TQ17a/[A],
+$TQ17c/[A],
+$TQ17k/[A],
+$TQ17p/[A],
+$TQ17b/[A],
+$TQ17o/[A],
+$TQ16e/[A],
+$TQ16g/[A],
+[*enda]
+VT = "Q16-Q17. BRAND FUNNEL",
+V = "
+[*DOA=1:1]
+!GCASH\
+Q16d. Total Awareness;
+Q16c. Aided;
+Q16b. Other spontaneous;
+Q16a. TOM;
+Q17l. Ever downloaded;
+Q17d. With Existing Acc;
+Q17f. Ever Tried;
+Q17e. P6M;
+Q17a. P2M;
+Q17c. P4W;
+Q17k. P1W;
+Q17p. P1D;
+Q17b. BUMO;
+Q17o. P1M;
+Q16e. Favorite;
+Q16g. Recommended[*sle];
+[*ENDA]",
+
+
+
+
+
+
+
+
+!=========
+[*DATA Q16NOMI (;) =
+BDO Mobile/Online;
+BPI Mobile/Online;
+CLIQQ;
+Coins.ph;
+GCash;
+GrabPay;
+PayMaya/Maya;
+PayPal;
+ShopeePay]
+
+IF $Q42024/NB, THEN,
+[*DATA HEADERWAVE3 = H_BrandAssocXAdeval9]
+FILTER $FILTER_GPV/1,
+
+ 
+!======
+[*DO Z = 1:1]
+[*DO A = 5:5]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+VT = "Q64. BRAND ASSOCIATION - KEY BRANDS - GCash - GBIRTHDAY PROMO VIDEO",
+BT = "GBIRTHDAY PROMO VIDEO - AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+
+
+
+[*DATA HEADERWAVE3 = H_BrandAssocXAdeval10]
+FILTER $FILTER_GMK/1,
+ 
+
+!======
+[*DO Z = 1:1]
+[*DO A = 5:5]
+if $F64/[A], T #[+T] = $TQ64R[A] * $[HEADERWAVE3.Z],
+VT = "Q64. BRAND ASSOCIATION - KEY BRANDS - GCash - GBirthday Main KV",
+BT = "GBirthday Main KV - AMONG BRAND AWARE - [Q16NOMI.A]",
+[*END A]
+[*END Z]
+ 
+
+END IF,
+
+FINISH TABLES,

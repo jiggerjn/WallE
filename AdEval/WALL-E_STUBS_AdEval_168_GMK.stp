@@ -1,0 +1,273 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 16.8 GBirthday Main KV
+[*DATA STUBSContents(;) = 
+TQGMK1;
+QMK1;
+QSH1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQGMK2;
+QMK2;
+QSH2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQGMK3;
+A_QMK3;
+QSH3. BRAND LINK;
+Brandlink1]
+[*INSERT AdEval\_stub_soe]
+
+ 
+
+[*DATA STUBSContents(;) = 
+TQGMK4;
+A_QMK4;
+QSH4. SOURCES OF AD AWARENESS;
+SOA_CE]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQGMK5;
+QMK5;
+QSH5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQGMK6;
+QMK6;
+QSH6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQGMK7;
+QMK7;
+QSH7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QMK7]
+[*INSERT AdEval\_stub_oe]
+
+DM $Filter_QGMK7 = $QMK7/nb,
+V = "Among those who answered",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA KeyMessagesGMKCode(;)=
+T_QMK8_1;
+T_QMK8_2;
+T_QMK8_3
+]
+
+
+[*DO A=1:[KeyMessagesGMK.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGMK8r[A];
+    [KeyMessagesGMKCode.A];
+    QSH8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesGMK.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQGMK8_T2B = 
+[*DO A=1:[KeyMessagesGMK.#]]
+$[KeyMessagesGMKCode.A]/4..5,
+[*END A]
+VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesGMK.#]]
+[KeyMessagesGMK.A][*SLE];
+[*END A]",
+
+DM $TQGMK8_TB = 
+[*DO A=1:[KeyMessagesGMK.#]]
+$[KeyMessagesGMKCode.A]/5,
+[*END A]
+VT = "QSH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesGMK.#]]
+[KeyMessagesGMK.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DO A=1:[StatementsGMK.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGMK9r[A];
+    T_QMK9_[A];
+    QSH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsGMK.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQGMK9_T2B = 
+[*DO A=1:[StatementsGMK.#]]
+$T_QMK9_[A]/4..5,
+[*END A]
+VT = "QSH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsGMK.#]]
+[StatementsGMK.A][*SLE];
+[*END A]",
+
+DM $TQGMK9_TB = 
+[*DO A=1:[StatementsGMK.#]]
+$T_QMK9_[A]/5,
+[*END A]
+VT = "QSH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsGMK.#]]
+[StatementsGMK.A][*SLE];
+[*END A]",
+
+
+DM $TQGMK10 =
+$A_QMK10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QSH10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+[*DATA Statements11GMKCode(;)=
+T_QMK11_1;
+T_QMK11_2;
+T_QMK11_3;
+T_QMK11_4;
+T_QMK11_5;
+T_QMK11_6;
+T_QMK11_7;
+T_QMK11_8
+]
+
+
+[*DO A=1:[Statements11GMK.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGMK11r[A];
+    [Statements11GMKCode.A];
+    QSH11. ACTION AFTER AD;
+    [Statements11GMK.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3_NA]
+[*END A]
+
+DM $TQGMK11_T2B = 
+[*DO A=1:[Statements11GMK.#]]
+$[Statements11GMKCode.A]/1..2,
+[*END A]
+VT = "QSH11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11GMK.#]]
+[Statements11GMK.A][*SLE];
+[*END A]",
+
+DM $TQGMK11_TB = 
+[*DO A=1:[Statements11GMK.#]]
+$[Statements11GMKCode.A]/1,
+[*END A]
+VT = "QSH11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11GMK.#]]
+[Statements11GMK.A][*SLE];
+[*END A]",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DO A=1:[Statements12GMK.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQGMK12r[A];
+    T_QMK12_[A];
+    QSH12. AD EVALUATION METRICS;
+    [Statements12GMK.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQGMK12_T2B = 
+[*DO A=1:[Statements12GMK.#]]
+$T_QMK12_[A]/1..2,
+[*END A]
+VT = "QSH12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12GMK.#]]
+[Statements12GMK.A][*SLE];
+[*END A]",
+
+DM $TQGMK12_TB = 
+[*DO A=1:[Statements12GMK.#]]
+$T_QMK12_[A]/1,
+[*END A]
+VT = "QSH12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12GMK.#]]
+[Statements12GMK.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

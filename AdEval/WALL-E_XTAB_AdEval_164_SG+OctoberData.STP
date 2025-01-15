@@ -1,0 +1,232 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+IDF = ..\_WALLE_IDF_ADEval_Q3+October,
+Y,
+TIDY,
+NORPT,
+NOTAB,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+ 
+[*DATA HEADERWAVE3 = HA,HB,HC]
+
+F=NBCS,
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+[*INSERT Datasets]
+
+!($T_Q1_1/21..65),
+
+
+
+DM $FILTER_SG =  ((($Resp_AD_SG/NB).($Q32024/NB))+($OCT2024/NB)).($T_Q1_1/21..65),
+!DM $FILTER_SG =  (($Resp_AD_SG/NB).($Q32024/NB))+($OCT2024/NB),
+!DM $FILTER_SG =  (($Resp_AD_SG/NB).($Q32024/NB)),
+!DM $FILTER_SG =   ($OCT2024/NB),
+    V = "Ad 16.4 SG",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+
+ 
+
+FILTER $FILTER_SG/1,
+global bt# = "ALL RESPONDENTS", 
+ 
+
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQSG1 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG2 * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG3 * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+!IF ($TQSG1/4..5), T #[+T] = $TQSG3a * $[HEADERWAVE3.Z],
+!BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG3b * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG4 * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG5 * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG6 * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+!IF ($TQSG1/4..5), T #[+T] = $TQSG7 * $[HEADERWAVE3.Z],
+!BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+
+[*DO Z = 1:3]
+[*SET s = 0]
+[*DO A = 1:1]
+IF ($TQSG1/4..5), T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END A]
+[*DO A = 2:[KeyMessagesSG.#]]
+IF ($TQSG1/4..5), +T #[+T] = $TQSG8r[A] * $[HEADERWAVE3.Z],
+[*END A]
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG8_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG8_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+!======
+
+[*DO Z = 1:3]
+[*SET s = 0]
+[*DO A = 1:1]
+IF ($TQSG1/4..5), T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END A]
+[*DO A = 2:[StatementsSG.#]]
+IF ($TQSG1/4..5), +T #[+T] = $TQSG9r[A] * $[HEADERWAVE3.Z],
+[*END A]
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG9_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG9_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+
+!======
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG10 * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+
+!======
+
+[*DO Z = 1:3]
+[*SET s = 0]
+[*DO A = 1:1]
+IF ($TQSG1/4..5), T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END A]
+[*DO A = 2:[Statements11SG.#]]
+IF ($TQSG1/4..5), +T #[+T] = $TQSG11r[A] * $[HEADERWAVE3.Z],
+[*END A]
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG11_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG11_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+
+!======
+
+[*DO Z = 1:3]
+[*SET s = 0]
+[*DO A = 1:1]
+IF ($TQSG1/4..5), T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END A]
+[*DO A = 2:[Statements12SG.#]]
+IF ($TQSG1/4..5), +T #[+T] = $TQSG12r[A] * $[HEADERWAVE3.Z],
+[*END A]
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG12_TB * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+[*DO Z = 1:3]
+IF ($TQSG1/4..5), T #[+T] = $TQSG12_T2B * $[HEADERWAVE3.Z],
+BT = "AMONG AWARE OF AD",
+[*END Z]
+
+
+
+FINISH TABLES,
