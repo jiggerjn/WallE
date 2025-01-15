@@ -1,0 +1,271 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 15.9 LENDING GLOAN FILM X GRADUATION
+[*DATA STUBSContents(;) = 
+TQLGW1;
+QLM1a;
+QPH1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQLGW2;
+QLM2;
+QPH2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQLGW3;
+A_QLM3;
+QPH3. BRAND LINK;
+QLM3]
+[*INSERT AdEval\_stub_soe]
+
+
+
+[*DATA STUBSContents(;) = 
+TQLGW4;
+A_QLM4;
+QPH4. SOURCES OF AD AWARENESS;
+QLM4]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQLGW5;
+QLM5a;
+QPH5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQLGW6;
+QLM6a;
+QPH6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQLGW7;
+QLM5;
+QPH7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QLM5]
+[*INSERT AdEval\_stub_oe]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA KeyMessagesLGWCode(;)=
+T_QLM8_8;
+T_QLM8_9;
+T_QLM8_7]
+
+
+
+[*DO A=1:[KeyMessagesLGW.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLGW8r[A];
+    [KeyMessagesLGWCode.A];
+    QPH8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesLGW.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQLGW8_T2B = 
+[*DO A=1:[KeyMessagesLGW.#]]
+$[KeyMessagesLGWCode.A]/4..5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesLGW.#]]
+[KeyMessagesLGW.A][*SLE];
+[*END A]",
+
+DM $TQLGW8_TB = 
+[*DO A=1:[KeyMessagesLGW.#]]
+$[KeyMessagesLGWCode.A]/5,
+[*END A]
+VT = "QPH8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesLGW.#]]
+[KeyMessagesLGW.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+[*DO A=1:[StatementsLGW.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLGW9r[A];
+    T_QLM9_[A];
+    QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsLGW.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQLGW9_T2B = 
+[*DO A=1:[StatementsLGW.#]]
+$T_QLM9_[A]/4..5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsLGW.#]]
+[StatementsLGW.A][*SLE];
+[*END A]",
+
+DM $TQLGW9_TB = 
+[*DO A=1:[StatementsLGW.#]]
+$T_QLM9_[A]/5,
+[*END A]
+VT = "QPH9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsLGW.#]]
+[StatementsLGW.A][*SLE];
+[*END A]",
+
+
+DM $TQLGW10 =
+$A_QLM10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QPH10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA Statements11LGWCode(;)=
+T_QLM6_1;
+T_QLM6_2;
+T_QLM6_3;
+T_QLM6_4;
+T_QLM6_10;
+T_QLM6_11;
+T_QLM6_12;
+T_QLM6_13;
+T_QLM6_14]
+
+
+[*DO A=1:[Statements11LGW.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLGW11r[A];
+    [Statements11LGWCode.A];
+    QPH11. ACTION AFTER AD;
+    [Statements11LGW.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQLGW11_T2B = 
+[*DO A=1:[Statements11LGW.#]]
+$[Statements11LGWCode.A]/1..2,
+[*END A]
+VT = "QPH11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11LGW.#]]
+[Statements11LGW.A][*SLE];
+[*END A]",
+
+DM $TQLGW11_TB = 
+[*DO A=1:[Statements11LGW.#]]
+$[Statements11LGWCode.A]/1,
+[*END A]
+VT = "QPH11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11LGW.#]]
+[Statements11LGW.A][*SLE];
+[*END A]",
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+[*DO A=1:[Statements12LGW.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLGW12r[A];
+    T_QLM7_[A];
+    QPH12. AD EVALUATION METRICS;
+    [Statements12LGW.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQLGW12_T2B = 
+[*DO A=1:[Statements12LGW.#]]
+$T_QLM7_[A]/1..2,
+[*END A]
+VT = "QPH12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12LGW.#]]
+[Statements12LGW.A][*SLE];
+[*END A]",
+
+DM $TQLGW12_TB = 
+[*DO A=1:[Statements12LGW.#]]
+$T_QLM7_[A]/1,
+[*END A]
+VT = "QPH12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12LGW.#]]
+[Statements12LGW.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

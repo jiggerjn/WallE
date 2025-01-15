@@ -1,0 +1,250 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+IDF = ..\_WALLE_IDF_ADEval,
+Y,
+TIDY,
+NORPT,
+NOTAB,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+
+[*DATA HEADERWAVE3 = HA,HB,HC]
+
+F=NBCS,
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+[*INSERT Datasets]
+
+
+DM $FILTER_ADZ_2 =  ($Resp_AD_ADZ_SEP24_Before/NB).($Q32024/NB),
+    V = "Ad 161 Gcash Storoies - ADZ - Until Septermber 23",
+
+DM $FILTER_ADZ_3 =  ($Resp_AD_ADZ_SEP24_Onward/NB).($Q32024/NB),
+    V = "Ad 161 Gcash Storoies - ADZ - September 24 Onwards",
+
+DM $FILTER_ADZ_1 =  ($FILTER_ADZ_2/NB)+($FILTER_ADZ_3/NB),
+    V = "Ad 161 Gcash Storoies - ADZ",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+
+!======
+
+DM $Filter_Ad_Aware = 
+($TQADZ1/1..5),
+($TQADZ1/4..5),
+($TQADZ1/1..2),
+
+
+[*DATA BTAdAware(;)=
+Among Total Gcash Stories: Adz - 30s Video Ad;
+Among Aware of Gcash Stories: Adz - 30s Video Ad;
+Among Not Aware of Gcash Stories: Adz - 30s Video Ad
+]
+
+
+
+
+FILTER $FILTER_ADZ_3/1,
+global bt# = "Among Total Gcash Stories: Adz - 30s Video Ad", 
+ 
+
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQADZ1 * $[HEADERWAVE3.Z],
+[*END Z]
+
+global bt# = "Among Aware of Gcash Stories: Adz - 30s Video Ad", 
+
+!======
+
+[*DO Z = 1:3]
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ2 * $[HEADERWAVE3.Z],
+[*END Z]
+!======
+[*DO Z = 1:3]
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ2a * $[HEADERWAVE3.Z],
+[*END Z]
+
+!======
+[*DO Z = 1:3]
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ3 * $[HEADERWAVE3.Z],
+[*END Z]
+
+
+!======
+[*DO Z = 1:3]
+IF ($TQADZ1/4..5), T #[+T] = $TQADZ4 * $[HEADERWAVE3.Z],
+[*END Z]
+
+
+global bt# = "Among Total Gcash Stories: Adz - 30s Video Ad", 
+ 
+
+ 
+!======
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ5 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
+
+!======
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ6 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
+
+!======
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+        IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ7 * $[HEADERWAVE3.Z],
+        BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
+
+
+!======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ8r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[KeyMessagesADZ.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQADZ8r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ8_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ8_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
+
+
+!======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ9r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[StatementsADZ.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQADZ9r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]),T #[+T] = $TQADZ9_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ9_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
+
+!======
+[*DO F=1:[BTAdAware.#]]
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ10 * $[HEADERWAVE3.Z],
+    BT = "[BTAdAware.F]",
+    [*END Z]
+[*END F]
+
+
+!======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[Statements11ADZ.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQADZ11r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ11_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ11_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
+
+!======
+[*DO F=1:[BTAdAware.#]]
+global bt# = "[BTAdAware.F]",
+    [*DO Z = 1:3]
+    [*SET s = 0]
+    [*DO A = 1:1]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ12r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*DO A = 2:[Statements12ADZ.#]]
+    IF ($Filter_Ad_Aware/[F]), +T #[+T] = $TQADZ12r[A] * $[HEADERWAVE3.Z],
+    [*END A]
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ12_TB * $[HEADERWAVE3.Z],
+    [*END Z]
+
+    [*DO Z = 1:3]
+    IF ($Filter_Ad_Aware/[F]), T #[+T] = $TQADZ12_T2B * $[HEADERWAVE3.Z],
+    [*END Z]
+[*END F]
+
+
+
+
+FINISH TABLES,

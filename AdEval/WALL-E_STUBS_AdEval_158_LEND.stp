@@ -1,0 +1,277 @@
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!SECTION 15.6 BUY LOAD GAMING
+[*DATA STUBSContents(;) = 
+TQLEND1;
+QST1;
+QLEND1. VISIBILITY OF ADS]
+[*INSERT AdEval\_stub_rating_visibility]
+
+[*DATA STUBSContents(;) = 
+TQLEND2;
+QST2;
+QLEND2. AD VIEWED FREQUENCY]
+[*INSERT AdEval\_stub_frequency]
+
+
+[*DATA STUBSContents(;) = 
+TQLEND3;
+A_QST3;
+QLEND3. BRAND LINK;
+Brandlink2]
+[*INSERT AdEval\_stub_soe]
+
+ 
+
+[*DATA STUBSContents(;) = 
+TQLEND4;
+A_QST4;
+QLEND4. SOURCES OF AD AWARENESS;
+SOA2]
+[*INSERT AdEval\_stub_soe]
+
+[*DATA STUBSContents(;) = 
+TQLEND5;
+QST5;
+QLEND5. ABSOLUTE LIKEABILITY]
+[*INSERT AdEval\_stub_rating_a_likeability]
+
+[*DATA STUBSContents(;) = 
+TQLEND6;
+QST6;
+QLEND6. RELATIVE LIKEABILITY ]
+[*INSERT AdEval\_stub_rating_r_likeability]
+
+[*DATA STUBSContents(;) = 
+TQLEND7;
+QST7;
+QLEND7. DETAILED RECALL OF AD - MESSAGE DELIVERY;
+QST7]
+[*INSERT AdEval\_stub_oe]
+
+DM $Filter_QLEND7 = $QST7/nb,
+V = "Among those who answered",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+[*DATA KeyMessagesLENDCode(;)=
+T_QST8_3;
+T_QST8_4;
+T_QST8_5]
+
+
+
+[*DO A=1:[KeyMessagesLEND.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLEND8r[A];
+    [KeyMessagesLENDCode.A];
+    QLEND8. PROMPTED COMMUNICATION - KEY MESSAGES;
+    [KeyMessagesLEND.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_key_message]
+[*END A]
+
+
+ 
+DM $TQLEND8_T2B = 
+[*DO A=1:[KeyMessagesLEND.#]]
+$[KeyMessagesLENDCode.A]/4..5,
+[*END A]
+VT = "QLEND8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP 2 BOX",
+V = "
+[*DO A=1:[KeyMessagesLEND.#]]
+[KeyMessagesLEND.A][*SLE];
+[*END A]",
+
+DM $TQLEND8_TB = 
+[*DO A=1:[KeyMessagesLEND.#]]
+$[KeyMessagesLENDCode.A]/5,
+[*END A]
+VT = "QLEND8. PROMPTED COMMUNICATION - KEY MESSAGES - TOP BOX",
+V = "
+[*DO A=1:[KeyMessagesLEND.#]]
+[KeyMessagesLEND.A][*SLE];
+[*END A]",
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+[*DO A=1:[StatementsLEND.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLEND9r[A];
+    T_QST9_[A];
+    QLEND9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT;
+    [StatementsLEND.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree]
+[*END A]
+
+
+
+
+DM $TQLEND9_T2B = 
+[*DO A=1:[StatementsLEND.#]]
+$T_QST9_[A]/4..5,
+[*END A]
+VT = "QLEND9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP 2 BOX",
+V = "
+[*DO A=1:[StatementsLEND.#]]
+[StatementsLEND.A][*SLE];
+[*END A]",
+
+DM $TQLEND9_TB = 
+[*DO A=1:[StatementsLEND.#]]
+$T_QST9_[A]/5,
+[*END A]
+VT = "QLEND9. COMPREHENSION/ RELEVANCE/ UNIQUENESS/ PERSUASION/ USE MORE/ WEAR OUT - TOP BOX",
+V = "
+[*DO A=1:[StatementsLEND.#]]
+[StatementsLEND.A][*SLE];
+[*END A]",
+
+
+DM $TQLEND10 =
+$A_QST10/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+R,F,
+VT = "QLEND10. PERSUASION SCALE",
+V = "
+It definitely made me want to buy that brand;
+It sounded interesting and I wanted to tell others about it;
+I wanted to try and find out more about it;
+That is just what I had been looking for;
+That ad reminded me about the brand;
+I've never quite thought about the brand like that before, that's something new;
+That's just how I've always seen the brand;
+None of the above;
+Missing answers<Z>;
+Total count<C>",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*DATA Statements11LENDCode(;)=
+T_QST11_1;
+T_QST11_2;
+T_QST11_3;
+T_QST11_4;
+T_QST11_7;
+T_QST11_8;
+T_QST11_9;
+T_QST11_10;
+T_QST11_11;
+T_QST11_12]
+
+
+[*DO A=1:[Statements11LEND.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLEND11r[A];
+    [Statements11LENDCode.A];
+    QLEND11. ACTION AFTER AD;
+    [Statements11LEND.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3_NA]
+[*END A]
+
+DM $TQLEND11_T2B = 
+[*DO A=1:[Statements11LEND.#]]
+$[Statements11LENDCode.A]/1..2,
+[*END A]
+VT = "QLEND11. ACTION AFTER AD - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements11LEND.#]]
+[Statements11LEND.A][*SLE];
+[*END A]",
+
+DM $TQLEND11_TB = 
+[*DO A=1:[Statements11LEND.#]]
+$[Statements11LENDCode.A]/1,
+[*END A]
+VT = "QLEND11. ACTION AFTER AD - TOP BOX",
+V = "
+[*DO A=1:[Statements11LEND.#]]
+[Statements11LEND.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+[*DO A=1:[Statements12LEND.#]]
+    [*DATA STUBSContents(M=P,T=;) = 
+    TQLEND12r[A];
+    T_QST12_[A];
+    QLEND12. AD EVALUATION METRICS;
+    [Statements12LEND.A]]
+    ![STUBSContents.1]
+    ![STUBSContents.2]
+    ![STUBSContents.3]
+    ![STUBSContents.4]
+    [*INSERT AdEval\_stub_rating_agree3]
+[*END A]
+
+DM $TQLEND12_T2B = 
+[*DO A=1:[Statements12LEND.#]]
+$T_QST12_[A]/1..2,
+[*END A]
+VT = "QLEND12. AD EVALUATION METRICS - TOP 2 BOX",
+V = "
+[*DO A=1:[Statements12LEND.#]]
+[Statements12LEND.A][*SLE];
+[*END A]",
+
+DM $TQLEND12_TB = 
+[*DO A=1:[Statements12LEND.#]]
+$T_QST12_[A]/1,
+[*END A]
+VT = "QLEND12. AD EVALUATION METRICS - TOP BOX",
+V = "
+[*DO A=1:[Statements12LEND.#]]
+[Statements12LEND.A][*SLE];
+[*END A]",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

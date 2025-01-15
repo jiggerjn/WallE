@@ -1,0 +1,460 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!Wall-E-JUNE-2024-Approved-Final-Codebook-_PART3-6-28
+!QOV1 OE New Feb'24
+
+
+
+DM $TQOV1 = $QOV1/
+[*dbloop dlStubs=dfEpsStub;OV1]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.Code],
+    [*99]
+[*dbend dlStubs]
+R,F,
+VT = "QOV1. GCASH ADS RECALLED",
+V = "
+[*dbloop dlStubs=dfEpsStub;OV1]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.rank][dlStubs.Stub];
+    [*99]
+[*dbend dlStubs]
+Missing Answer<z>;
+Total Count<C>",
+
+ 
+DM $TQOV1a =
+$QOV1a/
+1,
+2,
+R,F,
+VT = "QOV1a. WHETHER SAW ANY ADS FOR GCASH RECENTLY",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+DM $TQOV2 =
+$QOV2/
+1,
+2,
+R,F,
+VT = "QOV2. WHETHER HAVE SEEN AD ENDORSED BY HEART",
+V = "
+Yes;
+None;
+Missing answers<Z>;
+Total count<C>",
+
+!Wall-E-JUNE-2024-Approved-Final-Codebook-_PART3-6-28
+!QOV3 OE New Feb'24
+DM $TQOV3 =
+$QOV3/
+1020,
+1021,
+1022+1025+1040+1041,
+1023,
+1024,
+1029,
+1031,
+1032,
+1033,
+1034,
+1035,
+1036,
+1037,
+1042,
+1043,
+1044,
+1045,
+1046,
+1047,
+1048,
+1049,
+1050,
+1051,
+
+1038+1039,
+1038,
+1039,
+
+9997,
+9998,
+9999,
+
+
+R,F,
+VT = "QOV3. WHETHER HAVE SEEN AD ENDORSED BY HEART - FOR WHICH BRAND",
+V = "
+<G1B>Cream silk conditioner;
+About shampoo;
+About GCash;
+Jollibee;
+Gsave;
+PayMaya;
+Shopee;
+Chowking;
+Insurance;
+Glite;
+Globe;
+Cellphone;
+GInsure;
+Easy to transact;
+Nivea;
+Clothes;
+Luxury bag;
+Coffee;
+Avon;
+Poteen-C vitamins;
+Soap;
+Travel;
+<G1E>Drama;
+
+<G1E>PAYMENT (NET)<Q>;
+<G2B><G1P>`   Can pay anytime;
+<G2E><G1P>`   Scan to pay;
+
+Don't remember / Don`'t recall;
+Don't know;
+None;
+
+
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+!Wall-E-JUNE-2024-Approved-Final-Codebook-_PART3-6-28
+!QOV4 OE New Feb'24
+
+
+DM $TQOV4 =
+$QOV4/
+1001+1027,
+1001,
+1027,
+
+1006+1016+1012+1032+1029+1035,
+1006,
+1016,
+1012,
+1032,
+1029,
+1035,
+
+1008,
+1008,
+
+1002+1007+1018+1009+1011+1019+1021+1025+1022+1030+1031+1034,
+1002,
+1007+1018,
+1009,
+1011,
+1019,
+1021,
+1025,
+1022,
+1030,
+1031,
+1034,
+
+1003+1004+1005+1010+1013+1014+1015+1020+1023+1028,
+1003,
+1004,
+1005,
+1010,
+1013,
+1014,
+1015,
+1020,
+1023,
+1028,
+
+1017+1024+1038+1033+1036+1039+1040+1041+1042,
+1017,
+1024,
+1038,
+1033,
+1036,
+1039,
+1040,
+1041,
+1042,
+
+1026+1037,
+1026,
+1037,
+
+
+9999,
+9998,
+9997,
+
+R,F,
+VT = "QOV4. PRODUCT/S ENDORSED - SPONTANEOUSLY",
+V = "
+<G1B>GCASH (NET)<Q>;
+<G2B><G1P>`   GCash;
+<G2E><G1P>`   Promo of GCash endorser;
+
+GCASH PRODUCTS/SERVICES (NET)<Q>;
+<G2B><G1P>`   GSave;
+<G1P>`   Ginsure;
+<G1P>`   GCash stock;
+<G1P>`   GCash Padala;
+<G1P>`   Glife;
+<G2E><G1P>`   Cashcard use for payment;
+
+E-WALLET(NET)<Q>;
+<G1P>`   E-wallet;
+
+TRANSACTIONS (NET)<Q>;
+<G2B><G1P>`   Send money;
+<G1P>`   Use for payment;
+<G1P>`   Bill payment;
+<G1P>`   Scan to pay;
+<G1P>`   Gloan;
+<G1P>`   Easy Pay;
+<G1P>`   For loading;
+<G1P>`   Payment for any merchant;
+<G1P>`   Savings;
+<G1P>`   Travel insurance;
+<G2E><G1P>`   Received money;
+
+<G1E>BEAUTY PRODUCTS/ ACCESSORIES(NET)<Q>;
+<G2B><G1P>`   Accessories;
+<G1P>`   Shampoo;
+<G1P>`   Ponds;
+<G1P>`   Creamsilk;
+<G1P>`   Belo;
+<G1P>`   Bag;
+<G1P>`   Cellphone;
+<G1P>`   Clothing;
+<G1P>`   Luxe Organic;
+<G2E><G1P>`   About make up;
+
+OTHERS PRODUCTS (NET)<Q>;
+<G2B><G1P>`   Sim card;
+<G1P>`   Starbucks;
+<G1P>`   Give joy to the viewers;
+<G1P>`   Eye glass;
+<G1P>`   Nescafe;
+<G1P>`   Shopee;
+<G1P>`   Remittance;
+<G1P>`   Travel;
+<G2E><G1P>`   Drama;
+
+VAGUE (NET)<Q>;
+<G2B><G1P>`   All;
+<G2E><G1P>`   Modeling;
+
+
+NONE;
+Don't know;
+Cant Recall;
+
+
+Missing answers<Z>;
+Total count<C>",
+
+!=======================MultiSelect
+!OV6
+!QOV6QSH4QST4OGI4QSC4SOENewFM
+!Wall-E-JUNE-2024-Approved-Final-Codebook-_PART2-6-28
+!
+!
+
+DM $TQOV6 =
+$A_QOV6/
+2001+2002+2006,
+2001,
+2002,
+2006,
+2,
+4,
+5,
+6,
+7,
+8,
+10+1026,
+11+2003,
+12,
+13,
+14,
+15,
+16+2004+1025,
+17+1031,
+18+1030,
+19,
+20+1020+2005,
+1021+1022+1024+1027+1029+1032,
+1021,
+1022,
+1024,
+1027,
+1029,
+1032,
+1023+1028,
+1023+1028,
+9997,
+9999,
+
+R,F,
+VT = "QOV6. SOURCES OF AWARENESS OF HEART'S AD",
+V = "
+ADS WHILE BROWSING INTERNET/WEBSITE ADS (EXCLUDING SOCIAL MEDIA) (NET)<Q>;
+`   Gcash App;
+`   On app;
+`   Google ads;
+Company Website (Official Website);
+Events;
+Family/relatives;
+Friends/colleagues;
+Online articles (blogs, reviews, news);
+Online videos (including ads);
+Social media (including ads) (NET) (HIDE);
+Facebook (including ads) (HIDE);
+Facebook Post;
+Facebook Fanpage;
+Twitter (including ads);
+Instagram (including ads);
+YouTube (including ads);
+TikTok (including ads);
+Out-of-Home (OOH) (e.g., billboards and posters);
+Influencers;
+TV;
+OTHERS (NET)<Q>;
+`   Gcash App;
+`   On app;
+`   Radio;
+`   Avon Outlet;
+`   Shopee;
+`   Watson;
+VAGUE (NET)<Q>;
+`   Tablet;
+No idea;
+None;
+
+Missing answers<Z>;
+Total count<C>",
+
+
+
+DM $TQADR =
+$A_QADR/
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+
+R,F,
+VT = "QADR. ",
+V = "
+AD 1: BUY LOAD STREAMING;
+AD 2: BUY LOAD GAMING;
+AD 3: LENDING GLOAN FILM X CEILING;
+AD 4: LENDING GLOAN FILM X GRADUATION;
+AD 5: GCASH STORIES: ADZ;
+AD 6: LENDING GCREDIT FILM x WATER;
+AD 7: LENDING GCREDIT FILM x NEXT TIME;
+AD 8: Sugod-Suyod It`'s Showtime;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DM $TQSHOW1 =
+$QSHOW1/
+1,
+2,
+R,F,
+VT = "QSHOW1. WHETHER WATCHED IT`'S SHOWTIME IN THE P1M",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+
+
+DM $TQSHOW2 =
+$A_QSHOW2/
+[*dbloop dlStubs=dfEpsStub;QSHOW2]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.Code],
+    [*99]
+[*dbend dlStubs]
+R,F,
+VT = "QSHOW2. HOW WATCHED IT`'S SHOWTIME",
+V = "
+[*dbloop dlStubs=dfEpsStub;QSHOW2]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.Stub];
+    [*99]
+[*dbend dlStubs]
+Missing answers<Z>;
+Total count<C>",
+
+DM $TQSHOW3 =
+$QSHOW3/
+1,
+2,
+R,F,
+VT = "QSHOW3. WHETHER HAVE SEEN ANYTHING RELATED TO GCASH ",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+
+DM $TQSHOW4 =
+$QSHOW4/
+[*dbloop dlStubs=dfEpsStub;QSHOW4]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.Code],
+    [*99]
+[*dbend dlStubs]
+R,F,
+VT = "QSHOW4. ELEMENTS RECALLED",
+V = "
+[*dbloop dlStubs=dfEpsStub;QSHOW4]
+    [*SKIP 99 empty dlStubs.Code]
+        [dlStubs.rank][dlStubs.Stub];
+    [*99]
+[*dbend dlStubs]
+Missing answers<Z>;
+Total count<C>",
+
+DM $TQSHOW5 =
+$QSHOW5/
+1,
+2,
+R,F,
+VT = "QSHOW5. WHETHER AWARE OF BARANGAY GCASH",
+V = "
+Yes;
+No;
+Missing answers<Z>;
+Total count<C>",
+
+

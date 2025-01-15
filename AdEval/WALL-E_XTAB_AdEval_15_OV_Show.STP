@@ -1,0 +1,173 @@
+START CONTROL,
+*PROJECT WALLE (DECEMBER 2, 2022)
+IDF = ..\_WALLE_IDF_ADEval,
+Y,
+TIDY,
+NORPT,
+NOTAB,
+OLDNAMES,
+CSV2R,
+TERSE,
+!C,
+FINISH CONTROL,
+START TABLES,
+%JH = 'PROJECT WALL E',  
+
+
+
+
+!======FOR QPS WINDOWS (% + raw - for datachecking)
+ 
+F= CTU'='/CAZ'-'/CZP'-'/SDV/UCH/NPGN/NPTC/TID/RLW40/LBB1/TOC/SPL250/CNZ'*'/URS/
+PCS/PRC/LPP55/SER/CLG1/RNC1/DAT/BAL/RBL/CLW7/PBL/MOD/MED,
+ 
+!F=MCB29,        ! ------ Less than 30 base
+F=BTS,          ! ------ Blank Tables Suppress - standard
+F=BCS,          ! ------ Blank Column Suppress - standard
+F=DPR4,          ! ------ Decimal % - standard
+F=DPT0,          ! ------ Decimal Raw Count
+F=DPA2,          ! ------ Decimal Mean Sum
+F=DPS2,          ! ------ Decimal Std
+F=BRS,          ! ------ Blank Row Suppress - kindly edit based on tabspecs
+
+
+!F= SHG1/SIG1/SLA95/SLB95/BRS/NFSL, ! standard by segment
+
+F= SHG-1/SIG1/SLA95/SLB95/NFSL, ! ROUND ROBIN
+
+
+%UNR = '(UNWEIGHTED BASE)',
+%AVG = 'Mean Score<d2>',
+%SDV = 'Standard Deviation<d2>',
+
+[*DATA HX = HA,HB,HC,HD]
+ 
+[*DATA HEADERWAVE3 = HA,HB,HC]
+ 
+F=NBCS,
+
+
+SELECT WR $WTS,
+!SELECT WR $WTS21to65,
+
+[*SET T = 0]
+
+[*INSERT Datasets]
+
+
+
+
+DM $FILTER_OV1a = $JUL2024/NB+$AUG2024/NB+$SEP2024/NB,
+    V = "OV1a - July to Septemner",
+
+DM $FILTER_OV =  $JUN2024/NB,
+    V = "OV - June",
+
+DM $FILTER_OV1 =  ($FILTER_OV/1)+(($FILTER_OV1a/1).($TQOV1a/1)),
+    V = "OV1",
+
+DM $FILTER_SHOW = ($Resp_AD_Show/NB).($Q32024/NB),
+    V = "QSHOW - Septemner to Septemner",
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!Header Checking Weighted
+[*DO Z = 1:3]
+!T #PROFILE[&Z] = $TPROFILE * $[HEADERWAVE3.Z],
+!BT = "ALL RESPONDENTS",
+[*END Z]
+
+
+FILTER $FILTER_OV1a/1,
+!======
+[*DO Z = 1:3]
+T #[+T] = $TQOV1a * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+FILTER OFF,
+[*DO Z = 1:3]
+IF ($FILTER_OV1/1), T #[+T] = $TQOV1 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FILTER $FILTER_OV/1,
+
+
+
+[*DO Z = 1:3]
+T #[+T] = $TQOV2 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+[*DO Z = 1:3]
+IF $QOV2/1, T #[+T] = $TQOV3 * $[HEADERWAVE3.Z],
+BT = "Among who have seen ad endorsed by HEART",
+[*END Z]
+
+[*DO Z = 1:3]
+IF $QOV2/1,T #[+T] = $TQOV4 * $[HEADERWAVE3.Z],
+BT = "Among who have seen ad endorsed by HEART",
+[*END Z]
+
+[*DO Z = 1:3]
+IF $QOV2/1,T #[+T] = $TQOV6 * $[HEADERWAVE3.Z],
+BT = "Among who have seen ad endorsed by HEART",
+[*END Z]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FILTER $FILTER_SHOW/1,
+
+!FILTER $FILTER_OV1a/1,
+
+
+[*DO Z = 1:3]
+T #[+T] = $TQSHOW1 * $[HEADERWAVE3.Z],
+BT = "ALL RESPONDENTS",
+[*END Z]
+
+[*DO Z = 1:3]
+IF $TQSHOW1/1, T #[+T] = $TQSHOW2 * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO WATCHED IT`'S SHOWTIME IN THE P1M",
+[*END Z]
+
+
+[*DO Z = 1:3]
+IF $TQSHOW1/1, T #[+T] = $TQSHOW3 * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO WATCHED IT`'S SHOWTIME IN THE P1M",
+[*END Z]
+
+
+
+[*DO Z = 1:3]
+IF ($TQSHOW1/1).($TQSHOW3/1), T #[+T] = $TQSHOW4 * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO WATCHED IT`'S SHOWTIME IN THE P1M",
+[*END Z]
+
+
+[*DO Z = 1:3]
+IF $TQSHOW1/1, T #[+T] = $TQSHOW5 * $[HEADERWAVE3.Z],
+BT = "AMONG THOSE WHO WATCHED IT`'S SHOWTIME IN THE P1M",
+[*END Z]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FINISH TABLES,

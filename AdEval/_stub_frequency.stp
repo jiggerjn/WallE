@@ -1,0 +1,15 @@
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+1,
+2,
+3,
+4,
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+Once;
+Twice;
+Thrice;
+4 times and more;
+Missing answers<Z>;
+Total count<C>",

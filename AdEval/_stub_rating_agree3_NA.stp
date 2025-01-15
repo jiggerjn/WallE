@@ -1,0 +1,18 @@
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+1,
+2,
+3,
+($JUL2024/NB+$AUG2024/NB).$[STUBSContents.2]/B,
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+[STUBSContents.4]\
+`    Agree Strongly (3)<V3>;
+`    Agree Somewhat (2)<V2>;
+`    Disagree (1)<V1>;
+Not Asked<Z>;
+Missing answers<Z>;
+Total count<C>",
+
+

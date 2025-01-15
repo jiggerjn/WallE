@@ -1,0 +1,24 @@
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+1,
+2,
+3,
+4,
+5,
+4..5,
+1..2,
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+[STUBSContents.4]\
+`    1- Very Weak (1)<V1>;
+`    2 (2)<V2>;
+`    3 (3)<V3>;
+`    4 (4)<V4>;
+`    5 - Very Strong (5)<V5>;
+`        Top 2 Box<Q>;
+`        Bottom 2 Box<Q>;
+Missing answers<Z>;
+Total count<C>",
+
+

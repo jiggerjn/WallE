@@ -1,0 +1,23 @@
+DM $[STUBSContents.1] =
+$[STUBSContents.2]/
+1,
+2,
+3,
+4,
+5,
+4..5,
+1..2,
+R,F,
+VT = "[STUBSContents.3]",
+V = "
+Dislike it a lot (1)<V1>;
+Dislike it a little (2)<V2>;
+Neither like nor Dislike (3)<V3>;
+Like it a liittle (4)<V4>;
+Like it a lot (5)<V5>;
+`    Top 2 Box<Q>;
+`    Bottom 2 Box<Q>;
+Missing answers<Z>;
+Total count<C>",
+
+
